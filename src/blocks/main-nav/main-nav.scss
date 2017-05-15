@@ -7,11 +7,11 @@ $gray-lightest:               hsl(0, 0%, 90%) !default;
 $screen-xs:                   0 !default;
 $screen-sm:                   480px !default;
 $screen-md:                   768px !default;
-$screen-lg:                   992px !default;
+$screen-lg:                   980px !default;
 $screen-xl:                   1200px !default;
 $screen-xxl:                  1800px !default;
 
-$menu-desktop-width:          $screen-xl !default;
+$menu-desktop-width:          $screen-lg !default;
 $toggler-part-height:         3px !default;
 $toggler-part-bg-color:       #000 !default;
 
@@ -79,13 +79,6 @@ $transition-time:             0.3s !default;
         padding-left: 1.2em;
       }
     }
-
-    &--lvl-3 {
-
-      @media (max-width: ($menu-desktop-width - 1)) {
-        padding-left: 2.4em;
-      }
-    }
   }
 
   &__lvl {
@@ -104,27 +97,6 @@ $transition-time:             0.3s !default;
 
         #{$block-name}__item--show-child > &,
         #{$block-name}__item:hover & {
-          opacity: 1;
-          height: auto;
-          overflow: visible;
-        }
-      }
-    }
-
-    &--3 {
-
-      @media (min-width: $menu-desktop-width) {
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 100%;
-        opacity: 0;
-        height: 0;
-        overflow: hidden;
-        transition: opacity $transition-time;
-
-        #{$block-name}__item--show-child > &,
-        #{$block-name}__item--lvl-2:hover & {
           opacity: 1;
           height: auto;
           overflow: visible;

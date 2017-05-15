@@ -2,15 +2,24 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Не пишите здесь другие селекторы.
 
+$toggler-part-height:         2px !default;
+$toggler-part-bg-color:       #000 !default;
+
 .burger {
   position: relative;
   z-index: 1;
   display: flex;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  justify-content: center;
+  width: 20px;
+  height: 14px;
   user-select: none;
   cursor: pointer;
+
+  .main-nav & {
+    width: 56px;
+    height: 56px;
+  }
 
   > span {
     display: inline-block;
@@ -19,6 +28,10 @@
     background: $toggler-part-bg-color;
     position: relative;
     transition: background 0.3s 0.3s;
+
+    .main-nav & {
+      width: 20px;
+    }
 
     &:before,
     &:after {
@@ -33,11 +46,11 @@
     }
 
     &:before {
-      top: -10px;
+      top: -6px;
     }
 
     &:after {
-      top: 10px;
+      top: 6px;
     }
   }
 
@@ -49,8 +62,9 @@
 
       &:before,
       &:after {
-        transition: top 0.3s, transform 0.3s 0.3s;
+        transition: top 0.3s, transform 0.3s 0.3s, background 0.3s 0s;
         top: 0;
+        background-color: $color-main;
       }
 
       &:before {

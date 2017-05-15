@@ -58,7 +58,7 @@ $font-family--headings:       $font-family;
 $screen-xs:                   0;
 $screen-sm:                   480px;
 $screen-md:                   768px;
-$screen-lg:                   992px;
+$screen-lg:                   980px;
 $screen-xl:                   1200px;
 $screen-xxl:                  1600px;
 
@@ -88,3 +88,6 @@ $transition-time:             0.3s;
 $shadow:                      0 4px 2px -2px rgba(0, 0, 0, 0.3);
 
 $z-index-modal:               100;
+
+$toggler-part-height:         2px;
+$toggler-part-bg-color:       $gray-darkest;
