@@ -1,0 +1,18 @@
+// В этом файле должны быть стили только для БЭМ-блока field-checkbox, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, $media-условий...
+// Не пишите здесь другие селекторы.
+
+$color-danger:                hsl(2, 64%, 58%) !default;
+
+.field-checkbox {
+
+  $block-name:                &;
+
+  &__input-wrap--error {
+
+    #{$block-name}__name-text,
+    #{$block-name}__help-text {
+      color: $color-danger;
+    }
+  }
+}
