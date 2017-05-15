@@ -23,6 +23,8 @@ $transition-time:             0.3s !default;
 
   position: relative;
   z-index: 10;
+  display: none;
+  height: $header-height;
 
 
 

@@ -5,4 +5,10 @@
 .logo {
   display: block;
   white-space: nowrap;
+  min-width: $header-height;
+  height: 37px;
+
+  img {
+    display: block;
+  }
 }
