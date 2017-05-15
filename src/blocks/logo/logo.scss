@@ -3,10 +3,12 @@
 // Не пишите здесь другие селекторы.
 
 .logo {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   white-space: nowrap;
   min-width: $header-height;
-  height: 37px;
+  height: $header-height;
 
   img {
     display: block;
