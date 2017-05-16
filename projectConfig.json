@@ -29,7 +29,8 @@
     "pagination": [],
     "breadcrumbs": [],
     "burger": [],
-    "close": []
+    "close": [],
+    "login": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

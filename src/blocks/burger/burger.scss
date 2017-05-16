@@ -16,11 +16,6 @@ $toggler-part-bg-color:       #000 !default;
   user-select: none;
   cursor: pointer;
 
-  .main-nav & {
-    width: 56px;
-    height: 56px;
-  }
-
   > span {
     display: inline-block;
     width: 100%;
@@ -28,10 +23,6 @@ $toggler-part-bg-color:       #000 !default;
     background: $toggler-part-bg-color;
     position: relative;
     transition: background 0.3s 0.3s;
-
-    .main-nav & {
-      width: 20px;
-    }
 
     &:before,
     &:after {

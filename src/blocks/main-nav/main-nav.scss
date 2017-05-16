@@ -17,14 +17,21 @@ $toggler-part-bg-color:       #000 !default;
 
 $transition-time:             0.3s !default;
 
+$main-menu-mobile-width:      334px !default;
+
 .main-nav {
 
   $block-name:                &;
 
   position: relative;
   z-index: 10;
-  display: none;
   height: $header-height;
+
+  @media (max-width: ($menu-desktop-width - 1)) {
+    position: absolute;
+    top: $header-height;
+    left: 0;
+  }
 
 
 
@@ -36,19 +43,24 @@ $transition-time:             0.3s !default;
     list-style: none;
 
     @media (max-width: ($menu-desktop-width - 1)) {
+      position: relative;
+      z-index: 2;
+      width: $main-menu-mobile-width;
+      height: calc(100vh - #{$header-height});
+      padding: 10px 30px;
+      transform: translateX(-$main-menu-mobile-width);
+      overflow-y: auto;
+      background-color: #fff;
 
-      // открытие/закрытие меню только в случае работающего JS
-
-      .js & {
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.2s;
+      #{$block-name}--open & {
+        transform: translateX(0);
+        box-shadow: 0 2px 40px rgba(72, 72, 72, 0.35);
+        transition: transform $transition-time, box-shadow $transition-time;
       }
 
-      .js #{$block-name}--open & {
-        max-height: 100vh;
-        transition: max-height 0.6s;
-      }
+      // открытие/закрытие меню только в случае работающего JS не предусмотрено по дизайну
+      // .js & {}
+      // .js #{$block-name}--open & {}
     }
 
     @media (min-width: $menu-desktop-width) {
@@ -60,51 +72,93 @@ $transition-time:             0.3s !default;
   &__item {
     position: relative;
 
+    &--search {
+
+      @media (max-width: ($menu-desktop-width - 1)) {
+        display: none;
+      }
+    }
+
+    &--mobile-separator {
+
+      @media (max-width: ($menu-desktop-width - 1)) {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid $gray-lightest;
+      }
+    }
+
     &--active {}
   }
 
-  &__link {
+  &__link,
+  &__pseudolink {
     display: block;
-    padding: 0.5em;
     text-decoration: none;
-    background-color: #fff;
+    padding: 10px 0;
+    color: $gray-darkest;
+    cursor: pointer;
 
     &:hover,
     &:focus {
+      color: $color-main;
       text-decoration: none;
-      background-color: $gray-lightest;
     }
+  }
 
-    &--lvl-2 {
+  &__pseudolink {
+
+    &--currency {
 
       @media (max-width: ($menu-desktop-width - 1)) {
-        padding-left: 1.2em;
+        display: none;
+      }
+    }
+
+    &--language {
+
+      @media (max-width: ($menu-desktop-width - 1)) {
+        display: none;
+      }
+    }
+
+    &--phone {
+
+      @media (max-width: ($menu-desktop-width - 1)) {
+        display: none;
+      }
+    }
+
+    &--arrow {
+      padding-right: 8px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 2px;
+        top: 50%;
+        width: 6px;
+        height: 6px;
+        border-bottom: 1px solid $gray-darkest;
+        border-right: 1px solid $gray-darkest;
+
+        @media (max-width: ($menu-desktop-width - 1)) {
+          transform: translateY(-50%) rotate(-45deg);
+        }
+      }
+
+      &:hover,
+      &:focus  {
+
+        &:after {
+          border-color: $color-main;
+        }
       }
     }
   }
 
   &__lvl {
-
-    &--2 {
-
-      @media (min-width: $menu-desktop-width) {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1;
-        opacity: 0;
-        height: 0;
-        overflow: hidden;
-        transition: opacity $transition-time;
-
-        #{$block-name}__item--show-child > &,
-        #{$block-name}__item:hover & {
-          opacity: 1;
-          height: auto;
-          overflow: visible;
-        }
-      }
-    }
+    display: none;
   }
 
 
@@ -112,6 +166,20 @@ $transition-time:             0.3s !default;
   // переключатель
 
   &__toggler {
+    border-right: 1px solid $gray-lightest;
+
+    &.burger {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 12;
+      width: $header-height;
+      height: $header-height;
+
+      & > span {
+        width: 20px;
+      }
+    }
 
     .no-js & {
       display: none;
@@ -120,5 +188,30 @@ $transition-time:             0.3s !default;
     @media (min-width: $menu-desktop-width) {
       display: none;
     }
+  }
+
+  &__backdrop {
+    position: fixed;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: opacity $transition-time;
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+
+      #{$block-name}--open & {
+        display: block;
+        height: auto;
+        width: auto;
+        top: $header-height;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        opacity: 0.85;
+      }
+    }
+
   }
 }

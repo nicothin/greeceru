@@ -1,0 +1,37 @@
+// В этом файле должны быть стили только для БЭМ-блока login, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.login {
+  display: flex;
+  height: $header-height;
+  max-width: 210px;
+  color: #fff;
+
+
+  @media (max-width: ($menu-desktop-width - 1)) {
+    position: fixed;
+    z-index: 12;
+    top: 0;
+    right: 0;
+    z-index: 12;
+  }
+
+  &__sign-in {
+    display: block;
+    padding: 0 28px;
+    color: #fff;
+    background-color: $color-main;
+    text-decoration: none;
+    line-height: $header-height;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all $transition-time;
+
+    &:hover,
+    &:focus  {
+      background-color: $color-main--accent;
+    }
+  }
+}

@@ -6,9 +6,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 12;
   white-space: nowrap;
   min-width: $header-height;
   height: $header-height;
+
+  @media (max-width: ($menu-desktop-width - 1)) {
+    transform: translateX(-5px);
+  }
 
   img {
     display: block;

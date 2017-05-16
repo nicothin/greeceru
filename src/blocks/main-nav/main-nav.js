@@ -4,16 +4,19 @@
   var toggler = document.getElementById('main-nav-toggler');
   if(toggler){
     toggler.addEventListener('click', mainNavVisibleToggle);
-
-    function mainNavVisibleToggle(e) {
-      e.preventDefault();
-      toggler.classList.toggle('burger--close');
-      document.getElementById('main-nav').classList.toggle('main-nav--open');
-    }
+  }
+  var backdrop = document.getElementById('main-nav-backdrop');
+  if(backdrop){
+    backdrop.addEventListener('click', mainNavVisibleToggle);
+  }
+  function mainNavVisibleToggle(e) {
+    e.preventDefault();
+    toggler.classList.toggle('burger--close');
+    document.getElementById('main-nav').classList.toggle('main-nav--open');
   }
 
   // Добавление/удаление модификаторов при фокусировке на ссылочном элементе
-  var linkClassName = 'main-nav__link';
+  var linkClassName = 'main-nav__sub-link';
   var linkClassNameShowChild = 'main-nav__item--show-child';
   var findLinkClassName = new RegExp(linkClassName);
   // Слежение за всплывшим событием focus
@@ -34,6 +37,18 @@
       // event.target.closest('.main-nav').querySelectorAll('.'+linkClassNameShowChild).forEach(function(item){
       document.querySelectorAll('.'+linkClassNameShowChild).forEach(function(item){
         item.classList.remove(linkClassNameShowChild);
+      });
+    }
+  }, true);
+
+  // Добавление/удаление модификаторов при клике на родителе с подпунктами
+  var findLinkClassName = new RegExp('main-nav__pseudolink');
+  // Слежение за всплывшим событием click
+  document.addEventListener('click', function(event) {
+    // Если событие всплыло от одной из "ссылок" гл. меню
+    if (findLinkClassName.test(event.target.className)) {
+      event.target.parents('.main-nav__item').forEach(function(item){
+        item.classList.toggle(linkClassNameShowChild);
       });
     }
   }, true);
