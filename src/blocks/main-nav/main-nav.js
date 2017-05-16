@@ -9,11 +9,6 @@
   if(backdrop){
     backdrop.addEventListener('click', mainNavVisibleToggle);
   }
-  function mainNavVisibleToggle(e) {
-    e.preventDefault();
-    toggler.classList.toggle('burger--close');
-    document.getElementById('main-nav').classList.toggle('main-nav--open');
-  }
 
   // Добавление/удаление модификаторов при фокусировке на ссылочном элементе
   var linkClassName = 'main-nav__sub-link';
@@ -42,16 +37,39 @@
   }, true);
 
   // Добавление/удаление модификаторов при клике на родителе с подпунктами
-  var findLinkClassName = new RegExp('main-nav__pseudolink');
+  var findParentPseudoLinkClassName = new RegExp('main-nav__pseudolink');
   // Слежение за всплывшим событием click
   document.addEventListener('click', function(event) {
     // Если событие всплыло от одной из "ссылок" гл. меню
-    if (findLinkClassName.test(event.target.className)) {
+    if (findParentPseudoLinkClassName.test(event.target.className)) {
       event.target.parents('.main-nav__item').forEach(function(item){
         item.classList.toggle(linkClassNameShowChild);
       });
     }
   }, true);
+
+  // Сокрытие подменю при клике на «Back»
+  var mainSubMenuBackLink = new RegExp('main-nav__breadcrumbs-item--back');
+  document.addEventListener('click', function(event) {
+    if (mainSubMenuBackLink.test(event.target.className)) {
+      mainSubNavVisibleToggle();
+    }
+  }, true);
+
+  // Переключение видимости гл. меню
+  function mainNavVisibleToggle(e) {
+    e.preventDefault();
+    toggler.classList.toggle('burger--close');
+    document.getElementById('main-nav').classList.toggle('main-nav--open');
+    mainSubNavVisibleToggle();
+  }
+
+  // Сокрытие видимость всех подменю
+  function mainSubNavVisibleToggle() {
+    document.querySelectorAll('.'+linkClassNameShowChild).forEach(function(item){
+      item.classList.remove(linkClassNameShowChild);
+    });
+  }
 
 
 

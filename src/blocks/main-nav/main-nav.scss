@@ -70,7 +70,6 @@ $main-menu-mobile-width:      334px !default;
   }
 
   &__item {
-    position: relative;
 
     &--search {
 
@@ -92,8 +91,10 @@ $main-menu-mobile-width:      334px !default;
   }
 
   &__link,
-  &__pseudolink {
+  &__pseudolink,
+  &__sub-link {
     display: block;
+    position: relative;
     text-decoration: none;
     padding: 10px 0;
     color: $gray-darkest;
@@ -157,8 +158,85 @@ $main-menu-mobile-width:      334px !default;
     }
   }
 
+  &__sub-link {
+
+    &--region {
+
+      @media (max-width: ($menu-desktop-width - 1)) {
+        display: flex;
+      }
+    }
+  }
+
   &__lvl {
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      left: 0;
+      min-height: calc(100vh - #{$header-height});
+      padding: 10px 30px;
+      transform: translateX(-$main-menu-mobile-width);
+      background-color: #fff;
+      transition: transform $transition-time, box-shadow $transition-time;
+
+      #{$block-name}__item--show-child & {
+        box-shadow: 0 2px 40px rgba(72, 72, 72, 0.35);
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__breadcrumbs {
     display: none;
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      display: flex !important;
+      color: $gray;
+      margin-bottom: 10px;
+      border-bottom: 1px solid $gray-lightest;
+    }
+  }
+
+  &__breadcrumbs-item {
+    display: inline-block;
+    padding: 10px 0 16px;
+    transform: translateX(-20px);
+
+    &--back {
+      color: $text-color;
+      font-weight: 500;
+      cursor: pointer;
+      padding-left: 20px;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 16px;
+        width: 15px;
+        height: 12px;
+        background-image: svg-load('../blocks/main-nav/background-img/arrow-left.svg');
+      }
+    }
+  }
+
+  &__regions-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__region-item-name {
+    flex-grow: 1;
+  }
+
+  &__region-item-num {
+    flex-shrink: 0;
+    padding-left: 5px;
+    margin-left: auto;
   }
 
 
