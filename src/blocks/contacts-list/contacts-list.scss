@@ -1,0 +1,68 @@
+// В этом файле должны быть стили только для БЭМ-блока contacts-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.contacts-list {
+
+  $block-name:                &;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &__item {
+    padding: 20px 0 10px;
+    border-bottom: 1px solid $gray-lightest;
+
+    &:first-child {
+      padding-top: 10px;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: $color-main--accent;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__item-name {
+    display: block;
+    font-weight: 400;
+    color: $gray;
+    margin-bottom: 6px;
+  }
+
+  &__phones {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__phone-item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__phone {
+    flex-basis: 55%;
+  }
+
+  &__phone-num {
+    flex-basis: 45%;
+    white-space: nowrap;
+  }
+
+  &__item-text {}
+}

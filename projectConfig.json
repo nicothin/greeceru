@@ -30,7 +30,8 @@
     "breadcrumbs": [],
     "burger": [],
     "close": [],
-    "login": []
+    "login": [],
+    "contacts-list": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

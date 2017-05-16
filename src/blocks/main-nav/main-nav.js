@@ -37,22 +37,19 @@
   }, true);
 
   // Добавление/удаление модификаторов при клике на родителе с подпунктами
-  var findParentPseudoLinkClassName = new RegExp('main-nav__pseudolink');
+  // var findParentPseudoLinkClassName = new RegExp('main-nav__pseudolink');
   // Слежение за всплывшим событием click
   document.addEventListener('click', function(event) {
     // Если событие всплыло от одной из "ссылок" гл. меню
-    if (findParentPseudoLinkClassName.test(event.target.className)) {
+    // if (findParentPseudoLinkClassName.test(event.target.className)) {
+    //   event.target.parents('.main-nav__item').forEach(function(item){
+    //     item.classList.toggle(linkClassNameShowChild);
+    //   });
+    // }
+    if (event.target.dataset.mainNavSubmenuToggler) {
       event.target.parents('.main-nav__item').forEach(function(item){
         item.classList.toggle(linkClassNameShowChild);
       });
-    }
-  }, true);
-
-  // Сокрытие подменю при клике на «Back»
-  var mainSubMenuBackLink = new RegExp('main-nav__breadcrumbs-item--back');
-  document.addEventListener('click', function(event) {
-    if (mainSubMenuBackLink.test(event.target.className)) {
-      mainSubNavVisibleToggle();
     }
   }, true);
 
