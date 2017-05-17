@@ -45,5 +45,18 @@
       right: 0;
       z-index: 12;
     }
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+    }
+  }
+
+  &__search {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+      border-left: 1px solid $gray-lightest;
+    }
   }
 }

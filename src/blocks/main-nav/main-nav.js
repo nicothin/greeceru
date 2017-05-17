@@ -37,19 +37,14 @@
   }, true);
 
   // Добавление/удаление модификаторов при клике на родителе с подпунктами
-  // var findParentPseudoLinkClassName = new RegExp('main-nav__pseudolink');
-  // Слежение за всплывшим событием click
   document.addEventListener('click', function(event) {
-    // Если событие всплыло от одной из "ссылок" гл. меню
-    // if (findParentPseudoLinkClassName.test(event.target.className)) {
-    //   event.target.parents('.main-nav__item').forEach(function(item){
-    //     item.classList.toggle(linkClassNameShowChild);
-    //   });
-    // }
     if (event.target.dataset.mainNavSubmenuToggler) {
       event.target.parents('.main-nav__item').forEach(function(item){
         item.classList.toggle(linkClassNameShowChild);
       });
+    }
+    if (event.target.closest('.main-nav__lvl') === null && !event.target.dataset.mainNavSubmenuToggler) {
+      mainSubNavHide();
     }
   }, true);
 
@@ -58,11 +53,11 @@
     e.preventDefault();
     toggler.classList.toggle('burger--close');
     document.getElementById('main-nav').classList.toggle('main-nav--open');
-    mainSubNavVisibleToggle();
+    mainSubNavHide();
   }
 
-  // Сокрытие видимость всех подменю
-  function mainSubNavVisibleToggle() {
+  // Сокрытие видимости всех подменю
+  function mainSubNavHide() {
     document.querySelectorAll('.'+linkClassNameShowChild).forEach(function(item){
       item.classList.remove(linkClassNameShowChild);
     });
@@ -90,16 +85,16 @@
   };
 
   // Добавление метода .closest() (полифил, собственно)
-  // (function(e){
-  //  e.closest = e.closest || function(css){
-  //    var node = this;
+  (function(e){
+   e.closest = e.closest || function(css){
+     var node = this;
 
-  //    while (node) {
-  //       if (node.matches(css)) return node;
-  //       else node = node.parentElement;
-  //    }
-  //    return null;
-  //  }
-  // })(Element.prototype);
+     while (node) {
+        if (node.matches(css)) return node;
+        else node = node.parentElement;
+     }
+     return null;
+   }
+  })(Element.prototype);
 
 }());
