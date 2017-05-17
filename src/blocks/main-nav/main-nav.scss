@@ -31,6 +31,7 @@ $main-menu-mobile-width:      334px !default;
     position: absolute;
     top: $header-height;
     left: 0;
+    height: 0;
   }
 
   // @media (min-width: $screen-lg) {
@@ -49,29 +50,25 @@ $main-menu-mobile-width:      334px !default;
 
     @media (max-width: ($menu-desktop-width - 1)) {
       position: relative;
+      left: -$main-menu-mobile-width;
       z-index: 2;
       width: $main-menu-mobile-width;
       height: calc(100vh - #{$header-height});
       padding: 10px 30px;
-      transform: translateX(-$main-menu-mobile-width);
       overflow-y: auto;
       background-color: #fff;
 
       #{$block-name}--open & {
-        transform: translateX(0);
+        left: 0;
         box-shadow: 0 2px 40px rgba(72, 72, 72, 0.35);
-        transition: transform $transition-time, box-shadow $transition-time;
+        transition: left $transition-time, box-shadow $transition-time;
       }
-
-      // открытие/закрытие меню только в случае работающего JS не предусмотрено по дизайну
-      // .js & {}
-      // .js #{$block-name}--open & {}
     }
 
-    @media (min-width: $menu-desktop-width) {
-      display: flex;
-      flex-wrap: wrap;
-    }
+    // @media (min-width: $menu-desktop-width) {
+    //   display: flex;
+    //   flex-wrap: wrap;
+    // }
   }
 
   &__item {
@@ -194,15 +191,16 @@ $main-menu-mobile-width:      334px !default;
   &__lvl {
 
     @media (max-width: ($menu-desktop-width - 1)) {
-      position: absolute;
+      position: fixed;
       z-index: 1;
-      top: 0;
-      right: 0;
+      top: $header-height;
+      bottom: 0;
       left: 0;
-      min-height: calc(100vh - #{$header-height});
+      width: $main-menu-mobile-width;
       padding: 10px 30px;
-      transform: translateX(-$main-menu-mobile-width);
       background-color: #fff;
+      overflow-y: auto;
+      transform: translateX(-$main-menu-mobile-width);
       transition: transform $transition-time, box-shadow $transition-time;
 
       #{$block-name}__item--show-child & {
