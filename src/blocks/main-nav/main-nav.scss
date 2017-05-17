@@ -11,7 +11,7 @@ $screen-lg:                   980px !default;
 $screen-xl:                   1200px !default;
 $screen-xxl:                  1800px !default;
 
-$menu-desktop-width:          $screen-lg !default;
+$menu-desktop-width:          $screen-xl !default;
 $toggler-part-height:         3px !default;
 $toggler-part-bg-color:       #000 !default;
 
@@ -31,6 +31,11 @@ $main-menu-mobile-width:      334px !default;
     position: absolute;
     top: $header-height;
     left: 0;
+  }
+
+  @media (min-width: $screen-lg) {
+    z-index: 12;
+    flex-grow: 1;
   }
 
 
@@ -72,9 +77,10 @@ $main-menu-mobile-width:      334px !default;
   &__item {
 
     &--search {
+      display: none;
 
-      @media (max-width: ($menu-desktop-width - 1)) {
-        display: none;
+      @media (min-width: $screen-lg) {
+        display: block;
       }
     }
 
@@ -84,6 +90,13 @@ $main-menu-mobile-width:      334px !default;
         padding-bottom: 10px;
         margin-bottom: 10px;
         border-bottom: 1px solid $gray-lightest;
+      }
+    }
+
+    &--vertical-separator {
+
+      @media (min-width: $screen-lg) {
+        border-right: 1px solid $gray-lightest;
       }
     }
 
@@ -161,6 +174,13 @@ $main-menu-mobile-width:      334px !default;
         }
       }
     }
+
+    &--descktop-hide {
+
+      @media (min-width: $screen-xxl) {
+        display: none;
+      }
+    }
   }
 
   &__sub-link {
@@ -198,6 +218,10 @@ $main-menu-mobile-width:      334px !default;
         transform: translateX(0);
       }
     }
+
+    @media (min-width: $screen-xxl) {
+      display: none;
+    }
   }
 
   &__breadcrumbs {
@@ -230,6 +254,8 @@ $main-menu-mobile-width:      334px !default;
         width: 15px;
         height: 12px;
         background-image: svg-load('../blocks/main-nav/background-img/arrow-left.svg');
+        background-repeat: no-repeat;
+        background-position: 0 0;
       }
     }
   }
@@ -271,6 +297,38 @@ $main-menu-mobile-width:      334px !default;
     flex-shrink: 0;
   }
 
+  &__search-form {
+    margin: 0;
+    padding: 0;
+    height: $header-height;
+  }
+
+  &__search-btn {
+    display: none;
+  }
+
+  &__search-input {
+    margin: 0;
+    padding: 0 18px 0 40px;
+    border: 0;
+    background: none;
+    height: 100%;
+    width: 220px;
+    background-image: svg-load('../blocks/main-nav/background-img/search.svg');
+    background-repeat: no-repeat;
+    background-position: 14px 50%;
+
+    &::placeholder {
+      color: rgba($gray, .8);
+      opacity: 1;
+    }
+
+    &[type='search']::-webkit-search-cancel-button,
+    &[type='search']::-webkit-search-decoration {
+      -webkit-appearance: none; /* stylelint-disable-line  property-no-vendor-prefix */
+    }
+  }
+
 
 
   // переключатель
@@ -291,11 +349,15 @@ $main-menu-mobile-width:      334px !default;
       }
     }
 
-    .no-js & {
-      display: none;
-    }
+    // .no-js & {
+    //   display: none;
+    // }
 
-    @media (min-width: $menu-desktop-width) {
+    // @media (min-width: $menu-desktop-width) {
+    //   display: none;
+    // }
+
+    @media (min-width: $screen-xxl) {
       display: none;
     }
   }
@@ -323,5 +385,8 @@ $main-menu-mobile-width:      334px !default;
       }
     }
 
+    @media (min-width: $screen-xxl) {
+      display: none;
+    }
   }
 }

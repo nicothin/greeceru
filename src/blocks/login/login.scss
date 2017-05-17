@@ -17,6 +17,12 @@
     z-index: 12;
   }
 
+  @media (min-width: $screen-xxl) {
+    position: relative;
+    z-index: 12;
+    flex-shrink: 0;
+  }
+
   &__sign-in {
     display: block;
     padding: 0 28px;
