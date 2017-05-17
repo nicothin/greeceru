@@ -34,6 +34,7 @@
           <div id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></div>
 
           <nav id="main-nav" class="main-nav" role="navigation">
+
             <ul class="main-nav__list">
               <li class="main-nav__item">
                 <a href="" class="main-nav__link">Sale</a>
@@ -164,8 +165,8 @@
                 </div>
               </li>
               <li class="main-nav__item  main-nav__item--mobile-separator">
-                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler="true">Contacts</span>
-                <a href="tel:+30 6974-383-585" class="main-nav__pseudolink  main-nav__pseudolink--phone" data-main-nav-submenu-toggler="true">+30 6974-383-585</a>
+                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler="true">Contacts</span>
+                <span class="main-nav__pseudolink  main-nav__pseudolink--phone" data-main-nav-submenu-toggler="true">+30 6974-383-585</span>
                 <div class="main-nav__lvl  main-nav__lvl--contacts">
                   <div class="main-nav__breadcrumbs" style="display:none;">
                     <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-toggler="true">Back</span>
@@ -204,14 +205,8 @@
                   </ul>
                 </div>
               </li>
-              <li class="main-nav__item  main-nav__item--search">
-                <form class="main-nav__search-form">
-                  <input class="main-nav__search-input" type="text" placeholder="Type object id to search...">
-                  <button class="main-nav__search-btn">Search</button>
-                </form>
-              </li>
               <li class="main-nav__item">
-                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler="true">Currency: <span data-main-nav-submenu-toggler="true">€</span></span>
+                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler="true">Currency: <span data-main-nav-submenu-toggler="true">€</span></span>
                 <span class="main-nav__pseudolink  main-nav__pseudolink--currency">€</span>
                 <div class="main-nav__lvl  main-nav__lvl--currency">
                   <div class="main-nav__breadcrumbs" style="display:none;">
@@ -265,7 +260,7 @@
                 </div>
               </li>
               <li class="main-nav__item  main-nav__item--mobile-separator">
-                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler="true">Language: <span data-main-nav-submenu-toggler="true">English</span></span>
+                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler="true">Language: <span data-main-nav-submenu-toggler="true">English</span></span>
                 <span class="main-nav__pseudolink  main-nav__pseudolink--language">En</span>
                 <div class="main-nav__lvl  main-nav__lvl--language">
                   <div class="main-nav__breadcrumbs" style="display:none;">
@@ -292,10 +287,98 @@
                 </div>
               </li>
             </ul>
+
             <div id="main-nav-backdrop" class="main-nav__backdrop"></div>
+
           </nav>
-          <div class="login">
-            <a href="" class="login__sign-in">Sign In</a>
+
+          <div class="page-header__right">
+
+            <form class="search-form  page-header__search">
+              <input class="search-form__input" type="search" placeholder="Type object id to search...">
+              <button class="search-form__btn">Search</button>
+            </form>
+
+            <ul class="main-nav__list  main-nav__list--always-drop-down">
+              <li class="main-nav__item">
+                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler="true">Currency: <span data-main-nav-submenu-toggler="true">€</span></span>
+                <span class="main-nav__pseudolink  main-nav__pseudolink--currency  main-nav__pseudolink--arrow-desktop" data-main-nav-submenu-toggler="true">€</span>
+                <div class="main-nav__lvl  main-nav__lvl--currency">
+                  <ul class="main-nav__sub-list">
+                    <li class="main-nav__item  main-nav__item--lvl-2">
+                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
+                        <span class="main-nav__currency-abbr">USD $</span>
+                        <span class="main-nav__currency-name">U.S. Dollar</span>
+                      </a>
+                    </li>
+                    <li class="main-nav__item  main-nav__item--lvl-2  main-nav__item--active">
+                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
+                        <span class="main-nav__currency-abbr">€</span>
+                        <span class="main-nav__currency-name">Euro</span>
+                      </a>
+                    </li>
+                    <li class="main-nav__item  main-nav__item--lvl-2">
+                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
+                        <span class="main-nav__currency-abbr">RUB ₽</span>
+                        <span class="main-nav__currency-name">Russian Ruble</span>
+                      </a>
+                    </li>
+                    <li class="main-nav__item  main-nav__item--lvl-2">
+                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
+                        <span class="main-nav__currency-abbr">CAD</span>
+                        <span class="main-nav__currency-name">Canadian Dollar</span>
+                      </a>
+                    </li>
+                    <li class="main-nav__item  main-nav__item--lvl-2">
+                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
+                        <span class="main-nav__currency-abbr">AUD</span>
+                        <span class="main-nav__currency-name">Australian Dollar</span>
+                      </a>
+                    </li>
+                    <li class="main-nav__item  main-nav__item--lvl-2">
+                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
+                        <span class="main-nav__currency-abbr">TL</span>
+                        <span class="main-nav__currency-name">Turkish Lira</span>
+                      </a>
+                    </li>
+                    <li class="main-nav__item  main-nav__item--lvl-2">
+                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
+                        <span class="main-nav__currency-abbr">UAH</span>
+                        <span class="main-nav__currency-name">Ukrainian Hryvnia</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="main-nav__item">
+                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler="true">Language: <span data-main-nav-submenu-toggler="true">English</span></span>
+                <span class="main-nav__pseudolink  main-nav__pseudolink--language  main-nav__pseudolink--arrow-desktop" data-main-nav-submenu-toggler="true">En</span>
+                <div class="main-nav__lvl  main-nav__lvl--language">
+                  <ul class="main-nav__sub-list">
+                    <li class="main-nav__item  main-nav__item--lvl-2  main-nav__item--active">
+                      <a href="" class="main-nav__sub-link">English</a>
+                    </li>
+                    <li class="main-nav__item  main-nav__item--lvl-2">
+                      <a href="" class="main-nav__sub-link">Русский</a>
+                    </li>
+                    <li class="main-nav__item  main-nav__item--lvl-2">
+                      <a href="" class="main-nav__sub-link">Українська</a>
+                    </li>
+                    <li class="main-nav__item  main-nav__item--lvl-2">
+                      <a href="" class="main-nav__sub-link">Eλληνικά</a>
+                    </li>
+                    <li class="main-nav__item  main-nav__item--lvl-2">
+                      <a href="" class="main-nav__sub-link">Srpski</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+
+            <div class="login">
+              <a href="" class="login__sign-in">Sign In</a>
+            </div>
+
           </div>
 
         </div>
