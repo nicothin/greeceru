@@ -1078,6 +1078,12 @@ a.pagination__item:hover, a.pagination__item:focus {
   dd{
     margin-left: 1.8em; } }
 @media (min-width: 970px){
+  .page-header__inner{
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding-left: 56px; }
+  .page-header__inner .logo{
+    margin-left: 26%; }
   .page-header__right{
     display: -ms-flexbox;
     display: flex; }
@@ -1088,9 +1094,6 @@ a.pagination__item:hover, a.pagination__item:focus {
     display: -ms-flexbox;
     display: flex; } }
 @media (min-width: 1600px){
-  .page-header__inner{
-    -ms-flex-pack: start;
-    justify-content: flex-start; }
   .main-nav__pseudolink--descktop-hide{
     display: none; }
   .main-nav__lvl{
