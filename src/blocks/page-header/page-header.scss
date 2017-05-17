@@ -35,4 +35,15 @@
       box-shadow: 0 2px 10px rgba(72, 72, 72, 0.1);
     }
   }
+
+  &__right {
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      position: fixed;
+      z-index: 12;
+      top: 0;
+      right: 0;
+      z-index: 12;
+    }
+  }
 }

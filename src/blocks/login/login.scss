@@ -8,21 +8,6 @@
   max-width: 210px;
   color: #fff;
 
-
-  @media (max-width: ($menu-desktop-width - 1)) {
-    position: fixed;
-    z-index: 12;
-    top: 0;
-    right: 0;
-    z-index: 12;
-  }
-
-  @media (min-width: $screen-xxl) {
-    position: relative;
-    z-index: 12;
-    flex-shrink: 0;
-  }
-
   &__sign-in {
     display: block;
     padding: 0 28px;
