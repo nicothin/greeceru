@@ -31,7 +31,8 @@
     "burger": [],
     "close": [],
     "login": [],
-    "contacts-list": []
+    "contacts-list": [],
+    "search-form": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

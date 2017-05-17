@@ -1,0 +1,40 @@
+// В этом файле должны быть стили только для БЭМ-блока search-form, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.search-form {
+  display: none;
+  margin: 0;
+  padding: 0;
+  height: $header-height;
+
+  // @media (min-width: $screen-lg) {
+  //   display: block;
+  // }
+
+  &__input {
+    margin: 0;
+    padding: 0 18px 0 40px;
+    border: 0;
+    background: none;
+    height: 100%;
+    width: 220px;
+    background-image: svg-load('../blocks/search-form/background-img/search.svg');
+    background-repeat: no-repeat;
+    background-position: 14px 50%;
+
+    &::placeholder {
+      color: rgba($gray, .8);
+      opacity: 1;
+    }
+
+    &[type='search']::-webkit-search-cancel-button,
+    &[type='search']::-webkit-search-decoration {
+      -webkit-appearance: none; /* stylelint-disable-line  property-no-vendor-prefix */
+    }
+  }
+
+  &__btn {
+    display: none;
+  }
+}
