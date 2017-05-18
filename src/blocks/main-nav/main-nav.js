@@ -38,7 +38,10 @@
 
   // Добавление/удаление модификаторов при клике на родителе с подпунктами
   document.addEventListener('click', function(event) {
-    if (event.target.dataset.mainNavSubmenuToggler) {
+    if (event.target.closest('.main-nav__item--show-child') !== null) {
+      mainSubNavHide();
+    }
+    else if (event.target.dataset.mainNavSubmenuToggler) {
       mainSubNavHide();
       event.target.parents('.main-nav__item').forEach(function(item){
         item.classList.toggle(linkClassNameShowChild);
