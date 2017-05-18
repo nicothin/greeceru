@@ -108,6 +108,7 @@ $main-menu-mobile-width:      334px !default;
       // вид выпадающего вниз блока
       #{$block-name}__lvl {
         position: absolute !important;
+        top: ($header-height + 8) !important;
         bottom: auto !important;
         left: auto !important;
         transform: none !important;
@@ -286,7 +287,7 @@ $main-menu-mobile-width:      334px !default;
       transition: transform $transition-time, box-shadow $transition-time;
 
       #{$block-name}__item--show-child & {
-        box-shadow: 0 2px 40px rgba(72, 72, 72, 0.35);
+        box-shadow: 0 4px 40px rgba(72, 72, 72, 0.35);
         transform: translateX(0);
       }
     }
