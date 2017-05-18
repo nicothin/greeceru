@@ -195,6 +195,9 @@ $main-menu-mobile-width:      334px !default;
 
       @media (min-width: $screen-lg) {
         margin-left: auto;
+      }
+
+      @media (min-width: $screen-xl) {
 
         #{$block-name}__pseudolink--phone {
           display: inline-block;
@@ -202,6 +205,13 @@ $main-menu-mobile-width:      334px !default;
           white-space: nowrap;
           font-weight: 400;
         }
+      }
+    }
+
+    &--more {
+
+      @media (max-width: ($menu-desktop-width - 1)) {
+        display: none;
       }
     }
   }
