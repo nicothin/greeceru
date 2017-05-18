@@ -2,37 +2,48 @@
 
   var subMenuShownClassName = 'main-nav__item--show-child';
 
-  // клик на переключалке видимости гл. меню (бургер, на мобильных)
-  $('#main-nav-toggler').on('click', function(e){
+  // Клик на переключалке видимости гл. меню (бургер и бекдроп на мобильных)
+  $('#main-nav-toggler, #main-nav-backdrop').on('click', function(e){
     e.preventDefault();
     $('#main-nav').toggleClass('main-nav--open');
     $('#main-nav-toggler').toggleClass('burger--close');
-    all2LevelMenuHide();
+    hideAllSubmenu();
   });
 
-  // Показ/сокрытие подменю 2го уровня
+  // Показ/сокрытие подменю уровня
   $('[data-main-nav-submenu-toggler]').on('click', function(e){
     e.preventDefault();
-    var parent = $(this).closest('.main-nav__item');
-    // если у родителя уже есть класс показываемого подменю 2го уровня, прячем все
-    if (parent.is('.'+subMenuShownClassName)) {
-      all2LevelMenuHide();
+
+    // если это подменю 3го уровня
+    if ($(this).closest('.main-nav__sub-list').length) {
+      $(this).closest('.main-nav__sub-list').find('.'+subMenuShownClassName).removeClass(subMenuShownClassName);
+      $(this).closest('.main-nav__item').addClass(subMenuShownClassName);
     }
-    // у родителя нет класса показываемого подменю 2го уровня, прячем все и показываем нужный
+    // иначе, если подменюха уже была открыта (нужно закрывать)
+    else if ($(this).closest('.main-nav__item').is('.'+subMenuShownClassName)) {
+      hideAllSubmenu();
+    }
     else {
-      all2LevelMenuHide();
-      parent.addClass(subMenuShownClassName);
+      hideAllSubmenu();
+      $(this).closest('.main-nav__item').addClass(subMenuShownClassName);
     }
   });
 
-  // Только сокрытие подменю 2го уровня (всех)
+  // Только сокрытие подменю (всех)
   $('[data-main-nav-submenu-hide]').on('click', function(e){
     e.preventDefault();
-    all2LevelMenuHide();
+    hideAllSubmenu();
+  });
+
+  // Закрытие подуровней меню, если был клик вне меню
+  $(document).on('click', function(e){
+    if (!$(e.target).closest('.main-nav__list').length) {
+      hideAllSubmenu();
+    }
   });
 
   // Сокрытие видимости всех подменю 2го уровня
-  function all2LevelMenuHide() {
+  function hideAllSubmenu() {
     $('.'+subMenuShownClassName).removeClass(subMenuShownClassName);
   }
 
