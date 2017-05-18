@@ -20,6 +20,17 @@
 
     &:last-child {
       border-bottom: none;
+
+      @media (min-width: $screen-xl) {
+        padding-bottom: 15px;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: $font-size--small;
+      line-height: ($font-size--small + 2);
+      padding-top: 23px;
+      padding-bottom: 25px;
     }
 
     a {
@@ -39,6 +50,8 @@
     font-weight: 400;
     color: $gray;
     margin-bottom: 6px;
+    font-size: $font-size;
+    line-height: $line-height;
   }
 
   &__phones {
@@ -52,6 +65,10 @@
 
     &:not(:last-child) {
       margin-bottom: 4px;
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 8px;
+      }
     }
   }
 
