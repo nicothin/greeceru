@@ -28,6 +28,23 @@
       }
     }
 
+    @media (min-width: $screen-xl) {
+      padding-left: 0;
+
+      .logo {
+        margin-left: 0;
+        width: 100px;
+        border-right: 1px solid $gray-lightest;
+        flex-shrink: 0;
+      }
+    }
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      .logo {
+        transform: translateX(-5px);
+      }
+    }
+
     &:after  {
       content: '';
       position: absolute;
@@ -42,6 +59,7 @@
   }
 
   &__right {
+    flex-shrink: 0;
 
     @media (max-width: ($menu-desktop-width - 1)) {
       position: fixed;
@@ -53,6 +71,11 @@
 
     @media (min-width: $screen-lg) {
       display: flex;
+    }
+
+    @media (min-width: $screen-xl) {
+      position: relative;
+      z-index: 12;
     }
   }
 

@@ -12,16 +12,6 @@
   min-width: $header-height;
   height: $header-height;
 
-  @media (max-width: ($menu-desktop-width - 1)) {
-    transform: translateX(-5px);
-  }
-
-  @media (min-width: $screen-xxl) {
-    width: 100px;
-    border-right: 1px solid $gray-lightest;
-    flex-shrink: 0;
-  }
-
   img {
     display: block;
   }

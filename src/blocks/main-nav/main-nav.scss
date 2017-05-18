@@ -34,10 +34,10 @@ $main-menu-mobile-width:      334px !default;
     height: 0;
   }
 
-  // @media (min-width: $screen-lg) {
-  //   z-index: 12;
-  //   flex-grow: 1;
-  // }
+  @media (min-width: $screen-xl) {
+    z-index: 12;
+    flex-grow: 1;
+  }
 
 
 
@@ -65,6 +65,10 @@ $main-menu-mobile-width:      334px !default;
       }
     }
 
+    @media (min-width: $screen-xl) {
+      display: flex;
+    }
+
     // Блок, показываемый справа, начиная с 970
     &--always-drop-down {
       display: none;
@@ -84,15 +88,22 @@ $main-menu-mobile-width:      334px !default;
         display: flex;
       }
 
+      #{$block-name}__pseudolink {
+        padding: 18px;
+        border-left: 1px solid $gray-lightest;
+      }
+
       #{$block-name}__pseudolink--descktop-hide {
         display: none;
       }
 
-      #{$block-name}__pseudolink--currency,
-      #{$block-name}__pseudolink--language {
+      #{$block-name}__item--show-child #{$block-name}__pseudolink {
+        color: $color-main;
+      }
+
+      #{$block-name}__pseudolink--arrow-desktop {
         display: block;
         padding: 18px 31px 18px 15px;
-        border-left: 1px solid $gray-lightest;
       }
 
       // вид ссылки в выпадающем блоке
@@ -154,6 +165,27 @@ $main-menu-mobile-width:      334px !default;
         color: $gray;
       }
     }
+
+    &--currency,
+    &--language {
+
+      @media (min-width: $screen-lg) {
+        display: none;
+      }
+    }
+
+    &--contacts {
+
+      @media (min-width: $screen-lg) {
+        margin-left: auto;
+        border-left: 1px solid $gray-lightest;
+
+        #{$block-name}__pseudolink--phone {
+          white-space: nowrap;
+          font-weight: 400;
+        }
+      }
+    }
   }
 
   &__link,
@@ -165,11 +197,18 @@ $main-menu-mobile-width:      334px !default;
     padding: 10px 0;
     color: $gray-darkest;
     cursor: pointer;
+    transition: color $transition-time;
 
     &:hover,
     &:focus {
       color: $color-main;
       text-decoration: none;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 18px 18px 18px 30px;
+      font-weight: 500;
+      white-space: nowrap;
     }
   }
 
@@ -212,20 +251,38 @@ $main-menu-mobile-width:      334px !default;
         @media (max-width: ($menu-desktop-width - 1)) {
           transform: translateY(-50%) rotate(-45deg);
         }
+
+        @media (min-width: $screen-xl) {
+          right: 14px;
+          border-bottom: 1px solid $gray;
+          border-right: 1px solid $gray;
+          transform: translateY(-70%) rotate(45deg);
+          transition: transform $transition-time, border-color $transition-time;
+
+          #{$block-name}__item--show-child & {
+            transform: translateY(-30%) rotate(225deg);
+          }
+        }
       }
 
       &:hover,
-      &:focus  {
+      &:focus,
+      #{$block-name}__item--show-child & {
+        color: $color-main;
 
         &:after {
           border-color: $color-main;
         }
       }
+
+      @media (min-width: $screen-xl) {
+        padding-right: 31px;
+      }
     }
 
     &--descktop-hide {
 
-      @media (min-width: $screen-xxl) {
+      @media (min-width: $screen-xl) {
         display: none;
       }
     }
@@ -242,15 +299,16 @@ $main-menu-mobile-width:      334px !default;
         border-bottom: 1px solid $gray-darkest;
         border-right: 1px solid $gray-darkest;
         transform: translateY(-70%) rotate(45deg);
-        transition: transform $transition-time;
+        transition: transform $transition-time, border-color $transition-time;
 
-        .main-nav__item--show-child & {
+        #{$block-name}__item--show-child & {
           transform: translateY(-30%) rotate(225deg);
         }
       }
 
       &:hover,
-      &:focus  {
+      &:focus,
+      #{$block-name}__item--show-child & {
 
         &:after {
           border-color: $color-main;
@@ -297,7 +355,7 @@ $main-menu-mobile-width:      334px !default;
       }
     }
 
-    @media (min-width: $screen-xxl) {
+    @media (min-width: $screen-xl) {
       display: none;
     }
   }
@@ -395,7 +453,7 @@ $main-menu-mobile-width:      334px !default;
       }
     }
 
-    @media (min-width: $screen-xxl) {
+    @media (min-width: $screen-xl) {
       display: none;
     }
   }
@@ -423,8 +481,8 @@ $main-menu-mobile-width:      334px !default;
       }
     }
 
-    // @media (min-width: $screen-xxl) {
-    //   display: none;
-    // }
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
   }
 }
