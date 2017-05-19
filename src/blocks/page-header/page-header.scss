@@ -84,6 +84,8 @@
 
     @media (min-width: $screen-lg) {
       display: block;
+      position: relative;
+      z-index: 1;
       border-left: 1px solid $gray-lightest;
     }
   }

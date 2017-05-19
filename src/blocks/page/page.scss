@@ -61,6 +61,10 @@ body {
   cursor: pointer;
 }
 
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
 // Avoid 300ms click delay on touch devices that support the `touch-action` CSS property.
 a,
 // area,

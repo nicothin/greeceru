@@ -89,6 +89,10 @@ $main-menu-mobile-width:      334px !default;
         display: flex;
       }
 
+      @media (min-width: $screen-xl) {
+        padding-left: 0;
+      }
+
       #{$block-name}__pseudolink {
         padding: 18px;
         border-left: 1px solid $gray-lightest;
@@ -432,6 +436,7 @@ $main-menu-mobile-width:      334px !default;
           }
 
           svg {
+            pointer-events: none;
             position: absolute;
             top: 0;
             left: 0;
