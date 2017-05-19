@@ -165,6 +165,14 @@ $main-menu-mobile-width:      334px !default;
 
     @media (min-width: $screen-xl) {
       position: relative;
+
+      #{$block-name}__item--more & {
+        position: static;
+      }
+
+      #{$block-name}__item--more &--faq {
+        position: relative;
+      }
     }
 
     &--mobile-separator {
@@ -237,6 +245,23 @@ $main-menu-mobile-width:      334px !default;
       padding: 18px 18px 18px 30px;
       font-weight: 500;
       white-space: nowrap;
+
+      #{$block-name}__item--more & {
+
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          right: 20px;
+          left: 30px;
+          height: 1px;
+          background-color: $gray-lightest;
+
+          #{$block-name}__sub-list #{$block-name}__item:last-child & {
+            display: none;
+          }
+        }
+      }
     }
   }
 
@@ -290,6 +315,11 @@ $main-menu-mobile-width:      334px !default;
 
           #{$block-name}__item--show-child & {
             transform: translateY(-30%) rotate(225deg);
+          }
+
+          #{$block-name}__item--more #{$block-name}__lvl--more & {
+            right: 22px;
+            transform: translateY(-30%) rotate(-45deg);
           }
         }
       }
@@ -483,6 +513,26 @@ $main-menu-mobile-width:      334px !default;
       }
     }
 
+    &--faq {
+
+      @media (min-width: $screen-xl) {
+
+        #{$block-name}__item--more & {
+          padding-top: 8px;
+          padding-bottom: 8px;
+        }
+
+        #{$block-name}__item--more #{$block-name}__sub-list & {
+          box-shadow: 4px 4px 40px rgba(72, 72, 72, 0.35);
+        }
+
+        #{$block-name}__item--more & #{$block-name}__sub-link {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
+    }
+
     &--regions {
 
       @media (min-width: $screen-xl) {
@@ -509,9 +559,12 @@ $main-menu-mobile-width:      334px !default;
           width: 320px;
           padding: 0;
           transform: none;
+          box-shadow: 4px 4px 40px rgba(72, 72, 72, 0.35);
 
           #{$block-name}__regions-list {
             display: block;
+            padding-top: 10px;
+            padding-bottom: 10px;
 
             svg {
               display: none;
@@ -539,6 +592,13 @@ $main-menu-mobile-width:      334px !default;
           width: 1200px;
           transform: translateX(-43.3%);
         }
+      }
+    }
+
+    &--more {
+
+      @media (min-width: $screen-lg) {
+        width: 230px !important;
       }
     }
   }
