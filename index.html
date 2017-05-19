@@ -6,6 +6,7 @@
   <title>greece_ru</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
 
   <link href="css/style.min.css" rel="stylesheet" media="screen">
 
@@ -49,10 +50,10 @@
                 <a href="" class="main-nav__link">Collect drachma</a>
               </li>
               <li class="main-nav__item  main-nav__item--active">
-                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler="true">Regions</span>
+                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler>Regions</span>
                 <div class="main-nav__lvl  main-nav__lvl--regions">
                   <div class="main-nav__breadcrumbs" style="display:none;">
-                    <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-toggler="true">Back</span>
+                    <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-hide>Back</span>
                     <span class="main-nav__breadcrumbs-item">&nbsp;&nbsp;>&nbsp; Regions</span>
                   </div>
                   <ul class="main-nav__regions-list">
@@ -156,11 +157,11 @@
               <li class="main-nav__item">
                 <a href="" class="main-nav__link">About us</a>
               </li>
-              <li class="main-nav__item">
-                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler="true">FAQ</span>
+              <li class="main-nav__item  main-nav__item--faq">
+                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler>FAQ</span>
                 <div class="main-nav__lvl  main-nav__lvl--faq">
                   <div class="main-nav__breadcrumbs" style="display:none;">
-                    <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-toggler="true">Back</span>
+                    <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-hide>Back</span>
                     <span class="main-nav__breadcrumbs-item">&nbsp;&nbsp;>&nbsp; FAQ</span>
                   </div>
                   <ul class="main-nav__sub-list">
@@ -177,12 +178,49 @@
                   </ul>
                 </div>
               </li>
+
+              <!-- Блок ссылок More -->
+              <!-- <li class="main-nav__item  main-nav__item--more">
+                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler>More</span>
+                <div class="main-nav__lvl  main-nav__lvl--more">
+                  <ul class="main-nav__sub-list">
+                    <li class="main-nav__item  main-nav__item--mobile-separator">
+                      <a href="" class="main-nav__link">Blog</a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a href="" class="main-nav__link">About us</a>
+                    </li>
+                    <li class="main-nav__item  main-nav__item--faq">
+                      <span class="main-nav__pseudolink  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler>FAQ</span>
+                      <div class="main-nav__lvl  main-nav__lvl--faq">
+                        <div class="main-nav__breadcrumbs" style="display:none;">
+                          <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-hide>Back</span>
+                          <span class="main-nav__breadcrumbs-item">&nbsp;&nbsp;>&nbsp; FAQ</span>
+                        </div>
+                        <ul class="main-nav__sub-list">
+                          <li class="main-nav__item  main-nav__item--lvl-2">
+                            <a href="" class="main-nav__sub-link">
+                              For Sellers
+                            </a>
+                          </li>
+                          <li class="main-nav__item  main-nav__item--lvl-2">
+                            <a href="" class="main-nav__sub-link">
+                              For Buyers
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li> -->
+
               <li class="main-nav__item  main-nav__item--contacts  main-nav__item--mobile-separator">
-                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler="true">Contacts</span>
-                <span class="main-nav__pseudolink  main-nav__pseudolink--phone  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler="true">+30 6974-383-585</span>
+                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler>Contacts</span>
+                <span class="main-nav__pseudolink  main-nav__pseudolink--phone  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler>+30 6974-383-585</span>
                 <div class="main-nav__lvl  main-nav__lvl--contacts">
                   <div class="main-nav__breadcrumbs" style="display:none;">
-                    <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-toggler="true">Back</span>
+                    <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-hide>Back</span>
                     <span class="main-nav__breadcrumbs-item">&nbsp;&nbsp;>&nbsp; Contacts</span>
                   </div>
                   <ul class="contacts-list">
@@ -219,11 +257,11 @@
                 </div>
               </li>
               <li class="main-nav__item  main-nav__item--currency">
-                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler="true">Currency: <span data-main-nav-submenu-toggler="true">€</span></span>
+                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler>Currency: <span data-main-nav-submenu-toggler>€</span></span>
                 <span class="main-nav__pseudolink  main-nav__pseudolink--currency">€</span>
                 <div class="main-nav__lvl  main-nav__lvl--currency">
                   <div class="main-nav__breadcrumbs" style="display:none;">
-                    <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-toggler="true">Back</span>
+                    <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-hide>Back</span>
                     <span class="main-nav__breadcrumbs-item">&nbsp;&nbsp;>&nbsp; Currency</span>
                   </div>
                   <ul class="main-nav__sub-list">
@@ -273,11 +311,11 @@
                 </div>
               </li>
               <li class="main-nav__item  main-nav__item--language  main-nav__item--mobile-separator">
-                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler="true">Language: <span data-main-nav-submenu-toggler="true">English</span></span>
+                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler>Language: <span data-main-nav-submenu-toggler>English</span></span>
                 <span class="main-nav__pseudolink  main-nav__pseudolink--language">En</span>
                 <div class="main-nav__lvl  main-nav__lvl--language">
                   <div class="main-nav__breadcrumbs" style="display:none;">
-                    <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-toggler="true">Back</span>
+                    <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-hide>Back</span>
                     <span class="main-nav__breadcrumbs-item">&nbsp;&nbsp;>&nbsp; Language</span>
                   </div>
                   <ul class="main-nav__sub-list">
@@ -314,8 +352,8 @@
 
             <ul class="main-nav__list  main-nav__list--always-drop-down">
               <li class="main-nav__item">
-                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler="true">Currency: <span data-main-nav-submenu-toggler="true">€</span></span>
-                <span class="main-nav__pseudolink  main-nav__pseudolink--currency  main-nav__pseudolink--arrow-desktop" data-main-nav-submenu-toggler="true">€</span>
+                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler>Currency: <span data-main-nav-submenu-toggler>€</span></span>
+                <span class="main-nav__pseudolink  main-nav__pseudolink--currency  main-nav__pseudolink--arrow-desktop" data-main-nav-submenu-toggler>€</span>
                 <div class="main-nav__lvl  main-nav__lvl--currency">
                   <ul class="main-nav__sub-list">
                     <li class="main-nav__item  main-nav__item--lvl-2">
@@ -364,8 +402,8 @@
                 </div>
               </li>
               <li class="main-nav__item">
-                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler="true">Language: <span data-main-nav-submenu-toggler="true">English</span></span>
-                <span class="main-nav__pseudolink  main-nav__pseudolink--language  main-nav__pseudolink--arrow-desktop" data-main-nav-submenu-toggler="true">En</span>
+                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler>Language: <span data-main-nav-submenu-toggler>English</span></span>
+                <span class="main-nav__pseudolink  main-nav__pseudolink--language  main-nav__pseudolink--arrow-desktop" data-main-nav-submenu-toggler>En</span>
                 <div class="main-nav__lvl  main-nav__lvl--language">
                   <ul class="main-nav__sub-list">
                     <li class="main-nav__item  main-nav__item--lvl-2  main-nav__item--active">
