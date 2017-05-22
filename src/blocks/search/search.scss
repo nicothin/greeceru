@@ -1,0 +1,66 @@
+// В этом файле должны быть стили только для БЭМ-блока search, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.search {
+  padding: 15px 15px 20px;
+  color: #fff;
+  background-color: #2D5AA4;
+  background-image: url(../img/search-bg--small.jpg);
+  background-position: center;
+  background-size: cover;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 40px;
+    background-position: left top;
+    background-image: url(../img/search-bg.jpg);
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-bottom: 200px;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 34px 0 50px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+
+    @media (min-width: $screen-md) {
+      font-size: 32px;
+      line-height: 42px;
+      padding: 64px 0 55px;
+    }
+  }
+
+  &__form {
+    max-width: 450px;
+    margin: auto;
+    padding: 25px 30px 30px;
+    background-color: rgba($gray-darkest, 0.25);
+    border-radius: 3px;
+
+    @media (min-width: $screen-md) {
+      max-width: 800px;
+    }
+  }
+
+  &__form-descr {
+    color: #D1D9E2;
+    // line-height: 1;
+  }
+
+  &__part-buy {}
+
+  &__part-type {}
+
+  &__part-location {}
+
+  &__part-bedrooms {}
+
+  &__part-price {}
+
+  &__part-btn {}
+}
