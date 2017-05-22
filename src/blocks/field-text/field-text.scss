@@ -12,21 +12,62 @@ $line-height:                 1.375em !default;
 $field-padding-vertical:      0.3em !default;
 $field-padding-horizontal:    0.7em !default;
 
-$border-radius:               3px !default;
-
 .field-text {
+
+  $block-name:                &;
+
   display: block;
-  margin-bottom: ($line-height / 2);
+  font-size: $font-size--small;
+
+  &--error {
+
+    #{$block-name}__input {
+      border-color: $color-danger;
+    }
+
+    #{$block-name}__help-text {
+      color: $color-danger;
+    }
+  }
 
   &__name {
     display: block;
-    margin-bottom: 0.4em;
-    line-height: $line-height;
-    font-weight: 700;
+    margin-bottom: 7px;
+    line-height: 1;
+    font-weight: 500;
   }
 
   &__input-wrap {
     display: block;
+
+    &--input-group {
+      display: flex;
+
+      #{$block-name}__input {
+        position: relative;
+        flex-basis: 50%;
+
+        &:focus {
+          z-index: 1;
+        }
+
+        &:not(:first-child):not(:last-child) {
+          border-radius: 0;
+          border-right: 0;
+        }
+
+        &:first-child {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-right: 0;
+        }
+
+        &:last-child {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
   }
 
   &__input {
@@ -35,13 +76,17 @@ $border-radius:               3px !default;
     width: 100%;
     // height: 2.125em;
     padding: $field-padding-vertical  $field-padding-horizontal;
-    line-height: $line-height;
-    font-size: 1em;
+    font-size: $font-size;
+    line-height: $font-size + 6;
     font-family: inherit;
     background-color: #fff;
-    border: 1px solid $border-color;
+    border: 1px solid $gray-lightest;
     border-radius: $border-radius;
     appearance: textfield;
+
+    &--fz-small {
+      font-size: $font-size--small;
+    }
 
     &:focus {
       @include field-focus;
@@ -69,12 +114,12 @@ $border-radius:               3px !default;
     }
 
     &::placeholder {
-      color: $text-color--muted;
+      color: $gray;
       opacity: 1;
     }
 
     @at-root textarea#{&} {
-      $textarea-height: ($line-height * 2) + ($field-padding-vertical * 2);
+      $textarea-height: ($line-height / 1em * 2) + ($field-padding-vertical * 2);
 
       height: auto;
       min-height: calc(#{$textarea-height} + 2px);

@@ -15,7 +15,7 @@ $white:                       hsl(0, 0%, 100%);
 $color-main:                  #477afb;
 $color-main--accent:          #346af4;
 $color-success:               hsl(120, 39%, 54%);
-$color-danger:                hsl(2, 64%, 58%);
+$color-danger:                #d94168;
 $color-warning:               hsl(35, 84%, 62%);
 
 
@@ -77,10 +77,11 @@ $grid-gutter-width:           30px;
 
 // Разное
 
-$field-padding-vertical:      0.3em;
-$field-padding-horizontal:    0.7em;
+$field-padding-vertical:     9px;
+$field-padding-horizontal:   14px;
 
 $border-radius:               2px;
+$border-color:                $gray-lightest;
 $opacity:                     0.7;
 $transition-time:             0.3s;
 $shadow:                      0 4px 40px rgba(72, 72, 72, 0.35);

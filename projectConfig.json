@@ -8,21 +8,11 @@
     "logo": [],
     "btn": [],
     "sprite-svg": [],
-    "field-text": [
-      "--error"
-    ],
-    "field-checkbox": [
-      "__input-wrap--error"
-    ],
-    "field-radio": [
-      "__input-wrap--error"
-    ],
-    "field-file": [
-      "--error"
-    ],
-    "field-select": [
-      "--error"
-    ],
+    "field-text": [],
+    "field-checkbox": [],
+    "field-radio": [],
+    "field-file": [],
+    "field-select": [],
     "field-actions": [],
     "form": [],
     "owl-carousel": [],
