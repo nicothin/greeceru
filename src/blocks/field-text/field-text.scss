@@ -88,6 +88,10 @@ $field-padding-horizontal:    0.7em !default;
       font-size: $font-size--small;
     }
 
+    &--lg {
+      padding: ($field-padding-vertical + 4) $field-padding-horizontal;
+    }
+
     &:focus {
       @include field-focus;
     }
