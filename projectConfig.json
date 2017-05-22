@@ -37,8 +37,7 @@
   "addCssBefore": [
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
-    "./src/scss/functions.scss",
-    "../../node_modules/owl.carousel/dist/assets/owl.carousel.css"
+    "./src/scss/functions.scss"
   ],
   "addCssAfter": [],
   "singleCompiled": [],
@@ -48,8 +47,7 @@
     "./node_modules/svg4everybody/dist/svg4everybody.js",
     "./node_modules/bootstrap/js/dropdown.js",
     "./node_modules/bootstrap/js/tooltip.js",
-    "./node_modules/bootstrap/js/modal.js",
-    "./node_modules/owl.carousel/dist/owl.carousel.js"
+    "./node_modules/bootstrap/js/modal.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"
