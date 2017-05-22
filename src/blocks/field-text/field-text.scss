@@ -75,7 +75,7 @@ $field-padding-horizontal:    0.7em !default;
     vertical-align: middle;
     width: 100%;
     // height: 2.125em;
-    padding: $field-padding-vertical  $field-padding-horizontal;
+    padding: ($field-padding-vertical + 4) $field-padding-horizontal;
     font-size: $font-size;
     line-height: $font-size + 6;
     font-family: inherit;
@@ -84,12 +84,20 @@ $field-padding-horizontal:    0.7em !default;
     border-radius: $border-radius;
     appearance: textfield;
 
+    @media (min-width: $screen-md) {
+      padding: $field-padding-vertical $field-padding-horizontal;
+    }
+
     &--fz-small {
       font-size: $font-size--small;
     }
 
     &--lg {
       padding: ($field-padding-vertical + 4) $field-padding-horizontal;
+
+      @media (min-width: $screen-md) {
+        padding: ($field-padding-vertical + 4) $field-padding-horizontal;
+      }
     }
 
     &:focus {

@@ -16,29 +16,33 @@ $border-radius:               3px !default;
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
-  padding: $field-padding-vertical  $field-padding-horizontal;
+  padding: ($field-padding-vertical + 4) $field-padding-horizontal;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
   text-align: center;
-  font-size: 1em;
   font-family: inherit;
-  line-height: $line-height;
+  font-size: $font-size;
+  line-height: $font-size + 6;
   text-decoration: none;
   text-transform: none;
-  color: $text-color;
+  color: #fff;
+  font-weight: 500;
   border-radius: $border-radius;
-  border: 1px solid $gray-lighter;
-  background-color: $gray-lightest;
+  border: 1px solid transparent;
+  background-color: $color-main;
   background-image: none;
   cursor: pointer;
+  box-shadow: 0 1px 3px rgba(#737c94, 0.4);
+  transition: all $transition-time;
 
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $text-color;
-    background-color: darken($gray-lightest, 10%);
-    border-color: darken($gray-lighter, 12%);
+    color: #fff;
+    background-color: $color-main--accent;
+    border-color: transparent;
+    box-shadow: 0 1px 8px rgba(#737c94, 0.5);
   }
 
   &:active,
@@ -50,34 +54,37 @@ $border-radius:               3px !default;
   &:disabled {
     cursor: not-allowed;
     opacity: $opacity;
-    color: $text-color;
-    background-color: $gray-lightest;
-    border-color: $gray-lighter;
+    color: #fff;
+    background-color: $color-main;
+    border-color: transparent;
 
     @at-root a.btn--disabled {
       pointer-events: none;
     }
   }
 
+  @media (min-width: $screen-md) {
+    padding: $field-padding-vertical $field-padding-horizontal;
+  }
 
 
-  // &--main {
-  //   color: #fff;
-  //   background-color: $color-main;
-  //   border: 1px solid $color-main;
 
-  //   &:hover,
-  //   &:focus {
-  //     color: #fff;
-  //     background-color: darken($color-main, 10%);
-  //     border-color: darken($color-main, 12%);
-  //   }
+  &--white {
+    color: $color-main;
+    background-color: #fff;
+    // border: 1px solid $color-main;
 
-  //   &--disabled,
-  //   &:disabled {
-  //     color: #fff;
-  //     background-color: $color-main;
-  //     border-color: $color-main;
-  //   }
-  // }
+    &:hover,
+    &:focus {
+      color: $color-main;
+      background-color: #fff;
+      box-shadow: 0 1px 3px rgba(#737c94, 0.2), 0 1px 5px rgba($color-main, 0.25);
+    }
+
+    &--disabled,
+    &:disabled {
+      color: $color-main;
+      background-color: #fff;
+    }
+  }
 }
