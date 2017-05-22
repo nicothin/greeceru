@@ -22,7 +22,8 @@
     "login": [],
     "contacts-list": [],
     "search-form": [],
-    "search": []
+    "search": [],
+    "field-drop-checkboxes": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

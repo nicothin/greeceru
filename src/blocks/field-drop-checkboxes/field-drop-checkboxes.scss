@@ -1,0 +1,88 @@
+// В этом файле должны быть стили только для БЭМ-блока field-drop-checkboxes, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.field-drop-checkboxes {
+
+  $block-name:                &;
+
+  position: relative;
+
+  &--fz-small {
+    font-size: $font-size--small;
+
+    #{$block-name}__pseudoselect {
+      font-size: $font-size--small;
+    }
+  }
+
+  &__pseudoselect {
+    display: block;
+    position: relative;
+    padding: ($field-padding-vertical + 4) $field-padding-horizontal;
+    font-size: $font-size;
+    line-height: $font-size + 6;
+    font-family: inherit;
+    color: $text-color;
+    background-color: #fff;
+    border: 1px solid $gray-lightest;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: color $transition-time;
+
+    @media (min-width: $screen-md) {
+      padding: $field-padding-vertical $field-padding-horizontal;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      width: 6px;
+      height: 6px;
+      border-bottom: 1px solid #31353f;
+      border-right: 1px solid #31353f;
+      transform: translateY(-70%) rotate(45deg);
+      transition: transform $transition-time, border-color $transition-time;
+    }
+  }
+
+  &__drop {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    color: $text-color;
+    background-color: #fff;
+    border: 1px solid $gray-lightest;
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+    transition: opacity $transition-time;
+
+    #{$block-name}.open & {
+      width: 100%;
+      height: auto;
+      padding: 10px 13px;
+      opacity: 1;
+      overflow: visible;
+    }
+  }
+
+  &.open {
+
+    #{$block-name}__pseudoselect {
+      color: $color-main;
+
+      &:after {
+          border-color: $color-main;
+        transform: translateY(-30%) rotate(225deg);
+      }
+    }
+  }
+}
