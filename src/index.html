@@ -22,7 +22,25 @@
           <h1 class="search__title">Find the right home <br>and the right neighborhood</h1>
           <form action="" class="search__form">
             <div class="search__form-descr">Search properties for</div>
-            <div class="search__part-buy">part-buy</div>
+            <div class="search__part-buy">
+              <div class="field-drop-checkboxes">
+                <div class="field-drop-checkboxes__pseudoselect" id="buy-rent-pseudoselect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Buy</div>
+                <div class="field-drop-checkboxes__drop  field-drop-checkboxes__drop--separated-checks  field-checkbox" aria-labelledby="buy-rent-pseudoselect">
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name  field-checkbox__name--check-only">
+                      <input class="field-checkbox__input" type="checkbox" checked>
+                      <span class="field-checkbox__name-text">Buy</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name  field-checkbox__name--check-only">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">Rent</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="search__part-type">
               <div class="field-drop-checkboxes  field-drop-checkboxes--fz-small">
                 <div class="field-drop-checkboxes__pseudoselect" id="property-types" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All property types</div>
@@ -85,7 +103,49 @@
                 </span>
               </label>
             </div>
-            <div class="search__part-bedrooms">part-bedrooms</div>
+            <div class="search__part-bedrooms">
+              <div class="field-drop-checkboxes  field-drop-checkboxes--fz-small">
+                <div class="field-drop-checkboxes__pseudoselect" id="bedrooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bedrooms</div>
+                <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="bedrooms">
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox" checked>
+                      <span class="field-checkbox__name-text">Studio</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">1 bed</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">2 bed’s</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">3 bed’s</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">4 bed’s</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">5+</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="search__part-price">
               <label class="field-text">
                 <span class="field-text__input-wrap  field-text__input-wrap--input-group">

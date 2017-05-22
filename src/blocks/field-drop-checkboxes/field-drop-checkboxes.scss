@@ -65,12 +65,47 @@
     box-shadow: $shadow;
     transition: opacity $transition-time;
 
+    .field-checkbox__name {
+      display: block;
+    }
+
     #{$block-name}.open & {
       width: 100%;
       height: auto;
       padding: 10px 13px;
       opacity: 1;
       overflow: visible;
+
+      &--separated-checks {
+        padding: 0;
+
+        .field-checkbox__name {
+          padding: 13px;
+        }
+
+        @at-root .field-checkbox__name--check-only input:checked ~ .field-checkbox__name-text:after {
+            top: 17px;
+            left: 15px;
+          }
+
+        .field-checkbox__input-wrap {
+          padding: 0;
+        }
+
+        .field-checkbox__input-wrap:not(:last-child) {
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: $gray-lightest;
+          }
+        }
+      }
     }
   }
 

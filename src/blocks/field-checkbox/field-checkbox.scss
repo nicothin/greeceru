@@ -5,6 +5,9 @@
 $line-height:                 1.375em !default;
 
 .field-checkbox {
+
+  $block-name:                &;
+
   display: block;
   margin-bottom: ($line-height / 2);
 
@@ -18,7 +21,7 @@ $line-height:                 1.375em !default;
   &__input-wrap {
 
     & + & {
-      margin-top: ($line-height / 2.1);
+      padding-top: ($line-height / 2.1);
     }
   }
 
@@ -29,9 +32,14 @@ $line-height:                 1.375em !default;
     margin-right: 0;
     font-weight: 400;
     line-height: $line-height;
+
+    &--check-only {
+      padding-left: 0;
+    }
   }
 
   &__name-text {
+    transition: all $transition-time;
 
     // свой чекбокс
     &:before {
@@ -60,6 +68,23 @@ $line-height:                 1.375em !default;
       border-left: 1px solid $color-main;
       border-bottom: 1px solid $color-main;
       transform: rotate(-47.8deg);
+    }
+
+    @at-root #{$block-name}__name--check-only input:checked ~ & {
+      padding-left: 1.6em;
+      color: $color-main;
+
+      &:after {
+        width: 10px;
+        height: 6px;
+      }
+    }
+
+    #{$block-name}__name--check-only & {
+
+      &:before {
+        display: none;
+      }
     }
   }
 
