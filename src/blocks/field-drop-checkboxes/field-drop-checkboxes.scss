@@ -19,10 +19,13 @@
   &__pseudoselect {
     display: block;
     position: relative;
-    padding: ($field-padding-vertical + 4) $field-padding-horizontal;
+    padding: ($field-padding-vertical + 4) ($field-padding-horizontal + 8) ($field-padding-vertical + 4) $field-padding-horizontal;
     font-size: $font-size;
     line-height: $font-size + 6;
     font-family: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: $text-color;
     background-color: #fff;
     border: 1px solid $gray-lightest;
@@ -31,7 +34,7 @@
     transition: color $transition-time;
 
     @media (min-width: $screen-md) {
-      padding: $field-padding-vertical $field-padding-horizontal;
+      padding: $field-padding-vertical ($field-padding-horizontal + 8) $field-padding-vertical $field-padding-horizontal;
     }
 
     &:after {
@@ -71,6 +74,7 @@
 
     #{$block-name}.open & {
       width: 100%;
+      min-width: 120px;
       height: auto;
       padding: 10px 13px;
       opacity: 1;

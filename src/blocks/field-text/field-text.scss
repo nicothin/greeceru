@@ -46,6 +46,7 @@ $field-padding-horizontal:    0.7em !default;
       #{$block-name}__input {
         position: relative;
         flex-basis: 50%;
+        max-width: 50%;
 
         &:focus {
           z-index: 1;
@@ -74,6 +75,7 @@ $field-padding-horizontal:    0.7em !default;
     display: inline-block;
     vertical-align: middle;
     width: 100%;
+    min-height: 40px;
     // height: 2.125em;
     padding: ($field-padding-vertical + 4) $field-padding-horizontal;
     font-size: $font-size;
