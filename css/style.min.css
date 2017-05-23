@@ -1235,8 +1235,11 @@ a.pagination__item:hover, a.pagination__item:focus {
     display: none;
     position: absolute;
     top: 5px;
-    right: 5px; }
+    right: 5px;
+    width: 12px;
+    height: 12px; }
 .card__info-tooltip svg {
+      display: block;
       fill: #8891a6; }
 .card__info-tooltip:hover svg, .card__info-tooltip:focus svg {
       fill: #477afb; }
@@ -1279,7 +1282,7 @@ a.pagination__item:hover, a.pagination__item:focus {
     text-overflow: ellipsis;
     font-size: 18px; }
 .card__price-currency {
-    margin-right: 0.6em; }
+    margin-right: 0.5em; }
 .btn-icon__text {
   position: absolute;
   top: 0;
@@ -1292,6 +1295,102 @@ a.pagination__item:hover, a.pagination__item:focus {
   transition: fill 0.3s; }
 .btn-icon:hover svg, .btn-icon:focus svg {
   fill: #477afb; }
+.tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.375em;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  font-size: 12px;
+  opacity: 0; }
+.tooltip.in {
+  opacity: 0.9; }
+.tooltip.top {
+  margin-top: -3px;
+  padding: 5px 0; }
+.tooltip.right {
+  margin-left: 3px;
+  padding: 0 5px; }
+.tooltip.bottom {
+  margin-top: 3px;
+  padding: 5px 0; }
+.tooltip.left {
+  margin-left: -3px;
+  padding: 0 5px; }
+.tooltip-inner {
+  max-width: 200px;
+  padding: 8px 15px;
+  color: #fff;
+  text-align: center;
+  background-color: #31353f;
+  border-radius: 2px;
+  box-shadow: 0 2px 20px rgba(72, 72, 72, 0.3); }
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid; }
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #31353f; }
+.tooltip.top-left .tooltip-arrow {
+  bottom: 0;
+  right: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #31353f; }
+.tooltip.top-right .tooltip-arrow {
+  bottom: 0;
+  left: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #31353f; }
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #31353f; }
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #31353f; }
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #31353f; }
+.tooltip.bottom-left .tooltip-arrow {
+  top: 0;
+  right: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #31353f; }
+.tooltip.bottom-right .tooltip-arrow {
+  top: 0;
+  left: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #31353f; }
 @media (min-width: 480px){
   dd{
     margin-left: 1.8em; }
