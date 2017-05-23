@@ -1,0 +1,28 @@
+// В этом файле должны быть стили только для БЭМ-блока btn-icon, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.btn-icon {
+
+  &__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  svg {
+    fill: $gray-darkest;
+    transition: fill $transition-time;
+  }
+
+  &:hover,
+  &:focus {
+
+    svg {
+      fill: $color-main;
+    }
+  }
+}

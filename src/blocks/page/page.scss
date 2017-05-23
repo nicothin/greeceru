@@ -52,6 +52,16 @@ body {
   min-height: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: $color-main;
+
+  &:hover,
+  &:focus {
+    color: $color-main--accent;
+  }
+}
+
 [tabindex='-1']:focus {
   outline: none !important;
 }

@@ -1,0 +1,186 @@
+// В этом файле должны быть стили только для БЭМ-блока card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+
+  @media (min-width: $screen-lg) {
+    width: 360px;
+  }
+
+  &__name {
+    order: 3;
+    padding: 18px 20px;
+    border: 1px solid $gray-lightest;
+    border-top: none;
+
+    @media (min-width: $screen-lg) {
+      padding: 22px 20px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: $font-size;
+
+    @media (min-width: $screen-lg) {
+      font-size: $font-size--h3;
+    }
+
+    a {
+      color: $text-color;
+
+      &:hover,
+      &:focus {
+        color: $color-main--accent;
+      }
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: $font-size--small;
+  }
+
+  &__photo {
+    order: 1;
+    height: 216px;
+
+    @media (min-width: $screen-lg) {
+      height: 270px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+    }
+  }
+
+  &__info {
+    position: relative;
+    order: 2;
+    border: 1px solid $gray-lightest;
+  }
+
+  &__info-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+
+  &__info-list-item {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+    padding: 8px;
+    font-size: $font-size--small;
+    text-align: center;
+    white-space: nowrap;
+
+    &:not(:last-child) {
+      border-right: 1px solid $gray-lightest;
+    }
+  }
+
+  &__info-list-num {
+    font-size: $font-size--h3;
+    font-weight: 500;
+  }
+
+  &__info-tooltip {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+
+    svg {
+      fill: $gray;
+    }
+
+    &:hover,
+    &:focus {
+
+      svg {
+        fill: $color-main;
+      }
+    }
+  }
+
+  &__footer {
+    order: 4;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    border: 1px solid $gray-lightest;
+    border-top: none;
+  }
+
+  &__footer-item {
+
+    &:not(:last-child) {
+      border-right: 1px solid $gray-lightest;
+    }
+
+    .btn-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+    }
+
+    &--price {
+      flex-grow: 1;
+      max-width: 207px;
+      padding: 0 18px;
+    }
+
+    &--compare {
+      display: none;
+
+      @media (min-width: $screen-lg) {
+        display: block;
+      }
+    }
+
+    &--notice {
+      display: none;
+
+      @media (min-width: $screen-lg) {
+        display: block;
+      }
+    }
+  }
+
+  &__price {
+    display: block;
+    font-weight: 500;
+    line-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: ($font-size--h3 + 2);
+  }
+
+  &__price-currency {
+    margin-right: 0.6em;
+  }
+
+  &__price-num {
+  }
+}

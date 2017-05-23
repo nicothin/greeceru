@@ -24,7 +24,10 @@
     "search-form": [],
     "search": [],
     "field-drop-checkboxes": [],
-    "property-owner": []
+    "property-owner": [],
+    "top-rated": [],
+    "card": [],
+    "btn-icon": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
