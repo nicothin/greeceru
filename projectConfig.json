@@ -23,7 +23,8 @@
     "contacts-list": [],
     "search-form": [],
     "search": [],
-    "field-drop-checkboxes": []
+    "field-drop-checkboxes": [],
+    "property-owner": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

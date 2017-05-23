@@ -1,0 +1,86 @@
+// В этом файле должны быть стили только для БЭМ-блока property-owner, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.property-owner {
+  background-color: $gray-ultra-lightest;
+  border-bottom: 1px solid #ebeff3;
+  padding: 15px 15px 25px;
+
+  @media (min-width: $screen-lg) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 38px 0 5px;
+    font-size: $font-size--h2;
+    line-height: ($font-size--h2 + 2);
+    font-weight: 400;
+    text-align: center;
+    flex-basis: 100%;
+  }
+
+  &__descr {
+    margin: 0 0 50px;
+    color: $gray;
+    text-align: center;
+    flex-basis: 100%;
+  }
+
+  &__list {
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      max-width: 1270px;
+      margin: 0 -15px;
+    }
+  }
+
+  &__item {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 26px 30px 28px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    box-shadow: 0 30px 20px -20px rgba($color-main, 0.05),
+                0 30px 20px -20px rgba(72, 72, 72, 0.1);
+
+    @media (min-width: $screen-lg) {
+      margin: 0 15px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 36px 40px 40px;
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+    padding: 0;
+    font-size: $font-size--h3;
+    font-weight: 500;
+  }
+
+  &__item-descr {
+    margin: 0 0 16px;
+    flex-grow: 1;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__item-btns {
+  }
+
+  &__item-btn {
+    min-width: 288px;
+  }
+}
