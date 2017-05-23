@@ -102,12 +102,15 @@
     position: absolute;
     top: 5px;
     right: 5px;
+    width: 12px;
+    height: 12px;
 
     @media (min-width: $screen-lg) {
       display: block;
     }
 
     svg {
+      display: block;
       fill: $gray;
     }
 
@@ -178,7 +181,7 @@
   }
 
   &__price-currency {
-    margin-right: 0.6em;
+    margin-right: 0.5em;
   }
 
   &__price-num {

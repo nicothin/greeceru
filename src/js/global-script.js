@@ -5,4 +5,7 @@ $( document ).ready(function() {
     e.stopPropagation();
   });
 
+  // включение тултипов
+  $('[data-toggle="tooltip"]').tooltip();
+
 });

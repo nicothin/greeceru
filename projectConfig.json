@@ -27,7 +27,8 @@
     "property-owner": [],
     "top-rated": [],
     "card": [],
-    "btn-icon": []
+    "btn-icon": [],
+    "tooltip": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
