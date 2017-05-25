@@ -1126,6 +1126,7 @@ a.pagination__item:hover, a.pagination__item:focus {
 .property-owner__item {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+    min-width: 440px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -1540,10 +1541,14 @@ a.pagination__item:hover, a.pagination__item:focus {
 .feedback__item-author-text {
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -ms-flex-direction: column;
         flex-direction: column;
     -ms-flex-pack: center;
-        justify-content: center; }
+        justify-content: center;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%; }
 .feedback__item-author-name {
     margin: 0;
     padding: 0;
@@ -1993,7 +1998,8 @@ a:hover .feedback__slider-control-arrow,
   .contacts-list__phone-item:not(:last-child){
     margin-bottom: 8px; }
   .property-owner__item{
-    padding: 36px 40px 40px; }
+    padding: 36px 40px 40px;
+    min-width: 546px; }
   .property-owner__item-descr{
     margin-bottom: 26px; }
   .feedback__slider{
