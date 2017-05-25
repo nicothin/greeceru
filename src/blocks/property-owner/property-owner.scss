@@ -45,6 +45,7 @@
 
   &__item {
     flex-basis: 50%;
+    min-width: 440px;
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -60,6 +61,7 @@
 
     @media (min-width: $screen-xl) {
       padding: 36px 40px 40px;
+      min-width: 546px;
     }
   }
 

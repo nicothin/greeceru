@@ -131,8 +131,10 @@
 
   &__item-author-text {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    flex-basis: 100%;
   }
 
   &__item-author-name {
