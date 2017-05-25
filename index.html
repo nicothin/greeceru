@@ -449,13 +449,13 @@
                 <div class="field-drop-checkboxes__drop  field-drop-checkboxes__drop--separated-checks  field-checkbox" aria-labelledby="buy-rent-pseudoselect">
                   <div class="field-checkbox__input-wrap">
                     <label class="field-checkbox__name  field-checkbox__name--check-only">
-                      <input class="field-checkbox__input" type="checkbox" checked>
+                      <input class="field-checkbox__input" type="radio" name="buy-rent" checked>
                       <span class="field-checkbox__name-text">Buy</span>
                     </label>
                   </div>
                   <div class="field-checkbox__input-wrap">
                     <label class="field-checkbox__name  field-checkbox__name--check-only">
-                      <input class="field-checkbox__input" type="checkbox">
+                      <input class="field-checkbox__input" type="radio" name="buy-rent">
                       <span class="field-checkbox__name-text">Rent</span>
                     </label>
                   </div>
@@ -1556,6 +1556,107 @@
           <footer class="top-rated__footer">
             <a href="" class="top-rated__more-link">+ More Properties for Rent</a>
           </footer>
+        </section>
+
+        <section class="feedback">
+          <h2 class="feedback__title">Feedback From Media and Clients</h2>
+          <p class="feedback__descr">read what they said about our company</p>
+          <div class="feedback__slider-and-info">
+            <div class="feedback__stats">
+              <div class="feedback__stats-item">
+                <b class="feedback__stats-num">168</b>
+                <span class="feedback__stats-descr">Reviews from clients</span>
+                <a href="" class="feedback__stats-link">Add a review</a>
+              </div>
+              <div class="feedback__stats-item">
+                <b class="feedback__stats-num">16</b>
+                <span class="feedback__stats-descr">Reviews in mass media</span>
+                <a href="" class="feedback__stats-link">Request an interview</a>
+              </div>
+            </div>
+            <div class="feedback__slider">
+              <div class="feedback__slider-inner"> <!-- Предполагается смещать этот div при работе слайдера посредством заинлайненного transform: translateX(-Npx), где N — ширина одного отзыва с margin-ами, умноженная на кол-во смещаемых отзывов -->
+                <article class="feedback__item">
+                  <header class="feedback__item-header">
+                    <img src="img/feedback-avatar-01.png" alt="Jannet von Klingen" class="feedback__item-avatar">
+                    <div class="feedback__item-author-text">
+                      <h3 class="feedback__item-author-name">Jannet von Klingen </h3>
+                      <div class="feedback__item-author-info">Designer</div>
+                    </div>
+                    <svg class="feedback__item-type-icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#clip"></use></svg>
+                  </header>
+                  <div class="feedback__item-text">
+                    <p>Its sometimes her behaviour are contented. Do listening am eagerness oh objection collected. Together gay feelings continue juvenile had off one</p>
+                    <a href="" class="feedback__item-details">
+                      Details
+                      <svg class="feedback__item-details-icon" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                    </a>
+                  </div>
+                </article>
+                <article class="feedback__item">
+                  <header class="feedback__item-header  feedback__item-header--company">
+                    <span class="feedback__item-avatar-company"><img src="img/feedback-avatar-company-01.png" alt="lenta" class="feedback__item-avatar"></span>
+                    <div class="feedback__item-author-text">
+                      <div class="feedback__item-author-info">Russian Mass Media </div>
+                    </div>
+                    <svg class="feedback__item-type-icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#microphone"></use></svg>
+                  </header>
+                  <div class="feedback__item-text">
+                    <p>Unfeeling so rapturous discovery he exquisite. Reasonably so middletons or impression by terminated. Old pleasure required removing elegance him had.</p>
+                    <a href="" class="feedback__item-details">
+                      Details
+                      <svg class="feedback__item-details-icon" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                    </a>
+                  </div>
+                </article>
+                <article class="feedback__item">
+                  <header class="feedback__item-header">
+                    <img src="img/feedback-avatar-01.png" alt="Jannet von Klingen" class="feedback__item-avatar">
+                    <div class="feedback__item-author-text">
+                      <h3 class="feedback__item-author-name">Jannet von Klingen Jannet von Klingen Jannet von Klingen </h3>
+                      <div class="feedback__item-author-info">Designer Designer</div>
+                    </div>
+                    <svg class="feedback__item-type-icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#clip"></use></svg>
+                  </header>
+                  <div class="feedback__item-text">
+                    <p>Its sometimes her behaviour</p>
+                  </div>
+                </article>
+                <article class="feedback__item">
+                  <header class="feedback__item-header">
+                    <img src="img/feedback-avatar-01.png" alt="Newsweek" class="feedback__item-avatar">
+                    <div class="feedback__item-author-text">
+                      <h3 class="feedback__item-author-name">Jannet von Klingen </h3>
+                      <div class="feedback__item-author-info">Designer</div>
+                    </div>
+                    <svg class="feedback__item-type-icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#clip"></use></svg>
+                  </header>
+                  <div class="feedback__item-text">
+                    <p>Its sometimes her behaviour are contented. Do listening am eagerness oh objection collected. Together gay feelings continue juvenile had off one</p>
+                    <a href="" class="feedback__item-details">
+                      Details
+                      <svg class="feedback__item-details-icon" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="feedback__slider-controls">
+              <a href="" class="feedback__slider-control-prev  feedback__slider-control-prev--inactive">
+                <svg class="feedback__slider-control-arrow" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-left"></use></svg>
+              </a>
+              <a href="" class="feedback__slider-control-next">
+                <svg class="feedback__slider-control-arrow" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+              </a>
+            </div>
+          </div>
+          <div class="feedback__logo-list">
+            <img src="img/feedback-logo-01.png" alt="Newsweek" class="feedback__logo-item">
+            <img src="img/feedback-logo-02.png" alt="Independent" class="feedback__logo-item">
+            <img src="img/feedback-logo-05.png" alt="3 канал" class="feedback__logo-item">
+            <img src="img/feedback-logo-03.png" alt="РБК" class="feedback__logo-item">
+            <img src="img/feedback-logo-04.png" alt="naftemporiki.gr" class="feedback__logo-item">
+          </div>
         </section>
 
       </main>
