@@ -29,7 +29,8 @@
     "card": [],
     "btn-icon": [],
     "tooltip": [],
-    "question": []
+    "question": [],
+    "feedback": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

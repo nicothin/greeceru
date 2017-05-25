@@ -38,6 +38,7 @@
     flex-basis: 100%;
     max-width: $screen-xxl;
     overflow-x: auto;
+    margin: 0 -15px;
     margin-bottom: 20px;
 
     @media (min-width: $screen-xxl) {
@@ -71,7 +72,7 @@
     .card,
     .question {
       flex-shrink: 0;
-      margin-right: 30px;
+      margin: 0 15px;
     }
   }
 

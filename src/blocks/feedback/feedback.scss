@@ -1,0 +1,356 @@
+// В этом файле должны быть стили только для БЭМ-блока feedback, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.feedback {
+
+  $block-name:                &;
+  // #{$block-name}__element {} для вложений
+
+  padding: 15px 15px 25px;
+  background-color: $gray-ultra-lightest;
+  border-bottom: 1px solid $gray-lightest;
+
+  // @media (min-width: $screen-lg) {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   justify-content: center;
+  //   padding-top: 30px;
+  //   padding-bottom: 70px;
+  // }
+
+  &__title {
+    max-width: $screen-xl;
+    margin: 0 auto;
+    padding: 38px 0 5px;
+    font-size: $font-size--h2;
+    line-height: ($font-size--h2 + 2);
+    font-weight: 400;
+    text-align: center;
+    flex-basis: 100%;
+  }
+
+  &__descr {
+    max-width: $screen-xl;
+    margin: 0 auto 50px;
+    color: $gray;
+    text-align: center;
+    flex-basis: 100%;
+  }
+
+  &__slider-and-info {
+    position: relative;
+
+    @media (min-width: $screen-xxl) {
+      display: flex;
+      align-items: flex-start;
+      padding: 0 15px;
+      width: 1553px;
+      margin: auto;
+    }
+  }
+
+  &__slider {
+    overflow-x: auto;
+    margin: 0 -15px;
+
+    @media (min-width: $screen-xl) {
+      max-width: 1120px;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+    }
+
+    @media (min-width: $screen-xxl) {
+      width: 1140px;
+      margin: 0;
+      max-width: 1140px;
+    }
+  }
+
+  &__slider-inner {
+    display: flex;
+    width: auto;
+    padding-bottom: 30px;
+
+    @media (min-width: $screen-xl) {
+      // width: 100%;
+      margin: 0 -15px;
+    }
+  }
+
+  &__item {
+    width: 290px;
+    min-width: 290px;
+    margin: 0 15px;
+    padding: 30px 30px 26px;
+    border-radius: $border-radius;
+    background-color: #fff;
+    box-shadow: 0 30px 20px -20px rgba($color-main, 0.05),
+                0 30px 20px -20px rgba(72, 72, 72, 0.1);
+
+    @media (min-width: $screen-xl) {
+      width: calc(33.33334% - 30px);
+      min-width: calc(33.33334% - 30px);
+    }
+  }
+
+  &__item-header {
+    position: relative;
+    padding-right: 10px;
+    display: flex;
+    min-height: 64px;
+
+    &--company {
+      flex-direction: column;
+      justify-content: center;
+
+      #{$block-name}__item-avatar {
+        width: auto;
+        height: auto;
+        border-radius: 0;
+      }
+    }
+  }
+
+  &__item-avatar {
+    flex-shrink: 0;
+    display: block;
+    margin-right: 20px;
+    width: 64px;
+    height: 64px;
+    max-height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__item-avatar-company {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  &__item-author-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__item-author-name {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: $font-size;
+  }
+
+  &__item-author-info {
+    font-size: $font-size--small;
+    color: $gray;
+  }
+
+  &__item-type-icon {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    fill: $gray;
+    opacity: .7;
+
+    @media (min-width: $screen-lg) {
+      top: -10px;
+      right: -10px;
+    }
+  }
+
+  &__item-text {
+    padding: 10px 0 0;
+  }
+
+  &__item-details {
+    display: inline-block;
+    margin-top: 12px;
+  }
+
+  &__item-details-icon {
+    display: inline-block;
+    vertical-align: -0.1em;
+    margin-left: 0.3em;
+    fill: $color-main;
+    transform: scale(0.6);
+  }
+
+  &__stats {
+    display: none;
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 55px;
+      max-width: 410px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      order: 1;
+      margin: 4px 0 0 30px;
+      width: 360px;
+    }
+  }
+
+  &__stats-item {
+    position: relative;
+    flex-basis: 50%;
+    min-width: 50%;
+    text-align: center;
+
+    &:first-child {
+
+      @media (min-width: $screen-xxl) {
+        padding-right: 30px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 1px;
+        height: 37px;
+        background-color: $gray-lighten;
+        transform: translateY(-65%);
+
+        @media (min-width: $screen-xxl) {
+          right: 20px;
+          top: 0;
+          transform: none;
+        }
+      }
+    }
+
+    // привет мегадизайнеру )
+    &:nth-child(2) {
+
+      @media (min-width: $screen-xxl) {
+        padding-left: 17px;
+      }
+    }
+
+    @media (min-width: $screen-xxl) {
+      text-align: left;
+    }
+  }
+
+  &__stats-num {
+    display: block;
+    margin-bottom: 2px;
+    font-size: $font-size--h3 + 5;
+    font-weight: 500;
+  }
+
+  &__stats-descr {
+    display: block;
+    margin-bottom: 7px;
+    font-size: $font-size;
+    color: $gray;
+  }
+
+  &__stats-link {
+    display: inline-block;
+    font-size: $font-size--small;
+    line-height: 1;
+    border-bottom: 1px dashed $gray-lighten;
+  }
+
+  &__slider-controls {
+    display: none;
+    width: 150px;
+    margin: auto;
+    justify-content: space-between;
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+    }
+
+    @media (min-width: $screen-xxl) {
+      position: absolute;
+      top: 130px;
+      right: 223px;
+    }
+  }
+
+  &__slider-control-prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #e9edf2;
+    transition: border $transition-time;
+
+    &:hover,
+    &:focus {
+      border-color: $color-main--accent;
+    }
+
+    &--inactive {
+      pointer-events: none;
+
+      svg {
+        fill: #acb2c1;
+      }
+    }
+  }
+
+  &__slider-control-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #e9edf2;
+    transition: border $transition-time;
+
+    &:hover,
+    &:focus {
+      border-color: $color-main--accent;
+    }
+
+    &--inactive {
+      pointer-events: none;
+
+      svg {
+        fill: #acb2c1;
+      }
+    }
+  }
+
+  &__slider-control-arrow {
+    fill: $text-color;
+    transition: fill $transition-time;
+
+    a:hover &,
+    a:focus & {
+      fill: $color-main--accent
+    }
+  }
+
+  &__logo-list {
+    display: none;
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 55px 0 44px;
+      max-width: 1120px;
+      margin: auto;
+    }
+
+    @media (min-width: $screen-xxl) {
+      max-width: 1440px;
+      padding-top: 35px;
+    }
+  }
+
+  &__logo-item {
+  }
+}
