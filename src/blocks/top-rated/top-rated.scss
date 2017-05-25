@@ -3,7 +3,7 @@
 // Не пишите здесь другие селекторы.
 
 .top-rated {
-  padding: 15px;
+  padding: 15px 15px 35px;
   background-color: #fff;
   border-bottom: 1px solid $gray-lightest;
 
@@ -16,6 +16,7 @@
   }
 
   &__title {
+    max-width: $screen-xl;
     margin: 0;
     padding: 38px 0 5px;
     font-size: $font-size--h2;
@@ -26,6 +27,7 @@
   }
 
   &__descr {
+    max-width: $screen-xl;
     margin: 0 0 50px;
     color: $gray;
     text-align: center;
@@ -34,9 +36,43 @@
 
   &__list-wrapper {
     flex-basis: 100%;
+    max-width: $screen-xxl;
+    overflow-x: auto;
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-xxl) {
+      overflow-x: hidden;
+    }
   }
 
   &__list {
+    display: flex;
+
+    @media (min-width: $screen-lg) {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .card,
+      .question {
+        margin: 0 15px 30px;
+      }
+    }
+
+    // @media (min-width: $screen-osx) {
+    //   justify-content: flex-start;
+    //   width: 1170px;
+    //   margin: auto;
+    // }
+
+    @media (min-width: $screen-xxl) {
+      margin: 0 -15px;
+    }
+
+    .card,
+    .question {
+      flex-shrink: 0;
+      margin-right: 30px;
+    }
   }
 
   &__footer {

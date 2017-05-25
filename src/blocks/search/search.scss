@@ -21,7 +21,8 @@
   }
 
   &__title {
-    margin: 0;
+    max-width: $screen-xl;
+    margin: 0 auto;
     padding: 34px 0 50px;
     text-align: center;
     font-size: 24px;

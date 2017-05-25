@@ -16,6 +16,7 @@
   }
 
   &__title {
+    max-width: $screen-xl;
     margin: 0;
     padding: 38px 0 5px;
     font-size: $font-size--h2;
@@ -26,6 +27,7 @@
   }
 
   &__descr {
+    max-width: $screen-xl;
     margin: 0 0 50px;
     color: $gray;
     text-align: center;
