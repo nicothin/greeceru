@@ -30,7 +30,9 @@
     "btn-icon": [],
     "tooltip": [],
     "question": [],
-    "feedback": []
+    "feedback": [],
+    "blog-latest": [],
+    "post": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -45,7 +47,8 @@
     "./node_modules/svg4everybody/dist/svg4everybody.js",
     "./node_modules/bootstrap/js/dropdown.js",
     "./node_modules/bootstrap/js/tooltip.js",
-    "./node_modules/bootstrap/js/modal.js"
+    "./node_modules/bootstrap/js/modal.js",
+    "./node_modules/object-fit-images/dist/ofi.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"

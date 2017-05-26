@@ -8,4 +8,7 @@ $( document ).ready(function() {
   // включение тултипов
   $('[data-toggle="tooltip"]').tooltip();
 
+  // включение полифила для object-fit: cover; в днищебраузерах
+  objectFitImages();
+
 });

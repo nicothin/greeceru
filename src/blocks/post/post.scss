@@ -1,0 +1,176 @@
+// В этом файле должны быть стили только для БЭМ-блока post, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.post {
+
+  $block-name:                &;
+  // #{$block-name}__element {} для вложений
+
+  display: flex;
+  position: relative;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $gray-lightest;
+
+  &:last-child {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $screen-md) {
+    display: block;
+    width: 360px;
+    border-bottom: none;
+  }
+
+  &__pict-wrap {
+    display: block;
+    flex-shrink: 0;
+    margin-right: 30px;
+    width: 130px;
+    height: 100px;
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-md) {
+      width: 100%;
+      height: 270px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__pict {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @media (min-width: $screen-md) {
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+    }
+  }
+
+  &__text {
+    margin-top: -5px; // красота и выравнивание
+    margin-bottom: 25px;
+    background-color: #fff;
+
+    @media (min-width: $screen-md) {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 24px 28px;
+      border: 1px solid $gray-lightest;
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+  }
+
+  &__header {
+  }
+
+  &__date {
+    color: $gray;
+    font-size: $font-size--small;
+  }
+
+  &__category {
+    color: $gray;
+    font-size: $font-size--small;
+
+    &:before {
+      content: '•';
+      display: inline-block;
+      margin-left: 0.2em;
+      margin-right: 0.5em;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-main--accent;
+    }
+  }
+
+  &__title {
+    font-size: $font-size;
+    margin: 12px 0 15px;
+    padding: 0;
+    font-weight: 500;
+
+    @media (min-width: $screen-md) {
+      margin: 12px 0 8px;
+    }
+
+    a {
+      color: $text-color;
+
+      &:hover,
+      &:focus {
+        color: $color-main--accent;
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__footer {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__more-link {}
+
+  &__more-link-icon {
+    display: inline-block;
+    vertical-align: -0.1em;
+    margin-left: 0.3em;
+    fill: $color-main;
+    transform: scale(0.6);
+  }
+
+  &__read-time {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      color: $gray;
+      font-size: $font-size--small;
+    }
+  }
+
+  &--accent {
+
+    @media (min-width: $screen-md) {
+      width: 750px;
+      height: 530px;
+
+      #{$block-name}__pict-wrap {
+        width: 100%;
+        height: 100%;
+      }
+
+      #{$block-name}__pict {
+        border-radius: $border-radius;
+      }
+
+      #{$block-name}__text {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: calc(50% - 15px);
+        max-height: 100%;
+        overflow-y: auto;
+        border-radius: 0;
+        border-bottom-left-radius: $border-radius;
+      }
+    }
+  }
+}

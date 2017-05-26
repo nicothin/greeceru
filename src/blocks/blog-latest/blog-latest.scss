@@ -1,0 +1,70 @@
+// В этом файле должны быть стили только для БЭМ-блока blog-latest, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.blog-latest {
+  padding: 15px 15px 35px;
+  background-color: #fff;
+  border-bottom: 1px solid $gray-lightest;
+
+  @media (min-width: $screen-lg) {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+
+  &__title {
+    max-width: $screen-xl;
+    margin: auto;
+    padding: 38px 0 5px;
+    font-size: $font-size--h2;
+    line-height: ($font-size--h2 + 2);
+    font-weight: 400;
+    text-align: center;
+  }
+
+  &__descr {
+    max-width: $screen-xl;
+    margin: 0 auto 50px;
+    color: $gray;
+    text-align: center;
+  }
+
+  &__list-wrap {
+
+    @media (min-width: $screen-md) {
+      margin: auto;
+      max-width: 750px;
+    }
+  }
+
+  &__list {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+
+      .post {
+        flex-basis: calc(50% - 30px);
+        margin: 0 15px 30px;
+      }
+
+      .post--accent {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  &__footer {
+    flex-basis: 100%;
+
+    @media (min-width: $screen-md) {
+      text-align: center;
+    }
+  }
+
+  &__more-link {
+    font-weight: 500;
+  }
+}
+
