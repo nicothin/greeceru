@@ -35,6 +35,11 @@
       margin: auto;
       max-width: 750px;
     }
+
+    @media (min-width: $screen-xxl) {
+      max-width: 1600px;
+      margin-bottom: 20px;
+    }
   }
 
   &__list {
@@ -51,6 +56,17 @@
 
       .post--accent {
         flex-basis: 100%;
+      }
+    }
+
+    @media (min-width: $screen-xxl) {
+
+      .post {
+        flex-basis: calc(25% - 30px);
+      }
+
+      .post--accent {
+        flex-basis: calc(50% - 30px);
       }
     }
   }
