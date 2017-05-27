@@ -3,5 +3,64 @@
 // Не пишите здесь другие селекторы.
 
 .page-footer {
+  padding: 20px 15px 15px 15px;
+  background-color: $gray-darkest;
+  color: $gray;
+  font-size: $font-size--small;
+  line-height: $line-height;
 
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    max-width: 1530px;
+    margin: auto;
+  }
+
+  &__left {
+    // flex-basis: 66.6666%;
+    // min-width: 66.6666%;
+  }
+
+  &__block {
+
+    &--about {}
+
+    &--guide {
+      display: none;
+    }
+
+    &--subscribe {
+      display: none;
+    }
+
+    &--social {}
+  }
+
+  &__block-title {
+    display: none;
+    margin: 0 0 20px;
+    padding: 0 0 8px;
+    font-weight: 400;
+    font-size: $font-size;
+    color: #fff;
+    border-bottom: 1px solid #50535C;
+  }
+
+  &__list {
+    display: none;
+  }
+
+  &__copyright {
+    border-bottom: 1px solid #50535C;
+    padding: 0 0 10px;
+  }
+
+  &__address {
+    display: none;
+    margin: 0;
+
+    a {
+      color: $gray;
+    }
+  }
 }

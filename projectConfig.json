@@ -32,7 +32,8 @@
     "question": [],
     "feedback": [],
     "blog-latest": [],
-    "post": []
+    "post": [],
+    "social-links": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
