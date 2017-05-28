@@ -93,4 +93,9 @@ $border-radius:               3px !default;
   &--sm {
     font-size: $font-size--small;
   }
+
+  &--wide {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }

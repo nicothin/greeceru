@@ -17,13 +17,12 @@ $field-padding-horizontal:    0.7em !default;
   $block-name:                &;
 
   display: block;
-  font-size: $font-size--small;
 
   &__name {
     display: block;
-    margin-bottom: 7px;
+    margin-bottom: 13px;
     line-height: 1;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   &__input-wrap {

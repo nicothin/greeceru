@@ -33,7 +33,8 @@
     "feedback": [],
     "blog-latest": [],
     "post": [],
-    "social-links": []
+    "social-links": [],
+    "modal": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
