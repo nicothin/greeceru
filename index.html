@@ -21,6 +21,11 @@
 
 <body>
 
+  <div style="position: fixed;z-index:999;right:0;bottom:0;background: #fff;padding: 0.5em">
+    <a href="#addItemToWishlist" data-toggle="modal">add Item To Wishlist</a>,
+    <a href="#successfullyAdded" data-toggle="modal">successfully Added</a>,
+  </div>
+
   <div class="page__inner">
 
     <div class="page__content">
@@ -1880,6 +1885,59 @@
 
     </div>
 
+  </div>
+
+  <div id="addItemToWishlist" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Add Item to Wishlist</h4>
+        </div>
+        <div class="modal__body">
+          <p>To add this item to wishlist, please type your email address below</p>
+          <form class="modal__email-form" action="">
+            <div class="field-text">
+              <span class="field-text__name">Email</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="email" placeholder="Type here your email">
+              </span>
+            </div>
+            <div class="field-actions">
+              <button class="btn  btn--white  btn--wide">Add Item</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="successfullyAdded" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Successfully Added to Wishlist</h4>
+        </div>
+        <div class="modal__body">
+          <p>To add this item to wishlist, please type your email address below</p>
+          <form class="modal__email-form" action="">
+            <div class="field-text">
+              <span class="field-text__name">Email</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="email" placeholder="Type here your email">
+              </span>
+            </div>
+            <div class="field-actions">
+              <button class="btn  btn--white  btn--wide">Add Item</button>
+            </div>
+          </form>
+        </div>
+        <!-- <div class="modal__footer">
+          <button type="button" class="btn" data-dismiss="modal">Закрыть</button>
+        </div> -->
+      </div>
+    </div>
   </div>
   <script src="js/script.min.js"></script>
 

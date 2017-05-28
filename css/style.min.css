@@ -251,6 +251,9 @@ pre {
     display: none; }
 .page-footer__block--subscribe {
     display: none; }
+.page-footer__block--subscribe .field-text__name {
+      font-weight: 400;
+      font-size: 12px; }
 .page-footer__block-title {
     display: none;
     -ms-flex-preferred-size: 100%;
@@ -549,14 +552,16 @@ a.btn--disabled {
       background-color: #fff; }
 .btn--sm {
     font-size: 12px; }
+.btn--wide {
+    padding-left: 50px;
+    padding-right: 50px; }
 .field-text {
-  display: block;
-  font-size: 12px; }
+  display: block; }
 .field-text__name {
     display: block;
-    margin-bottom: 7px;
+    margin-bottom: 13px;
     line-height: 1;
-    font-weight: 400; }
+    font-weight: 500; }
 .field-text__input-wrap {
     display: block; }
 .field-text__input-wrap--input-group {
@@ -819,6 +824,9 @@ input:checked ~ .field-checkbox__name-text:after {
     line-height: 1.2em; }
 .field-file__help-text:empty {
       display: none; }
+.field-actions {
+  margin-top: 22px;
+  text-align: right; }
 .form:not(:last-child) {
   margin-bottom: 1.375em; }
 .form fieldset {
@@ -961,6 +969,20 @@ a.pagination__item:hover, a.pagination__item:focus {
       transform: rotate3d(0, 0, 1, 45deg); }
 .close > span:after {
       transform: rotate3d(0, 0, 1, -45deg); }
+.close--bold > span:before, .close--bold > span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 3px;
+    background: #31353f;
+    border-radius: 2px;
+    transform-origin: 50% 50%; }
+.close--bold > span:before {
+    transform: translate(-50%, -50%) rotate3d(0, 0, 1, 45deg); }
+.close--bold > span:after {
+    transform: translate(-50%, -50%) rotate3d(0, 0, 1, -45deg); }
 .login {
   display: -ms-flexbox;
   display: flex;
@@ -1867,6 +1889,88 @@ a:hover .feedback__slider-control-arrow,
     transition: fill 0.3s; }
 .social-links__icon--instagram {
       transform: scale(0.9); }
+.modal-open {
+  overflow: hidden; }
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 56px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding-right: 0 !important;
+  -webkit-overflow-scrolling: touch;
+  background-color: #fff;
+  box-shadow: inset 0 12px 10px -10px rgba(72, 72, 72, 0.1); }
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto; }
+.modal__dialog {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 100%; }
+.modal__content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    min-width: 100%;
+    min-height: 100%;
+    outline: 0; }
+.modal__header {
+    padding: 45px 40px 0 30px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+.modal__title {
+    margin: 0 0 25px;
+    padding: 5px 0 10px;
+    font-weight: 400;
+    font-size: 21px;
+    border-bottom: 1px solid #e6e6e6; }
+.modal__close {
+    position: absolute !important;
+    top: 15px;
+    right: 15px; }
+.modal__body {
+    padding: 0 30px 30px;
+    -ms-flex-positive: 1;
+        flex-grow: 1; }
+.modal__footer {
+    padding: 10px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+.modal__backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.7); }
+.modal__email-form {
+    margin-top: 35px; }
+@keyframes modal-backdrop-show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes modal-content-show {
+  0% {
+    opacity: 0;
+    transform: translateY(-2em); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll; }
 @media (min-width: 480px){
   dd{
     margin-left: 1.8em; }
@@ -2149,7 +2253,21 @@ a:hover .feedback__slider-control-arrow,
     border-width: 2px; }
   .social-links__icon{
     width: 16px;
-    height: 16px; } }
+    height: 16px; }
+  .modal__dialog{
+    width: 600px;
+    height: auto; }
+  .modal--open .modal__dialog{
+    animation: modal-content-show 0.3s 1 both; }
+  .modal__backdrop{
+    animation: modal-backdrop-show 0.3s 1; }
+  .modal--open{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center; } }
 @media (min-width: 1170px){
   .page-header__inner{
     padding-left: 0; }
