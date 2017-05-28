@@ -89,4 +89,8 @@ $border-radius:               3px !default;
       background-color: #fff;
     }
   }
+
+  &--sm {
+    font-size: $font-size--small;
+  }
 }

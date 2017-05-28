@@ -19,22 +19,11 @@ $field-padding-horizontal:    0.7em !default;
   display: block;
   font-size: $font-size--small;
 
-  &--error {
-
-    #{$block-name}__input {
-      border-color: $color-danger;
-    }
-
-    #{$block-name}__help-text {
-      color: $color-danger;
-    }
-  }
-
   &__name {
     display: block;
     margin-bottom: 7px;
     line-height: 1;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   &__input-wrap {
@@ -67,6 +56,39 @@ $field-padding-horizontal:    0.7em !default;
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
         }
+      }
+    }
+
+    &--input-btn-group {
+      display: flex;
+
+      #{$block-name}__input,
+      .btn {
+        position: relative;
+
+        &:focus {
+          z-index: 1;
+        }
+
+        &:not(:first-child):not(:last-child) {
+          border-radius: 0;
+          border-right: 0;
+        }
+
+        &:first-child {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-right: 0;
+        }
+
+        &:last-child {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+
+      .btn {
+        flex-shrink: 0;
       }
     }
   }
@@ -143,5 +165,16 @@ $field-padding-horizontal:    0.7em !default;
 
   &__help-text {
     @include field-help-text;
+  }
+
+  &--error {
+
+    #{$block-name}__input {
+      border-color: $color-danger;
+    }
+
+    #{$block-name}__help-text {
+      color: $color-danger;
+    }
   }
 }

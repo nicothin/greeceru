@@ -3,6 +3,9 @@
 // Не пишите здесь другие селекторы.
 
 .page-footer {
+
+  $block-name:                &;
+
   padding: 20px 15px 15px 15px;
   background-color: $gray-darkest;
   color: $gray;
@@ -14,23 +17,105 @@
     flex-direction: column;
     max-width: 1530px;
     margin: auto;
+
+    @media (min-width: $screen-lg) {
+      max-width: 750px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      max-width: 1530px;
+      flex-direction: row;
+    }
   }
 
   &__left {
-    // flex-basis: 66.6666%;
-    // min-width: 66.6666%;
+
+    @media (min-width: $screen-xxl) {
+      flex-basis: 66.6666%;
+      min-width: 66.6666%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+
+      #{$block-name}__block {
+        flex-basis: 50%;
+        min-width: 50%;
+        padding-right: 30px;
+      }
+    }
+  }
+
+  &__right {
+
+    @media (min-width: $screen-xxl) {
+      flex-basis: 33.33333%;
+      min-width: 33.33333%;
+    }
   }
 
   &__block {
 
-    &--about {}
+    .field-text__name {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 30px;
+    }
+
+    &--about {
+
+      @media (min-width: $screen-lg) {
+        display: flex;
+        flex-wrap: wrap;
+
+        #{$block-name}__block-text {
+          flex-basis: auto; // привет днищебраузеру 11, который игнорирует box-sizing:border-box для flex-basis
+          width: 50%;
+          padding-right: 60px;
+        }
+
+        #{$block-name}__list {
+          flex-basis: 50%;
+          min-width: 50%;
+        }
+      }
+    }
 
     &--guide {
       display: none;
+
+      @media (min-width: $screen-lg) {
+        display: block;
+
+        #{$block-name}__list {
+          column-count: 4;
+        }
+      }
+
+      @media (min-width: $screen-xxl) {
+
+        #{$block-name}__list {
+          column-count: 2;
+        }
+      }
     }
 
     &--subscribe {
       display: none;
+
+      @media (min-width: $screen-lg) {
+        display: block;
+      }
+
+      @media (min-width: $screen-xxl) {
+        margin-bottom: 38px;
+
+        .field-text {
+          max-width: 360px;
+        }
+      }
     }
 
     &--social {}
@@ -38,26 +123,99 @@
 
   &__block-title {
     display: none;
+    flex-basis: 100%;
     margin: 0 0 20px;
     padding: 0 0 8px;
     font-weight: 400;
     font-size: $font-size;
     color: #fff;
     border-bottom: 1px solid #50535C;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
   }
 
   &__list {
     display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    column-count: 2;
+    column-gap: 0;
+
+    a {
+      position: relative;
+      display: inline-block;
+      color: $color-main--light;
+      transition: color $transition-time;
+
+      &:hover,
+      &:focus {
+        color: #fff;
+
+        #{$block-name}__list-icon {
+          fill: #fff;
+        }
+      }
+    }
+
+    li {
+      margin-bottom: 10px;
+      padding-right: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+
+    &--arrow {
+
+      a {
+
+        @media (min-width: $screen-lg) {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+
+  &__list-icon {
+    display: none;
+    transition: fill $transition-time;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      fill: $color-main--light;
+    }
   }
 
   &__copyright {
     border-bottom: 1px solid #50535C;
     padding: 0 0 10px;
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-lg) {
+      border-bottom: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    @media (min-width: $screen-xxl) {
+      margin-bottom: 40px;
+    }
   }
 
   &__address {
     display: none;
     margin: 0;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
 
     a {
       color: $gray;

@@ -4,8 +4,61 @@
 
 .social-links {
 
-  // svg {
-  //   width: 30px;
-  //   height: 30px;
-  // }
+  $block-name:                &;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid $gray;
+    transition: border $transition-time;
+
+    &:hover,
+    &:focus {
+
+      border-color: #fff;
+
+      #{$block-name}__icon {
+        fill: #fff;
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 30px;
+      height: 30px;
+      margin-right: 20px;
+      border-width: 2px;
+    }
+  }
+
+  &__item-text {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__icon {
+    fill: $gray;
+    transition: fill $transition-time;
+
+    &--instagram {
+      transform: scale(0.9);
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 16px;
+      height: 16px;
+    }
+  }
 }

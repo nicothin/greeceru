@@ -195,7 +195,7 @@ gulp.task('sprite:svg', function (callback) {
   if((projectConfig.blocks['sprite-svg']) !== undefined) {
     const svgstore = require('gulp-svgstore');
     const svgmin = require('gulp-svgmin');
-    const cheerio = require('gulp-cheerio');
+    // const cheerio = require('gulp-cheerio');
     if(fileExist(spriteSvgPath) !== false) {
       console.log('---------- Сборка SVG спрайта');
       return gulp.src(spriteSvgPath + '*.svg')
@@ -209,11 +209,11 @@ gulp.task('sprite:svg', function (callback) {
           }
         }))
         .pipe(svgstore({ inlineSvg: true }))
-        .pipe(cheerio(function ($) {
-          $('svg').attr('style',  'display:none');
-        }))
+        // .pipe(cheerio(function ($) {
+        //   $('svg').attr('style',  'display:none');
+        // }))
         .pipe(rename('sprite-svg.svg'))
-        .pipe(replace(/viewbox/gm, 'viewBox'))
+        // .pipe(replace(/viewbox/gm, 'viewBox'))
         .pipe(size({
           title: 'Размер',
           showFiles: true,
