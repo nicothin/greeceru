@@ -34,7 +34,9 @@
     "blog-latest": [],
     "post": [],
     "social-links": [],
-    "modal": []
+    "modal": [],
+    "card-mini": [],
+    "jquery-ui-datepicker": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

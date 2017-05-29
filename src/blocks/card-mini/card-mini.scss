@@ -1,0 +1,28 @@
+// В этом файле должны быть стили только для БЭМ-блока card-mini, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.card-mini {
+  display: flex;
+  margin: 15px 0;
+
+  &__pict-wrap {
+    display: block;
+    flex-shrink: 0;
+    width: 64px;
+    height: 52px;
+    margin-right: 20px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__descr {
+    flex-shrink: 0;
+  }
+}
+

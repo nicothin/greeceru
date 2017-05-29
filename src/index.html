@@ -13,6 +13,7 @@
   <div style="position: fixed;z-index:999;right:0;bottom:0;background: #fff;padding: 0.5em">
     <a href="#addItemToWishlist" data-toggle="modal">add Item To Wishlist</a>,
     <a href="#successfullyAdded" data-toggle="modal">successfully Added</a>,
+    <a href="#shedule-1" data-toggle="modal">shedule-1</a>,
   </div>
 
   <div class="page__inner">
@@ -398,8 +399,38 @@
           <h4 class="modal__title">Successfully Added to Wishlist</h4>
         </div>
         <div class="modal__body">
-          <p>To add this item to wishlist, please type your email address below</p>
-          <form class="modal__email-form" action="">
+          <div class="card-mini">
+            <a href="" class="card-mini__pict-wrap">
+              <img src="img/card-mini-demo-pict.jpg" alt="">
+            </a>
+            <div class="card-mini__descr">
+              House Apartment «Angelica» <br>
+              2 bed’s, 1 bath, 95.2 sq.m.
+            </div>
+          </div>
+        </div>
+        <div class="modal__footer">
+          You can view and edit saved properties in your <a href="">personal account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="shedule-1" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <form class="modal__content" action="">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Schedule an Appointment</h4>
+        </div>
+        <div class="modal__body">
+          <p>To schedule an appointment please choose available date</p>
+          <div id="modal-datepicker"></div>
+          <input id="shedule-date" type="hidden" name="">
+        </div>
+        <div class="modal__footer">
+          Please enter your email to create an appointment
+          <div class="modal__email-form">
             <div class="field-text">
               <span class="field-text__name">Email</span>
               <span class="field-text__input-wrap">
@@ -409,12 +440,9 @@
             <div class="field-actions">
               <button class="btn  btn--white  btn--wide">Add Item</button>
             </div>
-          </form>
+          </div>
         </div>
-        <!-- <div class="modal__footer">
-          <button type="button" class="btn" data-dismiss="modal">Закрыть</button>
-        </div> -->
-      </div>
+      </form>
     </div>
   </div>
 
