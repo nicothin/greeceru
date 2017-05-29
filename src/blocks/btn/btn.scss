@@ -97,5 +97,10 @@ $border-radius:               3px !default;
   &--wide {
     padding-left: 50px;
     padding-right: 50px;
+
+    @media (min-width: $screen-md) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
   }
 }

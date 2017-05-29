@@ -155,10 +155,10 @@ $field-padding-horizontal:    0.7em !default;
     }
 
     @at-root textarea#{&} {
-      $textarea-height: ($line-height / 1em * 2) + ($field-padding-vertical * 2);
+      // $textarea-height: ($line-height / 1em * 2) + ($field-padding-vertical * 2);
 
       height: auto;
-      min-height: calc(#{$textarea-height} + 2px);
+      min-height: 125px;
       resize: vertical;
     }
   }
@@ -175,6 +175,17 @@ $field-padding-horizontal:    0.7em !default;
 
     #{$block-name}__help-text {
       color: $color-danger;
+    }
+  }
+
+  &--success {
+
+    #{$block-name}__input {
+      border-color: $color-success;
+    }
+
+    #{$block-name}__help-text {
+      color: $color-success;
     }
   }
 }

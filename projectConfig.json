@@ -36,7 +36,8 @@
     "social-links": [],
     "modal": [],
     "card-mini": [],
-    "jquery-ui-datepicker": []
+    "jquery-ui-datepicker": [],
+    "grid": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

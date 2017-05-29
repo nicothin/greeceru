@@ -1,7 +1,8 @@
 
 .ui-datepicker-inline {
-  padding: 0 15px;
+  // padding: 0 15px;
 }
+
 .ui-widget-header {
   display: flex;
   justify-content: space-between;
@@ -38,6 +39,10 @@
   justify-content: center;
   align-items: center;
   font-weight: 500;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size--small;
+  }
 }
 .ui-datepicker-next {
   order: 3;
@@ -79,6 +84,10 @@
     font-size: $font-size--small;
     color: $gray;
     font-weight: 500;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 3px;
+    }
   }
 }
 
@@ -89,6 +98,11 @@
   width: 42px;
   height: 42px;
   border: 1px solid transparent;
+
+  @media (min-width: $screen-md) {
+    width: 30px;
+    height: 30px;
+  }
 }
 span.ui-state-default {
   color: $gray;

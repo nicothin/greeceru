@@ -11,9 +11,14 @@
 <body>
 
   <div style="position: fixed;z-index:999;right:0;bottom:0;background: #fff;padding: 0.5em">
-    <a href="#addItemToWishlist" data-toggle="modal">add Item To Wishlist</a>,
-    <a href="#successfullyAdded" data-toggle="modal">successfully Added</a>,
-    <a href="#shedule-1" data-toggle="modal">shedule-1</a>,
+    <a href="#addItemToWishlist" data-toggle="modal">add Item</a>,
+    <a href="#successfullyAdded" data-toggle="modal">successfully</a>,
+    <a href="#shedule" data-toggle="modal">shedule-1</a>,
+    <a href="#blog-post-2017-04-11" data-toggle="modal">blog</a>,
+    <a href="#ask" data-toggle="modal">ask</a>,
+    <a href="#notice-text" data-toggle="modal">notice-text</a>,
+    <a href="#notice-price" data-toggle="modal">notice-price</a>,
+    <a href="#interview" data-toggle="modal">interview</a>,
   </div>
 
   <div class="page__inner">
@@ -375,7 +380,7 @@
         </div>
         <div class="modal__body">
           <p>To add this item to wishlist, please type your email address below</p>
-          <form class="modal__email-form" action="">
+          <form class="modal__form" action="">
             <div class="field-text">
               <span class="field-text__name">Email</span>
               <span class="field-text__input-wrap">
@@ -416,7 +421,7 @@
     </div>
   </div>
 
-  <div id="shedule-1" class="modal" tabindex="-1" role="dialog">
+  <div id="shedule" class="modal" tabindex="-1" role="dialog">
     <div class="modal__dialog" role="document">
       <div class="modal__content" action="">
         <div class="modal__header">
@@ -428,7 +433,7 @@
           <div class="modal__datepicker" id="modal-datepicker"></div>
           <input id="shedule-date" type="hidden" name="">
           <p>Please enter your email to create an appointment</p>
-          <div class="modal__email-form">
+          <div class="modal__form">
             <div class="field-text">
               <span class="field-text__name">Email</span>
               <span class="field-text__input-wrap">
@@ -440,6 +445,192 @@
             </div>
           </div>
         </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="blog-post-2017-04-11" class="modal  modal--lg" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <article class="modal__content" action="">
+        <div class="modal__header  modal__header--mobile-view">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Uber executive steps back from self-driving cars during waymo l</h4>
+          <div class="modal__header-info">
+            <div class="modal__header-info-left">
+              <date class="modal__header-date" datetime="2017-11-04">04.11.2017</date>,
+              <a href="" class="modal__header-source">Newsweek</a>
+            </div>
+            <div class="modal__header-info-right">
+              <span class="modal__header-share-text">Share:</span>
+              <ul class="social-links  social-links--dark">
+                <li>
+                  <a href="" class="social-links__item">
+                    <span class="social-links__item-text">Facebook</span>
+                    <svg class="social-links__icon" width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook"></use></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="social-links__item">
+                    <span class="social-links__item-text">Twitter</span>
+                    <svg class="social-links__icon" width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#twitter"></use></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="social-links__item">
+                    <span class="social-links__item-text">Instagram</span>
+                    <svg class="social-links__icon  social-links__icon--instagram" width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram"></use></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="social-links__item">
+                    <span class="social-links__item-text">Google Plus</span>
+                    <svg class="social-links__icon" width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#google-plus"></use></svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal__body">
+          <figure class="modal__news-pict">
+            <img src="img/post-pict-01--lg.jpg" alt="An Uber self-driving car in San Francisco last month">
+            <figcaption>An Uber self-driving car in San Francisco last month.</figcaption>
+          </figure>
+          <p>Anthony Levandowski, the Uber executive accused of stealing trade secrets from Google, is stepping aside from leading some of the company’s work on self-driving vehicles, amid a bare-knuckled legal fight between the two technology giants.</p>
+          <p>Mr. Levandowski, one of the self-driving-car industry’s more experienced engineers, has recused himself from working on Uber’s lidar technology — short for light detection and ranging, a key hardware component in the operation of any autonomous vehicle. <a href="">Mr. Levandowski</a> disclosed the change on Thursday in an internal memo that was obtained by Business Insider, adding that he will no longer attend meetings or make decisions about lidar efforts while legal proceedings continue.</p>
+          <p>“We should all be proud that our self-driving technology has been built independently, from the ground up.</p>
+        </div>
+        <div class="modal__footer  modal__footer--sm-gray">
+          Source: <a href="http://www.newsweek.com/curt-schilling-boston-fenway-park-adam-jones-racism-595096">http://www.newsweek.com/curt-schilling-boston-fenway-park-adam-jones-racism-595096</a>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div id="ask" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Ask a Question</h4>
+        </div>
+        <div class="modal__body">
+          <form class="modal__form" action="">
+            <div class="field-text">
+              <span class="field-text__name">Name</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="text" placeholder="Your name">
+              </span>
+            </div>
+            <div class="field-text">
+              <span class="field-text__name">Phone number*</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="tel" placeholder="+38 044">
+              </span>
+            </div>
+            <div class="field-actions">
+              <button class="btn  btn--white  btn--wide">Send Request</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal__footer  modal__footer--sm-gray">
+          <svg class="modal__footer-icon" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#security"></use></svg>
+          Your data will not reach to a third parties
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="notice-text" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Notice About Price Drop</h4>
+        </div>
+        <div class="modal__body">
+          <p>Notification about price drop will be sent to <span class="modal__gray-text">evgeniygavr@gmail.com</span></p>
+        </div>
+        <div class="modal__footer">
+          You can change preferences at any time in your <a href="">personal account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="notice-price" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Notice About Price Drop</h4>
+        </div>
+        <div class="modal__body">
+          <form class="modal__form" action="">
+            <div class="field-text  field-text--success">
+              <span class="field-text__name">Email</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="email" placeholder="Your email" value="billgates@microsoft.com">
+                <span class="field-text__help-text">User with this email already exists. Please enter your password.</span>
+              </span>
+            </div>
+            <div class="field-text">
+              <span class="field-text__name">Password</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="password" placeholder="">
+                <span class="field-text__help-text"><a href="">Forgot your password?</a></span>
+              </span>
+            </div>
+            <div class="field-actions">
+              <button class="btn  btn--white  btn--wide">Get Notice</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="interview" class="modal  modal--md" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Request an interview</h4>
+        </div>
+        <div class="modal__body">
+          <form class="modal__form  grid" action="">
+            <div class="grid__row-md">
+              <div class="field-text  field-text--error  grid__col-md-6">
+                <span class="field-text__name">Company name*</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Forbes">
+                  <span class="field-text__help-text">This field is required</span>
+                </span>
+              </div>
+              <div class="field-text  grid__col-md-6">
+                <span class="field-text__name">Company website</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="url" placeholder="http://">
+                </span>
+              </div>
+              <div class="field-text  grid__col-md-6">
+                <span class="field-text__name">Contact name</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Your name">
+                </span>
+              </div>
+              <div class="field-text  grid__col-md-12">
+                <span class="field-text__name">Your message</span>
+                <span class="field-text__input-wrap">
+                  <textarea class="field-text__input" type="text" placeholder="Type here..."></textarea>
+                </span>
+              </div>
+              <div class="field-actions  grid__col-md-12">
+                <button class="btn  btn--white  btn--wide">Send a Request</button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
