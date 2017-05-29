@@ -153,7 +153,7 @@
               </div>
             </div>
             <div class="search__part-price">
-              <label class="field-text">
+              <label class="field-text" style="display: flex;">
                 <span class="field-text__input-wrap  field-text__input-wrap--input-group">
                   <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Min price">
                   <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Max price">
@@ -418,18 +418,16 @@
 
   <div id="shedule-1" class="modal" tabindex="-1" role="dialog">
     <div class="modal__dialog" role="document">
-      <form class="modal__content" action="">
+      <div class="modal__content" action="">
         <div class="modal__header">
           <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
           <h4 class="modal__title">Schedule an Appointment</h4>
         </div>
-        <div class="modal__body">
+        <form class="modal__body" action="">
           <p>To schedule an appointment please choose available date</p>
-          <div id="modal-datepicker"></div>
+          <div class="modal__datepicker" id="modal-datepicker"></div>
           <input id="shedule-date" type="hidden" name="">
-        </div>
-        <div class="modal__footer">
-          Please enter your email to create an appointment
+          <p>Please enter your email to create an appointment</p>
           <div class="modal__email-form">
             <div class="field-text">
               <span class="field-text__name">Email</span>
@@ -438,11 +436,11 @@
               </span>
             </div>
             <div class="field-actions">
-              <button class="btn  btn--white  btn--wide">Add Item</button>
+              <button class="btn  btn--white  btn--wide">Send Request</button>
             </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </div>
 

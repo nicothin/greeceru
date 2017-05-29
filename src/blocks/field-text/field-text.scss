@@ -99,6 +99,7 @@ $field-padding-horizontal:    0.7em !default;
     min-height: 40px;
     // height: 2.125em;
     padding: ($field-padding-vertical + 4) $field-padding-horizontal;
+    margin: 0;
     font-size: $font-size;
     line-height: $font-size + 6;
     font-family: inherit;

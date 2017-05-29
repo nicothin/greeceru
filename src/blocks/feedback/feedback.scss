@@ -110,6 +110,10 @@
         height: auto;
         border-radius: 0;
       }
+
+      #{$block-name}__item-author-text {
+        flex-basis: auto;
+      }
     }
   }
 
@@ -126,7 +130,7 @@
 
   &__item-avatar-company {
     display: block;
-    margin-bottom: 5px;
+    padding-bottom: 5px;
   }
 
   &__item-author-text {

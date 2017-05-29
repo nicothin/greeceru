@@ -1,22 +1,31 @@
 
+.ui-datepicker-inline {
+  padding: 0 15px;
+}
 .ui-widget-header {
   display: flex;
   justify-content: space-between;
+  padding: 0 12px 10px;
 }
 
 .ui-datepicker-prev {
   order: 1;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 
   &:before {
     content: '';
     display: block;
-    width: 15px;
-    height: 12px;
+    width: 12px;
+    height: 10px;
     background-image: svg-load('../blocks/jquery-ui-datepicker/img-bg/arrow-left.svg');
     background-repeat: no-repeat;
     background-position: 0 0;
-    cursor: pointer;
+    background-size: cover;
   }
 
   .ui-icon {
@@ -25,21 +34,29 @@
 }
 .ui-datepicker-title {
   order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 500;
 }
 .ui-datepicker-next {
   order: 3;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 
   &:before {
     content: '';
     display: block;
-    width: 15px;
-    height: 12px;
+    width: 12px;
+    height: 10px;
     background-image: svg-load('../blocks/jquery-ui-datepicker/img-bg/arrow-right.svg');
     background-repeat: no-repeat;
     background-position: 0 0;
-    cursor: pointer;
+    background-size: cover;
   }
 
   .ui-icon {
@@ -49,16 +66,19 @@
 
 .ui-datepicker-calendar {
   width: 100%;
-
-  th {
-    font-size: $font-size--small;
-    color: $gray;
-    font-weight: 500;
-  }
+  margin-bottom: 10px;
 
   td,
   th {
+    padding: 5px 0;
     text-align: center;
+  }
+
+  th {
+    padding: 0 0 15px;
+    font-size: $font-size--small;
+    color: $gray;
+    font-weight: 500;
   }
 }
 
