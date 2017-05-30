@@ -1,12 +1,36 @@
 $( document ).ready(function() {
 
-  // отмена закрытия дропдауна с чекбоксами
+  // узнаем ширину скролла
+  var div = document.createElement('div');
+  div.style.overflowY = 'scroll';
+  div.style.width = '50px';
+  div.style.height = '50px';
+  div.style.visibility = 'hidden';
+  document.body.appendChild(div);
+  var scrollWidth = div.offsetWidth - div.clientWidth;
+  document.body.removeChild(div);
+
+  // отмена закрытия бутстраповского дропдауна с чекбоксами
   $(document).on('click', '.field-drop-checkboxes__drop', function (e) {
     e.stopPropagation();
   });
 
-  // включение тултипов
-  $('[data-toggle="tooltip"]').tooltip();
+  // бутстраповские тултипы
+  // $('[data-toggle="tooltip"]').tooltip();
+  function tooltipsInit(){
+    var containerWidth = $(window).width() + scrollWidth;
+    if(containerWidth >= 1170) {
+      $('[data-toggle="tooltip"]').tooltip();
+    } else {
+      $('[data-toggle="tooltip"]').tooltip('destroy');
+    }
+  }
+  var tooltipsTimeoutId;
+  $(window).resize( function() {
+    clearTimeout(tooltipsTimeoutId);
+    tooltipsTimeoutId = setTimeout(tooltipsInit, 200);
+  });
+  tooltipsInit();
 
   // включение полифила для object-fit: cover; в днищебраузерах
   objectFitImages();
@@ -19,16 +43,6 @@ $( document ).ready(function() {
       return [ blockedDates.indexOf(string) == -1 ]
     }
   });
-
-  // узнаем ширину скролла
-  var div = document.createElement('div');
-  div.style.overflowY = 'scroll';
-  div.style.width = '50px';
-  div.style.height = '50px';
-  div.style.visibility = 'hidden';
-  document.body.appendChild(div);
-  var scrollWidth = div.offsetWidth - div.clientWidth;
-  document.body.removeChild(div);
 
   // карусели в блоках Top Rated
   var $topRatedCarousel = $('.top-rated__list--carousel');
@@ -47,10 +61,10 @@ $( document ).ready(function() {
       $topRatedCarousel.find('.owl-stage-outer').children().unwrap();
     }
   }
-  var id;
+  var topRatedTimeoutId;
   $(window).resize( function() {
-    clearTimeout(id);
-    id = setTimeout(topRatedCarouselInit, 200);
+    clearTimeout(topRatedTimeoutId);
+    topRatedTimeoutId = setTimeout(topRatedCarouselInit, 200);
   });
   topRatedCarouselInit();
 
