@@ -2523,19 +2523,28 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     width: 360px;
     height: auto;
     margin-bottom: 30px;
-    background-color: #fff; }
-  .modal__header:not(.modal__header--mobile-view){
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; }
+  .modal--mobile-header .modal__dialog{
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px; }
+  .modal__header{
     padding: 16px 30px;
     background-color: #31353f;
-    color: #fff; }
-  .modal__header--mobile-view{
-    padding-top: 23px; }
+    color: #fff;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px; }
+  .modal--mobile-header .modal__header{
+    padding: 23px 30px 0;
+    background-color: #fff;
+    color: #31353f; }
   .modal__title{
     font-size: 14px;
     padding: 0;
     margin: 0;
     border: none; }
-  .modal__header--mobile-view .modal__title{
+  .modal--mobile-header .modal__title{
     margin: 0 0 25px;
     padding: 5px 0 18px;
     font-weight: 400;
@@ -2566,7 +2575,7 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     margin-bottom: 40px; }
   .modal__datepicker{
     margin-top: 25px; }
-  .modal__header--mobile-view .modal__header-info{
+  .modal--mobile-header .modal__header-info{
     margin-bottom: 0; }
   .modal-open .modal--md.in .modal__dialog{
     width: 560px; }
