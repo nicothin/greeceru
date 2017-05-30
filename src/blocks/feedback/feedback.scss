@@ -77,6 +77,10 @@
       display: flex;
     }
 
+    .owl-item  {
+      min-width: 320px;
+    }
+
     .owl-stage-outer {
       padding-bottom: 30px;
     }
@@ -84,6 +88,16 @@
     @media (min-width: $screen-xl) {
       // width: 100%;
       margin: 0 -15px;
+
+      .owl-item  {
+        min-width: 383px;
+      }
+    }
+
+    @media (min-width: $screen-xxl) {
+      .owl-item  {
+        min-width: 387px;
+      }
     }
   }
 
