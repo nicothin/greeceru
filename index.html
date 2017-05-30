@@ -623,7 +623,7 @@
           <h2 class="top-rated__title">Top Rated Properties for Sale</h2>
           <p class="top-rated__descr">last added properties from our community</p>
           <div class="top-rated__list-wrapper">
-            <div class="top-rated__list">
+            <div class="top-rated__list  top-rated__list--carousel  owl-carousel">
 
               <article class="card">
                 <div class="card__name">
@@ -1072,7 +1072,7 @@
           <h2 class="top-rated__title">Top Rated Properties for Rent</h2>
           <p class="top-rated__descr">last added properties from our community</p>
           <div class="top-rated__list-wrapper">
-            <div class="top-rated__list">
+            <div class="top-rated__list  top-rated__list--carousel  owl-carousel">
 
               <article class="card">
                 <div class="card__name">
@@ -1586,7 +1586,7 @@
               </div>
             </div>
             <div class="feedback__slider">
-              <div class="feedback__slider-inner"> <!-- Предполагается смещать этот div при работе слайдера посредством заинлайненного transform: translateX(-Npx), где N — ширина одного отзыва с margin-ами, умноженная на кол-во смещаемых отзывов -->
+              <div class="feedback__slider-inner  owl-carousel" id="feedback-slider">
                 <article class="feedback__item">
                   <header class="feedback__item-header">
                     <img src="img/feedback-avatar-01.png" alt="Jannet von Klingen" class="feedback__item-avatar">
@@ -1650,15 +1650,45 @@
                     </a>
                   </div>
                 </article>
+                <article class="feedback__item">
+                  <header class="feedback__item-header">
+                    <img src="img/feedback-avatar-01.png" alt="Jannet von Klingen" class="feedback__item-avatar">
+                    <div class="feedback__item-author-text">
+                      <h3 class="feedback__item-author-name">Jannet von Klingen Jannet von Klingen Jannet von Klingen </h3>
+                      <div class="feedback__item-author-info">Designer Designer</div>
+                    </div>
+                    <svg class="feedback__item-type-icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#clip"></use></svg>
+                  </header>
+                  <div class="feedback__item-text">
+                    <p>Its sometimes her behaviour</p>
+                  </div>
+                </article>
+                <article class="feedback__item">
+                  <header class="feedback__item-header">
+                    <img src="img/feedback-avatar-01.png" alt="Newsweek" class="feedback__item-avatar">
+                    <div class="feedback__item-author-text">
+                      <h3 class="feedback__item-author-name">Jannet von Klingen </h3>
+                      <div class="feedback__item-author-info">Designer</div>
+                    </div>
+                    <svg class="feedback__item-type-icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#clip"></use></svg>
+                  </header>
+                  <div class="feedback__item-text">
+                    <p>Its sometimes her behaviour are contented. Do listening am eagerness oh objection collected. Together gay feelings continue juvenile had off one</p>
+                    <a href="" class="feedback__item-details">
+                      Details
+                      <svg class="feedback__item-details-icon" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                    </a>
+                  </div>
+                </article>
               </div>
             </div>
             <div class="feedback__slider-controls">
-              <a href="" class="feedback__slider-control-prev  feedback__slider-control-prev--inactive">
+              <span class="feedback__slider-control-prev" id="feedback-slider-prev">
                 <svg class="feedback__slider-control-arrow" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-left"></use></svg>
-              </a>
-              <a href="" class="feedback__slider-control-next">
+              </span>
+              <span class="feedback__slider-control-next" id="feedback-slider-next">
                 <svg class="feedback__slider-control-arrow" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
-              </a>
+              </span>
             </div>
           </div>
           <div class="feedback__logo-list">
