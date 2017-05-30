@@ -1459,7 +1459,8 @@ a.pagination__item:hover, a.pagination__item:focus {
       display: flex; }
 .top-rated__list--carousel .owl-item {
       margin-right: 0 !important;
-      margin-left: 15px; }
+      margin-left: 15px;
+      min-width: 290px; }
 .top-rated__list--carousel .owl-item .card,
       .top-rated__list--carousel .owl-item .question {
         min-height: 372px;
@@ -1786,6 +1787,8 @@ a.pagination__item:hover, a.pagination__item:focus {
 .feedback__slider-inner .owl-stage {
       display: -ms-flexbox;
       display: flex; }
+.feedback__slider-inner .owl-item {
+      min-width: 320px; }
 .feedback__slider-inner .owl-stage-outer {
       padding-bottom: 30px; }
 .feedback__item {
@@ -2932,6 +2935,8 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     overflow: hidden; }
   .feedback__slider-inner{
     margin: 0 -15px; }
+  .feedback__slider-inner .owl-item{
+    min-width: 383px; }
   .feedback__item{
     width: calc(100% - 30px);
     min-height: 262px; }
@@ -3004,6 +3009,8 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     width: 1140px;
     margin: 0;
     max-width: 1140px; }
+  .feedback__slider-inner .owl-item{
+    min-width: 387px; }
   .feedback__stats{
     -ms-flex-order: 1;
     order: 1;
