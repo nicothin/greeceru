@@ -71,7 +71,15 @@
   &__slider-inner {
     display: flex;
     width: auto;
-    padding-bottom: 30px;
+    // padding-bottom: 30px;
+
+    .owl-stage {
+      display: flex;
+    }
+
+    .owl-stage-outer {
+      padding-bottom: 30px;
+    }
 
     @media (min-width: $screen-xl) {
       // width: 100%;
@@ -82,16 +90,20 @@
   &__item {
     width: 290px;
     min-width: 290px;
-    margin: 0 15px;
+    min-height: 282px;
+    margin: 0 15px !important;
     padding: 30px 30px 26px;
     border-radius: $border-radius;
     background-color: #fff;
+    backface-visibility: hidden;
     box-shadow: 0 30px 20px -20px rgba($color-main, 0.05),
                 0 30px 20px -20px rgba(72, 72, 72, 0.1);
 
     @media (min-width: $screen-xl) {
-      width: calc(33.33334% - 30px);
-      min-width: calc(33.33334% - 30px);
+      // width: calc(33.33334% - 30px);
+      // min-width: calc(33.33334% - 30px);
+      width: calc(100% - 30px);
+      min-height: 262px;
     }
   }
 
@@ -121,16 +133,21 @@
     flex-shrink: 0;
     display: block;
     margin-right: 20px;
-    width: 64px;
+    width: 64px !important;
     height: 64px;
     max-height: 64px;
     border-radius: 50%;
     object-fit: cover;
+    backface-visibility: hidden;
   }
 
   &__item-avatar-company {
     display: block;
     padding-bottom: 5px;
+
+    #{$block-name}__item-avatar {
+      width: auto !important;
+    }
   }
 
   &__item-author-text {
@@ -139,6 +156,7 @@
     flex-direction: column;
     justify-content: center;
     flex-basis: 100%;
+    backface-visibility: hidden;
   }
 
   &__item-author-name {
@@ -159,6 +177,7 @@
     right: -15px;
     fill: $gray;
     opacity: .7;
+    backface-visibility: hidden;
 
     @media (min-width: $screen-lg) {
       top: -10px;
@@ -181,6 +200,7 @@
     margin-left: 0.3em;
     fill: $color-main;
     transform: scale(0.6);
+    backface-visibility: hidden;
   }
 
   &__stats {
@@ -290,19 +310,20 @@
     background-color: #fff;
     border: 1px solid #e9edf2;
     transition: border $transition-time;
+    cursor: pointer;
 
     &:hover,
     &:focus {
       border-color: $color-main--accent;
     }
 
-    &--inactive {
-      pointer-events: none;
+    // &--inactive {
+    //   pointer-events: none;
 
-      svg {
-        fill: #acb2c1;
-      }
-    }
+    //   svg {
+    //     fill: #acb2c1;
+    //   }
+    // }
   }
 
   &__slider-control-next {
@@ -314,19 +335,20 @@
     background-color: #fff;
     border: 1px solid #e9edf2;
     transition: border $transition-time;
+    cursor: pointer;
 
     &:hover,
     &:focus {
       border-color: $color-main--accent;
     }
 
-    &--inactive {
-      pointer-events: none;
+    // &--inactive {
+    //   pointer-events: none;
 
-      svg {
-        fill: #acb2c1;
-      }
-    }
+    //   svg {
+    //     fill: #acb2c1;
+    //   }
+    // }
   }
 
   &__slider-control-arrow {

@@ -35,21 +35,49 @@
   }
 
   &__list-wrapper {
+    width: 100%;
     flex-basis: 100%;
-    max-width: $screen-xxl;
-    overflow-x: auto;
-    margin: 0 -15px;
+    // max-width: $screen-xxl;
+    // overflow-x: auto;
+    // margin: 0 -15px;
     margin-bottom: 20px;
 
-    @media (min-width: $screen-xxl) {
-      overflow-x: hidden;
-    }
+    // @media (min-width: $screen-xxl) {
+    //   overflow-x: hidden;
+    // }
   }
 
   &__list {
-    display: flex;
+
+    &--carousel {
+      width: auto;
+      margin-left: -15px;
+      margin-right: -15px;
+      overflow: hidden;
+
+      .owl-nav {
+        display: none;
+      }
+
+      .owl-stage {
+        display: flex;
+      }
+
+      .owl-item {
+        margin-right: 0 !important;
+        margin-left: 15px;
+
+        .card,
+        .question {
+          min-height: 372px;
+          height: 100%;
+        }
+      }
+    }
+
 
     @media (min-width: $screen-lg) {
+      display: flex;
       flex-wrap: wrap;
       justify-content: center;
 
@@ -59,21 +87,21 @@
       }
     }
 
-    // @media (min-width: $screen-osx) {
-    //   justify-content: flex-start;
-    //   width: 1170px;
-    //   margin: auto;
-    // }
+  //   // @media (min-width: $screen-osx) {
+  //   //   justify-content: flex-start;
+  //   //   width: 1170px;
+  //   //   margin: auto;
+  //   // }
 
     @media (min-width: $screen-xxl) {
       margin: 0 -15px;
     }
 
-    .card,
-    .question {
-      flex-shrink: 0;
-      margin: 0 15px;
-    }
+    // .card,
+    // .question {
+    //   flex-shrink: 0;
+    //   margin: 0 15px;
+    // }
   }
 
   &__footer {

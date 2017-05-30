@@ -39,7 +39,7 @@
   &__consultant-avatar {
     display: block;
     margin: 0 auto 30px;
-    width: 160px;
+    width: 160px !important; // owl carousel author is чудак на какую-то другую букву
     height: 160px;
     overflow: hidden;
     border-radius: 50%;
