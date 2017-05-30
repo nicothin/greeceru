@@ -49,7 +49,7 @@ $( document ).ready(function() {
   var topRatedCarouselSettings = {
     margin: 15,
     autoWidth: true,
-    loop: true,
+    // loop: true,
   };
   function topRatedCarouselInit(){
     var containerWidth = $(window).width() + scrollWidth;
