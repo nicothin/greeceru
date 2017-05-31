@@ -1445,26 +1445,27 @@ a.pagination__item:hover, a.pagination__item:focus {
 .top-rated__list-wrapper {
     width: 100%;
     -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    margin-bottom: 20px; }
+        flex-basis: 100%; }
+.top-rated__list {
+    padding-bottom: 20px; }
 .top-rated__list--carousel {
-    width: auto;
-    margin-left: -15px;
-    margin-right: -15px;
-    overflow: hidden; }
+      width: auto;
+      margin-left: -15px;
+      margin-right: -15px;
+      overflow: hidden; }
 .top-rated__list--carousel .owl-nav {
-      display: none; }
+        display: none; }
 .top-rated__list--carousel .owl-stage {
-      display: -ms-flexbox;
-      display: flex; }
+        display: -ms-flexbox;
+        display: flex; }
 .top-rated__list--carousel .owl-item {
-      margin-right: 0 !important;
-      margin-left: 15px;
-      min-width: 290px; }
+        margin-right: 0 !important;
+        margin-left: 15px;
+        min-width: 290px; }
 .top-rated__list--carousel .owl-item .card,
-      .top-rated__list--carousel .owl-item .question {
-        min-height: 372px;
-        height: 100%; }
+        .top-rated__list--carousel .owl-item .question {
+          min-height: 372px;
+          height: 100%; }
 .top-rated__footer {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%; }
@@ -1476,6 +1477,8 @@ a.pagination__item:hover, a.pagination__item:focus {
   -ms-flex-direction: column;
       flex-direction: column;
   width: 290px; }
+.card:hover {
+    box-shadow: 0 4px 25px rgba(71, 122, 251, 0.05), 0 1px 25px rgba(115, 124, 148, 0.12); }
 .card__name {
     -ms-flex-order: 3;
         order: 3;
@@ -1553,7 +1556,9 @@ a.pagination__item:hover, a.pagination__item:focus {
     display: -ms-flexbox;
     display: flex;
     border: 1px solid #e6e6e6;
-    border-top: none; }
+    border-top: none;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px; }
 .card__footer-item:not(:last-child) {
     border-right: 1px solid #e6e6e6; }
 .card__footer-item .btn-icon {
@@ -2710,7 +2715,7 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     -ms-flex-pack: center;
     justify-content: center; }
   .top-rated__list .card,
-      .top-rated__list .question{
+        .top-rated__list .question{
     margin: 0 15px 30px; }
   .top-rated__footer{
     text-align: center; }
