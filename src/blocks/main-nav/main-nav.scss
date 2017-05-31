@@ -166,9 +166,11 @@ $main-menu-mobile-width:      334px !default;
 
   &__item {
     background-color: #fff;
+    border-radius: $border-radius;
 
     @media (min-width: $screen-xl) {
       position: relative;
+      background-color: transparent;
 
       #{$block-name}__item--more & {
         position: static;
@@ -487,6 +489,7 @@ $main-menu-mobile-width:      334px !default;
       height: 0;
       width: 0;
       overflow: hidden;
+      border-radius: $border-radius;
       transition: opacity $transition-time, box-shadow $transition-time;
 
       // придется жестко зафиксировать с наследованием, ибо возможно меню 3го уровня
