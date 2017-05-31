@@ -7,6 +7,12 @@
   flex-direction: column;
   width: 290px;
 
+  &:hover {
+    box-shadow:
+      0 4px 25px rgba(#477afb, 0.05),
+      0 1px 25px rgba(#737c94, 0.12);
+  }
+
   @media (min-width: $screen-lg) {
     width: 360px;
   }
@@ -131,6 +137,8 @@
     display: flex;
     border: 1px solid $gray-lightest;
     border-top: none;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
   }
 
   &__footer-item {
