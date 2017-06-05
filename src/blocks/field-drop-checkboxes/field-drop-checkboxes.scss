@@ -41,7 +41,7 @@
     transition: color $transition-time;
 
     @media (min-width: $screen-md) {
-      padding: $field-padding-vertical ($field-padding-horizontal + 8) $field-padding-vertical $field-padding-horizontal;
+      padding: $field-padding-vertical ($field-padding-horizontal + 18) $field-padding-vertical $field-padding-horizontal;
     }
 
     &:after {
