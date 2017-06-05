@@ -1,0 +1,31 @@
+// В этом файле должны быть стили только для БЭМ-блока layout-map, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.layout-map {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $screen-lg) {
+    flex-direction: row;
+  }
+
+  &__content {
+    order: 1;
+
+    @media (min-width: $screen-lg) {
+      order: 0;
+      flex-grow: 1;
+    }
+  }
+
+  &__map {
+    min-height: calc(50vh - #{$header-height});
+
+    @media (min-width: $screen-lg) {
+      flex-shrink: 0;
+      flex-basis: 33%;
+      height: calc(100vh - #{$header-height});
+    }
+  }
+}

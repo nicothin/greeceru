@@ -91,4 +91,10 @@ $( document ).ready(function() {
     $('#feedback-slider').trigger('prev.owl.carousel');
   });
 
+  // дроп фильтра товаров
+  $('#filter-drop-toggler').on('click', function(){
+    $('#filter-drop').toggleClass('filter__drop--open');
+    $('#filter-wrapper').toggleClass('filter-wrapper--open');
+  });
+
 });

@@ -16,10 +16,17 @@
     }
   }
 
+  &__name {
+    display: block;
+    margin-bottom: 13px;
+    line-height: 1;
+    font-weight: 500;
+  }
+
   &__pseudoselect {
     display: block;
     position: relative;
-    padding: ($field-padding-vertical + 4) ($field-padding-horizontal + 8) ($field-padding-vertical + 4) $field-padding-horizontal;
+    padding: ($field-padding-vertical + 4) ($field-padding-horizontal + 18) ($field-padding-vertical + 4) $field-padding-horizontal;
     font-size: $font-size;
     line-height: $font-size + 6;
     font-family: inherit;

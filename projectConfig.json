@@ -37,7 +37,13 @@
     "modal": [],
     "card-mini": [],
     "jquery-ui-datepicker": [],
-    "grid": []
+    "grid": [],
+    "layout-map": [],
+    "filter-wrapper": [],
+    "filter": [],
+    "locations-list-wrapper": [],
+    "sorter": [],
+    "locations-list": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

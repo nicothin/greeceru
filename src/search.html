@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>greece_ru</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="page__main-content" role="main">
+
+        <div class="layout-map">
+
+          <div class="layout-map__content">
+
+            <div class="filter-wrapper" id="filter-wrapper">
+              <div class="filter-wrapper__inner">
+
+                <div class="filter">
+                  <div class="filter__line">
+                    <div class="filter__part  field-drop-checkboxes  field-drop-checkboxes--fz-small">
+                      <div class="field-drop-checkboxes__pseudoselect" id="location" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Eastern Macedonia and Thrace</div>
+                      <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="location">
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" checked>
+                            <span class="field-checkbox__name-text">Other location</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Other location</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter__part  filter__part--short  field-text">
+                      <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Min price">
+                    </div>
+                    <div class="filter__part  filter__part--short  field-text">
+                      <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Max price">
+                    </div>
+                    <div class="filter__part  filter__part--more  field-text" id="filter-drop-toggler">
+                      <div class="field-text__input  field-text__input--fz-small">
+                        <span class="btn-icon  btn-icon--blue-kebab"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__drop" id="filter-drop">
+                    <div class="filter__part  field-drop-checkboxes  field-drop-checkboxes--fz-small">
+                      <div class="field-drop-checkboxes__pseudoselect" id="type-of-deal" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type of deal</div>
+                      <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="type-of-deal">
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" checked>
+                            <span class="field-checkbox__name-text">Type one</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Type two</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter__part  field-drop-checkboxes  field-drop-checkboxes--fz-small">
+                      <div class="field-drop-checkboxes__pseudoselect" id="property-types" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All property types</div>
+                      <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="property-types">
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" checked>
+                            <span class="field-checkbox__name-text">Apartment</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Townhouse</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">House</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Villa</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Office</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Storage space</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Parking space</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Industrial building</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter__part  field-drop-checkboxes  field-drop-checkboxes--fz-small">
+                      <div class="field-drop-checkboxes__pseudoselect" id="bedrooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bedrooms</div>
+                      <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="bedrooms">
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" checked>
+                            <span class="field-checkbox__name-text">Studio</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">1 bed</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">2 bed’s</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">3 bed’s</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">4 bed’s</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">5+</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter__part  field-text">
+                      <span class="field-text__name">Year build</span>
+                      <span class="field-text__input-wrap  field-text__input-wrap--input-group">
+                        <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="From">
+                        <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="To">
+                      </span>
+                    </div>
+                    <div class="filter__part  field-text">
+                      <span class="field-text__name">Living area</span>
+                      <span class="field-text__input-wrap  field-text__input-wrap--input-group">
+                        <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Min square">
+                        <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Max square">
+                      </span>
+                    </div>
+                    <div class="filter__part  field-text">
+                      <span class="field-text__name">Land area</span>
+                      <span class="field-text__input-wrap  field-text__input-wrap--input-group">
+                        <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Min square">
+                        <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Max square">
+                      </span>
+                    </div>
+                    <div class="filter__part  field-text">
+                      <span class="field-text__name">Keywords</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input  field-text__input--fz-small" type="text" placeholder="For an example pool, yard">
+                      </span>
+                    </div>
+                    <div class="filter__part  field-drop-checkboxes  field-drop-checkboxes--fz-small">
+                      <span class="field-drop-checkboxes__name">Bathrooms</span>
+                      <div class="field-drop-checkboxes__pseudoselect" id="bedrooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">1</div>
+                      <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="bedrooms">
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">1</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">2</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">3</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="locations-list-wrapper">
+              <div class="locations-list-wrapper__inner">
+
+                <div class="sorter">sorter</div>
+
+                <div class="locations-list">locations-list</div>
+
+                <div class="pagination">pagination</div>
+
+                <div class="breadcrumbs">breadcrumbs</div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="layout-map__map" id="map"></div>
+
+          <script>
+            var map;
+            function initMap() {
+              map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+              });
+            }
+          </script>
+          <!-- АХТУНГ! это мой ключ (nicothin) AIzaSyDjGAiz42P2243i_aoNCu4Pf0vU_xDWcZk, для проекта нужно сделать отдельный проектный! -->
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjGAiz42P2243i_aoNCu4Pf0vU_xDWcZk&callback=initMap"
+          async defer></script>
+
+        </div>
+
+        <!-- <section class="top-rated">
+          <h2 class="top-rated__title">Top Rated Properties for Sale</h2>
+          <p class="top-rated__descr">last added properties from our community</p>
+          <div class="top-rated__list-wrapper">
+            <div class="top-rated__list  top-rated__list--carousel  owl-carousel">
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": false})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": false})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": false})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": false})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": false})
+              <a class="question" href="">
+                <div class="question__text">
+                  <img class="question__consultant-avatar" src="img/avatar-consultant-01.png" width="160" height="160" alt="Helen Zinger">
+                  <div class="question__msg">«Is it difficult to choose? We offer variations and consult» </div>
+                  <div class="question__consultant">Helen Zinger <br>Lead Consult Manager</div>
+                </div>
+                <div class="question__btn">Ask a Question</div>
+              </a>
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": false})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": false})
+            </div>
+          </div>
+          <footer class="top-rated__footer">
+            <a href="" class="top-rated__more-link">+ More Properties for Sale</a>
+          </footer>
+        </section> -->
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

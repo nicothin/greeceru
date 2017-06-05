@@ -25,4 +25,26 @@
       fill: $color-main;
     }
   }
+
+
+
+  &--blue-kebab {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 18px;
+    width: 6px;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: $color-main;
+      box-shadow:
+        0 -7px 0 $color-main,
+        0 7px 0 $color-main;
+    }
+  }
 }
