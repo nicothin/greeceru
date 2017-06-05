@@ -1,7 +1,14 @@
-// В этом файле должны быть стили только для БЭМ-блока filter-wrapper, его элементов, 
+// В этом файле должны быть стили только для БЭМ-блока filter-wrapper, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Не пишите здесь другие селекторы.
 
 .filter-wrapper {
-  
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: $gray-ultra-lightest;
+
+  &__inner {
+    flex-basis: 100%;
+    max-width: 1060px;
+  }
 }
