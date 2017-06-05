@@ -108,6 +108,10 @@ $field-padding-horizontal:    0.7em !default;
     border-radius: $border-radius;
     appearance: textfield;
 
+    @at-root div#{$block-name}__input {
+      appearance: none;
+    }
+
     @media (min-width: $screen-md) {
       padding: $field-padding-vertical $field-padding-horizontal;
     }
