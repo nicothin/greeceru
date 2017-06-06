@@ -38,12 +38,14 @@
     "card-mini": [],
     "jquery-ui-datepicker": [],
     "grid": [],
-    "layout-map": [],
     "filter-wrapper": [],
     "filter": [],
     "locations-list-wrapper": [],
     "sorter": [],
-    "locations-list": []
+    "locations-list": [],
+    "layout-tabs": [],
+    "modal-mobile": [],
+    "card-map": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

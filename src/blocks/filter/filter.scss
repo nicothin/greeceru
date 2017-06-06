@@ -8,7 +8,7 @@
 
   position: relative;
   padding: 15px;
-  box-shadow: inset 0 12px 10px -10px rgba(72, 72, 72, 0.1);
+  // box-shadow: inset 0 12px 10px -10px rgba(72, 72, 72, 0.1);
 
   @media (min-width: $screen-lg) {
     box-shadow: none;
@@ -25,6 +25,10 @@
       max-width: 100px;
     }
 
+    &--wide {
+      flex-grow: 1;
+    }
+
     &--more {
       cursor: pointer;
       width: 48px;
@@ -32,6 +36,14 @@
 
       .btn-icon--blue-kebab {
         vertical-align: middle;
+      }
+    }
+
+    &--mobile-hide {
+      display: none;
+
+      @media (min-width: $screen-lg) {
+        display: block;
       }
     }
   }

@@ -97,4 +97,10 @@ $( document ).ready(function() {
     $('#filter-wrapper').toggleClass('filter-wrapper--open');
   });
 
+  // карусель отзывов в блоке над картой
+  $('.card-map__carousel').owlCarousel({
+    items: 1,
+    nav: true,
+  });
+
 });

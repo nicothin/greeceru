@@ -1,0 +1,122 @@
+// В этом файле должны быть стили только для БЭМ-блока layout-tabs, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.layout-tabs {
+
+  $block-name:                &;
+
+  position: relative;
+
+  @media (min-width: $screen-lg) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 320px;
+    border-top: 1px solid $gray-lightest;
+    box-shadow: 0 -2px 10px rgba(72, 72, 72, 0.1);
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &__list-item {
+    flex-grow: 1;
+    flex-basis: 50%;
+    font-size: ($font-size + 2);
+    font-weight: 500;
+    color: $text-color;
+    text-decoration: none;
+    padding: 20px 10px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:not(:first-child) {
+      border-left: 1px solid $gray-lightest;
+    }
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__filter {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    @media (min-width: $screen-lg) {
+      right: 33%;
+    }
+  }
+
+  &__tab {
+
+    &--wide {
+      padding-top: 108px;
+
+      @media (min-width: $screen-lg) {
+        flex-grow: 1;
+      }
+    }
+
+    // &--narrow {
+
+    //   @media (min-width: $screen-lg) {
+    //     flex-shrink: 0;
+    //     flex-basis: 33%;
+    //   }
+    // }
+
+    &--map {
+      overflow: hidden;
+
+      @media (max-width: ($screen-lg - 1)) {
+        position: fixed;
+        z-index: -1;
+        visibility: hidden;
+        opacity: 0;
+        left: 0;
+        right: 0;
+        top: ($header-height + 78);
+        bottom: 62px;
+        min-width: 320px;
+
+        &#{$block-name}__tab--active {
+          visibility: visible;
+          opacity: 1;
+          z-index: 1;
+          transition: opacity $transition-time;
+        }
+      }
+
+      @media (min-width: $screen-md) and (max-width: ($screen-lg - 1)) {
+        top: ($header-height + 70) !important;
+      }
+
+      @media (min-width: $screen-lg) {
+        flex-shrink: 0;
+        flex-basis: 33%;
+        height: calc(100vh - #{$header-height});
+      }
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: calc(100% - 52px);
+  }
+}
