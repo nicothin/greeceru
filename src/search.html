@@ -22,8 +22,8 @@
 
           <div class="layout-tabs__list">
             <a href="#filter-wrapper" class="layout-tabs__list-item" data-modal-mobile-toggle="#filter-wrapper">Search filters</a>
-            <a href="#locations-list-wrapper" class="layout-tabs__list-item" data-layout-tab-target="#locations-list" data-layout-tab-toggle>List view</a>
-            <a href="#map-wrapper" class="layout-tabs__list-item  layout-tabs__list-item--hidden" data-layout-tab-target="#map-wrapper" data-layout-tab-toggle>Map view</a>
+            <a href="#locations-list-wrapper" class="layout-tabs__list-item  layout-tabs__list-item--hidden" data-layout-tab-target="#locations-list" data-layout-tab-toggle>List view</a>
+            <a href="#map-wrapper" class="layout-tabs__list-item" data-layout-tab-target="#map-wrapper" data-layout-tab-toggle>Map view</a>
           </div>
 
           <form class="filter-wrapper  modal-mobile  layout-tabs__filter" id="filter-wrapper">
@@ -246,12 +246,50 @@
             </div>
           </form>
 
-          <div class="layout-tabs__tab  layout-tabs__tab--wide" id="locations-list">
+          <div class="layout-tabs__tab  layout-tabs__tab--wide  layout-tabs__tab--active" id="locations-list">
 
             <div class="locations-list-wrapper" id="locations-list-wrapper">
               <div class="locations-list-wrapper__inner">
 
-                <div class="sorter">sorter</div>
+                <form class="sorter">
+                  <div class="sorter__found-result">153 properties found</div>
+                  <div class="sorter__field-text">Sort by date:</div>
+                  <div class="field-drop-checkboxes">
+                    <div class="field-drop-checkboxes__pseudoselect" id="sorter-date" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Newest first</div>
+                    <div class="field-drop-checkboxes__drop  field-drop-checkboxes__drop--separated-checks  field-checkbox" aria-labelledby="sorter-date">
+                      <div class="field-checkbox__input-wrap">
+                        <label class="field-checkbox__name  field-checkbox__name--check-only">
+                          <input class="field-checkbox__input" type="radio" name="buy-rent" checked>
+                          <span class="field-checkbox__name-text">Newest first</span>
+                        </label>
+                      </div>
+                      <div class="field-checkbox__input-wrap">
+                        <label class="field-checkbox__name  field-checkbox__name--check-only">
+                          <input class="field-checkbox__input" type="radio" name="buy-rent">
+                          <span class="field-checkbox__name-text">Newest last</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sorter__field-text">Sort by price:</div>
+                  <div class="field-drop-checkboxes">
+                    <div class="field-drop-checkboxes__pseudoselect" id="sorter-price" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Highest first</div>
+                    <div class="field-drop-checkboxes__drop  field-drop-checkboxes__drop--separated-checks  field-checkbox" aria-labelledby="sorter-price">
+                      <div class="field-checkbox__input-wrap">
+                        <label class="field-checkbox__name  field-checkbox__name--check-only">
+                          <input class="field-checkbox__input" type="radio" name="buy-rent" checked>
+                          <span class="field-checkbox__name-text">Highest first</span>
+                        </label>
+                      </div>
+                      <div class="field-checkbox__input-wrap">
+                        <label class="field-checkbox__name  field-checkbox__name--check-only">
+                          <input class="field-checkbox__input" type="radio" name="buy-rent">
+                          <span class="field-checkbox__name-text">Highest last</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
 
                 <div class="locations-list">locations-list</div>
 
@@ -275,7 +313,7 @@
 
           </div>
 
-          <div class="layout-tabs__tab  layout-tabs__tab--map  layout-tabs__tab--active" id="map-wrapper">
+          <div class="layout-tabs__tab  layout-tabs__tab--map" id="map-wrapper">
             <div class="layout-tabs__map" id="map"></div>
             <article class="card-map" style="position: absolute; top: 1%; left: 50%;">
               <!-- ВНИМАНИЕ: я отцентровал блок по горизонтали, острие смотрит по горизонтали туда, куда указывает свойство left -->
