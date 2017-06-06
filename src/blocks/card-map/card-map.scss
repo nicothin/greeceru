@@ -163,6 +163,7 @@
     display: block;
     font-size: $font-size;
     font-weight: 500;
+    white-space: nowrap;
   }
 
   &__details {

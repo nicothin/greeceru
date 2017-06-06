@@ -82,6 +82,7 @@
     // }
 
     &--map {
+      position: relative;
       overflow: hidden;
 
       @media (max-width: ($screen-lg - 1)) {
@@ -111,6 +112,10 @@
         flex-shrink: 0;
         flex-basis: 33%;
         height: calc(100vh - #{$header-height});
+
+        .pagination {
+          display: none;
+        }
       }
     }
   }
@@ -118,5 +123,9 @@
   &__map {
     width: 100%;
     height: calc(100% - 52px);
+
+    @media (min-width: $screen-lg) {
+      height: 100%;
+    }
   }
 }
