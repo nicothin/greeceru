@@ -442,12 +442,12 @@
         <div class="layout-tabs" data-layout-tab-parent>
 
           <div class="layout-tabs__list">
-            <a href="#filter-wrapper" class="layout-tabs__list-item" data-modal-mobile-toggle="#filter-wrapper">Search filters</a>
-            <a href="#locations-list-wrapper" class="layout-tabs__list-item" data-layout-tab-target="#locations-list" data-layout-tab-toggle>List view</a>
-            <a href="#map-wrapper" class="layout-tabs__list-item  layout-tabs__list-item--hidden" data-layout-tab-target="#map-wrapper" data-layout-tab-toggle>Map view</a>
+            <a href="#filter-wrapper" class="layout-tabs__list-item" data-filter-drop-toggler>Search filters</a>
+            <a href="#locations-list-wrapper" class="layout-tabs__list-item  layout-tabs__list-item--hidden" data-layout-tab-target="#locations-list" data-layout-tab-toggle>List view</a>
+            <a href="#map-wrapper" class="layout-tabs__list-item" data-layout-tab-target="#map-wrapper" data-layout-tab-toggle>Map view</a>
           </div>
 
-          <form class="filter-wrapper  modal-mobile  layout-tabs__filter" id="filter-wrapper">
+          <form class="filter-wrapper  layout-tabs__filter" id="filter-wrapper">
             <div class="filter-wrapper__inner">
 
               <div class="filter">
@@ -455,6 +455,123 @@
                   <div class="filter__part  filter__part--wide">
                     <div class="field-text">
                       <input class="field-text__input  field-text__input--fz-small" type="text" placeholder="Enter an address" value="Eastern Macedonia and Thrace">
+                    </div>
+                  </div>
+                  <div class="filter__part  filter__part--mobile-hide">
+                    <div class="field-drop-checkboxes  field-drop-checkboxes--fz-small">
+                      <div class="field-drop-checkboxes__pseudoselect" id="type-of-deal" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type<span class="field-drop-checkboxes__pseudoselect-text-xxl-show"> of deal</span></div>
+                      <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="type-of-deal">
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" checked>
+                            <span class="field-checkbox__name-text">Type one</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Type two</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__part  filter__part--mobile-hide">
+                    <div class="field-drop-checkboxes  field-drop-checkboxes--fz-small">
+                      <div class="field-drop-checkboxes__pseudoselect" id="property-types" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All<span class="field-drop-checkboxes__pseudoselect-text-xxl-show"> property types</span></div>
+                      <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="property-types">
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" checked>
+                            <span class="field-checkbox__name-text">Apartment</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Townhouse</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">House</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Villa</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Office</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Storage space</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Parking space</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Industrial building</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__part  filter__part--mobile-hide">
+                    <div class="field-drop-checkboxes  field-drop-checkboxes--fz-small">
+                      <div class="field-drop-checkboxes__pseudoselect" id="bedrooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bed's</div>
+                      <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="bedrooms">
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" checked>
+                            <span class="field-checkbox__name-text">Studio</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">1 bed</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">2 bed’s</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">3 bed’s</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">4 bed’s</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">5+</span>
+                          </label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="filter__part  filter__part--short  filter__part--mobile-hide">
@@ -468,197 +585,213 @@
                     </div>
                   </div>
                   <div class="filter__part  filter__part--more  filter__part--mobile-hide">
-                    <div class="field-text" id="filter-drop-toggler">
+                    <div class="field-text" data-filter-drop-toggler>
                       <div class="field-text__input  field-text__input--fz-small">
                         <span class="btn-icon  btn-icon--blue-kebab"></span>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="filter__drop" id="filter-drop">
-                  <div class="filter__row">
-                    <div class="filter__part">
-                      <div class="field-drop-checkboxes  field-drop-checkboxes--fz-small">
-                        <div class="field-drop-checkboxes__pseudoselect" id="type-of-deal" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type of deal</div>
-                        <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="type-of-deal">
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox" checked>
-                              <span class="field-checkbox__name-text">Type one</span>
-                            </label>
+                <div class="filter__drop  modal-mobile" id="filter-drop">
+                  <div class="modal-mobile__dialog">
+                    <div class="modal-mobile__content">
+                      <div class="modal-mobile__header  filter__drop-lg-hide">
+                        <span class="close  close--bold  modal-mobile__close" aria-label="Закрыть" data-filter-drop-toggler><span></span></span>
+                        <div class="modal-mobile__title">Properties filter</div>
+                      </div>
+                      <div class="modal-mobile__body  filter__drop-row">
+                        <div class="filter__drop-lg-hide">
+                          <div class="filter__drop-part">
+                            <div class="field-drop-checkboxes">
+                              <div class="field-drop-checkboxes__pseudoselect" id="type-of-deal-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type of deal</div>
+                              <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="type-of-deal-2">
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="checkbox" checked>
+                                    <span class="field-checkbox__name-text">Type one</span>
+                                  </label>
+                                </div>
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="checkbox">
+                                    <span class="field-checkbox__name-text">Type two</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox">
-                              <span class="field-checkbox__name-text">Type two</span>
-                            </label>
+                          <div class="filter__drop-part">
+                            <div class="field-drop-checkboxes">
+                              <div class="field-drop-checkboxes__pseudoselect" id="property-types-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All property types</div>
+                              <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="property-types-2">
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="checkbox" checked>
+                                    <span class="field-checkbox__name-text">Apartment</span>
+                                  </label>
+                                </div>
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="checkbox">
+                                    <span class="field-checkbox__name-text">Townhouse</span>
+                                  </label>
+                                </div>
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="checkbox">
+                                    <span class="field-checkbox__name-text">House</span>
+                                  </label>
+                                </div>
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="checkbox">
+                                    <span class="field-checkbox__name-text">Villa</span>
+                                  </label>
+                                </div>
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="checkbox">
+                                    <span class="field-checkbox__name-text">Office</span>
+                                  </label>
+                                </div>
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="checkbox">
+                                    <span class="field-checkbox__name-text">Storage space</span>
+                                  </label>
+                                </div>
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="checkbox">
+                                    <span class="field-checkbox__name-text">Parking space</span>
+                                  </label>
+                                </div>
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="checkbox">
+                                    <span class="field-checkbox__name-text">Industrial building</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="filter__drop-part">
+                            <div class="field-drop-checkboxes">
+                              <div class="field-drop-checkboxes__pseudoselect" id="bedrooms-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bedrooms</div>
+                              <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="bedrooms-2">
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="checkbox" checked>
+                                    <span class="field-checkbox__name-text">Studio</span>
+                                  </label>
+                                </div>
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="checkbox">
+                                    <span class="field-checkbox__name-text">1 bed</span>
+                                  </label>
+                                </div>
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="checkbox">
+                                    <span class="field-checkbox__name-text">2 bed’s</span>
+                                  </label>
+                                </div>
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="checkbox">
+                                    <span class="field-checkbox__name-text">3 bed’s</span>
+                                  </label>
+                                </div>
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="checkbox">
+                                    <span class="field-checkbox__name-text">4 bed’s</span>
+                                  </label>
+                                </div>
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="checkbox">
+                                    <span class="field-checkbox__name-text">5+</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="filter__drop-part  filter__drop-part--separator">
+                            <div class="field-text">
+                              <span class="field-text__input-wrap  field-text__input-wrap--input-group">
+                                <input class="field-text__input" type="number" placeholder="Min price">
+                                <input class="field-text__input" type="number" placeholder="Max price">
+                              </span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="filter__part">
-                      <div class="field-drop-checkboxes  field-drop-checkboxes--fz-small">
-                        <div class="field-drop-checkboxes__pseudoselect" id="property-types" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All property types</div>
-                        <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="property-types">
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox" checked>
-                              <span class="field-checkbox__name-text">Apartment</span>
-                            </label>
-                          </div>
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox">
-                              <span class="field-checkbox__name-text">Townhouse</span>
-                            </label>
-                          </div>
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox">
-                              <span class="field-checkbox__name-text">House</span>
-                            </label>
-                          </div>
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox">
-                              <span class="field-checkbox__name-text">Villa</span>
-                            </label>
-                          </div>
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox">
-                              <span class="field-checkbox__name-text">Office</span>
-                            </label>
-                          </div>
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox">
-                              <span class="field-checkbox__name-text">Storage space</span>
-                            </label>
-                          </div>
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox">
-                              <span class="field-checkbox__name-text">Parking space</span>
-                            </label>
-                          </div>
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox">
-                              <span class="field-checkbox__name-text">Industrial building</span>
-                            </label>
+                        <div class="filter__drop-part">
+                          <div class="field-text">
+                            <span class="field-text__name">Year build</span>
+                            <span class="field-text__input-wrap  field-text__input-wrap--input-group">
+                              <input class="field-text__input" type="number" placeholder="From">
+                              <input class="field-text__input" type="number" placeholder="To">
+                            </span>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="filter__part">
-                      <div class="field-drop-checkboxes  field-drop-checkboxes--fz-small">
-                        <div class="field-drop-checkboxes__pseudoselect" id="bedrooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bedrooms</div>
-                        <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="bedrooms">
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox" checked>
-                              <span class="field-checkbox__name-text">Studio</span>
-                            </label>
-                          </div>
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox">
-                              <span class="field-checkbox__name-text">1 bed</span>
-                            </label>
-                          </div>
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox">
-                              <span class="field-checkbox__name-text">2 bed’s</span>
-                            </label>
-                          </div>
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox">
-                              <span class="field-checkbox__name-text">3 bed’s</span>
-                            </label>
-                          </div>
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox">
-                              <span class="field-checkbox__name-text">4 bed’s</span>
-                            </label>
-                          </div>
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox">
-                              <span class="field-checkbox__name-text">5+</span>
-                            </label>
+                        <div class="filter__drop-part">
+                          <div class="field-text">
+                            <span class="field-text__name">Living area</span>
+                            <span class="field-text__input-wrap  field-text__input-wrap--input-group">
+                              <input class="field-text__input" type="number" placeholder="Min square">
+                              <input class="field-text__input" type="number" placeholder="Max square">
+                            </span>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="filter__row">
-                    <div class="filter__part">
-                      <div class="field-text">
-                        <span class="field-text__name">Year build</span>
-                        <span class="field-text__input-wrap  field-text__input-wrap--input-group">
-                          <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="From">
-                          <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="To">
-                        </span>
-                      </div>
-                    </div>
-                    <div class="filter__part">
-                      <div class="field-text">
-                        <span class="field-text__name">Living area</span>
-                        <span class="field-text__input-wrap  field-text__input-wrap--input-group">
-                          <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Min square">
-                          <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Max square">
-                        </span>
-                      </div>
-                    </div>
-                    <div class="filter__part">
-                      <div class="field-text">
-                        <span class="field-text__name">Land area</span>
-                        <span class="field-text__input-wrap  field-text__input-wrap--input-group">
-                          <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Min square">
-                          <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Max square">
-                        </span>
-                      </div>
-                    </div>
-                    <div class="filter__part">
-                      <div class="field-drop-checkboxes  field-drop-checkboxes--fz-small">
-                        <span class="field-drop-checkboxes__name">Bathrooms</span>
-                        <div class="field-drop-checkboxes__pseudoselect" id="bedrooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">1</div>
-                        <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="bedrooms">
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox">
-                              <span class="field-checkbox__name-text">1</span>
-                            </label>
-                          </div>
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox">
-                              <span class="field-checkbox__name-text">2</span>
-                            </label>
-                          </div>
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox">
-                              <span class="field-checkbox__name-text">3</span>
-                            </label>
+                        <div class="filter__drop-part">
+                          <div class="field-text">
+                            <span class="field-text__name">Land area</span>
+                            <span class="field-text__input-wrap  field-text__input-wrap--input-group">
+                              <input class="field-text__input" type="number" placeholder="Min square">
+                              <input class="field-text__input" type="number" placeholder="Max square">
+                            </span>
                           </div>
                         </div>
+                        <div class="filter__drop-part">
+                          <div class="field-drop-checkboxes">
+                            <span class="field-drop-checkboxes__name">Bathrooms</span>
+                            <div class="field-drop-checkboxes__pseudoselect" id="bedrooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">1</div>
+                            <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="bedrooms">
+                              <div class="field-checkbox__input-wrap">
+                                <label class="field-checkbox__name">
+                                  <input class="field-checkbox__input" type="checkbox">
+                                  <span class="field-checkbox__name-text">1</span>
+                                </label>
+                              </div>
+                              <div class="field-checkbox__input-wrap">
+                                <label class="field-checkbox__name">
+                                  <input class="field-checkbox__input" type="checkbox">
+                                  <span class="field-checkbox__name-text">2</span>
+                                </label>
+                              </div>
+                              <div class="field-checkbox__input-wrap">
+                                <label class="field-checkbox__name">
+                                  <input class="field-checkbox__input" type="checkbox">
+                                  <span class="field-checkbox__name-text">3</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter__drop-part">
+                          <div class="field-text">
+                            <span class="field-text__name">Keywords</span>
+                            <span class="field-text__input-wrap">
+                              <input class="field-text__input" type="text" placeholder="For an example pool, yard">
+                            </span>
+                          </div>
+                        </div>
+                        <div class="filter__drop-part  filter__drop-part--action">
+                          <button class="btn  btn--white  btn--wide">Show 123 properties</button>
+                        </div>
                       </div>
-                    </div>
-                    <div class="filter__part">
-                      <div class="field-text">
-                        <span class="field-text__name">Keywords</span>
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input  field-text__input--fz-small" type="text" placeholder="For an example pool, yard">
-                        </span>
-                      </div>
-                    </div>
-                    <div class="filter__part  filter__part--action">
-                      <button class="btn  btn--white  btn--wide">Show 123 properties</button>
                     </div>
                   </div>
                 </div>
@@ -667,14 +800,523 @@
             </div>
           </form>
 
-          <div class="layout-tabs__tab  layout-tabs__tab--wide" id="locations-list">
+          <div class="layout-tabs__tab  layout-tabs__tab--wide  layout-tabs__tab--active" id="locations-list">
 
             <div class="locations-list-wrapper" id="locations-list-wrapper">
               <div class="locations-list-wrapper__inner">
 
-                <div class="sorter">sorter</div>
+                <form class="sorter">
+                  <div class="sorter__found-result">153 properties found</div>
+                  <div class="sorter__options">
+                    <div class="sorter__options-part">
+                      <div class="sorter__field-text">Sort by date:</div>
+                      <div class="field-drop-checkboxes">
+                        <div class="field-drop-checkboxes__pseudoselect" id="sorter-date" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Newest first</div>
+                        <div class="field-drop-checkboxes__drop  field-drop-checkboxes__drop--separated-checks  field-checkbox" aria-labelledby="sorter-date">
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name  field-checkbox__name--check-only">
+                              <input class="field-checkbox__input" type="radio" name="sorter-date" checked>
+                              <span class="field-checkbox__name-text">Newest first</span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name  field-checkbox__name--check-only">
+                              <input class="field-checkbox__input" type="radio" name="sorter-date">
+                              <span class="field-checkbox__name-text">Newest last</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sorter__options-part">
+                      <div class="sorter__field-text">Sort by price:</div>
+                      <div class="field-drop-checkboxes">
+                        <div class="field-drop-checkboxes__pseudoselect" id="sorter-price" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Highest first</div>
+                        <div class="field-drop-checkboxes__drop  field-drop-checkboxes__drop--separated-checks  field-checkbox" aria-labelledby="sorter-price">
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name  field-checkbox__name--check-only">
+                              <input class="field-checkbox__input" type="radio" name="sorter-price" checked>
+                              <span class="field-checkbox__name-text">Highest first</span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name  field-checkbox__name--check-only">
+                              <input class="field-checkbox__input" type="radio" name="sorter-price">
+                              <span class="field-checkbox__name-text">Highest last</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
 
-                <div class="locations-list">locations-list</div>
+                <div class="locations-list">
+                  <div class="locations-list__inner">
+                    <div class="locations-list__item"><!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/card/card--carousel.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+-->
+
+<article class="card  card--lg">
+  <div class="card__name">
+    <h3 class="card__title"><a href="">A Cosy Semi-Studio</a></h3>
+    <p class="card__descr">Attica, Athens, PlakaAttica, Athens, Plaka</p>
+  </div>
+  <div class="card__photo-carousel  owl-carousel">
+    <span class="card__photo">
+      <img src="img/demo-card-pict-01.jpg" width="290" height="216" alt="A Cosy Semi-Studio">
+    </span>
+    <span class="card__photo">
+      <img src="img/demo-card-pict-02.jpg" width="290" height="216" alt="A Cosy Semi-Studio">
+    </span>
+  </div>
+  <div class="card__info">
+    <ul class="card__info-list">
+      <li class="card__info-list-item">
+        <span class="card__info-list-num">2</span>
+        bed's
+      </li>
+      <li class="card__info-list-item">
+        <span class="card__info-list-num">1</span>
+        bath
+      </li>
+      <li class="card__info-list-item">
+        <span class="card__info-list-num">999</span>
+        m²
+      </li>
+    </ul>
+    <span class="card__info-tooltip" data-toggle="tooltip" data-placement="left" title="Living space (square metrs)">
+      <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help"></use></svg>
+    </span>
+  </div>
+  <ul class="card__footer">
+    <li class="card__footer-item  card__footer-item--price">
+      <span class="card__price">
+        <span class="card__price-currency">€</span>
+        <span class="card__price-num">1 345 678</span>
+      </span>
+    </li>
+    <li class="card__footer-item  card__footer-item--compare">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to compare list">
+        <svg width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#compare"></use></svg>
+        <span class="btn-icon__text">Add property to compare list</span>
+      </a>
+    </li>
+    <li class="card__footer-item  card__footer-item--wishlist">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to wishlist">
+        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
+        <span class="btn-icon__text">Add property to wishlist</span>
+      </a>
+    </li>
+    <li class="card__footer-item  card__footer-item--notice">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Notice about price drop">
+        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#notice"></use></svg>
+        <span class="btn-icon__text">Notice about price drop</span>
+      </a>
+    </li>
+    <li class="card__footer-item  card__footer-item--schedule">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Schedule an appointment">
+        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#schedule"></use></svg>
+        <span class="btn-icon__text">Schedule an appointment</span>
+      </a>
+    </li>
+  </ul>
+</article>
+</div>
+                    <div class="locations-list__item"><!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/card/card--carousel.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+-->
+
+<article class="card  card--lg">
+  <div class="card__name">
+    <h3 class="card__title"><a href="">A Cosy Semi-Studio</a></h3>
+    <p class="card__descr">Attica, Athens, PlakaAttica, Athens, Plaka</p>
+  </div>
+  <div class="card__photo-carousel  owl-carousel">
+    <span class="card__photo">
+      <img src="img/demo-card-pict-01.jpg" width="290" height="216" alt="A Cosy Semi-Studio">
+    </span>
+    <span class="card__photo">
+      <img src="img/demo-card-pict-02.jpg" width="290" height="216" alt="A Cosy Semi-Studio">
+    </span>
+  </div>
+  <div class="card__info">
+    <ul class="card__info-list">
+      <li class="card__info-list-item">
+        <span class="card__info-list-num">2</span>
+        bed's
+      </li>
+      <li class="card__info-list-item">
+        <span class="card__info-list-num">1</span>
+        bath
+      </li>
+      <li class="card__info-list-item">
+        <span class="card__info-list-num">999</span>
+        m²
+      </li>
+    </ul>
+    <span class="card__info-tooltip" data-toggle="tooltip" data-placement="left" title="Living space (square metrs)">
+      <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help"></use></svg>
+    </span>
+  </div>
+  <ul class="card__footer">
+    <li class="card__footer-item  card__footer-item--price">
+      <span class="card__price">
+        <span class="card__price-currency">€</span>
+        <span class="card__price-num">1 345 678</span>
+      </span>
+    </li>
+    <li class="card__footer-item  card__footer-item--compare">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to compare list">
+        <svg width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#compare"></use></svg>
+        <span class="btn-icon__text">Add property to compare list</span>
+      </a>
+    </li>
+    <li class="card__footer-item  card__footer-item--wishlist">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to wishlist">
+        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
+        <span class="btn-icon__text">Add property to wishlist</span>
+      </a>
+    </li>
+    <li class="card__footer-item  card__footer-item--notice">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Notice about price drop">
+        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#notice"></use></svg>
+        <span class="btn-icon__text">Notice about price drop</span>
+      </a>
+    </li>
+    <li class="card__footer-item  card__footer-item--schedule">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Schedule an appointment">
+        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#schedule"></use></svg>
+        <span class="btn-icon__text">Schedule an appointment</span>
+      </a>
+    </li>
+  </ul>
+</article>
+</div>
+                    <div class="locations-list__item"><!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/card/card--carousel.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+-->
+
+<article class="card  card--lg">
+  <div class="card__name">
+    <h3 class="card__title"><a href="">A Cosy Semi-Studio</a></h3>
+    <p class="card__descr">Attica, Athens, PlakaAttica, Athens, Plaka</p>
+  </div>
+  <div class="card__photo-carousel  owl-carousel">
+    <span class="card__photo">
+      <img src="img/demo-card-pict-01.jpg" width="290" height="216" alt="A Cosy Semi-Studio">
+    </span>
+    <span class="card__photo">
+      <img src="img/demo-card-pict-02.jpg" width="290" height="216" alt="A Cosy Semi-Studio">
+    </span>
+  </div>
+  <div class="card__info">
+    <ul class="card__info-list">
+      <li class="card__info-list-item">
+        <span class="card__info-list-num">2</span>
+        bed's
+      </li>
+      <li class="card__info-list-item">
+        <span class="card__info-list-num">1</span>
+        bath
+      </li>
+      <li class="card__info-list-item">
+        <span class="card__info-list-num">999</span>
+        m²
+      </li>
+    </ul>
+    <span class="card__info-tooltip" data-toggle="tooltip" data-placement="left" title="Living space (square metrs)">
+      <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help"></use></svg>
+    </span>
+  </div>
+  <ul class="card__footer">
+    <li class="card__footer-item  card__footer-item--price">
+      <span class="card__price">
+        <span class="card__price-currency">€</span>
+        <span class="card__price-num">1 345 678</span>
+      </span>
+    </li>
+    <li class="card__footer-item  card__footer-item--compare">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to compare list">
+        <svg width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#compare"></use></svg>
+        <span class="btn-icon__text">Add property to compare list</span>
+      </a>
+    </li>
+    <li class="card__footer-item  card__footer-item--wishlist">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to wishlist">
+        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
+        <span class="btn-icon__text">Add property to wishlist</span>
+      </a>
+    </li>
+    <li class="card__footer-item  card__footer-item--notice">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Notice about price drop">
+        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#notice"></use></svg>
+        <span class="btn-icon__text">Notice about price drop</span>
+      </a>
+    </li>
+    <li class="card__footer-item  card__footer-item--schedule">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Schedule an appointment">
+        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#schedule"></use></svg>
+        <span class="btn-icon__text">Schedule an appointment</span>
+      </a>
+    </li>
+  </ul>
+</article>
+</div>
+                    <div class="locations-list__item"><!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/card/card--carousel.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+-->
+
+<article class="card  card--lg">
+  <div class="card__name">
+    <h3 class="card__title"><a href="">A Cosy Semi-Studio</a></h3>
+    <p class="card__descr">Attica, Athens, PlakaAttica, Athens, Plaka</p>
+  </div>
+  <div class="card__photo-carousel  owl-carousel">
+    <span class="card__photo">
+      <img src="img/demo-card-pict-01.jpg" width="290" height="216" alt="A Cosy Semi-Studio">
+    </span>
+    <span class="card__photo">
+      <img src="img/demo-card-pict-02.jpg" width="290" height="216" alt="A Cosy Semi-Studio">
+    </span>
+  </div>
+  <div class="card__info">
+    <ul class="card__info-list">
+      <li class="card__info-list-item">
+        <span class="card__info-list-num">2</span>
+        bed's
+      </li>
+      <li class="card__info-list-item">
+        <span class="card__info-list-num">1</span>
+        bath
+      </li>
+      <li class="card__info-list-item">
+        <span class="card__info-list-num">999</span>
+        m²
+      </li>
+    </ul>
+    <span class="card__info-tooltip" data-toggle="tooltip" data-placement="left" title="Living space (square metrs)">
+      <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help"></use></svg>
+    </span>
+  </div>
+  <ul class="card__footer">
+    <li class="card__footer-item  card__footer-item--price">
+      <span class="card__price">
+        <span class="card__price-currency">€</span>
+        <span class="card__price-num">1 345 678</span>
+      </span>
+    </li>
+    <li class="card__footer-item  card__footer-item--compare">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to compare list">
+        <svg width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#compare"></use></svg>
+        <span class="btn-icon__text">Add property to compare list</span>
+      </a>
+    </li>
+    <li class="card__footer-item  card__footer-item--wishlist">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to wishlist">
+        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
+        <span class="btn-icon__text">Add property to wishlist</span>
+      </a>
+    </li>
+    <li class="card__footer-item  card__footer-item--notice">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Notice about price drop">
+        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#notice"></use></svg>
+        <span class="btn-icon__text">Notice about price drop</span>
+      </a>
+    </li>
+    <li class="card__footer-item  card__footer-item--schedule">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Schedule an appointment">
+        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#schedule"></use></svg>
+        <span class="btn-icon__text">Schedule an appointment</span>
+      </a>
+    </li>
+  </ul>
+</article>
+</div>
+                    <div class="locations-list__item"><!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/card/card--carousel.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+-->
+
+<article class="card  card--lg">
+  <div class="card__name">
+    <h3 class="card__title"><a href="">A Cosy Semi-Studio</a></h3>
+    <p class="card__descr">Attica, Athens, PlakaAttica, Athens, Plaka</p>
+  </div>
+  <div class="card__photo-carousel  owl-carousel">
+    <span class="card__photo">
+      <img src="img/demo-card-pict-01.jpg" width="290" height="216" alt="A Cosy Semi-Studio">
+    </span>
+    <span class="card__photo">
+      <img src="img/demo-card-pict-02.jpg" width="290" height="216" alt="A Cosy Semi-Studio">
+    </span>
+  </div>
+  <div class="card__info">
+    <ul class="card__info-list">
+      <li class="card__info-list-item">
+        <span class="card__info-list-num">2</span>
+        bed's
+      </li>
+      <li class="card__info-list-item">
+        <span class="card__info-list-num">1</span>
+        bath
+      </li>
+      <li class="card__info-list-item">
+        <span class="card__info-list-num">999</span>
+        m²
+      </li>
+    </ul>
+    <span class="card__info-tooltip" data-toggle="tooltip" data-placement="left" title="Living space (square metrs)">
+      <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help"></use></svg>
+    </span>
+  </div>
+  <ul class="card__footer">
+    <li class="card__footer-item  card__footer-item--price">
+      <span class="card__price">
+        <span class="card__price-currency">€</span>
+        <span class="card__price-num">1 345 678</span>
+      </span>
+    </li>
+    <li class="card__footer-item  card__footer-item--compare">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to compare list">
+        <svg width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#compare"></use></svg>
+        <span class="btn-icon__text">Add property to compare list</span>
+      </a>
+    </li>
+    <li class="card__footer-item  card__footer-item--wishlist">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to wishlist">
+        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
+        <span class="btn-icon__text">Add property to wishlist</span>
+      </a>
+    </li>
+    <li class="card__footer-item  card__footer-item--notice">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Notice about price drop">
+        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#notice"></use></svg>
+        <span class="btn-icon__text">Notice about price drop</span>
+      </a>
+    </li>
+    <li class="card__footer-item  card__footer-item--schedule">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Schedule an appointment">
+        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#schedule"></use></svg>
+        <span class="btn-icon__text">Schedule an appointment</span>
+      </a>
+    </li>
+  </ul>
+</article>
+</div>
+                    <div class="locations-list__item"><!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/card/card--carousel.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+-->
+
+<article class="card  card--lg">
+  <div class="card__name">
+    <h3 class="card__title"><a href="">A Cosy Semi-Studio</a></h3>
+    <p class="card__descr">Attica, Athens, PlakaAttica, Athens, Plaka</p>
+  </div>
+  <div class="card__photo-carousel  owl-carousel">
+    <span class="card__photo">
+      <img src="img/demo-card-pict-01.jpg" width="290" height="216" alt="A Cosy Semi-Studio">
+    </span>
+    <span class="card__photo">
+      <img src="img/demo-card-pict-02.jpg" width="290" height="216" alt="A Cosy Semi-Studio">
+    </span>
+  </div>
+  <div class="card__info">
+    <ul class="card__info-list">
+      <li class="card__info-list-item">
+        <span class="card__info-list-num">2</span>
+        bed's
+      </li>
+      <li class="card__info-list-item">
+        <span class="card__info-list-num">1</span>
+        bath
+      </li>
+      <li class="card__info-list-item">
+        <span class="card__info-list-num">999</span>
+        m²
+      </li>
+    </ul>
+    <span class="card__info-tooltip" data-toggle="tooltip" data-placement="left" title="Living space (square metrs)">
+      <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help"></use></svg>
+    </span>
+  </div>
+  <ul class="card__footer">
+    <li class="card__footer-item  card__footer-item--price">
+      <span class="card__price">
+        <span class="card__price-currency">€</span>
+        <span class="card__price-num">1 345 678</span>
+      </span>
+    </li>
+    <li class="card__footer-item  card__footer-item--compare">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to compare list">
+        <svg width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#compare"></use></svg>
+        <span class="btn-icon__text">Add property to compare list</span>
+      </a>
+    </li>
+    <li class="card__footer-item  card__footer-item--wishlist">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to wishlist">
+        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
+        <span class="btn-icon__text">Add property to wishlist</span>
+      </a>
+    </li>
+    <li class="card__footer-item  card__footer-item--notice">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Notice about price drop">
+        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#notice"></use></svg>
+        <span class="btn-icon__text">Notice about price drop</span>
+      </a>
+    </li>
+    <li class="card__footer-item  card__footer-item--schedule">
+      <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Schedule an appointment">
+        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#schedule"></use></svg>
+        <span class="btn-icon__text">Schedule an appointment</span>
+      </a>
+    </li>
+  </ul>
+</article>
+</div>
+                  </div>
+                </div>
 
                 <div class="pagination">
                   <div class="pagination__text">1 - 8 of 72 properties for sale</div>
@@ -689,14 +1331,20 @@
                   </ul>
                 </div>
 
-                <div class="breadcrumbs">breadcrumbs</div>
+                <div class="breadcrumbs">
+                  <a href="" class="breadcrumbs__item">Attica</a>
+                  <a href="" class="breadcrumbs__item">Athens</a>
+                  <a href="" class="breadcrumbs__item">Kentrikos Tomeas Athinon</a>
+                </div>
 
               </div>
             </div>
 
+            <div class="filter__backdrop" data-filter-drop-toggler></div>
+
           </div>
 
-          <div class="layout-tabs__tab  layout-tabs__tab--map  layout-tabs__tab--active" id="map-wrapper">
+          <div class="layout-tabs__tab  layout-tabs__tab--map" id="map-wrapper">
             <div class="layout-tabs__map" id="map"></div>
             <article class="card-map" style="position: absolute; top: 1%; left: 50%;">
               <!-- ВНИМАНИЕ: я отцентровал блок по горизонтали, острие смотрит по горизонтали туда, куда указывает свойство left -->
@@ -750,455 +1398,6 @@
           async defer></script>
 
         </div>
-
-        <!-- <section class="top-rated">
-          <h2 class="top-rated__title">Top Rated Properties for Sale</h2>
-          <p class="top-rated__descr">last added properties from our community</p>
-          <div class="top-rated__list-wrapper">
-            <div class="top-rated__list  top-rated__list--carousel  owl-carousel">
-
-              <article class="card">
-                <div class="card__name">
-                  <h3 class="card__title"><a href="">A Cosy Semi-Studio</a></h3>
-                  <p class="card__descr">Attica, Athens, PlakaAttica, Athens, Plaka</p>
-                </div>
-                <a href="" class="card__photo">
-                  <img src="img/demo-card-pict-01.jpg" width="290" height="216" alt="A Cosy Semi-Studio">
-                </a>
-                <div class="card__info">
-                  <ul class="card__info-list">
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">2</span>
-                      bed's
-                    </li>
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">1</span>
-                      bath
-                    </li>
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">999</span>
-                      m²
-                    </li>
-                  </ul>
-                  <span class="card__info-tooltip" data-toggle="tooltip" data-placement="left" title="Living space (square metrs)">
-                    <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help"></use></svg>
-                  </span>
-                </div>
-                <ul class="card__footer">
-                  <li class="card__footer-item  card__footer-item--price">
-                    <span class="card__price">
-                      <span class="card__price-currency">€</span>
-                      <span class="card__price-num">1 345 678</span> 
-                    </span>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--compare">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to compare list">
-                      <svg width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#compare"></use></svg>
-                      <span class="btn-icon__text">Add property to compare list</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--wishlist">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to wishlist">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
-                      <span class="btn-icon__text">Add property to wishlist</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--notice">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Notice about price drop">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#notice"></use></svg>
-                      <span class="btn-icon__text">Notice about price drop</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--schedule">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Schedule an appointment">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#schedule"></use></svg>
-                      <span class="btn-icon__text">Schedule an appointment</span>
-                    </a>
-                  </li>
-                </ul>
-              </article>
-
-              <article class="card">
-                <div class="card__name">
-                  <h3 class="card__title"><a href="">A Cosy Semi-Studio</a></h3>
-                  <p class="card__descr">Attica, Athens, PlakaAttica, Athens, Plaka</p>
-                </div>
-                <a href="" class="card__photo">
-                  <img src="img/demo-card-pict-02.jpg" width="290" height="216" alt="A Cosy Semi-Studio">
-                </a>
-                <div class="card__info">
-                  <ul class="card__info-list">
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">2</span>
-                      bed's
-                    </li>
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">1</span>
-                      bath
-                    </li>
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">999</span>
-                      m²
-                    </li>
-                  </ul>
-                  <span class="card__info-tooltip" data-toggle="tooltip" data-placement="left" title="Living space (square metrs)">
-                    <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help"></use></svg>
-                  </span>
-                </div>
-                <ul class="card__footer">
-                  <li class="card__footer-item  card__footer-item--price">
-                    <span class="card__price">
-                      <span class="card__price-currency">€</span>
-                      <span class="card__price-num">1 345 678</span> 
-                    </span>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--compare">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to compare list">
-                      <svg width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#compare"></use></svg>
-                      <span class="btn-icon__text">Add property to compare list</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--wishlist">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to wishlist">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
-                      <span class="btn-icon__text">Add property to wishlist</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--notice">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Notice about price drop">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#notice"></use></svg>
-                      <span class="btn-icon__text">Notice about price drop</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--schedule">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Schedule an appointment">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#schedule"></use></svg>
-                      <span class="btn-icon__text">Schedule an appointment</span>
-                    </a>
-                  </li>
-                </ul>
-              </article>
-
-              <article class="card">
-                <div class="card__name">
-                  <h3 class="card__title"><a href="">A Cosy Semi-Studio</a></h3>
-                  <p class="card__descr">Attica, Athens, PlakaAttica, Athens, Plaka</p>
-                </div>
-                <a href="" class="card__photo">
-                  <img src="img/demo-card-pict-01.jpg" width="290" height="216" alt="A Cosy Semi-Studio">
-                </a>
-                <div class="card__info">
-                  <ul class="card__info-list">
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">2</span>
-                      bed's
-                    </li>
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">1</span>
-                      bath
-                    </li>
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">999</span>
-                      m²
-                    </li>
-                  </ul>
-                  <span class="card__info-tooltip" data-toggle="tooltip" data-placement="left" title="Living space (square metrs)">
-                    <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help"></use></svg>
-                  </span>
-                </div>
-                <ul class="card__footer">
-                  <li class="card__footer-item  card__footer-item--price">
-                    <span class="card__price">
-                      <span class="card__price-currency">€</span>
-                      <span class="card__price-num">1 345 678</span> 
-                    </span>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--compare">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to compare list">
-                      <svg width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#compare"></use></svg>
-                      <span class="btn-icon__text">Add property to compare list</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--wishlist">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to wishlist">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
-                      <span class="btn-icon__text">Add property to wishlist</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--notice">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Notice about price drop">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#notice"></use></svg>
-                      <span class="btn-icon__text">Notice about price drop</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--schedule">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Schedule an appointment">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#schedule"></use></svg>
-                      <span class="btn-icon__text">Schedule an appointment</span>
-                    </a>
-                  </li>
-                </ul>
-              </article>
-
-              <article class="card">
-                <div class="card__name">
-                  <h3 class="card__title"><a href="">A Cosy Semi-Studio</a></h3>
-                  <p class="card__descr">Attica, Athens, PlakaAttica, Athens, Plaka</p>
-                </div>
-                <a href="" class="card__photo">
-                  <img src="img/demo-card-pict-02.jpg" width="290" height="216" alt="A Cosy Semi-Studio">
-                </a>
-                <div class="card__info">
-                  <ul class="card__info-list">
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">2</span>
-                      bed's
-                    </li>
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">1</span>
-                      bath
-                    </li>
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">999</span>
-                      m²
-                    </li>
-                  </ul>
-                  <span class="card__info-tooltip" data-toggle="tooltip" data-placement="left" title="Living space (square metrs)">
-                    <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help"></use></svg>
-                  </span>
-                </div>
-                <ul class="card__footer">
-                  <li class="card__footer-item  card__footer-item--price">
-                    <span class="card__price">
-                      <span class="card__price-currency">€</span>
-                      <span class="card__price-num">1 345 678</span> 
-                    </span>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--compare">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to compare list">
-                      <svg width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#compare"></use></svg>
-                      <span class="btn-icon__text">Add property to compare list</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--wishlist">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to wishlist">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
-                      <span class="btn-icon__text">Add property to wishlist</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--notice">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Notice about price drop">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#notice"></use></svg>
-                      <span class="btn-icon__text">Notice about price drop</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--schedule">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Schedule an appointment">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#schedule"></use></svg>
-                      <span class="btn-icon__text">Schedule an appointment</span>
-                    </a>
-                  </li>
-                </ul>
-              </article>
-
-              <article class="card">
-                <div class="card__name">
-                  <h3 class="card__title"><a href="">A Cosy Semi-Studio</a></h3>
-                  <p class="card__descr">Attica, Athens, PlakaAttica, Athens, Plaka</p>
-                </div>
-                <a href="" class="card__photo">
-                  <img src="img/demo-card-pict-01.jpg" width="290" height="216" alt="A Cosy Semi-Studio">
-                </a>
-                <div class="card__info">
-                  <ul class="card__info-list">
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">2</span>
-                      bed's
-                    </li>
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">1</span>
-                      bath
-                    </li>
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">999</span>
-                      m²
-                    </li>
-                  </ul>
-                  <span class="card__info-tooltip" data-toggle="tooltip" data-placement="left" title="Living space (square metrs)">
-                    <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help"></use></svg>
-                  </span>
-                </div>
-                <ul class="card__footer">
-                  <li class="card__footer-item  card__footer-item--price">
-                    <span class="card__price">
-                      <span class="card__price-currency">€</span>
-                      <span class="card__price-num">1 345 678</span> 
-                    </span>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--compare">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to compare list">
-                      <svg width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#compare"></use></svg>
-                      <span class="btn-icon__text">Add property to compare list</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--wishlist">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to wishlist">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
-                      <span class="btn-icon__text">Add property to wishlist</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--notice">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Notice about price drop">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#notice"></use></svg>
-                      <span class="btn-icon__text">Notice about price drop</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--schedule">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Schedule an appointment">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#schedule"></use></svg>
-                      <span class="btn-icon__text">Schedule an appointment</span>
-                    </a>
-                  </li>
-                </ul>
-              </article>
-
-              <a class="question" href="">
-                <div class="question__text">
-                  <img class="question__consultant-avatar" src="img/avatar-consultant-01.png" width="160" height="160" alt="Helen Zinger">
-                  <div class="question__msg">«Is it difficult to choose? We offer variations and consult» </div>
-                  <div class="question__consultant">Helen Zinger <br>Lead Consult Manager</div>
-                </div>
-                <div class="question__btn">Ask a Question</div>
-              </a>
-
-              <article class="card">
-                <div class="card__name">
-                  <h3 class="card__title"><a href="">A Cosy Semi-Studio</a></h3>
-                  <p class="card__descr">Attica, Athens, PlakaAttica, Athens, Plaka</p>
-                </div>
-                <a href="" class="card__photo">
-                  <img src="img/demo-card-pict-01.jpg" width="290" height="216" alt="A Cosy Semi-Studio">
-                </a>
-                <div class="card__info">
-                  <ul class="card__info-list">
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">2</span>
-                      bed's
-                    </li>
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">1</span>
-                      bath
-                    </li>
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">999</span>
-                      m²
-                    </li>
-                  </ul>
-                  <span class="card__info-tooltip" data-toggle="tooltip" data-placement="left" title="Living space (square metrs)">
-                    <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help"></use></svg>
-                  </span>
-                </div>
-                <ul class="card__footer">
-                  <li class="card__footer-item  card__footer-item--price">
-                    <span class="card__price">
-                      <span class="card__price-currency">€</span>
-                      <span class="card__price-num">1 345 678</span> 
-                    </span>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--compare">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to compare list">
-                      <svg width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#compare"></use></svg>
-                      <span class="btn-icon__text">Add property to compare list</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--wishlist">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to wishlist">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
-                      <span class="btn-icon__text">Add property to wishlist</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--notice">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Notice about price drop">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#notice"></use></svg>
-                      <span class="btn-icon__text">Notice about price drop</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--schedule">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Schedule an appointment">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#schedule"></use></svg>
-                      <span class="btn-icon__text">Schedule an appointment</span>
-                    </a>
-                  </li>
-                </ul>
-              </article>
-
-              <article class="card">
-                <div class="card__name">
-                  <h3 class="card__title"><a href="">A Cosy Semi-Studio</a></h3>
-                  <p class="card__descr">Attica, Athens, PlakaAttica, Athens, Plaka</p>
-                </div>
-                <a href="" class="card__photo">
-                  <img src="img/demo-card-pict-02.jpg" width="290" height="216" alt="A Cosy Semi-Studio">
-                </a>
-                <div class="card__info">
-                  <ul class="card__info-list">
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">2</span>
-                      bed's
-                    </li>
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">1</span>
-                      bath
-                    </li>
-                    <li class="card__info-list-item">
-                      <span class="card__info-list-num">999</span>
-                      m²
-                    </li>
-                  </ul>
-                  <span class="card__info-tooltip" data-toggle="tooltip" data-placement="left" title="Living space (square metrs)">
-                    <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help"></use></svg>
-                  </span>
-                </div>
-                <ul class="card__footer">
-                  <li class="card__footer-item  card__footer-item--price">
-                    <span class="card__price">
-                      <span class="card__price-currency">€</span>
-                      <span class="card__price-num">1 345 678</span> 
-                    </span>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--compare">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to compare list">
-                      <svg width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#compare"></use></svg>
-                      <span class="btn-icon__text">Add property to compare list</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--wishlist">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Add property to wishlist">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
-                      <span class="btn-icon__text">Add property to wishlist</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--notice">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Notice about price drop">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#notice"></use></svg>
-                      <span class="btn-icon__text">Notice about price drop</span>
-                    </a>
-                  </li>
-                  <li class="card__footer-item  card__footer-item--schedule">
-                    <a href="" class="btn-icon" data-toggle="tooltip" data-placement="top" title="Schedule an appointment">
-                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#schedule"></use></svg>
-                      <span class="btn-icon__text">Schedule an appointment</span>
-                    </a>
-                  </li>
-                </ul>
-              </article>
-
-            </div>
-          </div>
-          <footer class="top-rated__footer">
-            <a href="" class="top-rated__more-link">+ More Properties for Sale</a>
-          </footer>
-        </section> -->
 
       </main>
 
