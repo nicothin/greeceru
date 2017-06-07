@@ -124,6 +124,7 @@ $border-color:                hsl(0, 0%, 60%) !default;
     padding: 10px 15px;
     display: flex;
     align-items: center;
+    background-color: #fff;
 
     #{$block-name}__text {
       margin-bottom: 0;

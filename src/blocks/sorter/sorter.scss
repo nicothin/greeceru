@@ -3,23 +3,18 @@
 // Не пишите здесь другие селекторы.
 
 .sorter {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding-bottom: 10px;
 
   .field-drop-checkboxes {
     width: 135px;
 
     @media (min-width: $screen-lg) {
       margin-right: 30px;
-    }
-  }
-
-  .field-drop-checkboxes ~ .field-drop-checkboxes {
-    margin-left: 20px;
-
-    @media (min-width: $screen-lg) {
-      margin-left: 0;
     }
   }
 
@@ -46,6 +41,14 @@
   &__options-part {
     display: flex;
     align-items: center;
+
+    & + & {
+      margin-left: 20px;
+
+      @media (min-width: $screen-lg) {
+        margin-left: 0;
+      }
+    }
   }
 
   &__field-text {

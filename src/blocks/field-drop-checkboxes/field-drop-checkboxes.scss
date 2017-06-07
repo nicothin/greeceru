@@ -58,6 +58,14 @@
     }
   }
 
+  &__pseudoselect-text-xxl-show {
+    display: none;
+
+    @media (min-width: $screen-xxl) {
+      display: inline;
+    }
+  }
+
   &__drop {
     position: absolute;
     top: calc(100% + 8px);

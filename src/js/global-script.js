@@ -97,8 +97,14 @@ $( document ).ready(function() {
     $('#filter-wrapper').toggleClass('filter-wrapper--open');
   });
 
-  // карусель отзывов в блоке над картой
-  $('.card-map__carousel').owlCarousel({
+  // карусель фоток в блоке над картой
+  $('.card-map__carousel.owl-carousel').owlCarousel({
+    items: 1,
+    nav: true,
+  });
+
+  // карусель фоток в блоке локации
+  $('.card__photo-carousel.owl-carousel').owlCarousel({
     items: 1,
     nav: true,
   });

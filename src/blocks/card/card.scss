@@ -72,6 +72,61 @@
     }
   }
 
+  &__photo-carousel {
+    position: relative;
+    min-height: 217px;
+
+    .owl-dots {
+      display: none;
+    }
+
+    .owl-prev,
+    .owl-next {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      font-size: 0;
+      color: transparent;
+      overflow: hidden;
+      transition: opacity $transition-time;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 18px;
+        height: 18px;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+      }
+    }
+
+    .owl-prev {
+      left: 0;
+
+      &:before {
+        transform: translateX(5px) rotate(135deg);
+      }
+    }
+
+    .owl-next {
+      right: 0;
+
+      &:before {
+        transform: translateX(-5px) rotate(-45deg);
+      }
+    }
+
+    .disabled {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
   &__info {
     position: relative;
     order: 2;
@@ -144,8 +199,8 @@
 
   &__footer-item {
 
-    &:not(:last-child) {
-      border-right: 1px solid $gray-lightest;
+    &:not(:first-child) {
+      border-left: 1px solid $gray-lightest;
     }
 
     .btn-icon {
@@ -158,6 +213,7 @@
 
     &--price {
       flex-grow: 1;
+      margin-right: auto;
       max-width: 207px;
       padding: 0 18px;
     }
@@ -199,5 +255,18 @@
   &__price-per-mo {
     font-weight: 400;
     font-size: $font-size--small;
+  }
+
+
+
+
+  &--lg {
+    width: auto;
+    min-width: 290px;
+    max-width: 490px;
+
+    @media (min-width: $screen-lg) {
+      width: auto;
+    }
   }
 }

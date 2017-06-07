@@ -3,5 +3,34 @@
 // Не пишите здесь другие селекторы.
 
 .locations-list-wrapper {
-  padding: 15px;
+  padding: 15px 15px 30px;
+
+  @media (min-width: $screen-xl) {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px 30px 30px;
+  }
+
+  &__inner {
+    flex-basis: 100%;
+    max-width: 1000px;
+  }
+
+  .pagination {
+
+    @media (min-width: $screen-lg) {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid $gray-lightest;
+    }
+  }
+
+  .breadcrumbs {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
 }
