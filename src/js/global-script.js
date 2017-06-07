@@ -92,9 +92,9 @@ $( document ).ready(function() {
   });
 
   // дроп фильтра товаров
-  $('#filter-drop-toggler').on('click', function(){
-    $('#filter-drop').toggleClass('filter__drop--open');
-    $('#filter-wrapper').toggleClass('filter-wrapper--open');
+  $('[data-filter-drop-toggler]').on('click', function(){
+    $('#filter-drop').toggleClass('modal-mobile--open').toggleClass('filter__drop--open');
+    $('#filter-wrapper').toggleClass('filter-wrapper--open-drop');
   });
 
   // карусель фоток в блоке над картой

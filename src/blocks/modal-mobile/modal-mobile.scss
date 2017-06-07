@@ -1,7 +1,82 @@
-// В этом файле должны быть стили только для БЭМ-блока modal-mobile, его элементов, 
+// В этом файле должны быть стили только для БЭМ-блока modal-mobile, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Не пишите здесь другие селекторы.
 
 .modal-mobile {
-  
+
+  $block-name:                &;
+
+  @media (max-width: ($screen-lg - 1)) {
+    display: block !important;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $z-index-modal;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    padding-right: 0 !important;
+    -webkit-overflow-scrolling: touch;
+    background-color: #fff;
+    box-shadow: inset 0 12px 10px -10px rgba(72, 72, 72, 0.1);
+    transition: opacity $transition-time;
+
+    &__dialog {
+      position: relative;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: $border-radius;
+    }
+
+    &__content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 100%;
+      min-height: 100%;
+      outline: 0;
+    }
+
+    &__header {
+      padding: 45px 30px 0;
+      flex-shrink: 0;
+    }
+
+    &__title {
+      margin: 0 0 25px;
+      padding: 5px 0 10px;
+      font-weight: 400;
+      font-size: ($font-size--h3 + 5);
+      border-bottom: 1px solid $gray-lightest;
+    }
+
+    &__close {
+      position: absolute !important;
+      top: 15px;
+      right: 15px;
+    }
+
+    &__body {
+      padding: 0 30px 30px;
+      min-height: 190px;
+
+      .field-text + .field-text {
+        margin-top: 40px;
+      }
+    }
+
+    &--open {
+      overflow-x: hidden;
+      overflow-y: auto;
+      top: $header-height;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: auto;
+      height: auto;
+      opacity: 1;
+    }
+  }
 }
