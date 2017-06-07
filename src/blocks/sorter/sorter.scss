@@ -1,7 +1,60 @@
-// В этом файле должны быть стили только для БЭМ-блока sorter, его элементов, 
+// В этом файле должны быть стили только для БЭМ-блока sorter, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Не пишите здесь другие селекторы.
 
 .sorter {
-  
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .field-drop-checkboxes {
+    width: 135px;
+
+    @media (min-width: $screen-lg) {
+      margin-right: 30px;
+    }
+  }
+
+  .field-drop-checkboxes ~ .field-drop-checkboxes {
+    margin-left: 20px;
+
+    @media (min-width: $screen-lg) {
+      margin-left: 0;
+    }
+  }
+
+  &__found-result {
+    display: block;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    flex-shrink: 1;
+    min-width: 105px;
+    color: $gray;
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &__options {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__options-part {
+    display: flex;
+    align-items: center;
+  }
+
+  &__field-text {
+    display: none;
+    margin-right: 15px;
+    color: $gray;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+  }
 }

@@ -66,7 +66,8 @@
   &__tab {
 
     &--wide {
-      padding-top: 108px;
+      padding-top: 78px;
+      padding-bottom: 62px;
 
       @media (min-width: $screen-lg) {
         flex-grow: 1;
