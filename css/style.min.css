@@ -2111,7 +2111,8 @@ a:hover .feedback__slider-control-arrow,
     margin-right: 30px;
     width: 130px;
     height: 100px;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    overflow: hidden; }
 .post__pict {
     display: block;
     width: 100%;
@@ -2946,7 +2947,7 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     font-size: 12px; }
   .post--accent{
     width: 750px;
-    min-height: 530px; }
+    height: 530px; }
   .post--accent .post__pict-wrap{
     width: 100%;
     height: 100%; }
@@ -3643,6 +3644,18 @@ a.ui-state-default:hover, a.ui-state-default:focus {
   .blog-latest__list .post--accent{
     -ms-flex-preferred-size: calc(50% - 30px);
     flex-basis: calc(50% - 30px); }
+  .post--accent{
+    height: auto;
+    min-height: 530px;
+    max-height: 600px; }
+  .post--accent .post__pict-wrap{
+    height: 100%;
+    min-height: 530px;
+    max-height: 600px; }
+  .post--accent .post__pict{
+    height: 100%;
+    min-height: 530px;
+    max-height: 600px; }
   .filter__part--short{
     width: 100px; }
   .filter__drop-part{
