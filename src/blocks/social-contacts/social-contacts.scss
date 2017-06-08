@@ -1,7 +1,25 @@
-// В этом файле должны быть стили только для БЭМ-блока social-contacts, его элементов, 
+// В этом файле должны быть стили только для БЭМ-блока social-contacts, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Не пишите здесь другие селекторы.
 
 .social-contacts {
-  
+  padding: 10px 0 15px;
+  border-top: 1px solid $gray-lightest;
+  border-bottom: 1px solid $gray-lightest;
+
+  .social-links__item {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
+  &__right {
+  }
+
+  &__right-text {
+    display: block;
+    margin-bottom: 13px;
+    font-size: $font-size--small;
+    color: $gray;
+  }
 }
+

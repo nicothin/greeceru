@@ -1,7 +1,59 @@
-// В этом файле должны быть стили только для БЭМ-блока team-item, его элементов, 
+// В этом файле должны быть стили только для БЭМ-блока team-item, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Не пишите здесь другие селекторы.
 
 .team-item {
-  
+
+  $block-name:                &;
+
+  &__img-wrap {
+    display: block;
+    margin-bottom: 12px;
+    // width: 120px;
+    // height: 120px;
+    // margin: auto;
+    // border-radius: 50%;
+    // overflow: hidden;
+    // border: 2px solid $gray-lightest;
+  }
+
+  &__img {
+    display: block;
+    margin: auto;
+    width: 120px;
+    max-width: 120px;
+    height: 120px;
+    max-height: 120px;
+    // transform: translate(-1px, -1px);
+    object-fit: cover;
+  }
+
+  &__name {
+    display: block;
+    margin: 0;
+    font-size: $font-size;
+    font-weight: 500;
+    text-align: center;
+
+    small {
+      display: block;
+      margin-top: 3px;
+      font-weight: 400;
+      color: $gray;
+    }
+  }
+
+
+
+  &--lg {
+
+    #{$block-name}__img-wrap {}
+
+    #{$block-name}__img {
+      width: 164px;
+      max-width: 164px;
+      height: 164px;
+      max-height: 164px;
+    }
+  }
 }

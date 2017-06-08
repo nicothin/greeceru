@@ -51,7 +51,9 @@
     "team": [],
     "team-item": [],
     "contacts-map": [],
-    "our-history": []
+    "our-history": [],
+    "subscribing": [],
+    "layout-text": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

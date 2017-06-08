@@ -1,7 +1,80 @@
-// В этом файле должны быть стили только для БЭМ-блока contacts-map, его элементов, 
+// В этом файле должны быть стили только для БЭМ-блока contacts-map, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Не пишите здесь другие селекторы.
 
 .contacts-map {
-  
+
+  .layout-text__h2 {
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+
+  .field-text {
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    margin-top: 8px;
+  }
+
+  &__location-wrapper {
+    position: relative;
+
+    .field-text__input {
+      padding-left: 46px;
+    }
+  }
+
+  &__location-icon {
+    position: absolute;
+    top: 50%;
+    left: 9px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid $gray-lightest;
+
+    svg {
+      fill: $gray;
+    }
+  }
+
+  &__search-line {
+    margin-bottom: 40px;
+  }
+
+  &__map {
+    width: 100%;
+    height: 410px;
+    margin-bottom: 20px;
+  }
+
+  &__data {}
+
+  &__data-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    b {
+      font-weight: 500;
+    }
+
+    a {
+      color: $text-color;
+
+      &:hover,
+      &:focus {
+        color: $color-main--accent;
+      }
+    }
+  }
+
+  &__data-item {
+    margin-bottom: 6px;
+  }
 }

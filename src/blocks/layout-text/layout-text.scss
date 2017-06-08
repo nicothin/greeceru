@@ -1,0 +1,32 @@
+// В этом файле должны быть стили только для БЭМ-блока layout-text, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.layout-text {
+
+  &__main {}
+
+  &__main-inner {
+    padding: 30px 15px 45px;
+  }
+
+  &__aside {
+    display: none;
+  }
+
+  &__aside-inner {
+    padding: 30px;
+  }
+
+  &__h1 {
+    font-size: $font-size--h2;
+    font-weight: 500;
+    margin: 0 0 15px;
+  }
+
+  &__h2 {
+    font-size: ($font-size--h2 - 3);
+    font-weight: 400;
+    margin: 35px 0 20px;
+  }
+}
