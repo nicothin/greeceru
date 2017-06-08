@@ -154,7 +154,7 @@
 
     @media (min-width: $screen-md) {
       width: 750px;
-      min-height: 530px;
+      height: 530px;
 
       #{$block-name}__pict-wrap {
         width: 100%;
@@ -175,6 +175,12 @@
         border-radius: 0;
         border-bottom-left-radius: $border-radius;
       }
+    }
+
+    @media (min-width: $screen-xxl) {
+      height: auto;
+      min-height: 530px;
+      max-height: 600px;
     }
   }
 }
