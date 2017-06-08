@@ -45,7 +45,13 @@
     "locations-list": [],
     "layout-tabs": [],
     "modal-mobile": [],
-    "card-map": []
+    "card-map": [],
+    "president": [],
+    "social-contacts": [],
+    "team": [],
+    "team-item": [],
+    "contacts-map": [],
+    "our-history": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
