@@ -53,7 +53,8 @@
     "contacts-map": [],
     "our-history": [],
     "subscribing": [],
-    "layout-text": []
+    "layout-text": [],
+    "aside-block": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

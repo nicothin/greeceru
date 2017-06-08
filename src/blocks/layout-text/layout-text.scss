@@ -4,18 +4,41 @@
 
 .layout-text {
 
-  &__main {}
+  @media (min-width: $screen-lg) {
+    display: flex;
+  }
+
+  &__main {
+    flex-basis: 67%;
+    min-width: 67%;
+  }
 
   &__main-inner {
     padding: 30px 15px 45px;
+
+    @media (min-width: $screen-xl) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
   }
 
   &__aside {
     display: none;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+      flex-basis: 33%;
+      min-width: 33%;
+      background-color: $gray-ultra-lightest;
+    }
   }
 
   &__aside-inner {
-    padding: 30px;
+    padding: 15px;
+
+    @media (min-width: $screen-xl) {
+      padding: 30px;
+    }
   }
 
   &__h1 {
