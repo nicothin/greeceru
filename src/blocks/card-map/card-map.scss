@@ -6,8 +6,8 @@
 
   $block-name:                &;
 
-  position: absolute;
-  transform: translateX(-50%);
+  // position: absolute;
+  // transform: translateX(-50%);
   width: 218px;
   background-color: #fff;
   border-radius: ($border-radius + 1);
@@ -57,6 +57,8 @@
 
   &__carousel {
     position: relative;
+    max-height: 164px;
+    overflow: hidden;
 
     .owl-dots {
       display: none;
@@ -186,6 +188,13 @@
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
   }
+
+  &__close {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+  }
+
 
 
 

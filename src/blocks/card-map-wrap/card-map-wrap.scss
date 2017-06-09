@@ -1,0 +1,29 @@
+// В этом файле должны быть стили только для БЭМ-блока card-map-wrap, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.card-map-wrap {
+  position: absolute;
+  transform: translateX(-50%);
+
+  &__item {
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+
+    &--hide-mobile {
+
+      @media (max-width: ($screen-lg - 1)) {
+        display: none !important;
+      }
+    }
+
+    &--shown {
+
+      @media (min-width: $screen-lg) {
+        display: block;
+      }
+    }
+  }
+}

@@ -54,7 +54,8 @@
     "our-history": [],
     "subscribing": [],
     "layout-text": [],
-    "aside-block": []
+    "aside-block": [],
+    "card-map-wrap": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
