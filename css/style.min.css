@@ -2811,7 +2811,9 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     line-height: 28px;
     border: 1px solid #e6e6e6; }
 .president__text .team-item {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
 .president__msg {
   font-weight: 500;
   margin: 0 0 20px; }
@@ -2824,6 +2826,8 @@ a.ui-state-default:hover, a.ui-state-default:focus {
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6; }
 .social-contacts .social-links__item {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     margin-left: 0;
     margin-right: 20px; }
 .social-contacts__right-text {
@@ -2875,52 +2879,60 @@ a.ui-state-default:hover, a.ui-state-default:focus {
   max-width: 164px;
   height: 164px;
   max-height: 164px; }
+.contacts-map {
+  max-width: 100%; }
 .contacts-map .layout-text__h2 {
-  margin-top: 10px;
-  margin-bottom: 35px; }
+    margin-top: 10px;
+    margin-bottom: 35px; }
 .contacts-map .field-text {
-  margin-bottom: 15px; }
+    margin-bottom: 15px; }
 .contacts-map .btn {
-  margin-top: 8px; }
+    margin-top: 8px; }
 .contacts-map__location-wrapper {
-  position: relative; }
+    position: relative;
+    -ms-flex-positive: 1;
+        flex-grow: 1; }
 .contacts-map__location-wrapper .field-text__input {
-    padding-left: 46px; }
+      padding-left: 46px; }
 .contacts-map__location-icon {
-  position: absolute;
-  top: 50%;
-  left: 9px;
-  transform: translateY(-50%);
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  border: 1px solid #e6e6e6; }
+    position: absolute;
+    top: 50%;
+    left: 9px;
+    transform: translateY(-50%);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid #e6e6e6; }
 .contacts-map__location-icon svg {
-    fill: #8891a6; }
+      fill: #8891a6; }
+.contacts-map__arrow-icon {
+    display: none; }
 .contacts-map__search-line {
-  margin-bottom: 40px; }
+    margin-bottom: 40px; }
+.contacts-map__map-wrapper {
+    width: 100%; }
 .contacts-map__map {
-  width: 100%;
-  height: 410px;
-  margin-bottom: 20px; }
+    width: 100%;
+    height: 410px;
+    margin-bottom: 20px; }
 .contacts-map__data-list {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
+    margin: 0;
+    padding: 0;
+    list-style: none; }
 .contacts-map__data-list b {
-    font-weight: 500; }
+      font-weight: 500; }
 .contacts-map__data-list a {
-    color: #31353f; }
+      color: #31353f; }
 .contacts-map__data-list a:hover, .contacts-map__data-list a:focus {
-      color: #346af4; }
+        color: #346af4; }
 .contacts-map__data-item {
-  margin-bottom: 6px; }
+    margin-bottom: 6px; }
 .our-history {
   margin: 0;
   padding: 0;
@@ -2954,13 +2966,24 @@ a.ui-state-default:hover, a.ui-state-default:focus {
 .layout-text__main {
   -ms-flex-preferred-size: 67%;
       flex-basis: 67%;
-  min-width: 67%; }
+  min-width: 67%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end; }
 .layout-text__main-inner {
-  padding: 30px 15px 45px; }
+  padding: 30px 15px 45px;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  width: 100%;
+  max-width: 940px; }
 .layout-text__aside {
   display: none; }
 .layout-text__aside-inner {
-  padding: 15px; }
+  padding: 15px;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  max-width: 420px; }
 .layout-text__h1 {
   font-size: 24px;
   font-weight: 500;
@@ -3239,7 +3262,22 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     padding-left: 15px;
     padding-right: 15px; }
   .filter__line .field-text__input{
-    min-height: 40px; } }
+    min-height: 40px; }
+  .social-contacts .social-links__item{
+    margin-left: 10px;
+    margin-right: 0; }
+  .social-contacts{
+    padding: 10px 0; }
+  .social-contacts__right{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+  .social-contacts__right .social-links{
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap; }
+  .social-contacts__right-text{
+    margin-bottom: 0; } }
 @media (min-width: 768px) and (max-width: 969px){
   .locations-list__item{
     width: 50%;
@@ -3499,7 +3537,10 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     display: -ms-flexbox;
     display: flex; }
   .layout-text__aside{
-    display: block;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     -ms-flex-preferred-size: 33%;
     flex-basis: 33%;
     min-width: 33%;
@@ -3750,13 +3791,72 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     margin-right: -15px; }
   .layout-tabs__tab--wide{
     padding-top: 100px; }
+  .president__text{
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 20px; }
+  .president__text .team-item{
+    margin-left: 30px;
+    margin-right: 30px; }
+  .president__msg{
+    padding-top: 12px; }
+  .team__list{
+    margin-left: 0; }
+  .contacts-map .field-text{
+    margin-bottom: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1; }
+  .contacts-map .btn{
+    margin-top: 0;
+    margin-left: 30px;
+    min-width: 220px; }
+  .contacts-map__location-wrapper{
+    padding-left: 42px; }
+  .contacts-map__location-wrapper .field-text__input{
+    padding: 9px 14px; }
+  .contacts-map__location-icon{
+    left: 0; }
+  .contacts-map__arrow-icon{
+    display: block;
+    margin: 0 7px; }
+  .contacts-map__arrow-icon svg{
+    fill: #8891a6; }
+  .contacts-map__search-line{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 20px; }
+  .contacts-map__data-list{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .contacts-map__data-list li{
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    padding-right: 30px; }
+  .subscribing{
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 60px; }
   .layout-text__main-inner{
+    padding-top: 50px;
     padding-left: 30px;
     padding-right: 30px; }
   .layout-text__aside-inner{
     padding: 30px; }
   .aside-block{
     margin-bottom: 30px; } }
+@media (min-width: 1440px){
+  .team__list{
+    margin-left: 0; }
+  .team__list-item:not(:last-child){
+    padding-right: 60px; }
+  .contacts-map__data-list li{
+    -ms-flex-preferred-size: 45%;
+    flex-basis: 45%;
+    padding-right: 30px; } }
 @media (min-width: 1600px){
   .page-footer__inner{
     max-width: 1530px;
@@ -3866,7 +3966,18 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     flex: 0 0 100%;
     max-width: 100%;
     padding-left: 15px;
-    padding-right: 15px; } }
+    padding-right: 15px; }
+  .president__text{
+    display: -ms-flexbox;
+    display: flex; }
+  .president__text .team-item{
+    margin-left: 30px;
+    margin-right: 60px; }
+  .team__list-item:not(:last-child){
+    padding-right: 80px; }
+  .layout-text__main-inner{
+    max-width: 1040px;
+    padding-right: 130px; } }
 @media (max-width: 1169px){
   .page-header__inner .logo{
     transform: translateX(-5px); }
