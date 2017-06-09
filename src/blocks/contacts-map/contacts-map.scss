@@ -3,6 +3,7 @@
 // Не пишите здесь другие селекторы.
 
 .contacts-map {
+  max-width: 100%;
 
   .layout-text__h2 {
     margin-top: 10px;
@@ -11,17 +12,37 @@
 
   .field-text {
     margin-bottom: 15px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+      flex-grow: 1;
+    }
   }
 
   .btn {
     margin-top: 8px;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 0;
+      margin-left: 30px;
+      min-width: 220px;
+    }
   }
 
   &__location-wrapper {
     position: relative;
+    flex-grow: 1;
 
     .field-text__input {
       padding-left: 46px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 42px;
+
+      .field-text__input {
+        padding: $field-padding-vertical $field-padding-horizontal;
+      }
     }
   }
 
@@ -38,13 +59,40 @@
     border-radius: 50%;
     border: 1px solid $gray-lightest;
 
+    @media (min-width: $screen-xl) {
+      left: 0;
+    }
+
     svg {
       fill: $gray;
     }
   }
 
+  &__arrow-icon {
+    display: none;
+
+    @media (min-width: $screen-xl) {
+      display: block;
+      margin: 0 7px;
+
+      svg {
+        fill: $gray;
+      }
+    }
+  }
+
   &__search-line {
     margin-bottom: 40px;
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__map-wrapper {
+    width: 100%;
   }
 
   &__map {
@@ -59,6 +107,24 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    li {
+
+      @media (min-width: $screen-xl) {
+        flex-basis: 50%;
+        padding-right: 30px;
+      }
+
+      @media (min-width: $screen-osx) {
+        flex-basis: 45%;
+        padding-right: 30px;
+      }
+    }
 
     b {
       font-weight: 500;

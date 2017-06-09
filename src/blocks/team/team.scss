@@ -16,10 +16,32 @@
     margin: 0 0 0 -30px;
     padding: 0;
     list-style: none;
+
+    @media (min-width: $screen-xl) {
+      margin-left: 0;
+    }
+
+    @media (min-width: $screen-osx) {
+      margin-left: 0;
+    }
   }
 
   &__list-item {
     padding-left: 30px;
     margin-bottom: 30px;
+
+    @media (min-width: $screen-osx) {
+
+      &:not(:last-child) {
+        padding-right: 60px;
+      }
+    }
+
+    @media (min-width: $screen-xxl) {
+
+      &:not(:last-child) {
+        padding-right: 80px;
+      }
+    }
   }
 }

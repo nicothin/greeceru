@@ -11,14 +11,25 @@
   &__main {
     flex-basis: 67%;
     min-width: 67%;
+    display: flex;
+    justify-content: flex-end;
   }
 
   &__main-inner {
     padding: 30px 15px 45px;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 940px;
 
     @media (min-width: $screen-xl) {
+      padding-top: 50px;
       padding-left: 30px;
       padding-right: 30px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      max-width: 1040px;
+      padding-right: 130px;
     }
   }
 
@@ -26,7 +37,8 @@
     display: none;
 
     @media (min-width: $screen-lg) {
-      display: block;
+      display: flex;
+      justify-content: flex-start;
       flex-basis: 33%;
       min-width: 33%;
       background-color: $gray-ultra-lightest;
@@ -35,6 +47,8 @@
 
   &__aside-inner {
     padding: 15px;
+    flex-grow: 1;
+    max-width: 420px;
 
     @media (min-width: $screen-xl) {
       padding: 30px;

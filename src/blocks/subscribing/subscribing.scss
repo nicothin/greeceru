@@ -9,6 +9,12 @@
   text-align: center;
   background: #fff url(../img/subscribing-icon.png) center 86px no-repeat;
 
+  @media (min-width: $screen-xl) {
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 60px;
+  }
+
   &__title {
     font-size: $font-size;
     font-weight: 500;
