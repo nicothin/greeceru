@@ -3,6 +3,9 @@
 // Не пишите здесь другие селекторы.
 
 .aside-block {
+
+  $block-name:                &;
+
   margin-bottom: 15px;
 
   @media (min-width: $screen-xl) {
@@ -30,5 +33,23 @@
     background-color: #fff;
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius
+  }
+
+  &--regions-list {
+
+    #{$block-name}__header {
+
+      @media (max-width: ($screen-lg - 1)) {
+        display: none;
+      }
+    }
+
+    #{$block-name}__content {
+      padding: 15px 30px;
+
+      @media (max-width: ($screen-lg - 1)) {
+        padding: 0 15px;
+      }
+    }
   }
 }

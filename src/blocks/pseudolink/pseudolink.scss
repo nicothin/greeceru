@@ -1,0 +1,29 @@
+// В этом файле должны быть стили только для БЭМ-блока pseudolink, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.pseudolink {
+  position: relative;
+  color: $color-main;
+  text-decoration: none;
+  display: inline-block;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.15em;
+    border-bottom: 1px dashed $color-main;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-main--accent;
+    text-decoration: none;
+
+    &:before {
+      border-color: $color-main--accent;
+    }
+  }
+}

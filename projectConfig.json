@@ -56,7 +56,13 @@
     "layout-text": [],
     "aside-block": [],
     "card-map-wrap": [],
-    "modal-map": []
+    "modal-map": [],
+    "in-region": [],
+    "btn-group": [],
+    "gallery-content": [],
+    "pseudolink": [],
+    "region": [],
+    "region-list": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -137,4 +137,12 @@ $( document ).ready(function() {
     $(parent).find('.card-map-wrap__item').removeClass('card-map-wrap__item--shown');
   });
 
+  // карусель в контенте
+  var contentCarousel = $('.gallery-content__carousel.owl-carousel');
+  $(contentCarousel).owlCarousel({
+    items: 1,
+    nav: true,
+    autoHeight: true,
+  });
+
 });

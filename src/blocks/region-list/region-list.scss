@@ -1,0 +1,55 @@
+// В этом файле должны быть стили только для БЭМ-блока region-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.region-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #eee;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: 5px 0;
+      margin-left: -5px;
+      color: $text-color;
+      transition: color $transition-time;
+
+      &:hover,
+      &:focus {
+        color: $color-main;
+
+        svg {
+          fill: #95B3FB;
+        }
+      }
+    }
+
+    svg {
+      width: 65px;
+      min-width: 65px;
+      height: auto;
+      max-height: 65px;
+      margin-right: 25px;
+      fill: $gray-lighten;
+      transition: fill $transition-time;
+    }
+
+    &--active {
+
+      a {
+        color: $color-main;
+      }
+
+      svg {
+        fill: #95B3FB;
+      }
+    }
+  }
+}

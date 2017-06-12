@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>greece_ru</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner  page__inner--has-bottom-btns">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="page__main-content" role="main">
+
+        <div class="layout-tabs  layout-tabs--normal-aside" data-layout-tab-parent>
+
+          <div class="layout-tabs__list">
+            <a href="#filter-wrapper" class="layout-tabs__list-item" data-filter-drop-toggler>Properties filter</a>
+            <a href="#region-description-wrapper" class="layout-tabs__list-item  layout-tabs__list-item--hidden" data-layout-tab-target="#region-description" data-layout-tab-toggle>Description</a>
+            <a href="#regions-list" class="layout-tabs__list-item" data-layout-tab-target="#regions-list" data-layout-tab-toggle>Regions</a>
+          </div>
+
+          <div class="layout-tabs__tab  layout-tabs__tab--text  layout-tabs__tab--active" id="region-description">
+
+            <form class="filter-wrapper  filter-wrapper--bg-white" id="filter-wrapper">
+              <div class="filter-wrapper__inner">
+
+                <div class="filter  filter--bg-white">
+                  <div class="filter__line">
+                    <div class="filter__part  filter__part--wide">
+                      <div class="field-text">
+                        <input class="field-text__input  field-text__input--fz-small  filter__main-input" type="text" placeholder="Enter an address" value="Eastern Macedonia and Thrace">
+                      </div>
+                    </div>
+                    <div class="filter__part  filter__part--mobile-hide">
+                      <div class="field-drop-checkboxes  field-drop-checkboxes--fz-small">
+                        <div class="field-drop-checkboxes__pseudoselect" id="type-of-deal" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type<span class="field-drop-checkboxes__pseudoselect-text-xxl-show"> of deal</span></div>
+                        <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="type-of-deal">
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox" checked>
+                              <span class="field-checkbox__name-text">Type one</span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox">
+                              <span class="field-checkbox__name-text">Type two</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter__part  filter__part--mobile-hide">
+                      <div class="field-drop-checkboxes  field-drop-checkboxes--fz-small">
+                        <div class="field-drop-checkboxes__pseudoselect" id="property-types" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All<span class="field-drop-checkboxes__pseudoselect-text-xxl-show"> property types</span></div>
+                        <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="property-types">
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox" checked>
+                              <span class="field-checkbox__name-text">Apartment</span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox">
+                              <span class="field-checkbox__name-text">Townhouse</span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox">
+                              <span class="field-checkbox__name-text">House</span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox">
+                              <span class="field-checkbox__name-text">Villa</span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox">
+                              <span class="field-checkbox__name-text">Office</span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox">
+                              <span class="field-checkbox__name-text">Storage space</span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox">
+                              <span class="field-checkbox__name-text">Parking space</span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox">
+                              <span class="field-checkbox__name-text">Industrial building</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter__part  filter__part--mobile-hide">
+                      <div class="field-drop-checkboxes  field-drop-checkboxes--fz-small">
+                        <div class="field-drop-checkboxes__pseudoselect" id="bedrooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bed's</div>
+                        <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="bedrooms">
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox" checked>
+                              <span class="field-checkbox__name-text">Studio</span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox">
+                              <span class="field-checkbox__name-text">1 bed</span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox">
+                              <span class="field-checkbox__name-text">2 bed’s</span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox">
+                              <span class="field-checkbox__name-text">3 bed’s</span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox">
+                              <span class="field-checkbox__name-text">4 bed’s</span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox">
+                              <span class="field-checkbox__name-text">5+</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter__part  filter__part--short  filter__part--mobile-hide">
+                      <div class="field-text">
+                        <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Min price">
+                      </div>
+                    </div>
+                    <div class="filter__part  filter__part--short  filter__part--mobile-hide">
+                      <div class="field-text">
+                        <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Max price">
+                      </div>
+                    </div>
+                    <div class="filter__part  filter__part--more  filter__part--mobile-hide">
+                      <div class="field-text" data-filter-drop-toggler>
+                        <div class="field-text__input  field-text__input--fz-small">
+                          <span class="btn-icon  btn-icon--blue-kebab"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__drop  modal-mobile" id="filter-drop">
+                    <div class="modal-mobile__dialog">
+                      <div class="modal-mobile__content">
+                        <div class="modal-mobile__header  filter__drop-lg-hide">
+                          <span class="close  close--bold  modal-mobile__close" aria-label="Закрыть" data-filter-drop-toggler><span></span></span>
+                          <div class="modal-mobile__title">Properties filter</div>
+                        </div>
+                        <div class="modal-mobile__body  filter__drop-row">
+                          <div class="filter__drop-lg-hide">
+                            <div class="filter__drop-part">
+                              <div class="field-drop-checkboxes">
+                                <div class="field-drop-checkboxes__pseudoselect" id="type-of-deal-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type of deal</div>
+                                <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="type-of-deal-2">
+                                  <div class="field-checkbox__input-wrap">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox" checked>
+                                      <span class="field-checkbox__name-text">Type one</span>
+                                    </label>
+                                  </div>
+                                  <div class="field-checkbox__input-wrap">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox">
+                                      <span class="field-checkbox__name-text">Type two</span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="filter__drop-part">
+                              <div class="field-drop-checkboxes">
+                                <div class="field-drop-checkboxes__pseudoselect" id="property-types-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All property types</div>
+                                <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="property-types-2">
+                                  <div class="field-checkbox__input-wrap">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox" checked>
+                                      <span class="field-checkbox__name-text">Apartment</span>
+                                    </label>
+                                  </div>
+                                  <div class="field-checkbox__input-wrap">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox">
+                                      <span class="field-checkbox__name-text">Townhouse</span>
+                                    </label>
+                                  </div>
+                                  <div class="field-checkbox__input-wrap">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox">
+                                      <span class="field-checkbox__name-text">House</span>
+                                    </label>
+                                  </div>
+                                  <div class="field-checkbox__input-wrap">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox">
+                                      <span class="field-checkbox__name-text">Villa</span>
+                                    </label>
+                                  </div>
+                                  <div class="field-checkbox__input-wrap">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox">
+                                      <span class="field-checkbox__name-text">Office</span>
+                                    </label>
+                                  </div>
+                                  <div class="field-checkbox__input-wrap">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox">
+                                      <span class="field-checkbox__name-text">Storage space</span>
+                                    </label>
+                                  </div>
+                                  <div class="field-checkbox__input-wrap">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox">
+                                      <span class="field-checkbox__name-text">Parking space</span>
+                                    </label>
+                                  </div>
+                                  <div class="field-checkbox__input-wrap">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox">
+                                      <span class="field-checkbox__name-text">Industrial building</span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="filter__drop-part">
+                              <div class="field-drop-checkboxes">
+                                <div class="field-drop-checkboxes__pseudoselect" id="bedrooms-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bedrooms</div>
+                                <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="bedrooms-2">
+                                  <div class="field-checkbox__input-wrap">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox" checked>
+                                      <span class="field-checkbox__name-text">Studio</span>
+                                    </label>
+                                  </div>
+                                  <div class="field-checkbox__input-wrap">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox">
+                                      <span class="field-checkbox__name-text">1 bed</span>
+                                    </label>
+                                  </div>
+                                  <div class="field-checkbox__input-wrap">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox">
+                                      <span class="field-checkbox__name-text">2 bed’s</span>
+                                    </label>
+                                  </div>
+                                  <div class="field-checkbox__input-wrap">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox">
+                                      <span class="field-checkbox__name-text">3 bed’s</span>
+                                    </label>
+                                  </div>
+                                  <div class="field-checkbox__input-wrap">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox">
+                                      <span class="field-checkbox__name-text">4 bed’s</span>
+                                    </label>
+                                  </div>
+                                  <div class="field-checkbox__input-wrap">
+                                    <label class="field-checkbox__name">
+                                      <input class="field-checkbox__input" type="checkbox">
+                                      <span class="field-checkbox__name-text">5+</span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="filter__drop-part  filter__drop-part--separator">
+                              <div class="field-text">
+                                <span class="field-text__input-wrap  field-text__input-wrap--input-group">
+                                  <input class="field-text__input" type="number" placeholder="Min price">
+                                  <input class="field-text__input" type="number" placeholder="Max price">
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="filter__drop-part">
+                            <div class="field-text">
+                              <span class="field-text__name">Year build</span>
+                              <span class="field-text__input-wrap  field-text__input-wrap--input-group">
+                                <input class="field-text__input" type="number" placeholder="From">
+                                <input class="field-text__input" type="number" placeholder="To">
+                              </span>
+                            </div>
+                          </div>
+                          <div class="filter__drop-part">
+                            <div class="field-text">
+                              <span class="field-text__name">Living area</span>
+                              <span class="field-text__input-wrap  field-text__input-wrap--input-group">
+                                <input class="field-text__input" type="number" placeholder="Min square">
+                                <input class="field-text__input" type="number" placeholder="Max square">
+                              </span>
+                            </div>
+                          </div>
+                          <div class="filter__drop-part">
+                            <div class="field-text">
+                              <span class="field-text__name">Land area</span>
+                              <span class="field-text__input-wrap  field-text__input-wrap--input-group">
+                                <input class="field-text__input" type="number" placeholder="Min square">
+                                <input class="field-text__input" type="number" placeholder="Max square">
+                              </span>
+                            </div>
+                          </div>
+                          <div class="filter__drop-part">
+                            <div class="field-drop-checkboxes">
+                              <span class="field-drop-checkboxes__name">Bathrooms</span>
+                              <div class="field-drop-checkboxes__pseudoselect" id="bedrooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">1</div>
+                              <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="bedrooms">
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="checkbox">
+                                    <span class="field-checkbox__name-text">1</span>
+                                  </label>
+                                </div>
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="checkbox">
+                                    <span class="field-checkbox__name-text">2</span>
+                                  </label>
+                                </div>
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="checkbox">
+                                    <span class="field-checkbox__name-text">3</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="filter__drop-part">
+                            <div class="field-text">
+                              <span class="field-text__name">Keywords</span>
+                              <span class="field-text__input-wrap">
+                                <input class="field-text__input" type="text" placeholder="For an example pool, yard">
+                              </span>
+                            </div>
+                          </div>
+                          <div class="filter__drop-part  filter__drop-part--action">
+                            <button class="btn  btn--white  btn--wide">Show 123 properties</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+
+            <section class="region  layout-tabs__text-wrapper">
+
+              <h1 class="region__title  page__h1">Eastern Macedonia and Thrace</h1>
+              <div class="region__text">
+
+                <p>Eastern Macedonia and Thrace is one of the thirteen administrative regions of Greece. It consists of the northeastern parts of the country, comprising the eastern part of the region of Greek Macedonia along with the region of Western Thrace, and the islands of Thasos and Samothrace.</p>
+                <p>The region of <a href="">Eastern Macedonia and Thrace</a> was established in the 1987 administrative reform. With the 2010 Kallikratis plan, its powers and authority were redefined and extended, with the preexisting region in many respects inheriting status and weight of the five now abolished prefectures, Drama, Evros, Kavala, Rhodope and Xanthi. The region is home to Greece's main Muslim minority, made up mainly of Pomaks and Western Thrace Turks, whose presence dates to the Ottoman period. Unlike the Muslims of Greek Macedonia, Epirus, and elsewhere in northern Greece, they were exempted from the Greek-Turkish population exchange following the 1923 Treaty of Lausanne.</p>
+                <p>The current regions were established in July 1986 (the Presidential Decree officially establishing them was signed in 1987), by decision of then-Interior Minister Menios Koutsogiorgas as a second-level administrative entities, complementing the prefectures (Law 1622/1986).[1] Before 1986, there was a traditional division into broad historical–geographical regions (γεωγραφικά διαμερίσματα), which, however, was often arbitrary; not all of the pre-1986 traditional historical-geographic regions had official administrative bodies. Although the post-1986 regions were mostly based on the earlier divisions, they are usually smaller and, in a few cases, do not overlap with the traditional definitions: for instance, the region of Western Greece, which had no previous analogue, comprises territory belonging to the Peloponnese peninsula and the traditional region of Central Greece.</p>
+
+                <div class="in-region">
+                  <h2 class="in-region__title  page__h2">Properties in this region</h2>
+                  <div class="in-region__map-wrap">
+                    <div class="in-region__controls">
+                      <div class="btn-group">
+                        <button class="btn  btn--wide" type="button">For sale 109</button>
+                        <button class="btn  btn--white  btn--wide" type="button">For rent 86</button>
+                      </div>
+                    </div>
+                    <div class="in-region__map-inner">
+                      <div class="in-region__map" id="region-map"></div>
+                      <script>
+                        var map;
+                        function initMap() {
+                          map = new google.maps.Map(document.getElementById('region-map'), {
+                            center: {lat: -34.397, lng: 150.644},
+                            zoom: 8
+                          });
+                        }
+                      </script>
+                      <!-- АХТУНГ! это мой ключ (nicothin) AIzaSyDjGAiz42P2243i_aoNCu4Pf0vU_xDWcZk, для проекта нужно сделать отдельный проектный! -->
+                      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjGAiz42P2243i_aoNCu4Pf0vU_xDWcZk&callback=initMap"
+                      async defer></script>
+                      <div class="in-region__marker" style="position: absolute; top: 70px; left: 30px">12</div>
+                    </div>
+                  </div>
+                  <p class="in-region__descr">Looking for more results? Use <a href="" class="pseudolink">advanced search</a></p>
+                </div>
+
+                <h2 class="page__h2">Interesting facts about Eastern Macedonia and Thrace</h2>
+
+                <p>As part of a decentralization process inspired by then-Interior Minister Alekos Papadopoulos ("Project Kapodistrias"), they were accorded more powers in the 1997 Kapodistrias reform of local and regional government. They were transformed into fully separate entities by the 2010 Kallikratis Plan (Law 3852/2010), which entered into effect on 1 January 2011. In the 2011 changes, the government-appointed general secretary (γενικός γραμματέας) was replaced with a popularly elected regional governor (περιφερειάρχης) and a regional council (περιφερειακό συμβούλιο) with 5-year terms. Many powers of the prefectures, which were also abolished or reformed into regional units, were transferred to the region level. The regional organs of the central government were in turn replaced by seven decentralized administrations, which group from one to three regions under a government-appointed general secretary.</p>
+                <p>The region of Western Greece was established in the 1987 administrative reform. With the 2010 Kallikratis plan, its powers and authority were redefined and extended. Along with the Peloponnese and the Ionian Islands regions, it is supervised by the Decentralized Administration of the Peloponnese, Western Greece and the Ionian Islands based at Patras. The region is based at Patras and is divided into three regional units (pre-Kallikratis prefectures), Aetolia-Acarnania in Central Greece and Achaea and Elis in the Peloponnese, which are further subdivided into 19 municipalities.</p>
+                <p>The governor is Apostolos Katsifaras, who was elected in the 2010 local elections running for PASOK and was narrowly re-elected in 2014 as an independent.</p>
+
+                <div class="gallery-content">
+                  <div class="gallery-content__carousel  owl-carousel">
+                    <div class="gallery-content__carousel-item">
+                      <img src="img/joker.jpg" alt="">
+                    </div>
+                    <div class="gallery-content__carousel-item">
+                      <img src="img/harly.jpg" alt="">
+                    </div>
+                    <div class="gallery-content__carousel-item">
+                      <img src="img/joker.jpg" alt="">
+                    </div>
+                    <div class="gallery-content__carousel-item">
+                      <img src="img/harly.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="gallery-content__preview-list">
+                    <div class="gallery-content__preview-item">
+                      <img src="img/joker.jpg" alt="">
+                    </div>
+                    <div class="gallery-content__preview-item">
+                      <img src="img/harly.jpg" alt="">
+                    </div>
+                    <div class="gallery-content__preview-item">
+                      <img src="img/joker.jpg" alt="">
+                    </div>
+                    <div class="gallery-content__preview-item">
+                      <img src="img/harly.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+
+                <h2 class="page__h2">More about Eastern Macedonia and Thrace</h2>
+
+                <p>The Ionian Islands (Modern Greek: Ιόνια νησιά, Ionia nisia; Ancient Greek, Katharevousa: Ἰόνιοι Νῆσοι, Ionioi Nēsoi; Italian: Isole Ionie) are a group of islands in Greece. They are traditionally called the Heptanese, i.e. "the Seven Islands" (Greek: Ἑπτάνησα, Heptanēsa or Ἑπτάνησος, Heptanēsos; Italian: Eptaneso), but the group includes many smaller islands as well as the seven principal ones. As a distinct historic region they date to the centuries-long Venetian rule, which preserved them from becoming part of the Ottoman Empire, and created a distinct cultural identity with many Italian influences. The Ionian Islands became part of the modern Greek state in 1864. Administratively today they belong to the Ionian Islands Region except for Kythera, which belongs to the Attica Region.</p>
+
+                <div class="page__accent-text">
+
+                  <figure class="page__figure">
+                    <img src="img/greece_01.jpg" alt="" class="page__figure-main">
+                    <figcaption class="page__figcaption">Eastern Macedonia and Thrace, summer 2017</figcaption>
+                  </figure>
+
+                  <p>The Ionian Islands (Modern Greek: Ιόνια νησιά, Ionia nisia; Ancient Greek, Katharevousa: Ἰόνιοι Νῆσοι, Ionioi Nēsoi; Italian: Isole Ionie) are a group of islands in Greece. They are traditionally called the Heptanese, i.e. "the Seven Islands" (Greek: Ἑπτάνησα, Heptanēsa or Ἑπτάνησος, Heptanēsos; Italian: Eptaneso), but the group includes many smaller islands as well as the seven principal ones. As a distinct historic region they date to the centuries-long Venetian rule, which preserved them from becoming part of the Ottoman Empire, and created a distinct cultural identity with many Italian influences. The Ionian Islands became part of the modern Greek state in 1864. Administratively today they belong to the Ionian Islands Region except for Kythera, which belongs to the Attica Region.</p>
+                  <p>In Ancient Greek the adjective Ionios (Ἰόνιος) was used as an epithet for the sea between Epirus and Italy in which the Ionian Islands are found because Io swam across it.[1] Latin transliteration, as well as Modern Greek pronunciation, may suggest that the Ionian Sea and Islands are somehow related to Ionia, an Anatolian region; in fact the Ionian Sea and Ionian Islands are spelled in Greek with an omicron (Ιόνια), whereas Ionia has an omega (Ιωνία), reflecting a classical difference in pronunciation. In Modern Greek omicron and omega represent the same sound, but the two words.</p>
+
+                </div>
+
+              </div>
+            </section>
+
+            <div class="filter__backdrop" data-filter-drop-toggler=""></div>
+
+          </div>
+
+          <div class="layout-tabs__tab  layout-tabs__tab--aside" id="regions-list">
+
+            <div class="layout-tabs__aside">
+
+              <section class="aside-block  aside-block--regions-list">
+                <div class="aside-block__header  aside-block__header--hide-lg">
+                  <h3 class="aside-block__title">Regions of Greece</h3>
+                </div>
+                <div class="aside-block__content">
+                  <ul class="region-list">
+                    <li class="region-list__item  region-list__item--active">
+                      <a href="">
+                        <svg width="70" height="70"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#eastern-macedonia"></use></svg>
+                        <span class="region-list__item-name">Eastern Macedonia and Thrace</span>
+                      </a>
+                    </li>
+                    <li class="region-list__item">
+                      <a href="">
+                      <svg width="70" height="70"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#central-macedonia"></use></svg>
+                        <span class="region-list__item-name">Central Macedonia</span>
+                      </a>
+                    </li>
+                    <li class="region-list__item">
+                      <a href="">
+                        <svg width="70" height="70"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#attica"></use></svg>
+                        <span class="region-list__item-name">Attica</span>
+                      </a>
+                    </li>
+                    <li class="region-list__item">
+                      <a href="">
+                        <svg width="70" height="70"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#central-greece"></use></svg>
+                        <span class="region-list__item-name">Central Greece</span>
+                      </a>
+                    </li>
+                    <li class="region-list__item">
+                      <a href="">
+                        <svg width="70" height="70"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#crete"></use></svg>
+                        <span class="region-list__item-name">Crete</span>
+                      </a>
+                    </li>
+                    <li class="region-list__item">
+                      <a href="">
+                        <svg width="70" height="70"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#epirus"></use></svg>
+                        <span class="region-list__item-name">Epirus</span>
+                      </a>
+                    </li>
+                    <li class="region-list__item">
+                      <a href="">
+                        <svg width="70" height="70"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ionian-islands"></use></svg>
+                        <span class="region-list__item-name">Ionian Islands </span>
+                      </a>
+                    </li>
+                    <li class="region-list__item">
+                      <a href="">
+                        <svg width="70" height="70"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#north-aegean"></use></svg>
+                        <span class="region-list__item-name">North Aegean</span>
+                      </a>
+                    </li>
+                    <li class="region-list__item">
+                      <a href="">
+                        <svg width="70" height="70"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#peloponnese"></use></svg>
+                        <span class="region-list__item-name">Peloponnese</span>
+                      </a>
+                    </li>
+                    <li class="region-list__item">
+                      <a href="">
+                        <svg width="70" height="70"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#south-aegean"></use></svg>
+                        <span class="region-list__item-name">South Aegean</span>
+                      </a>
+                    </li>
+                    <li class="region-list__item">
+                      <a href="">
+                        <svg width="70" height="70"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#thessaly"></use></svg>
+                        <span class="region-list__item-name">Thessaly</span>
+                      </a>
+                    </li>
+                    <li class="region-list__item">
+                      <a href="">
+                        <svg width="70" height="70"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#western-greece"></use></svg>
+                        <span class="region-list__item-name">Western Greece</span>
+                      </a>
+                    </li>
+                    <li class="region-list__item">
+                      <a href="">
+                        <svg width="70" height="70"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#western-macedonia"></use></svg>
+                        <span class="region-list__item-name">Western Macedonia</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+
+              <div class="subscribing  subscribing--users  layout-tabs__hide-lg">
+                <div class="subscribing__title">
+                  Join the community
+                </div>
+                <div class="subscribing__descr">
+                  Join to our community and start collect virtual draсhma today
+                </div>
+                <form class="subscribing__form">
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input  field-text__input--fz-small" type="email" placeholder="Type here your email">
+                    </span>
+                  </label>
+                  <button class="btn  btn--block">Join Community</button>
+                </form>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <section class="top-rated">
+          <h2 class="top-rated__title">Top Rated Properties for Sale</h2>
+          <p class="top-rated__descr">last added properties from our community</p>
+          <div class="top-rated__list-wrapper">
+            <div class="top-rated__list  top-rated__list--carousel  owl-carousel">
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": false})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": false})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": false})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": false})
+            </div>
+          </div>
+          <footer class="top-rated__footer">
+            <a href="" class="top-rated__more-link">+ More Properties for Sale</a>
+          </footer>
+        </section>
+
+        <section class="top-rated">
+          <h2 class="top-rated__title">Top Rated Properties for Rent</h2>
+          <p class="top-rated__descr">last added properties from our community</p>
+          <div class="top-rated__list-wrapper">
+            <div class="top-rated__list  top-rated__list--carousel  owl-carousel">
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": true})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": true})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-01.jpg", "perMo": true})
+              @@include('blocks/card/card.html', {"pictUrl": "img/demo-card-pict-02.jpg", "perMo": true})
+            </div>
+          </div>
+          <footer class="top-rated__footer">
+            <a href="" class="top-rated__more-link">+ More Properties for Rent</a>
+          </footer>
+        </section>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

@@ -18,6 +18,13 @@
     padding: 30px;
   }
 
+  &__main-input {
+
+    @media (max-width: ($screen-lg - 1)) {
+      border-right: 1px solid $gray-lightest !important;
+    }
+  }
+
   &__part {
     max-width: 150px;
     font-size: $font-size--small;
@@ -176,7 +183,7 @@
 
     @media (min-width: $screen-lg) {
       position: absolute;
-      z-index: 2;
+      z-index: 1;
       top: 0;
       height: 0;
       width: 0;
@@ -184,7 +191,8 @@
       opacity: 0;
       transition: opacity $transition-time;
 
-      .filter-wrapper--open-drop ~ .layout-tabs__tab & {
+      .filter-wrapper--open-drop ~ .layout-tabs__tab &,
+      .filter-wrapper--open-drop ~ & {
         width: auto;
         height: auto;
         right: 0;
@@ -193,5 +201,12 @@
         opacity: 0.85;
       }
     }
+  }
+
+
+
+
+  &--bg-white {
+    background-color: #fff;
   }
 }

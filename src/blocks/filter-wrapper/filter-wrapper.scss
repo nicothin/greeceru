@@ -3,6 +3,8 @@
 // Не пишите здесь другие селекторы.
 
 .filter-wrapper {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: row-reverse;
   background-color: $gray-ultra-lightest;
@@ -10,5 +12,9 @@
   &__inner {
     flex-basis: 100%;
     max-width: 1060px;
+  }
+
+  &--bg-white {
+    background-color: #fff;
   }
 }

@@ -1,0 +1,32 @@
+// В этом файле должны быть стили только для БЭМ-блока btn-group, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.btn-group {
+  display: flex;
+
+  .btn {
+    position: relative;
+    // flex-basis: 50%;
+    // max-width: 50%;
+
+    &:focus {
+      z-index: 1;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+      border-right: 0;
+    }
+
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}

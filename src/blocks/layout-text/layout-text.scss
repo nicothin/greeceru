@@ -3,6 +3,7 @@
 // Не пишите здесь другие селекторы.
 
 .layout-text {
+  border-bottom: 1px solid $gray-lightest;
 
   @media (min-width: $screen-lg) {
     display: flex;
@@ -16,10 +17,12 @@
   }
 
   &__main-inner {
+    position: relative;
     padding: 30px 15px 45px;
     flex-grow: 1;
     width: 100%;
     max-width: 940px;
+    clear: both;
 
     @media (min-width: $screen-xl) {
       padding-top: 50px;
@@ -31,6 +34,10 @@
       max-width: 1040px;
       padding-right: 130px;
     }
+
+    // &--has-filter {
+    //   padding-top: 78px;
+    // }
   }
 
   &__aside {
@@ -53,17 +60,5 @@
     @media (min-width: $screen-xl) {
       padding: 30px;
     }
-  }
-
-  &__h1 {
-    font-size: $font-size--h2;
-    font-weight: 500;
-    margin: 0 0 15px;
-  }
-
-  &__h2 {
-    font-size: ($font-size--h2 - 3);
-    font-weight: 400;
-    margin: 35px 0 20px;
   }
 }
