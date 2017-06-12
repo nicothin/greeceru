@@ -3037,6 +3037,18 @@ a.ui-state-default:hover, a.ui-state-default:focus {
 .card-map-wrap {
   position: absolute;
   transform: translateX(-50%); }
+.modal-map {
+  display: block !important;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  -webkit-overflow-scrolling: touch;
+  transition: opacity 0.3s; }
 @media (min-width: 480px){
   dd{
     margin-left: 1.8em; }
@@ -3465,8 +3477,6 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     justify-content: center;
     -ms-flex-align: center;
     align-items: center; }
-  .modal--map-location{
-    display: none !important; }
   .filter{
     box-shadow: none; }
   .filter__part--mobile-hide{
@@ -4200,6 +4210,33 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     height: auto;
     opacity: 1; }
   .card-map-wrap__item--hide-mobile{
-    display: none !important; } }
+    display: none !important; }
+  .modal-map-open .modal-map{
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    opacity: 1; }
+  .modal-map-open .modal-map .modal-map__backdrop{
+    position: fixed;
+    top: 56px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(28, 29, 32, 0.85);
+    animation: modal-backdrop-show 0.3s 1; }
+  .modal-map-open .modal-map .card-map{
+    position: relative;
+    top: 76px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100; }
+  .modal-map-open .modal-map .card-map:before, .modal-map-open .modal-map .card-map:after{
+    display: none; } }
 
 /*# sourceMappingURL=style.min.css.map */
