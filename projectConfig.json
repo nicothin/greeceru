@@ -55,7 +55,8 @@
     "subscribing": [],
     "layout-text": [],
     "aside-block": [],
-    "card-map-wrap": []
+    "card-map-wrap": [],
+    "modal-map": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

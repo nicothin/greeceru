@@ -336,13 +336,6 @@ $z-index-modal:               100 !default;
     }
   }
 
-  &--map-location {
-
-    @media (min-width: $screen-lg) {
-      display: none !important;
-    }
-  }
-
   &--mobile-view-screen-md {
 
     @media (max-width: ($screen-lg - 1)) {

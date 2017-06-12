@@ -1,0 +1,59 @@
+// В этом файле должны быть стили только для БЭМ-блока modal-map, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.modal-map {
+
+  $block-name:                &;
+
+  display: block !important;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-index-modal;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  -webkit-overflow-scrolling: touch;
+  transition: opacity $transition-time;
+
+  @media (max-width: ($screen-lg - 1)) {
+
+    .modal-map-open & {
+      overflow-x: hidden;
+      overflow-y: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: auto;
+      height: auto;
+      opacity: 1;
+
+      #{$block-name}__backdrop {
+        position: fixed;
+        top: $header-height;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: ($z-index-modal - 1);
+        background-color: rgba(#1c1d20, 0.85);
+        animation: modal-backdrop-show $transition-time 1;
+      }
+
+      .card-map {
+        position: relative;
+        top: ($header-height + 20);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: $z-index-modal;
+
+        &:before,
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
