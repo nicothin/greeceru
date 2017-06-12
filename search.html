@@ -1346,34 +1346,37 @@
 
           <div class="layout-tabs__tab  layout-tabs__tab--map" id="map-wrapper">
             <div class="layout-tabs__map" id="map"></div>
-            <article class="card-map" style="position: absolute; top: 1%; left: 50%;">
+            <div class="card-map-wrap" data-location-id="001" style="position: absolute; bottom: 70px; left: 40%;">
               <!-- ВНИМАНИЕ: я отцентровал блок по горизонтали, острие смотрит по горизонтали туда, куда указывает свойство left -->
-              <a href="#modal-share-???" class="card-map__share">Share property via email</a>
-              <div class="card-map__carousel  owl-carousel">
-                <div class="card-map__carousel-item">
-                  <img class="card-map__carousel-img" src="img/demo-card-pict-01.jpg" alt="location name">
+              <article class="card-map  card-map-wrap__item  card-map-wrap__item--hide-mobile">
+                <span class="close  close--sm  card-map__close" aria-label="Закрыть" data-card-map-toggle><span></span></span>
+                <a href="" class="card-map__share">Share property via email</a>
+                <div class="card-map__carousel  owl-carousel">
+                  <div class="card-map__carousel-item">
+                    <img class="card-map__carousel-img" src="img/demo-card-pict-01.jpg" alt="location name">
+                  </div>
+                  <div class="card-map__carousel-item">
+                    <img class="card-map__carousel-img" src="img/demo-card-pict-02.jpg" alt="location name">
+                  </div>
+                  <div class="card-map__carousel-item">
+                    <img class="card-map__carousel-img" src="img/post-pict-02.jpg" alt="location name">
+                  </div>
+                  <div class="card-map__carousel-item">
+                    <img class="card-map__carousel-img" src="img/post-pict-03.jpg" alt="location name">
+                  </div>
                 </div>
-                <div class="card-map__carousel-item">
-                  <img class="card-map__carousel-img" src="img/demo-card-pict-02.jpg" alt="location name">
+                <a href="" class="card-map__street-view">Street view</a>
+                <div class="card-map__text">
+                  <h3 class="card-map__title"><a href="">Delux VIP Studio with Jacuzzi Delux VIP Studio with Jacuzzi</a></h3>
+                  <p class="card-map__descr">1 bed, 2 bath’s, 93.5 sq.m 1 bed, 2 bath’s, 93.5 sq.m</p>
+                  <div class="card-map__price">€ 1 589 500</div>
                 </div>
-                <div class="card-map__carousel-item">
-                  <img class="card-map__carousel-img" src="img/post-pict-02.jpg" alt="location name">
-                </div>
-                <div class="card-map__carousel-item">
-                  <img class="card-map__carousel-img" src="img/post-pict-03.jpg" alt="location name">
-                </div>
-              </div>
-              <a href="" class="card-map__street-view">Street view</a>
-              <div class="card-map__text">
-                <h3 class="card-map__title"><a href="">Delux VIP Studio with Jacuzzi Delux VIP Studio with Jacuzzi</a></h3>
-                <p class="card-map__descr">1 bed, 2 bath’s, 93.5 sq.m 1 bed, 2 bath’s, 93.5 sq.m</p>
+                <a href="" class="card-map__details">View details</a>
+              </article>
+              <article class="card-map  card-map--micro  card-map-wrap__item  card-map-wrap__item--shown" data-card-map-toggle>
                 <div class="card-map__price">€ 1 589 500</div>
-              </div>
-              <a href="" class="card-map__details">View details</a>
-            </article>
-            <article class="card-map  card-map--micro" style="position: absolute; bottom: 60px; left: 70%;">
-              <div class="card-map__price">€ 1 589 500</div>
-            </article>
+              </article>
+            </div>
             <div class="pagination  pagination--mobile">
               <div class="pagination__text">72 properties for sale</div>
               <ul class="pagination__list">
@@ -1405,6 +1408,43 @@
 
     <div class="page__footer-wrapper"><!-- а нетути подвала в дизайне... --></div>
 
+  </div>
+
+  <div class="modal  modal--map-location  modal--mobile-view-screen-md" data-location-id-mobile="001" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" aria-label="Закрыть" data-modal-mobile-close><span></span></span>
+          <h4 class="modal__title">Delux VIP Studio with Jacuzzi</h4>
+        </div>
+        <div class="modal__body">
+          <div class="modal__card-wrap">
+            <a href="" class="card-map__share">Share property via email</a>
+            <div class="card-map__carousel  owl-carousel">
+              <div class="card-map__carousel-item">
+                <img class="card-map__carousel-img" src="img/demo-card-pict-01.jpg" alt="location name">
+              </div>
+              <div class="card-map__carousel-item">
+                <img class="card-map__carousel-img" src="img/demo-card-pict-02.jpg" alt="location name">
+              </div>
+              <div class="card-map__carousel-item">
+                <img class="card-map__carousel-img" src="img/post-pict-02.jpg" alt="location name">
+              </div>
+              <div class="card-map__carousel-item">
+                <img class="card-map__carousel-img" src="img/post-pict-03.jpg" alt="location name">
+              </div>
+            </div>
+            <a href="" class="card-map__street-view">Street view</a>
+            <div class="card-map__text">
+              <h3 class="card-map__title"><a href="">Delux VIP Studio with Jacuzzi Delux VIP Studio with Jacuzzi</a></h3>
+              <p class="card-map__descr">1 bed, 2 bath’s, 93.5 sq.m 1 bed, 2 bath’s, 93.5 sq.m</p>
+              <div class="card-map__price">€ 1 589 500</div>
+            </div>
+            <a href="" class="card-map__details">View details</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="js/script.min.js"></script>
 
