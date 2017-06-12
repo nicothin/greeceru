@@ -25,10 +25,6 @@
     flex-shrink: 1;
     min-width: 105px;
     color: $gray;
-
-    @media (min-width: $screen-lg) {
-      display: none;
-    }
   }
 
   &__options {
@@ -36,6 +32,10 @@
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+
+    @media (min-width: $screen-xl) {
+      justify-content: flex-end;
+    }
   }
 
   &__options-part {
@@ -49,6 +49,13 @@
         margin-left: 0;
       }
     }
+
+    &:last-child {
+
+      .field-drop-checkboxes {
+        margin-right: 0;
+      }
+    }
   }
 
   &__field-text {
@@ -56,7 +63,7 @@
     margin-right: 15px;
     color: $gray;
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-xl) {
       display: block;
     }
   }
