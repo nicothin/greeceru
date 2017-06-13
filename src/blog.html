@@ -23,7 +23,60 @@
           <div class="layout-text__main-only">
 
             <section class="blog">
+
               <h1 class="blog__title  page__h1">Portal Blog</h1>
+              <div class="blog__cats">
+                <div class="blog__cats-descr">All Categories</div>
+                <ul class="blog__cats-list">
+                  <li><a href="">Business</a></li>
+                  <li><a href="">Travel</a></li>
+                  <li><a href="">Life Style</a></li>
+                  <li><a href="">Portal News</a></li>
+                </ul>
+              </div>
+
+              <div class="blog__post-list">
+                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-01--lg.jpg", "accent": true, "modMobile": true})
+                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-02.jpg", "accent": false, "modMobile": true})
+                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-03.jpg", "accent": false, "modMobile": true})
+                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-02.jpg", "accent": false, "modMobile": true})
+                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-03.jpg", "accent": false, "modMobile": true})
+                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-02.jpg", "accent": false, "modMobile": true})
+                <div class="subscribing">
+                  <div class="subscribing__title">
+                    Join the community
+                  </div>
+                  <div class="subscribing__descr">
+                    Join to our community and start collect virtual draсhma today
+                  </div>
+                  <form class="subscribing__form">
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input  field-text__input--fz-small" type="email" placeholder="Type here your email">
+                      </span>
+                    </label>
+                    <button class="btn  btn--block">Join Community</button>
+                  </form>
+                </div>
+                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-03.jpg", "accent": false, "modMobile": true})
+                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-02.jpg", "accent": false, "modMobile": true})
+                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-03.jpg", "accent": false, "modMobile": true})
+                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-02.jpg", "accent": false, "modMobile": true})
+              </div>
+
+              <div class="pagination">
+                <div class="pagination__text">11 of 72 articles</div>
+                <ul class="pagination__list">
+                  <li><a href="" class="pagination__item"><span class="pagination__icon-left">←</span></a></li>
+                  <li><span class="pagination__item  pagination__item--active">1</span></li>
+                  <li><a href="" class="pagination__item">2</a></li>
+                  <li><a href="" class="pagination__item">3</a></li>
+                  <li><a href="" class="pagination__item">...</a></li>
+                  <li><a href="" class="pagination__item">8</a></li>
+                  <li><a href="" class="pagination__item"><span class="pagination__icon-right">→</span></a></li>
+                </ul>
+              </div>
+
             </section>
 
           </div>
