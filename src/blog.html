@@ -26,8 +26,8 @@
 
               <h1 class="blog__title  page__h1">Portal Blog</h1>
               <div class="blog__cats">
-                <div class="blog__cats-descr">All Categories</div>
                 <ul class="blog__cats-list">
+                  <li>All Categories</li>
                   <li><a href="">Business</a></li>
                   <li><a href="">Travel</a></li>
                   <li><a href="">Life Style</a></li>
@@ -35,33 +35,35 @@
                 </ul>
               </div>
 
-              <div class="blog__post-list">
-                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-01--lg.jpg", "addMods": "  post--accent  post--mobile"})
-                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-02.jpg", "addMods": "  post--mobile"})
-                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-03.jpg", "addMods": "  post--mobile"})
-                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-02.jpg", "addMods": "  post--mobile"})
-                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-03.jpg", "addMods": "  post--mobile"})
-                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-02.jpg", "addMods": "  post--mobile"})
-                <div class="subscribing">
-                  <div class="subscribing__title">
-                    Join the community
+              <div class="blog__post-list-wrap">
+                <div class="blog__post-list">
+                  @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-01--lg.jpg", "addMods": "  post--accent  post--mobile"})
+                  @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-02.jpg", "addMods": "  post--mobile"})
+                  @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-03.jpg", "addMods": "  post--mobile"})
+                  @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-02.jpg", "addMods": "  post--mobile"})
+                  @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-03.jpg", "addMods": "  post--mobile"})
+                  @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-02.jpg", "addMods": "  post--mobile"})
+                  <div class="subscribing">
+                    <div class="subscribing__title">
+                      Join the community
+                    </div>
+                    <div class="subscribing__descr">
+                      Join to our community and start collect virtual draсhma today
+                    </div>
+                    <form class="subscribing__form">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input  field-text__input--fz-small" type="email" placeholder="Type here your email">
+                        </span>
+                      </label>
+                      <button class="btn  btn--block">Join Community</button>
+                    </form>
                   </div>
-                  <div class="subscribing__descr">
-                    Join to our community and start collect virtual draсhma today
-                  </div>
-                  <form class="subscribing__form">
-                    <label class="field-text">
-                      <span class="field-text__input-wrap">
-                        <input class="field-text__input  field-text__input--fz-small" type="email" placeholder="Type here your email">
-                      </span>
-                    </label>
-                    <button class="btn  btn--block">Join Community</button>
-                  </form>
+                  @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-03.jpg", "addMods": "  post--mobile"})
+                  @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-02.jpg", "addMods": "  post--mobile"})
+                  @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-03.jpg", "addMods": "  post--mobile"})
+                  @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-02.jpg", "addMods": "  post--mobile"})
                 </div>
-                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-03.jpg", "addMods": "  post--mobile"})
-                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-02.jpg", "addMods": "  post--mobile"})
-                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-03.jpg", "addMods": "  post--mobile"})
-                @@include('blocks/post/post.html', {"imgUrl": "img/post-pict-02.jpg", "addMods": "  post--mobile"})
               </div>
 
               <div class="pagination">
