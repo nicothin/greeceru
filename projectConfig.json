@@ -62,7 +62,8 @@
     "gallery-content": [],
     "pseudolink": [],
     "region": [],
-    "region-list": []
+    "region-list": [],
+    "embed-responsive": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
