@@ -1,7 +1,43 @@
-// В этом файле должны быть стили только для БЭМ-блока blog, его элементов, 
+// В этом файле должны быть стили только для БЭМ-блока blog, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Не пишите здесь другие селекторы.
 
 .blog {
-  
+  padding: 30px 15px;
+
+  &__cats {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__cats-descr {
+    color: $gray;
+    width: 100%;
+
+    @media (min-width: $screen-md) {
+      width: auto;
+    }
+  }
+
+  &__cats-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+
+      &:not(:last-child) {
+
+        &:after {
+          content: '|';
+          color: $gray;
+          display: inline-block;
+          margin: 0 0.6em;
+        }
+      }
+    }
+  }
 }
