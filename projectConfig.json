@@ -63,7 +63,8 @@
     "pseudolink": [],
     "region": [],
     "region-list": [],
-    "embed-responsive": []
+    "embed-responsive": [],
+    "blog": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
