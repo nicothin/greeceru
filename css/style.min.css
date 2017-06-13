@@ -208,6 +208,10 @@
     margin: 35px 0 20px; }
 .page__accent-text {
     margin-top: 30px; }
+.page__accent-text:after {
+      content: ' ';
+      display: table;
+      clear: both; }
 .page__figure {
     display: block;
     width: 100%;
@@ -276,18 +280,6 @@ body {
   line-height: 1.429em;
   color: #31353f;
   letter-spacing: 0.02em; }
-h1 {
-  font-size: 32px; }
-h2 {
-  font-size: 24px; }
-h3 {
-  font-size: 16px; }
-h4 {
-  font-size: 16px; }
-h5 {
-  font-size: 1em; }
-h6 {
-  font-size: 1em; }
 h1,
 h2,
 h3,
@@ -295,7 +287,7 @@ h4,
 h5,
 h6 {
   font-family: "San Francisco", -apple-system, BlinkMacSystemFont, "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.4;
   color: currentColor; }
 h1,
@@ -308,6 +300,22 @@ h5,
 h6 {
   margin-top: 0.7145em;
   margin-bottom: 0.7145em; }
+h1 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 15px; }
+h2 {
+  font-size: 21px;
+  font-weight: 400;
+  margin: 35px 0 20px; }
+h3 {
+  font-size: 16px; }
+h4 {
+  font-size: 16px; }
+h5 {
+  font-size: 1em; }
+h6 {
+  font-size: 1em; }
 p,
 ul,
 ol,
@@ -2717,7 +2725,7 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     width: 100%;
     height: calc(100% - 52px); }
 .layout-tabs__text-wrapper {
-    padding: 15px;
+    padding: 15px 15px 30px;
     width: 100%; }
 .card-map {
   width: 218px;
@@ -3240,6 +3248,31 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     color: #477afb; }
 .region-list__item--active svg {
     fill: #95B3FB; }
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden; }
+.embed-responsive::before {
+    content: "";
+    display: block;
+    padding-top: 75%; }
+.embed-responsive iframe,
+  .embed-responsive embed,
+  .embed-responsive object,
+  .embed-responsive video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; }
+.embed-responsive--16-9::before {
+    padding-top: 56.25%; }
+.embed-responsive--1-1::before {
+    padding-top: 100%; }
 @media (min-width: 480px){
   dd{
     margin-left: 1.8em; }
