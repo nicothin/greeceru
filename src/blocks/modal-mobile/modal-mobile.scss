@@ -67,6 +67,8 @@
       }
     }
 
+
+
     &--open {
       overflow-x: hidden;
       overflow-y: auto;
@@ -77,6 +79,13 @@
       width: auto;
       height: auto;
       opacity: 1;
+    }
+
+    &--has-bottom-btns {
+
+      #{$block-name}__content {
+        padding-bottom: 40px;
+      }
     }
   }
 }
