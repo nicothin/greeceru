@@ -3406,6 +3406,9 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     padding: 9px 32px 9px 14px; }
   .property-owner__item-btn{
     min-width: 288px; }
+  .top-rated__list .card:nth-child(n + 5),
+      .top-rated__list .question:nth-child(n + 5){
+    display: none; }
   .blog-latest__list-wrap{
     margin: auto;
     max-width: 750px; }
@@ -4103,6 +4106,9 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     min-width: 546px; }
   .property-owner__item-descr{
     margin-bottom: 26px; }
+  .top-rated__list{
+    max-width: 800px;
+    margin: auto; }
   .feedback__slider{
     max-width: 1120px;
     margin-left: auto;
@@ -4243,6 +4249,15 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     flex-basis: calc(66.6666% - 30px);
     max-width: calc(66.6666% - 30px); } }
 @media (min-width: 1440px){
+  .top-rated__list{
+    max-width: 100%; }
+  .top-rated__list .card:nth-child(n + 5),
+        .top-rated__list .question:nth-child(n + 5){
+    display: -ms-flexbox;
+    display: flex; }
+  .top-rated__list .card:nth-child(n + 7),
+        .top-rated__list .question:nth-child(n + 7){
+    display: none; }
   .team__list{
     margin-left: 0; }
   .team__list-item:not(:last-child){
@@ -4288,6 +4303,10 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     display: inline; }
   .top-rated__list{
     margin: 0 -15px; }
+  .top-rated__list .card:nth-child(n + 7),
+        .top-rated__list .question:nth-child(n + 7){
+    display: -ms-flexbox;
+    display: flex; }
   .feedback__slider-and-info{
     display: -ms-flexbox;
     display: flex;
