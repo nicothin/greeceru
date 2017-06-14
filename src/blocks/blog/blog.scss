@@ -40,11 +40,14 @@
   &__post-list-wrap {
 
     @media (min-width: $screen-md) {
-      max-width: 750px;
       margin: auto;
     }
 
-    @media (min-width: $screen-osx) {
+    @media (min-width: $screen-lg) {
+      margin: 0;
+    }
+
+    @media (min-width: $screen-xl) {
       max-width: 100%;
     }
   }
@@ -73,7 +76,7 @@
       }
     }
 
-    @media (min-width: $screen-osx) {
+    @media (min-width: $screen-xl) {
       .post,
       .subscribing {
         flex-basis: calc(33.3333% - 30px);
@@ -111,6 +114,12 @@
       max-width: 450px;
 
       @media (min-width: $screen-sm) and (max-width: ($screen-md - 1)) {
+        padding-left: 90px;
+        padding-right: 90px;
+        padding-bottom: 56px;
+      }
+
+      @media (min-width: $screen-lg) and (max-width: ($screen-xl - 1)) {
         padding-left: 90px;
         padding-right: 90px;
         padding-bottom: 56px;
