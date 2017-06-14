@@ -37,14 +37,6 @@
   &__list-wrapper {
     width: 100%;
     flex-basis: 100%;
-    // max-width: $screen-xxl;
-    // overflow-x: auto;
-    // margin: 0 -15px;
-    // margin-bottom: 20px;
-
-    // @media (min-width: $screen-xxl) {
-    //   overflow-x: hidden;
-    // }
   }
 
   &__list {
@@ -77,6 +69,16 @@
       }
     }
 
+    @media (min-width: $screen-md) {
+
+      .card,
+      .question {
+
+        &:nth-child(n + 5) {
+          display: none;
+        }
+      }
+    }
 
     @media (min-width: $screen-lg) {
       display: flex;
@@ -89,21 +91,38 @@
       }
     }
 
-  //   // @media (min-width: $screen-osx) {
-  //   //   justify-content: flex-start;
-  //   //   width: 1170px;
-  //   //   margin: auto;
-  //   // }
+    @media (min-width: $screen-xl) {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    @media (min-width: $screen-osx) {
+      max-width: 100%;
+
+      .card,
+      .question {
+
+        &:nth-child(n + 5) {
+          display: flex;
+        }
+
+        &:nth-child(n + 7) {
+          display: none;
+        }
+      }
+    }
 
     @media (min-width: $screen-xxl) {
       margin: 0 -15px;
-    }
 
-    // .card,
-    // .question {
-    //   flex-shrink: 0;
-    //   margin: 0 15px;
-    // }
+      .card,
+      .question {
+
+        &:nth-child(n + 7) {
+          display: flex;
+        }
+      }
+    }
   }
 
   &__footer {
@@ -117,8 +136,6 @@
   &__more-link {
     font-weight: 500;
   }
-
-
 
 
 
