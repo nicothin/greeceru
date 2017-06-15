@@ -3523,7 +3523,7 @@ a.ui-state-default:hover, a.ui-state-default:focus {
   .modal__dialog{
     position: absolute;
     left: 50%;
-    top: 56px;
+    top: 100px;
     transform: translate(-50%, 0);
     width: 360px;
     height: auto;
