@@ -64,7 +64,9 @@
     "region": [],
     "region-list": [],
     "embed-responsive": [],
-    "blog": []
+    "blog": [],
+    "faq-section": [],
+    "faq": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

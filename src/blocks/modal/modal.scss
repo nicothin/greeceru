@@ -336,6 +336,16 @@ $z-index-modal:               100 !default;
     }
   }
 
+  &--video {
+
+    @media (min-width: $screen-md) {
+
+      #{$block-name}__body {
+        padding: 0;
+      }
+    }
+  }
+
   &--mobile-view-screen-md {
 
     @media (max-width: ($screen-lg - 1)) {

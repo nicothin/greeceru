@@ -19,6 +19,10 @@
     min-width: 67%;
     display: flex;
     justify-content: flex-end;
+
+    li {
+      margin-bottom: 4px;
+    }
   }
 
   &__main-inner {

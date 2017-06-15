@@ -1,0 +1,37 @@
+// В этом файле должны быть стили только для БЭМ-блока faq, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.faq {
+
+  &__links-sections {
+    margin-top: 34px;
+  }
+
+  &__links-section {
+    border-bottom: 1px solid $gray-lightest;
+    padding: 35px 0;
+
+    &:first-child {
+      border-top: 1px solid $gray-lightest;
+    }
+  }
+
+  &__links-title {
+    display: block;
+    font-size: $font-size--h3;
+    font-weight: 500;
+    margin: 0 0 10px;
+    padding: 0;
+  }
+
+  &__links-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}

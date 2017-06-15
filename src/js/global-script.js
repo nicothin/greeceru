@@ -145,4 +145,17 @@ $( document ).ready(function() {
     autoHeight: true,
   });
 
+  // плавный скролл для якорных ссылок
+  $('a[href^="#"]:not([data-toggle])').on('click',function(e){
+    var target_position = $(this.hash).offset().top - 56; // 56 — высота хедера, причитого к верху вьюпорта
+    $('body,html').animate({'scrollTop':target_position},350);
+  });
+
+  // оставнока воспроизведения видео при закрытии модального окна
+  $('.modal--video').on('hidden.bs.modal', function (e) {
+    var src = $(this).find('iframe').attr('src');
+    $(this).find('iframe').attr('src', '');
+    $(this).find('iframe').attr('src', src);
+  });
+
 });
