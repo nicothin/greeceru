@@ -32,7 +32,7 @@
     padding: 30px 30px 25px;
     background-color: #fff;
     border-bottom-left-radius: $border-radius;
-    border-bottom-right-radius: $border-radius
+    border-bottom-right-radius: $border-radius;
   }
 
   &--regions-list {
@@ -50,6 +50,25 @@
       @media (max-width: ($screen-lg - 1)) {
         padding: 0 15px;
       }
+    }
+  }
+
+  &--blog-posts {
+
+    #{$block-name}__content {
+      padding: 0;
+    }
+
+    .post {
+      margin-bottom: 0;
+
+      &:not(:last-child) .post__text {
+        border-bottom: 1px solid $gray-lightest;
+      }
+    }
+
+    .post__text {
+      border: 0;
     }
   }
 }

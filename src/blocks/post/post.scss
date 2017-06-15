@@ -259,4 +259,11 @@
       }
     }
   }
+
+  &--short {
+
+    @media (min-width: $screen-md) {
+      width: 100%;
+    }
+  }
 }
