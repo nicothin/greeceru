@@ -81,7 +81,8 @@ $z-index-modal:               100 !default;
     @media (min-width: $screen-md) {
       position: absolute;
       left: 50%;
-      top: $header-height;
+      // top: $header-height;
+      top: 100px;
       transform: translate(-50%, 0);
       width: 360px;
       height: auto;
