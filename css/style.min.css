@@ -309,9 +309,11 @@ h2 {
   font-weight: 400;
   margin: 35px 0 20px; }
 h3 {
-  font-size: 16px; }
+  font-size: 14px;
+  font-weight: 500;
+  margin: 22px 0 8px; }
 h4 {
-  font-size: 16px; }
+  font-size: 14px; }
 h5 {
   font-size: 1em; }
 h6 {
@@ -3048,6 +3050,8 @@ a.ui-state-default:hover, a.ui-state-default:focus {
   display: flex;
   -ms-flex-pack: end;
       justify-content: flex-end; }
+.layout-text__main li {
+    margin-bottom: 4px; }
 .layout-text__main-inner {
   position: relative;
   padding: 30px 15px 45px;
@@ -3084,6 +3088,14 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     border-bottom-right-radius: 2px; }
 .aside-block--regions-list .aside-block__content {
     padding: 15px 30px; }
+.aside-block--blog-posts .aside-block__content {
+    padding: 0; }
+.aside-block--blog-posts .post {
+    margin-bottom: 0; }
+.aside-block--blog-posts .post:not(:last-child) .post__text {
+      border-bottom: 1px solid #e6e6e6; }
+.aside-block--blog-posts .post__text {
+    border: 0; }
 .card-map-wrap {
   position: absolute;
   transform: translateX(-50%); }
@@ -3309,6 +3321,28 @@ a.ui-state-default:hover, a.ui-state-default:focus {
       margin-bottom: 15px;
       width: 100%;
       max-width: 450px; }
+.faq-section__anchor {
+  position: relative;
+  top: -10px; }
+.faq__links-sections {
+  margin-top: 34px; }
+.faq__links-section {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 35px 0; }
+.faq__links-section:first-child {
+    border-top: 1px solid #e6e6e6; }
+.faq__links-title {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 10px;
+  padding: 0; }
+.faq__links-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+.faq__links-list li:not(:last-child) {
+    margin-bottom: 8px; }
 @media (min-width: 480px){
   dd{
     margin-left: 1.8em; }
@@ -3480,6 +3514,8 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     overflow-y: auto;
     border-radius: 0;
     border-bottom-left-radius: 2px; }
+  .post--short{
+    width: 100%; }
   .modal{
     background: transparent; }
   .modal-open .modal.in{
@@ -3550,6 +3586,8 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     width: 560px; }
   .modal-open .modal--lg.in .modal__dialog{
     width: 680px; }
+  .modal--video .modal__body{
+    padding: 0; }
   .modal-backdrop{
     background-color: rgba(28, 29, 32, 0.85);
     animation: modal-backdrop-show 0.3s 1; }
