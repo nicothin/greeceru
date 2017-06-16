@@ -262,6 +262,10 @@
 
   &--short {
 
+    #{$block-name}__title {
+      margin-bottom: 15px;
+    }
+
     @media (min-width: $screen-md) {
       width: 100%;
     }

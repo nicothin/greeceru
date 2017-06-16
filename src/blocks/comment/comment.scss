@@ -1,0 +1,101 @@
+// В этом файле должны быть стили только для БЭМ-блока comment, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.comment {
+
+  $block-name:                &;
+
+  & > & {
+    padding-left: 20px;
+
+    @media (min-width: $screen-md) {
+      padding-left: 45px;
+    }
+  }
+
+  & > & > & {
+    padding-left: 0;
+  }
+
+  &__header {
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  &__body {
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid $gray-lightest;
+  }
+
+  &__avatar-wrap {
+    display: block;
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    margin-right: 20px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  &__user-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__username {
+    font-size: $font-size;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+  }
+
+  &__date {
+    font-size: $font-size--small;
+    color: $gray;
+  }
+
+  &__reply-link {
+    position: relative;
+    margin-top: 10px;
+    padding-left: 20px;
+
+    font-size: $font-size--small;
+
+    svg {
+      position: absolute;
+      top: 0.1em;
+      left: 0;
+      fill: $color-main;
+    }
+  }
+
+
+
+  &--form {
+
+    #{$block-name}__avatar-wrap {
+      display: none;
+
+      @media (min-width: $screen-lg) {
+        display: block;
+      }
+    }
+  }
+
+  #{$block-name}__form-inner {
+    display: flex;
+  }
+
+  #{$block-name}__field-wrapper {
+    flex-grow: 1;
+  }
+}

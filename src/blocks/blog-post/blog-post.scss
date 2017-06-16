@@ -1,0 +1,40 @@
+// В этом файле должны быть стили только для БЭМ-блока blog-post, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.blog-post {
+
+  &__date {
+    color: $gray;
+  }
+
+  &__category {
+    color: $gray;
+
+    &:before {
+      content: '•';
+      display: inline-block;
+      margin-left: 0.2em;
+      margin-right: 0.5em;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-main--accent;
+    }
+  }
+
+  &__main-pict-wrap {
+    margin-bottom: 20px;
+
+    img {
+      width: 100%;
+      min-height: 410px;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    padding-bottom: 5px;
+  }
+}

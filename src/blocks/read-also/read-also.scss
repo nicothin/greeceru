@@ -1,0 +1,64 @@
+// В этом файле должны быть стили только для БЭМ-блока read-also, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.read-also {
+  margin: 35px 0 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $gray-lightest;
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: $font-size;
+
+    @media (min-width: $screen-md) {
+      width: 200px;
+      min-width: 200px;
+      padding-right: 15px;
+    }
+
+    @media (min-width: $screen-osx) {
+      width: 260px;
+      min-width: 260px;
+    }
+  }
+
+  &__content {
+
+    @media (min-width: $screen-md) {
+      flex-grow: 1;
+    }
+  }
+
+  &__item {
+  }
+
+  &__item-title {
+    margin: 20px 0 15px;
+    padding: 0;
+    font-weight: 400;
+    font-size: $font-size--small;
+    color: $gray;
+
+    @media (min-width: $screen-md) {
+      margin-top: 0;
+    }
+  }
+
+  &__list {
+    margin: 0 0 30px;
+    padding: 0;
+    list-style: none;
+
+    li:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}

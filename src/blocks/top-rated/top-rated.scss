@@ -97,7 +97,7 @@
     }
 
     @media (min-width: $screen-osx) {
-      max-width: 100%;
+      max-width: none;
 
       .card,
       .question {

@@ -3,6 +3,9 @@
 // Не пишите здесь другие селекторы.
 
 .social-contacts {
+
+  $block-name:                &;
+
   padding: 10px 0 15px;
   border-top: 1px solid $gray-lightest;
   border-bottom: 1px solid $gray-lightest;
@@ -42,6 +45,54 @@
 
     @media (min-width: $screen-md) {
       margin-bottom: 0;
+    }
+  }
+
+
+
+  &--share {
+    margin-top: 15px;
+    margin-bottom: 25px;
+
+    .social-links li:not(:first-child) .social-links__item {
+      margin-left: 20px;
+
+      @media (min-width: $screen-md) {
+        margin-left: 10px;
+      }
+    }
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 10px 0;
+    }
+
+    #{$block-name}__right {
+
+      @media (min-width: $screen-sm) {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .social-links__item {
+        margin-right: 0;
+      }
+    }
+
+    #{$block-name}__right-text {
+      margin-bottom: 5px;
+      margin-right: 10px;
+      font-size: $font-size;
+
+      @media (min-width: $screen-sm) {
+        margin-bottom: 0;
+      }
+
+      @media (min-width: $screen-md) {
+        margin-right: 0;
+      }
     }
   }
 }
