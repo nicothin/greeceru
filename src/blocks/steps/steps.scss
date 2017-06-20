@@ -1,0 +1,38 @@
+// В этом файле должны быть стили только для БЭМ-блока steps, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    font-size: $font-size--small;
+
+    &:not(:last-child) {
+      margin-bottom: 45px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    &--disabled {
+      color: $gray;
+    }
+  }
+
+  &__num {
+    display: block;
+    margin-bottom: 10px;
+    font-size: $font-size--small;
+    color: $gray;
+  }
+
+  &__title {}
+
+  &__action {
+    margin-top: 18px;
+  }
+}

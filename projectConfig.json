@@ -73,7 +73,9 @@
     "read-also": [],
     "pay-consult": [],
     "alert": [],
-    "form-line": []
+    "form-line": [],
+    "steps": [],
+    "list-property": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

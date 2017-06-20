@@ -25,8 +25,33 @@
 
               <article class="list-property">
 
-                <h1 class="page__h1">List your property</h1>
-                <p>Our portal will help you to sale or rent properties in a few days.<br>Just follow a few simple steps.</p>
+                <header class="list-property__header">
+                  <h1 class="page__h1">List your property</h1>
+                  <p>Our portal will help you to sale or rent properties in a few days.<br>Just follow a few simple stepss.</p>
+                </header>
+
+                <section class="list-property__section">
+                  <ol class="steps">
+                    <li class="steps__item">
+                      <span class="steps__num">Step 1</span>
+                      <div class="steps__title  list-property__subtitle">Property type & additional services</div>
+                      <p>Choose a property type and tariff plan for listing</p>
+                      <div class="steps__action">
+                        <a href="" class="btn  btn--white  btn--wide">Get Started</a>
+                      </div>
+                    </li>
+                    <li class="steps__item  steps__item--disabled">
+                      <span class="steps__num">Step 2</span>
+                      <div class="steps__title  list-property__subtitle">Add property</div>
+                      <p>Locate property at map, upload photos and describe</p>
+                    </li>
+                    <li class="steps__item  steps__item--disabled">
+                      <span class="steps__num">Step 3</span>
+                      <div class="steps__title  list-property__subtitle">Confirmation and payment</div>
+                      <p>Save property and list it at our portal</p>
+                    </li>
+                  </ol>
+                </section>
 
               </article>
 
@@ -39,9 +64,12 @@
 
               <section class="aside-block  aside-block--blog-posts">
                 <div class="aside-block__header">
-                  <h3 class="aside-block__title">Related articles</h3>
+                  <h3 class="aside-block__title">User FAQ</h3>
                 </div>
                 <div class="aside-block__content">
+                  @@include('blocks/post/post--ultra-short.html', {"addMods": "  post--short"})
+                  @@include('blocks/post/post--ultra-short.html', {"addMods": "  post--short"})
+                  @@include('blocks/post/post--ultra-short.html', {"addMods": "  post--short"})
                   @@include('blocks/post/post--ultra-short.html', {"addMods": "  post--short"})
                 </div>
               </section>
