@@ -44,6 +44,11 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+
+    // Привет, днище 11й версии!
+    @media all and (-ms-high-contrast:none) {
+      min-height: calc(100vh - #{$header-height});
+    }
   }
 
   &__footer-wrapper {
