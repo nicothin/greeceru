@@ -3,6 +3,7 @@
 // Не пишите здесь другие селекторы.
 
 .layout-text {
+  flex-grow: 1;
 
   @media (min-width: $screen-lg) {
     display: flex;
