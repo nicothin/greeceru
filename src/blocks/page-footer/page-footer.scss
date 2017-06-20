@@ -226,4 +226,23 @@
       color: $gray;
     }
   }
+
+
+
+  &--simple {
+    display: none;
+    padding-left: 15px;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 30px;
+    }
+
+    #{$block-name}__copyright {
+      margin-bottom: 0;
+    }
+  }
 }
