@@ -75,7 +75,8 @@
     "alert": [],
     "form-line": [],
     "steps": [],
-    "list-property": []
+    "list-property": [],
+    "order-short-list": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

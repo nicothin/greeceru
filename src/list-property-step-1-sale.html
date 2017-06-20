@@ -32,9 +32,9 @@
                 <section class="list-property__section">
                   <div class="list-property__subtitle">Would you like to:</div>
                   <div class="list-property__select-type">
-                    <a href="list-property-step-1-sale.html" class="btn  btn--white  btn--wide">Sell Property</a>
+                    <span class="btn  btn--wide">Sell Property</span>
                     <span class="list-property__select-type-or">or</span>
-                    <a href="list-property-step-1-sale.html" class="btn  btn--white  btn--wide">Rent Out Property</a>
+                    <a href="" class="btn  btn--white  btn--wide">Rent Out Property</a>
                   </div>
                 </section>
 
@@ -46,6 +46,8 @@
 
           <div class="layout-text__aside">
             <aside class="layout-text__aside-inner" role="complementary">
+
+              @@include('blocks/list-property/list-property__aside-price.html')
 
               @@include('blocks/list-property/list-property__aside-text.html')
 
@@ -61,10 +63,19 @@
                     Back
                   </a>
                 </div>
-                <div class="layout-text__btns-desktop-right"></div>
+                <div class="layout-text__btns-desktop-right">
+                  <a href="" class="btn  btn--white  btn--wide">Proceed</a>
+                </div>
                 <div class="layout-text__btns-desktop-shadow"></div>
               </div>
             </div>
+          </div>
+
+          <div class="layout-text__btns-mobile">
+            <!-- <span class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--gray  layout-text__btns-mobile-item--disabled">Your order</span> -->
+            <a href="#your-order" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--gray" data-toggle="modal">Your order</a>
+            <!-- <span class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--disabled">Proceed</span> -->
+            <a href="" class="layout-text__btns-mobile-item">Proceed</a>
           </div>
 
         </div>

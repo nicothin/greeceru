@@ -1,0 +1,90 @@
+// В этом файле должны быть стили только для БЭМ-блока order-short-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.order-short-list {
+
+  &__item {
+    position: relative;
+
+    &:not(:first-child) {
+      padding-top: 30px;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 30px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        background-image: linear-gradient(to right, #D3D6DE 1px, #8991A7 2px, #D3D6DE 3px, #fff 4px, #fff 9px);
+        background-size: 10px 1px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 7px;
+    font-size: $font-size;
+    font-weight: 400;
+    color: $gray;
+  }
+
+  &__sublist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__sublist-item {
+    display: flex;
+
+    &--icon {
+      margin: 12px 0 15px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__name {
+    flex-grow: 1;
+  }
+
+  &__remove {
+    flex-shrink: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    padding: 0;
+    border-radius: 50%;
+    border: 2px solid $gray-lightest;
+
+    .close {
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  &__price {
+    white-space: nowrap;
+  }
+
+  &__total-wrapper {
+    display: flex;
+    font-size: $font-size--h3;
+    font-weight: 500;
+    padding-top: 40px;
+  }
+}

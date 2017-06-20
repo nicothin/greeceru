@@ -98,6 +98,11 @@ $main-menu-mobile-width:      334px !default;
         border-left: 1px solid $gray-lightest;
       }
 
+      #{$block-name}__pseudolink--phone {
+        padding: 18px 31px 18px 30px;
+        margin-left: 0;
+      }
+
       #{$block-name}__pseudolink--descktop-hide {
         display: none;
       }
@@ -159,6 +164,14 @@ $main-menu-mobile-width:      334px !default;
           height: auto;
           padding: 4px 0 !important;
           box-shadow: $shadow;
+        }
+
+        #{$block-name}__lvl--contacts {
+          padding: 18px 30px 10px 30px !important;
+
+          @media (max-width: ($screen-xl - 1)) {
+            display: none !important;
+          }
         }
       }
     }

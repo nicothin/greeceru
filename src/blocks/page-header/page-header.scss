@@ -95,7 +95,7 @@
 
   &__steps {
     display: none;
-    max-height: 40px;
+    max-height: 45px;
     overflow: hidden;
     padding: 0 30px;
     flex-grow: 1;
@@ -113,7 +113,11 @@
   }
 
   &__steps-item {
+    display: inline-block;
     white-space: nowrap;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
 
     &:not(:last-child) {
 
