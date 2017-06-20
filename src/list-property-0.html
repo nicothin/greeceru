@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>greece_ru</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="page__main-content" role="main">
+
+        <div class="layout-text">
+
+          <div class="layout-text__main">
+            <div class="layout-text__main-inner">
+
+              <article class="list-property">
+
+                <h1 class="page__h1">List your property</h1>
+                <p>Our portal will help you to sale or rent properties in a few days.<br>Just follow a few simple steps.</p>
+
+              </article>
+
+            </div>
+
+          </div>
+
+          <div class="layout-text__aside">
+            <aside class="layout-text__aside-inner" role="complementary">
+
+              <section class="aside-block  aside-block--blog-posts">
+                <div class="aside-block__header">
+                  <h3 class="aside-block__title">Related articles</h3>
+                </div>
+                <div class="aside-block__content">
+                  @@include('blocks/post/post--ultra-short.html', {"addMods": "  post--short"})
+                </div>
+              </section>
+
+            </aside>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

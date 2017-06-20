@@ -1,0 +1,26 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/post/post.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+-->
+
+<article class="post@@addMods">
+  <div class="post__text">
+    <header class="post__header">
+      <h3 class="post__title">
+        <a href="blog-post.html">Information for sale sale by owner</a>
+      </h3>
+    </header>
+    <footer class="post__footer">
+      <a href="blog-post.html" class="post__more-link">
+        Read
+        <svg class="post__more-link-icon" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+      </a>
+    </footer>
+  </div>
+</article>
