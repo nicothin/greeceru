@@ -1,0 +1,72 @@
+// В этом файле должны быть стили только для БЭМ-блока form-line, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.form-line {
+  margin-top: 35px;
+  margin-bottom: 35px;
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  @media (min-width: $screen-osx) {
+    flex-wrap: nowrap;
+  }
+
+  &__part {
+    margin-bottom: 35px;
+
+    @media (min-width: $screen-md) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @media (min-width: $screen-osx) {
+      max-width: 25%;
+    }
+
+    &--full-line {
+
+      @media (min-width: $screen-lg) {
+        flex-basis: 100%;
+      }
+
+    //   @media (min-width: $screen-osx) {
+    //     flex-basis: auto;
+    //     max-width: 25%;
+    //   }
+    }
+  }
+
+  &__price {
+    font-size: 21px; // нет переменной
+    padding-bottom: 5px;
+    margin-bottom: 35px;
+
+    @media (min-width: $screen-md) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @media (min-width: $screen-osx) {
+      max-width: 25%;
+    }
+
+    b {
+      display: inline-block;
+      margin-left: 0.2em;
+      margin-right: 0.2em;
+      font-weight: 400;
+    }
+
+    small {
+      font-size: $font-size--small;
+      white-space: nowrap;
+    }
+  }
+}

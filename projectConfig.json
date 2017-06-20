@@ -70,7 +70,10 @@
     "blog-post": [],
     "comments": [],
     "comment": [],
-    "read-also": []
+    "read-also": [],
+    "pay-consult": [],
+    "alert": [],
+    "form-line": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

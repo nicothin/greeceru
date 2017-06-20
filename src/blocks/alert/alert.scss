@@ -1,0 +1,44 @@
+// В этом файле должны быть стили только для БЭМ-блока alert, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.alert {
+  margin: 35px 0;
+  padding: 20px 20px 20px 48px;
+  background-color: $color-main--ultralight;
+  border: 1px solid $color-main;
+  border-radius: $border-radius;
+
+  @media (min-width: $screen-xl) {
+    padding-right: 48px;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: $font-size;
+    font-weight: 500;
+    color: $text-color;
+
+    &--icon-info {
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -30px;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background-image: svg-load('../blocks/alert/img_to_bg/icon-info.svg');
+      }
+    }
+  }
+
+  &__small {
+    margin-top: 0.3em;
+    font-size: $font-size--small;
+    line-height: $line-height;
+  }
+}

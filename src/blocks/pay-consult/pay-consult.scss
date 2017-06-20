@@ -1,0 +1,20 @@
+// В этом файле должны быть стили только для БЭМ-блока pay-consult, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.pay-consult {
+
+  .alert {
+    margin-bottom: 15px;
+  }
+
+  .form-line {
+    margin-bottom: 0;
+  }
+
+  &__descr {
+    font-size: $font-size--small;
+    line-height: $line-height;
+    color: $gray;
+  }
+}
