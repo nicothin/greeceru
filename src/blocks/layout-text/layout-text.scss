@@ -198,7 +198,8 @@
 
   &__btns-back {
     display: inline-block;
-    padding: 5px 10px 5px 0;
+    padding: 0 10px 0 0;
+    line-height: 40px;
     color: $gray;
 
     &:hover,
