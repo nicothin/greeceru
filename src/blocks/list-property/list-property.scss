@@ -29,10 +29,18 @@
   }
 
   &__select-type {
-    margin: 20px 0;
+    margin: 20px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    & > * {
+      margin-bottom: 20px;
+    }
   }
 
   &__select-type-or {
-    margin: 0 1em;
+    margin-left: 1em;
+    margin-right: 1em;
   }
 }

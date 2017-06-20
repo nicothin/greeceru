@@ -24,6 +24,10 @@
     li {
       margin-bottom: 4px;
     }
+
+    &--has-desktop-bottom-btns {
+      padding-bottom: 84px;
+    }
   }
 
   &__main-inner {
@@ -70,6 +74,144 @@
 
     @media (min-width: $screen-xl) {
       padding: 30px;
+    }
+  }
+
+  &__btns-desktop {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 67%;
+    }
+
+    @media (min-width: $screen-xl) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__btns-desktop-pseudocontent {
+    display: block;
+    width: 100%;
+    padding: 0 15px;
+    // background-color: rgba;
+
+    @media (min-width: $screen-xl) {
+      max-width: 940px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      max-width: 1040px;
+      padding-right: 130px;
+    }
+  }
+
+  &__btns-desktop-inner {
+    position: relative;
+    display: flex;
+    padding: 22px 0;
+    // border-top: 1px solid $gray-lightest;
+    background-color: #fff;
+  }
+
+  &__btns-desktop-shadow {
+    position: absolute;
+    bottom: 100%;
+    left: -20px;
+    right: -20px;
+    height: 30px;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 16px;
+      right: 16px;
+      height: 50px;
+      box-shadow: 0 -4px 15px rgba(72,72,72, 0.08);
+    }
+  }
+
+  &__btns-desktop-left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btns-desktop-right {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  // Мобильное представление. Свое, отдельное от визуально похожих вкладок стр. поиска
+  &__btns-mobile {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 320px;
+    background-color: #fff;
+    border-top: 1px solid $gray-lightest;
+    box-shadow: 0 -2px 10px rgba(72, 72, 72, 0.1);
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &__btns-mobile-item {
+    flex-grow: 1;
+    flex-basis: 50%;
+    font-size: ($font-size + 2);
+    font-weight: 500;
+    text-decoration: none;
+    padding: 20px 10px;
+    color: $color-main;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:not(:first-child) {
+      border-left: 1px solid $gray-lightest;
+    }
+
+    &--gray {
+      color: $text-color;
+    }
+
+    &--disabled {
+      opacity: 0.6;
+      cursor: default;
+    }
+  }
+
+  &__btns-back {
+    display: inline-block;
+    padding: 5px 10px 5px 0;
+    color: $gray;
+
+    &:hover,
+    &:focus {
+      color: $color-main;
+
+      svg {
+        fill: $color-main;
+      }
+    }
+
+    svg {
+      fill: $gray;
     }
   }
 }
