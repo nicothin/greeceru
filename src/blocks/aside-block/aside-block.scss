@@ -35,6 +35,10 @@
     border-bottom-right-radius: $border-radius;
   }
 
+  &__content-text {
+    padding: 15px 30px;
+  }
+
   &--regions-list {
 
     #{$block-name}__header {

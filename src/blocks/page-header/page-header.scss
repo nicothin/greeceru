@@ -3,6 +3,9 @@
 // Не пишите здесь другие селекторы.
 
 .page-header {
+
+  $block-name:                &;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -87,6 +90,63 @@
       position: relative;
       z-index: 1;
       border-left: 1px solid $gray-lightest;
+    }
+  }
+
+  &__steps {
+    display: none;
+    max-height: 40px;
+    overflow: hidden;
+    padding: 0 30px;
+    flex-grow: 1;
+    position: relative;
+    z-index: 12;
+    color: $gray;
+
+    @media (min-width: $screen-osx) {
+      padding-left: 60px;
+    }
+
+    a {
+      color: $gray;
+    }
+  }
+
+  &__steps-item {
+    white-space: nowrap;
+
+    &:not(:last-child) {
+
+      &:after {
+        content: '>';
+        display: inline-block;
+        margin: 0 0.4em 0 0.6em;
+        color: $text-color;
+      }
+    }
+
+    &--active {
+      color: $text-color;
+
+      a {
+        color: $text-color;
+      }
+    }
+  }
+
+
+
+  &--steps {
+
+    @media (min-width: $screen-xl) {
+
+      .main-nav {
+        display: none;
+      }
+
+      #{$block-name}__steps {
+        display: block;
+      }
     }
   }
 }

@@ -27,4 +27,12 @@
       border-bottom: 1px solid $gray-lightest;
     }
   }
+
+  &__select-type {
+    margin: 20px 0;
+  }
+
+  &__select-type-or {
+    margin: 0 1em;
+  }
 }
