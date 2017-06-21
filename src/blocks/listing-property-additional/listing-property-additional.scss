@@ -65,6 +65,13 @@
       }
     }
 
+    #{$block-name}__sample-wrap {
+
+      svg {
+        fill: #fff;
+      }
+    }
+
     .pseudolink:before {
       border-color: #fff;
     }
