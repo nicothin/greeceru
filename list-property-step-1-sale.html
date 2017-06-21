@@ -492,7 +492,7 @@
                   <h1 class="page__h1">Property type & additional services</h1>
                 </header>
 
-                <section class="list-property__section">
+                <section class="list-property__section  list-property__section--mobile-hide">
                   <div class="list-property__subtitle">Would you like to:</div>
                   <div class="list-property__select-type">
                     <span class="btn  btn--wide">Sell Property</span>
@@ -500,6 +500,171 @@
                     <a href="" class="btn  btn--white  btn--wide">Rent Out Property</a>
                   </div>
                 </section>
+
+                <form action="">
+
+                  <section class="list-property__section  list-property__section--no-border">
+                    <h2 class="list-property__subtitle">Basic service</h2>
+                    <div class="list-property__basic-option">
+                      <input class="listing-property__checkbox" type="checkbox" id="listing-property-check">
+                      <div class="listing-property">
+                        <div class="listing-property__header">
+                          <h3 class="listing-property__title">Listing your property to greece.ru</h3>
+                          <p class="listing-property__descr">Uneasy barton seeing remark happen his has. Am possible offering at contempt distance stronger an.</p>
+                        </div>
+                        <div class="listing-property__price">
+                          <div class="price"><span class="price__currency">€</span> 50 <small>till sold</small> + 2% <small>after sale</small></div>
+                        </div>
+                        <div class="listing-property__footer">
+                          <label for="listing-property-check" class="listing-property__label">Accept</label>
+                          <a href="#agreements" class="listing-property__agreement-link  pseudolink" data-toggle="modal">Read company agreement</a>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="list-property__section">
+                    <h2 class="list-property__subtitle">Optional service</h2>
+                    <div class="list-property__service-list  list-property__service-list--pt15">
+                      <div class="list-property__option">
+                        <input class="listing-property-optional__checkbox" type="checkbox" id="listing-property-optional-check-1">
+                        <label class="listing-property-optional" for="listing-property-optional-check-1">
+                          <div class="listing-property-optional__header">
+                            <h3 class="listing-property-optional__title">Online property valuation</h3>
+                            <p class="listing-property-optional__descr">Short description about this tariff plan and benefits</p>
+                          </div>
+                          <ul class="listing-property-optional__options">
+                            <li class="listing-property-optional__options-item">Add 2 properties</li>
+                            <li class="listing-property-optional__options-item">Get valuation</li>
+                            <li class="listing-property-optional__options-item">Share list with friends</li>
+                            <li class="listing-property-optional__options-item">Special deals</li>
+                            <li class="listing-property-optional__options-item">Access to all features</li>
+                          </ul>
+                          <div class="listing-property-optional__footer">
+                            <div class="price"><span class="price__currency">€</span> 100 <small>once</small></div>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="list-property__option">
+                        <input class="listing-property-optional__checkbox" type="checkbox" id="listing-property-optional-check-2">
+                        <label class="listing-property-optional" for="listing-property-optional-check-2">
+                          <div class="listing-property-optional__header">
+                            <h3 class="listing-property-optional__title">Nice looking master plan</h3>
+                            <p class="listing-property-optional__descr">Short description about this tariff plan and benefits</p>
+                          </div>
+                          <ul class="listing-property-optional__options">
+                            <li class="listing-property-optional__options-item">Add 2 properties</li>
+                            <li class="listing-property-optional__options-item">Get valuation</li>
+                            <li class="listing-property-optional__options-item">Share list with friends</li>
+                            <li class="listing-property-optional__options-item">Special deals</li>
+                            <li class="listing-property-optional__options-item">Access to all features</li>
+                            <li class="listing-property-optional__options-item">Access to all features</li>
+                          </ul>
+                          <div class="listing-property-optional__footer">
+                            <div class="price"><span class="price__currency">€</span> 100 <small>per year</small></div>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="list-property__section">
+                    <h2 class="list-property__subtitle">Additional services</h2>
+                    <p class="list-property__descr">Before proceed, please select your region</p>
+                    <div class="field-drop-checkboxes field-drop-checkboxes--fz-small">
+                      <div class="field-drop-checkboxes__pseudoselect" id="region" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Region</div>
+                      <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="region">
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="radio" name="region" checked>
+                            <span class="field-checkbox__name-text">Region name region name region name</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="radio" name="region">
+                            <span class="field-checkbox__name-text">Region name region name region name</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="list-property__service-list">
+                      <div class="list-property__option">
+                        <input class="listing-property-additional__checkbox" type="checkbox" id="listing-property-additional-check-1">
+                        <label class="listing-property-additional" for="listing-property-additional-check-1">
+                          <div class="listing-property-additional__text-wrap">
+                            <h3 class="listing-property-additional__title">Professional photography</h3>
+                            <p class="listing-property-additional__descr">Parish so enable innate in formed missed. Hand two was eat busy fail. Stand smart grave would in.</p>
+                          </div>
+                          <div class="listing-property-additional__sample-wrap">
+                            <a href="">
+                              View sample
+                              <svg width="9" height="8"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                            </a>
+                          </div>
+                          <div class="listing-property-additional__footer">
+                            Select region to view price
+                          </div>
+                        </label>
+                      </div>
+                      <div class="list-property__option">
+                        <input class="listing-property-additional__checkbox" type="checkbox" id="listing-property-additional-check-2">
+                        <label class="listing-property-additional" for="listing-property-additional-check-2">
+                          <div class="listing-property-additional__text-wrap">
+                            <h3 class="listing-property-additional__title">Professional video</h3>
+                            <p class="listing-property-additional__descr">Parish so enable innate in formed missed. Hand two was eat busy fail. Stand smart grave would in.</p>
+                          </div>
+                          <div class="listing-property-additional__sample-wrap">
+                            <a href="">
+                              View sample
+                              <svg width="9" height="8"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                            </a>
+                          </div>
+                          <div class="listing-property-additional__footer">
+                            <div class="price"><span class="price__currency">€</span> 100</div>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="list-property__option">
+                        <input class="listing-property-additional__checkbox" type="checkbox" id="listing-property-additional-check-3">
+                        <label class="listing-property-additional" for="listing-property-additional-check-3">
+                          <div class="listing-property-additional__text-wrap">
+                            <h3 class="listing-property-additional__title">Aerial photography</h3>
+                            <p class="listing-property-additional__descr">Parish so enable innate in formed missed.</p>
+                          </div>
+                          <div class="listing-property-additional__sample-wrap">
+                            <a href="">
+                              View sample
+                              <svg width="9" height="8"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                            </a>
+                          </div>
+                          <div class="listing-property-additional__footer">
+                            <div class="price"><span class="price__currency">€</span> 100</div>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="list-property__option">
+                        <input class="listing-property-additional__checkbox" type="checkbox" id="listing-property-additional-check-4">
+                        <label class="listing-property-additional" for="listing-property-additional-check-4">
+                          <div class="listing-property-additional__text-wrap">
+                            <h3 class="listing-property-additional__title">Aerial video</h3>
+                            <p class="listing-property-additional__descr">Parish so enable innate in formed missed. Hand two was eat busy fail. Stand smart grave would in.</p>
+                          </div>
+                          <div class="listing-property-additional__sample-wrap">
+                            <a href="">
+                              View sample
+                              <svg width="9" height="8"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                            </a>
+                          </div>
+                          <div class="listing-property-additional__footer">
+                            <div class="price"><span class="price__currency">€</span> 100</div>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </section>
+
+                </form>
 
               </article>
 
@@ -553,7 +718,7 @@
                       <ul class="order-short-list__sublist">
                         <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
                           <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
-                          <div class="order-short-list__name">Professional photography Professional photography Professional photography </div>
+                          <div class="order-short-list__name">Professional photography</div>
                           <div class="order-short-list__price"> € 125</div>
                         </li>
                         <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
@@ -685,6 +850,20 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="agreements" class="modal  modal--lg" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Header agreements</h4>
+        </div>
+        <div class="modal__body">
+          <p>Content agreements</p>
         </div>
       </div>
     </div>
