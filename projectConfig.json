@@ -76,7 +76,11 @@
     "form-line": [],
     "steps": [],
     "list-property": [],
-    "order-short-list": []
+    "order-short-list": [],
+    "listing-property": [],
+    "listing-property-optional": [],
+    "listing-property-additional": [],
+    "price": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

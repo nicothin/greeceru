@@ -1,0 +1,125 @@
+// В этом файле должны быть стили только для БЭМ-блока listing-property-optional, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.listing-property-optional {
+
+  $block-name:                &;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  // height: 100%;
+  flex-grow: 1;
+  margin: 0;
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid $gray-lightest;
+  border-radius: $border-radius;
+  transition: background-color $transition-time;
+
+  @media (min-width: $screen-sm) {
+    max-width: 490px;
+  }
+
+  &__checkbox {
+    position: absolute;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  &__checkbox:checked ~ & {
+    background-color: $color-main;
+    border-color: $color-main;
+
+    * {
+      color: #fff;
+    }
+
+    #{$block-name}__label {
+
+      &:before {
+        border-color: #fff;
+        background-color: #fff;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 5px;
+        width: 10px;
+        height: 5px;
+        border-left: 1px solid $color-main;
+        border-bottom: 1px solid $color-main;
+        transform: rotate(-47deg);
+      }
+    }
+
+    #{$block-name}__options-item {
+
+      &:before {
+        border-color: #fff;
+      }
+    }
+
+    .pseudolink:before {
+      border-color: #fff;
+    }
+  }
+
+  &__header {
+    border-bottom: 1px solid $gray-lightest;
+    padding-bottom: 18px;
+  }
+
+  &__title {
+    margin: 0 0 3px;
+    padding: 0;
+    font-size: $font-size--h3;
+    font-weight: 400;
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: $font-size--small;
+    line-height: $line-height;
+  }
+
+  &__options {
+    flex-grow: 1;
+    padding: 20px 0;
+    margin: 0;
+    list-style: none;
+    font-size: $font-size--small;
+    border-bottom: 1px solid $gray-lightest;
+  }
+
+  &__options-item {
+    position: relative;
+    padding-left: 22px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 5px;
+      width: 9px;
+      height: 5px;
+      border-left: 1px solid $text-color;
+      border-bottom: 1px solid $text-color;
+      transform: rotate(-47deg);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__footer {
+    padding: 20px 0 0 0;
+  }
+}

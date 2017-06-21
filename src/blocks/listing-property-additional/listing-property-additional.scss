@@ -1,0 +1,116 @@
+// В этом файле должны быть стили только для БЭМ-блока listing-property-additional, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.listing-property-additional {
+
+  $block-name:                &;
+
+  display: flex;
+  flex-direction: column;
+  // height: 100%;
+  flex-grow: 1;
+  margin: 0;
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid $gray-lightest;
+  border-radius: $border-radius;
+  transition: background-color $transition-time;
+
+  @media (min-width: $screen-sm) {
+    max-width: 490px;
+  }
+
+  &__checkbox {
+    position: absolute;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  &__checkbox:checked ~ & {
+    background-color: $color-main;
+    border-color: $color-main;
+
+    * {
+      color: #fff;
+    }
+
+    #{$block-name}__label {
+
+      &:before {
+        border-color: #fff;
+        background-color: #fff;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 5px;
+        width: 10px;
+        height: 5px;
+        border-left: 1px solid $color-main;
+        border-bottom: 1px solid $color-main;
+        transform: rotate(-47deg);
+      }
+    }
+
+    #{$block-name}__options-item {
+
+      &:before {
+        border-color: #fff;
+      }
+    }
+
+    .pseudolink:before {
+      border-color: #fff;
+    }
+  }
+
+  &__header {
+    border-bottom: 1px solid $gray-lightest;
+    padding-bottom: 18px;
+  }
+
+  &__title {
+    margin: 0 0 3px;
+    padding: 0;
+    font-size: $font-size--h3;
+    font-weight: 400;
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: $font-size--small;
+    line-height: $line-height;
+  }
+
+  &__text-wrap {
+    flex-grow: 1;
+    margin-bottom: 20px;
+    min-height: 100px;
+  }
+
+  &__sample-wrap {
+    display: block;
+    margin: 0 0 20px;
+    font-size: $font-size--small;
+    line-height: $line-height;
+
+    svg {
+      fill: $color-main;
+      margin-left: 0.4em;
+    }
+  }
+
+  &__footer {
+    min-height: 42px;
+    padding: 20px 0 0 0;
+    border-top: 1px solid $gray-lightest;
+    font-size: $font-size--small;
+  }
+
+}

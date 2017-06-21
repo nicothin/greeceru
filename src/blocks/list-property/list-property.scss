@@ -4,6 +4,11 @@
 
 .list-property {
 
+  .field-drop-checkboxes {
+    max-width: 230px;
+    margin-bottom: 30px;
+  }
+
   &__header {
     border-bottom: 1px solid $gray-lightest;
     padding-bottom: 35px;
@@ -20,16 +25,34 @@
     font-weight: 500;
   }
 
+  &__descr {
+    margin: 0 0 20px;
+    color: $gray;
+    font-size: $font-size--small;
+  }
+
   &__section {
     padding-top: 35px;
 
     &:not(:last-child) {
+      padding-bottom: 10px;
       border-bottom: 1px solid $gray-lightest;
+    }
+
+    &--no-border {
+      border-bottom: 0 !important;
+    }
+
+    &--mobile-hide {
+
+      @media (max-width: ($screen-lg - 1)) {
+        display: none;
+      }
     }
   }
 
   &__select-type {
-    margin: 20px 0 0;
+    margin: 20px 0 10px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -42,5 +65,31 @@
   &__select-type-or {
     margin-left: 1em;
     margin-right: 1em;
+  }
+
+  &__service-list {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    &--pt15 {
+      padding-top: 15px;
+    }
+  }
+
+  &__option {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 30px;
+
+    @media (min-width: $screen-md) {
+      width: 260px;
+      padding: 0 15px;
+      margin-bottom: 30px;
+    }
   }
 }

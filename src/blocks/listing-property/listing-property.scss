@@ -1,0 +1,113 @@
+// В этом файле должны быть стили только для БЭМ-блока listing-property, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.listing-property {
+
+  $block-name:                &;
+
+  display: block;
+  margin: 20px 0 5px;
+  max-width: 490px;
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid $gray-lightest;
+  border-radius: $border-radius;
+  transition: background-color $transition-time;
+
+  &__checkbox {
+    position: absolute;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  &__checkbox:checked ~ & {
+    background-color: $color-main;
+    border-color: $color-main;
+
+    * {
+      color: #fff;
+    }
+
+    #{$block-name}__label {
+
+      &:before {
+        border-color: #fff;
+        background-color: #fff;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 5px;
+        width: 10px;
+        height: 5px;
+        border-left: 1px solid $color-main;
+        border-bottom: 1px solid $color-main;
+        transform: rotate(-47deg);
+      }
+    }
+
+    .pseudolink:before {
+      border-color: #fff;
+    }
+  }
+
+  &__header {
+    border-bottom: 1px solid $gray-lightest;
+    padding-bottom: 25px;
+  }
+
+  &__title {
+    margin: 0 0 3px;
+    padding: 0;
+    font-size: $font-size--h3;
+    font-weight: 400;
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: $font-size--small;
+    line-height: $line-height;
+  }
+
+  &__price {
+    padding: 20px 0 18px 0;
+    border-bottom: 1px solid $gray-lightest;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 0 2px;
+  }
+
+  &__label {
+    position: relative;
+    padding-left: 30px;
+    color: $color-main;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $color-main;
+      border-radius: 50%;
+    }
+  }
+
+  &__agreement-link {
+    white-space: nowrap;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
