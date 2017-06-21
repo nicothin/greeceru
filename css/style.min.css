@@ -3728,18 +3728,23 @@ a.ui-state-default:hover, a.ui-state-default:focus {
   color: #8891a6;
   font-size: 12px; }
 .list-property__section {
-  padding: 0;
-  width: 100%;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s; }
-.list-property__section.active {
-    padding-top: 8px;
-    height: auto;
-    visibility: visible;
-    opacity: 1; }
+  padding-top: 8px; }
+.tab-content .list-property__section {
+    padding: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s; }
+.tab-content .list-property__section.active {
+      padding-top: 8px;
+      height: auto;
+      visibility: visible;
+      opacity: 1; }
+.list-property__section:not(:last-child) {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6; }
 .list-property__section--no-border {
     border-bottom: 0 !important; }
 .list-property__select-type {
@@ -4045,6 +4050,8 @@ a.ui-state-default:hover, a.ui-state-default:focus {
       transform: rotate(-47deg); }
 .listing-property-additional__checkbox:checked ~ .listing-property-additional .listing-property-additional__options-item:before {
       border-color: #fff; }
+.listing-property-additional__checkbox:checked ~ .listing-property-additional .listing-property-additional__sample-wrap svg {
+      fill: #fff; }
 .listing-property-additional__checkbox:checked ~ .listing-property-additional .pseudolink:before {
       border-color: #fff; }
 .listing-property-additional__header {
@@ -4812,15 +4819,14 @@ a.ui-state-default:hover, a.ui-state-default:focus {
   .list-property__subtitle{
     display: block; }
   .list-property__section{
+    padding-top: 35px; }
+  .tab-content .list-property__section{
     padding-top: 35px;
     height: auto;
     visibility: visible;
     opacity: 1; }
-  .list-property__section.active{
+  .tab-content .list-property__section.active{
     padding-top: 35px; }
-  .list-property__section:not(:last-child){
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e6e6e6; }
   .list-property__tablist{
     display: none; } }
 @media (min-width: 1170px){
