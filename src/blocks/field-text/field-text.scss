@@ -23,6 +23,11 @@ $field-padding-horizontal:    0.7em !default;
     margin-bottom: 13px;
     line-height: 1;
     font-weight: 500;
+
+    &--sm {
+      font-size: $font-size--small;
+      font-weight: 400;
+    }
   }
 
   &__input-wrap {

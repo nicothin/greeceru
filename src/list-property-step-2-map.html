@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>greece_ru</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header--steps.html')
+
+      <main class="page__main-content" role="main">
+
+        <div class="layout-text">
+
+          <div class="layout-text__main  layout-text__main--has-desktop-bottom-btns">
+            <div class="layout-text__main-inner">
+
+              <article class="list-property">
+
+                <header class="list-property__header">
+                  <h1 class="page__h1">Add property</h1>
+                </header>
+
+                <section class="list-property__section  list-property__section--pt35-xs">
+                  <h2 class="list-property__subtitle  list-property__subtitle--show-xs">Location at map</h2>
+                  <div class="list-property__text">
+                    <p>Is that location is right <b>Antonovicha street, 164a, Kyiv, Ukraine</b>? Drag the pin to set your location or try typing your address again below the map</p>
+                  </div>
+                  <div class="alert  alert--danger  alert--m25">
+                    <div class="alert__inner">Unfortunately we could not find your exact address. Drag the pin to set your location or try typing your address again below the map</div>
+                  </div>
+                  <div class="alert  alert--success  alert--m25">
+                    <div class="alert__inner">Address was successfully saved. If you are finished — proceed to next step.</div>
+                  </div>
+                  <div class="list-property__map" id="map"></div>
+                  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjGAiz42P2243i_aoNCu4Pf0vU_xDWcZk&signed_in=true&callback=initMap"></script>
+                  <script>
+                    var mapPoints = [
+                      [
+                        'Map point',
+                        59.95016094,
+                        30.31612718
+                      ]
+                    ];
+                    var mapStyle = [];
+                    function initMap() {
+                      var mapDiv = document.getElementById('map');
+                      var center = {lat: 59.95016094, lng: 30.31612718};
+                      var map = new google.maps.Map(mapDiv, {
+                        zoom: 13,
+                        center: center,
+                        disableDefaultUI: true,
+                        styles: mapStyle
+                      });
+                      setMapMarkers(map);
+                      map.addListener('resize', function() {
+                        map.panTo(center);
+                      });
+                      google.maps.event.addDomListener(window, 'resize', function(){
+                        google.maps.event.trigger(map, 'resize');
+                      });
+                    }
+                    function setMapMarkers(map) {
+                      var image = {
+                        url: 'img/contacts-map-marker.png',
+                        size: new google.maps.Size(70, 80),
+                        anchor: new google.maps.Point(35, 63)
+                      };
+                      for (var i = 0; i < mapPoints.length; i++) {
+                        var point = mapPoints[i];
+                        var marker = new google.maps.Marker({
+                          position: {lat: point[1], lng: point[2]},
+                          map: map,
+                          icon: image,
+                          title: point[0]
+                        });
+                      }
+                    }
+                  </script>
+                  <form action="" class="list-property__form">
+                    <label class="field-text">
+                      <span class="field-text__name  field-text__name--sm">Street address and nubmer</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="">
+                      </span>
+                    </label>
+                  </form>
+                </section>
+
+              </article>
+
+            </div>
+
+          </div>
+
+          <div class="layout-text__aside">
+            <aside class="layout-text__aside-inner" role="complementary">
+
+              @@include('blocks/list-property/list-property__aside-price.html')
+
+            </aside>
+          </div>
+
+          <div class="layout-text__btns-desktop">
+            <div class="layout-text__btns-desktop-pseudocontent">
+              <div class="layout-text__btns-desktop-inner">
+                <div class="layout-text__btns-desktop-left">
+                  <a href="" class="layout-text__btns-back">
+                    <svg width="9" height="8"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-left"></use></svg>
+                    Back
+                  </a>
+                </div>
+                <div class="layout-text__btns-desktop-right">
+                  <a href="" class="btn  btn--white  btn--wide">Proceed</a>
+                </div>
+                <div class="layout-text__btns-desktop-shadow"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layout-text__btns-mobile">
+            <!-- <span class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--gray  layout-text__btns-mobile-item--disabled">Your order</span> -->
+            <a href="#your-order" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--gray" data-toggle="modal">Your order</a>
+            <!-- <span class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--disabled">Proceed</span> -->
+            <a href="" class="layout-text__btns-mobile-item">Proceed</a>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <div id="your-order" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Your order</h4>
+        </div>
+        <div class="modal__body">
+          <div class="order-short-list">
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Property type</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item">
+                  <div class="order-short-list__name">Sale</div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Basic service</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item">
+                  <div class="order-short-list__name">Listing to greece.ru</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Optional service</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                  <div class="order-short-list__name">Nice looking master plan</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                  <div class="order-short-list__name">Nice looking master plan</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Additiona services</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                  <div class="order-short-list__name">Professional photography Professional photography Professional photography </div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                  <div class="order-short-list__name">Aerial video</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-short-list__item">
+              <div class="order-short-list__total-wrapper">
+                <div class="order-short-list__name">Total </div>
+                <div class="order-short-list__price"> € 125</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

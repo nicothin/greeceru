@@ -3,6 +3,9 @@
 // Не пишите здесь другие селекторы.
 
 .alert {
+  display: flex;
+  align-items: center;
+  position: relative;
   margin: 35px 0;
   padding: 20px 20px 20px 48px;
   background-color: $color-main--ultralight;
@@ -40,5 +43,44 @@
     margin-top: 0.3em;
     font-size: $font-size--small;
     line-height: $line-height;
+  }
+
+  &--m25 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  &--danger {
+    min-height: 76px;
+    padding: 15px 15px 15px 60px;
+    border-color: $color-danger;
+    background-color: $color-danger--light;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 27px;
+      left: 20px;
+      width: 21px;
+      height: 21px;
+      background-image: svg-load('../blocks/alert/img_to_bg/icon-danger-info.svg');
+    }
+  }
+
+  &--success {
+    min-height: 76px;
+    padding: 15px 15px 15px 60px;
+    border-color: $color-success;
+    background-color: $color-success--light;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 27px;
+      left: 20px;
+      width: 21px;
+      height: 21px;
+      background-image: svg-load('../blocks/alert/img_to_bg/icon-success-info.svg');
+    }
   }
 }

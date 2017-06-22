@@ -4,6 +4,8 @@
 
 .list-property {
 
+  $block-name:                &;
+
   .field-drop-checkboxes {
     max-width: 230px;
     margin-bottom: 30px;
@@ -26,6 +28,14 @@
     font-weight: 500;
 
     @media (min-width: $screen-lg) {
+      display: block;
+    }
+
+    &--mb20 {
+      margin-bottom: 20px;
+    }
+
+    &--show-xs {
       display: block;
     }
   }
@@ -85,6 +95,10 @@
       @media (max-width: ($screen-lg - 1)) {
         display: none;
       }
+    }
+
+    &--pt35-xs {
+      padding-top: 35px;
     }
   }
 
@@ -168,5 +182,60 @@
     @media (min-width: $screen-sm) {
       display: inline;
     }
+  }
+
+  &__form {
+    max-width: 490px;
+
+    .field-drop-checkboxes,
+    .field-text {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__form-row-sm {
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -15px;
+      margin-right: -15px;
+
+      #{$block-name}__form-col-1-2 {
+        padding-left: 15px;
+        padding-right: 15px;
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+    }
+  }
+
+  &__form-row-md {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -15px;
+      margin-right: -15px;
+
+      #{$block-name}__form-col-1-2 {
+        padding-left: 15px;
+        padding-right: 15px;
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+    }
+  }
+
+  &__text {
+    max-width: 630px;
+  }
+
+  &__map {
+    height: 410px;
+    margin-top: 20px;
+    margin-bottom: 40px;
   }
 }
