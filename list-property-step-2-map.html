@@ -24,7 +24,7 @@
   <div class="page__inner">
 
     <div class="page__content">
-      <header class="page-header" role="banner">
+      <header class="page-header  page-header--steps" role="banner">
 
         <div class="page-header__inner">
 
@@ -343,14 +343,56 @@
 
           </nav>
 
+          <div class="page-header__steps">
+            <span class="page-header__steps-item">Step 1. Property type & additional services</span>
+            <span class="page-header__steps-item">Step 2. Add property</span>
+            <span class="page-header__steps-item  page-header__steps-item--active">Step 3. Confirmation and payment</span>
+          </div>
+
           <div class="page-header__right">
 
-            <form class="search-form  page-header__search">
-              <input class="search-form__input" type="search" placeholder="Type object id to search...">
-              <button class="search-form__btn">Search</button>
-            </form>
-
             <ul class="main-nav__list  main-nav__list--always-drop-down">
+              <li class="main-nav__item  main-nav__item--contacts  main-nav__item--mobile-separator">
+                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler>Contacts</span>
+                <span class="main-nav__pseudolink  main-nav__pseudolink--phone  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler>+30 6974-383-585</span>
+                <div class="main-nav__lvl  main-nav__lvl--contacts">
+                  <div class="main-nav__breadcrumbs" style="display:none;">
+                    <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-hide>Back</span>
+                    <span class="main-nav__breadcrumbs-item">&nbsp;&nbsp;>&nbsp; Contacts</span>
+                  </div>
+                  <ul class="contacts-list">
+                    <li class="contacts-list__item">
+                      <b class="contacts-list__item-name">Phone Numbers</b>
+                      <ul class="contacts-list__phones">
+                        <li class="contacts-list__phone-item">
+                          <span class="contacts-list__phone">Central Office</span>
+                          <a href="tel:+30 2310-567-433" class="contacts-list__phone-num" tabindex="-1">+30 2310-567-433</a>
+                        </li>
+                        <li class="contacts-list__phone-item">
+                          <span class="contacts-list__phone">Contact Manager</span>
+                          <a href="tel:+30 2310-557-151" class="contacts-list__phone-num" tabindex="-1">+30 2310-557-151</a>
+                        </li>
+                        <li class="contacts-list__phone-item">
+                          <span class="contacts-list__phone">Fax</span>
+                          <a href="tel:+30 2310-557-151" class="contacts-list__phone-num" tabindex="-1">+30 2310-557-151</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="contacts-list__item">
+                      <b class="contacts-list__item-name">Address</b>
+                      <span class="contacts-list__item-text">Nikis Avenue 1,  56424 Thessaloniki, Greece</span>
+                    </li>
+                    <li class="contacts-list__item">
+                      <b class="contacts-list__item-name">Skype</b>
+                      <a href="skype:Greece.ru?chat" class="contacts-list__item-text" tabindex="-1">Greece.ru</a>
+                    </li>
+                    <li class="contacts-list__item">
+                      <b class="contacts-list__item-name">Email address</b>
+                      <a href="email:support@greece.ru" class="contacts-list__item-text" tabindex="-1">support@greece.ru</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
               <li class="main-nav__item">
                 <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler>Currency: <span data-main-nav-submenu-toggler>€</span></span>
                 <span class="main-nav__pseudolink  main-nav__pseudolink--currency  main-nav__pseudolink--arrow-desktop" data-main-nav-submenu-toggler>€</span>
@@ -441,56 +483,80 @@
 
         <div class="layout-text">
 
-          <div class="layout-text__main">
+          <div class="layout-text__main  layout-text__main--has-desktop-bottom-btns">
             <div class="layout-text__main-inner">
 
-              <article class="mortgage">
+              <article class="list-property">
 
-                <h1 class="page__h1">Mortgage</h1>
+                <header class="list-property__header">
+                  <h1 class="page__h1">Add property</h1>
+                </header>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quo porro dignissimos velit quis officiis, beatae amet! Illo dolores corrupti aliquam omnis accusamus error earum at, id alias. Vero, pariatur.</p>
-
-                <h2>Some...</h2>
-                <h3>What is Greece.ru</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vel tempora quibusdam aut unde obcaecati nihil non dicta. Repellat enim beatae, animi cum ex? Officiis consequuntur nisi aliquid expedita assumenda.</p>
-                <h3>What is Greece.ru What is Greece.ru</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur.</li>
-                </ul>
-
-                <div class="pay-consult">
-                  <div class="alert">
-                    <div class="alert__inner">
-                      <h2 class="alert__title  alert__title--icon-info">Legal advice by phone</h2>
-                      <p class="alert__small">Suppose end get boy warrant general natural. Delightful met sufficient projection ask. Decisively everything principles if preference do impression of.</p>
-                      <form action="" class="form-line">
-                        <label class="field-text  form-line__part">
-                          <span class="field-text__name">Your name</span>
-                          <span class="field-text__input-wrap">
-                            <input class="field-text__input" type="text" placeholder="">
-                          </span>
-                        </label>
-                        <label class="field-text  form-line__part">
-                          <span class="field-text__name">Phone number</span>
-                          <span class="field-text__input-wrap">
-                            <input class="field-text__input" type="tel" placeholder="">
-                          </span>
-                        </label>
-                        <div class="form-line__price">
-                          € <b>50</b>
-                          <small>per consult</small>
-                        </div>
-                        <div class="form-line__part  form-line__part--full-line">
-                          <button class="btn  btn--white">Processed to Payment</button>
-                        </div>
-                      </form>
-                    </div>
+                <section class="list-property__section  list-property__section--pt35-xs">
+                  <h2 class="list-property__subtitle  list-property__subtitle--show-xs">Location at map</h2>
+                  <div class="list-property__text">
+                    <p>Is that location is right <b>Antonovicha street, 164a, Kyiv, Ukraine</b>? Drag the pin to set your location or try typing your address again below the map</p>
                   </div>
-                  <div class="pay-consult__descr">! By clicking proceed button you’ll be redirected to checkout </div>
-                </div>
+                  <div class="alert  alert--danger  alert--m25">
+                    <div class="alert__inner">Unfortunately we could not find your exact address. Drag the pin to set your location or try typing your address again below the map</div>
+                  </div>
+                  <div class="alert  alert--success  alert--m25">
+                    <div class="alert__inner">Address was successfully saved. If you are finished — proceed to next step.</div>
+                  </div>
+                  <div class="list-property__map" id="map"></div>
+                  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjGAiz42P2243i_aoNCu4Pf0vU_xDWcZk&signed_in=true&callback=initMap"></script>
+                  <script>
+                    var mapPoints = [
+                      [
+                        'Map point',
+                        59.95016094,
+                        30.31612718
+                      ]
+                    ];
+                    var mapStyle = [];
+                    function initMap() {
+                      var mapDiv = document.getElementById('map');
+                      var center = {lat: 59.95016094, lng: 30.31612718};
+                      var map = new google.maps.Map(mapDiv, {
+                        zoom: 13,
+                        center: center,
+                        disableDefaultUI: true,
+                        styles: mapStyle
+                      });
+                      setMapMarkers(map);
+                      map.addListener('resize', function() {
+                        map.panTo(center);
+                      });
+                      google.maps.event.addDomListener(window, 'resize', function(){
+                        google.maps.event.trigger(map, 'resize');
+                      });
+                    }
+                    function setMapMarkers(map) {
+                      var image = {
+                        url: 'img/contacts-map-marker.png',
+                        size: new google.maps.Size(70, 80),
+                        anchor: new google.maps.Point(35, 63)
+                      };
+                      for (var i = 0; i < mapPoints.length; i++) {
+                        var point = mapPoints[i];
+                        var marker = new google.maps.Marker({
+                          position: {lat: point[1], lng: point[2]},
+                          map: map,
+                          icon: image,
+                          title: point[0]
+                        });
+                      }
+                    }
+                  </script>
+                  <form action="" class="list-property__form">
+                    <label class="field-text">
+                      <span class="field-text__name  field-text__name--sm">Street address and nubmer</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="">
+                      </span>
+                    </label>
+                  </form>
+                </section>
 
               </article>
 
@@ -501,24 +567,95 @@
           <div class="layout-text__aside">
             <aside class="layout-text__aside-inner" role="complementary">
 
-              <div class="subscribing">
-                <div class="subscribing__title">
-                  Join the community by subscribing
+              <section class="aside-block  aside-block--order">
+                <div class="aside-block__header">
+                  <h3 class="aside-block__title">Your order</h3>
                 </div>
-                <div class="subscribing__descr">
-                  We try to avoid spam and deliver things that matter
+                <div class="aside-block__content">
+                  <div class="order-short-list">
+                    <div class="order-short-list__item">
+                      <h4 class="order-short-list__title">Property type</h4>
+                      <ul class="order-short-list__sublist">
+                        <li class="order-short-list__sublist-item">
+                          <div class="order-short-list__name">Sale</div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="order-short-list__item">
+                      <h4 class="order-short-list__title">Basic service</h4>
+                      <ul class="order-short-list__sublist">
+                        <li class="order-short-list__sublist-item">
+                          <div class="order-short-list__name">Listing to greece.ru</div>
+                          <div class="order-short-list__price"> € 125</div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="order-short-list__item">
+                      <h4 class="order-short-list__title">Optional service</h4>
+                      <ul class="order-short-list__sublist">
+                        <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                          <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                          <div class="order-short-list__name">Nice looking master plan</div>
+                          <div class="order-short-list__price"> € 125</div>
+                        </li>
+                        <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                          <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                          <div class="order-short-list__name">Nice looking master plan</div>
+                          <div class="order-short-list__price"> € 125</div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="order-short-list__item">
+                      <h4 class="order-short-list__title">Additiona services</h4>
+                      <ul class="order-short-list__sublist">
+                        <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                          <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                          <div class="order-short-list__name">Professional photography</div>
+                          <div class="order-short-list__price"> € 125</div>
+                        </li>
+                        <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                          <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                          <div class="order-short-list__name">Aerial video</div>
+                          <div class="order-short-list__price"> € 125</div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="order-short-list__item">
+                      <div class="order-short-list__total-wrapper">
+                        <div class="order-short-list__name">Total </div>
+                        <div class="order-short-list__price"> € 125</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <form class="subscribing__form">
-                  <label class="field-text">
-                    <span class="field-text__input-wrap">
-                      <input class="field-text__input  field-text__input--fz-small" type="email" placeholder="Type here your email">
-                    </span>
-                  </label>
-                  <button class="btn  btn--block">Subscribe</button>
-                </form>
-              </div>
+              </section>
+
 
             </aside>
+          </div>
+
+          <div class="layout-text__btns-desktop">
+            <div class="layout-text__btns-desktop-pseudocontent">
+              <div class="layout-text__btns-desktop-inner">
+                <div class="layout-text__btns-desktop-left">
+                  <a href="" class="layout-text__btns-back">
+                    <svg width="9" height="8"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-left"></use></svg>
+                    Back
+                  </a>
+                </div>
+                <div class="layout-text__btns-desktop-right">
+                  <a href="" class="btn  btn--white  btn--wide">Proceed</a>
+                </div>
+                <div class="layout-text__btns-desktop-shadow"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layout-text__btns-mobile">
+            <!-- <span class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--gray  layout-text__btns-mobile-item--disabled">Your order</span> -->
+            <a href="#your-order" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--gray" data-toggle="modal">Your order</a>
+            <!-- <span class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--disabled">Proceed</span> -->
+            <a href="" class="layout-text__btns-mobile-item">Proceed</a>
           </div>
 
         </div>
@@ -527,135 +664,74 @@
 
     </div>
 
-    <div class="page__footer-wrapper">
-      <footer class="page-footer" role="contentinfo">
-        <div class="page-footer__inner">
-          <div class="page-footer__left">
-            <section class="page-footer__block  page-footer__block--about">
-              <h3 class="page-footer__block-title">About Website</h3>
-              <div class="page-footer__block-text">
-                <div class="page-footer__copyright">
-                  © Copyright 2017 Greece.ru
-                  <p>Real estate agency with the&nbsp;best properties. Become a&nbsp;part of&nbsp;our&nbsp;community.</p>
-                </div>
-                <p class="page-footer__address">Greece, Thessaloniki, Nikis Ave 1,  floor 2, 56424, <a href="tel:+306974383">+30 6974-383</a></p>
-              </div>
-              <ul class="page-footer__list">
-                <li><a href="">Sale</a></li>
-                <li><a href="">Rent</a></li>
-                <li><a href="">Add an Object</a></li>
-                <li><a href="">Add a Place</a></li>
-                <li><a href="">About Company</a></li>
-                <li><a href="">Blog</a></li>
-              </ul>
-            </section>
-            <section class="page-footer__block  page-footer__block--guide">
-              <h3 class="page-footer__block-title">Guide to Regions</h3>
-              <ul class="page-footer__list  page-footer__list--arrow">
-                <li><a href="">
-                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
-                  Attica
-                </a></li>
-                <li><a href="">
-                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
-                  Central Greece
-                </a></li>
-                <li><a href="">
-                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
-                  Central Macedonia
-                </a></li>
-                <li><a href="">
-                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
-                  Crete
-                </a></li>
-                <li><a href="">
-                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
-                  Eastern Macedonia and&nbsp;Thrace
-                </a></li>
-                <li><a href="">
-                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
-                  Epirus
-                </a></li>
-                <li><a href="">
-                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
-                  Ionian Islands
-                </a></li>
-                <li><a href="">
-                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
-                  North Aegean
-                </a></li>
-                <li><a href="">
-                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
-                  Peloponnese
-                </a></li>
-                <li><a href="">
-                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
-                  South Aegean
-                </a></li>
-                <li><a href="">
-                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
-                  Thessaly
-                </a></li>
-                <li><a href="">
-                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
-                  Western Greece
-                </a></li>
-                <li><a href="">
-                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
-                  Western Macedonia
-                </a></li>
-              </ul>
-            </section>
-          </div>
-          <div class="page-footer__right">
-            <section class="page-footer__block  page-footer__block--subscribe">
-              <h3 class="page-footer__block-title">Subscribe to Our Newsletter</h3>
-              <form action="">
-                <div class="field-text">
-                  <span class="field-text__name">No spam, only good news</span>
-                  <span class="field-text__input-wrap  field-text__input-wrap--input-btn-group">
-                    <input class="field-text__input  field-text__input--fz-small" type="text" placeholder="Type here your email">
-                    <button class="btn  btn--sm">Subscribe</button>
-                  </span>
-                </div>
-              </form>
-            </section>
-            <section class="page-footer__block  page-footer__block--social">
-              <h3 class="page-footer__block-title">Stay in Touch</h3>
+  </div>
 
-              <ul class="social-links">
-                <li>
-                  <a href="" class="social-links__item">
-                    <span class="social-links__item-text">Facebook</span>
-                    <svg class="social-links__icon" width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook"></use></svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="social-links__item">
-                    <span class="social-links__item-text">Twitter</span>
-                    <svg class="social-links__icon" width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#twitter"></use></svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="social-links__item">
-                    <span class="social-links__item-text">Instagram</span>
-                    <svg class="social-links__icon  social-links__icon--instagram" width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram"></use></svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="social-links__item">
-                    <span class="social-links__item-text">Google Plus</span>
-                    <svg class="social-links__icon" width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#google-plus"></use></svg>
-                  </a>
+  <div id="your-order" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Your order</h4>
+        </div>
+        <div class="modal__body">
+          <div class="order-short-list">
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Property type</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item">
+                  <div class="order-short-list__name">Sale</div>
                 </li>
               </ul>
-            </section>
+            </div>
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Basic service</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item">
+                  <div class="order-short-list__name">Listing to greece.ru</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Optional service</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                  <div class="order-short-list__name">Nice looking master plan</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                  <div class="order-short-list__name">Nice looking master plan</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Additiona services</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                  <div class="order-short-list__name">Professional photography Professional photography Professional photography </div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                  <div class="order-short-list__name">Aerial video</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-short-list__item">
+              <div class="order-short-list__total-wrapper">
+                <div class="order-short-list__name">Total </div>
+                <div class="order-short-list__price"> € 125</div>
+              </div>
+            </div>
           </div>
         </div>
-      </footer>
-
+      </div>
     </div>
-
   </div>
   <script src="js/script.min.js"></script>
 
