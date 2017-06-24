@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>greece_ru</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header--steps.html')
+
+      <main class="page__main-content" role="main">
+
+        <div class="layout-text">
+
+          <div class="layout-text__main  layout-text__main--has-desktop-bottom-btns">
+            <div class="layout-text__main-inner">
+
+              <article class="list-property">
+
+                <header class="list-property__header">
+                  <h1 class="page__h1">Add property</h1>
+                </header>
+
+                <section class="list-property__section  list-property__section--pt35-xs">
+                  <h2 class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">Photos</h2>
+                  <p class="list-property__descr  list-property__descr--lg">You can upload up to 18 photos. Pay attention that photos with watermarks are not allowed!</p>
+                  <form action="" class="list-property__form  list-property__form--wide">
+                    <div class="photos-list">
+                      <div class="photos-list__item-main">
+                        <a href="" class="photos-list__img-link">
+                          <img src="img/joker.jpg" alt="" class="photos-list__img">
+                        </a>
+                        <button class="photos-list__item-del  close-circle"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                        <div class="photos-list__item-featured  featured  featured--active">
+                          <button class="featured__btn">
+                            <span class="featured__btn-inner">
+                              <svg class="featured__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star"></use></svg>
+                            </span>
+                          </button>
+                          <div class="featured__text">Marked as featured</div>
+                        </div>
+                      </div>
+                      <div class="photos-list__row">
+                        <div class="photos-list__item">
+                          <a href="" class="photos-list__img-link">
+                            <img src="img/joker.jpg" alt="" class="photos-list__img">
+                          </a>
+                          <button class="photos-list__item-del  close-circle"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                          <div class="photos-list__item-featured  featured">
+                            <button class="featured__btn">
+                              <span class="featured__btn-inner">
+                                <svg class="featured__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star"></use></svg>
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="photos-list__item">
+                          <a href="" class="photos-list__img-link">
+                            <img src="img/harly.jpg" alt="" class="photos-list__img">
+                          </a>
+                          <button class="photos-list__item-del  close-circle"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                          <div class="photos-list__item-featured  featured">
+                            <button class="featured__btn">
+                              <span class="featured__btn-inner">
+                                <svg class="featured__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star"></use></svg>
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="photos-list__item">
+                          <label class="field-multifile  field-multifile--mini">
+                            <span class="field-multifile__inner">
+                              <input class="field-multifile__input" type="file" multiple>
+                              <span class="field-multifile__text-mini">
+                                <svg class="field-multifile__plus" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus-circle"></use></svg>
+                                Upload more <br> photos
+                              </span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                  </form>
+                </section>
+
+              </article>
+
+            </div>
+
+          </div>
+
+          <div class="layout-text__aside">
+            <aside class="layout-text__aside-inner" role="complementary">
+
+              @@include('blocks/list-property/list-property__aside-price.html')
+
+            </aside>
+          </div>
+
+          <div class="layout-text__btns-desktop">
+            <div class="layout-text__btns-desktop-pseudocontent">
+              <div class="layout-text__btns-desktop-inner">
+                <div class="layout-text__btns-desktop-left">
+                  <a href="" class="layout-text__btns-back">
+                    <svg width="9" height="8"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-left"></use></svg>
+                    Back
+                  </a>
+                </div>
+                <div class="layout-text__btns-desktop-right">
+                  <a href="" class="btn  btn--white  btn--wide">Proceed</a>
+                </div>
+                <div class="layout-text__btns-desktop-shadow"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layout-text__btns-mobile">
+            <!-- <span class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--gray  layout-text__btns-mobile-item--disabled">Your order</span> -->
+            <a href="#your-order" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--gray" data-toggle="modal">Your order</a>
+            <!-- <span class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--disabled">Proceed</span> -->
+            <a href="" class="layout-text__btns-mobile-item">Proceed</a>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <div id="your-order" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Your order</h4>
+        </div>
+        <div class="modal__body">
+          <div class="order-short-list">
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Property type</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item">
+                  <div class="order-short-list__name">Sale</div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Basic service</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item">
+                  <div class="order-short-list__name">Listing to greece.ru</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Optional service</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                  <div class="order-short-list__name">Nice looking master plan</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                  <div class="order-short-list__name">Nice looking master plan</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Additiona services</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                  <div class="order-short-list__name">Professional photography Professional photography Professional photography </div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                  <div class="order-short-list__name">Aerial video</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-short-list__item">
+              <div class="order-short-list__total-wrapper">
+                <div class="order-short-list__name">Total </div>
+                <div class="order-short-list__price"> € 125</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

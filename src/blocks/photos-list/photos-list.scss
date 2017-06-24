@@ -1,0 +1,79 @@
+// В этом файле должны быть стили только для БЭМ-блока photos-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.photos-list {
+
+  $block-name:                &;
+
+  &__item {
+    position: relative;
+    width: 100%;
+    min-height: 160px;
+    margin-bottom: 15px;
+    background-color: $gray-lightest;
+
+    @media (min-width: $screen-md) {
+      width: 230px;
+      margin-bottom: 30px;
+      margin-right: 30px;
+    }
+  }
+
+  &__item-main {
+    position: relative;
+    width: 100%;
+    min-height: 160px;
+    margin-bottom: 15px;
+    background-color: $gray-lightest;
+
+    @media (min-width: $screen-md) {
+      width: 100%;
+      max-width: 620px;
+      margin-bottom: 30px;
+
+      #{$block-name}__img {
+        max-height: none;
+      }
+    }
+  }
+
+  &__row {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+  }
+
+  &__img-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 160px;
+    object-fit: cover;
+
+    @media (min-width: $screen-md) {
+      max-height: 230px;
+    }
+  }
+
+  &__item-del {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  &__item-featured {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+}

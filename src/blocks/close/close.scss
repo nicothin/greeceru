@@ -85,6 +85,10 @@ $toggler-part-bg-color:       #000 !default;
         transform-origin: 50% 50%;
       }
 
+      // Увы и ах. Хак для Сафари :(
+      _::-webkit-full-page-media, _:future, :root &:before {height: 2px;}
+      _::-webkit-full-page-media, _:future, :root &:after {height: 2px;}
+
       &:before {
         transform: translate(-50%, -50%) rotate3d(0, 0, 1, 45deg);
       }

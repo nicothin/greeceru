@@ -1,0 +1,73 @@
+// В этом файле должны быть стили только для БЭМ-блока featured, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.featured {
+
+  $block-name:                &;
+
+  display: flex;
+
+  &__btn {
+    padding: 0;
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+
+    &:hover,
+    &:focus {
+
+      #{$block-name}__icon {
+        fill: $color-main;
+      }
+    }
+  }
+
+  &__btn-inner {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: #fff;
+    border: 1px solid $gray-lightest;
+    border-radius: $border-radius;
+    cursor: pointer;
+  }
+
+  &__icon {
+    fill: $gray-darkest;
+    transition: fill $transition-time;
+  }
+
+  &__text {
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 12px;
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #fff;
+    border: 1px solid $gray-lightest;
+    border-left: 0;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    color: $color-main;
+  }
+
+  &--active {
+
+    #{$block-name}__btn-inner {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    #{$block-name}__icon {
+      fill: $color-main;
+    }
+  }
+}

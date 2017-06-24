@@ -3,6 +3,9 @@
 // Не пишите здесь другие селекторы.
 
 .field-multifile {
+
+  $block-name:                &;
+
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -12,6 +15,7 @@
   padding: 30px;
   background-color: $gray-ultra-lightest;
   // border: 1px dashed $gray;
+  cursor: pointer;
 
   &:before {
     content: '';
@@ -90,6 +94,58 @@
 
     @media (min-width: $screen-lg) {
       display: none;
+    }
+  }
+
+  &__plus {
+    display: block;
+    margin: 0 auto 5px;
+    fill: $color-main;
+    transition: fill $transition-time;
+
+    @media (min-width: $screen-md) {
+      fill: $text-color;
+    }
+  }
+
+  &__text-mini {
+    display: block;
+    text-align: center;
+    color: $color-main;
+    transition: color $transition-time;
+
+    @media (min-width: $screen-md) {
+      color: $text-color;
+    }
+
+    br {
+      display: none;
+
+      @media (min-width: $screen-md) {
+        display: block;
+      }
+    }
+  }
+
+
+
+  &--mini {
+    height: 160px;
+    min-height: 160px;
+
+    @media (min-width: $screen-md) {
+
+      &:hover,
+      &:focus {
+
+        #{$block-name}__plus {
+          fill: $color-main;
+        }
+
+        #{$block-name}__text-mini {
+          color: $color-main;
+        }
+      }
     }
   }
 }

@@ -81,7 +81,10 @@
     "listing-property-optional": [],
     "listing-property-additional": [],
     "price": [],
-    "field-multifile": []
+    "field-multifile": [],
+    "close-circle": [],
+    "featured": [],
+    "photos-list": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
