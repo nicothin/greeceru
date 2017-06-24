@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>greece_ru</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header--steps.html')
+
+      <main class="page__main-content" role="main">
+
+        <div class="layout-text">
+
+          <div class="layout-text__main  layout-text__main--has-desktop-bottom-btns">
+            <div class="layout-text__main-inner">
+
+              <article class="list-property">
+
+                <header class="list-property__header">
+                  <h1 class="page__h1">Add property</h1>
+                </header>
+
+                <form action="" class="form">
+
+                  <section class="list-property__section  list-property__section--pt35-xs">
+                    <h2 class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">Information about property</h2>
+                    <div class="form__row  form__row--max490">
+                      <div class="form__col  form__col--sm-4-4  form__col--md-2-4">
+                        <div class="field-drop-checkboxes">
+                          <div class="field-drop-checkboxes__text-name  field-drop-checkboxes__text-name--sm">Property type</div>
+                          <div class="field-drop-checkboxes__pseudoselect" id="region" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">House</div>
+                          <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="region">
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="radio" name="region" checked="">
+                                <span class="field-checkbox__name-text">House</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="radio" name="region">
+                                <span class="field-checkbox__name-text">Drum-n-base</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="radio" name="region">
+                                <span class="field-checkbox__name-text">Jazz</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="list-property__section  list-property__section--pt35-xs">
+                    <h2 class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">Apartment parameters</h2>
+                    <div class="form__row  form__row--max490">
+                      <div class="form__col  form__col--md-1-4">
+                        <label class="field-text">
+                          <span class="field-text__name  field-text__name--sm  field-text__name--one-line">Living space, m<sup>2</sup>*</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="number" placeholder="">
+                          </span>
+                        </label>
+                      </div>
+                      <div class="form__col  form__col--md-1-4">
+                        <label class="field-text">
+                          <span class="field-text__name  field-text__name--sm  field-text__name--one-line">Land plot area, m<sup>2</sup>*</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="number" placeholder="">
+                          </span>
+                        </label>
+                      </div>
+                      <div class="form__col  form__col--md-1-4">
+                        <label class="field-text">
+                          <span class="field-text__name  field-text__name--sm">Bathrooms*</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="number" placeholder="">
+                          </span>
+                        </label>
+                      </div>
+                      <div class="form__col  form__col--md-1-4">
+                        <label class="field-text">
+                          <span class="field-text__name  field-text__name--sm">Bathrooms*</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="number" placeholder="">
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="list-property__section  list-property__section--pt35-xs">
+                    <h2 class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">Building parameters</h2>
+                    <div class="form__row  form__row--max490">
+                      <div class="form__col  form__col--md-1-4  form__col--md-push-1  list-property__text-field-w-checkbox">
+                        <label class="field-text">
+                          <span class="field-text__name  field-text__name--sm  field-text__name--one-line">Qt. of floors in the building</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="number" placeholder="">
+                          </span>
+                        </label>
+                        <div class="field-checkbox  field-checkbox--sm">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Penthouse</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form__col  form__col--md-1-4  list-property__text-field-w-checkbox">
+                        <label class="field-text">
+                          <span class="field-text__name  field-text__name--sm  field-text__name--one-line">Year of construct.</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="number" placeholder="">
+                          </span>
+                        </label>
+                        <div class="field-checkbox  field-checkbox--sm">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Brand new</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form__col  form__col--md-1-4">
+                        <label class="field-text">
+                          <span class="field-text__name  field-text__name--sm  field-text__name--one-line">Year of renovation</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="number" placeholder="">
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="list-property__section  list-property__section--pt35-xs">
+                    <h2 class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">Aparment facilities</h2>
+                    <div class="form__row  form__row--max490">
+                      <div class="form__col">
+                        <div class="field-drop-checkboxes">
+                          <div class="field-drop-checkboxes__text-name  field-drop-checkboxes__text-name--sm">Heating</div>
+                          <div class="field-drop-checkboxes__pseudoselect" id="heating" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"></div>
+                          <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="heating">
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="radio" name="heating" checked>
+                                <span class="field-checkbox__name-text">Some item</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="radio" name="heating">
+                                <span class="field-checkbox__name-text">Some item</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__col">
+                        <div class="field-drop-checkboxes">
+                          <div class="field-drop-checkboxes__text-name  field-drop-checkboxes__text-name--sm">Heating type</div>
+                          <div class="field-drop-checkboxes__pseudoselect" id="heating-type" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"></div>
+                          <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="heating-type">
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="radio" name="heating-type" checked>
+                                <span class="field-checkbox__name-text">Some item</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="radio" name="heating-type">
+                                <span class="field-checkbox__name-text">Some item</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__col">
+                        <div class="field-drop-checkboxes">
+                          <div class="field-drop-checkboxes__text-name  field-drop-checkboxes__text-name--sm">Parking</div>
+                          <div class="field-drop-checkboxes__pseudoselect" id="parkilg" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"></div>
+                          <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="parkilg">
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="radio" name="parkilg" checked>
+                                <span class="field-checkbox__name-text">Some item</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="radio" name="parkilg">
+                                <span class="field-checkbox__name-text">Some item</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__col">
+                        <div class="field-drop-checkboxes">
+                          <div class="field-drop-checkboxes__text-name  field-drop-checkboxes__text-name--sm">View</div>
+                          <div class="field-drop-checkboxes__pseudoselect" id="view" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"></div>
+                          <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="view">
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="radio" name="view" checked>
+                                <span class="field-checkbox__name-text">Some item</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="radio" name="view">
+                                <span class="field-checkbox__name-text">Some item</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="field-checkbox  field-checkbox--sm">
+                      <div class="form__row  form__row--max490">
+                        <div class="form__col  form__col--checkbox">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Furnished</span>
+                          </label>
+                        </div>
+                        <div class="form__col  form__col--checkbox">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Balcony</span>
+                          </label>
+                        </div>
+                        <div class="form__col  form__col--checkbox">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Furnished</span>
+                          </label>
+                        </div>
+                        <div class="form__col  form__col--checkbox">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Balcony</span>
+                          </label>
+                        </div>
+                        <div class="form__col  form__col--checkbox">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Washing machine</span>
+                          </label>
+                        </div>
+                        <div class="form__col  form__col--checkbox">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Balcony</span>
+                          </label>
+                        </div>
+                        <div class="form__col  form__col--checkbox">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Air conditioning</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="list-property__section  list-property__section--pt35-xs">
+                    <h2 class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">Floorplans</h2>
+                    <div class="field-file  field-file--sm">
+                      <label class="field-file__input-wrap">
+                        <input class="field-file__input" type="file">
+                        <div class="field-file__name-text">To upload photos <span class="field-file__name-pseudolink">browse your computer</span></div>
+                        <span class="field-file__btn  btn  btn--white  btn--wide">Upload photos</span>
+                      </label>
+                      <div class="field-file__uploading">
+                        <div class="field-file__sup-list">Attached files <span id="">(2)</span>:</div>
+                        <ul class="field-file__list">
+                          <li class="field-file__list-item">
+                            <button class="field-file__list-item-remove  close-circle" title="Remove"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                            <span class="field-file__list-filename">1. floor_1 (16.05.2017).pdf</span>
+                          </li>
+                          <li class="field-file__list-item">
+                            <button class="field-file__list-item-remove  close-circle" title="Remove"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                            <span class="field-file__list-filename">2. floor_2 (16.05.2017).pdf</span>
+                          </li>
+                        </ul>
+                        <div class="field-file__uploading-text">Uploading — <span class="field-file__name-pseudolink">floor_3 (16.05.2017).pdf</span></div>
+                        <div class="field-file__progress  progress  progress--sm">
+                          <div class="progress__line" style="width:68%">
+                            <div class="progress__num">68%</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="list-property__section  list-property__section--pt35-xs">
+                    <h2 class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">Asking price*</h2>
+                    <div class="form__row  form__row--max490">
+                      <div class="form__col">
+                        <div class="fields-group">
+                          <label class="field-text">
+                            <span class="field-text__input-wrap">
+                              <input class="field-text__input" type="text" placeholder="1 000 000">
+                            </span>
+                          </label>
+                          <div class="field-drop-checkboxes">
+                            <div class="field-drop-checkboxes__pseudoselect" id="currency" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">€</div>
+                            <div class="field-drop-checkboxes__drop  field-drop-checkboxes__drop--to-left  field-checkbox" aria-labelledby="currency">
+                              <div class="field-checkbox__input-wrap">
+                                <label class="field-checkbox__name">
+                                  <input class="field-checkbox__input" type="radio" name="currency" checked>
+                                  <span class="field-checkbox__name-text">USD $</span>
+                                </label>
+                              </div>
+                              <div class="field-checkbox__input-wrap">
+                                <label class="field-checkbox__name">
+                                  <input class="field-checkbox__input" type="radio" name="currency">
+                                  <span class="field-checkbox__name-text">RUB ₽</span>
+                                </label>
+                              </div>
+                              <div class="field-checkbox__input-wrap">
+                                <label class="field-checkbox__name">
+                                  <input class="field-checkbox__input" type="radio" name="currency">
+                                  <span class="field-checkbox__name-text">CAD</span>
+                                </label>
+                              </div>
+                              <div class="field-checkbox__input-wrap">
+                                <label class="field-checkbox__name">
+                                  <input class="field-checkbox__input" type="radio" name="currency">
+                                  <span class="field-checkbox__name-text">UAH</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="list-property__section  list-property__section--pt35-xs">
+                    <h2 class="list-property__subtitle  list-property__subtitle--show-xs">Description</h2>
+                    <p class="list-property__descr  list-property__descr--lg">The more information your property listing will have, the more attention it will draw.</p>
+                    <label class="field-text">
+                      <textarea class="field-text__input" type="text" placeholder="Type here to descripe"></textarea>
+                      <span class="field-text__help-text">Links in the description are not allowed</span>
+                    </label>
+                  </section>
+
+                </form>
+
+              </article>
+
+            </div>
+
+          </div>
+
+          <div class="layout-text__aside">
+            <aside class="layout-text__aside-inner" role="complementary">
+
+              @@include('blocks/list-property/list-property__aside-price.html')
+
+            </aside>
+          </div>
+
+          <div class="layout-text__btns-desktop">
+            <div class="layout-text__btns-desktop-pseudocontent">
+              <div class="layout-text__btns-desktop-inner">
+                <div class="layout-text__btns-desktop-left">
+                  <a href="" class="layout-text__btns-back">
+                    <svg width="9" height="8"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-left"></use></svg>
+                    Back
+                  </a>
+                </div>
+                <div class="layout-text__btns-desktop-right">
+                  <a href="" class="btn  btn--white  btn--wide  btn--disabled">Proceed</a>
+                </div>
+                <div class="layout-text__btns-desktop-shadow"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layout-text__btns-mobile">
+            <!-- <span class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--gray  layout-text__btns-mobile-item--disabled">Your order</span> -->
+            <a href="#your-order" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--gray" data-toggle="modal">Your order</a>
+            <!-- <span class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--disabled">Proceed</span> -->
+            <a href="" class="layout-text__btns-mobile-item">Proceed</a>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <div id="your-order" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Your order</h4>
+        </div>
+        <div class="modal__body">
+          <div class="order-short-list">
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Property type</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item">
+                  <div class="order-short-list__name">Sale</div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Basic service</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item">
+                  <div class="order-short-list__name">Listing to greece.ru</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Optional service</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                  <div class="order-short-list__name">Nice looking master plan</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                  <div class="order-short-list__name">Nice looking master plan</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Additiona services</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                  <div class="order-short-list__name">Professional photography Professional photography Professional photography </div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove" title="Remove"><span class="close  close--thin"><span></span></span></button>
+                  <div class="order-short-list__name">Aerial video</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-short-list__item">
+              <div class="order-short-list__total-wrapper">
+                <div class="order-short-list__name">Total </div>
+                <div class="order-short-list__price"> € 125</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

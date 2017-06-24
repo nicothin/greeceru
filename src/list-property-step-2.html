@@ -29,11 +29,12 @@
                   <h1 class="page__h1">Add property</h1>
                 </header>
 
-                <section class="list-property__section  list-property__section--pt35-xs">
-                  <h2 class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">Property address:</h2>
-                  <form action="" class="list-property__form">
-                    <div class="list-property__form-row-md">
-                      <div class="list-property__form-col-1-2">
+                <form action="" class="form">
+
+                  <section class="list-property__section  list-property__section--pt35-xs">
+                    <h2 class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">Property address:</h2>
+                    <div class="form__row  form__row--max490">
+                      <div class="form__col">
                         <div class="field-drop-checkboxes">
                           <div class="field-drop-checkboxes__text-name  field-drop-checkboxes__text-name--sm">Country</div>
                           <div class="field-drop-checkboxes__pseudoselect" id="country" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Greece</div>
@@ -53,7 +54,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="list-property__form-col-1-2">
+                      <div class="form__col">
                         <div class="field-drop-checkboxes">
                           <div class="field-drop-checkboxes__text-name  field-drop-checkboxes__text-name--sm">Region</div>
                           <div class="field-drop-checkboxes__pseudoselect" id="region" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Greece</div>
@@ -73,15 +74,15 @@
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <label class="field-text">
-                      <span class="field-text__name  field-text__name--sm">Street address and nubmer</span>
-                      <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="text" placeholder="House number, street, road">
-                      </span>
-                    </label>
-                    <div class="list-property__form-row-sm">
-                      <div class="list-property__form-col-1-2">
+                      <div class="form__col  form__col--sm-4-4">
+                        <label class="field-text">
+                          <span class="field-text__name  field-text__name--sm">Street address and nubmer</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="House number, street, road">
+                          </span>
+                        </label>
+                      </div>
+                      <div class="form__col">
                         <label class="field-text">
                           <span class="field-text__name  field-text__name--sm">City</span>
                           <span class="field-text__input-wrap">
@@ -89,7 +90,7 @@
                           </span>
                         </label>
                       </div>
-                      <div class="list-property__form-col-1-2">
+                      <div class="form__col">
                         <label class="field-text">
                           <span class="field-text__name  field-text__name--sm">State</span>
                           <span class="field-text__input-wrap">
@@ -97,7 +98,7 @@
                           </span>
                         </label>
                       </div>
-                      <div class="list-property__form-col-1-2">
+                      <div class="form__col">
                         <label class="field-text">
                           <span class="field-text__name  field-text__name--sm">Zip code</span>
                           <span class="field-text__input-wrap">
@@ -106,8 +107,9 @@
                         </label>
                       </div>
                     </div>
-                  </form>
-                </section>
+                  </section>
+
+                </form>
 
               </article>
 

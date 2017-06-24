@@ -1,0 +1,54 @@
+// В этом файле должны быть стили только для БЭМ-блока fields-group, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.fields-group {
+  display: flex;
+
+  .field-text {
+    flex-grow: 1;
+
+    &:not(:first-child):not(:last-child) .field-text__input {
+      border-radius: 0;
+      border-right: 0;
+    }
+
+    &:first-child .field-text__input {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right: 0;
+    }
+
+    &:last-child .field-text__input {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  .field-text__input {
+    position: relative;
+
+    &:focus {
+      z-index: 1;
+    }
+  }
+
+  .field-drop-checkboxes {
+
+    &:not(:first-child):not(:last-child) .field-drop-checkboxes__pseudoselect {
+      border-radius: 0;
+      border-right: 0;
+    }
+
+    &:first-child .field-drop-checkboxes__pseudoselect {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right: 0;
+    }
+
+    &:last-child .field-drop-checkboxes__pseudoselect {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}

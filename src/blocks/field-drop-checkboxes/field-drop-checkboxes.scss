@@ -37,6 +37,7 @@
 
   &__pseudoselect {
     display: block;
+    min-height: 48px;
     position: relative;
     padding: ($field-padding-vertical + 4) ($field-padding-horizontal + 18) ($field-padding-vertical + 4) $field-padding-horizontal;
     font-size: $font-size;
@@ -53,6 +54,7 @@
     transition: color $transition-time;
 
     @media (min-width: $screen-md) {
+      min-height: 40px;
       padding: $field-padding-vertical ($field-padding-horizontal + 18) $field-padding-vertical $field-padding-horizontal;
     }
 
@@ -137,6 +139,11 @@
           }
         }
       }
+    }
+
+    &--to-left {
+      left: auto;
+      right: 0;
     }
   }
 

@@ -1,0 +1,64 @@
+// В этом файле должны быть стили только для БЭМ-блока progress, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.progress {
+
+  $block-name:                &;
+
+  display: block;
+  position: relative;
+  z-index: 1;
+  height: 16px;
+  line-height: 16px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 16px;
+    border-radius: 8px;
+    background-color: $gray-lightest;
+  }
+
+  &__line {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 20px;
+    background-color: $color-main;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+  }
+
+
+
+  &--sm {
+    height: 30px;
+
+    &:before {
+      height: 6px;
+      border-radius: 3px;
+    }
+
+    #{$block-name}__line {
+      height: 6px;
+      border-radius: 3px;
+    }
+
+    #{$block-name}__num {
+      position: absolute;
+      top: 0.7em;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: 500;
+      color: $color-main;
+    }
+  }
+}

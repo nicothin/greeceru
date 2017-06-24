@@ -2,28 +2,11 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, $media-условий...
 // Не пишите здесь другие селекторы.
 
-$gray-lightest:               hsl(0, 0%, 90%);
-$border-color:                hsl(0, 0%, 60%) !default;
-
-$line-height:                 1.375em !default;
-
-$field-padding-vertical:      0.3em !default;
-$field-padding-horizontal:    0.7em !default;
-
-$border-radius:               3px !default;
-
 .field-file {
   display: block;
-  margin-bottom: ($line-height / 2);
-
-  &__name {
-    font-weight: 700;
-    display: block;
-    margin-bottom: 0.4em;
-  }
 
   &__input-wrap {
-    display: block;
+    display: inline-block;
     position: relative;
   }
 
@@ -32,48 +15,77 @@ $border-radius:               3px !default;
     width: 1px;
     height: 1px;
     opacity: 0;
-
-    &:active ~ .field-file__name-text,
-    &:focus ~ .field-file__name-text {
-      @include field-focus;
-    }
   }
 
   &__name-text {
+    display: none;
     position: relative;
-    display: flex;
-    align-items: baseline;
     width: 100%;
-    background-color: #fff;
-    border: 1px solid $border-color;
-    border-radius: $border-radius;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     cursor: pointer;
 
-    &:before {
-      content: attr(data-button-text);
+    @media (min-width: $screen-md) {
       display: block;
-      background-color: $gray-lightest;
-      border-right: 1px solid $border-color;
-      margin-right: $field-padding-horizontal;
-      line-height: $line-height;
-      padding: $field-padding-vertical  $field-padding-horizontal;
-      border-top-left-radius: $border-radius;
-      border-bottom-left-radius: $border-radius;
-    }
-
-    &:hover,
-    &:focus {
-
-      &:before {
-        background-color: darken($gray-lightest, 10%); // как у обычных кнопок
-      }
     }
   }
 
-  &__help-text {
-    @include field-help-text;
+  &__name-pseudolink {
+    color: $color-main;
+  }
+
+  &__btn {
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+
+  &__uploading {
+    margin-top: 30px;
+  }
+
+  &__list {
+    margin: 15px 0 20px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__list-item-remove {
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+
+  &__list-filename {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__uploading-text {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  &__progress {
+    max-width: 230px;
+  }
+
+
+
+  &--mb30 {
+    margin-bottom: 30px;
+  }
+
+  &--sm {
+    font-size: $font-size--small;
   }
 }

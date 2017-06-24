@@ -112,4 +112,29 @@ $line-height:                 1.375em !default;
   &__help-text {
     @include field-help-text;
   }
+
+
+
+  &--sm {
+
+    #{$block-name}__name {
+      padding-left: 1.6em;
+    }
+
+    #{$block-name}__name-text {
+      font-size: $font-size--small;
+
+      &:before {
+        top: 3px;
+      }
+
+       @at-root #{$block-name}--sm input:checked ~ #{$block-name}__name-text:after {
+        top: 6px;
+      }
+    }
+  }
+
+  &--max490 {
+    max-width: 490px;
+  }
 }

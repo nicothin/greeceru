@@ -189,58 +189,58 @@
     }
   }
 
-  &__form {
-    max-width: 490px;
+  // &__form {
+  //   max-width: 490px;
 
-    .field-drop-checkboxes,
-    .field-text {
-      width: 100%;
-      max-width: 100%;
-      margin-bottom: 30px;
-    }
+  //   .field-drop-checkboxes,
+  //   .field-text {
+  //     width: 100%;
+  //     max-width: 100%;
+  //     margin-bottom: 30px;
+  //   }
 
-    &--wide {
-      max-width: 100%;
-    }
+  //   &--wide {
+  //     max-width: 100%;
+  //   }
 
-    &--wide-620 {
-      max-width: 620px;
-    }
-  }
+  //   &--wide-620 {
+  //     max-width: 620px;
+  //   }
+  // }
 
-  &__form-row-sm {
+  // &__form-row-sm {
 
-    @media (min-width: $screen-sm) {
-      display: flex;
-      flex-wrap: wrap;
-      margin-left: -15px;
-      margin-right: -15px;
+  //   @media (min-width: $screen-sm) {
+  //     display: flex;
+  //     flex-wrap: wrap;
+  //     margin-left: -15px;
+  //     margin-right: -15px;
 
-      #{$block-name}__form-col-1-2 {
-        padding-left: 15px;
-        padding-right: 15px;
-        flex-basis: 50%;
-        max-width: 50%;
-      }
-    }
-  }
+  //     #{$block-name}__form-col-1-2 {
+  //       padding-left: 15px;
+  //       padding-right: 15px;
+  //       flex-basis: 50%;
+  //       max-width: 50%;
+  //     }
+  //   }
+  // }
 
-  &__form-row-md {
+  // &__form-row-md {
 
-    @media (min-width: $screen-md) {
-      display: flex;
-      flex-wrap: wrap;
-      margin-left: -15px;
-      margin-right: -15px;
+  //   @media (min-width: $screen-md) {
+  //     display: flex;
+  //     flex-wrap: wrap;
+  //     margin-left: -15px;
+  //     margin-right: -15px;
 
-      #{$block-name}__form-col-1-2 {
-        padding-left: 15px;
-        padding-right: 15px;
-        flex-basis: 50%;
-        max-width: 50%;
-      }
-    }
-  }
+  //     #{$block-name}__form-col-1-2 {
+  //       padding-left: 15px;
+  //       padding-right: 15px;
+  //       flex-basis: 50%;
+  //       max-width: 50%;
+  //     }
+  //   }
+  // }
 
   &__text {
     max-width: 630px;
@@ -250,5 +250,12 @@
     height: 410px;
     margin-top: 20px;
     margin-bottom: 40px;
+  }
+
+  &__text-field-w-checkbox {
+
+    .field-text + .field-checkbox {
+      margin-top: 15px;
+    }
   }
 }

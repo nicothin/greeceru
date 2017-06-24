@@ -10,6 +10,8 @@ $line-height:                 1.375em !default;
 
 .form {
 
+  $block-name:                &;
+
   &:not(:last-child) {
     margin-bottom: $line-height;
   }
@@ -35,5 +37,68 @@ $line-height:                 1.375em !default;
     color: currentColor;
     margin-top: $line-height;
     margin-bottom: ($line-height / 2);
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    &--max490 {
+      max-width: 490px;
+    }
+  }
+
+  &__col {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-sm) {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+
+    &--sm-4-4 {
+
+      @media (min-width: $screen-sm) {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &--md-1-4 {
+
+      @media (min-width: $screen-md) {
+        flex-basis: 25%;
+        max-width: 25%;
+      }
+    }
+
+    &--md-2-4 {
+
+      @media (min-width: $screen-md) {
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+    }
+
+    &--md-push-1 {
+      @media (min-width: $screen-md) {
+        margin-right: 25%;
+      }
+    }
+
+    &--checkbox {
+      margin-bottom: 10px;
+
+      @media (min-width: $screen-sm) {
+        flex-basis: 33.3334%;
+        max-width: 33.3334%;
+      }
+    }
   }
 }

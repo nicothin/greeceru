@@ -84,7 +84,9 @@
     "field-multifile": [],
     "close-circle": [],
     "featured": [],
-    "photos-list": []
+    "photos-list": [],
+    "progress": [],
+    "fields-group": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
