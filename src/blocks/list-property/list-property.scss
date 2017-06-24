@@ -44,6 +44,11 @@
     margin: 0 0 20px;
     color: $gray;
     font-size: $font-size--small;
+
+    &--lg {
+      font-size: $font-size;
+      color: $text-color;
+    }
   }
 
   &__section {
@@ -192,6 +197,10 @@
       width: 100%;
       max-width: 100%;
       margin-bottom: 30px;
+    }
+
+    &--wide {
+      max-width: 100%;
     }
   }
 

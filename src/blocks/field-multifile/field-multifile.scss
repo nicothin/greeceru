@@ -1,0 +1,95 @@
+// В этом файле должны быть стили только для БЭМ-блока field-multifile, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.field-multifile {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 320px;
+  padding: 30px;
+  background-color: $gray-ultra-lightest;
+  // border: 1px dashed $gray;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, #D3D6DE 1px, #8991A7 2px, #D3D6DE 3px, #fff 4px, #fff 9px);
+    background-size: 10px 1px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, #D3D6DE 1px, #8991A7 2px, #D3D6DE 3px, #fff 4px, #fff 9px);
+    background-size: 10px 1px;
+  }
+
+  &__inner {
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 1px;
+      background-image: linear-gradient(to bottom, #D3D6DE 1px, #8991A7 2px, #D3D6DE 3px, #fff 4px, #fff 9px);
+      background-size: 1px 10px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 1px;
+      background-image: linear-gradient(to bottom, #D3D6DE 1px, #8991A7 2px, #D3D6DE 3px, #fff 4px, #fff 9px);
+      background-size: 1px 10px;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+  &__text {
+    display: none;
+    text-align: center;
+
+    &:before {
+      content: '';
+      display: block;
+      margin: 0 auto 20px;
+      width: 36px;
+      height: 36px;
+      background-image: svg-load('../blocks/field-multifile/bg_img/upload.svg');
+    }
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+  }
+
+  &__btn {
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+}

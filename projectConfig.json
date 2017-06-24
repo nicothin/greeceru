@@ -80,7 +80,8 @@
     "listing-property": [],
     "listing-property-optional": [],
     "listing-property-additional": [],
-    "price": []
+    "price": [],
+    "field-multifile": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
