@@ -492,87 +492,68 @@
                   <h1 class="page__h1">Add property</h1>
                 </header>
 
-                <form action="" class="form">
-
-                  <section class="list-property__section  list-property__section--pt35-xs">
-                    <h2 class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">Property address:</h2>
-                    <div class="form__row  form__row--max490">
-                      <div class="form__col">
-                        <div class="field-drop-checkboxes">
-                          <div class="field-drop-checkboxes__text-name  field-drop-checkboxes__text-name--sm">Country</div>
-                          <div class="field-drop-checkboxes__pseudoselect" id="country" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Greece</div>
-                          <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="country">
-                            <div class="field-checkbox__input-wrap">
-                              <label class="field-checkbox__name">
-                                <input class="field-checkbox__input" type="radio" name="country" checked>
-                                <span class="field-checkbox__name-text">Greece</span>
-                              </label>
-                            </div>
-                            <div class="field-checkbox__input-wrap">
-                              <label class="field-checkbox__name">
-                                <input class="field-checkbox__input" type="radio" name="country">
-                                <span class="field-checkbox__name-text">USA</span>
-                              </label>
-                            </div>
-                          </div>
+                <section class="list-property__section  list-property__section--pt35-xs">
+                  <h2 class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">Photos</h2>
+                  <p class="list-property__descr  list-property__descr--lg">You can upload up to 18 photos. Pay attention that photos with watermarks are not allowed!</p>
+                  <form action="" class="list-property__form  list-property__form--wide">
+                    <div class="photos-list">
+                      <div class="photos-list__item-main">
+                        <a href="" class="photos-list__img-link">
+                          <img src="img/joker.jpg" alt="" class="photos-list__img">
+                        </a>
+                        <button class="photos-list__item-del  close-circle"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                        <div class="photos-list__item-featured  featured  featured--active">
+                          <button class="featured__btn">
+                            <span class="featured__btn-inner">
+                              <svg class="featured__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star"></use></svg>
+                            </span>
+                          </button>
+                          <div class="featured__text">Marked as featured</div>
                         </div>
                       </div>
-                      <div class="form__col">
-                        <div class="field-drop-checkboxes">
-                          <div class="field-drop-checkboxes__text-name  field-drop-checkboxes__text-name--sm">Region</div>
-                          <div class="field-drop-checkboxes__pseudoselect" id="region" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Greece</div>
-                          <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="region">
-                            <div class="field-checkbox__input-wrap">
-                              <label class="field-checkbox__name">
-                                <input class="field-checkbox__input" type="radio" name="region" checked>
-                                <span class="field-checkbox__name-text">Region name region name region name</span>
-                              </label>
-                            </div>
-                            <div class="field-checkbox__input-wrap">
-                              <label class="field-checkbox__name">
-                                <input class="field-checkbox__input" type="radio" name="region">
-                                <span class="field-checkbox__name-text">Region name region name region name</span>
-                              </label>
-                            </div>
+                      <div class="photos-list__row">
+                        <div class="photos-list__item">
+                          <a href="" class="photos-list__img-link">
+                            <img src="img/joker.jpg" alt="" class="photos-list__img">
+                          </a>
+                          <button class="photos-list__item-del  close-circle"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                          <div class="photos-list__item-featured  featured">
+                            <button class="featured__btn">
+                              <span class="featured__btn-inner">
+                                <svg class="featured__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star"></use></svg>
+                              </span>
+                            </button>
                           </div>
                         </div>
-                      </div>
-                      <div class="form__col  form__col--sm-4-4">
-                        <label class="field-text">
-                          <span class="field-text__name  field-text__name--sm">Street address and nubmer</span>
-                          <span class="field-text__input-wrap">
-                            <input class="field-text__input" type="text" placeholder="House number, street, road">
-                          </span>
-                        </label>
-                      </div>
-                      <div class="form__col">
-                        <label class="field-text">
-                          <span class="field-text__name  field-text__name--sm">City</span>
-                          <span class="field-text__input-wrap">
-                            <input class="field-text__input" type="text" placeholder="">
-                          </span>
-                        </label>
-                      </div>
-                      <div class="form__col">
-                        <label class="field-text">
-                          <span class="field-text__name  field-text__name--sm">State</span>
-                          <span class="field-text__input-wrap">
-                            <input class="field-text__input" type="text" placeholder="">
-                          </span>
-                        </label>
-                      </div>
-                      <div class="form__col">
-                        <label class="field-text">
-                          <span class="field-text__name  field-text__name--sm">Zip code</span>
-                          <span class="field-text__input-wrap">
-                            <input class="field-text__input" type="text" placeholder="">
-                          </span>
-                        </label>
+                        <div class="photos-list__item">
+                          <a href="" class="photos-list__img-link">
+                            <img src="img/harly.jpg" alt="" class="photos-list__img">
+                          </a>
+                          <button class="photos-list__item-del  close-circle"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                          <div class="photos-list__item-featured  featured">
+                            <button class="featured__btn">
+                              <span class="featured__btn-inner">
+                                <svg class="featured__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star"></use></svg>
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="photos-list__item">
+                          <label class="field-multifile  field-multifile--mini">
+                            <span class="field-multifile__inner">
+                              <input class="field-multifile__input" type="file" multiple>
+                              <span class="field-multifile__text-mini">
+                                <svg class="field-multifile__plus" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plus-circle"></use></svg>
+                                Upload more <br> photos
+                              </span>
+                            </span>
+                          </label>
+                        </div>
                       </div>
                     </div>
-                  </section>
 
-                </form>
+                  </form>
+                </section>
 
               </article>
 
