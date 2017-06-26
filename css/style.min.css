@@ -4425,16 +4425,28 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     position: relative; }
 .fields-group .field-text__input:focus {
       z-index: 1; }
-.fields-group .field-drop-checkboxes:not(:first-child):not(:last-child) .field-drop-checkboxes__pseudoselect {
-    border-radius: 0;
-    border-right: 0; }
-.fields-group .field-drop-checkboxes:first-child .field-drop-checkboxes__pseudoselect {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-right: 0; }
-.fields-group .field-drop-checkboxes:last-child .field-drop-checkboxes__pseudoselect {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0; }
+.fields-group__add {
+    display: inline-block;
+    vertical-align: middle;
+    min-height: 40px;
+    padding: 13px 14px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: inherit;
+    background-color: #fff;
+    border: 1px solid #e9edf2;
+    border-radius: 2px; }
+.fields-group__add:not(:first-child):not(:last-child) {
+      border-radius: 0;
+      border-right: 0; }
+.fields-group__add:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right: 0; }
+.fields-group__add:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0; }
 @media (min-width: 480px) and (max-width: 767px){
   .blog__post-list .subscribing{
     padding-left: 90px;
@@ -4894,7 +4906,9 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     -ms-flex-align: start;
     align-items: flex-start; }
   .photos-list__img{
-    max-height: 230px; } }
+    max-height: 230px; }
+  .fields-group__add{
+    padding: 9px 14px; } }
 @media (min-width: 768px) and (max-width: 969px){
   .locations-list__item{
     width: 50%;
