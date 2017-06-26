@@ -5,6 +5,9 @@
 $line-height:                 1.375em !default;
 
 .field-radio {
+
+  $block-name:                &;
+
   display: block;
   margin-bottom: ($line-height / 2);
 
@@ -18,14 +21,14 @@ $line-height:                 1.375em !default;
   &__input-wrap {
 
     & + & {
-      margin-top: ($line-height / 2);
+      margin-top: 15px;
     }
   }
 
   &__name {
     position: relative;
     display: inline-block;
-    padding-left: 1.5em;
+    padding-left: 23px;
     margin-right: 0.6em;
     font-weight: 400;
     line-height: $line-height;
@@ -33,42 +36,43 @@ $line-height:                 1.375em !default;
 
   &__name-text {
 
-    // свой чекбокс
-    // &:before {
-    //   content: '';
-    //   position: absolute;
-    //   top: 0.1em;
-    //   left: 0;
-    //   width: 14px;
-    //   height: 14px;
-    //   background-image: svg-load('../blocks/field-radio/img_to_bg/radiobutton.svg');
-    //   background-size: 100%;
-    // }
-    // @at-root input:checked ~ &:before {
-    //   background-image: svg-load('../blocks/field-radio/img_to_bg/radiobutton--checked.svg');
-    // }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0.2em;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid $gray-lighten;
+      background-color: $gray-ultra-lightest;
+    }
+
+    @at-root input:checked ~ &:before {
+      background-color: $color-main--ultralight;
+      border-color: $color-main;
+    }
+
+    @at-root input:checked ~ &:after {
+      content: '';
+      position: absolute;
+      top: calc(0.2em + 4px);
+      left: 4px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $color-main;
+    }
   }
 
   &__input {
     position: absolute;
-    top: 0.8em;
+    top: 0;
     left: 0;
-    padding: 0;
-    margin: 0;
-    transform: translateY(-50%);
-
-    &:focus,
-    &:active {
-      @include field-focus;
-    }
-
-    // сокрытие инпута в случае использования своего чекбокса
-    // top: 0;
-    // left: 0;
-    // width: 0;
-    // height: 0;
-    // overflow: hidden;
-    // visibility: hidden;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
   }
 
   &__help-text-wrap {
@@ -77,5 +81,27 @@ $line-height:                 1.375em !default;
 
   &__help-text {
     @include field-help-text;
+  }
+
+
+
+  &--md-inline {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+
+      #{$block-name}__input-wrap {
+        margin-right: 20px;
+      }
+
+      #{$block-name}__input-wrap + #{$block-name}__input-wrap {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &--mb30 {
+    margin-bottom: 30px;
   }
 }

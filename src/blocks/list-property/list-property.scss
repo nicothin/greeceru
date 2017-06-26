@@ -18,6 +18,10 @@
     & > *:last-child {
       margin-bottom: 0;
     }
+
+    &--no-border {
+      border-bottom: 0;
+    }
   }
 
   &__subtitle-wrap {

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>greece_ru</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header--steps.html')
+
+      <main class="page__main-content" role="main">
+
+        <div class="layout-text">
+
+          <div class="layout-text__main  layout-text__main--has-desktop-bottom-btns">
+            <div class="layout-text__main-inner">
+
+              <article class="list-property">
+
+                <header class="list-property__header">
+                  <h1 class="page__h1">Payment setup</h1>
+                </header>
+
+                <form action="" class="form">
+
+                  <section class="list-property__section  list-property__section--pt35-xs">
+                    <h2 class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">Please complete your details to get check or invoice</h2>
+                    <div class="field-radio  field-radio--mb30  field-radio--md-inline">
+                      <div class="field-radio__input-wrap">
+                        <label class="field-radio__name">
+                          <input class="field-radio__input" type="radio" name="demo-radio" checked>
+                          <span class="field-radio__name-text">Check (for individuals)</span>
+                        </label>
+                      </div>
+                      <div class="field-radio__input-wrap">
+                        <label class="field-radio__name">
+                          <input class="field-radio__input" type="radio" name="demo-radio">
+                          <span class="field-radio__name-text">Invoice (for companies)</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form__row  form__row--max490">
+                      <div class="form__col">
+                        <label class="field-text  field-text--success">
+                          <span class="field-text__name  field-text__name--sm">Name</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="" value="Удачно">
+                          </span>
+                        </label>
+                      </div>
+                      <div class="form__col">
+                        <label class="field-text  field-text--error">
+                          <span class="field-text__name  field-text__name--sm">Surname</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="" value="Ошибочно">
+                            <span class="field-text__help-text">This field is required</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="form__col">
+                        <label class="field-text">
+                          <span class="field-text__name  field-text__name--sm">City</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="">
+                          </span>
+                        </label>
+                      </div>
+                      <div class="form__col">
+                        <label class="field-text">
+                          <span class="field-text__name  field-text__name--sm">Tax number</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="">
+                          </span>
+                        </label>
+                      </div>
+                      <div class="form__col  form__col--lg-show  form__col--push-left-2-4">
+                        <button class="btn  btn--block">Confirm and pay</button>
+                      </div>
+                    </div>
+                  </section>
+
+                </form>
+
+              </article>
+
+            </div>
+
+          </div>
+
+          <div class="layout-text__aside  layout-text__aside--bg-transparent">
+            <aside class="layout-text__aside-inner" role="complementary"></aside>
+          </div>
+
+          <div class="layout-text__btns-desktop">
+            <div class="layout-text__btns-desktop-pseudocontent">
+              <div class="layout-text__btns-desktop-inner">
+                <div class="layout-text__btns-desktop-left">
+                  <a href="" class="layout-text__btns-back">
+                    <svg width="9" height="8"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-left"></use></svg>
+                    Back
+                  </a>
+                </div>
+                <div class="layout-text__btns-desktop-shadow"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layout-text__btns-mobile">
+            <a href="" class="layout-text__btns-mobile-item">Confirm and pay</a>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <div id="your-order" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Your order</h4>
+        </div>
+        <div class="modal__body">
+          <div class="order-short-list">
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Property type</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item">
+                  <div class="order-short-list__name">Sale</div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Basic service</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item">
+                  <div class="order-short-list__name">Listing to greece.ru</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Optional service</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove  close-circle" title="Remove"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                  <div class="order-short-list__name">Nice looking master plan</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove  close-circle" title="Remove"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                  <div class="order-short-list__name">Nice looking master plan</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-short-list__item">
+              <h4 class="order-short-list__title">Additiona services</h4>
+              <ul class="order-short-list__sublist">
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove  close-circle" title="Remove"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                  <div class="order-short-list__name">Professional photography Professional photography Professional photography </div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
+                  <button class="order-short-list__remove  close-circle" title="Remove"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                  <div class="order-short-list__name">Aerial video</div>
+                  <div class="order-short-list__price"> € 125</div>
+                </li>
+              </ul>
+            </div>
+            <div class="order-short-list__item">
+              <div class="order-short-list__total-wrapper">
+                <div class="order-short-list__name">Total </div>
+                <div class="order-short-list__price"> € 125</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

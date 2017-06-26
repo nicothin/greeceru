@@ -87,8 +87,21 @@ $line-height:                 1.375em !default;
     }
 
     &--md-push-1 {
+
       @media (min-width: $screen-md) {
         margin-right: 25%;
+      }
+    }
+
+    &--push-left-2-4 {
+      margin-left: 50%;
+    }
+
+    &--lg-show {
+      display: none;
+
+      @media (min-width: $screen-lg) {
+        display: block;
       }
     }
 

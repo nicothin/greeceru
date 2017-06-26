@@ -64,6 +64,13 @@
       min-width: 33%;
       background-color: $gray-ultra-lightest;
     }
+
+    &--bg-transparent {
+
+      @media (min-width: $screen-lg) {
+        background-color: transparent;
+      }
+    }
   }
 
   &__aside-inner {
