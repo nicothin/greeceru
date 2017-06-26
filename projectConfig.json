@@ -86,7 +86,10 @@
     "featured": [],
     "photos-list": [],
     "progress": [],
-    "fields-group": []
+    "fields-group": [],
+    "main-pict": [],
+    "list-check": [],
+    "location-props": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

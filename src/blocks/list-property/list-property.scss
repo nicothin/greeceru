@@ -20,6 +20,28 @@
     }
   }
 
+  &__subtitle-wrap {
+
+    @media (min-width: $screen-md) {
+      flex-shrink: 0;
+      width: 200px;
+      min-width: 200px;
+      padding-right: 15px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 260px;
+      min-width: 260px;
+    }
+  }
+
+  &__content-col {
+
+    @media (min-width: $screen-md) {
+      flex-grow: 1;
+    }
+  }
+
   &__subtitle {
     display: none;
     margin: 0 0 5px;
@@ -33,6 +55,10 @@
 
     &--mb20 {
       margin-bottom: 20px;
+    }
+
+    &--mb30 {
+      margin-bottom: 30px;
     }
 
     &--show-xs {
@@ -104,6 +130,30 @@
 
     &--pt35-xs {
       padding-top: 35px;
+    }
+
+    &--pb35-xs:not(:last-child) {
+      padding-bottom: 35px;
+    }
+
+    &--md-columns {
+
+      @media (min-width: $screen-md) {
+        display: flex;
+        align-items: baseline;
+      }
+    }
+
+    &--md-columns-center {
+
+      @media (min-width: $screen-md) {
+        display: flex;
+        align-items: center;
+
+        .list-property__subtitle--mb20 {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 
@@ -189,59 +239,6 @@
     }
   }
 
-  // &__form {
-  //   max-width: 490px;
-
-  //   .field-drop-checkboxes,
-  //   .field-text {
-  //     width: 100%;
-  //     max-width: 100%;
-  //     margin-bottom: 30px;
-  //   }
-
-  //   &--wide {
-  //     max-width: 100%;
-  //   }
-
-  //   &--wide-620 {
-  //     max-width: 620px;
-  //   }
-  // }
-
-  // &__form-row-sm {
-
-  //   @media (min-width: $screen-sm) {
-  //     display: flex;
-  //     flex-wrap: wrap;
-  //     margin-left: -15px;
-  //     margin-right: -15px;
-
-  //     #{$block-name}__form-col-1-2 {
-  //       padding-left: 15px;
-  //       padding-right: 15px;
-  //       flex-basis: 50%;
-  //       max-width: 50%;
-  //     }
-  //   }
-  // }
-
-  // &__form-row-md {
-
-  //   @media (min-width: $screen-md) {
-  //     display: flex;
-  //     flex-wrap: wrap;
-  //     margin-left: -15px;
-  //     margin-right: -15px;
-
-  //     #{$block-name}__form-col-1-2 {
-  //       padding-left: 15px;
-  //       padding-right: 15px;
-  //       flex-basis: 50%;
-  //       max-width: 50%;
-  //     }
-  //   }
-  // }
-
   &__text {
     max-width: 630px;
   }
@@ -257,5 +254,10 @@
     .field-text + .field-checkbox {
       margin-top: 15px;
     }
+  }
+
+  &__location-name {
+    display: block;
+    padding: 40px 0 15px;
   }
 }

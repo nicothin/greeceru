@@ -1,0 +1,51 @@
+// В этом файле должны быть стили только для БЭМ-блока list-check, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.list-check {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    position: relative;
+    padding-right: 10px;
+    padding-left: 32px;
+    flex-basis: 50%;
+    max-width: 50%;
+
+    @media (min-width: $screen-osx) {
+      flex-basis: 33.3334%;
+      max-width: 33.3334%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-color: $gray;
+      border-radius: 50%;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 5px;
+      width: 10px;
+      height: 5px;
+      border-left: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      transform: rotate(-47deg);
+    }
+  }
+}
