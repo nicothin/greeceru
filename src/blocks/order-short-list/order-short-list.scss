@@ -32,7 +32,7 @@
         bottom: 0;
         height: 1px;
         width: 100%;
-        background-image: linear-gradient(to right, #D3D6DE 1px, #8991A7 2px, #D3D6DE 3px, #fff 4px, #fff 9px);
+        background-image: linear-gradient(to right, #d3d6de 1px, #8991a7 2px, #d3d6de 3px, #fff 4px, #fff 9px);
         background-size: 10px 1px;
       }
     }
@@ -72,7 +72,13 @@
     padding-right: 5px;
 
     // Увы и ах. Хак для Сафари :(
-    _::-webkit-full-page-media, _:future, :root & {padding-top: 3px;}
+    /* stylelint-disable selector-type-no-unknown */
+    _::-webkit-full-page-media,
+    _:future,
+    :root & {
+      padding-top: 3px;
+    }
+    /* stylelint-enable selector-type-no-unknown */
   }
 
   &__remove {
@@ -97,6 +103,7 @@
     border: 1px solid $gray-lightest;
     padding: 20px;
     max-width: 450px;
+    margin-bottom: 15px;
 
     #{$block-name}__title {
       margin: 0;
