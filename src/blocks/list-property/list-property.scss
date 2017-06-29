@@ -175,6 +175,11 @@
   &__select-type-or {
     margin-left: 1em;
     margin-right: 1em;
+    width: 100%;
+
+    @media (min-width: $screen-md) {
+      width: auto;
+    }
   }
 
   &__service-list {

@@ -104,6 +104,10 @@ $border-radius:               3px !default;
     }
   }
 
+  &--minw-230 {
+    min-width: 230px;
+  }
+
   &--block {
     display: block;
     width: 100%;
