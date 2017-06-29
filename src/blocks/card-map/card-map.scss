@@ -197,15 +197,63 @@
 
 
 
-
-
   &--micro {
     cursor: pointer;
-    width: auto;
-    max-width: 218px;
     padding: 0 10px;
-    height: 28px;
+    width: 127px;
+    height: 40px;
     line-height: 28px;
-    border: 1px solid $gray-lightest;
+    background-color: transparent;
+    background-image: url(../img/label-lg.svg);
+    background-size: 107px 34px;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    box-shadow: none;
+    text-align: center;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  &--micro-md {
+    cursor: pointer;
+    padding: 0 10px;
+    width: 100px;
+    height: 40px;
+    line-height: 28px;
+    background-color: transparent;
+    background-image: url(../img/label-md.svg);
+    background-size: 107px 34px;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    box-shadow: none;
+    text-align: center;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  &--micro-sm {
+    cursor: pointer;
+    padding: 0 10px;
+    width: 74px;
+    height: 40px;
+    line-height: 28px;
+    background-color: transparent;
+    background-image: url(../img/label-sm.svg);
+    background-size: 107px 34px;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    box-shadow: none;
+    text-align: center;
+
+    &:before,
+    &:after {
+      display: none;
+    }
   }
 }
