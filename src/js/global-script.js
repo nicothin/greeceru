@@ -158,4 +158,11 @@ $( document ).ready(function() {
     $(this).find('iframe').attr('src', src);
   });
 
+  // карусель фоток в блоке internal-property
+  $('.main-pict__carousel.owl-carousel').owlCarousel({
+    items: 1,
+    nav: true,
+    autoHeight: true,
+  });
+
 });

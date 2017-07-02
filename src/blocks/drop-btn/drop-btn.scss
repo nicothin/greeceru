@@ -1,0 +1,24 @@
+// В этом файле должны быть стили только для БЭМ-блока drop-btn, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.drop-btn {
+  position: relative;
+
+  &.open {
+    color: $color-main;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 1px solid $gray-lightest;
+    border-radius: $border-radius;
+    outline: none;
+    color: currentColor;
+  }
+}

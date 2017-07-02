@@ -89,7 +89,9 @@
     "fields-group": [],
     "main-pict": [],
     "list-check": [],
-    "location-props": []
+    "location-props": [],
+    "drop-btn": [],
+    "drop-menu": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
