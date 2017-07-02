@@ -3,10 +3,25 @@
 // Не пишите здесь другие селекторы.
 
 .drop-btn {
+
+  $block-name:                &;
+
   position: relative;
 
   &.open {
     color: $color-main;
+    z-index: 1;
+
+    #{$block-name}__drop {
+      height: auto;
+      width: 230px;
+      max-width: 230px;
+      opacity: 1;
+    }
+
+    #{$block-name}__btn svg {
+      fill: $color-main;
+    }
   }
 
   &__btn {
@@ -20,5 +35,17 @@
     border-radius: $border-radius;
     outline: none;
     color: currentColor;
+  }
+
+  &__drop {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity $transition-time;
+    box-shadow: $shadow;
   }
 }

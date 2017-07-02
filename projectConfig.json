@@ -91,7 +91,8 @@
     "list-check": [],
     "location-props": [],
     "drop-btn": [],
-    "drop-menu": []
+    "drop-menu": [],
+    "social-link": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

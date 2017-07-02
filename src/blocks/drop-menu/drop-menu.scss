@@ -1,7 +1,75 @@
-// В этом файле должны быть стили только для БЭМ-блока drop-menu, его элементов, 
+// В этом файле должны быть стили только для БЭМ-блока drop-menu, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Не пишите здесь другие селекторы.
 
 .drop-menu {
-  
+
+  $block-name:                &;
+
+  margin: 0;
+  padding: 7px 0;
+  list-style: none;
+  background-color: #fff;
+  border-radius: $border-radius;
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 11px 20px;
+    color: $text-color;
+    transition: color $transition-time;
+
+    &:hover,
+    &:focus {
+      color: $color-main;
+
+      #{$block-name}__icon {
+        fill: $color-main;
+      }
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    display: block;
+    margin-right: 20px;
+    transition: fill $transition-time;
+  }
+
+  .social-link {
+    flex-shrink: 0;
+    margin-right: 18px;
+  }
+
+  &__item-text {
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__pseudoheader-text {
+    display: block;
+    padding: 11px 20px 5px 20px;
+    color: $gray;
+
+    #{$block-name}__item:not(:first-child) & {
+      padding: 20px 20px 5px 20px;
+      margin-top: 11px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 11px;
+        left: 20px;
+        right: 20px;
+        height: 1px;
+        background-color: $gray-lightest;
+      }
+    }
+  }
 }

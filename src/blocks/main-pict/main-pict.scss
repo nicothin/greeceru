@@ -109,6 +109,11 @@
     z-index: 1;
     left: 20px;
     bottom: 20px;
+    display: flex;
+
+    .drop-btn:not(:last-child) {
+      margin-right: 20px;
+    }
   }
 
 

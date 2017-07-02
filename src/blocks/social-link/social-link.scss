@@ -1,0 +1,13 @@
+// В этом файле должны быть стили только для БЭМ-блока social-link, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.social-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $text-color;
+  border-radius: 50%;
+}
