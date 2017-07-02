@@ -43,5 +43,9 @@
   &__view {
     display: inline-block;
     margin-top: 20px;
+
+    &--mt0 {
+      margin-top: 0;
+    }
   }
 }

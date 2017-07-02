@@ -1,0 +1,23 @@
+// В этом файле должны быть стили только для БЭМ-блока tooltip-all, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.tooltip-all {
+  display: inline-block;
+  margin-left: 0.6em;
+  vertical-align: -0.1em;
+  width: 12px;
+  height: 12px;
+
+  &:hover,
+  &:focus {
+
+    svg {
+      fill: $color-main;
+    }
+  }
+
+  svg {
+    fill: $gray;
+  }
+}

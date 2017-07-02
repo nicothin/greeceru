@@ -92,7 +92,8 @@
     "location-props": [],
     "drop-btn": [],
     "drop-menu": [],
-    "social-link": []
+    "social-link": [],
+    "tooltip-all": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -4,6 +4,8 @@
 
 .btn-icon {
 
+  $block-name:                &;
+
   &__text {
     position: absolute;
     top: 0;
@@ -61,6 +63,59 @@
       border-radius: 50%;
       background-color: currentColor;
       box-shadow: 0 -7px 0 currentColor, 0 7px 0 currentColor;
+    }
+  }
+
+  &--real-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 1px solid $gray-lightest;
+    border-radius: $border-radius;
+    outline: none;
+    color: currentColor;
+    cursor: pointer;
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+      border-right: 0;
+    }
+
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right: 0;
+    }
+
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  &--add-text {
+    min-width: 40px;
+    width: auto;
+    border: 1px solid $gray-lightest !important;
+    border-radius: $border-radius !important;
+
+    svg {
+      width: 22px;
+      margin: 0 9px;
+    }
+
+    #{$block-name}__text {
+      position: static;
+      width: 120px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      font-weight: 500;
+      font-size: $font-size--small;
+      border-left: 1px solid $gray-lightest;
     }
   }
 }

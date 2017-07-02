@@ -20,9 +20,9 @@ $( document ).ready(function() {
   function tooltipsInit(){
     var containerWidth = $(window).width() + scrollWidth;
     if(containerWidth >= 1170) {
-      $('[data-toggle="tooltip"]').tooltip();
+      $('[data-toggle="tooltip"]:not(.tooltip-all)').tooltip();
     } else {
-      $('[data-toggle="tooltip"]').tooltip('destroy');
+      $('[data-toggle="tooltip"]:not(.tooltip-all)').tooltip('destroy');
     }
   }
   var tooltipsTimeoutId;
@@ -31,6 +31,7 @@ $( document ).ready(function() {
     tooltipsTimeoutId = setTimeout(tooltipsInit, 200);
   });
   tooltipsInit();
+  $('.tooltip-all').tooltip();
 
   // включение полифила для object-fit: cover; в днищебраузерах
   objectFitImages();
@@ -147,7 +148,7 @@ $( document ).ready(function() {
 
   // плавный скролл для якорных ссылок
   $('a[href^="#"]:not([data-toggle])').on('click',function(e){
-    var target_position = $(this.hash).offset().top - 56; // 56 — высота хедера, причитого к верху вьюпорта
+    var target_position = $(this.hash).offset().top - 56; // 56 — высота хедера, прибитого к верху вьюпорта
     $('body,html').animate({'scrollTop':target_position},350);
   });
 

@@ -10,4 +10,10 @@
   height: 20px;
   border: 1px solid $text-color;
   border-radius: 50%;
+  transition: all $transition-time;
+
+  svg {
+    fill: currentColor;
+    transition: fill $transition-time;
+  }
 }

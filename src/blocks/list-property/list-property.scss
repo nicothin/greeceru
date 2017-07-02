@@ -37,6 +37,10 @@
       width: 260px;
       min-width: 260px;
     }
+
+    &--w-a {
+      width: auto !important;
+    }
   }
 
   &__content-col {
@@ -83,6 +87,10 @@
 
   &__section {
     padding-top: 8px;
+
+    &.comments {
+      margin: 0;
+    }
 
     @media (min-width: $screen-lg) {
       padding-top: 35px;
@@ -154,9 +162,17 @@
         display: flex;
         align-items: center;
 
-        .list-property__subtitle--mb20 {
+        #{$block-name}__subtitle--mb20 {
           margin-bottom: 0;
         }
+      }
+    }
+
+    &--md-columns-top {
+
+      @media (min-width: $screen-md) {
+        display: flex;
+        align-items: top;
       }
     }
   }
@@ -268,9 +284,81 @@
   &__location-name {
     display: block;
     padding: 40px 0 15px;
+
+    &--has-breadcrumbs {
+      padding-bottom: 4px;
+      margin-bottom: 0;
+    }
+
+    & + .breadcrumbs {
+      margin-bottom: 25px;
+    }
   }
 
   &__main-pict {
     position: relative;
+  }
+
+  &__main-pict-descr {
+    margin-top: 10px;
+    font-size: $font-size--small;
+  }
+
+  &__id {
+    display: inline-block;
+    margin-right: 1em;
+  }
+
+  &__price-info {
+    display: block;
+    margin-top: 5px;
+    font-size: $font-size--small;
+  }
+
+  &__price-follow {
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+
+  &__price-follow-success {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: $color-success;
+  }
+
+  &__price-dynamics {
+
+    @media (min-width: $screen-osx) {
+      display: flex;
+    }
+  }
+
+  &__price-dynamics-part {
+    display: block;
+
+    & + & {
+      margin-top: 5px;
+
+      @media (min-width: $screen-osx) {
+        margin-top: 0;
+        margin-left: 3em;
+      }
+    }
+  }
+
+  &__price-arr {
+    display: inline-block;
+    margin-left: 0.4em;
+
+    svg {
+      fill: $color-success;
+    }
+
+    &--danger {
+
+      svg {
+        fill: $color-danger;
+      }
+    }
   }
 }

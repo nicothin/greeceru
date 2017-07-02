@@ -30,6 +30,11 @@
       #{$block-name}__icon {
         fill: $color-main;
       }
+
+      .social-link {
+        color: $color-main;
+        border-color: $color-main;
+      }
     }
   }
 
