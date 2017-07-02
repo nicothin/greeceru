@@ -3225,10 +3225,6 @@ a.ui-state-default:hover, a.ui-state-default:focus {
 .contacts-map .layout-text__h2 {
     margin-top: 10px;
     margin-bottom: 35px; }
-.contacts-map .field-text {
-    margin-bottom: 15px; }
-.contacts-map .btn {
-    margin-top: 8px; }
 .contacts-map__location-wrapper {
     position: relative;
     -ms-flex-positive: 1;
@@ -3255,9 +3251,14 @@ a.ui-state-default:hover, a.ui-state-default:focus {
 .contacts-map__arrow-icon {
     display: none; }
 .contacts-map__search-line {
-    margin-bottom: 40px; }
+    margin-bottom: 25px; }
+.contacts-map__search-line .field-text {
+      margin-bottom: 15px; }
+.contacts-map__search-line .btn {
+      margin-top: 8px; }
 .contacts-map__map-wrapper {
-    width: 100%; }
+    width: 100%;
+    position: relative; }
 .contacts-map__map {
     width: 100%;
     height: 410px;
@@ -3274,6 +3275,56 @@ a.ui-state-default:hover, a.ui-state-default:focus {
         color: #346af4; }
 .contacts-map__data-item {
     margin-bottom: 6px; }
+.contacts-map__prop-text {
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 12px; }
+.contacts-map__members {
+    display: none;
+    position: absolute;
+    right: 20px;
+    bottom: 10px; }
+.contacts-map__members-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: -ms-flexbox;
+    display: flex; }
+.contacts-map__members-item {
+    position: relative;
+    z-index: 1; }
+.contacts-map__members-item:not(:first-child) {
+      margin-left: -26px; }
+.contacts-map__members-item a {
+      display: block;
+      width: 64px;
+      height: 64px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      overflow: hidden; }
+.contacts-map__members-item img {
+      display: block;
+      width: 60px;
+      height: 60px; }
+.contacts-map__members-item--num {
+      z-index: 0; }
+.contacts-map__members-item--active {
+      z-index: 2; }
+.contacts-map__members-num {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    width: 60px;
+    height: 60px;
+    padding: 12px;
+    background-color: #c5cad9;
+    color: #31353f;
+    font-weight: 500; }
+.contacts-map__members-btn {
+    margin-left: 20px; }
 .our-history {
   margin: 0;
   padding: 0;
@@ -3961,6 +4012,11 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     margin-bottom: 30px; }
 .list-property__subtitle--show-xs {
     display: block; }
+.list-property__h3 {
+  margin-top: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500; }
 .list-property__descr {
   margin: 0 0 20px;
   color: #8891a6;
@@ -4083,6 +4139,8 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     fill: #38a53d; }
 .list-property__price-arr--danger svg {
     fill: #d94168; }
+.list-property--internal-property {
+  padding-bottom: 65px; }
 .order-short-list__header {
   margin: 0 0 20px;
   padding: 0 0 18px;
@@ -4945,6 +5003,11 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     fill: #477afb; }
 .tooltip-all svg {
     fill: #8891a6; }
+.more-link__icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.3em;
+  fill: #477afb; }
 @media (min-width: 480px) and (max-width: 767px){
   .blog__post-list .subscribing{
     padding-left: 90px;
@@ -5293,6 +5356,11 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     margin-left: 10px; }
   .social-contacts--share .social-contacts__right-text{
     margin-right: 0; }
+  .contacts-map__members{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center; }
   .in-region__controls{
     position: absolute;
     z-index: 1;
@@ -6069,14 +6137,6 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     padding-top: 12px; }
   .team__list{
     margin-left: 0; }
-  .contacts-map .field-text{
-    margin-bottom: 0;
-    -ms-flex-positive: 1;
-    flex-grow: 1; }
-  .contacts-map .btn{
-    margin-top: 0;
-    margin-left: 30px;
-    min-width: 220px; }
   .contacts-map__location-wrapper{
     padding-left: 42px; }
   .contacts-map__location-wrapper .field-text__input{
@@ -6094,6 +6154,14 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     -ms-flex-align: center;
     align-items: center;
     margin-bottom: 20px; }
+  .contacts-map__search-line .field-text{
+    margin-bottom: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1; }
+  .contacts-map__search-line .btn{
+    margin-top: 0;
+    margin-left: 30px;
+    min-width: 220px; }
   .contacts-map__data-list{
     display: -ms-flexbox;
     display: flex;
