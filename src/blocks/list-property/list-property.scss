@@ -74,6 +74,13 @@
     }
   }
 
+  &__h3 {
+    margin-top: 0;
+    padding: 0;
+    font-size: $font-size;
+    font-weight: 500;
+  }
+
   &__descr {
     margin: 0 0 20px;
     color: $gray;
@@ -360,5 +367,11 @@
         fill: $color-danger;
       }
     }
+  }
+
+
+
+  &--internal-property {
+    padding-bottom: 65px;
   }
 }

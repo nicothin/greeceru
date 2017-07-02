@@ -647,7 +647,172 @@
                   <h2 class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">Infrastructure points & distances to House for Sale «Silvia»</h2>
                 </div>
                 <div class="list-property__content-col">
-                  111
+                  <div class="contacts-map">
+                    <div class="contacts-map__prop-text">Property location</div>
+                    <form class="contacts-map__search-line">
+                      <div class="contacts-map__location-wrapper">
+                        <span class="contacts-map__location-icon">
+                          <svg width="10" height="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#location"></use></svg>
+                        </span>
+                        <label class="field-text">
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="Type in your location...">
+                          </span>
+                        </label>
+                      </div>
+                      <span class="contacts-map__arrow-icon">
+                        <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                      </span>
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="" value="Nikis Avenue 1, Thessaloniki 546 24">
+                        </span>
+                      </label>
+                      <button class="btn  btn--white  btn--wide">Get Direction</button>
+                    </form>
+                    <div class="contacts-map__map-wrapper">
+                      <div class="contacts-map__map" id="contacts-map"></div>
+                      <div class="contacts-map__members">
+                        <ul class="contacts-map__members-list">
+                          <li class="contacts-map__members-item">
+                            <a href=""><img src="img/feedback-avatar-01.png" alt="User name"></a>
+                          </li>
+                          <li class="contacts-map__members-item">
+                            <a href=""><img src="img/feedback-avatar-01.png" alt="User name"></a>
+                          </li>
+                          <li class="contacts-map__members-item">
+                            <a href=""><img src="img/feedback-avatar-01.png" alt="User name"></a>
+                          </li>
+                          <li class="contacts-map__members-item  contacts-map__members-item--active">
+                            <a href=""><img src="img/feedback-avatar-01.png" alt="User name"></a>
+                          </li>
+                          <li class="contacts-map__members-item">
+                            <a href=""><img src="img/feedback-avatar-01.png" alt="User name"></a>
+                          </li>
+                          <li class="contacts-map__members-item  contacts-map__members-item--num">
+                            <a href=""><span class="contacts-map__members-num">+16</span></a>
+                          </li>
+                        </ul>
+                        <a href="" class="btn  contacts-map__members-btn">Become a Member</a>
+                      </div>
+                      <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjGAiz42P2243i_aoNCu4Pf0vU_xDWcZk&amp;signed_in=true&amp;callback=initMap"></script>
+                      <script>
+                        var mapPoints = [
+                          [
+                            'Map point',
+                            59.95016094,
+                            30.31612718,
+                            'img/contacts-map-marker.png',
+                            70, 80,
+                            35, 63
+                          ],
+                          [
+                            'Some point',
+                            59.95916094,
+                            30.31912718,
+                            'img/contacts-map-marker--coffee.png',
+                            50, 58,
+                            26, 47
+                          ],
+                          [
+                            'Some point',
+                            59.95916094,
+                            30.30512718,
+                            'img/contacts-map-marker--drink.png',
+                            50, 58,
+                            26, 47
+                          ],
+                          [
+                            'Some point',
+                            59.96416094,
+                            30.30512718,
+                            'img/contacts-map-marker--fun.png',
+                            50, 58,
+                            26, 47
+                          ],
+                          [
+                            'Some point',
+                            59.95916094,
+                            30.32612718,
+                            'img/contacts-map-marker--gym.png',
+                            50, 58,
+                            26, 47
+                          ],
+                          [
+                            'Some point',
+                            59.95916094,
+                            30.33212718,
+                            'img/contacts-map-marker--medic.png',
+                            50, 58,
+                            26, 47
+                          ],
+                          [
+                            'Some point',
+                            59.95916094,
+                            30.33812718,
+                            'img/contacts-map-marker--pets.png',
+                            50, 58,
+                            26, 47
+                          ],
+                          [
+                            'Some point',
+                            59.95916094,
+                            30.34412718,
+                            'img/contacts-map-marker--train.png',
+                            50, 58,
+                            26, 47
+                          ]
+                        ];
+                        var mapStyle = [];
+                        function initMap() {
+                          var mapDiv = document.getElementById('contacts-map');
+                          var center = {lat: 59.95016094, lng: 30.31612718};
+                          var map = new google.maps.Map(mapDiv, {
+                            zoom: 13,
+                            center: center,
+                            disableDefaultUI: true,
+                            styles: mapStyle
+                          });
+                          setMapMarkers(map);
+                          map.addListener('resize', function() {
+                            map.panTo(center);
+                          });
+                          google.maps.event.addDomListener(window, 'resize', function(){
+                            google.maps.event.trigger(map, 'resize');
+                          });
+                        }
+                        function setMapMarkers(map) {
+                          for (var i = 0; i < mapPoints.length; i++) {
+                            var point = mapPoints[i];
+                            var marker = new google.maps.Marker({
+                              position: {lat: point[1], lng: point[2]},
+                              map: map,
+                              icon: {
+                                url: point[3],
+                                size: new google.maps.Size(point[4], point[5]),
+                                anchor: new google.maps.Point(point[6], point[7])
+                              },
+                              title: point[0]
+                            });
+                          }
+                        }
+                      </script>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="list-property__section  list-property__section--pt35-xs  list-property__section--pb35-xs  list-property__section--md-columns">
+                <div class="list-property__subtitle-wrap">
+                  <h2 class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">About Region</h2>
+                </div>
+                <div class="list-property__content-col">
+                  <h3 class="list-property__h3">Ionian Islands</h3>
+                  <p>Demesne far <a href="">hearted</a> suppose venture excited see had has. Dependent on so extremely delivered by. Yet ﻿no jokes worse her why. Bed one supposing breakfast day fulfilled off depending questions. Whatever boy her exertion his extended. Ecstatic followed handsome drawings entirely mrs one yet outweigh. Of acceptance insipidity remarkably is invitation. Difficulty on insensible reasonable in. From as went he they. Preference themselves me as thoroughly partiality considered on in estimating.  </p>
+                  <a href="" class="more-link">
+                    Read more
+                    <svg class="more-link__icon" width="9" height="8"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                  </a>
                 </div>
               </section>
 

@@ -93,7 +93,8 @@
     "drop-btn": [],
     "drop-menu": [],
     "social-link": [],
-    "tooltip-all": []
+    "tooltip-all": [],
+    "more-link": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

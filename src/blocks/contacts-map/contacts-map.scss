@@ -10,25 +10,6 @@
     margin-bottom: 35px;
   }
 
-  .field-text {
-    margin-bottom: 15px;
-
-    @media (min-width: $screen-xl) {
-      margin-bottom: 0;
-      flex-grow: 1;
-    }
-  }
-
-  .btn {
-    margin-top: 8px;
-
-    @media (min-width: $screen-xl) {
-      margin-top: 0;
-      margin-left: 30px;
-      min-width: 220px;
-    }
-  }
-
   &__location-wrapper {
     position: relative;
     flex-grow: 1;
@@ -82,17 +63,37 @@
   }
 
   &__search-line {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 
     @media (min-width: $screen-xl) {
       display: flex;
       align-items: center;
       margin-bottom: 20px;
     }
+
+    .field-text {
+      margin-bottom: 15px;
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 0;
+        flex-grow: 1;
+      }
+    }
+
+    .btn {
+      margin-top: 8px;
+
+      @media (min-width: $screen-xl) {
+        margin-top: 0;
+        margin-left: 30px;
+        min-width: 220px;
+      }
+    }
   }
 
   &__map-wrapper {
     width: 100%;
+    position: relative;
   }
 
   &__map {
@@ -142,5 +143,78 @@
 
   &__data-item {
     margin-bottom: 6px;
+  }
+
+  &__prop-text {
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: $font-size--small;
+  }
+
+  &__members {
+    display: none;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__members-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+
+  &__members-item {
+    position: relative;
+    z-index: 1;
+
+    &:not(:first-child) {
+      margin-left: -26px;
+    }
+
+    a {
+      display: block;
+      width: 64px;
+      height: 64px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      width: 60px;
+      height: 60px;
+    }
+
+    &--num {
+      z-index: 0;
+    }
+
+    &--active {
+      z-index: 2;
+    }
+  }
+
+  &__members-num {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 60px;
+    height: 60px;
+    padding: 12px;
+    background-color: $gray-lighten;
+    color: $text-color;
+    font-weight: 500;
+  }
+
+  &__members-btn {
+    margin-left: 20px;
   }
 }
