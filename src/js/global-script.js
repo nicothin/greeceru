@@ -182,4 +182,26 @@ $( document ).ready(function() {
     margin: 20,
   });
 
+  // слайдеры для блока mortgage в сайдбаре
+  var handle1 = $( "#custom-handle-1 .field-range-jquery-ui__num" );
+  $( "#slider-1" ).slider({
+    create: function() { handle1.text( $( this ).slider( "value" ) + ' %' ); },
+    slide: function( event, ui ) { handle1.text( ui.value + ' %' ); }
+  });
+  var handle2 = $( "#custom-handle-2 .field-range-jquery-ui__num" );
+  $( "#slider-2" ).slider({
+    create: function() { handle2.text( $( this ).slider( "value" ) + ' years' ); },
+    slide: function( event, ui ) { handle2.text( ui.value + ' years' ); }
+  });
+  var handle3 = $( "#custom-handle-3 .field-range-jquery-ui__num" );
+  $( "#slider-3" ).slider({
+    create: function() { handle3.text( $( this ).slider( "value" ) + ' %' ); },
+    slide: function( event, ui ) { handle3.text( ui.value + ' %' ); }
+  });
+
+  // переключение видимости блоков в сайдбаре
+  $('.aside-block__header-toggler').on('click', function(){
+    $(this).closest('.aside-block--collapsable').toggleClass('aside-block--collapse');
+  });
+
 });

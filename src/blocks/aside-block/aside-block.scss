@@ -33,10 +33,81 @@
     background-color: #fff;
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
+
+    &--pv25 {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
   }
 
   &__content-text {
     padding: 15px 30px;
+  }
+
+  &__mortgage-calc {}
+
+  &__mortgage-price {
+    margin-bottom: 20px;
+  }
+
+  &__mortgage-price-descr {
+    color: $gray;
+    margin-bottom: 5px;
+  }
+
+  &__mortgage-footer {
+    margin-top: 30px;
+    padding: 20px 0 0;
+    border-top: 1px solid $gray-lightest;
+  }
+
+  &__header-toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 51px;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      border-bottom: 1px solid currentColor;
+      border-right: 1px solid currentColor;
+      transform: translate(-50%, -65%) rotate(45deg);
+      transition: transform $transition-time, border-color $transition-time;
+    }
+  }
+
+  &__content-wrapper {
+    overflow: hidden;
+    max-height: 1000px;
+    transition: max-height 0.3s;
+  }
+
+
+
+  &--collapsable {
+
+    #{$block-name}__header {
+      position: relative;
+      padding-right: 70px;
+    }
+  }
+
+  &--collapse {
+
+    #{$block-name}__header-toggler:before {
+      transform: translate(-50%, -35%) rotate(-135deg);
+    }
+
+    #{$block-name}__content-wrapper {
+      max-height: 0;
+    }
   }
 
   &--regions-list {

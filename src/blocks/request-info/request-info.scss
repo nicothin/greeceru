@@ -1,0 +1,47 @@
+// В этом файле должны быть стили только для БЭМ-блока request-info, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.request-info {
+  margin-bottom: 35px;
+
+  .field-text {
+    margin-bottom: 25px;
+  }
+
+  &__manager-wrap {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $gray-lightest;
+    margin-bottom: 25px;
+  }
+
+  &__manager-avatar {
+    flex-shrink: 0;
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  &__manager {
+  }
+
+  &__manager-name {
+    margin: 0;
+    font-weight: 500;
+  }
+
+  &__manager-post,
+  &__manager-contact {
+    font-size: $font-size--small;
+    line-height: $line-height;
+    color: $gray;
+  }
+
+  &__manager-post {
+    margin-bottom: 5px;
+  }
+}

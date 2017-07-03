@@ -173,7 +173,7 @@
 
   &__members-item {
     position: relative;
-    z-index: 1;
+    z-index: 0;
 
     &:not(:first-child) {
       margin-left: -26px;
@@ -199,7 +199,7 @@
     }
 
     &--active {
-      z-index: 2;
+      z-index: 1;
     }
   }
 

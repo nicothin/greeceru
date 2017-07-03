@@ -98,7 +98,9 @@
     "objects": [],
     "object": [],
     "share-menu": [],
-    "gallery-modal": []
+    "gallery-modal": [],
+    "request-info": [],
+    "field-range-jquery-ui": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -112,6 +114,9 @@
     "./node_modules/jquery/dist/jquery.min.js",
     "./node_modules/jquery-migrate/dist/jquery-migrate.min.js",
     "./node_modules/svg4everybody/dist/svg4everybody.js",
+    "./node_modules/jquery-ui/ui/widget.js",
+    "./node_modules/jquery-ui/ui/widgets/mouse.js",
+    "./node_modules/jquery-ui/ui/widgets/slider.js",
     "./node_modules/bootstrap/js/transition.js",
     "./node_modules/bootstrap/js/dropdown.js",
     "./node_modules/bootstrap/js/tooltip.js",
