@@ -199,6 +199,11 @@ $z-index-modal:               100 !default;
         font-size: $font-size--small;
       }
     }
+
+    &--pv5 {
+      padding-top: 5px !important;
+      padding-bottom: 5px !important;
+    }
   }
 
   &__footer {

@@ -1,0 +1,128 @@
+// В этом файле должны быть стили только для БЭМ-блока object, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.object {
+
+  $block-name:                &;
+
+  transition: all $transition-time;
+
+  &__main-info {
+    display: flex;
+    align-items: center;
+    height: 69px;
+    padding: 13px 0;
+    cursor: pointer;
+  }
+
+  &__icon-wrap {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    min-width: 80px;
+
+    svg {
+      fill: $color-main;
+    }
+  }
+
+  &__icon {
+    transform: translateX(-2px);
+  }
+
+  &__title {
+    flex-grow: 1;
+    margin: 0;
+    max-width: calc(100% - 80px - 82px);
+    font-weight: 400;
+  }
+
+  &__type {
+    font-size: $font-size;
+    margin-bottom: 3px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__name {
+    font-size: $font-size--small;
+    color: $gray;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__distance-wrap {
+    width: 82px;
+    text-align: right;
+    padding: 0 20px 0 10px;
+    white-space: nowrap;
+  }
+
+  &__distance-time {
+    font-size: $font-size;
+    margin-bottom: 3px;
+  }
+
+  &__distance {
+    font-size: $font-size--small;
+    color: $gray;
+  }
+
+  &__additional-info {
+    display: none;
+    border-top: 1px solid $gray-lightest;
+    padding: 18px 20px 15px;
+  }
+
+  &__add-name {
+    margin: 0 0 15px;
+    padding: 0;
+    font-weight: 500;
+  }
+
+  &__contacts {
+    margin-bottom: 10px;
+  }
+
+  &__add-more {
+    position: relative;
+    padding-top: 18px;
+    margin-top: 18px;
+    text-align: right;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -20px;
+      right: -20px;
+      height: 1px;
+      background-color: $gray-lightest;
+    }
+  }
+
+
+
+  &--active {
+
+    @media (min-width: $screen-osx) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      background-color: #fff;
+      box-shadow: $shadow;
+    }
+
+    #{$block-name}__additional-info {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+// В этом файле должны быть стили только для БЭМ-блока share-menu, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.share-menu {
+
+  $block-name:                &;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    position: relative;
+    border-bottom: 1px solid $gray-lightest;
+
+    &--copy {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 25px 0;
+
+    &:hover,
+    &:focus {
+
+      #{$block-name}__item-text {
+        color: $color-main;
+      }
+    }
+  }
+
+  &__icon,
+  .social-link {
+    flex-shrink: 0;
+    margin-right: 20px;
+    border-color: $color-main;
+    fill: $color-main;
+  }
+
+  &__item-text {
+    color: $text-color;
+    transition: color $transition-time;
+  }
+
+  &__copy-msg {
+    position: absolute;
+    left: 0;
+    bottom: -35px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $color-success;
+    font-size: $font-size--small;
+  }
+}

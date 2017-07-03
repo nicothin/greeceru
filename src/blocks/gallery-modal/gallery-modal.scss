@@ -1,0 +1,159 @@
+// В этом файле должны быть стили только для БЭМ-блока gallery-modal, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.gallery-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  overflow-y: auto;
+  transform: translate3d(0px, 0px, 0px);
+  background-color: rgba(28, 29, 32, 0.85);
+
+  @media (min-width: $screen-md) {
+    background-color: transparent;
+  }
+
+  &__body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 50px 0;
+
+    @media (min-width: $screen-xl) {
+      padding-bottom: 150px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    &.close > span:before,
+    &.close > span:after {
+      background-color: #fff !important;
+    }
+  }
+
+  &__carousel {
+
+    .owl-dots {
+      display: none;
+    }
+
+    .owl-prev,
+    .owl-next {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      font-size: 0;
+      color: transparent;
+      overflow: hidden;
+      transition: opacity $transition-time;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 18px;
+        height: 18px;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+      }
+    }
+
+    .owl-prev {
+      left: 0;
+
+      &:before {
+        transform: translateX(5px) rotate(135deg);
+      }
+    }
+
+    .owl-next {
+      right: 0;
+
+      &:before {
+        transform: translateX(-5px) rotate(-45deg);
+      }
+    }
+
+    .disabled {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+
+    @media (min-width: $screen-xl) {
+      height: calc(100vh - 280px);
+    }
+  }
+
+  &__img {
+    display: block;
+
+    @media (min-width: $screen-md) {
+      width: auto !important;
+    }
+
+    @media (min-width: $screen-xl) {
+      max-width: 824px !important;
+    }
+  }
+
+  &__carousel-prew {
+    display: none !important;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    width: 824px;
+    transform: translateX(-50%);
+
+    @media (min-width: $screen-xl) {
+      display: block !important;
+    }
+  }
+
+  &__carousel-prew-item {
+    height: 120px;
+    width: 120px;
+  }
+
+  &__prew {
+    display: block;
+    width: 120px !important;
+    height: 120px;
+    object-fit: cover;
+  }
+
+  &__carousel-prew-num {
+    display: none;
+    color: #fff;
+    position: absolute;
+    bottom: 145px;
+    left: 50%;
+    width: 824px;
+    transform: translateX(-50%);
+
+    @media (min-width: $screen-xl) {
+      display: block;
+    }
+  }
+}

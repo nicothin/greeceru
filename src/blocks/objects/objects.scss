@@ -1,0 +1,211 @@
+// В этом файле должны быть стили только для БЭМ-блока objects, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.objects {
+
+  $block-name:                &;
+
+  position: relative;
+
+  @media (min-width: $screen-osx) {
+    height: 490px;
+  }
+
+  &__group-wrap {
+    width: 100%;
+    border: 1px solid $gray-lightest;
+    border-radius: $border-radius;
+
+    @media (min-width: $screen-osx) {
+      width: 260px;
+      border-right: 0;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+      border-bottom: 0;
+    }
+
+    &:first-child {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom: 0;
+    }
+
+    &:last-child {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &--active {
+
+      #{$block-name}__header {
+        background-color: $gray-darkest;
+        color: #fff;
+
+        @media (min-width: $screen-osx) {
+
+          &:before {
+            content: '';
+            position: absolute;
+            right: -6px;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+            width: 12px;
+            height: 12px;
+            background-color: #fff;
+          }
+        }
+      }
+
+      #{$block-name}__filter {
+        display: flex;
+      }
+
+      #{$block-name}__show-list-toggler {
+
+        &:before {
+          transform: translate(-50%, -50%) rotate(-135deg);
+        }
+      }
+
+      #{$block-name}__list-wrap {
+        position: static;
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        max-height: 349px;
+        overflow-y: auto;
+
+        @media (min-width: $screen-osx) {
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 260px;
+          width: auto;
+          height: 490px;
+          max-height: 490px;
+          border: 1px solid $gray-lightest;
+        }
+      }
+    }
+  }
+
+  &__list-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+
+    @media (min-width: $screen-osx) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+    cursor: pointer;
+
+    @media (min-width: $screen-osx) {
+      padding-right: 25px;
+    }
+  }
+
+  &__title {
+    margin: 0 auto 0 0;
+    padding: 10px 20px;
+    font-weight: 400;
+  }
+
+  &__filter {
+    display: none;
+
+    svg {
+      fill: #ADAEB2;
+      transition: fill $transition-time;
+    }
+  }
+
+  &__filter-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transition: all $transition-time;
+
+    & + & {
+      margin-left: 10px;
+    }
+
+    &--active {
+      border-color: #fff;
+
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+
+  &__show-list-toggler {
+    display: block;
+    flex-shrink: 0;
+    margin-left: 5px;
+    position: relative;
+    width: 48px;
+    height: 56px;
+
+    @media (min-width: $screen-sm) {
+      margin-left: 25px;
+    }
+
+    @media (min-width: $screen-osx) {
+      display: none;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 6px;
+      height: 6px;
+      border-bottom: 1px solid currentColor;
+      border-right: 1px solid currentColor;
+      transform: translate(-50%, -50%) rotate(45deg);
+      transition: transform $transition-time, border-color $transition-time;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item-wrap {
+    position: relative;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $gray-lightest;
+    }
+
+    @media (min-width: $screen-osx) {
+      height: 70px;
+    }
+
+    &--active {
+      z-index: 1;
+    }
+  }
+}

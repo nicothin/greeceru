@@ -94,7 +94,11 @@
     "drop-menu": [],
     "social-link": [],
     "tooltip-all": [],
-    "more-link": []
+    "more-link": [],
+    "objects": [],
+    "object": [],
+    "share-menu": [],
+    "gallery-modal": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

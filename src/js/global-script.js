@@ -166,4 +166,20 @@ $( document ).ready(function() {
     autoHeight: true,
   });
 
+  // карусель фоток в блоке internal-property
+  $('.gallery-modal__carousel.owl-carousel').owlCarousel({
+    items: 1,
+    nav: true,
+    autoHeight: true,
+  });
+
+  // карусель фоток в блоке internal-property
+  $('.gallery-modal__carousel-prew.owl-carousel').owlCarousel({
+    items: 5,
+    // center: true,
+    nav: false,
+    autoWidth:true,
+    margin: 20,
+  });
+
 });
