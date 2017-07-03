@@ -3297,7 +3297,7 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     display: flex; }
 .contacts-map__members-item {
     position: relative;
-    z-index: 1; }
+    z-index: 0; }
 .contacts-map__members-item:not(:first-child) {
       margin-left: -26px; }
 .contacts-map__members-item a {
@@ -3314,7 +3314,7 @@ a.ui-state-default:hover, a.ui-state-default:focus {
 .contacts-map__members-item--num {
       z-index: 0; }
 .contacts-map__members-item--active {
-      z-index: 2; }
+      z-index: 1; }
 .contacts-map__members-num {
     display: -ms-flexbox;
     display: flex;
@@ -3503,8 +3503,49 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     background-color: #fff;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px; }
+.aside-block__content--pv25 {
+      padding-top: 25px;
+      padding-bottom: 25px; }
 .aside-block__content-text {
     padding: 15px 30px; }
+.aside-block__mortgage-price {
+    margin-bottom: 20px; }
+.aside-block__mortgage-price-descr {
+    color: #8891a6;
+    margin-bottom: 5px; }
+.aside-block__mortgage-footer {
+    margin-top: 30px;
+    padding: 20px 0 0;
+    border-top: 1px solid #e9edf2; }
+.aside-block__header-toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 51px;
+    cursor: pointer; }
+.aside-block__header-toggler:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      border-bottom: 1px solid currentColor;
+      border-right: 1px solid currentColor;
+      transform: translate(-50%, -65%) rotate(45deg);
+      transition: transform 0.3s, border-color 0.3s; }
+.aside-block__content-wrapper {
+    overflow: hidden;
+    max-height: 1000px;
+    transition: max-height 0.3s; }
+.aside-block--collapsable .aside-block__header {
+    position: relative;
+    padding-right: 70px; }
+.aside-block--collapse .aside-block__header-toggler:before {
+    transform: translate(-50%, -35%) rotate(-135deg); }
+.aside-block--collapse .aside-block__content-wrapper {
+    max-height: 0; }
 .aside-block--regions-list .aside-block__content {
     padding: 15px 30px; }
 .aside-block--blog-posts .aside-block__content {
@@ -5008,11 +5049,13 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     fill: #477afb; }
 .tooltip-all svg {
     fill: #8891a6; }
+.more-link {
+  white-space: nowrap; }
 .more-link__icon {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 0.3em;
-  fill: #477afb; }
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.3em;
+    fill: #477afb; }
 .objects {
   position: relative; }
 .objects__group-wrap {
@@ -5331,6 +5374,86 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     left: 50%;
     width: 824px;
     transform: translateX(-50%); }
+.request-info {
+  margin-bottom: 35px; }
+.request-info .field-text {
+    margin-bottom: 25px; }
+.request-info__manager-wrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e9edf2;
+    margin-bottom: 25px; }
+.request-info__manager-avatar {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-right: 20px; }
+.request-info__manager-name {
+    margin: 0;
+    font-weight: 500; }
+.request-info__manager-post, .request-info__manager-contact {
+    font-size: 12px;
+    line-height: 1.375em;
+    color: #8891a6; }
+.request-info__manager-post {
+    margin-bottom: 5px; }
+.field-range-jquery-ui {
+  margin-bottom: 45px; }
+.field-range-jquery-ui .ui-slider-horizontal .ui-slider-handle {
+    position: absolute;
+    top: -6px;
+    margin-left: -6px;
+    z-index: 2;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    cursor: default;
+    -ms-touch-action: none;
+        touch-action: none;
+    border: 0;
+    border-radius: 50%;
+    box-shadow: 0 1px 6px rgba(72, 72, 72, 0.24), 0 2px 8px rgba(71, 122, 251, 0.15);
+    outline: 0; }
+.field-range-jquery-ui .ui-slider-horizontal .ui-slider-handle:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #8891a6; }
+.field-range-jquery-ui__name-wrap {
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 9px; }
+.field-range-jquery-ui__name {
+    margin-right: auto; }
+.field-range-jquery-ui__slider {
+    position: relative;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #8891a6;
+    margin-bottom: 30px; }
+.field-range-jquery-ui__num {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    color: #8891a6;
+    font-size: 12px; }
+.field-range-jquery-ui--active .field-range-jquery-ui__slider {
+    background-color: #477afb; }
+.field-range-jquery-ui--active .ui-slider-horizontal .ui-slider-handle:before {
+    background-color: #477afb; }
 @media (min-width: 480px) and (max-width: 767px){
   .blog__post-list .subscribing{
     padding-left: 90px;

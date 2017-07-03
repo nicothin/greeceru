@@ -443,7 +443,7 @@
 
           <div class="layout-tabs__list">
             <a href="#filter-wrapper" class="layout-tabs__list-item" data-filter-drop-toggler>Properties filter</a>
-            <a href="#" class="layout-tabs__list-item">Request information</a>
+            <a href="#request" class="layout-tabs__list-item" data-toggle="modal">Request information</a>
           </div>
 
           <div class="layout-tabs__tab  layout-tabs__tab--text  layout-tabs__tab--active" id="region-description">
@@ -1756,21 +1756,97 @@
 
             <div class="layout-tabs__aside">
 
-              <div class="aside-block  aside-block--regions-list">
-                <div class="aside-block__header  aside-block__header--hide-lg">
+              <div class="aside-block">
+                <div class="aside-block__header">
                   <h3 class="aside-block__title">Request additional information</h3>
                 </div>
-                <div class="aside-block__content">
-                  111
+                <div class="aside-block__content  aside-block__content--pv25">
+                  <form action="" class="request-info">
+                    <div class="request-info__manager-wrap">
+                      <img class="request-info__manager-avatar" src="img/feedback-avatar-01.png" alt="">
+                      <div class="request-info__manager">
+                        <div class="request-info__manager-name">Hillary Cherry</div>
+                        <div class="request-info__manager-post">Property Manager</div>
+                        <a class="request-info__manager-contact" href="tel:+30 6974-383-585">+30 6974-383-585</a>
+                      </div>
+                    </div>
+                    <div class="field-text">
+                      <span class="field-text__name  field-text__name--sm">Phone*</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="tel" placeholder="+38 (044)">
+                      </span>
+                    </div>
+                    <div class="field-text">
+                      <span class="field-text__name  field-text__name--sm">Message</span>
+                      <span class="field-text__input-wrap">
+                        <textarea class="field-text__input" placeholder="I’m interested in property, ID: 5782311. Please, call me back!"></textarea>
+                      </span>
+                    </div>
+                    <div class="field-actions">
+                      <button class="btn  btn--white  btn--wide">Ask an Agent</button>
+                    </div>
+                  </form>
                 </div>
               </div>
 
-              <div class="aside-block  aside-block--regions-list">
-                <div class="aside-block__header  aside-block__header--hide-lg">
+              <div class="aside-block  aside-block--collapsable  aside-block--collapse">
+                <div class="aside-block__header">
                   <h3 class="aside-block__title">Mortgage</h3>
+                  <div class="aside-block__header-toggler"></div>
                 </div>
-                <div class="aside-block__content">
-                  111
+                <div class="aside-block__content-wrapper">
+                  <div class="aside-block__content  aside-block__content--pv25">
+                    <div class="aside-block__mortgage-calc">
+                      <div class="field-range-jquery-ui">
+                        <div class="field-range-jquery-ui__name-wrap">
+                          <div class="field-range-jquery-ui__name">Loan size</div>
+                          <div class="field-range-jquery-ui__right">80%</div>
+                        </div>
+                        <div id="slider-1" class="field-range-jquery-ui__slider">
+                          <div id="custom-handle-1" class="ui-slider-handle  field-range-jquery-ui__slider-num-wrap">
+                            <span class="field-range-jquery-ui__num"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="field-range-jquery-ui  field-range-jquery-ui--active">
+                        <div class="field-range-jquery-ui__name-wrap">
+                          <div class="field-range-jquery-ui__name">Duration of loan</div>
+                          <div class="field-range-jquery-ui__right">15 years</div>
+                        </div>
+                        <div id="slider-2" class="field-range-jquery-ui__slider">
+                          <div id="custom-handle-2" class="ui-slider-handle  field-range-jquery-ui__slider-num-wrap">
+                            <span class="field-range-jquery-ui__num"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="field-range-jquery-ui">
+                        <div class="field-range-jquery-ui__name-wrap">
+                          <div class="field-range-jquery-ui__name">Interest rate</div>
+                          <div class="field-range-jquery-ui__right">5%</div>
+                        </div>
+                        <div id="slider-3" class="field-range-jquery-ui__slider">
+                          <div id="custom-handle-3" class="ui-slider-handle  field-range-jquery-ui__slider-num-wrap">
+                            <span class="field-range-jquery-ui__num"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="aside-block__mortgage-price">
+                        <div class="aside-block__mortgage-price-descr">Amount payable:</div>
+                        <div class="price"><span class="price__currency">€</span> 21 000</div>
+                      </div>
+                      <div class="aside-block__mortgage-price">
+                        <div class="aside-block__mortgage-price-descr">Monthly plan income:</div>
+                        <div class="price"><span class="price__currency">€</span> 500</div>
+                      </div>
+                      <div class="aside-block__mortgage-footer">
+                        Interested in a mortgage?
+                        <a href="" class="more-link">
+                          Read more
+                          <svg class="more-link__icon" width="9" height="8"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -2276,7 +2352,7 @@
 
             </div>
           </div>
-          <footer class="top-rated__footer">111</footer>
+          <!-- <footer class="top-rated__footer">111</footer> -->
         </section>
 
       </main>
@@ -2412,6 +2488,44 @@
 
     </div>
 
+  </div>
+
+  <div id="request" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Request additional information</h4>
+        </div>
+        <div class="modal__body">
+          <form action="" class="request-info">
+            <div class="request-info__manager-wrap">
+              <img class="request-info__manager-avatar" src="img/feedback-avatar-01.png" alt="">
+              <div class="request-info__manager">
+                <div class="request-info__manager-name">Hillary Cherry</div>
+                <div class="request-info__manager-post">Property Manager</div>
+                <a class="request-info__manager-contact" href="tel:+30 6974-383-585">+30 6974-383-585</a>
+              </div>
+            </div>
+            <div class="field-text">
+              <span class="field-text__name  field-text__name--sm">Phone*</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="tel" placeholder="+38 (044)">
+              </span>
+            </div>
+            <div class="field-text">
+              <span class="field-text__name  field-text__name--sm">Message</span>
+              <span class="field-text__input-wrap">
+                <textarea class="field-text__input" placeholder="I’m interested in property, ID: 5782311. Please, call me back!"></textarea>
+              </span>
+            </div>
+            <div class="field-actions">
+              <button class="btn  btn--white  btn--wide">Ask an Agent</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div id="notice" class="modal" tabindex="-1" role="dialog">
