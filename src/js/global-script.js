@@ -182,6 +182,11 @@ $( document ).ready(function() {
     margin: 20,
   });
 
+  // переключение видимости блоков в сайдбаре
+  $('.aside-block__header-toggler').on('click', function(){
+    $(this).closest('.aside-block--collapsable').toggleClass('aside-block--collapse');
+  });
+
   // слайдеры для блока mortgage в сайдбаре
   var handle1 = $( "#custom-handle-1 .field-range-jquery-ui__num" );
   $( "#slider-1" ).slider({
@@ -197,11 +202,6 @@ $( document ).ready(function() {
   $( "#slider-3" ).slider({
     create: function() { handle3.text( $( this ).slider( "value" ) + ' %' ); },
     slide: function( event, ui ) { handle3.text( ui.value + ' %' ); }
-  });
-
-  // переключение видимости блоков в сайдбаре
-  $('.aside-block__header-toggler').on('click', function(){
-    $(this).closest('.aside-block--collapsable').toggleClass('aside-block--collapse');
   });
 
 });
