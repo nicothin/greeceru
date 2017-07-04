@@ -65,8 +65,8 @@
       top: 50%;
       width: 6px;
       height: 6px;
-      border-bottom: 1px solid #31353f;
-      border-right: 1px solid #31353f;
+      border-bottom: 1px solid currentColor;
+      border-right: 1px solid currentColor;
       transform: translateY(-70%) rotate(45deg);
       transition: transform $transition-time, border-color $transition-time;
     }
@@ -158,4 +158,23 @@
       }
     }
   }
+
+
+
+  &--error {
+
+    #{$block-name}__pseudoselect {
+      border-color: $color-danger;
+      color: $color-danger;
+    }
+  }
+
+  // &--bg-error {
+
+  //   #{$block-name}__pseudoselect {
+  //     border-color: $color-danger;
+  //     background-color: $color-danger;
+  //     color: #fff;
+  //   }
+  // }
 }
