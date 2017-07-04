@@ -1568,8 +1568,8 @@ a:active .pagination__icon-left {
       top: 50%;
       width: 6px;
       height: 6px;
-      border-bottom: 1px solid #31353f;
-      border-right: 1px solid #31353f;
+      border-bottom: 1px solid currentColor;
+      border-right: 1px solid currentColor;
       transform: translateY(-70%) rotate(45deg);
       transition: transform 0.3s, border-color 0.3s; }
 .field-drop-checkboxes__pseudoselect-text-xxl-show {
@@ -1626,6 +1626,9 @@ a:active .pagination__icon-left {
 .field-drop-checkboxes.open .field-drop-checkboxes__pseudoselect:after {
       border-color: #477afb;
       transform: translateY(-30%) rotate(225deg); }
+.field-drop-checkboxes--error .field-drop-checkboxes__pseudoselect {
+    border-color: #d94168;
+    color: #d94168; }
 .property-owner {
   background-color: #f3f5f9;
   border-bottom: 1px solid #ebeff3;
