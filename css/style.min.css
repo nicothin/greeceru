@@ -4949,12 +4949,6 @@ a.ui-state-default:hover, a.ui-state-default:focus {
 .drop-btn.open .drop-btn__btn svg {
       fill: #477afb; }
 .drop-btn__btn {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-align: center;
-        align-items: center;
     width: 40px;
     height: 40px;
     background: #fff;
@@ -4963,6 +4957,13 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     outline: none;
     color: currentColor;
     cursor: pointer; }
+.drop-btn__btn-inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
 .drop-btn__drop {
     position: absolute;
     top: 0;
