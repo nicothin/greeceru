@@ -5571,7 +5571,7 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     display: flex;
     -ms-flex-align: center;
         align-items: center;
-    padding: 0 0 0 30px;
+    padding: 0 0 0 19px;
     max-width: 1590px;
     margin: auto; }
 .compare-line__list-wrapper {
@@ -5584,9 +5584,10 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: 0;
-    padding: 10px 0;
+    padding: 10px 0 10px 11px;
     list-style: none; }
 .compare-line__item {
+    position: relative;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-preferred-size: 243px;
@@ -5595,6 +5596,11 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     height: 52px;
     margin-right: 10px;
     margin-bottom: 15px; }
+.compare-line__del {
+    position: absolute;
+    top: -4px;
+    left: -11px;
+    z-index: 1; }
 .compare-line__item-pict {
     display: block;
     -ms-flex-negative: 0;
