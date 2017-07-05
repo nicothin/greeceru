@@ -1,0 +1,111 @@
+// В этом файле должны быть стили только для БЭМ-блока compare-line, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.compare-line {
+  display: none;
+
+  @media (min-width: $screen-lg) {
+    display: block;
+    position: fixed;
+    z-index: 99;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 -4px 15px rgba(#484848, 0.08);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 30px;
+    max-width: 1590px;
+    margin: auto;
+  }
+
+  &__list-wrapper {
+    height: 72px;
+    margin: 0 auto 0 0;
+    overflow: hidden;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-basis: 243px;
+    min-width: 243px;
+    height: 52px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+  }
+
+  &__item-pict {
+    display: block;
+    flex-shrink: 0;
+    margin-right: 10px;
+    width: 64px;
+    height: 52px;
+    object-fit: cover;
+  }
+
+  &__item-text {
+    width: 170px;
+    font-size: $font-size--small;
+    line-height: $line-height;
+  }
+
+  &__item-name {
+    display: block;
+    overflow: hidden;
+    max-height: 32px;
+    margin-bottom: 4px;
+  }
+
+  &__item-descr {
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__more {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 40px 0 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: $text-color;
+    border: 1px dashed $text-color;
+
+    &:hover,
+    &:focus {
+      color: $text-color;
+    }
+  }
+
+  &__show {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    padding: 15px;
+    height: 72px;
+    border-left: 1px solid $gray-lightest;
+    font-weight: 500;
+  }
+}
+
