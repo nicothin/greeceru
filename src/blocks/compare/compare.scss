@@ -1,0 +1,150 @@
+// В этом файле должны быть стили только для БЭМ-блока compare, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.compare {
+
+  $block-name:                &;
+
+  &__header {
+    border-bottom: 1px solid $gray-lightest;
+    padding-bottom: 17px;
+    margin-bottom: 40px;
+  }
+
+  &__mobile {
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+
+  &__table {
+    display: none;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 100px;
+      height: 1px;
+      background-color: $gray-lightest;
+    }
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
+  }
+
+  &__col-props-names {
+    width: 130px;
+    padding-right: 10px;
+
+    @media (min-width: $screen-lg) {
+      width: 143px;
+    }
+
+    @media (min-width: $screen-osx) {
+      width: 170px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      width: 260px;
+    }
+
+    #{$block-name}__area {
+      font-weight: 500;
+    }
+
+    #{$block-name}__area--img {
+      padding-top: 10px;
+      font-weight: 400;
+    }
+  }
+
+  &__col-items {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 130px;
+    overflow-x: auto;
+
+    @media (min-width: $screen-md) {
+      left: 143px;
+    }
+
+    @media (min-width: $screen-osx) {
+      left: 170px;
+      right: -40px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      left: 260px;
+      right: -130px;
+    }
+  }
+
+  &__col-items-inner {
+    display: flex;
+  }
+
+  &__area {
+    height: 50px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    &--img {
+      height: 320px;
+      white-space: normal;
+    }
+
+    &--descr {
+      height: 108px;
+      white-space: normal;
+    }
+
+    &--price {
+      padding-top: 30px;
+      height: 100px;
+    }
+  }
+
+  &__location {
+    flex-basis: 360px;
+    min-width: 360px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__img-wrap {
+    position: relative;
+    width: 360px;
+    height: 270px;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $border-radius;
+  }
+
+  &__del {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  &__btns {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+
+}

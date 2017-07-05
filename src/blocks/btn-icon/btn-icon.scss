@@ -28,6 +28,14 @@
     }
   }
 
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+  }
+
 
 
   &--blue-kebab {
@@ -64,6 +72,21 @@
       background-color: currentColor;
       box-shadow: 0 -7px 0 currentColor, 0 7px 0 currentColor;
     }
+  }
+
+  &--single {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 1px solid $gray-lightest;
+    border-radius: $border-radius;
+    outline: none;
+    color: currentColor;
+    cursor: pointer;
   }
 
   &--real-btn {

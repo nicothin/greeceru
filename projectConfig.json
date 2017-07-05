@@ -100,7 +100,9 @@
     "share-menu": [],
     "gallery-modal": [],
     "request-info": [],
-    "field-range-jquery-ui": []
+    "field-range-jquery-ui": [],
+    "layout-full": [],
+    "compare": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

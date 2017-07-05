@@ -1,0 +1,17 @@
+// В этом файле должны быть стили только для БЭМ-блока layout-full, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.layout-full {
+  flex-grow: 1;
+  position: relative;
+  padding: 30px 15px 45px;
+  width: 100%;
+  max-width: 1330px;
+  margin: 0 auto;
+
+  @media (min-width: $screen-md) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
