@@ -19,7 +19,7 @@
   &__inner {
     display: flex;
     align-items: center;
-    padding: 0 0 0 30px;
+    padding: 0 0 0 19px;
     max-width: 1590px;
     margin: auto;
   }
@@ -34,17 +34,25 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    padding: 10px 0;
+    padding: 10px 0 10px 11px;
     list-style: none;
   }
 
   &__item {
+    position: relative;
     display: flex;
     flex-basis: 243px;
     min-width: 243px;
     height: 52px;
     margin-right: 10px;
     margin-bottom: 15px;
+  }
+
+  &__del {
+    position: absolute;
+    top: -4px;
+    left: -11px;
+    z-index: 1;
   }
 
   &__item-pict {
