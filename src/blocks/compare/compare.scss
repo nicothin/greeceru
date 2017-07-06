@@ -69,8 +69,27 @@
     position: absolute;
     top: 0;
     right: 0;
+    display: flex;
     left: 130px;
     overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+
+    &::-webkit-scrollbar:horizontal {
+      height: 11px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      background-color: #c1c1c1;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #f1f1f1;
+      border-radius: 8px;
+    }
 
     @media (min-width: $screen-md) {
       left: 143px;
@@ -85,11 +104,12 @@
       left: 260px;
       right: -130px;
     }
+
   }
 
-  &__col-items-inner {
-    display: flex;
-  }
+  // &__col-items-inner {
+  //   display: flex;
+  // }
 
   &__area {
     height: 50px;
