@@ -3,6 +3,7 @@
 // Не пишите здесь другие селекторы.
 
 .compare {
+  margin-bottom: 30px;
 
   $block-name:                &;
 
@@ -109,6 +110,10 @@
     &--price {
       padding-top: 30px;
       height: 100px;
+
+      .price--sm {
+        margin-top: 2px;
+      }
     }
   }
 
