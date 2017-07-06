@@ -204,4 +204,13 @@ $( document ).ready(function() {
     slide: function( event, ui ) { handle3.text( ui.value + ' %' ); }
   });
 
+  // костомный скролл для страницы сравнения
+  baron({
+    root: '.compare__col-items',
+    scroller: '.compare__col-items-scroller',
+    track: '.compare__track-inner',
+    bar: '.compare__bar',
+    barOnCls: 'compare__col-items--baron-scrollbar',
+    direction: 'h',
+  });
 });

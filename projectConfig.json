@@ -109,7 +109,8 @@
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "./src/scss/functions.scss",
-    "../../node_modules/owl.carousel/dist/assets/owl.carousel.css"
+    "../../node_modules/owl.carousel/dist/assets/owl.carousel.css",
+    "../../node_modules/baron/baron.css"
   ],
   "addCssAfter": [],
   "singleCompiled": [],
@@ -125,6 +126,7 @@
     "./node_modules/bootstrap/js/tooltip.js",
     "./node_modules/bootstrap/js/modal.js",
     "./node_modules/bootstrap/js/tab.js",
+    "./node_modules/baron/baron.js",
     "./node_modules/object-fit-images/dist/ofi.js",
     "./node_modules/owl.carousel/dist/owl.carousel.js"
   ],
