@@ -3,6 +3,7 @@
 // Не пишите здесь другие селекторы.
 
 .login {
+  position: relative;
   display: flex;
   height: $header-height;
   max-width: 210px;
@@ -24,5 +25,67 @@
     &:focus  {
       background-color: $color-main--accent;
     }
+  }
+
+  &__user-info {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid $gray-lightest;
+    padding: 0 15px 0 10px;
+    cursor: pointer;
+  }
+
+  &__avatar {
+    display: block;
+    margin-right: 10px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__name {
+    position: relative;
+    padding-right: 18px;
+    max-width: 140px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 2px;
+      top: 50%;
+      width: 6px;
+      height: 6px;
+      border-bottom: 1px solid $gray-darkest;
+      border-right: 1px solid $gray-darkest;
+      transform: translateY(-70%) rotate(45deg);
+      transition: transform $transition-time, border-color $transition-time;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    top: ($header-height + 8);
+    right: 0;
+    width: 280px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: opacity $transition-time;
+  }
+
+  &__menu-item {}
+
+  &__menu-link {}
+
+
+
+  &--user {
+    color: $text-color;
   }
 }
