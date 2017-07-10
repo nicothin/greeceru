@@ -47,6 +47,7 @@
   $(document).on('click', function(e){
     if (!$(e.target).closest('.main-nav__list').length && !$(e.target).closest('.login').length) {
       hideAllSubmenu();
+      $('.login').removeClass('login--open');
     }
   });
 
