@@ -3,6 +3,9 @@
 // Не пишите здесь другие селекторы.
 
 .login {
+
+  $block-name:                &;
+
   position: relative;
   display: flex;
   height: $header-height;
@@ -33,6 +36,12 @@
     border-left: 1px solid $gray-lightest;
     padding: 0 15px 0 10px;
     cursor: pointer;
+    transition: color $transition-time;
+
+    &:hover,
+    &:focus {
+      color: $color-main--accent;
+    }
   }
 
   &__avatar {
@@ -51,7 +60,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-weight: 500;
+    // font-weight: 500;
 
     &:after {
       content: '';
@@ -60,8 +69,8 @@
       top: 50%;
       width: 6px;
       height: 6px;
-      border-bottom: 1px solid $gray-darkest;
-      border-right: 1px solid $gray-darkest;
+      border-bottom: 1px solid currentColor;
+      border-right: 1px solid currentColor;
       transform: translateY(-70%) rotate(45deg);
       transition: transform $transition-time, border-color $transition-time;
     }
@@ -70,22 +79,55 @@
   &__menu {
     position: absolute;
     top: ($header-height + 8);
-    right: 0;
-    width: 280px;
+    right: 10px;
+    width: 200px;
     opacity: 0;
     height: 0;
     overflow: hidden;
     padding: 0;
+    margin: 0;
+    background-color: #fff;
     transition: opacity $transition-time;
   }
 
   &__menu-item {}
 
-  &__menu-link {}
+  &__menu-link {
+    display: block;
+    position: relative;
+    padding: 18px 30px;
+    color: $text-color;
+    transition: color $transition-time;
+
+    #{$block-name}__menu-item:not(:last-child) &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 30px;
+      left: 30px;
+      height: 1px;
+      background-color: $gray-lightest;
+    }
+  }
 
 
 
   &--user {
     color: $text-color;
+  }
+
+  &--open {
+    z-index: 2;
+
+    #{$block-name}__menu {
+      height: auto;
+      opacity: 1;
+      padding: 4px 0;
+      box-shadow: $shadow;
+    }
+
+    #{$block-name}__name:after {
+      transform: translateY(-30%) rotate(225deg);
+    }
   }
 }

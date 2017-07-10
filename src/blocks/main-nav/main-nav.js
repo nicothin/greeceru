@@ -13,6 +13,7 @@
   // Показ/сокрытие подменю уровня
   $('[data-main-nav-submenu-toggler]').on('click', function(e){
     e.preventDefault();
+    $('.login').removeClass('login--open');
 
     // если это подменю 3го уровня
     if ($(this).closest('.main-nav__sub-list').length) {
@@ -29,6 +30,13 @@
     }
   });
 
+  // Показ/сокрытие подменю авторизованного пользователя
+  $('[data-usermenu-toggler]').on('click', function(e){
+    e.preventDefault();
+    hideAllSubmenu();
+    $('.login').toggleClass('login--open');
+  });
+
   // Только сокрытие подменю (всех)
   $('[data-main-nav-submenu-hide]').on('click', function(e){
     e.preventDefault();
@@ -37,7 +45,7 @@
 
   // Закрытие подуровней меню, если был клик вне меню
   $(document).on('click', function(e){
-    if (!$(e.target).closest('.main-nav__list').length) {
+    if (!$(e.target).closest('.main-nav__list').length && !$(e.target).closest('.login').length) {
       hideAllSubmenu();
     }
   });
