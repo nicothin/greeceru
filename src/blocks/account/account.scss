@@ -3,11 +3,20 @@
 // Не пишите здесь другие селекторы.
 
 .account {
+
+  $block-name:                &;
+
   margin: 35px 0 20px;
   padding: 15px 0 12px;
   border-top: 1px solid $gray-lightest;
   border-bottom: 1px solid $gray-lightest;
   font-size: $font-size--small;
+
+  @media (min-width: $screen-lg) {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 
   &__progress {
     margin: 10px 0 5px;
@@ -15,5 +24,82 @@
 
   &__controls {
     display: none;
+    font-size: $font-size;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+      border-top: 1px solid $gray-lightest;
+      margin: 12px 0 0;
+    }
+  }
+
+  &__user-menu {
+    margin: 14px 0 5px;
+    padding: 0 0 14px;
+    list-style: none;
+    border-bottom: 1px solid $gray-lightest;
+  }
+
+  &__user-menu-item {
+
+    &--active {
+
+      #{$block-name}__user-menu-link {
+        color: $color-main--accent;
+
+        svg {
+          fill: $color-main--accent;
+        }
+      }
+    }
+  }
+
+  &__user-menu-link {
+    display: block;
+    position: relative;
+    padding: 15px 0 15px 36px;
+    color: $text-color;
+    transition: color $transition-time;
+
+    &:hover,
+    &:focus {
+      color: $color-main--accent;
+
+      svg {
+        fill: $color-main--accent;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 15px;
+      left: 0;
+      transition: fill $transition-time;
+    }
+  }
+
+  &__edit {
+    display: block;
+    position: relative;
+    padding: 15px 0 15px 36px;
+    color: $gray;
+    transition: color $transition-time;
+
+    &:hover,
+    &:focus {
+      color: $color-main--accent;
+
+      svg {
+        fill: $color-main--accent;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 15px;
+      left: 0;
+      fill: $gray;
+      transition: fill $transition-time;
+    }
   }
 }

@@ -4,18 +4,55 @@
 
 .profile {
 
+  &__header {
+    margin-bottom: 35px;
+  }
+
   &__descr {
     margin-top: -10px;
+  }
+
+  &__inner {
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      align-items: flex-start;
+    }
   }
 
   &__info {
     border: 1px solid $gray-lightest;
     padding: 40px 30px 30px;
     margin: 0 0 30px;
+    max-width: 450px;
+
+    @media (min-width: $screen-lg) {
+      width: 270px;
+      flex-shrink: 0;
+      margin-right: 15px;
+      padding-bottom: 5px;
+    }
+
+    @media (min-width: $screen-osx) {
+      margin-right: 30px;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
   }
 
   &__properties-btns {
     display: none;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      margin-left: 2em;
+    }
   }
 
   &__properties-text {
@@ -24,5 +61,29 @@
     font-size: $font-size;
     font-weight: 400;
     color: $gray;
+
+    &--sub-btns {
+
+      @media (min-width: $screen-lg) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__alert-xs {
+    display: block;
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &__alert-lg {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+      margin-top: 0;
+    }
   }
 }

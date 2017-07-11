@@ -3,6 +3,7 @@
 // Не пишите здесь другие селекторы.
 
 .more-link {
+  display: inline-block;
   white-space: nowrap;
 
   &__icon {
