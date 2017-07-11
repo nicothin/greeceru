@@ -46,7 +46,6 @@
     "gulp.spritesmith": "^6.3.0",
     "husky": "^0.13.2",
     "imagemin-pngquant": "^5.0.0",
-    "lint-staged": "^3.4.0",
     "merge-stream": "^1.0.1",
     "postcss-import": "^9.1.0",
     "postcss-inline-svg": "^2.3.0",
