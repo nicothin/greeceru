@@ -51,5 +51,11 @@
     opacity: 0;
     transition: opacity $transition-time;
     box-shadow: $shadow;
+
+    &--bottom-right {
+      top: calc(100% + 10px);
+      left: auto;
+      right: 0;
+    }
   }
 }

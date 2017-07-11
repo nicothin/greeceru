@@ -1,0 +1,56 @@
+// В этом файле должны быть стили только для БЭМ-блока user, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.user {
+  text-align: center;
+
+  &__atatar-wrap {
+    position: relative;
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+  }
+
+  &__avatar {
+    display: block;
+    margin: auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__avatar-edit {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba($gray, 0.4);
+    background-color: #fff;
+  }
+
+  &__name {
+    font-size: $font-size--h3;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  &__contact {
+    color: $gray;
+    font-size: $font-size--small;
+    line-height: $line-height;
+  }
+
+  &__location {
+    color: $gray;
+    font-size: $font-size--small;
+  }
+}
+

@@ -3,6 +3,9 @@
 // Не пишите здесь другие селекторы.
 
 .card {
+
+  $block-name:               &;
+
   display: flex;
   flex-direction: column;
   width: 290px;
@@ -209,6 +212,7 @@
       align-items: center;
       width: 40px;
       height: 40px;
+      cursor: pointer;
     }
 
     &--price {
@@ -257,6 +261,30 @@
     font-size: $font-size--small;
   }
 
+  &__rent-data {
+    position: relative;
+    min-height: 45px;
+    margin-right: -10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-right: 50px;
+    border-top: 1px solid $gray-lightest;
+
+    .progress {
+      margin-top: 4px;
+    }
+  }
+
+  &__rent-data-inner {
+    max-width: 270px;
+  }
+
+  &__rent-del {
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+
 
 
 
@@ -267,6 +295,42 @@
 
     @media (min-width: $screen-lg) {
       width: auto;
+    }
+  }
+
+  &--profile {
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 15px;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    .btn-icon {
+      background-color: #fff;
+    }
+
+    .btn-icon svg {
+      fill: $gray;
+    }
+
+    #{$block-name}__title {
+      font-size: 16px;
+      margin-bottom: 3px;
+    }
+
+    #{$block-name}__photo {
+      height: auto;
+      max-height: 340px;
+    }
+
+    #{$block-name}__price {
+      max-width: 100%;
+    }
+
+    #{$block-name}__footer-item--price {
+      min-width: 0;
     }
   }
 }

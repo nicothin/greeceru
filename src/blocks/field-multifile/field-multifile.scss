@@ -148,4 +148,33 @@
       }
     }
   }
+
+  &--micro {
+    height: 120px;
+    min-height: 120px;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    #{$block-name}__inner {
+
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+
+      #{$block-name}__plus {
+        fill: $color-main;
+      }
+
+      #{$block-name}__text-mini {
+        color: $color-main;
+      }
+    }
+  }
 }

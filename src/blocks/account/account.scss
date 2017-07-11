@@ -1,0 +1,19 @@
+// В этом файле должны быть стили только для БЭМ-блока account, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.account {
+  margin: 35px 0 20px;
+  padding: 15px 0 12px;
+  border-top: 1px solid $gray-lightest;
+  border-bottom: 1px solid $gray-lightest;
+  font-size: $font-size--small;
+
+  &__progress {
+    margin: 10px 0 5px;
+  }
+
+  &__controls {
+    display: none;
+  }
+}

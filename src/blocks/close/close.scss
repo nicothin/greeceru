@@ -43,6 +43,8 @@ $toggler-part-bg-color:       #000 !default;
     }
   }
 
+
+
   &--bold {
 
     > span {
@@ -99,7 +101,6 @@ $toggler-part-bg-color:       #000 !default;
     }
   }
 
-
   &--sm {
     width: 20px;
     height: 20px;
@@ -107,5 +108,40 @@ $toggler-part-bg-color:       #000 !default;
     padding: 3px;
     border-radius: 50%;
     background-color: #fff;
+  }
+
+  &--sm-thin {
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    background-color: #fff;
+  }
+
+  &--md {
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+  }
+
+  &--green {
+
+    > span {
+
+      &:before,
+      &:after {
+        background: $color-success;
+      }
+    }
+  }
+
+  &--red {
+
+    > span {
+
+      &:before,
+      &:after {
+        background: $color-danger;
+      }
+    }
   }
 }

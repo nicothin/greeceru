@@ -13,11 +13,6 @@
     "start": "gulp",
     "deploy": "cross-env NODE_ENV=production ./node_modules/.bin/gulp build && cross-env ./node_modules/.bin/gulp deploy",
     "build": "cross-env NODE_ENV=production npm start build",
-    "lint-staged": "lint-staged",
-    "precommit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.scss": "stylelint --syntax=scss"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",

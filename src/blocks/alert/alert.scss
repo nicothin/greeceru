@@ -45,6 +45,14 @@
     line-height: $line-height;
   }
 
+  &__close {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+  }
+
+
+
   &--m25 {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -52,7 +60,7 @@
 
   &--danger {
     min-height: 76px;
-    padding: 15px 15px 15px 60px;
+    padding: 20px 20px 20px 60px;
     border-color: $color-danger;
     background-color: $color-danger--light;
 
@@ -69,7 +77,7 @@
 
   &--success {
     min-height: 76px;
-    padding: 15px 15px 15px 60px;
+    padding: 20px 20px 20px 60px;
     border-color: $color-success;
     background-color: $color-success--light;
 
@@ -81,6 +89,17 @@
       width: 21px;
       height: 21px;
       background-image: svg-load('../blocks/alert/img_to_bg/icon-success-info.svg');
+    }
+  }
+
+  &--no-icon {
+    display: block;
+    padding: 25px 30px 20px;
+    font-size: $font-size--small;
+    line-height: ($font-size--small + 6);
+
+    &:before {
+      display: none;
     }
   }
 }

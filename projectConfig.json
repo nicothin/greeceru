@@ -103,7 +103,10 @@
     "field-range-jquery-ui": [],
     "layout-full": [],
     "compare": [],
-    "compare-line": []
+    "compare-line": [],
+    "profile": [],
+    "user": [],
+    "account": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

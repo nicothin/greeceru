@@ -1,0 +1,28 @@
+// В этом файле должны быть стили только для БЭМ-блока profile, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.profile {
+
+  &__descr {
+    margin-top: -10px;
+  }
+
+  &__info {
+    border: 1px solid $gray-lightest;
+    padding: 40px 30px 30px;
+    margin: 0 0 30px;
+  }
+
+  &__properties-btns {
+    display: none;
+  }
+
+  &__properties-text {
+    margin: 40px 0 20px;
+    padding: 0;
+    font-size: $font-size;
+    font-weight: 400;
+    color: $gray;
+  }
+}
