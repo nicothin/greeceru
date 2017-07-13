@@ -1,0 +1,144 @@
+// В этом файле должны быть стили только для БЭМ-блока property-stats, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.property-stats {
+  position: relative;
+  padding: 30px 30px 25px;
+  margin: 0 auto 15px;
+  width: 100%;
+  max-width: 450px;
+  border: 1px solid $gray-lightest;
+  border-radius: $border-radius;
+
+  @media (min-width: $screen-lg) {
+    max-width: 100%;
+  }
+
+  &__header {
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+    }
+  }
+
+  &__increase {
+    margin-left: auto;
+  }
+
+  &__dates {
+    margin-bottom: 20px;
+    color: $gray;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__date {}
+
+  &__list-wrap {
+    padding-top: 20px;
+
+    @media (min-width: $screen-sm) {
+      padding-top: 35px;
+      height: 240px;
+      overflow: hidden;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px;
+      height: 100%;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+
+  &__list-item {
+    margin-bottom: 5px;
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      flex-direction: column-reverse;
+      height: 100%;
+      width: 60px;
+      margin: 0 10px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin: 0 15px;
+    }
+  }
+
+  &__sep {
+
+    @media (min-width: $screen-sm) {
+      display: none;
+    }
+  }
+
+  &__col-wrap {
+
+    @media (min-width: $screen-sm) {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column-reverse;
+      height: calc(100% - 35px);
+    }
+  }
+
+  &__col {
+
+    @media (min-width: $screen-sm) {
+      display: block;
+      position: relative;
+      flex-grow: 0;
+      border: 1px solid $color-main;
+      background-color: $color-main--ultralight;
+    }
+  }
+
+  &__num {
+
+    @media (min-width: $screen-sm) {
+      position: absolute;
+      padding-bottom: 4px;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+  }
+
+  &__country {
+
+    @media (min-width: $screen-sm) {
+      flex-grow: 0;
+      display: block;
+      margin-top: 15px;
+      width: 100%;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
