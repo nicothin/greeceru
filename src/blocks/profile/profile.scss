@@ -23,7 +23,7 @@
   &__info {
     border: 1px solid $gray-lightest;
     padding: 40px 30px 30px;
-    margin: 0 0 30px;
+    margin: 0 auto 30px;
     max-width: 450px;
 
     @media (min-width: $screen-lg) {
@@ -55,12 +55,25 @@
     }
   }
 
+  &__properties-list {
+
+    .card {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
   &__properties-text {
     margin: 40px 0 20px;
     padding: 0;
     font-size: $font-size;
     font-weight: 400;
     color: $gray;
+    text-align: center;
+
+    @media (min-width: $screen-lg) {
+      text-align: left;
+    }
 
     &--sub-btns {
 
