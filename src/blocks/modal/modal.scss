@@ -311,6 +311,15 @@ $z-index-modal:               100 !default;
     color: $gray;
   }
 
+  &__change-photo-img {
+    margin-top: 40px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
 
 
   &--open {
