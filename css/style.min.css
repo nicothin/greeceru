@@ -3452,7 +3452,7 @@ a.ui-state-default:hover, a.ui-state-default:focus {
 .contacts-map__members {
     display: none;
     position: absolute;
-    right: 20px;
+    right: 48px;
     bottom: 10px; }
 .contacts-map__members-list {
     position: relative;
@@ -3477,7 +3477,9 @@ a.ui-state-default:hover, a.ui-state-default:focus {
 .contacts-map__members-item img {
       display: block;
       width: 60px;
-      height: 60px; }
+      height: 60px;
+      font-family: "object-fit:cover";
+      object-fit: cover; }
 .contacts-map__members-item--num {
       z-index: -1; }
 .contacts-map__members-item--active {
