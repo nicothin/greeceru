@@ -5898,7 +5898,7 @@ a.ui-state-default:hover, a.ui-state-default:focus {
 .profile__info {
   border: 1px solid #e9edf2;
   padding: 40px 30px 30px;
-  margin: 0 0 30px;
+  margin: 0 auto 30px;
   max-width: 450px; }
 .profile__content {
   -ms-flex-positive: 1;
@@ -5907,12 +5907,16 @@ a.ui-state-default:hover, a.ui-state-default:focus {
   display: none; }
 .profile__properties-btns .btn {
     margin-left: 2em; }
+.profile__properties-list .card {
+  margin-left: auto;
+  margin-right: auto; }
 .profile__properties-text {
   margin: 40px 0 20px;
   padding: 0;
   font-size: 14px;
   font-weight: 400;
-  color: #8891a6; }
+  color: #8891a6;
+  text-align: center; }
 .profile__alert-xs {
   display: block; }
 .profile__alert-lg {
@@ -7005,6 +7009,8 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     display: flex;
     -ms-flex-pack: end;
     justify-content: flex-end; }
+  .profile__properties-text{
+    text-align: left; }
   .profile__properties-text--sub-btns{
     margin-top: 0; }
   .profile__alert-xs{
