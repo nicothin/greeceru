@@ -107,7 +107,8 @@
     "profile": [],
     "user": [],
     "account": [],
-    "property-stats": []
+    "property-stats": [],
+    "plupload": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
