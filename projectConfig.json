@@ -106,7 +106,8 @@
     "compare-line": [],
     "profile": [],
     "user": [],
-    "account": []
+    "account": [],
+    "property-stats": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
