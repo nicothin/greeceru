@@ -3,6 +3,9 @@
 // Не пишите здесь другие селекторы.
 
 .gallery-modal {
+
+  $block-name:                &;
+
   display: none;
   position: fixed;
   top: 0;
@@ -134,6 +137,13 @@
   &__carousel-prew-item {
     height: 120px;
     width: 120px;
+
+    &--active {
+
+      #{$block-name}__prew {
+        border: 1px solid #fff;
+      }
+    }
   }
 
   &__prew {
