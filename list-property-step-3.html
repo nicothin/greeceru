@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>greece_ru</title>
   <meta name="description" content="">
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css" type="text/css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
 
@@ -496,7 +497,8 @@
                   <h2 class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">Photos</h2>
                   <p class="list-property__descr  list-property__descr--lg">You can upload up to 18 photos. Pay attention that photos with watermarks are not allowed!</p>
                   <form action="" class="list-property__form  list-property__form--wide">
-                    <label class="field-multifile">
+                    <div id="uploader"></div>
+                    <!-- <label class="field-multifile">
                       <span class="field-multifile__inner">
                         <input class="field-multifile__input" type="file" multiple>
                         <span class="field-multifile__text">
@@ -506,7 +508,7 @@
                         </span>
                         <span class="field-multifile__btn  btn  btn--white  btn--wide">Upload photos</span>
                       </span>
-                    </label>
+                    </label> -->
                   </form>
                 </section>
 
@@ -687,5 +689,88 @@
   </div>
   <script src="js/script.min.js"></script>
 
+
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="http://www.nomesitis.gr/static/js/plupload.full.min.js"></script>
+  <script type="text/javascript" src="http://www.nomesitis.gr/static/js/jquery.ui.plupload.js"></script>
+
+  <script type="text/javascript">
+  // Initialize the widget when the DOM is ready
+  $(function() {
+    var myUploader = $("#uploader").plupload({
+      // General settings
+      runtimes : 'html5',
+      url : '/photos_upload/',
+
+      // User can upload no more then 20 files in one go (sets multiple_queues to false)
+      max_file_count: 60,
+
+      //chunk_size: '1mb',
+
+      // Resize images on clientside if we can
+      resize : {
+        width : 1024,
+        height : 768,
+        quality : 100,
+        crop: false // crop to exact dimensions
+      },
+
+      filters : {
+        // Maximum file size
+        max_file_size : '40mb',
+        // Specify what files to browse for
+        mime_types: [
+          {title : "Image files", extensions : "jpg,jpeg,png"}
+        ]
+      },
+
+      // Enable ability to drag'n'drop files onto the widget (currently only HTML5 supports that)
+      dragdrop: true,
+
+      // Views to activate
+      views: {
+        thumbs: true, // Show thumbs
+        active: 'thumbs'
+      },
+
+
+
+
+          init : {
+              UploadComplete: function(up, files) {
+          // Called when all files are either uploaded or failed
+                  alert('[UploadComplete]');
+                  window.location.href = '/fu/';
+        },
+
+              BeforeUpload: function(up, file) {
+                  //alert($("#properties option:selected").val());
+                  up.settings.multipart_params = {"estate_id": $("#properties option:selected").val()};
+              }
+          },
+
+      headers : {'X-Requested-With' : 'XMLHttpRequest', 'X-CSRFToken' : 'FhSoVus7h0EoJlIHUd3g5EUKxVi6ubu2'}
+    });
+
+
+    // Handle the case when form was submitted before uploading has finished
+    $('#form').submit(function(e) {
+      // Files in queue upload them first
+      if ($('#uploader').plupload('getFiles').length > 0) {
+
+        // When all files are uploaded submit form
+        $('#uploader').on('complete', function() {
+          $('#form')[0].submit();
+        });
+
+        $('#uploader').plupload('start');
+      } else {
+        alert("You must have at least one file in the queue.");
+      }
+      return false; // Keep the form from submitting
+    });
+  });
+  </script>
 </body>
 </html>
