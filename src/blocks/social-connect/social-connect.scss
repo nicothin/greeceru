@@ -1,7 +1,103 @@
-// В этом файле должны быть стили только для БЭМ-блока social-connect, его элементов, 
+// В этом файле должны быть стили только для БЭМ-блока social-connect, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Не пишите здесь другие селекторы.
 
 .social-connect {
-  
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-bottom: 10px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 40px;
+    padding: $field-padding-vertical 45px $field-padding-vertical 40px;
+    margin: 0;
+    font-size: $font-size;
+    line-height: $font-size + 6;
+    font-family: inherit;
+    color: $text-color;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: top 50% left 14px;
+    border: 1px solid $gray-lightest;
+    border-radius: $border-radius;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover,
+    &:focus {
+      color: $text-color;
+    }
+
+    @media (min-width: $screen-md) {
+      width: auto;
+      min-width: 230px;
+      max-width: 320px;
+      margin-right: 30px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      width: 18px;
+      height: 18px;
+      border: 1px solid $gray-lightest;
+      border-radius: 50%;
+    }
+
+
+
+    &--gp {
+      background-image: url('social-connect-gp.png');
+    }
+
+    &--fb {
+      background-image: url('social-connect-fb.png');
+    }
+
+    &--vk {
+      background-image: url('social-connect-vk.png');
+    }
+
+    &--done {
+
+      &:before {
+        border-color: $color-success;
+        background-image: svg-load('../blocks/social-connect/img_to_bg/ok.svg');
+        background-repeat: no-repeat;
+        background-size: 18px;
+        background-position: center;
+      }
+    }
+  }
+
+  &__descr {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      min-height: 40px;
+      padding: $field-padding-vertical 0 $field-padding-vertical;
+      margin: 0;
+      font-size: $font-size;
+      line-height: $font-size + 6;
+    }
+  }
 }
+

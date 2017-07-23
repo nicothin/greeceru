@@ -12,6 +12,7 @@ const mqpacker = require("css-mqpacker");
 const atImport = require("postcss-import");
 const cleanss = require('gulp-cleancss');
 const inlineSVG = require('postcss-inline-svg');
+const imageInliner = require('postcss-image-inliner');
 const objectFitImages = require('postcss-object-fit-images');
 
 const plumber = require('gulp-plumber');
@@ -49,7 +50,11 @@ let postCssPlugins = [
   }),
   atImport(),
   inlineSVG(),
-  objectFitImages()
+  objectFitImages(),
+  imageInliner({
+    assetPaths: ['src/blocks/**/img_to_bg/'],
+    maxFileSize: 10240
+  })
 ];
 
 // Очистка папки сборки
