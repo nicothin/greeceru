@@ -38,7 +38,7 @@
   width: 100%;
   // padding: 30px;
   border: none !important;
-  background: transparent;
+  background: transparent !important;
   color: inherit;
 
   &:before {
@@ -74,6 +74,14 @@
   padding: 0;
 }
 
+.plupload_filelist {
+
+  td,
+  th {
+    vertical-align: top;
+  }
+}
+
 .plupload_filelist_footer {
   position: absolute;
   top: calc(100% + 10px);
@@ -98,25 +106,24 @@
   height: auto !important;
 
   box-sizing: border-box;
-  display: inline-block;
-  margin: 0;
-  padding: ($field-padding-vertical + 4) $field-padding-horizontal;
+  display: inline-block !important;
+  margin: 0 10px 0 0;
+  padding: ($field-padding-vertical + 4) $field-padding-horizontal !important;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   vertical-align: middle;
   user-select: none;
-  text-align: center;
-  font-family: inherit;
-  font-size: $font-size;
+  text-align: center !important;
+  font-family: inherit !important;
+  font-size: $font-size !important;
   line-height: $font-size + 6;
-  text-decoration: none;
+  text-decoration: none !important;
   text-transform: none;
   font-weight: 500 !important;
-  border-radius: $border-radius;
+  border-radius: $border-radius !important;
   border: 1px solid transparent !important;
-  background-image: none;
-  cursor: pointer;
+  cursor: pointer !important;
   box-shadow: 0 1px 3px rgba(#737c94, 0.4);
   transition: background-color $transition-time;
   color: $color-main !important;
@@ -216,6 +223,10 @@
 
 .plupload_file_status {
   text-align: right;
+
+  .plupload_file_progress {
+    background: $color-main !important;
+  }
 }
 
 .plupload_file_size {
@@ -250,6 +261,78 @@
   text-overflow: ellipsis;
 }
 
+.plupload_total_status,
+.plupload_total_file_size {
+  font-weight: 500;
+  line-height: 48px;
+}
+
+.plupload_started {
+  margin-top: 10px;
+}
+
+.plupload_progress_container {
+  display: block;
+  position: relative;
+  z-index: 1;
+  height: 16px;
+  line-height: 16px;
+  border: none !important;
+  background: none !important;
+  border-radius: 0 !important;
+  margin-bottom: 5px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 16px;
+    border-radius: 8px;
+    background-color: $gray-lightest;
+  }
+
+  .ui-progressbar-value {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 20px;
+    background: $color-main !important;
+    border-radius: 8px !important;
+    border: none !important;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+  }
+}
+
+.plupload_message {
+  position: relative;
+  padding: 10px;
+
+  p {
+    margin: 0;
+  }
+
+  .ui-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+}
+
+.plupload_message_close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  margin: 0 !important;
+}
+
 
 
 .plupload_logo,
@@ -260,6 +343,7 @@
 .plupload_clearer,
 .ui-resizable-handle,
 .plupload_hidden,
+.plupload_file_percent,
 .plupload_file_dummy {
   display: none;
 }
