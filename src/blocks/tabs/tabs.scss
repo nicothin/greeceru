@@ -1,0 +1,91 @@
+// В этом файле должны быть стили только для БЭМ-блока tabs, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.tabs {
+
+  &__list {
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      z-index: -1;
+      background-color: $gray-lightest;
+    }
+
+    li {
+      flex-grow: 1;
+      width: 33.3334%;
+      text-align: center;
+
+      @media (min-width: $screen-lg) {
+        flex-grow: 0;
+        width: auto;
+      }
+    }
+
+    a {
+      display: block;
+      padding: 6px 3px;
+      border-bottom: 1px solid $gray-lightest;
+      color: $gray;
+
+      @media (min-width: $screen-lg) {
+        min-width: 120px;
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    }
+
+    .active {
+
+      a {
+        color: $text-color;
+        border-color: $color-main;
+      }
+    }
+  }
+
+  &__text-hide-xs {
+    display: none;
+
+    @media (min-width: $screen-sm) {
+      display: inline;
+    }
+  }
+
+  &__content-wrap {
+  }
+
+  &__item {
+    padding: 0;
+    width: 100%;
+    height: 0;
+    // overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity $transition-time;
+
+    &.active {
+      padding-top: 35px;
+      height: auto;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+
+
+  &--move-top-10 {
+    margin-top: -10px;
+  }
+}

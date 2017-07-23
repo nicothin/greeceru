@@ -36,10 +36,24 @@
     @media (min-width: $screen-osx) {
       margin-right: 30px;
     }
+
+    &--hidden-lg {
+
+      @media (max-width: ($screen-lg - 1)) {
+        display: none;
+      }
+    }
   }
 
   &__content {
     flex-grow: 1;
+  }
+
+  &__content-item {
+
+    &--max-750 {
+      max-width: 750px;
+    }
   }
 
   &__properties-btns {

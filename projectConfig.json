@@ -108,7 +108,9 @@
     "user": [],
     "account": [],
     "property-stats": [],
-    "plupload": []
+    "plupload": [],
+    "tabs": [],
+    "social-connect": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

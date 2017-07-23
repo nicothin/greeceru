@@ -12,6 +12,10 @@ $line-height:                 1.375em !default;
   margin-top: 26px;
   text-align: right;
 
+  &--left {
+    text-align: left;
+  }
+
   // display: block;
   // margin-top: $line-height;
   // margin-bottom: ($line-height / 2);

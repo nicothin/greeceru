@@ -178,6 +178,10 @@ $field-padding-horizontal:    0.7em !default;
 
   &__help-text {
     @include field-help-text;
+
+    &--right {
+      text-align: right;
+    }
   }
 
   &--error {
