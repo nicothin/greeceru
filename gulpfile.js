@@ -317,7 +317,7 @@ gulp.task('js', function (callback) {
         }
       }))
       .pipe(concat('script.min.js'))
-      .pipe(gulpIf(!isDev, uglify()))
+      // .pipe(gulpIf(!isDev, uglify()))
       .pipe(size({
         title: 'Размер',
         showFiles: true,
