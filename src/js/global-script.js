@@ -109,6 +109,8 @@ $( document ).ready(function() {
   $('.card__photo-carousel.owl-carousel').owlCarousel({
     items: 1,
     nav: true,
+    lazyLoad: true,
+    loop: true,
   });
 
   // блоки, висящие над картой (клик для смены представления и модального окна на мобилке)
