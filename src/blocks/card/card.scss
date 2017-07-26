@@ -234,11 +234,11 @@
     }
 
     &--notice {
-      display: none;
+      // display: none;
 
-      @media (min-width: $screen-lg) {
-        display: block;
-      }
+      // @media (min-width: $screen-lg) {
+      //   display: block;
+      // }
     }
   }
 
