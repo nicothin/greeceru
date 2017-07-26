@@ -113,4 +113,37 @@
       margin-top: 0;
     }
   }
+
+  &__wishlist {
+
+    @media (min-width: $screen-xl) {
+      margin-left: -7px;
+      margin-right: -7px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: $screen-osx) {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+
+  &__wishlist-item {
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-xl) {
+      padding-left: 7px;
+      padding-right: 7px;
+      flex-basis: 50%;
+      width: 50%;
+      max-width: 360px;
+    }
+
+    @media (min-width: $screen-osx) {
+      margin-bottom: 30px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
 }

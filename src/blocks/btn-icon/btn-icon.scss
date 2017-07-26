@@ -38,6 +38,13 @@
 
 
 
+  &--active {
+
+    svg {
+      fill: $color-main;
+    }
+  }
+
   &--blue-kebab {
     display: inline-flex;
     justify-content: center;
