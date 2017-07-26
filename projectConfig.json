@@ -111,7 +111,8 @@
     "plupload": [],
     "tabs": [],
     "social-connect": [],
-    "table": []
+    "table": [],
+    "table-mobile-scroll": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -38,6 +38,7 @@
   td {
     vertical-align: middle;
     padding: 8px;
+    height: 54px;
 
     &:first-child {
       padding-left: 0;
@@ -48,14 +49,92 @@
     }
   }
 
-  &__col-md-160 {
+  &__col {
 
-    @media (min-width: $screen-md) {
-      width: 160px;
+    &--md-30 {
 
-      #{$block-name} & {
-        max-width: 160px !important;
+      @media (min-width: $screen-md) {
+        width: 30px;
+
+        #{$block-name} & {
+          max-width: 30px !important;
+        }
       }
     }
+
+    &--md-80 {
+
+      @media (min-width: $screen-md) {
+        width: 80px;
+
+        #{$block-name} & {
+          max-width: 80px !important;
+        }
+      }
+    }
+
+    &--md-100 {
+
+      @media (min-width: $screen-md) {
+        width: 100px;
+
+        #{$block-name} & {
+          max-width: 100px !important;
+        }
+      }
+    }
+
+    &--md-120 {
+
+      @media (min-width: $screen-md) {
+        width: 120px;
+
+        #{$block-name} & {
+          max-width: 120px !important;
+        }
+      }
+    }
+
+    &--md-160 {
+
+      @media (min-width: $screen-md) {
+        width: 160px;
+
+        #{$block-name} & {
+          max-width: 160px !important;
+        }
+      }
+    }
+
+    &--xs-hide {
+      display: none;
+
+      @media (min-width: $screen-md) {
+        display: table-cell;
+      }
+    }
+  }
+
+  &__toe {
+    display: block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__status {
+    white-space: nowrap;
+    color: $gray;
+
+    &--paid {
+      color: $color-success;
+    }
+  }
+
+
+
+  &--first-content {
+    margin-top: -6px;
   }
 }

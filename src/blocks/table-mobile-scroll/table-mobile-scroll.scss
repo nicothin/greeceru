@@ -1,0 +1,40 @@
+// В этом файле должны быть стили только для БЭМ-блока table-mobile-scroll, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.table-mobile-scroll {
+
+  $block-name:                &;
+
+  @media (max-width: ($screen-md - 1)) {
+
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    margin-top: $line-height;
+    margin-bottom: $line-height;
+    border: 1px solid $border-color;
+
+    table {
+      margin: 0;
+      border: 0 !important;
+      width: 100%;
+    }
+
+    td,
+    th {
+      max-width: none;
+
+      &:last-child,
+      &:first-child {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    }
+
+    .table__toe {
+      max-width: 200px;
+    }
+
+  }
+}
