@@ -101,5 +101,13 @@
       fill: $gray;
       transition: fill $transition-time;
     }
+
+    &--active {
+      color: $color-main--accent;
+
+      svg {
+        fill: $color-main--accent;
+      }
+    }
   }
 }
