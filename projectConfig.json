@@ -110,7 +110,8 @@
     "property-stats": [],
     "plupload": [],
     "tabs": [],
-    "social-connect": []
+    "social-connect": [],
+    "table": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

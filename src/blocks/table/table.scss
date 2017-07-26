@@ -1,0 +1,61 @@
+// В этом файле должны быть стили только для БЭМ-блока table, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.table {
+
+  $block-name:                &;
+
+  margin: 15px 0;
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+
+  td,
+  th {
+    text-align: left;
+    border-bottom: 1px solid $border-color;
+    max-width: 0;
+  }
+
+  th {
+    padding: 3px 8px;
+    vertical-align: bottom;
+    font-size: $font-size--small;
+    line-height: $line-height;
+    color: $gray;
+    font-weight: 500;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  td {
+    vertical-align: middle;
+    padding: 8px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__col-md-160 {
+
+    @media (min-width: $screen-md) {
+      width: 160px;
+
+      #{$block-name} & {
+        max-width: 160px !important;
+      }
+    }
+  }
+}

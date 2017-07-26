@@ -4,6 +4,8 @@
 
 .profile {
 
+  $block-name:                &;
+
   &__header {
     margin-bottom: 35px;
   }
@@ -145,5 +147,46 @@
       padding-left: 15px;
       padding-right: 15px;
     }
+  }
+
+  &__virtual-drachma {
+    max-width: 880px;
+  }
+
+  &__virtual-drachma-share {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 490px;
+  }
+
+  &__virtual-drachma-title {
+    margin-top: -2px;
+  }
+
+  &__virtual-drachma-inner {
+
+    .alert {
+      margin-top: 0;
+      order: 1;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      align-items: flex-start;
+
+      .alert {
+        margin-left: 30px;
+        flex-basis: 360px;
+        min-width: 360px;
+      }
+    }
+  }
+
+  &__toe {
+    display: block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }

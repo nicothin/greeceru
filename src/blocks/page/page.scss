@@ -113,6 +113,13 @@
     color: $gray;
     font-size: $font-size--small;
   }
+
+  &__small-block {
+    display: block;
+    color: $gray;
+    font-size: $font-size--small;
+    line-height: $line-height;
+  }
 }
 
 *,

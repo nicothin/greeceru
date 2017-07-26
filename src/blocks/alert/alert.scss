@@ -16,6 +16,13 @@
     padding-right: 48px;
   }
 
+  &__inner {
+
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   &__title {
     position: relative;
     margin: 0;
@@ -37,6 +44,20 @@
         background-image: svg-load('../blocks/alert/img_to_bg/icon-info.svg');
       }
     }
+
+    &--icon-money {
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -30px;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        background-image: svg-load('../blocks/alert/img_to_bg/icon-money-bag.svg');
+      }
+    }
   }
 
   &__small {
@@ -49,6 +70,11 @@
     position: absolute;
     top: 2px;
     right: 2px;
+  }
+
+  &__accent {
+    font-weight: 500;
+    color: $color-main;
   }
 
 
