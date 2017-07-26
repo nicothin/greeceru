@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>greece_ru</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header--login.html')
+
+      <main class="page__main-content" role="main">
+
+        <div class="layout-full">
+
+          <article class="profile">
+
+            <header class="profile__header">
+              <h1 class="page__h1">Share</h1>
+              <div class="profile__descr">Share your properties to improve views</div>
+            </header>
+
+            <div class="profile__inner">
+
+              <div class="profile__info  profile__info--hidden-lg">
+                <div class="user">
+                  <div class="user__atatar-wrap">
+                    <img src="img/avatar-consultant-01.png" alt="Eugeny Evtushenko" class="user__avatar">
+                    <a href="#change-photo" class="user__avatar-edit" data-toggle="modal">
+                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#photo"></use></svg>
+                    </a>
+                  </div>
+                  <div class="user__name">Eugeny Evtushenko</div>
+                  <div class="user__contact">qwerty@gmail.com</div>
+                  <div class="user__location">Vnutrennya Mongolia</div>
+                </div>
+                <div class="account">
+                  <b>Setup your account</b>
+                  <div class="account__progress  progress">
+                    <div class="progress__line" style="width:68%">
+                      <div class="progress__num">68%</div>
+                    </div>
+                  </div>
+                  <a href="" class="account__add-progress">Add phone +15%</a>
+                  <div class="account__controls">
+                    <ul class="account__user-menu">
+                      <li class="account__user-menu-item  account__user-menu-item--active">
+                        <a href="" class="account__user-menu-link">
+                          <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use></svg>
+                          Profile
+                        </a>
+                      </li>
+                      <li class="account__user-menu-item">
+                        <a href="" class="account__user-menu-link">
+                          <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
+                          Wishlist
+                        </a>
+                      </li>
+                      <li class="account__user-menu-item">
+                        <a href="" class="account__user-menu-link">
+                          <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#money-bag"></use></svg>
+                          Savings
+                        </a>
+                      </li>
+                      <li class="account__user-menu-item">
+                        <a href="" class="account__user-menu-link">
+                          <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wallet"></use></svg>
+                          Payments
+                        </a>
+                      </li>
+                      <li class="account__user-menu-item">
+                        <a href="" class="account__user-menu-link">
+                          <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#share2"></use></svg>
+                          Share property
+                        </a>
+                      </li>
+                      <li class="account__user-menu-item">
+                        <a href="" class="account__user-menu-link">
+                          <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#location"></use></svg>
+                          Add infrastructure points
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="account__edit-wrap">
+                      <a href="" class="account__edit">
+                        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#pencil"></use></svg>
+                        Edit information
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile__content">
+                <div class="profile__content-item  profile__content-item--max-750">
+
+                  <h2 class="profile__muted-h3  profile__muted-h3--top  profile__muted-h3--gray">Select property to share</h2>
+
+                  <div class="card-list-mini">
+
+                    <div class="card-list-mini__item">
+                      <input id="location-id-001" type="checkbox" class="card-list-mini__input" checked>
+                      <label for="location-id-001" class="card-list-mini__content">
+                        <img src="img/demo-card-pict-02.jpg" alt="" class="card-list-mini__img">
+                        <div class="card-list-mini__text">
+                          <h3 class="card-list-mini__title">Location NameLocation NameLocation NameLocation Name</h3>
+                          <div class="card-list-mini__addr">Location address Location address Location address </div>
+                          <div for="location-id-001" class="card-list-mini__select-data">
+                            <span class="card-list-mini__select">Select</span>
+                            <span class="card-list-mini__deselect">Deselect</span>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="card-list-mini__item">
+                      <input id="location-id-002" type="checkbox" class="card-list-mini__input">
+                      <label for="location-id-002" class="card-list-mini__content">
+                        <img src="img/demo-card-pict-02.jpg" alt="" class="card-list-mini__img">
+                        <div class="card-list-mini__text">
+                          <h3 class="card-list-mini__title">Location NameLocation NameLocation NameLocation Name</h3>
+                          <div class="card-list-mini__addr">Location address Location address Location address </div>
+                          <div for="location-id-001" class="card-list-mini__select-data">
+                            <span class="card-list-mini__select">Select</span>
+                            <span class="card-list-mini__deselect">Deselect</span>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+
+                  </div>
+
+                  <hr>
+
+                  <h2 class="profile__muted-h3  profile__muted-h3--gray  profile__muted-h3--mb20">Select property to share</h2>
+
+                  <div class="share-block">
+                    <div class="share-block__part">
+                      <h3 class="share-block__title">Through email</h3>
+                      <div class="share-block__line">
+                        <div class="share-block__btn-wrap">
+                          <a href="" class="share-block__btn  share-block__btn--gmail">Share with Gmail</a>
+                          <div class="share-block__btn-descr">Our company not collect email for a spam mailing</div>
+                        </div>
+                        <div class="or  or--lg-text"><span class="or__text">or</span></div>
+                        <div class="share-block__form">
+                          <div class="field-text">
+                            <span class="field-text__input-wrap  field-text__input-wrap--input-btn-group">
+                              <input class="field-text__input  field-text__input--fz-small" type="text" placeholder="Type here your email">
+                              <button class="btn  btn--sm  btn--wide">Send</button>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="share-block__part">
+                      <h3 class="share-block__title">Additional method</h3>
+                      <div class="share-block__line">
+                        <div class="share-block__btn-wrap">
+                          <a href="" class="share-block__btn  share-block__btn--fb">Share with Facebook</a>
+                          <div class="share-block__btn-descr">On Facebook, you can not publish more than one Object at a time</div>
+                        </div>
+                        <div class="share-block__btn-wrap">
+                          <a href="" class="share-block__btn  share-block__btn--msg">Share with Messenger</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  <div id="change-photo" class="modal  modal--md" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Change photo</h4>
+        </div>
+        <div class="modal__body">
+          <form class="modal__form" action="">
+            <p>Select the area to display</p>
+            <div class="modal__change-photo-img">
+              <img src="img/demo-card-pict-01.jpg" alt="">
+            </div>
+            <div class="field-actions">
+              <button class="btn  btn--white  btn--wide">Crop and save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

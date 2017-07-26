@@ -1,0 +1,149 @@
+// В этом файле должны быть стили только для БЭМ-блока card-list-mini, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.card-list-mini {
+
+  $block-name:                &;
+
+  @media (min-width: $screen-xl) {
+    margin-left: -7px;
+    margin-right: -7px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $screen-osx) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0 0 15px;
+    max-width: 450px;
+
+    @media (min-width: $screen-xl) {
+      padding-left: 7px;
+      padding-right: 7px;
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+
+    @media (min-width: $screen-osx) {
+      margin-bottom: 30px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  &__content {
+    display: flex;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    transition: border $transition-time;
+
+    #{$block-name}__input:checked ~ &  {
+      border-color: $color-main;
+    }
+  }
+
+  &__img {
+    width: 132px;
+    height: 94px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    height: 94px;
+    padding: 12px 10px 5px 20px;
+    flex-grow: 0;
+    min-width: 0;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      width: 263px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: $font-size;
+    line-height: $line-height;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__addr {
+    font-size: $font-size--small;
+    color: $gray;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__select-data {
+    display: inline-block;
+    position: relative;
+    padding: 7px 5px 5px 0;
+    color: $color-main;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.5em;
+      width: 16px;
+      height: 16px;
+      border: 1px solid $color-main;
+      border-radius: 50%;
+      transition: background $transition-time;
+    }
+
+    #{$block-name}__input:checked ~ #{$block-name}__content & {
+
+      &:before {
+        background-color: $color-main;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 4px;
+        width: 8px;
+        height: 4px;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        transform: rotate(-47deg);
+      }
+    }
+  }
+
+  &__select {
+
+    #{$block-name}__input:checked ~ #{$block-name}__content & {
+      display: none;
+    }
+  }
+
+  &__deselect {
+    display: none;
+
+    #{$block-name}__input:checked ~ #{$block-name}__content & {
+      display: inline;
+    }
+  }
+}
+

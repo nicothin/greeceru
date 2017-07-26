@@ -112,7 +112,10 @@
     "tabs": [],
     "social-connect": [],
     "table": [],
-    "table-mobile-scroll": []
+    "table-mobile-scroll": [],
+    "card-list-mini": [],
+    "share-block": [],
+    "or": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

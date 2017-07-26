@@ -1,0 +1,46 @@
+// В этом файле должны быть стили только для БЭМ-блока or, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.or {
+
+  $block-name:                &;
+
+  display: flex;
+  align-items: center;
+  margin: 35px 0;
+
+  &__text {
+    display: block;
+    padding: 0 30px;
+    color: $gray;
+    font-size: $font-size--small;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background-color: $border-color;
+  }
+
+
+
+  &--lg-text {
+
+    @media (min-width: $screen-lg) {
+      display: block;
+      margin: 0;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+
+      #{$block-name}__text {
+        padding: 0;
+      }
+    }
+  }
+}

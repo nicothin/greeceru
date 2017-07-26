@@ -49,6 +49,10 @@
 
   &__content {
     flex-grow: 1;
+
+    .card-list-mini {
+      margin-bottom: 55px;
+    }
   }
 
   &__content-item {
@@ -179,6 +183,25 @@
         flex-basis: 360px;
         min-width: 360px;
       }
+    }
+  }
+
+  &__muted-h3 {
+    margin-bottom: ($line-height / 2);
+    font-size: $font-size--h4;
+    font-weight: 400;
+    line-height: 1.4;
+
+    &--top {
+      margin-top: -3px;
+    }
+
+    &--gray {
+      color: $gray;
+    }
+
+    &--mb20 {
+      margin-bottom: 30px;
     }
   }
 }
