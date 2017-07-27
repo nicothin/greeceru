@@ -587,7 +587,7 @@
                       <h3 class="share-block__title">Through email</h3>
                       <div class="share-block__line">
                         <div class="share-block__btn-wrap">
-                          <a href="" class="share-block__btn  share-block__btn--gmail">Share with Gmail</a>
+                          <a href="#mail-share" data-toggle="modal" class="share-block__btn  share-block__btn--gmail">Share with Gmail</a>
                           <div class="share-block__btn-descr">Our company not collect email for a spam mailing</div>
                         </div>
                         <div class="or  or--lg-text"><span class="or__text">or</span></div>
@@ -759,27 +759,172 @@
 
   </div>
 
-  <div id="change-photo" class="modal  modal--md" tabindex="-1" role="dialog">
+  <form id="mail-share" class="modal  modal--xl" tabindex="-1" role="dialog">
     <div class="modal__dialog" role="document">
       <div class="modal__content">
         <div class="modal__header">
           <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
-          <h4 class="modal__title">Change photo</h4>
+          <h4 class="modal__title">Share through Gmail</h4>
         </div>
         <div class="modal__body">
-          <form class="modal__form" action="">
-            <p>Select the area to display</p>
-            <div class="modal__change-photo-img">
-              <img src="img/demo-card-pict-01.jpg" alt="">
+          <div class="share-mail-contacts">
+            <div class="share-mail-contacts__header">
+              <button class="share-mail-contacts__select-all  btn  btn--link" type="button">Deselect all</button>
+              <span class="share-mail-contacts__selected-num">Your message will be send to <b>28</b> contacts</span>
+              <label class="share-mail-contacts__search-wrap  field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input  field-text__input--search" type="search" placeholder="Type in name or email">
+                </span>
+              </label>
             </div>
-            <div class="field-actions">
-              <button class="btn  btn--white  btn--wide">Crop and save</button>
+            <div class="share-mail-contacts__list-wrapper">
+              <div class="mail-list">
+                <ul class="mail-list__list">
+                  <li class="mail-list__item-wrap">
+                    <label class="mail-list__item">
+                      <input type="checkbox" checked>
+                      <div class="mail-list__item-text">
+                        <div class="mail-list__name">Dmitriy Melnichenko</div>
+                        <div class="mail-list__email">dmitriymel@gmail.com</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="mail-list__item-wrap">
+                    <label class="mail-list__item">
+                      <input type="checkbox">
+                      <div class="mail-list__item-text">
+                        <div class="mail-list__name">Dmitrfsergsdiy Melniawefawchenko</div>
+                        <div class="mail-list__email">dmitriymdfgsdrgwertel@gmail.com</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="mail-list__item-wrap">
+                    <label class="mail-list__item">
+                      <input type="checkbox">
+                      <div class="mail-list__item-text">
+                        <div class="mail-list__name">Dmriy</div>
+                        <div class="mail-list__email">dmi@gmail.com</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="mail-list__item-wrap">
+                    <label class="mail-list__item">
+                      <input type="checkbox">
+                      <div class="mail-list__item-text">
+                        <div class="mail-list__name">Dmitrfsergsdiy Melniawefawchenko</div>
+                        <div class="mail-list__email">dmitriymdfgsdrgwertel@gmail.com</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="mail-list__item-wrap">
+                    <label class="mail-list__item">
+                      <input type="checkbox">
+                      <div class="mail-list__item-text">
+                        <div class="mail-list__name">Dmriy</div>
+                        <div class="mail-list__email">dmi@gmail.com</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="mail-list__item-wrap">
+                    <label class="mail-list__item">
+                      <input type="checkbox">
+                      <div class="mail-list__item-text">
+                        <div class="mail-list__name">Dmitrfsergsdiy Melniawefawchenko</div>
+                        <div class="mail-list__email">dmitriymdfgsdrgwertel@gmail.com</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="mail-list__item-wrap">
+                    <label class="mail-list__item">
+                      <input type="checkbox">
+                      <div class="mail-list__item-text">
+                        <div class="mail-list__name">Dmriy</div>
+                        <div class="mail-list__email">dmi@gmail.com</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="mail-list__item-wrap">
+                    <label class="mail-list__item">
+                      <input type="checkbox">
+                      <div class="mail-list__item-text">
+                        <div class="mail-list__name">Dmriy</div>
+                        <div class="mail-list__email">dmi@gmail.com</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="mail-list__item-wrap">
+                    <label class="mail-list__item">
+                      <input type="checkbox">
+                      <div class="mail-list__item-text">
+                        <div class="mail-list__name">Dmriy</div>
+                        <div class="mail-list__email">dmi@gmail.com</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="mail-list__item-wrap">
+                    <label class="mail-list__item">
+                      <input type="checkbox">
+                      <div class="mail-list__item-text">
+                        <div class="mail-list__name">Dmriy</div>
+                        <div class="mail-list__email">dmi@gmail.com</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="mail-list__item-wrap">
+                    <label class="mail-list__item">
+                      <input type="checkbox">
+                      <div class="mail-list__item-text">
+                        <div class="mail-list__name">Dmriy</div>
+                        <div class="mail-list__email">dmi@gmail.com</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="mail-list__item-wrap">
+                    <label class="mail-list__item">
+                      <input type="checkbox">
+                      <div class="mail-list__item-text">
+                        <div class="mail-list__name">Dmriy</div>
+                        <div class="mail-list__email">dmi@gmail.com</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="mail-list__item-wrap">
+                    <label class="mail-list__item">
+                      <input type="checkbox">
+                      <div class="mail-list__item-text">
+                        <div class="mail-list__name">Dmriy</div>
+                        <div class="mail-list__email">dmi@gmail.com</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="mail-list__item-wrap">
+                    <label class="mail-list__item">
+                      <input type="checkbox">
+                      <div class="mail-list__item-text">
+                        <div class="mail-list__name">Dmriy</div>
+                        <div class="mail-list__email">dmi@gmail.com</div>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </form>
+            <div class="share-mail-contacts__footer">
+              <div class="field-text">
+                <span class="field-text__name">Comment</span>
+                <span class="field-text__input-wrap">
+                  <textarea class="field-text__input" type="text" placeholder="Type here..."></textarea>
+                </span>
+              </div>
+              <div class="field-actions">
+                <button class="btn  btn--wide">Send</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </form>
   <script src="js/script.min.js"></script>
 
 </body>
