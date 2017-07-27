@@ -1,0 +1,89 @@
+// В этом файле должны быть стили для БЭМ-блока share-mail-contacts, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.share-mail-contacts {
+
+  $block-name:                &;
+  // #{$block-name}__element {}
+
+  &__header {
+    margin-bottom: 25px;
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+
+  &__select-all {
+    margin-bottom: 10px;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__selected-num {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+      padding-left: 35px;
+    }
+  }
+
+  &__search-wrap {
+
+    @media (min-width: $screen-sm) {
+      width: 285px;
+      margin-left: auto;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 266px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 287px;
+    }
+  }
+
+  &__list-wrapper {
+
+    padding-bottom: 40px;
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 40px;
+  }
+
+  &__footer {
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      margin-bottom: 20px;
+
+      .field-text {
+        flex-basis: 532px;
+        min-width: 532px;
+        margin-right: auto;
+      }
+
+      .field-text__name {
+        display: none;
+      }
+
+      .field-actions {
+        margin-top: 0;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+
+      .field-text {
+        flex-basis: 572px;
+        min-width: 572px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,157 @@
+// В этом файле должны быть стили для БЭМ-блока mail-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.mail-list {
+
+  $block-name:                &;
+  // #{$block-name}__element {}
+
+  position: relative;
+  max-height: 270px;
+
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   z-index: 1;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   height: 10px;
+  //   background: linear-gradient(to top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  // }
+
+  &__list {
+    // margin: 0 -10px 0 0;
+    // padding: 0 10px 0 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-height: 270px;
+    overflow-y: auto;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -5px;
+      margin-right: -5px;
+      max-height: 200px;
+    }
+  }
+
+  &__item-wrap {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    @media (min-width: $screen-md) {
+      flex-basis: 50%;
+      min-width: 50%;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    @media all and (min-width: $screen-md) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      flex-basis: 48% !important;
+      min-width: 48% !important;
+    }
+
+    @media (min-width: $screen-lg) {
+      flex-basis: 33.3334%;
+      min-width: 33.3334%;
+    }
+
+    @media all and (min-width: $screen-lg) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      flex-basis: 32% !important;
+      min-width: 32% !important;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+
+    input {
+      position: absolute;
+      visibility: hidden;
+    }
+  }
+
+  &__item-text {
+    position: relative;
+    height: 60px;
+    padding: 9px 13px 9px 47px;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    transition: border $transition-time;
+
+    input:checked ~ & {
+      border-color: $color-main;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 21px;
+      left: 15px;
+      width: 18px;
+      height: 18px;
+      border: 1px solid $gray-lighten;
+      border-radius: 2px;
+      transition: all $transition-time;
+
+      input:checked ~ & {
+        border-color: $color-main;
+        background-color: $color-main--ultralight;
+      }
+    }
+
+    &:after {
+      opacity: 0;
+      content: '';
+      position: absolute;
+      top: 25px;
+      left: 19px;
+      width: 11px;
+      height: 7px;
+      border-left: 2px solid $color-main;
+      border-bottom: 2px solid $color-main;
+      transform: rotate(-47deg);
+      transition: opacity $transition-time;
+
+      input:checked ~ & {
+        opacity: 1;
+      }
+    }
+
+    @media (min-width: $screen-sm) and (max-width: ($screen-md - 1)) {
+      display: flex;
+      align-items: center;
+
+      #{$block-name}__name {
+        flex-basis: 60%;
+        min-width: 60%;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__email {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $gray;
+    font-size: $font-size--small;
+  }
+}

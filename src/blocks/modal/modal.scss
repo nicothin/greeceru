@@ -351,6 +351,24 @@ $z-index-modal:               100 !default;
     }
   }
 
+  &--xl {
+
+    .modal-open &.in .modal__dialog {
+
+      @media (min-width: $screen-md) {
+        width: 640px;
+      }
+
+      @media (min-width: $screen-lg) {
+        width: 880px;
+      }
+
+      @media (min-width: $screen-xl) {
+        width: 940px;
+      }
+    }
+  }
+
   &--video {
 
     @media (min-width: $screen-md) {

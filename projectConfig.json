@@ -115,7 +115,9 @@
     "table-mobile-scroll": [],
     "card-list-mini": [],
     "share-block": [],
-    "or": []
+    "or": [],
+    "mail-list": [],
+    "share-mail-contacts": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -137,6 +137,18 @@ $field-padding-horizontal:    0.7em !default;
       }
     }
 
+    &--search {
+      padding-left: 40px;
+      background-image: svg-load('../blocks/field-text/img_to_bg/search.svg');
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position: top 50% left 14px;
+
+      @media (min-width: $screen-md) {
+        padding-left: 40px;
+      }
+    }
+
     &:focus {
       @include field-focus;
     }

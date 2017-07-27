@@ -71,6 +71,23 @@ $border-radius:               3px !default;
 
 
 
+  &--link {
+    color: $link-color;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $link-color--hover !important;
+    }
+  }
+
   &--white {
     color: $color-main;
     background-color: #fff;
