@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>greece_ru</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner  page__inner--has-bottom-btns">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header--login.html')
+
+      <main class="page__main-content" role="main">
+
+        <div class="layout-full">
+
+          <div class="profile">
+
+            <header class="profile__header">
+              <h1 class="page__h1">Add infrastructure points</h1>
+              <div class="profile__descr">Place an object and reward virtual money</div>
+            </header>
+
+            <div class="profile__inner">
+
+              <div class="profile__info  profile__info--hidden-lg">
+                <div class="user">
+                  <div class="user__atatar-wrap">
+                    <img src="img/avatar-consultant-01.png" alt="Eugeny Evtushenko" class="user__avatar">
+                    <a href="#change-photo" class="user__avatar-edit" data-toggle="modal">
+                      <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#photo"></use></svg>
+                    </a>
+                  </div>
+                  <div class="user__name">Eugeny Evtushenko</div>
+                  <div class="user__contact">qwerty@gmail.com</div>
+                  <div class="user__location">Vnutrennya Mongolia</div>
+                </div>
+                <div class="account">
+                  <b>Setup your account</b>
+                  <div class="account__progress  progress">
+                    <div class="progress__line" style="width:68%">
+                      <div class="progress__num">68%</div>
+                    </div>
+                  </div>
+                  <a href="" class="account__add-progress">Add phone +15%</a>
+                  <div class="account__controls">
+                    <ul class="account__user-menu">
+                      <li class="account__user-menu-item  account__user-menu-item--active">
+                        <a href="" class="account__user-menu-link">
+                          <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use></svg>
+                          Profile
+                        </a>
+                      </li>
+                      <li class="account__user-menu-item">
+                        <a href="" class="account__user-menu-link">
+                          <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
+                          Wishlist
+                        </a>
+                      </li>
+                      <li class="account__user-menu-item">
+                        <a href="" class="account__user-menu-link">
+                          <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#money-bag"></use></svg>
+                          Savings
+                        </a>
+                      </li>
+                      <li class="account__user-menu-item">
+                        <a href="" class="account__user-menu-link">
+                          <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wallet"></use></svg>
+                          Payments
+                        </a>
+                      </li>
+                      <li class="account__user-menu-item">
+                        <a href="" class="account__user-menu-link">
+                          <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#share2"></use></svg>
+                          Share property
+                        </a>
+                      </li>
+                      <li class="account__user-menu-item">
+                        <a href="" class="account__user-menu-link">
+                          <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#location"></use></svg>
+                          Add infrastructure points
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="account__edit-wrap">
+                      <a href="" class="account__edit">
+                        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#pencil"></use></svg>
+                        Edit information
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <form class="profile__content" action="">
+
+                <div class="profile__add-slide  profile__add-slide--types  profile__add-slide--active">
+                  <div class="profile__add-text-wrap">
+                    <div class="profile__add-text">
+                      <p>Show your property surroundings by drag and drop infrastructure points around your property to map.</p>
+                      <div class="profile__add-subform">
+                        <div class="field-drop-checkboxes">
+                          <div class="field-drop-checkboxes__text-name">Select your property</div>
+                          <div class="field-drop-checkboxes__pseudoselect" id="property" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">House</div>
+                          <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="property">
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="radio" name="property" checked>
+                                <span class="field-checkbox__name-text">Some House</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="radio" name="property">
+                                <span class="field-checkbox__name-text">Some House II</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="radio" name="property">
+                                <span class="field-checkbox__name-text">J Some House</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <label class="field-text">
+                          <span class="field-text__name">Exact address</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input  field-text__input--search" type="search" placeholder="" value="">
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="profile__add-tip">
+                      <strong class="profile__add-tip-title">Quick tip.</strong>
+                      <div class="profile__add-tip-descr">You can simply drag&drop icons to the map</div>
+                      <img src="img/profile-add-help.png" alt="" class="profile__add-tip-pict">
+                    </div>
+                  </div>
+                  <div class="profile__add-type-list-wrap">
+                    <div class="add-type">
+                      <div class="add-type__inner-left">
+                        <p class="add-type__descr">Choose wich infrastructure point you want to add</p>
+                        <p class="add-type__drag">Drag and drop icon to the map</p>
+                        <ul class="add-type__list">
+                          <li class="add-type__item-wrap">
+                            <span class="add-type__item">
+                              иконка
+                              <span class="add-type__item-name">Gym</span>
+                            </span>
+                          </li>
+                          <li class="add-type__item-wrap">
+                            <span class="add-type__item">
+                              иконка
+                              <span class="add-type__item-name">Pharmacy</span>
+                            </span>
+                          </li>
+                          <li class="add-type__item-wrap">
+                            <span class="add-type__item">
+                              иконка
+                              <span class="add-type__item-name">Shop</span>
+                            </span>
+                          </li>
+                          <li class="add-type__item-wrap">
+                            <span class="add-type__item">
+                              иконка
+                              <span class="add-type__item-name">Some long name of object type long long</span>
+                            </span>
+                          </li>
+                          <li class="add-type__item-wrap">
+                            <span class="add-type__item">
+                              иконка
+                              <span class="add-type__item-name">Gym</span>
+                            </span>
+                          </li>
+                          <li class="add-type__item-wrap">
+                            <span class="add-type__item">
+                              иконка
+                              <span class="add-type__item-name">Pharmacy</span>
+                            </span>
+                          </li>
+                          <li class="add-type__item-wrap">
+                            <span class="add-type__item">
+                              иконка
+                              <span class="add-type__item-name">Shop</span>
+                            </span>
+                          </li>
+                          <li class="add-type__item-wrap">
+                            <span class="add-type__item">
+                              иконка
+                              <span class="add-type__item-name">Some long name of object type long long</span>
+                            </span>
+                          </li>
+                          <li class="add-type__item-wrap">
+                            <span class="add-type__item">
+                              иконка
+                              <span class="add-type__item-name">Gym</span>
+                            </span>
+                          </li>
+                          <li class="add-type__item-wrap">
+                            <span class="add-type__item">
+                              иконка
+                              <span class="add-type__item-name">Pharmacy</span>
+                            </span>
+                          </li>
+                          <li class="add-type__item-wrap">
+                            <span class="add-type__item">
+                              иконка
+                              <span class="add-type__item-name">Shop</span>
+                            </span>
+                          </li>
+                          <li class="add-type__item-wrap">
+                            <span class="add-type__item">
+                              иконка
+                              <span class="add-type__item-name">Some long name of object type long long</span>
+                            </span>
+                          </li>
+                          <li class="add-type__item-wrap">
+                            <span class="add-type__item">
+                              иконка
+                              <span class="add-type__item-name">Gym</span>
+                            </span>
+                          </li>
+                          <li class="add-type__item-wrap">
+                            <span class="add-type__item">
+                              иконка
+                              <span class="add-type__item-name">Pharmacy</span>
+                            </span>
+                          </li>
+                          <li class="add-type__item-wrap">
+                            <span class="add-type__item">
+                              иконка
+                              <span class="add-type__item-name">Shop</span>
+                            </span>
+                          </li>
+                          <li class="add-type__item-wrap">
+                            <span class="add-type__item">
+                              иконка
+                              <span class="add-type__item-name">Some long name of object type long long</span>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="profile__add-slide  profile__add-slide--map">2</div>
+
+                <div class="profile__add-slide  profile__add-slide--pay">3</div>
+
+              </form>
+
+            </div>
+
+          </div>
+
+          <div class="layout-full__btns-mobile">
+            <a class="layout-full__btns-mobile-item  layout-full__btns-mobile-item--disabled">Save the point</a>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  <div id="change-photo" class="modal  modal--md" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Change photo</h4>
+        </div>
+        <div class="modal__body">
+          <form class="modal__form" action="">
+            <p>Select the area to display</p>
+            <div class="modal__change-photo-img">
+              <img src="img/demo-card-pict-01.jpg" alt="">
+            </div>
+            <div class="field-actions">
+              <button class="btn  btn--white  btn--wide">Crop and save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

@@ -42,17 +42,27 @@
     padding: 20px 10px;
     color: $text-color;
     text-align: center;
+    border: 0;
+    background: transparent;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    cursor: pointer;
 
     &:not(:first-child) {
       border-left: 1px solid $gray-lightest;
     }
 
+    &[disabled],
     &--disabled {
       opacity: 0.6;
       cursor: default;
+      pointer-events: none;
+
+      &:hover,
+      &:focus {
+        color: inherit;
+      }
     }
   }
 }

@@ -117,7 +117,8 @@
     "share-block": [],
     "or": [],
     "mail-list": [],
-    "share-mail-contacts": []
+    "share-mail-contacts": [],
+    "add-type": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

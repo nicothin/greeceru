@@ -1,0 +1,30 @@
+// В этом файле должны быть стили для БЭМ-блока add-type, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.add-type {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  &__inner-left {
+  }
+
+  &__descr {
+  }
+
+  &__drag {
+  }
+
+  &__list {
+  }
+
+  &__item-wrap {
+  }
+
+  &__item {
+  }
+
+  &__item-name {
+  }
+
+}
