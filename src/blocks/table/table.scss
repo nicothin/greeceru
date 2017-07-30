@@ -51,6 +51,30 @@
 
   &__col {
 
+    &--xs-80 {
+        width: 82px;
+
+      #{$block-name} & {
+        max-width: 82px !important;
+      }
+    }
+
+    &--xs-100 {
+        width: 100px;
+
+      #{$block-name} & {
+        max-width: 100px !important;
+      }
+    }
+
+    &--xs-120 {
+        width: 120px;
+
+      #{$block-name} & {
+        max-width: 120px !important;
+      }
+    }
+
     &--md-30 {
 
       @media (min-width: $screen-md) {
@@ -124,8 +148,12 @@
   }
 
   &__status {
-    white-space: nowrap;
     color: $gray;
+    display: block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &--paid {
       color: $color-success;
