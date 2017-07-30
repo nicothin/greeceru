@@ -6513,6 +6513,18 @@ a.btn--disabled {
       padding-left: 0; }
 .table td:last-child {
       padding-right: 0; }
+.table__col--xs-80 {
+    width: 82px; }
+.table .table__col--xs-80 {
+      max-width: 82px !important; }
+.table__col--xs-100 {
+    width: 100px; }
+.table .table__col--xs-100 {
+      max-width: 100px !important; }
+.table__col--xs-120 {
+    width: 120px; }
+.table .table__col--xs-120 {
+      max-width: 120px !important; }
 .table__col--xs-hide {
     display: none; }
 .table__toe {
@@ -6522,8 +6534,12 @@ a.btn--disabled {
     overflow: hidden;
     text-overflow: ellipsis; }
 .table__status {
+    color: #8891a6;
+    display: block;
+    max-width: 100%;
     white-space: nowrap;
-    color: #8891a6; }
+    overflow: hidden;
+    text-overflow: ellipsis; }
 .table__status--paid {
       color: #38a53d; }
 .table--first-content {
