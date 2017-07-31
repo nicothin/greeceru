@@ -227,14 +227,44 @@
         display: block;
       }
     }
+
+    @media (min-width: $screen-xl) {
+
+      .field-drop-checkboxes,
+      .field-text__input {
+        max-width: 360px;
+      }
+    }
+
+    &--types {
+
+      // @media (min-width: $screen-xl) {
+      //   position: relative;
+      //   z-index: 1;
+      // }
+    }
+
+    &--map {
+
+      @media (min-width: $screen-xl) {
+        position: relative;
+      }
+    }
+
+    &--pay {
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: 40px;
+      }
+    }
   }
 
   &__add-slide-map-inner {
+    display: flex;
+    flex-direction: column;
 
     @media (max-width: ($screen-lg - 1)) {
       min-height: calc(100vh - 165px); // магическое число, вычет высоты прочих жлементов
-      display: flex;
-      flex-direction: column;
 
       & > * {
         flex-shrink: 0;
@@ -242,20 +272,121 @@
     }
   }
 
+  &__add-text-wrap {
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      align-items: flex-start;
+
+      // @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      //   background-color: #ff0;
+      //   width: 100%;
+      // }
+    }
+  }
+
+  &__add-text {
+
+    @media (min-width: $screen-xl) {
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        max-width: calc(100% - 360px);
+      }
+    }
+
+    & > p:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__add-subform {
+
+    @media (min-width: $screen-xl) {
+      margin-top: 20px;
+    }
+  }
+
   &__add-extract-address {
     display: none;
+
+    @media (min-width: $screen-xl) {
+      display: block;
+      margin-top: 30px;
+    }
+
+    @media (min-width: $screen-xl) {
+
+      .field-text__input-wrap {
+        width: 360px;
+      }
+    }
   }
 
   &__add-tip {
     display: none;
+
+    @media (min-width: $screen-xl) {
+      display: block;
+      width: 360px;
+      flex-shrink: 0;
+      border: 1px solid $border-color;
+      padding: 20px 30px;
+      margin-left: 30px;
+    }
+  }
+
+  &__add-tip-title {
+    display: block;
+  }
+
+  &__add-tip-descr {
+    font-size: $font-size--small;
+  }
+
+  &__add-tip-pict {
+    display: block;
+    margin-top: 15px;
+  }
+
+  &__add-type-list-wrap {
+
+    @media (min-width: $screen-xl) {
+      width: 100%;
+      height: 408px;
+      margin-top: 25px;
+    }
+  }
+
+  &__add-points-wrap {
+
+    &--lg-hide {
+
+      @media (min-width: $screen-lg) {
+        display: none;
+      }
+    }
+
+    &--for-lg {
+
+      @media (min-width: $screen-lg) {
+        order: 1;
+
+        #{$block-name}__add-points-list {
+          margin: 40px 0 0;
+        }
+      }
+    }
   }
 
   &__add-point {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     position: relative;
-    height: 48px;
-    line-height: 48px;
-    padding: 0 50px;
+    min-height: 48px;
+    max-width: 360px;
+    line-height: $line-height;
+    padding: 10px 50px;
     border: 1px solid $border-color;
     border-radius: $border-radius;
     white-space: nowrap;
@@ -271,6 +402,24 @@
     }
   }
 
+  &__add-point-name {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__add-point-descr {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $gray;
+    font-size: $font-size--small;
+  }
+
   &__add-point-del {
     position: absolute;
     right: 13px;
@@ -280,6 +429,10 @@
 
   &__add-points-descr {
     margin-bottom: 5px;
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
   }
 
   &__add-points-list {
@@ -288,19 +441,61 @@
 
   &__add-point-addr-or-pin {
     margin-bottom: 10px;
+
+    @media (min-width: $screen-lg) {
+      margin-top: 20px;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: none;
+    }
   }
 
   &__add-points-btn {
     display: none;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
   }
 
   &__add-points-map {
+    position: relative;
     flex-grow: 1;
     min-height: 150px;
+
+    @media (min-width: $screen-lg) {
+      min-height: 408px;
+    }
+
+    @media (min-width: $screen-xl) {
+      position: absolute !important;
+      top: -408px;
+      right: 0;
+      width: calc(100% - 230px);
+      height: 408px;
+      border: 1px solid $border-color;
+      border-left: 0;
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
   }
 
   &__add-name-point {
     padding-top: 20px;
+    order: 2;
+
+    @media (min-width: $screen-lg) {
+
+      .field-text__input {
+        width: 360px;
+        margin-right: 30px;
+      }
+
+      .field-text__input-wrap {
+        display: flex;
+      }
+    }
   }
 
   &__add-pay-processed-in-alert {

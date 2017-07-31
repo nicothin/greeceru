@@ -219,6 +219,10 @@ $field-padding-horizontal:    0.7em !default;
       }
     }
 
+    @media (min-width: $screen-md) {
+      padding: $field-padding-vertical $field-padding-horizontal;
+    }
+
     svg {
       display: inline-block;
       vertical-align: middle;
