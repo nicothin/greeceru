@@ -8,6 +8,13 @@
 
   &__header {
     margin-bottom: 35px;
+
+    &--xs-hide {
+
+      @media (max-width: ($screen-lg - 1)) {
+        display: none;
+      }
+    }
   }
 
   &__descr {
@@ -52,6 +59,10 @@
 
     .card-list-mini {
       margin-bottom: 55px;
+    }
+
+    &--add {
+      position: relative;
     }
   }
 
@@ -206,4 +217,98 @@
       margin-bottom: 30px;
     }
   }
+
+  &__add-slide {
+
+    @media (max-width: ($screen-lg - 1)) {
+      display: none;
+
+      &--active {
+        display: block;
+      }
+    }
+  }
+
+  &__add-slide-map-inner {
+
+    @media (max-width: ($screen-lg - 1)) {
+      min-height: calc(100vh - 165px); // магическое число, вычет высоты прочих жлементов
+      display: flex;
+      flex-direction: column;
+
+      & > * {
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  &__add-extract-address {
+    display: none;
+  }
+
+  &__add-tip {
+    display: none;
+  }
+
+  &__add-point {
+    display: block;
+    position: relative;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 50px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 25px;
+      transform: translate(-50%, -50%);
+      fill: $color-main;
+    }
+  }
+
+  &__add-point-del {
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__add-points-descr {
+    margin-bottom: 5px;
+  }
+
+  &__add-points-list {
+    margin-bottom: 40px;
+  }
+
+  &__add-point-addr-or-pin {
+    margin-bottom: 10px;
+  }
+
+  &__add-points-btn {
+    display: none;
+  }
+
+  &__add-points-map {
+    flex-grow: 1;
+    min-height: 150px;
+  }
+
+  &__add-name-point {
+    padding-top: 20px;
+  }
+
+  &__add-pay-processed-in-alert {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+  }
+
 }

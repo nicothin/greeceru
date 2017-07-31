@@ -54,6 +54,13 @@
   &__footer-wrapper {
     z-index: 1;
     flex-shrink: 0;
+
+    &--xs-hide {
+
+      @media (max-width: ($screen-lg - 1)) {
+        display: none;
+      }
+    }
   }
 
   &__h1 {
