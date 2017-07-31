@@ -36,6 +36,7 @@ $field-padding-horizontal:    0.7em !default;
 
   &__input-wrap {
     display: block;
+    position: relative;
 
     &--input-group {
       display: flex;
@@ -149,6 +150,10 @@ $field-padding-horizontal:    0.7em !default;
       }
     }
 
+    &--has-right-btn {
+      padding-right: 40px;
+    }
+
     &:focus {
       @include field-focus;
     }
@@ -195,6 +200,34 @@ $field-padding-horizontal:    0.7em !default;
       text-align: right;
     }
   }
+
+  &__locate-btn {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    border: 0;
+    background: transparent;
+    padding: ($field-padding-vertical + 4) $field-padding-horizontal;
+    line-height: $font-size + 6;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+
+      svg {
+        fill: $color-main--accent;
+      }
+    }
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      fill: $gray;
+      transition: fill $transition-time;
+    }
+  }
+
+
 
   &--error {
 

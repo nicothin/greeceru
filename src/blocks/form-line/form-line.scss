@@ -28,6 +28,7 @@
 
     @media (min-width: $screen-osx) {
       max-width: 25%;
+      margin-bottom: 20px;
     }
 
     &--full-line {
@@ -35,11 +36,13 @@
       @media (min-width: $screen-lg) {
         flex-basis: 100%;
       }
+    }
 
-    //   @media (min-width: $screen-osx) {
-    //     flex-basis: auto;
-    //     max-width: 25%;
-    //   }
+    &--in-alert {
+
+      @media (max-width: ($screen-osx - 1)) {
+        margin-bottom: 25px;
+      }
     }
   }
 
@@ -55,6 +58,7 @@
 
     @media (min-width: $screen-osx) {
       max-width: 25%;
+      margin-bottom: 20px;
     }
 
     b {
