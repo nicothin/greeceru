@@ -8721,9 +8721,14 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     margin: 0; }
   .add-type__item-wrap:not(:last-child){
     border-bottom: 1px solid #e9edf2; }
+  input:checked ~ .add-type__item, .add-type__item:hover, .add-type__item:focus{
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='12' viewBox='0 0 15 12'%3E%3Cpath fill='%23346af4' d='M1.07 4.99h10.17L7.66 1.61a.887.887 0 0 1 0-1.33 1.028 1.028 0 0 1 1.41 0L14.99 6l-5.92 5.73a1.055 1.055 0 0 1-1.41 0 .9.9 0 0 1 0-1.34l3.61-3.4L1 6.97a.975.975 0 0 1-1.01-.94 1.125 1.125 0 0 1 1.08-1.04z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center; }
   .add-type__item{
     border: 0;
-    border-radius: 0; } }
+    border-radius: 0;
+    padding-right: 40px; } }
 @media (min-width: 1440px){
   .page-header__steps{
     padding-left: 46px; }
