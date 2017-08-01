@@ -151,11 +151,18 @@
       svg {
         fill: $color-main--accent;
       }
+
+      @media (min-width: $screen-xl) {
+        background-image: svg-load('../blocks/add-type/img_to_bg/arrow-right.svg');
+        background-repeat: no-repeat;
+        background-position: right 14px center;
+      }
     }
 
     @media (min-width: $screen-xl) {
       border: 0;
       border-radius: 0;
+      padding-right: 40px;
     }
 
     svg {
