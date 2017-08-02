@@ -17,6 +17,7 @@
   }
 
   &__inner {
+    position: relative;
     display: flex;
     align-items: center;
     padding: 0 0 0 19px;
@@ -114,6 +115,12 @@
     height: 72px;
     border-left: 1px solid $gray-lightest;
     font-weight: 500;
+  }
+
+  &__hide {
+    position: absolute;
+    top: -11px;
+    right: 3px;
   }
 }
 
