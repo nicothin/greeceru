@@ -5886,6 +5886,7 @@ a.ui-state-default:hover, a.ui-state-default:focus {
 .compare-line {
   display: none; }
 .compare-line__inner {
+    position: relative;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -5976,6 +5977,10 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     height: 72px;
     border-left: 1px solid #e9edf2;
     font-weight: 500; }
+.compare-line__hide {
+    position: absolute;
+    top: -11px;
+    right: 3px; }
 .profile__header {
   margin-bottom: 35px; }
 .profile__descr {
