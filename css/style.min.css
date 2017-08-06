@@ -5999,7 +5999,7 @@ a.ui-state-default:hover, a.ui-state-default:focus {
 .compare-line__hide {
     position: absolute;
     top: -11px;
-    right: 3px; }
+    right: 15px; }
 .profile__header {
   margin-bottom: 35px; }
 .profile__descr {
