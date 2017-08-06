@@ -1032,6 +1032,8 @@ input:checked ~ .field-checkbox__name-text:after {
         height: 6px; }
 .field-checkbox__name--check-only .field-checkbox__name-text:before {
       display: none; }
+.field-checkbox__name-text--one-line {
+      white-space: nowrap; }
 .field-checkbox__input {
     position: absolute;
     top: 0;
@@ -1204,6 +1206,8 @@ input:checked ~ .field-radio__name-text:after {
   margin-right: -15px; }
 .form__row--max490 {
     max-width: 490px; }
+.form__row--max690 {
+    max-width: 690px; }
 .form__col {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -1217,6 +1221,8 @@ input:checked ~ .field-radio__name-text:after {
     display: none; }
 .form__col--checkbox {
     margin-bottom: 10px; }
+.form__col--mb15 {
+    margin-bottom: 15px; }
 .pagination__text {
   display: block;
   font-size: 14px;
@@ -4292,6 +4298,10 @@ a.ui-state-default:hover, a.ui-state-default:focus {
 .list-property__short-drop {
   max-width: 230px;
   margin-bottom: 30px; }
+.list-property__form-part {
+  display: none; }
+.list-property__form-part--shown {
+    display: block; }
 .list-property__header {
   border-bottom: 1px solid #e9edf2;
   padding-bottom: 35px; }
@@ -5016,6 +5026,15 @@ a.ui-state-default:hover, a.ui-state-default:focus {
 .fields-group {
   display: -ms-flexbox;
   display: flex; }
+.fields-group__name {
+    display: block;
+    width: 100%;
+    margin-bottom: 13px;
+    line-height: 1;
+    font-weight: 500; }
+.fields-group__name--sm {
+      font-size: 12px;
+      font-weight: 400; }
 .fields-group .field-text {
     -ms-flex-positive: 1;
         flex-grow: 1; }
@@ -6927,6 +6946,17 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     transform: translate(-50%, -50%);
     fill: #8891a6;
     transition: fill 0.3s; }
+.info-tooltip {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  margin-left: 0.2em; }
+.info-tooltip svg {
+    display: block;
+    fill: #8891a6; }
+.info-tooltip:hover svg, .info-tooltip:focus svg {
+    fill: #477afb; }
 @media screen and (min-width: 480px) and (-ms-high-contrast: active), (min-width: 480px) and (-ms-high-contrast: none){
   .add-type__item-wrap{
     -ms-flex-preferred-size: auto !important;
@@ -6944,9 +6974,9 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     flex-basis: 100%;
     max-width: 100%; }
   .form__col--checkbox{
-    -ms-flex-preferred-size: 33.3334%;
-    flex-basis: 33.3334%;
-    max-width: 33.3334%; }
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%; }
   .search__part-buy{
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
@@ -8417,6 +8447,10 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     white-space: normal; }
   .main-nav__toggler{
     display: none; }
+  .form__col--checkbox{
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%; }
   .contacts-list__item:last-child{
     padding-bottom: 15px; }
   .contacts-list__item{
