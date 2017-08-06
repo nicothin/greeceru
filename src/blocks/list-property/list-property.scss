@@ -11,6 +11,14 @@
     margin-bottom: 30px;
   }
 
+  &__form-part {
+    display: none;
+
+    &--shown {
+      display: block;
+    }
+  }
+
   &__header {
     border-bottom: 1px solid $gray-lightest;
     padding-bottom: 35px;

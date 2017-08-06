@@ -48,6 +48,10 @@ $line-height:                 1.375em !default;
     &--max490 {
       max-width: 490px;
     }
+
+    &--max690 {
+      max-width: 690px;
+    }
   }
 
   &__col {
@@ -117,9 +121,18 @@ $line-height:                 1.375em !default;
       margin-bottom: 10px;
 
       @media (min-width: $screen-sm) {
-        flex-basis: 33.3334%;
-        max-width: 33.3334%;
+        flex-basis: 50%;
+        max-width: 50%;
       }
+
+      @media (min-width: $screen-xl) {
+        flex-basis: 25%;
+        max-width: 25%;
+      }
+    }
+
+    &--mb15 {
+      margin-bottom: 15px;
     }
   }
 }

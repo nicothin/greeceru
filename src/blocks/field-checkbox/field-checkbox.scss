@@ -86,6 +86,10 @@ $line-height:                 1.375em !default;
         display: none;
       }
     }
+
+    &--one-line {
+      white-space: nowrap;
+    }
   }
 
   &__input {

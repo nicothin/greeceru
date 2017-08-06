@@ -1,0 +1,28 @@
+// В этом файле должны быть стили для БЭМ-блока info-tooltip, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.info-tooltip {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  margin-left: 0.2em;
+
+  svg {
+    display: block;
+    fill: $gray;
+  }
+
+  &:hover,
+  &:focus {
+
+    svg {
+      fill: $color-main;
+    }
+  }
+
+}

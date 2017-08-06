@@ -5,6 +5,19 @@
 .fields-group {
   display: flex;
 
+  &__name {
+    display: block;
+    width: 100%;
+    margin-bottom: 13px;
+    line-height: 1;
+    font-weight: 500;
+
+    &--sm {
+      font-size: $font-size--small;
+      font-weight: 400;
+    }
+  }
+
   .field-text {
     flex-grow: 1;
 

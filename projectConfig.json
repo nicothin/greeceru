@@ -118,7 +118,8 @@
     "or": [],
     "mail-list": [],
     "share-mail-contacts": [],
-    "add-type": []
+    "add-type": [],
+    "info-tooltip": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
