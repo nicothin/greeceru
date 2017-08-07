@@ -21,8 +21,8 @@
 
 <body>
 
-<div style="position: fixed;z-index:999;right:0;bottom:0;background: #fff;padding: 0.5em">
-  Для мобилок переключалка:
+<div style="position: fixed;z-index:999;right:0;bottom:0;background: #fff;padding: 0.1em;opacity: 0.3;">
+  переключалка:
   <a href="#" class="TEMP-profile-switch">часть 1</a>,
   <a href="#" class="TEMP-profile-switch">часть 2</a>,
   <a href="#" class="TEMP-profile-switch">часть 3</a>
@@ -735,12 +735,11 @@
                 <div class="profile__add-slide  profile__add-slide--map">
                   <div class="profile__add-slide-map-inner">
                     <div class="profile__add-points-wrap  profile__add-points-wrap--for-lg">
-                      <div class="profile__add-points-descr">Selected infrastructure point:</div>
                       <div class="profile__add-points-list">
                         <div class="profile__add-point">
                           <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-shop"></use></svg>
-                          <div class="profile__add-point-name">Shop</div>
-                          <div class="profile__add-point-descr">Shop address too long address too long address too long</div>
+                          <input class="profile__add-point-name" type="text" placeholder="Shop: insert name (optional)">
+                          <input class="profile__add-point-descr" type="text" placeholder="Shop address">
                           <button class="profile__add-point-del  close-circle"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
                         </div>
                       </div>
@@ -958,29 +957,31 @@
 
                 <div class="profile__add-slide  profile__add-slide--pay">
                   <div class="profile__add-points-wrap  profile__add-points-wrap--lg-hide">
-                    <div class="profile__add-points-descr">Selected infrastructure point:</div>
                     <div class="profile__add-points-list">
                       <div class="profile__add-point">
                         <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-shop"></use></svg>
-                        <span class="profile__add-point-name">Shop</span>
-                        <div class="profile__add-point-descr">Shop address too long address too long address too long</div>
+                        <input class="profile__add-point-name" type="text" placeholder="Shop: insert name (optional)">
+                        <input class="profile__add-point-descr" type="text" placeholder="Shop address">
                         <button class="profile__add-point-del  close-circle"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
                       </div>
                     </div>
                   </div>
-                  <div class="profile__add-name-point  field-text">
-                    <span class="field-text__name  field-text__name--sm">Name of the point (optional)</span>
-                    <span class="field-text__input-wrap">
-                      <input class="field-text__input" type="search" placeholder="" value="">
-                      <button class="profile__add-points-btn  btn  btn--white  btn--wide">Save the point</button>
-                    </span>
+                  <div class="profile__add-name-point">
+                    <button class="profile__add-points-btn  btn  btn--white  btn--wide">Save the point</button>
                   </div>
                   <div class="pay-consult">
-                    <div class="alert">
+                    <div class="alert  alert--mb30">
                       <div class="alert__inner">
                         <h2 class="alert__title  alert__title--icon-info">Your pointer successfully saved</h2>
                         <p class="alert__small">Are you an owner of this object? Only for 20 euro you can increase audience of your business. FIll in phone number and your website. Also you will reward vitrual drachma.</p>
-                        <div class="form-line">
+                        <div class="field-checkbox  field-checkbox--mt20  field-checkbox--sm">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">I am the owner of the point</span>
+                          </label>
+                        </div>
+                        <!-- убрать класс form-line--hidden, чтобы увидеть форму -->
+                        <div class="form-line  form-line--hidden">
                           <label class="field-text  form-line__part">
                             <span class="field-text__name">Property phone</span>
                             <span class="field-text__input-wrap">
@@ -1004,6 +1005,7 @@
                       </div>
                     </div>
                   </div>
+                  <button class="profile__add-points-btn  btn  btn--white  btn--wide">Add another point</button>
                 </div>
 
               </form>
@@ -1013,7 +1015,8 @@
           </div>
 
           <div class="layout-full__btns-mobile">
-            <a class="layout-full__btns-mobile-item  layout-full__btns-mobile-item--disabled">Save the point</a>
+            <a class="layout-full__btns-mobile-item  layout-full__btns-mobile-item--disabled">Proceed <span class="layout-full__btns-xs-hide">to payment</span></a>
+            <a class="layout-full__btns-mobile-item  layout-full__btns-mobile-item--disabled">Add more <span class="layout-full__btns-xs-hide">points</span></a>
           </div>
 
         </div>
