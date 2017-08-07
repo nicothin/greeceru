@@ -74,4 +74,10 @@
       white-space: nowrap;
     }
   }
+
+
+
+  &--hidden {
+    display: none !important;
+  }
 }

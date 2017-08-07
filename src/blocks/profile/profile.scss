@@ -405,19 +405,30 @@
   &__add-point-name {
     display: block;
     width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    padding: 5px 3px;
+    margin-bottom: 2px;
+    border: 0;
+    border-bottom: 1px solid $border-color;
+    font-family: inherit;
+    font-size: $font-size;
+
+    &::placeholder {
+      color: $text-color;
+    }
   }
 
   &__add-point-descr {
     display: block;
     width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    padding: 5px 3px;
+    border: 0;
     color: $gray;
+    font-family: inherit;
     font-size: $font-size--small;
+
+    &::placeholder {
+      color: $gray;
+    }
   }
 
   &__add-point-del {
@@ -427,13 +438,13 @@
     transform: translateY(-50%);
   }
 
-  &__add-points-descr {
-    margin-bottom: 5px;
+  // &__add-points-descr {
+  //   margin-bottom: 5px;
 
-    @media (min-width: $screen-lg) {
-      display: none;
-    }
-  }
+  //   @media (min-width: $screen-lg) {
+  //     display: none;
+  //   }
+  // }
 
   &__add-points-list {
     margin-bottom: 20px;

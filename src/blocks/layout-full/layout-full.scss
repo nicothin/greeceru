@@ -66,6 +66,13 @@
     }
   }
 
+  &__btns-xs-hide {
+
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
+  }
+
 
 
   &--pb15 {
