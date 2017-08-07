@@ -1180,6 +1180,13 @@ input:checked ~ .field-radio__name-text:after {
   text-align: right; }
 .field-actions--left {
     text-align: left; }
+.field-actions--jcsb {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
 .form:not(:last-child) {
   margin-bottom: 1.375em; }
 .form fieldset {
@@ -4368,19 +4375,13 @@ a.ui-state-default:hover, a.ui-state-default:focus {
 .list-property__section--pb35-xs:not(:last-child) {
     padding-bottom: 35px; }
 .list-property__select-type {
-  margin: 20px 0 10px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-align: center;
-      align-items: center; }
+  margin: 20px 0 10px; }
 .list-property__select-type > * {
     margin-bottom: 20px; }
 .list-property__select-type-or {
-  margin-left: 1em;
-  margin-right: 1em;
-  width: 100%; }
+  display: block;
+  width: 230px;
+  text-align: center; }
 .list-property__service-list--pt15 {
   padding-top: 15px; }
 .list-property__option {
@@ -7552,8 +7553,6 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     display: flex;
     -ms-flex-align: top;
     align-items: top; }
-  .list-property__select-type-or{
-    width: auto; }
   .list-property__service-list{
     display: -ms-flexbox;
     display: flex;
