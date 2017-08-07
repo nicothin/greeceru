@@ -194,9 +194,9 @@
 
   &__select-type {
     margin: 20px 0 10px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: center;
 
     & > * {
       margin-bottom: 20px;
@@ -204,13 +204,13 @@
   }
 
   &__select-type-or {
-    margin-left: 1em;
-    margin-right: 1em;
-    width: 100%;
+    display: block;
+    width: 230px;
+    text-align: center;
 
-    @media (min-width: $screen-md) {
-      width: auto;
-    }
+    // @media (min-width: $screen-md) {
+    //   width: auto;
+    // }
   }
 
   &__service-list {
