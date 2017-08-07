@@ -16,6 +16,12 @@ $line-height:                 1.375em !default;
     text-align: left;
   }
 
+  &--jcsb {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   // display: block;
   // margin-top: $line-height;
   // margin-bottom: ($line-height / 2);

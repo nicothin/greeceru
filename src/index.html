@@ -19,6 +19,7 @@
     <a href="#notice-text" data-toggle="modal">notice-text</a>,
     <a href="#notice-price" data-toggle="modal">notice-price</a>,
     <a href="#interview" data-toggle="modal">interview</a>,
+    <a href="#confirm" data-toggle="modal">confirm</a>,
   </div>
 
   <div class="page__inner">
@@ -399,6 +400,26 @@
       @@include('blocks/page-footer/page-footer.html')
     </div>
 
+  </div>
+
+  <div id="confirm" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Some text</h4>
+        </div>
+        <div class="modal__body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae soluta, quaerat alias veritatis voluptas sed ut hic ad voluptatibus aut animi, quam eligendi optio ex, quisquam quis cum maxime! Veritatis.</p>
+          <div class="modal__form" action="">
+            <div class="field-actions  field-actions--jcsb">
+              <button class="btn  btn--wide">Yes</button>
+              <button class="btn  btn--white  btn--wide">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div id="addItemToWishlist" class="modal" tabindex="-1" role="dialog">
