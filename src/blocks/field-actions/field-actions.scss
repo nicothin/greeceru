@@ -12,6 +12,13 @@ $line-height:                 1.375em !default;
   margin-top: 26px;
   text-align: right;
 
+  &__help {
+    @include field-help-text;
+
+    margin-top: 10px;
+    text-align: center;
+  }
+
   &--left {
     text-align: left;
   }

@@ -1,6 +1,12 @@
-
 .ui-datepicker-inline {
   // padding: 0 15px;
+}
+
+.ui-datepicker:not(.ui-datepicker-inline) {
+  width: 340px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: $shadow;
 }
 
 .ui-widget-header {
@@ -105,6 +111,7 @@
   }
 }
 span.ui-state-default {
+  background-color: $gray-lightest;
   color: $gray;
   cursor: default;
 }
@@ -121,6 +128,11 @@ a.ui-state-default {
 .ui-datepicker-current-day .ui-state-default {
   background: $color-main;
   color: #fff !important;
+}
+
+.ui-datepicker-unselectable .ui-state-default {
+  // background: $color-main;
+  // color: #fff !important;
 }
 
 .ui-datepicker-today .ui-state-default {

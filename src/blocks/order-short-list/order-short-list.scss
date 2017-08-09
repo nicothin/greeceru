@@ -40,6 +40,17 @@
     &--pb0:not(:last-child) {
       padding-bottom: 0;
     }
+
+    &--sm {
+
+      &:not(:first-child) {
+        padding-top: 20px;
+      }
+
+      &:not(:last-child) {
+        padding-bottom: 20px;
+      }
+    }
   }
 
   &__title {
@@ -95,6 +106,10 @@
     font-size: $font-size--h3;
     font-weight: 500;
     padding-top: 40px;
+
+    &--pt20 {
+      padding-top: 20px;
+    }
   }
 
 
