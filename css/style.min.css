@@ -1178,6 +1178,16 @@ input:checked ~ .field-radio__name-text:after {
 .field-actions {
   margin-top: 26px;
   text-align: right; }
+.field-actions__help {
+    display: block;
+    padding-top: 0.4em;
+    font-size: 12px;
+    line-height: 1.2em;
+    color: #8891a6;
+    margin-top: 10px;
+    text-align: center; }
+.field-actions__help:empty {
+      display: none; }
 .field-actions--left {
     text-align: left; }
 .field-actions--jcsb {
@@ -1230,6 +1240,8 @@ input:checked ~ .field-radio__name-text:after {
     display: none; }
 .form__col--checkbox {
     margin-bottom: 10px; }
+.form__col--mb0 {
+    margin-bottom: 0; }
 .form__col--mb15 {
     margin-bottom: 15px; }
 .pagination__text {
@@ -2884,6 +2896,11 @@ a:hover .feedback__slider-control-arrow,
 .card-mini__descr {
     -ms-flex-negative: 0;
         flex-shrink: 0; }
+.ui-datepicker:not(.ui-datepicker-inline) {
+  width: 340px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 40px rgba(72, 72, 72, 0.35); }
 .ui-widget-header {
   display: -ms-flexbox;
   display: flex;
@@ -2969,6 +2986,7 @@ a:hover .feedback__slider-control-arrow,
   height: 42px;
   border: 1px solid transparent; }
 span.ui-state-default {
+  background-color: #e9edf2;
   color: #8891a6;
   cursor: default; }
 a.ui-state-default {
@@ -4440,12 +4458,13 @@ a.ui-state-default:hover, a.ui-state-default:focus {
   margin-top: 5px;
   font-size: 12px; }
 .list-property__price-follow {
-  display: inline-block;
-  margin-bottom: 30px; }
+  display: inline-block; }
 .list-property__price-follow-success {
   display: inline-block;
   margin-bottom: 30px;
   color: #38a53d; }
+.list-property__price-dynamics {
+  margin-top: 30px; }
 .list-property__price-dynamics-part {
   display: block; }
 .list-property__price-dynamics-part + .list-property__price-dynamics-part {
@@ -4483,6 +4502,10 @@ a.ui-state-default:hover, a.ui-state-default:focus {
       background-size: 10px 1px; }
 .order-short-list__item--pb0:not(:last-child) {
     padding-bottom: 0; }
+.order-short-list__item--sm:not(:first-child) {
+    padding-top: 20px; }
+.order-short-list__item--sm:not(:last-child) {
+    padding-bottom: 20px; }
 .order-short-list__title {
   margin: 0 0 7px;
   font-size: 14px;
@@ -4521,6 +4544,8 @@ a.ui-state-default:hover, a.ui-state-default:focus {
   font-size: 16px;
   font-weight: 500;
   padding-top: 40px; }
+.order-short-list__total-wrapper--pt20 {
+    padding-top: 20px; }
 .order-short-list--single {
   border: 1px solid #e9edf2;
   padding: 20px;
