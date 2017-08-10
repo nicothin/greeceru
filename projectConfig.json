@@ -119,7 +119,8 @@
     "mail-list": [],
     "share-mail-contacts": [],
     "add-type": [],
-    "info-tooltip": []
+    "info-tooltip": [],
+    "price-tooltip": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
