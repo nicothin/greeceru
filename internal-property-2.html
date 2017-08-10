@@ -442,8 +442,9 @@
         <div class="layout-tabs  layout-tabs--normal-aside" data-layout-tab-parent>
 
           <div class="layout-tabs__list">
-            <a href="#filter-wrapper" class="layout-tabs__list-item" data-filter-drop-toggler>Properties filter</a>
-            <a href="#request" class="layout-tabs__list-item" data-toggle="modal">Request information</a>
+            <a href="#filter-wrapper" class="layout-tabs__list-item" data-filter-drop-toggler>Properties<span class="layout-tabs__list-item-xs-hide"> filter</span></a>
+            <!-- <a href="#request" class="layout-tabs__list-item" data-toggle="modal">Request<span class="layout-tabs__list-item-xs-hide"> information</span></a> -->
+            <a href="#availabiity" class="layout-tabs__list-item" data-toggle="modal">Request<span class="layout-tabs__list-item-xs-hide"> to book</span></a>
           </div>
 
           <div class="layout-tabs__tab  layout-tabs__tab--text  layout-tabs__tab--active" id="region-description">
@@ -1669,9 +1670,9 @@
                 <div class="aside-block__content-wrapper">
                   <form class="aside-block__content  aside-block__content--pv25">
                     <div class="order-short-list">
-                      <div class="form">
+                      <div class="form  form--mb0">
                         <div class="form__row">
-                          <div class="form__col  form__col--mb0">
+                          <div class="form__col">
                             <label class="field-text">
                               <div class="field-text__name  field-text__name--sm">Check In</div>
                               <span class="field-text__input-wrap">
@@ -1679,7 +1680,7 @@
                               </span>
                             </label>
                           </div>
-                          <div class="form__col  form__col--mb0">
+                          <div class="form__col">
                             <label class="field-text">
                               <div class="field-text__name  field-text__name--sm">Check Out</div>
                               <span class="field-text__input-wrap">
@@ -2366,6 +2367,74 @@
 
     </div>
 
+  </div>
+
+  <div id="availabiity" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Availabiity & prices</h4>
+        </div>
+        <div class="modal__body">
+          <form class="">
+            <div class="order-short-list">
+              <div class="form  form--mb0">
+                <div class="form__row">
+                  <div class="form__col">
+                    <label class="field-text">
+                      <div class="field-text__name  field-text__name--sm">Check In</div>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="05/23/2017">
+                      </span>
+                    </label>
+                  </div>
+                  <div class="form__col">
+                    <label class="field-text">
+                      <div class="field-text__name  field-text__name--sm">Check Out</div>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="06/23/2017">
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="order-short-list__item  order-short-list__item--sm">
+                <ul class="order-short-list__sublist">
+                  <li class="order-short-list__sublist-item">
+                    <div class="order-short-list__name">€ 5 813 x 1 night</div>
+                    <div class="order-short-list__price"> € 5 813</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="order-short-list__item  order-short-list__item--sm">
+                <ul class="order-short-list__sublist">
+                  <li class="order-short-list__sublist-item">
+                    <div class="order-short-list__name">
+                      Service fee
+                      <span class="tooltip-all" data-toggle="tooltip" data-placement="top" data-original-title="Some info">
+                        <svg width="12" height="12" class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help"></use></svg>
+                      </span>
+                    </div>
+                    <div class="order-short-list__price"> € 125</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="order-short-list__item  order-short-list__item--sm">
+                <div class="order-short-list__total-wrapper  order-short-list__total-wrapper--pt20">
+                  <div class="order-short-list__name">Total </div>
+                  <div class="order-short-list__price"> € 125</div>
+                </div>
+              </div>
+            </div>
+            <div class="field-actions">
+              <button class="btn  btn--white  btn--block">Request to Book</button>
+              <div class="field-actions__help">You won’t be charged yet </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div id="request" class="modal" tabindex="-1" role="dialog">
