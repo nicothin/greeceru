@@ -1,0 +1,45 @@
+// В этом файле должны быть стили для БЭМ-блока price-tooltip, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.price-tooltip {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  position: relative;
+  display: inline-block;
+  min-width: 108px;
+  padding: 3px;
+  margin-bottom: 10px;
+  border: 1px solid $border-color;
+  background-color: #fff;
+  text-align: center;
+  white-space: nowrap;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 9px 7px 0 7px;
+    border-color: $gray-lightest transparent transparent transparent;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 9px 7px 0 7px;
+    border-color: #fff transparent transparent transparent;
+  }
+
+}

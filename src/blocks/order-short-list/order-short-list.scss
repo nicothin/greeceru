@@ -50,6 +50,10 @@
       &:not(:last-child) {
         padding-bottom: 20px;
       }
+
+      .form + & {
+        padding-top: 0;
+      }
     }
   }
 

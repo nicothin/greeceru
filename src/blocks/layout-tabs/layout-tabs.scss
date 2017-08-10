@@ -55,6 +55,14 @@
     }
   }
 
+  &__list-item-xs-hide {
+    display: none;
+
+    @media (min-width: $screen-sm) {
+      display: inline;
+    }
+  }
+
   &__filter {
     position: fixed;
     z-index: 2;
