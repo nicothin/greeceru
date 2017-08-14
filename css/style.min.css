@@ -6194,6 +6194,8 @@ a.ui-state-default:hover, a.ui-state-default:focus {
   min-height: 150px; }
 .profile__add-pay-processed-in-alert {
   display: none; }
+.profile__empty {
+  text-align: center; }
 .user {
   text-align: center; }
 .user__atatar-wrap {
