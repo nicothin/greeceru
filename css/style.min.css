@@ -3549,7 +3549,11 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     display: none;
     position: absolute;
     right: 48px;
-    bottom: 10px; }
+    bottom: 10px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center; }
 .contacts-map__members-list {
     position: relative;
     z-index: 0;
@@ -3594,6 +3598,7 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     color: #31353f;
     font-weight: 500; }
 .contacts-map__members-btn {
+    display: none;
     margin-left: 20px; }
 .contacts-map__bottom-descr {
     margin: 0;
@@ -7071,6 +7076,8 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
       border: 1px solid #31353f;
       border-radius: 50%;
       text-align: center; }
+.collect-drachma__join-btn {
+  display: none; }
 @media (min-width: 480px) and (max-width: 767px){
   .blog__post-list .subscribing{
     padding-left: 90px;
@@ -7537,11 +7544,8 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     margin-left: 10px; }
   .social-contacts--share .social-contacts__right-text{
     margin-right: 0; }
-  .contacts-map__members{
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center; }
+  .contacts-map__members-btn{
+    display: inline-block; }
   .in-region__controls{
     position: absolute;
     z-index: 1;
@@ -8362,7 +8366,9 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
   .share-mail-contacts__footer .field-text__name{
     display: none; }
   .share-mail-contacts__footer .field-actions{
-    margin-top: 0; } }
+    margin-top: 0; }
+  .collect-drachma__join-btn{
+    display: inline-block; } }
 @media all and (min-width: 970px) and (-ms-high-contrast: none), (-ms-high-contrast: active){
   .mail-list__item-wrap{
     -ms-flex-preferred-size: 32% !important;
