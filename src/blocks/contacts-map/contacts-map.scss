@@ -162,10 +162,10 @@
     right: 48px;
     bottom: 10px;
 
-    @media (min-width: $screen-md) {
+    // @media (min-width: $screen-md) {
       display: flex;
       align-items: center;
-    }
+    // }
   }
 
   &__members-list {
@@ -223,7 +223,12 @@
   }
 
   &__members-btn {
+    display: none;
     margin-left: 20px;
+
+    @media (min-width: $screen-md) {
+      display: inline-block;
+    }
   }
 
   &__bottom-descr {
