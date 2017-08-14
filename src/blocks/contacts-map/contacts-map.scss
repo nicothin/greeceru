@@ -101,6 +101,10 @@
     height: 410px;
     margin-bottom: 20px;
     background-color: $gray-lightest;
+
+    &--mb10 {
+      margin-bottom: 10px;
+    }
   }
 
   &__data {}
@@ -220,5 +224,16 @@
 
   &__members-btn {
     margin-left: 20px;
+  }
+
+  &__bottom-descr {
+    margin: 0;
+    font-weight: 500;
+  }
+
+
+
+  &--collect-drachma {
+    margin: 40px 0 0;
   }
 }

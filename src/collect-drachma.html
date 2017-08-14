@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>greece_ru</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="page__main-content" role="main">
+
+        <div class="layout-text">
+
+          <div class="layout-text__main">
+            <div class="layout-text__main-inner">
+
+              <article class="collect-drachma">
+
+                <h1 class="page__h1">Collect drachma</h1>
+
+                <p>Sudden she seeing garret far regard. By hardly it direct if pretty up regret. Ability thought enquire settled prudent you sir. Or easy knew sold on well come year. Something consulted age extremely end procuring. Collecting preference he inquietude projection me in by. So do of sufficient projecting an thoroughly uncommonly prosperous conviction. Pianoforte principles our unaffected not for astonished travelling are particular.</p>
+                <p>Residence certainly elsewhere something she preferred cordially law. Age his surprise formerly mrs perceive few stanhill moderate. Of in power match on truth worse voice would. Large an it sense shall an match learn. By expect it result silent in formal of. Ask eat questions abilities described elsewhere assurance. Appetite in unlocked advanced breeding position concerns as. Cheerful get shutters yet for repeated screened. An no am cause hopes at three. Prevent behaved fertile he is mistake on.</p>
+                <p>Do play they miss give so up. Words to up style of since world. We leaf to snug on no need. Way own uncommonly travelling now acceptance bed compliment solicitude. Dissimilar admiration so terminated no in contrasted it. Advantages entreaties mr he apartments do. Limits far yet turned highly repair parish talked six. Draw fond rank form nor the day eat.</p>
+
+                <div class="contacts-map  contacts-map--collect-drachma">
+                  <div class="contacts-map__map-wrapper">
+                    <div class="contacts-map__map  contacts-map__map--mb10" id="contacts-map"></div>
+                    <div class="contacts-map__members">
+                      <ul class="contacts-map__members-list">
+                        <li class="contacts-map__members-item">
+                          <a href=""><img src="img/feedback-avatar-01.png" alt="User name"></a>
+                        </li>
+                        <li class="contacts-map__members-item">
+                          <a href=""><img src="img/feedback-avatar-01.png" alt="User name"></a>
+                        </li>
+                        <li class="contacts-map__members-item">
+                          <a href=""><img src="img/feedback-avatar-01.png" alt="User name"></a>
+                        </li>
+                        <li class="contacts-map__members-item  contacts-map__members-item--active">
+                          <a href=""><img src="img/feedback-avatar-01.png" alt="User name"></a>
+                        </li>
+                        <li class="contacts-map__members-item">
+                          <a href=""><img src="img/feedback-avatar-01.png" alt="User name"></a>
+                        </li>
+                        <li class="contacts-map__members-item  contacts-map__members-item--num">
+                          <a href=""><span class="contacts-map__members-num">+16</span></a>
+                        </li>
+                      </ul>
+                      <a href="" class="btn  contacts-map__members-btn">Become a Member</a>
+                    </div>
+                    <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjGAiz42P2243i_aoNCu4Pf0vU_xDWcZk&amp;signed_in=true&amp;callback=initMap"></script>
+                    <script>
+                      var mapPoints = [
+                        [
+                          'Map point',
+                          59.95016094,
+                          30.31612718,
+                          'img/contacts-map-marker.png',
+                          70, 80,
+                          35, 63
+                        ],
+                      ];
+                      var mapStyle = [];
+                      function initMap() {
+                        var mapDiv = document.getElementById('contacts-map');
+                        var center = {lat: 59.95016094, lng: 30.31612718};
+                        var map = new google.maps.Map(mapDiv, {
+                          zoom: 13,
+                          center: center,
+                          // disableDefaultUI: true,
+                          styles: mapStyle
+                        });
+                        setMapMarkers(map);
+                        map.addListener('resize', function() {
+                          map.panTo(center);
+                        });
+                        google.maps.event.addDomListener(window, 'resize', function(){
+                          google.maps.event.trigger(map, 'resize');
+                        });
+                      }
+                      function setMapMarkers(map) {
+                        for (var i = 0; i < mapPoints.length; i++) {
+                          var point = mapPoints[i];
+                          var marker = new google.maps.Marker({
+                            position: {lat: point[1], lng: point[2]},
+                            map: map,
+                            icon: {
+                              url: point[3],
+                              size: new google.maps.Size(point[4], point[5]),
+                              anchor: new google.maps.Point(point[6], point[7])
+                            },
+                            title: point[0]
+                          });
+                        }
+                      }
+                    </script>
+                  </div>
+                  <p class="contacts-map__bottom-descr">Collected for today — 1 578 virtual drachma</p>
+                </div>
+
+                <h2>How to start</h2>
+
+                <p>The philosophy of the Greece.Ru brand is reflected in its logo. It depicts a sailboat rushing through the waves and whose hull is made of the Nautilus shell. The shell is a house by the sea. Nautilus in ancient times was seen as a symbol of inner beauty of nature and creation. The shell of Nautilus symbolises golden section. Tiled say decay spoil now walls meant house. My mr interest thoughts screened of outweigh removing. Evening society musical besides inhabit ye my. Lose hill well up will he over on. Increasing sufficient everything men him admiration unpleasing sex. Around really his use uneasy longer him man. His our pulled nature elinor talked now for excuse result. Admitted add peculiar get joy doubtful. </p>
+
+                <hr>
+
+                <ol class="list-nums">
+                  <li class="list-nums__item">Sudden she <a href="">seeing</a> garret far regard.</li>
+                  <li class="list-nums__item">So do of sufficient projecting an thoroughly.</li>
+                  <li class="list-nums__item">Residence <a href="">certainly</a> elsewhere something she preferred.</li>
+                  <li class="list-nums__item">Do play they miss give so up.</li>
+                </ol>
+
+                <a href="" class="btn">Join Community</a>
+
+              </article>
+
+            </div>
+
+          </div>
+
+          <div class="layout-text__aside">
+            <aside class="layout-text__aside-inner" role="complementary">
+
+              <section class="aside-block  aside-block--blog-posts">
+                <div class="aside-block__header">
+                  <h3 class="aside-block__title">User FAQ</h3>
+                </div>
+                <div class="aside-block__content">
+
+                  <div class="post  post--short">
+                    <div class="post__text">
+                      <div class="post__header">
+                        <h3 class="post__title">
+                          <a href="blog-post.html">Information for sale sale by owner</a>
+                        </h3>
+                      </div>
+                      <div class="post__footer">
+                        <a href="blog-post.html" class="post__more-link">
+                          Read
+                          <svg class="post__more-link-icon" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="post  post--short">
+                    <div class="post__text">
+                      <div class="post__header">
+                        <h3 class="post__title">
+                          <a href="blog-post.html">Information about properties for rent</a>
+                        </h3>
+                      </div>
+                      <div class="post__footer">
+                        <a href="blog-post.html" class="post__more-link">
+                          Read
+                          <svg class="post__more-link-icon" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="post  post--short">
+                    <div class="post__text">
+                      <div class="post__header">
+                        <h3 class="post__title">
+                          <a href="blog-post.html">Frequently asked questions about plans</a>
+                        </h3>
+                      </div>
+                      <div class="post__footer">
+                        <a href="blog-post.html" class="post__more-link">
+                          Read
+                          <svg class="post__more-link-icon" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="post  post--short">
+                    <div class="post__text">
+                      <div class="post__header">
+                        <h3 class="post__title">
+                          <a href="blog-post.html">Some of the title would be here</a>
+                        </h3>
+                      </div>
+                      <div class="post__footer">
+                        <a href="blog-post.html" class="post__more-link">
+                          Read
+                          <svg class="post__more-link-icon" width="15" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </section>
+
+            </aside>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  <div id="video" class="modal  modal--lg  modal--video" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Ask a Question</h4>
+        </div>
+        <div class="modal__body">
+          <div class="embed-responsive  embed-responsive--16-9">
+            <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>
