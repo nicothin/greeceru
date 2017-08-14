@@ -20,6 +20,7 @@
     <a href="#notice-price" data-toggle="modal">notice-price</a>,
     <a href="#interview" data-toggle="modal">interview</a>,
     <a href="#confirm" data-toggle="modal">confirm</a>,
+    <a href="#login" data-toggle="modal">login</a>,
   </div>
 
   <div class="page__inner">
@@ -616,6 +617,38 @@
         </div>
         <div class="modal__footer">
           You can change preferences at any time in your <a href="">personal account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="login" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Login</h4>
+        </div>
+        <div class="modal__body">
+          <form class="modal__form" action="">
+            <div class="field-text  field-text--success">
+              <span class="field-text__name">Username or email</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="email" placeholder="Your email" value="billgates@microsoft.com">
+                <span class="field-text__help-text">User with this email already exists. Please enter your password.</span>
+              </span>
+            </div>
+            <div class="field-text">
+              <span class="field-text__name">Password</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="password" placeholder="">
+                <span class="field-text__help-text"><a href="">Forgot your password?</a></span>
+              </span>
+            </div>
+            <div class="field-actions">
+              <button class="btn  btn--white  btn--wide">Login</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
