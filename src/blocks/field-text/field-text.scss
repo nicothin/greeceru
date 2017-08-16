@@ -150,6 +150,18 @@ $field-padding-horizontal:    0.7em !default;
       }
     }
 
+    &--password {
+      padding-right: 40px;
+      background-image: svg-load('../blocks/field-text/img_to_bg/password.svg');
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position: top 50% right 14px;
+
+      @media (min-width: $screen-md) {
+        padding-right: 40px;
+      }
+    }
+
     &--has-right-btn {
       padding-right: 40px;
     }
@@ -198,6 +210,17 @@ $field-padding-horizontal:    0.7em !default;
 
     &--right {
       text-align: right;
+    }
+
+    &--line {
+      margin-top: 3px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .field-checkbox {
+        color: $text-color;
+      }
     }
   }
 

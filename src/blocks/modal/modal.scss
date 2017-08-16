@@ -222,6 +222,13 @@ $z-index-modal:               100 !default;
       font-size: $font-size--small;
       color: $gray;
     }
+
+    &--font-normal {
+
+      @media (min-width: $screen-md) {
+        font-size: $font-size;
+      }
+    }
   }
 
   &__footer-icon {
@@ -229,6 +236,12 @@ $z-index-modal:               100 !default;
     vertical-align: -0.25em;
     margin-right: 0.3em;
     fill: $gray;
+  }
+
+  &__footer-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   &__form {
@@ -243,6 +256,13 @@ $z-index-modal:               100 !default;
         margin-bottom: 40px;
       }
     }
+  }
+
+  &__descr {
+    margin: 20px 0 0;
+    font-size: $font-size--small;
+    line-height: $line-height;
+    color: $gray;
   }
 
   &__datepicker {

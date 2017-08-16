@@ -108,11 +108,23 @@
       padding: $field-padding-vertical $field-padding-horizontal;
     }
 
+    & + & {
+      margin-top: 10px;
+    }
+
     &--gmail {
 
       &:before {
         width: 24px;
         background: url('share-gmail.png') no-repeat center;
+      }
+    }
+
+    &--gp {
+
+      &:before {
+        width: 24px;
+        background: url('google.png') no-repeat center;
       }
     }
 
