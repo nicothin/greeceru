@@ -122,7 +122,8 @@
     "info-tooltip": [],
     "price-tooltip": [],
     "list-nums": [],
-    "collect-drachma": []
+    "collect-drachma": [],
+    "list": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

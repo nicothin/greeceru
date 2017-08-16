@@ -1,0 +1,16 @@
+// В этом файле должны быть стили для БЭМ-блока collect-drachma, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.collect-drachma {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  &__join-btn {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: inline-block;
+    }
+  }
+}
