@@ -7119,19 +7119,32 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 0 30px;
-  padding: 0; }
+  padding: 0;
+  list-style: none; }
 .list:last-child {
     margin-bottom: 0; }
 .list__item {
     position: relative;
-    padding-right: 25px;
+    padding-right: 10px;
+    padding-left: 15px;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     max-width: 50%; }
 .list__item:not(:last-child) {
       margin-bottom: 20px; }
-.list--no-bullets {
-    list-style: none; }
+.list__item:before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      background-color: #8891a6;
+      border-radius: 50%; }
+.list--no-bullets .list__item {
+    padding-left: 0; }
+.list--no-bullets .list__item:before {
+      display: none; }
 @media (min-width: 480px) and (max-width: 767px){
   .blog__post-list .subscribing{
     padding-left: 90px;
