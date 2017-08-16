@@ -75,6 +75,14 @@
       }
     }
 
+    &--xs-180 {
+        width: 180px;
+
+      #{$block-name} & {
+        max-width: 180px !important;
+      }
+    }
+
     &--md-30 {
 
       @media (min-width: $screen-md) {
@@ -136,6 +144,14 @@
       @media (min-width: $screen-md) {
         display: table-cell;
       }
+    }
+
+    &--toe {
+      white-space: nowrap;
+    }
+
+    &--right {
+      text-align: right !important;
     }
   }
 

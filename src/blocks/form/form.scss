@@ -140,6 +140,17 @@ $line-height:                 1.375em !default;
     }
   }
 
+  &__pseudolabel {
+    margin-top: 0;
+    margin-bottom: 13px;
+    line-height: 1;
+    font-size: $font-size--small;
+
+    @media (min-width: $screen-md) {
+      margin-top: 9px;
+    }
+  }
+
 
 
   &--mb0 {

@@ -1,12 +1,25 @@
+// костыль для индайновых календарей, ибо jquery UI datepicker вставляет перед закрывающим body свой пустой дубль :(
+body > .ui-datepicker:empty {
+  display: none;
+}
+
 .ui-datepicker-inline {
   // padding: 0 15px;
 }
 
 .ui-datepicker:not(.ui-datepicker-inline) {
-  width: 340px;
+  width: 320px;
   padding: 20px;
   background-color: #fff;
   box-shadow: $shadow;
+
+  @media (min-width: $screen-lg) {
+    width: 340px;
+  }
+}
+
+.ui-datepicker-inline {
+  max-width: 340px;
 }
 
 .ui-widget-header {
