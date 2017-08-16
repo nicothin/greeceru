@@ -7113,6 +7113,21 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
       text-align: center; }
 .collect-drachma__join-btn {
   display: none; }
+.list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  padding: 0; }
+.list__item {
+    position: relative;
+    padding-right: 10px;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 50%; }
+.list__item:not(:last-child) {
+      margin-bottom: 20px; }
 @media (min-width: 480px) and (max-width: 767px){
   .blog__post-list .subscribing{
     padding-left: 90px;
@@ -9090,7 +9105,11 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
   .card-list-mini__item{
     margin-bottom: 30px;
     padding-left: 15px;
-    padding-right: 15px; } }
+    padding-right: 15px; }
+  .list__item{
+    -ms-flex-preferred-size: 33.3334%;
+    flex-basis: 33.3334%;
+    max-width: 33.3334%; } }
 @media (min-width: 1600px){
   .page-footer__inner{
     max-width: 1530px;
