@@ -7118,16 +7118,20 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0;
+  margin: 0 0 30px;
   padding: 0; }
+.list:last-child {
+    margin-bottom: 0; }
 .list__item {
     position: relative;
-    padding-right: 10px;
+    padding-right: 25px;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     max-width: 50%; }
 .list__item:not(:last-child) {
       margin-bottom: 20px; }
+.list--no-bullets {
+    list-style: none; }
 @media (min-width: 480px) and (max-width: 767px){
   .blog__post-list .subscribing{
     padding-left: 90px;
