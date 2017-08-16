@@ -787,6 +787,16 @@ pre {
     border-color: transparent; }
 a.btn--disabled {
       pointer-events: none; }
+.btn__inner {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
 .btn--link {
     color: #477afb;
     padding: 0 !important;
@@ -818,6 +828,22 @@ a.btn--disabled {
 .btn--block {
     display: block;
     width: 100%; }
+.btn--icon {
+    width: 32px;
+    height: 32px;
+    padding: 0 !important;
+    color: #8891a6;
+    background-color: #fff;
+    border: 1px solid #e9edf2;
+    box-shadow: none; }
+.btn--icon:hover, .btn--icon:focus {
+      color: #477afb;
+      background-color: #fff;
+      box-shadow: none;
+      border: 1px solid #e9edf2; }
+.btn--icon svg {
+      fill: currentColor;
+      transition: fill 0.3s; }
 .field-text {
   display: block; }
 .field-text__name {
@@ -1262,6 +1288,11 @@ input:checked ~ .field-radio__name-text:after {
     margin-bottom: 0; }
 .form__col--mb15 {
     margin-bottom: 15px; }
+.form__pseudolabel {
+  margin-top: 0;
+  margin-bottom: 13px;
+  line-height: 1;
+  font-size: 12px; }
 .form--mb0 {
   margin-bottom: 0 !important; }
 .pagination__text {
@@ -2928,11 +2959,15 @@ a:hover .feedback__slider-control-arrow,
 .card-mini__descr {
     -ms-flex-negative: 0;
         flex-shrink: 0; }
+body > .ui-datepicker:empty {
+  display: none; }
 .ui-datepicker:not(.ui-datepicker-inline) {
-  width: 340px;
+  width: 320px;
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 4px 40px rgba(72, 72, 72, 0.35); }
+.ui-datepicker-inline {
+  max-width: 340px; }
 .ui-widget-header {
   display: -ms-flexbox;
   display: flex;
@@ -6753,8 +6788,16 @@ a.btn--disabled {
     width: 120px; }
 .table .table__col--xs-120 {
       max-width: 120px !important; }
+.table__col--xs-180 {
+    width: 180px; }
+.table .table__col--xs-180 {
+      max-width: 180px !important; }
 .table__col--xs-hide {
     display: none; }
+.table__col--toe {
+    white-space: nowrap; }
+.table__col--right {
+    text-align: right !important; }
 .table__toe {
     display: block;
     max-width: 100%;
@@ -7354,6 +7397,8 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     max-width: 33.33334%; }
   .form__col--md-push-1{
     margin-right: 25%; }
+  .form__pseudolabel{
+    margin-top: 9px; }
   .search{
     padding-bottom: 40px;
     background-position: left top;
@@ -8116,6 +8161,8 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     align-items: center; }
   .modal-open .modal--xl.in .modal__dialog{
     width: 880px; }
+  .ui-datepicker:not(.ui-datepicker-inline){
+    width: 340px; }
   .filter{
     box-shadow: none; }
   .filter__part--mobile-hide{
