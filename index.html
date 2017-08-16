@@ -31,7 +31,8 @@
     <a href="#notice-price" data-toggle="modal">notice-price</a>,
     <a href="#interview" data-toggle="modal">interview</a>,
     <a href="#confirm" data-toggle="modal">confirm</a>,
-    <a href="#login" data-toggle="modal">login</a>,
+    <a href="#sign-in" data-toggle="modal">sign-in</a>,
+    <a href="#sign-up" data-toggle="modal">sign-up</a>,
   </div>
 
   <div class="page__inner">
@@ -2144,33 +2145,107 @@
     </div>
   </div>
 
-  <div id="login" class="modal" tabindex="-1" role="dialog">
+  <div id="sign-up" class="modal" tabindex="-1" role="dialog">
     <div class="modal__dialog" role="document">
       <div class="modal__content">
         <div class="modal__header">
           <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
-          <h4 class="modal__title">Login</h4>
+          <h4 class="modal__title">Sign Up</h4>
         </div>
         <div class="modal__body">
           <form class="modal__form" action="">
-            <div class="field-text  field-text--success">
-              <span class="field-text__name">Username or email</span>
+            <div class="field-text">
+              <span class="field-text__name">Email</span>
               <span class="field-text__input-wrap">
-                <input class="field-text__input" type="email" placeholder="Your email" value="billgates@microsoft.com">
-                <span class="field-text__help-text">User with this email already exists. Please enter your password.</span>
+                <input class="field-text__input" type="email" placeholder="example@mail.com">
+              </span>
+            </div>
+            <div class="field-text">
+              <span class="field-text__name">Create a password</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input  field-text__input--password" type="password">
+              </span>
+            </div>
+            <div class="field-actions">
+              <button class="btn  btn--block">Sing Up</button>
+            </div>
+          </form>
+          <div class="or">
+            <span class="or__text">or</span>
+          </div>
+          <div class="share-block">
+            <a href="" class="share-block__btn  share-block__btn--gp">Continue with Google</a>
+            <a href="" class="share-block__btn  share-block__btn--fb">Continue with Facebook</a>
+            <a href="" class="share-block__btn  share-block__btn--msg">Continue with Messenger</a>
+          </div>
+          <p class="modal__descr">
+            By clicking Sign up or Continue with, I agree to the <a href="">privacy policy</a> & <a href="">terms and conditions</a>
+          </p>
+        </div>
+        <div class="modal__footer  modal__footer--font-normal">
+          <div class="modal__footer-line">
+            <span>Don’t have an account? </span>
+            <a href="" class="more-link">
+              Sign Up
+              <svg class="more-link__icon" width="11" height="11"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sign-in" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Sign In</h4>
+        </div>
+        <div class="modal__body">
+          <form class="modal__form" action="">
+            <div class="field-text">
+              <span class="field-text__name">Email</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="email" placeholder="example@mail.com">
               </span>
             </div>
             <div class="field-text">
               <span class="field-text__name">Password</span>
               <span class="field-text__input-wrap">
-                <input class="field-text__input" type="password" placeholder="">
-                <span class="field-text__help-text"><a href="">Forgot your password?</a></span>
+                <input class="field-text__input  field-text__input--password" type="password">
+                <span class="field-text__help-text  field-text__help-text--line">
+                  <div class="field-checkbox">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">Remember me</span>
+                    </label>
+                  </div>
+                  <a href="">Forgot password?</a>
+                </span>
               </span>
             </div>
-            <div class="field-actions">
-              <button class="btn  btn--white  btn--wide">Login</button>
+            <div class="field-actions  field-actions--mt10">
+              <button class="btn  btn--block">Sing In</button>
             </div>
           </form>
+          <div class="or">
+            <span class="or__text">or</span>
+          </div>
+          <div class="share-block">
+            <a href="" class="share-block__btn  share-block__btn--gp">Continue with Google</a>
+            <a href="" class="share-block__btn  share-block__btn--fb">Continue with Facebook</a>
+            <a href="" class="share-block__btn  share-block__btn--msg">Continue with Messenger</a>
+          </div>
+        </div>
+        <div class="modal__footer  modal__footer--font-normal">
+          <div class="modal__footer-line">
+            <span>Don’t have an account? </span>
+            <a href="" class="more-link">
+              Sign Up
+              <svg class="more-link__icon" width="11" height="11"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
