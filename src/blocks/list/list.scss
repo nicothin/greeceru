@@ -10,6 +10,7 @@
   flex-wrap: wrap;
   margin: 0 0 30px;
   padding: 0;
+  list-style: none;
 
   &:last-child {
     margin-bottom: 0;
@@ -17,7 +18,8 @@
 
   &__item {
     position: relative;
-    padding-right: 25px;
+    padding-right: 10px;
+    padding-left: 15px;
     flex-basis: 50%;
     max-width: 50%;
 
@@ -29,12 +31,30 @@
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      background-color: $gray;
+      border-radius: 50%;
+    }
   }
 
 
 
   &--no-bullets {
-    list-style: none;
+
+    #{$block-name}__item {
+      padding-left: 0;
+
+      &:before {
+        display: none;
+      }
+    }
   }
 
 }
