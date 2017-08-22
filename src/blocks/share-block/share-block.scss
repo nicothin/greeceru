@@ -141,6 +141,13 @@
         background: url('share-msg.png') no-repeat center;
       }
     }
+
+    &--vk {
+
+      &:before {
+        background: url('share-vk.png') no-repeat center;
+      }
+    }
   }
 
   &__btn-descr {
