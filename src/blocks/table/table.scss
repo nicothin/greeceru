@@ -181,4 +181,12 @@
   &--first-content {
     margin-top: -6px;
   }
+
+  &--col-width-auto {
+
+    td,
+    th {
+      max-width: none;
+    }
+  }
 }

@@ -160,5 +160,19 @@ $border-radius:               3px !default;
       fill: currentColor;
       transition: fill $transition-time;
     }
+
+    .close > span:before,
+    .close > span:after {
+      background-color: currentColor;
+      transition: background-color $transition-time;
+    }
+  }
+
+  &--lg-shown {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: inline-block;
+    }
   }
 }
