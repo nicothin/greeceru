@@ -44,10 +44,17 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    transition: opacity $transition-time;
 
     // Привет, днище 11й версии!
     @media all and (-ms-high-contrast:none) {
       min-height: calc(100vh - #{$header-height});
+    }
+
+    @media (max-width: ($screen-md - 1)) {
+      .modal-open & {
+        opacity: 0;
+      }
     }
   }
 
