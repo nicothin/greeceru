@@ -4,6 +4,8 @@
 
 .share-block {
 
+  $block-name:                &;
+
   &__part {
     margin-bottom: 50px;
   }
@@ -147,6 +149,30 @@
       &:before {
         background: url('share-vk.png') no-repeat center;
       }
+    }
+  }
+
+  &__group {
+    display: flex;
+
+    #{$block-name}__btn {
+
+      &:not(:first-child):not(:last-child) {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      &:first-child {
+        margin-right: 5px;
+      }
+
+      &:last-child {
+        margin-left: 5px;
+      }
+    }
+
+    #{$block-name}__btn + #{$block-name}__btn {
+      margin-top: 0;
     }
   }
 

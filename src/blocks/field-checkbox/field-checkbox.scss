@@ -127,6 +127,7 @@ $line-height:                 1.375em !default;
 
     #{$block-name}__name-text {
       font-size: $font-size--small;
+      line-height: $line-height;
 
       &:before {
         top: 3px;
@@ -144,5 +145,9 @@ $line-height:                 1.375em !default;
 
   &--mt20 {
     margin-top: 20px;
+  }
+
+  &--mt10 {
+    margin-top: 10px;
   }
 }

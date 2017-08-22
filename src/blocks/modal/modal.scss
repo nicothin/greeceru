@@ -96,6 +96,13 @@ $z-index-modal:               100 !default;
         border-top-right-radius: $border-radius;
       }
     }
+
+    &--bdrs-normal {
+
+      @media (min-width: $screen-md) {
+        border-radius: $border-radius;
+      }
+    }
   }
 
   &__content {
@@ -204,6 +211,12 @@ $z-index-modal:               100 !default;
       padding-top: 5px !important;
       padding-bottom: 5px !important;
     }
+
+    &--form-compact {
+      .field-text + .field-text {
+        margin-top: 10px;
+      }
+    }
   }
 
   &__footer {
@@ -256,6 +269,16 @@ $z-index-modal:               100 !default;
         margin-bottom: 40px;
       }
     }
+
+    &--mt0 {
+      margin-top: 0;
+    }
+  }
+
+  &__form-descr {
+    margin-top: 10px;
+    text-align: center;
+    font-size: $font-size--small;
   }
 
   &__descr {
