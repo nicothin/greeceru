@@ -33,6 +33,10 @@
     <a href="#confirm" data-toggle="modal">confirm</a>,
     <a href="#sign-in" data-toggle="modal">sign-in</a>,
     <a href="#sign-up" data-toggle="modal">sign-up</a>,
+    <a href="#login" data-toggle="modal">login</a>,
+    <a href="#reset-password" data-toggle="modal">reset-password</a>,
+    <a href="#login-to-continue" data-toggle="modal">login-to-continue</a>,
+    <a href="#sign-up-2" data-toggle="modal">sign-up-2</a>,
   </div>
 
   <div class="page__inner">
@@ -2187,6 +2191,190 @@
             <span>Don’t have an account? </span>
             <a href="" class="more-link">
               Sign Up
+              <svg class="more-link__icon" width="11" height="11"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="reset-password" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Reset password</h4>
+        </div>
+        <div class="modal__body  modal__body--form-compact">
+          <form class="modal__form  modal__form--mt0" action="">
+            <div class="field-text">
+              <span class="field-text__input-wrap">
+                <input class="field-text__input  field-text__input--email" type="email" placeholder="example@mail.com">
+              </span>
+            </div>
+            <div class="field-actions  field-actions--mt10">
+              <button class="btn  btn--block">Send reset link</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal__footer  modal__footer--font-normal">
+          <div class="modal__footer-line">
+            <a href="" class="more-link">
+              <svg class="more-link__icon" width="11" height="11"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-left"></use></svg>
+              Back to login
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="login" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Log in</h4>
+        </div>
+        <div class="modal__body  modal__body--form-compact">
+          <div class="share-block">
+            <a href="" class="share-block__btn  share-block__btn--fb">Log in with Facebook</a>
+            <a href="" class="share-block__btn  share-block__btn--gp">Log in with Google</a>
+            <a href="" class="share-block__btn  share-block__btn--vk">Log in with Vkontakte</a>
+          </div>
+          <div class="or  or--sm">
+            <span class="or__text">or</span>
+          </div>
+          <div class="alert alert--danger">Some message</div>
+          <form class="modal__form  modal__form--mt0" action="">
+            <div class="field-text">
+              <span class="field-text__input-wrap">
+                <input class="field-text__input  field-text__input--email" type="email" placeholder="example@mail.com">
+              </span>
+            </div>
+            <div class="field-text  field-text--error">
+              <span class="field-text__input-wrap">
+                <input class="field-text__input  field-text__input--password" type="password" placeholder="Password">
+                <span class="field-text__help-text">This field is required</span>
+                <span class="field-text__help-text  field-text__help-text--line">
+                  <div class="field-checkbox">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">Remember me</span>
+                    </label>
+                  </div>
+                  <a href="">Shown password</a>
+                </span>
+              </span>
+            </div>
+            <div class="field-actions  field-actions--mt10">
+              <button class="btn  btn--block">Log In</button>
+            </div>
+          </form>
+          <div class="modal__form-descr">
+            <a href="">Forgot password?</a>
+          </div>
+        </div>
+        <div class="modal__footer  modal__footer--font-normal">
+          <div class="modal__footer-line">
+            <span>Don’t have an account? </span>
+            <a href="" class="more-link">
+              Sign Up
+              <svg class="more-link__icon" width="11" height="11"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="login-to-continue" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Log in to continue</h4>
+        </div>
+        <div class="modal__body  modal__body--form-compact">
+          <div class="share-block">
+            <a href="" class="share-block__btn  share-block__btn--fb">Log in with Facebook</a>
+            <div class="or  or--xs">
+              <span class="or__text">or continue with</span>
+            </div>
+            <div class="share-block__group">
+              <a href="" class="share-block__btn  share-block__btn--gmail">Email</a>
+              <a href="" class="share-block__btn  share-block__btn--vk">Vkontakte</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal__footer  modal__footer--font-normal">
+          <div class="modal__footer-line">
+            <span>Don’t have an account? </span>
+            <a href="" class="more-link">
+              Sign Up
+              <svg class="more-link__icon" width="11" height="11"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sign-up-2" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Sign up</h4>
+        </div>
+        <form class="modal__body  modal__body--form-compact">
+          <div class="share-block">
+            <div class="share-block__group">
+              <a href="" class="share-block__btn  share-block__btn--fb">Facebook</a>
+              <a href="" class="share-block__btn  share-block__btn--gp">Google</a>
+            </div>
+          </div>
+          <div class="or  or--xs">
+            <span class="or__text">or</span>
+          </div>
+          <div class="field-text  field-text--error">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input  field-text__input--email" type="email" placeholder="example@mail.com">
+              <span class="field-text__help-text">This field is required</span>
+            </span>
+          </div>
+          <div class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input  field-text__input--user" type="text" placeholder="First name">
+            </span>
+          </div>
+          <div class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input  field-text__input--user" type="text" placeholder="Last name">
+            </span>
+          </div>
+          <div class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input  field-text__input--password" type="password" placeholder="Password">
+            </span>
+          </div>
+          <div class="field-checkbox  field-checkbox--sm  field-checkbox--mt10">
+            <label class="field-checkbox__name">
+              <input class="field-checkbox__input" type="checkbox">
+              <span class="field-checkbox__name-text">Some text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eius illum suscipit sit asperiores odio</span>
+            </label>
+          </div>
+          <div class="modal__form-descr">Some description</div>
+          <div class="field-actions  field-actions--mt10">
+            <button class="btn  btn--block">Sign up</button>
+          </div>
+        </form>
+        <div class="modal__footer  modal__footer--font-normal">
+          <div class="modal__footer-line">
+            <span>Already have an account? </span>
+            <a href="" class="more-link">
+              Log in
               <svg class="more-link__icon" width="11" height="11"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
             </a>
           </div>
