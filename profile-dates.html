@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>greece_ru</title>
   <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
 
@@ -21,7 +22,7 @@
 
 <body>
 
-  <div class="page__inner">
+  <div class="page__inner  page__inner--has-bottom-btns">
 
     <div class="page__content">
       <header class="page-header" role="banner">
@@ -528,6 +529,18 @@
                           Add infrastructure points
                         </a>
                       </li>
+                      <li class="account__user-menu-item">
+                        <a href="" class="account__user-menu-link">
+                          <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#calendar"></use></svg>
+                          Availability
+                        </a>
+                      </li>
+                      <li class="account__user-menu-item">
+                        <a href="" class="account__user-menu-link">
+                          <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#euro"></use></svg>
+                          Detailed pricing
+                        </a>
+                      </li>
                     </ul>
                     <div class="account__edit-wrap">
                       <a href="" class="account__edit  account__edit--active">
@@ -549,7 +562,8 @@
                   </ul>
                   <form class="tabs__content-wrap">
                     <div class="tabs__item  active" id="first">
-                      <div class="card-list-mini">
+                      <p class="tabs__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam dolore numquam mollitia voluptatem rem nobis asperiores animi, est voluptas recusandae a temporibus deleniti labore nihil, enim maxime id. Minima, porro.</p>
+                      <div class="card-list-mini  card-list-mini--mb30">
                         <div class="card-list-mini__item">
                           <input id="location-id-001" type="radio" name="location" class="card-list-mini__input" checked="">
                           <label for="location-id-001" class="card-list-mini__content">
@@ -579,26 +593,21 @@
                           </label>
                         </div>
                       </div>
+                      <button class="btn  btn--lg-shown">Proceed</button>
                     </div>
                     <div class="tabs__item" id="second">
+                      <p class="tabs__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam dolore numquam mollitia voluptatem rem nobis asperiores animi, est voluptas recusandae a temporibus deleniti labore nihil, enim maxime id. Minima, porro.</p>
                       <div class="form__row">
                         <div class="form__col  form__col--sm-4-4  form__col--md-2-4">
                           <div id="calendar-prices"></div>
                         </div>
                         <div class="form__col  form__col--sm-4-4  form__col--md-2-4">
-                          <p class="form__pseudolabel">Date or period</p>
                           <div class="form__row">
-                            <div class="form__col  form__col--md-2-4">
+                            <div class="form__col  form__col--sm-4-4">
                               <label class="field-text">
+                                <span class="field-text__name  field-text__name--sm">Date or period</span>
                                 <span class="field-text__input-wrap">
-                                  <input class="field-text__input" type="text" placeholder="02 02 2017" required>
-                                </span>
-                              </label>
-                            </div>
-                            <div class="form__col  form__col--md-2-4">
-                              <label class="field-text">
-                                <span class="field-text__input-wrap">
-                                  <input class="field-text__input" type="text" placeholder="03 02 2017">
+                                  <input class="field-text__input" type="text" placeholder="Dates" required>
                                 </span>
                               </label>
                             </div>
@@ -614,14 +623,14 @@
                           <button class="btn  btn--block  btn--white">Save</button>
                         </div>
                       </div>
-                      <table class="table">
+                      <table class="table  table--col-width-auto">
                         <tr>
                           <th>Date</th>
                           <th>Price, €</th>
                           <th></th>
                         </tr>
                         <tr>
-                          <td class="table__col  table__col--xs-180">02 November 2015</td>
+                          <td>02 November 2015</td>
                           <td>
                             90
                           </td>
@@ -631,10 +640,15 @@
                                 <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#pencil"></use></svg>
                               </span>
                             </button>
+                            <button type="button" class="btn  btn--icon">
+                              <span class="btn__inner">
+                                <span class="close  close--sm-thin  close--pseudosvg"><span></span></span>
+                              </span>
+                            </button>
                           </td>
                         </tr>
                         <tr>
-                          <td class="table__col  table__col--xs-180">02 - 03 November 2015</td>
+                          <td><span class="nowrap">02 November</span> 2017 - <span class="nowrap">11 March</span> 2018</td>
                           <td>
                             90
                           </td>
@@ -642,6 +656,11 @@
                             <button type="button" class="btn  btn--icon">
                               <span class="btn__inner">
                                 <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#pencil"></use></svg>
+                              </span>
+                            </button>
+                            <button type="button" class="btn  btn--icon">
+                              <span class="btn__inner">
+                                <span class="close  close--sm-thin  close--pseudosvg"><span></span></span>
                               </span>
                             </button>
                           </td>
@@ -657,6 +676,10 @@
             </div>
 
           </article>
+
+          <div class="layout-full__btns-mobile">
+            <a href="" class="layout-full__btns-mobile-item">Proceed</a>
+          </div>
 
         </div>
 
@@ -818,5 +841,7 @@
   </div>
   <script src="js/script.min.js"></script>
 
+  <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
 </body>
 </html>

@@ -407,6 +407,8 @@ pre {
   overflow-x: auto;
   -moz-tab-size: 2;
        tab-size: 2; }
+.nowrap {
+  white-space: nowrap; }
 .page-header {
   position: fixed;
   top: 0;
@@ -844,6 +846,12 @@ a.btn--disabled {
 .btn--icon svg {
       fill: currentColor;
       transition: fill 0.3s; }
+.btn--icon .close > span:before,
+    .btn--icon .close > span:after {
+      background-color: currentColor;
+      transition: background-color 0.3s; }
+.btn--lg-shown {
+    display: none; }
 .field-text {
   display: block; }
 .field-text__name {
@@ -1513,6 +1521,8 @@ a:active .pagination__icon-left {
     background: #38a53d; }
 .close--red > span:before, .close--red > span:after {
     background: #d94168; }
+.close--pseudosvg > span:before, .close--pseudosvg > span:after {
+    background: #8891a6; }
 .login {
   position: relative;
   display: -ms-flexbox;
@@ -6129,6 +6139,8 @@ a.ui-state-default:hover, a.ui-state-default:focus {
       flex-grow: 1; }
 .profile__content .card-list-mini {
     margin-bottom: 55px; }
+.profile__content .card-list-mini--mb30 {
+    margin-bottom: 30px; }
 .profile__content--add {
     position: relative; }
 .profile__content-item--max-750 {
@@ -6689,6 +6701,9 @@ a.btn--disabled {
     height: auto;
     visibility: visible;
     opacity: 1; }
+.tabs__descr {
+  margin-top: 0;
+  margin-bottom: 20px; }
 .tabs--move-top-10 {
   margin-top: -10px; }
 .social-connect {
@@ -6815,6 +6830,9 @@ a.btn--disabled {
       color: #38a53d; }
 .table--first-content {
     margin-top: -6px; }
+.table--col-width-auto td,
+  .table--col-width-auto th {
+    max-width: none; }
 .card-list-mini__item {
   position: relative;
   margin: 0 0 15px;
@@ -6894,6 +6912,8 @@ a.btn--disabled {
   display: none; }
 .card-list-mini__input:checked ~ .card-list-mini__content .card-list-mini__deselect {
     display: inline; }
+.card-list-mini--mb30 {
+  margin-bottom: 30px; }
 .share-block__part {
   margin-bottom: 50px; }
 .share-block__title {
@@ -7986,6 +8006,8 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     width: 230px !important; }
   .main-nav__backdrop{
     display: none; }
+  .btn--lg-shown{
+    display: inline-block; }
   .form__col--lg-show{
     display: block; }
   .property-owner{
