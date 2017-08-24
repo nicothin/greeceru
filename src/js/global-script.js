@@ -216,6 +216,15 @@ $( document ).ready(function() {
   });
 
   // инлайновый календарь для страницы выбора дат при добавлении цен за конкретные даты
-  $('#calendar-prices').datepicker();
+  // $('#calendar-prices000').datepicker();
+  $('#calendar-prices').dateRangePicker({
+    inline: true,
+    container: '#calendar-prices',
+    alwaysOpen: true,
+    singleMonth: true,
+    // showShortcuts: false,
+    showTopbar: false,
+    startDate: '2017-08-20',
+  });
 
 });

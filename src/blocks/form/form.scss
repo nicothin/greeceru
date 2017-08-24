@@ -52,6 +52,10 @@ $line-height:                 1.375em !default;
     &--max690 {
       max-width: 690px;
     }
+
+    &--pt14 {
+      padding-top: 14px;
+    }
   }
 
   &__col {
