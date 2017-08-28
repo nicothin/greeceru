@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>greece_ru</title>
   <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="css/daterangepicker.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
 
@@ -21,10 +22,10 @@
 
 <body>
 
-  <div class="page__inner">
+  <div class="page__inner  page__inner--has-bottom-btns">
 
     <div class="page__content">
-      <header class="page-header  page-header--steps" role="banner">
+      <header class="page-header" role="banner">
 
         <div class="page-header__inner">
 
@@ -343,56 +344,14 @@
 
           </nav>
 
-          <div class="page-header__steps">
-            <span class="page-header__steps-item">Step 1. Property type & additional services</span>
-            <span class="page-header__steps-item">Step 2. Add property</span>
-            <span class="page-header__steps-item  page-header__steps-item--active">Step 3. Confirmation and payment</span>
-          </div>
-
           <div class="page-header__right">
 
+            <form class="search-form  page-header__search">
+              <input class="search-form__input" type="search" placeholder="Type object id to search...">
+              <button class="search-form__btn">Search</button>
+            </form>
+
             <ul class="main-nav__list  main-nav__list--always-drop-down">
-              <li class="main-nav__item  main-nav__item--contacts  main-nav__item--mobile-separator">
-                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler>Contacts</span>
-                <span class="main-nav__pseudolink  main-nav__pseudolink--phone  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler>+30 6974-383-585</span>
-                <div class="main-nav__lvl  main-nav__lvl--contacts">
-                  <div class="main-nav__breadcrumbs" style="display:none;">
-                    <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-hide>Back</span>
-                    <span class="main-nav__breadcrumbs-item">&nbsp;&nbsp;>&nbsp; Contacts</span>
-                  </div>
-                  <ul class="contacts-list">
-                    <li class="contacts-list__item">
-                      <b class="contacts-list__item-name">Phone Numbers</b>
-                      <ul class="contacts-list__phones">
-                        <li class="contacts-list__phone-item">
-                          <span class="contacts-list__phone">Central Office</span>
-                          <a href="tel:+30 2310-567-433" class="contacts-list__phone-num" tabindex="-1">+30 2310-567-433</a>
-                        </li>
-                        <li class="contacts-list__phone-item">
-                          <span class="contacts-list__phone">Contact Manager</span>
-                          <a href="tel:+30 2310-557-151" class="contacts-list__phone-num" tabindex="-1">+30 2310-557-151</a>
-                        </li>
-                        <li class="contacts-list__phone-item">
-                          <span class="contacts-list__phone">Fax</span>
-                          <a href="tel:+30 2310-557-151" class="contacts-list__phone-num" tabindex="-1">+30 2310-557-151</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="contacts-list__item">
-                      <b class="contacts-list__item-name">Address</b>
-                      <span class="contacts-list__item-text">Nikis Avenue 1,  56424 Thessaloniki, Greece</span>
-                    </li>
-                    <li class="contacts-list__item">
-                      <b class="contacts-list__item-name">Skype</b>
-                      <a href="skype:Greece.ru?chat" class="contacts-list__item-text" tabindex="-1">Greece.ru</a>
-                    </li>
-                    <li class="contacts-list__item">
-                      <b class="contacts-list__item-name">Email address</b>
-                      <a href="email:support@greece.ru" class="contacts-list__item-text" tabindex="-1">support@greece.ru</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
               <li class="main-nav__item">
                 <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler>Currency: <span data-main-nav-submenu-toggler>€</span></span>
                 <span class="main-nav__pseudolink  main-nav__pseudolink--currency  main-nav__pseudolink--arrow-desktop" data-main-nav-submenu-toggler>€</span>
@@ -468,8 +427,28 @@
               </li>
             </ul>
 
-            <div class="login">
-              <a href="" class="login__sign-in">Sign In</a>
+            <div class="login  login--user">
+              <span class="login__user-info" data-usermenu-toggler>
+                <img src="img/feedback-avatar-01.png" alt="Eugeny" class="login__avatar">
+                <span class="login__name">Eugeny</span>
+              </span>
+              <ul class="login__menu">
+                <li class="login__menu-item">
+                  <a href="" class="login__menu-link">Profile</a>
+                </li>
+                <li class="login__menu-item">
+                  <a href="" class="login__menu-link">Wishlist</a>
+                </li>
+                <li class="login__menu-item">
+                  <a href="" class="login__menu-link">Savings</a>
+                </li>
+                <li class="login__menu-item">
+                  <a href="" class="login__menu-link">Payments</a>
+                </li>
+                <li class="login__menu-item">
+                  <a href="" class="login__menu-link">Share property</a>
+                </li>
+              </ul>
             </div>
 
           </div>
@@ -481,112 +460,20 @@
 
       <main class="page__main-content" role="main">
 
-        <div class="layout-text">
+        <div class="layout-full">
 
-          <div class="layout-text__main  layout-text__main--has-desktop-bottom-btns">
-            <div class="layout-text__main-inner">
+          <article class="payment">
 
-              <article class="list-property">
+            <header class="payment__header">
+              <h1 class="page__h1">Payment setup</h1>
+            </header>
 
-                <header class="list-property__header">
-                  <h1 class="page__h1">Payment setup</h1>
-                </header>
+            111
 
-                <form action="" class="form">
+          </article>
 
-                  <section class="list-property__section  list-property__section--pt35-xs">
-                    <h2 class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">Please complete your details to get check or invoice</h2>
-                    <div class="field-radio  field-radio--mb30  field-radio--md-inline">
-                      <div class="field-radio__input-wrap">
-                        <label class="field-radio__name">
-                          <input class="field-radio__input" type="radio" name="demo-radio" checked>
-                          <span class="field-radio__name-text">Check (for individuals)</span>
-                        </label>
-                      </div>
-                      <div class="field-radio__input-wrap">
-                        <label class="field-radio__name">
-                          <input class="field-radio__input" type="radio" name="demo-radio">
-                          <span class="field-radio__name-text">Invoice (for companies)</span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="form__row  form__row--max490">
-                      <div class="form__col">
-                        <label class="field-text  field-text--success">
-                          <span class="field-text__name  field-text__name--sm">Name</span>
-                          <span class="field-text__input-wrap">
-                            <input class="field-text__input" type="text" placeholder="" value="Удачно">
-                          </span>
-                        </label>
-                      </div>
-                      <div class="form__col">
-                        <label class="field-text  field-text--error">
-                          <span class="field-text__name  field-text__name--sm">Surname</span>
-                          <span class="field-text__input-wrap">
-                            <input class="field-text__input" type="text" placeholder="" value="Ошибочно">
-                            <span class="field-text__help-text">This field is required</span>
-                          </span>
-                        </label>
-                      </div>
-                      <div class="form__col  form__col--sm-4-4">
-                        <label class="field-text">
-                          <span class="field-text__name  field-text__name--sm">Company name</span>
-                          <span class="field-text__input-wrap">
-                            <input class="field-text__input" type="text" placeholder="" value="Это поле — альтернатива имени/фамилии">
-                          </span>
-                        </label>
-                      </div>
-                      <div class="form__col">
-                        <label class="field-text">
-                          <span class="field-text__name  field-text__name--sm">City</span>
-                          <span class="field-text__input-wrap">
-                            <input class="field-text__input" type="text" placeholder="">
-                          </span>
-                        </label>
-                      </div>
-                      <div class="form__col">
-                        <label class="field-text">
-                          <span class="field-text__name  field-text__name--sm">Tax number</span>
-                          <span class="field-text__input-wrap">
-                            <input class="field-text__input" type="text" placeholder="">
-                            <span class="field-text__help-text">Please check your tax number has 6&nbsp;digits</span>
-                          </span>
-                        </label>
-                      </div>
-                      <div class="form__col  form__col--lg-show  form__col--push-left-2-4">
-                        <button class="btn  btn--block">Confirm and pay</button>
-                      </div>
-                    </div>
-                  </section>
-
-                </form>
-
-              </article>
-
-            </div>
-
-          </div>
-
-          <div class="layout-text__aside  layout-text__aside--bg-transparent">
-            <aside class="layout-text__aside-inner" role="complementary"></aside>
-          </div>
-
-          <div class="layout-text__btns-desktop">
-            <div class="layout-text__btns-desktop-pseudocontent">
-              <div class="layout-text__btns-desktop-inner">
-                <div class="layout-text__btns-desktop-left">
-                  <a href="" class="layout-text__btns-back">
-                    <svg width="9" height="8"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-left"></use></svg>
-                    Back
-                  </a>
-                </div>
-                <div class="layout-text__btns-desktop-shadow"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="layout-text__btns-mobile">
-            <a href="" class="layout-text__btns-mobile-item">Confirm and pay</a>
+          <div class="layout-full__btns-mobile">
+            <a href="" class="layout-full__btns-mobile-item">Proceed</a>
           </div>
 
         </div>
@@ -595,76 +482,161 @@
 
     </div>
 
+    <div class="page__footer-wrapper">
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__inner">
+          <div class="page-footer__left">
+            <section class="page-footer__block  page-footer__block--about">
+              <h3 class="page-footer__block-title">About Website</h3>
+              <div class="page-footer__block-text">
+                <div class="page-footer__copyright">
+                  © Copyright 2017 Greece.ru
+                  <p>Real estate agency with the&nbsp;best properties. Become a&nbsp;part of&nbsp;our&nbsp;community.</p>
+                </div>
+                <p class="page-footer__address">Greece, Thessaloniki, Nikis Ave 1,  floor 2, 56424, <a href="tel:+306974383">+30 6974-383</a></p>
+              </div>
+              <ul class="page-footer__list">
+                <li><a href="">Sale</a></li>
+                <li><a href="">Rent</a></li>
+                <li><a href="">Add an Object</a></li>
+                <li><a href="">Add a Place</a></li>
+                <li><a href="">About Company</a></li>
+                <li><a href="">Blog</a></li>
+              </ul>
+            </section>
+            <section class="page-footer__block  page-footer__block--guide">
+              <h3 class="page-footer__block-title">Guide to Regions</h3>
+              <ul class="page-footer__list  page-footer__list--arrow">
+                <li><a href="">
+                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                  Attica
+                </a></li>
+                <li><a href="">
+                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                  Central Greece
+                </a></li>
+                <li><a href="">
+                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                  Central Macedonia
+                </a></li>
+                <li><a href="">
+                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                  Crete
+                </a></li>
+                <li><a href="">
+                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                  Eastern Macedonia and&nbsp;Thrace
+                </a></li>
+                <li><a href="">
+                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                  Epirus
+                </a></li>
+                <li><a href="">
+                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                  Ionian Islands
+                </a></li>
+                <li><a href="">
+                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                  North Aegean
+                </a></li>
+                <li><a href="">
+                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                  Peloponnese
+                </a></li>
+                <li><a href="">
+                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                  South Aegean
+                </a></li>
+                <li><a href="">
+                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                  Thessaly
+                </a></li>
+                <li><a href="">
+                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                  Western Greece
+                </a></li>
+                <li><a href="">
+                  <svg class="page-footer__list-icon" width="10" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+                  Western Macedonia
+                </a></li>
+              </ul>
+            </section>
+          </div>
+          <div class="page-footer__right">
+            <section class="page-footer__block  page-footer__block--subscribe">
+              <h3 class="page-footer__block-title">Subscribe to Our Newsletter</h3>
+              <form action="">
+                <div class="field-text">
+                  <span class="field-text__name">No spam, only good news</span>
+                  <span class="field-text__input-wrap  field-text__input-wrap--input-btn-group">
+                    <input class="field-text__input  field-text__input--fz-small" type="text" placeholder="Type here your email">
+                    <button class="btn  btn--sm">Subscribe</button>
+                  </span>
+                </div>
+              </form>
+            </section>
+            <section class="page-footer__block  page-footer__block--social">
+              <h3 class="page-footer__block-title">Stay in Touch</h3>
+
+              <ul class="social-links">
+                <li>
+                  <a href="" class="social-links__item">
+                    <span class="social-links__item-text">Facebook</span>
+                    <svg class="social-links__icon" width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook"></use></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="social-links__item">
+                    <span class="social-links__item-text">Twitter</span>
+                    <svg class="social-links__icon" width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#twitter"></use></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="social-links__item">
+                    <span class="social-links__item-text">Instagram</span>
+                    <svg class="social-links__icon  social-links__icon--instagram" width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram"></use></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="social-links__item">
+                    <span class="social-links__item-text">Google Plus</span>
+                    <svg class="social-links__icon" width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#google-plus"></use></svg>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
   </div>
 
-  <div id="your-order" class="modal" tabindex="-1" role="dialog">
+  <div id="change-photo" class="modal  modal--md" tabindex="-1" role="dialog">
     <div class="modal__dialog" role="document">
       <div class="modal__content">
         <div class="modal__header">
           <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
-          <h4 class="modal__title">Your order</h4>
+          <h4 class="modal__title">Change photo</h4>
         </div>
         <div class="modal__body">
-          <div class="order-short-list">
-            <div class="order-short-list__item">
-              <h4 class="order-short-list__title">Property type</h4>
-              <ul class="order-short-list__sublist">
-                <li class="order-short-list__sublist-item">
-                  <div class="order-short-list__name">Sale</div>
-                </li>
-              </ul>
+          <form class="modal__form" action="">
+            <p>Select the area to display</p>
+            <div class="modal__change-photo-img">
+              <img src="img/demo-card-pict-01.jpg" alt="">
             </div>
-            <div class="order-short-list__item">
-              <h4 class="order-short-list__title">Basic service</h4>
-              <ul class="order-short-list__sublist">
-                <li class="order-short-list__sublist-item">
-                  <div class="order-short-list__name">Listing to greece.ru</div>
-                  <div class="order-short-list__price"> € 125</div>
-                </li>
-              </ul>
+            <div class="field-actions">
+              <button class="btn  btn--white  btn--wide">Crop and save</button>
             </div>
-            <div class="order-short-list__item">
-              <h4 class="order-short-list__title">Optional service</h4>
-              <ul class="order-short-list__sublist">
-                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
-                  <button class="order-short-list__remove  close-circle" title="Remove"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
-                  <div class="order-short-list__name">Nice looking master plan</div>
-                  <div class="order-short-list__price"> € 125</div>
-                </li>
-                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
-                  <button class="order-short-list__remove  close-circle" title="Remove"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
-                  <div class="order-short-list__name">Nice looking master plan</div>
-                  <div class="order-short-list__price"> € 125</div>
-                </li>
-              </ul>
-            </div>
-            <div class="order-short-list__item">
-              <h4 class="order-short-list__title">Additiona services</h4>
-              <ul class="order-short-list__sublist">
-                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
-                  <button class="order-short-list__remove  close-circle" title="Remove"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
-                  <div class="order-short-list__name">Professional photography Professional photography Professional photography </div>
-                  <div class="order-short-list__price"> € 125</div>
-                </li>
-                <li class="order-short-list__sublist-item  order-short-list__sublist-item--icon">
-                  <button class="order-short-list__remove  close-circle" title="Remove"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
-                  <div class="order-short-list__name">Aerial video</div>
-                  <div class="order-short-list__price"> € 125</div>
-                </li>
-              </ul>
-            </div>
-            <div class="order-short-list__item">
-              <div class="order-short-list__total-wrapper">
-                <div class="order-short-list__name">Total </div>
-                <div class="order-short-list__price"> € 125</div>
-              </div>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
   <script src="js/script.min.js"></script>
 
+  <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="js/jquery.daterangepicker.min.js"></script>
 </body>
 </html>
