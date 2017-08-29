@@ -73,9 +73,85 @@
     }
   }
 
+  &__btns-desktop {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      position: fixed;
+      z-index: 1;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1330px;
+      padding-left: 30px;
+      padding-right: 30px;
+      background-color: #ff0;
+    }
+  }
+
+  &__btns-desktop-pseudocontent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 0 0 300px;
+  }
+
+  &__btns-desktop-inner {
+    position: relative;
+    display: flex;
+    padding: 22px 30px 22px 15px;
+    background-color: #fff;
+    max-width: 810px;
+
+    @media (min-width: $screen-osx) {
+      padding-left: 30px;
+    }
+  }
+
+  &__btns-desktop-shadow {
+    position: absolute;
+    bottom: 100%;
+    left: -10px;
+    right: -15px;
+    height: 30px;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 16px;
+      right: 16px;
+      height: 50px;
+      box-shadow: 0 -4px 15px rgba(72,72,72, 0.08);
+    }
+  }
+
+  &__btns-desktop-left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btns-desktop-right {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
 
 
   &--pb15 {
     padding-bottom: 15px;
+  }
+
+  &--has-desktop-bottom-btns {
+
+    @media (min-width: $screen-lg) {
+      padding-bottom: 84px;
+    }
   }
 }

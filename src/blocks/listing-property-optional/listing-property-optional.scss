@@ -66,6 +66,26 @@
       }
     }
 
+    #{$block-name}__footer--check {
+
+      &:before {
+        border-color: #fff;
+        background-color: #fff;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 27px;
+        right: 5px;
+        width: 10px;
+        height: 5px;
+        border-left: 1px solid $color-main;
+        border-bottom: 1px solid $color-main;
+        transform: rotate(-47deg);
+      }
+    }
+
     .pseudolink:before {
       border-color: #fff;
     }
@@ -121,5 +141,21 @@
 
   &__footer {
     padding: 20px 0 0 0;
+    position: relative;
+
+    &--check {
+      padding-right: 25px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        right: 0;
+        width: 21px;
+        height: 21px;
+        border: 1px solid $color-main;
+        border-radius: 50%;
+      }
+    }
   }
 }

@@ -136,6 +136,11 @@
         &.active {
           padding-top: 35px;
         }
+
+        &--profile-first {
+          padding-top: 0 !important;
+          margin-top: -4px;
+        }
       }
     }
 

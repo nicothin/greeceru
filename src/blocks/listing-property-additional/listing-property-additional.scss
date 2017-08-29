@@ -72,6 +72,30 @@
       }
     }
 
+    #{$block-name}__footer {
+      border-color: #7798FC;
+    }
+
+    #{$block-name}__footer--check {
+
+      &:before {
+        border-color: #fff;
+        background-color: #fff;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 27px;
+        right: 5px;
+        width: 10px;
+        height: 5px;
+        border-left: 1px solid $color-main;
+        border-bottom: 1px solid $color-main;
+        transform: rotate(-47deg);
+      }
+    }
+
     .pseudolink:before {
       border-color: #fff;
     }
@@ -114,10 +138,27 @@
   }
 
   &__footer {
+    position: relative;
     min-height: 42px;
     padding: 20px 0 0 0;
     border-top: 1px solid $gray-lightest;
     font-size: $font-size--small;
+    transition: all $transition-time;
+
+    &--check {
+      padding-right: 25px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        right: 0;
+        width: 21px;
+        height: 21px;
+        border: 1px solid $color-main;
+        border-radius: 50%;
+      }
+    }
   }
 
 }
