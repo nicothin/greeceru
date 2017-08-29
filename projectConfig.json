@@ -124,7 +124,8 @@
     "list-nums": [],
     "collect-drachma": [],
     "list": [],
-    "gallery-photo": []
+    "gallery-photo": [],
+    "logos": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

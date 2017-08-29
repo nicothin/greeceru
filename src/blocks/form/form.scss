@@ -56,6 +56,10 @@ $line-height:                 1.375em !default;
     &--pt14 {
       padding-top: 14px;
     }
+
+    &--pt50 {
+      padding-top: 50px;
+    }
   }
 
   &__col {
@@ -111,6 +115,22 @@ $line-height:                 1.375em !default;
 
     &--push-left-2-4 {
       margin-left: 50%;
+    }
+
+    &--xl-1-4 {
+
+      @media (min-width: $screen-xl) {
+        flex-basis: 25%;
+        max-width: 25%;
+      }
+    }
+
+    &--xl-2-4 {
+
+      @media (min-width: $screen-xl) {
+        flex-basis: 50%;
+        max-width: 50%;
+      }
     }
 
     &--lg-show {

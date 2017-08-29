@@ -46,6 +46,26 @@
     }
   }
 
+  .field-drop-checkboxes {
+    flex-grow: 1;
+
+    &:not(:first-child):not(:last-child) .field-drop-checkboxes__pseudoselect {
+      border-radius: 0;
+      border-right: 0;
+    }
+
+    &:first-child .field-drop-checkboxes__pseudoselect {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right: 0;
+    }
+
+    &:last-child .field-drop-checkboxes__pseudoselect {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
   &__add {
     display: inline-block;
     vertical-align: middle;
@@ -78,5 +98,9 @@
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
+  }
+
+  &--aife {
+    align-items: flex-end;
   }
 }

@@ -1,0 +1,82 @@
+// В этом файле должны быть стили для БЭМ-блока logos, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.logos {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  padding-bottom: 30px;
+  border-bottom: 1px solid $border-color;
+
+  &__title {
+    font-size: $font-size;
+    color: $gray;
+    margin: -4px 0 20px;
+    padding: 0;
+    font-weight: 400;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -7px;
+      margin-right: -7px;
+    }
+
+    @media (min-width: $screen-osx) {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+
+  &__item {
+    display: block;
+
+    @media (min-width: $screen-sm) {
+      width: 220px;
+      min-width: 220px;
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 260px;
+      min-width: 260px;
+    }
+
+    @media (min-width: $screen-osx) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  &__item-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    min-height: 80px;
+    margin-bottom: 15px;
+    border: 1px solid $border-color;
+
+    @media (min-width: $screen-sm) {
+      min-height: 120px;
+    }
+
+    @media (min-width: $screen-osx) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__img {
+    display: block;
+    max-width: 155px;
+  }
+
+}

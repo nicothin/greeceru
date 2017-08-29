@@ -44,6 +44,19 @@
         margin-bottom: 25px;
       }
     }
+
+    &--progress {
+
+      @media (min-width: $screen-md) {
+        flex-grow: 1;
+        padding-right: 45px;
+      }
+
+      @media (min-width: $screen-osx) {
+        max-width: 100%;
+        // margin-bottom: 20px;
+      }
+    }
   }
 
   &__price {

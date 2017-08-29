@@ -41,6 +41,19 @@
     font-size: 10px;
   }
 
+  &__descr {
+    padding-bottom: 8px;
+  }
+
+  &__descr-nowrap {
+    white-space: nowrap;
+    margin-right: 0.3em;
+
+    &--gray {
+      color: $gray;
+    }
+  }
+
 
 
   &--sm {
@@ -78,6 +91,24 @@
     #{$block-name}__line {
       height: 6px;
       border-radius: 3px;
+    }
+  }
+
+  &--sm-no-num {
+    padding-bottom: 6px;
+    height: auto;
+  }
+
+  &--has-top-text {
+
+    &:before {
+      top: auto;
+      bottom: 0;
+    }
+
+    #{$block-name}__line {
+      top: auto;
+      bottom: 0;
     }
   }
 }
