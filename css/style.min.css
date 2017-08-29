@@ -1297,6 +1297,8 @@ input:checked ~ .field-radio__name-text:after {
     max-width: 690px; }
 .form__row--pt14 {
     padding-top: 14px; }
+.form__row--pt50 {
+    padding-top: 50px; }
 .form__col {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -5203,6 +5205,13 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     font-weight: 400; }
 .progress__num {
     font-size: 10px; }
+.progress__descr {
+    padding-bottom: 8px; }
+.progress__descr-nowrap {
+    white-space: nowrap;
+    margin-right: 0.3em; }
+.progress__descr-nowrap--gray {
+      color: #8891a6; }
 .progress--sm {
     height: 30px; }
 .progress--sm:before {
@@ -5227,6 +5236,15 @@ a.ui-state-default:hover, a.ui-state-default:focus {
 .progress--xs .progress__line {
       height: 6px;
       border-radius: 3px; }
+.progress--sm-no-num {
+    padding-bottom: 6px;
+    height: auto; }
+.progress--has-top-text:before {
+    top: auto;
+    bottom: 0; }
+.progress--has-top-text .progress__line {
+    top: auto;
+    bottom: 0; }
 .fields-group {
   display: -ms-flexbox;
   display: flex; }
@@ -5256,6 +5274,19 @@ a.ui-state-default:hover, a.ui-state-default:focus {
     position: relative; }
 .fields-group .field-text__input:focus {
       z-index: 1; }
+.fields-group .field-drop-checkboxes {
+    -ms-flex-positive: 1;
+        flex-grow: 1; }
+.fields-group .field-drop-checkboxes:not(:first-child):not(:last-child) .field-drop-checkboxes__pseudoselect {
+      border-radius: 0;
+      border-right: 0; }
+.fields-group .field-drop-checkboxes:first-child .field-drop-checkboxes__pseudoselect {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right: 0; }
+.fields-group .field-drop-checkboxes:last-child .field-drop-checkboxes__pseudoselect {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0; }
 .fields-group__add {
     display: inline-block;
     vertical-align: middle;
@@ -5278,6 +5309,9 @@ a.ui-state-default:hover, a.ui-state-default:focus {
 .fields-group__add:last-child {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0; }
+.fields-group--aife {
+    -ms-flex-align: end;
+        align-items: flex-end; }
 .main-pict {
   display: block;
   position: relative;
@@ -6255,7 +6289,7 @@ a.ui-state-default:hover, a.ui-state-default:focus {
 .profile__info {
   border: 1px solid #e9edf2;
   padding: 40px 30px 30px;
-  margin: 0 auto 30px 0;
+  margin: 0 auto 30px;
   max-width: 450px; }
 .profile__content {
   -ms-flex-positive: 1;
@@ -7369,6 +7403,35 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
 .gallery-photo__item-descr {
     font-size: 12px;
     color: #8891a6; }
+.logos {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e9edf2; }
+.logos__title {
+    font-size: 14px;
+    color: #8891a6;
+    margin: -4px 0 20px;
+    padding: 0;
+    font-weight: 400; }
+.logos__list {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+.logos__item {
+    display: block; }
+.logos__item-inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    padding: 10px 30px;
+    min-height: 80px;
+    margin-bottom: 15px;
+    border: 1px solid #e9edf2; }
+.logos__img {
+    display: block;
+    max-width: 155px; }
 @media (min-width: 480px) and (max-width: 767px){
   .blog__post-list .subscribing{
     padding-left: 90px;
@@ -7521,7 +7584,21 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     flex-basis: 50%;
     min-width: 50%;
     padding-left: 7px;
-    padding-right: 7px; } }
+    padding-right: 7px; }
+  .logos__list{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -7px;
+    margin-right: -7px; }
+  .logos__item{
+    width: 220px;
+    min-width: 220px;
+    padding-left: 7px;
+    padding-right: 7px; }
+  .logos__item-inner{
+    min-height: 120px; } }
 @media (min-width: 768px){
   .page__figure{
     display: inline-block;
@@ -7923,6 +8000,10 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
   .form-line__part{
     padding-left: 15px;
     padding-right: 15px; }
+  .form-line__part--progress{
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding-right: 45px; }
   .form-line__price{
     padding-left: 15px;
     padding-right: 15px; }
@@ -8081,7 +8162,10 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
   .gallery-photo__item{
     width: 50%;
     padding-left: 15px;
-    padding-right: 15px; } }
+    padding-right: 15px; }
+  .logos__item{
+    width: 260px;
+    min-width: 260px; } }
 @media screen and (min-width: 768px) and (-ms-high-contrast: active), (min-width: 768px) and (-ms-high-contrast: none){
   .add-type__item-wrap{
     -ms-flex-preferred-size: auto !important;
@@ -8575,6 +8659,7 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     -ms-flex-negative: 0;
     flex-shrink: 0;
     margin-right: 15px;
+    margin-left: 0;
     padding-bottom: 5px; }
   .profile__content--max-750{
     max-width: 750px; }
@@ -8893,6 +8978,14 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     white-space: normal; }
   .main-nav__toggler{
     display: none; }
+  .form__col--xl-1-4{
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%; }
+  .form__col--xl-2-4{
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%; }
   .form__col--checkbox{
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
@@ -9301,6 +9394,8 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
   .form-line__part{
     max-width: 25%;
     margin-bottom: 20px; }
+  .form-line__part--progress{
+    max-width: 100%; }
   .form-line__price{
     max-width: 25%;
     margin-bottom: 20px; }
@@ -9393,7 +9488,15 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
   .list__item{
     -ms-flex-preferred-size: 33.3334%;
     flex-basis: 33.3334%;
-    max-width: 33.3334%; } }
+    max-width: 33.3334%; }
+  .logos__list{
+    margin-left: -15px;
+    margin-right: -15px; }
+  .logos__item{
+    padding-left: 15px;
+    padding-right: 15px; }
+  .logos__item-inner{
+    margin-bottom: 30px; } }
 @media (min-width: 1600px){
   .page-footer__inner{
     max-width: 1530px;
