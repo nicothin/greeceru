@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>greece_ru</title>
   <meta name="description" content="">
-  <link rel="stylesheet" type="text/css" href="css/daterangepicker.min.css" />
   @@include('_include/page_head.html')
 </head>
 
@@ -1242,11 +1241,12 @@
                 </div>
               </div>
 
-              <div class="aside-block">
+              <div class="aside-block  aside-block--collapsable">
                 <div class="aside-block__header">
                   <h3 class="aside-block__title">Availabiity & prices</h3>
+                  <div class="aside-block__header-toggler"></div>
                 </div>
-                <div class="aside-block__content-wrappe  aside-block__content-wrapper--ovv">
+                <div class="aside-block__content-wrapper">
                   <form class="aside-block__content  aside-block__content--pv25">
                     <div class="order-short-list">
                       <div class="form  form--mb0">
@@ -1257,7 +1257,7 @@
                         </div>
                         <div class="form__row">
                           <div class="form__col">
-                            <label class="field-text  field-text--datapicker" id="availability-date-start">
+                            <label class="field-text">
                               <div class="field-text__name  field-text__name--sm">Check In</div>
                               <span class="field-text__input-wrap">
                                 <input class="field-text__input" id="datepicker-1" type="text" placeholder="05/23/2017">
@@ -1620,7 +1620,5 @@
   </div>
 
   @@include('_include/page_bottom.html')
-  <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-  <script type="text/javascript" src="js/jquery.daterangepicker.min.js"></script>
 </body>
 </html>

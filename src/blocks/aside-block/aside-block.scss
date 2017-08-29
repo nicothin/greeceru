@@ -84,31 +84,9 @@
   }
 
   &__content-wrapper {
-    position: relative;
     overflow: hidden;
     max-height: 1000px;
     transition: max-height 0.3s;
-
-    &--ovv {
-      overflow: visible;
-    }
-  }
-
-  &__calendar {
-    position: absolute;
-    top: 100% !important;
-    // left: 0 !important;
-    width: 355px !important;
-    background-color: #fff;
-
-    .month-wrapper {
-      width: auto !important;
-    }
-
-    &--start {
-      left: auto !important;
-      right: 0 !important;
-    }
   }
 
 
