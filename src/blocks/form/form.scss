@@ -60,6 +60,14 @@ $line-height:                 1.375em !default;
     &--pt50 {
       padding-top: 50px;
     }
+
+    &--calendar-left {
+      padding-top: 20px;
+
+      @media (min-width: $screen-lg) {
+        padding-top: 30px;
+      }
+    }
   }
 
   &__col {

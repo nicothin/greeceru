@@ -218,7 +218,43 @@ $( document ).ready(function() {
   // выбор дат в блоке сайдбара c jQuery Date Range Picker
   $("#datepicker-1").dateRangePicker({
     container: '#availability-date-start',
-    extraClass: 'aside-block__calendar  aside-block__calendar--start',
+    extraClass: 'date-picker-wrapper--aside  date-picker-wrapper--aside-start',
+    autoClose: true,
+    singleDate : true,
+    singleMonth: true,
+    showShortcuts: false,
+    startDate: '2017-08-20',
+    showTopbar: false,
+  });
+  $("#datepicker-2").dateRangePicker({
+    container: '#availability-date-end',
+    extraClass: 'date-picker-wrapper--aside  date-picker-wrapper--aside-end',
+    autoClose: true,
+    singleDate : true,
+    singleMonth: true,
+    showShortcuts: false,
+    startDate: '2017-08-20',
+    showTopbar: false,
+  });
+
+  // выбор дат в модальном окне c jQuery Date Range Picker
+  $("#datepicker-3").dateRangePicker({
+    container: '#modal-availability-date-start',
+    extraClass: 'date-picker-wrapper--modal  date-picker-wrapper--modal-start',
+    autoClose: true,
+    singleDate : true,
+    singleMonth: true,
+    showShortcuts: false,
+    startDate: '2017-08-20',
+    showTopbar: false,
+  }).on('datepicker-open',function(){ // на мобилке два поля друг под другом, так что придется добавлять/убирать класс-модификатор, увеличивающий z-index
+      $(this).closest('.field-text').addClass('field-text--datapicker-active');
+  }).on('datepicker-closed',function(){
+    $(this).closest('.field-text').removeClass('field-text--datapicker-active');
+  });
+  $("#datepicker-4").dateRangePicker({
+    container: '#modal-availability-date-end',
+    extraClass: 'date-picker-wrapper--modal  date-picker-wrapper--modal-end',
     autoClose: true,
     singleDate : true,
     singleMonth: true,
@@ -228,13 +264,12 @@ $( document ).ready(function() {
   });
 
   // инлайновый календарь для страницы выбора дат при добавлении цен за конкретные даты
-  // $('#calendar-prices000').datepicker();
   $('#calendar-prices').dateRangePicker({
     inline: true,
     container: '#calendar-prices',
     alwaysOpen: true,
     singleMonth: true,
-    // showShortcuts: false,
+    showShortcuts: false,
     showTopbar: false,
     startDate: '2017-08-20',
   });

@@ -47,6 +47,7 @@
     "husky": "^0.13.2",
     "imagemin-pngquant": "^5.0.0",
     "merge-stream": "^1.0.1",
+    "moment": "^2.18.1",
     "postcss-image-inliner": "^1.0.6",
     "postcss-import": "^9.1.0",
     "postcss-inline-svg": "^2.3.0",

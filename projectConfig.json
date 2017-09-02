@@ -125,7 +125,8 @@
     "collect-drachma": [],
     "list": [],
     "gallery-photo": [],
-    "logos": []
+    "logos": [],
+    "date-picker": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -148,7 +149,8 @@
     "./node_modules/bootstrap/js/modal.js",
     "./node_modules/bootstrap/js/tab.js",
     "./node_modules/object-fit-images/dist/ofi.js",
-    "./node_modules/owl.carousel/dist/owl.carousel.js"
+    "./node_modules/owl.carousel/dist/owl.carousel.js",
+    "./node_modules/moment/min/moment-with-locales.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"
@@ -156,12 +158,8 @@
   "addImages": [
     "./src/img/*.{jpg,jpeg,gif,png,svg,ico}"
   ],
-  "copiedJs": [
-    "./src/js/jquery.daterangepicker.min.js"
-  ],
-  "copiedCss": [
-    "./src/css/daterangepicker.min.css"
-  ],
+  "copiedJs": [],
+  "copiedCss": [],
   "dirs": {
     "srcPath": "./src/",
     "buildPath": "./build/",

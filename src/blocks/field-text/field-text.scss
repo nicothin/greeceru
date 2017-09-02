@@ -316,4 +316,8 @@ $field-padding-horizontal:    0.7em !default;
     position: relative;
     z-index: 1;
   }
+
+  &--datapicker-active {
+    z-index: 2;
+  }
 }

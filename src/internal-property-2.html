@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>greece_ru</title>
   <meta name="description" content="">
-  <link rel="stylesheet" type="text/css" href="css/daterangepicker.min.css" />
   @@include('_include/page_head.html')
 </head>
 
@@ -1205,7 +1204,7 @@
 
           </div>
 
-          <div class="layout-tabs__tab  layout-tabs__tab--aside">
+          <div class="layout-tabs__tab  layout-tabs__tab--aside  layout-tabs__tab--aside-ovv">
 
             <div class="layout-tabs__aside">
 
@@ -1265,7 +1264,7 @@
                             </label>
                           </div>
                           <div class="form__col">
-                            <label class="field-text">
+                            <label class="field-text  field-text--datapicker" id="availability-date-end">
                               <div class="field-text__name  field-text__name--sm">Check Out</div>
                               <span class="field-text__input-wrap">
                                 <input class="field-text__input" id="datepicker-2" type="text" placeholder="06/23/2017">
@@ -1361,18 +1360,18 @@
               <div class="form  form--mb0">
                 <div class="form__row">
                   <div class="form__col">
-                    <label class="field-text">
+                    <label id="modal-availability-date-start" class="field-text  field-text--datapicker">
                       <div class="field-text__name  field-text__name--sm">Check In</div>
                       <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="text" placeholder="05/23/2017">
+                        <input id="datepicker-3" class="field-text__input" type="text" placeholder="05/23/2017">
                       </span>
                     </label>
                   </div>
                   <div class="form__col">
-                    <label class="field-text">
+                    <label id="modal-availability-date-end" class="field-text  field-text--datapicker">
                       <div class="field-text__name  field-text__name--sm">Check Out</div>
                       <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="text" placeholder="06/23/2017">
+                        <input id="datepicker-4" class="field-text__input" type="text" placeholder="06/23/2017">
                       </span>
                     </label>
                   </div>
@@ -1620,7 +1619,5 @@
   </div>
 
   @@include('_include/page_bottom.html')
-  <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-  <script type="text/javascript" src="js/jquery.daterangepicker.min.js"></script>
 </body>
 </html>

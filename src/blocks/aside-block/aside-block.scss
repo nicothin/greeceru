@@ -94,23 +94,6 @@
     }
   }
 
-  &__calendar {
-    position: absolute;
-    top: 100% !important;
-    // left: 0 !important;
-    width: 355px !important;
-    background-color: #fff;
-
-    .month-wrapper {
-      width: auto !important;
-    }
-
-    &--start {
-      left: auto !important;
-      right: 0 !important;
-    }
-  }
-
 
 
   &--collapsable {
