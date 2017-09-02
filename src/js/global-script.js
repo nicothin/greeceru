@@ -206,13 +206,25 @@ $( document ).ready(function() {
     slide: function( event, ui ) { handle3.text( ui.value + ' %' ); }
   });
 
-  // выбор дат в блоке сайдбара
-  var array = ["2017-08-14","2017-08-15","2017-08-16"]
-  $("#datepicker-1, #datepicker-2").datepicker({
-    beforeShowDay: function(date){
-      var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
-      return [ array.indexOf(string) == -1 ]
-    }
+  // выбор дат в блоке сайдбара c jQuery UI calendar
+  // var array = ["2017-08-14","2017-08-15","2017-08-16"]
+  // $("#datepicker-1, #datepicker-2").datepicker({
+  //   beforeShowDay: function(date){
+  //     var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+  //     return [ array.indexOf(string) == -1 ]
+  //   }
+  // });
+
+  // выбор дат в блоке сайдбара c jQuery Date Range Picker
+  $("#datepicker-1").dateRangePicker({
+    container: '#availability-date-start',
+    extraClass: 'aside-block__calendar  aside-block__calendar--start',
+    autoClose: true,
+    singleDate : true,
+    singleMonth: true,
+    showShortcuts: false,
+    startDate: '2017-08-20',
+    showTopbar: false,
   });
 
   // инлайновый календарь для страницы выбора дат при добавлении цен за конкретные даты
