@@ -296,6 +296,7 @@ $z-index-modal:               100 !default;
   }
 
   &__datepicker {
+    position: relative;
     border-bottom: 1px solid $gray-lightest;
     margin-top: 40px;
     margin-bottom: 20px;

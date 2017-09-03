@@ -199,6 +199,15 @@
     box-shadow: none;
     display: inline-block
   }
+
+  &.inline-wrapper--modal {
+    width: auto;
+
+    @media (min-width: $screen-lg) {
+      width: 100%;
+      padding: 10px 5px;
+    }
+  }
 }
 
 

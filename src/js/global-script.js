@@ -37,12 +37,15 @@ $( document ).ready(function() {
   objectFitImages();
 
   // включение датапикера в модальном окне и блокировка нескольких дат
-  var blockedDates = ["2017-05-12","2017-05-13","2017-05-14","2017-05-15","2017-05-16"]
-  $('#modal-datepicker').datepicker({
-    beforeShowDay: function(date){
-      var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
-      return [ blockedDates.indexOf(string) == -1 ]
-    }
+  $('#shedule-calendar').dateRangePicker({
+    inline: true,
+    container: '#shedule-calendar',
+    extraClass: 'inline-wrapper--modal',
+    alwaysOpen: true,
+    singleMonth: true,
+    showShortcuts: false,
+    showTopbar: false,
+    startDate: '2017-08-20',
   });
 
   // карусели в блоках Top Rated
