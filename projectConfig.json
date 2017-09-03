@@ -149,8 +149,7 @@
     "./node_modules/bootstrap/js/modal.js",
     "./node_modules/bootstrap/js/tab.js",
     "./node_modules/object-fit-images/dist/ofi.js",
-    "./node_modules/owl.carousel/dist/owl.carousel.js",
-    "./node_modules/moment/min/moment-with-locales.js"
+    "./node_modules/owl.carousel/dist/owl.carousel.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"
@@ -158,7 +157,9 @@
   "addImages": [
     "./src/img/*.{jpg,jpeg,gif,png,svg,ico}"
   ],
-  "copiedJs": [],
+  "copiedJs": [
+    "src/js/moment-with-locales.js"
+  ],
   "copiedCss": [],
   "dirs": {
     "srcPath": "./src/",
