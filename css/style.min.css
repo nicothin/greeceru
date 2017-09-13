@@ -913,6 +913,8 @@ a.btn--disabled {
 .field-text__input-wrap--input-btn-group .btn {
         -ms-flex-negative: 0;
             flex-shrink: 0; }
+.field-text__input-wrap--has-clean .field-text__input {
+      padding-right: 40px; }
 .field-text__input {
     display: inline-block;
     vertical-align: middle;
@@ -1024,6 +1026,26 @@ textarea.field-text__input {
       vertical-align: middle;
       fill: #8891a6;
       transition: fill 0.3s; }
+.field-text__clean {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer; }
+.field-text__clean-inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    width: 100%;
+    height: 100%; }
 .field-text--error .field-text__input {
     padding-right: 40px;
     border-color: #d94168;
@@ -6876,6 +6898,10 @@ a.btn--disabled {
     white-space: nowrap; }
 .table__col--right {
     text-align: right !important; }
+.table__col--danger {
+    color: #d94168; }
+.table__col--success {
+    color: #38a53d; }
 .table__toe {
     display: block;
     max-width: 100%;

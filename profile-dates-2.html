@@ -615,13 +615,27 @@
                                 </span>
                               </label>
                             </div>
-                            <div class="form__col  form__col--md-2-4">
-                              <label class="field-text">
-                                <span class="field-text__name  field-text__name--sm">Price, €</span>
-                                <span class="field-text__input-wrap">
-                                  <input class="field-text__input" type="text" placeholder="115" required>
-                                </span>
-                              </label>
+                            <div class="form__col  form__col--sm-4-4">
+                              <div class="field-radio">
+                                <div class="field-radio__input-wrap">
+                                  <label class="field-radio__name">
+                                    <input class="field-radio__input" type="radio" name="demo-radio" checked>
+                                    <span class="field-radio__name-text">Busy</span>
+                                  </label>
+                                  <div class="field-radio__help-text-wrap">
+                                    <div class="field-radio__help-text">Some description</div>
+                                  </div>
+                                </div>
+                                <div class="field-radio__input-wrap">
+                                  <label class="field-radio__name">
+                                    <input class="field-radio__input" type="radio" name="demo-radio">
+                                    <span class="field-radio__name-text">Free</span>
+                                  </label>
+                                  <div class="field-radio__help-text-wrap">
+                                    <div class="field-radio__help-text">Some description</div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                           <button class="btn  btn--block  btn--white">Save</button>
@@ -630,13 +644,13 @@
                       <table class="table  table--col-width-auto">
                         <tr>
                           <th>Date</th>
-                          <th>Price, €</th>
+                          <th>Status</th>
                           <th></th>
                         </tr>
                         <tr>
                           <td>02 November 2015</td>
-                          <td>
-                            90
+                          <td class="table__col  table__col--danger">
+                            Busy
                           </td>
                           <td class="table__col  table__col--right">
                             <button type="button" class="btn  btn--icon">
@@ -653,8 +667,8 @@
                         </tr>
                         <tr>
                           <td><span class="nowrap">02 November</span> 2017 - <span class="nowrap">11 March</span> 2018</td>
-                          <td>
-                            90
+                          <td class="table__col  table__col--success">
+                            Free
                           </td>
                           <td class="table__col  table__col--right">
                             <button type="button" class="btn  btn--icon">
