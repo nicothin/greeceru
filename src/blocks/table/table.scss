@@ -153,6 +153,14 @@
     &--right {
       text-align: right !important;
     }
+
+    &--danger {
+      color: $color-danger;
+    }
+
+    &--success {
+      color: $color-success;
+    }
   }
 
   &__toe {
