@@ -169,6 +169,14 @@
     }
   }
 
+  &--disabled {
+
+    #{$block-name}__pseudoselect {
+      cursor: not-allowed;
+      color: $gray;
+    }
+  }
+
   // &--bg-error {
 
   //   #{$block-name}__pseudoselect {
