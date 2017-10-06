@@ -853,6 +853,8 @@ a.btn--disabled {
       transition: background-color 0.3s; }
 .btn--lg-shown {
     display: none; }
+.btn--no-shadow {
+    box-shadow: none !important; }
 .field-text {
   display: block; }
 .field-text__name {
@@ -3064,6 +3066,8 @@ a:hover .feedback__slider-control-arrow,
       max-width: 100%;
       -ms-flex-positive: 1;
           flex-grow: 1; }
+.filter__part--medium {
+      max-width: 170px; }
 .filter__part--more {
       cursor: pointer;
       width: 48px;
@@ -8553,6 +8557,8 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     bottom: 0;
     left: 0;
     opacity: 0.85; }
+  .filter--btn-right{
+    padding-right: 0 !important; }
   .locations-list-wrapper .pagination{
     padding-bottom: 30px;
     margin-bottom: 30px;
@@ -9104,8 +9110,6 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     width: 940px; }
   .filter{
     padding: 30px; }
-  .filter__part--wide{
-    max-width: 250px; }
   .filter__drop--open{
     padding: 30px 30px 10px; }
   .locations-list-wrapper{

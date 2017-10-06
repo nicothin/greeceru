@@ -452,16 +452,16 @@
             <form class="filter-wrapper" id="filter-wrapper">
               <div class="filter-wrapper__inner">
 
-                <div class="filter">
+                <div class="filter  filter--btn-right">
                   <div class="filter__line">
                     <div class="filter__part  filter__part--wide">
                       <div class="field-text">
                         <input class="field-text__input  field-text__input--fz-small  filter__main-input" type="text" placeholder="Enter an address" value="Eastern Macedonia and Thrace">
                       </div>
                     </div>
-                    <div class="filter__part  filter__part--mobile-hide">
+                    <div class="filter__part  filter__part--medium  filter__part--mobile-hide">
                       <div class="field-drop-checkboxes  field-drop-checkboxes--fz-small">
-                        <div class="field-drop-checkboxes__pseudoselect" id="type-of-deal" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type<span class="field-drop-checkboxes__pseudoselect-text-xxl-show"> of deal</span></div>
+                        <div class="field-drop-checkboxes__pseudoselect" id="type-of-deal" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type of deal</div>
                         <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="type-of-deal">
                           <div class="field-checkbox__input-wrap">
                             <label class="field-checkbox__name">
@@ -480,7 +480,7 @@
                     </div>
                     <div class="filter__part  filter__part--mobile-hide">
                       <div class="field-drop-checkboxes  field-drop-checkboxes--fz-small">
-                        <div class="field-drop-checkboxes__pseudoselect" id="property-types" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All<span class="field-drop-checkboxes__pseudoselect-text-xxl-show"> property types</span></div>
+                        <div class="field-drop-checkboxes__pseudoselect" id="property-types" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All property types</div>
                         <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="property-types">
                           <div class="field-checkbox__input-wrap">
                             <label class="field-checkbox__name">
@@ -576,225 +576,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="filter__part  filter__part--short  filter__part--mobile-hide">
-                      <div class="field-text">
-                        <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Min price">
-                      </div>
-                    </div>
-                    <div class="filter__part  filter__part--short  filter__part--mobile-hide">
-                      <div class="field-text">
-                        <input class="field-text__input  field-text__input--fz-small" type="number" placeholder="Max price">
-                      </div>
-                    </div>
-                    <div class="filter__part  filter__part--more  filter__part--mobile-hide">
-                      <div class="field-text" data-filter-drop-toggler>
-                        <div class="field-text__input  field-text__input--fz-small">
-                          <span class="btn-icon  btn-icon--blue-kebab"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="filter__drop  modal-mobile  modal-mobile--has-bottom-btns" id="filter-drop">
-                    <div class="modal-mobile__dialog">
-                      <div class="modal-mobile__content">
-                        <div class="modal-mobile__header  filter__drop-lg-hide">
-                          <span class="close  close--bold  modal-mobile__close" aria-label="Закрыть" data-filter-drop-toggler><span></span></span>
-                          <div class="modal-mobile__title">Properties filter</div>
-                        </div>
-                        <div class="modal-mobile__body  filter__drop-row">
-                          <div class="filter__drop-lg-hide">
-                            <div class="filter__drop-part">
-                              <div class="field-drop-checkboxes">
-                                <div class="field-drop-checkboxes__pseudoselect" id="type-of-deal-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type of deal</div>
-                                <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="type-of-deal-2">
-                                  <div class="field-checkbox__input-wrap">
-                                    <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input" type="checkbox" checked>
-                                      <span class="field-checkbox__name-text">Type one</span>
-                                    </label>
-                                  </div>
-                                  <div class="field-checkbox__input-wrap">
-                                    <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input" type="checkbox">
-                                      <span class="field-checkbox__name-text">Type two</span>
-                                    </label>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="filter__drop-part">
-                              <div class="field-drop-checkboxes">
-                                <div class="field-drop-checkboxes__pseudoselect" id="property-types-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All property types</div>
-                                <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="property-types-2">
-                                  <div class="field-checkbox__input-wrap">
-                                    <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input" type="checkbox" checked>
-                                      <span class="field-checkbox__name-text">Apartment</span>
-                                    </label>
-                                  </div>
-                                  <div class="field-checkbox__input-wrap">
-                                    <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input" type="checkbox">
-                                      <span class="field-checkbox__name-text">Townhouse</span>
-                                    </label>
-                                  </div>
-                                  <div class="field-checkbox__input-wrap">
-                                    <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input" type="checkbox">
-                                      <span class="field-checkbox__name-text">House</span>
-                                    </label>
-                                  </div>
-                                  <div class="field-checkbox__input-wrap">
-                                    <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input" type="checkbox">
-                                      <span class="field-checkbox__name-text">Villa</span>
-                                    </label>
-                                  </div>
-                                  <div class="field-checkbox__input-wrap">
-                                    <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input" type="checkbox">
-                                      <span class="field-checkbox__name-text">Office</span>
-                                    </label>
-                                  </div>
-                                  <div class="field-checkbox__input-wrap">
-                                    <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input" type="checkbox">
-                                      <span class="field-checkbox__name-text">Storage space</span>
-                                    </label>
-                                  </div>
-                                  <div class="field-checkbox__input-wrap">
-                                    <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input" type="checkbox">
-                                      <span class="field-checkbox__name-text">Parking space</span>
-                                    </label>
-                                  </div>
-                                  <div class="field-checkbox__input-wrap">
-                                    <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input" type="checkbox">
-                                      <span class="field-checkbox__name-text">Industrial building</span>
-                                    </label>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="filter__drop-part">
-                              <div class="field-drop-checkboxes">
-                                <div class="field-drop-checkboxes__pseudoselect" id="bedrooms-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bedrooms</div>
-                                <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="bedrooms-2">
-                                  <div class="field-checkbox__input-wrap">
-                                    <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input" type="checkbox" checked>
-                                      <span class="field-checkbox__name-text">Studio</span>
-                                    </label>
-                                  </div>
-                                  <div class="field-checkbox__input-wrap">
-                                    <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input" type="checkbox">
-                                      <span class="field-checkbox__name-text">1 bed</span>
-                                    </label>
-                                  </div>
-                                  <div class="field-checkbox__input-wrap">
-                                    <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input" type="checkbox">
-                                      <span class="field-checkbox__name-text">2 bed’s</span>
-                                    </label>
-                                  </div>
-                                  <div class="field-checkbox__input-wrap">
-                                    <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input" type="checkbox">
-                                      <span class="field-checkbox__name-text">3 bed’s</span>
-                                    </label>
-                                  </div>
-                                  <div class="field-checkbox__input-wrap">
-                                    <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input" type="checkbox">
-                                      <span class="field-checkbox__name-text">4 bed’s</span>
-                                    </label>
-                                  </div>
-                                  <div class="field-checkbox__input-wrap">
-                                    <label class="field-checkbox__name">
-                                      <input class="field-checkbox__input" type="checkbox">
-                                      <span class="field-checkbox__name-text">5+</span>
-                                    </label>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="filter__drop-part  filter__drop-part--separator">
-                              <div class="field-text">
-                                <span class="field-text__input-wrap  field-text__input-wrap--input-group">
-                                  <input class="field-text__input" type="number" placeholder="Min price">
-                                  <input class="field-text__input" type="number" placeholder="Max price">
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="filter__drop-part">
-                            <div class="field-text">
-                              <span class="field-text__name">Year build</span>
-                              <span class="field-text__input-wrap  field-text__input-wrap--input-group">
-                                <input class="field-text__input" type="number" placeholder="From">
-                                <input class="field-text__input" type="number" placeholder="To">
-                              </span>
-                            </div>
-                          </div>
-                          <div class="filter__drop-part">
-                            <div class="field-text">
-                              <span class="field-text__name">Living area</span>
-                              <span class="field-text__input-wrap  field-text__input-wrap--input-group">
-                                <input class="field-text__input" type="number" placeholder="Min square">
-                                <input class="field-text__input" type="number" placeholder="Max square">
-                              </span>
-                            </div>
-                          </div>
-                          <div class="filter__drop-part">
-                            <div class="field-text">
-                              <span class="field-text__name">Land area</span>
-                              <span class="field-text__input-wrap  field-text__input-wrap--input-group">
-                                <input class="field-text__input" type="number" placeholder="Min square">
-                                <input class="field-text__input" type="number" placeholder="Max square">
-                              </span>
-                            </div>
-                          </div>
-                          <div class="filter__drop-part">
-                            <div class="field-drop-checkboxes">
-                              <span class="field-drop-checkboxes__name">Bathrooms</span>
-                              <div class="field-drop-checkboxes__pseudoselect" id="bedrooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">1</div>
-                              <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="bedrooms">
-                                <div class="field-checkbox__input-wrap">
-                                  <label class="field-checkbox__name">
-                                    <input class="field-checkbox__input" type="checkbox">
-                                    <span class="field-checkbox__name-text">1</span>
-                                  </label>
-                                </div>
-                                <div class="field-checkbox__input-wrap">
-                                  <label class="field-checkbox__name">
-                                    <input class="field-checkbox__input" type="checkbox">
-                                    <span class="field-checkbox__name-text">2</span>
-                                  </label>
-                                </div>
-                                <div class="field-checkbox__input-wrap">
-                                  <label class="field-checkbox__name">
-                                    <input class="field-checkbox__input" type="checkbox">
-                                    <span class="field-checkbox__name-text">3</span>
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="filter__drop-part">
-                            <div class="field-text">
-                              <span class="field-text__name">Keywords</span>
-                              <span class="field-text__input-wrap">
-                                <input class="field-text__input" type="text" placeholder="For an example pool, yard">
-                              </span>
-                            </div>
-                          </div>
-                          <div class="filter__drop-part  filter__drop-part--action">
-                            <button class="btn  btn--white  btn--wide">Show 123 properties</button>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="filter__part  filter__part--btn">
+                      <button class="btn  btn--no-shadow">Search</button>
                     </div>
                   </div>
                 </div>
