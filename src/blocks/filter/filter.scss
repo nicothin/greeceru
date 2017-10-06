@@ -41,9 +41,13 @@
       max-width: 100%;
       flex-grow: 1;
 
-      @media (min-width: $screen-xl) {
-        max-width: 250px;
-      }
+      // @media (min-width: $screen-xl) {
+      //   max-width: 250px;
+      // }
+    }
+
+    &--medium {
+      max-width: 170px;
     }
 
     &--more {
@@ -208,5 +212,12 @@
 
   &--bg-white {
     background-color: #fff;
+  }
+
+  &--btn-right {
+
+    @media (min-width: $screen-lg) {
+      padding-right: 0 !important;
+    }
   }
 }

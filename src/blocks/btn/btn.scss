@@ -175,4 +175,8 @@ $border-radius:               3px !default;
       display: inline-block;
     }
   }
+
+  &--no-shadow {
+    box-shadow: none !important;
+  }
 }
