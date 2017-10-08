@@ -5381,16 +5381,18 @@ a:hover .feedback__slider-control-arrow,
   margin: 0;
   padding: 0;
   list-style: none; }
-.location-props__item b {
-    white-space: nowrap; }
-.location-props__item svg {
-    display: inline-block;
-    vertical-align: middle;
-    width: 32px;
-    height: 32px;
-    margin-right: 15px; }
-.location-props__item:not(:last-child) {
+.location-props__item {
     margin-bottom: 20px; }
+.location-props__item:last-child {
+      margin-bottom: 0; }
+.location-props__item b {
+      white-space: nowrap; }
+.location-props__item svg {
+      display: inline-block;
+      vertical-align: middle;
+      width: 32px;
+      height: 32px;
+      margin-right: 15px; }
 .drop-btn {
   position: relative; }
 .drop-btn.open {
@@ -9473,10 +9475,11 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     max-width: 50%;
-    padding-right: 10px; }
-  .location-props__item:not(:last-child){
+    padding-right: 10px;
     margin-bottom: 30px; }
-  .location-props__item--osx-mb0:not(:last-child){
+  .location-props__item:last-child{
+    margin-bottom: 0; }
+  .location-props__item:nth-child(odd){
     margin-bottom: 0; }
   .objects{
     height: 490px; }
