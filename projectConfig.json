@@ -125,7 +125,8 @@
     "list": [],
     "gallery-photo": [],
     "logos": [],
-    "date-picker": []
+    "date-picker": [],
+    "loading": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

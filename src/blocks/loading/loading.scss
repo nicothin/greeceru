@@ -1,0 +1,77 @@
+// В этом файле должны быть стили для БЭМ-блока loading, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+$gray-lighter:                hsl(0, 0%, 80%) !default;
+$gray-lightest:               hsl(0, 0%, 90%) !default;
+
+.loading {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: inline-block;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 3em;
+    height: 3em;
+    border: 3px solid $gray-lightest;
+    border-top: 3px solid $gray-lighter;
+    border-radius: 50%;
+    animation: loader-rotate 1s linear infinite;
+  }
+
+  &--sup-content {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255,255,255,.7);
+
+    &:before {
+      position: absolute;
+      top: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &--sup-map {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255,255,255,.7);
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &--shown {
+    display: block;
+  }
+}
+
+
+
+@keyframes loader-rotate {
+
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
