@@ -7490,6 +7490,52 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     display: inline-block; }
 .date-picker-wrapper.inline-wrapper--modal {
     width: auto; }
+.loading {
+  display: inline-block; }
+.loading:before {
+    content: '';
+    display: block;
+    width: 3em;
+    height: 3em;
+    border: 3px solid #e9edf2;
+    border-top: 3px solid #cccccc;
+    border-radius: 50%;
+    animation: loader-rotate 1s linear infinite; }
+.loading--sup-content {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7); }
+.loading--sup-content:before {
+      position: absolute;
+      top: 200px;
+      left: 50%;
+      transform: translateX(-50%); }
+.loading--sup-map {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7); }
+.loading--sup-map:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+.loading--shown {
+    display: block; }
+@keyframes loader-rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
 @media (min-width: 480px) and (max-width: 767px){
   .blog__post-list .subscribing{
     padding-left: 90px;
