@@ -20,15 +20,14 @@ $border-color:                hsl(0, 0%, 60%) !default;
 
   &__list {
     display: inline-flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
 
     li {
-
-      &:not(:first-child) {
-        margin-left: 10px;
-      }
+      margin-bottom: 10px;
+      margin-right: 10px;
     }
   }
 
