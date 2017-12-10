@@ -21,7 +21,7 @@
         <div class="layout-tabs  layout-tabs--normal-aside" data-layout-tab-parent>
 
           <div class="layout-tabs__list">
-            <a href="#filter-wrapper" class="layout-tabs__list-item" data-filter-drop-toggler>Properties filter</a>
+            <a href="#properties-filter" class="layout-tabs__list-item" data-toggle="modal">Properties filter</a>
             <a href="#request" class="layout-tabs__list-item" data-toggle="modal">Request information</a>
           </div>
 
@@ -1399,6 +1399,138 @@
         </div>
         <div class="gallery-modal__carousel-prew-item">
           <img src="img/harly.jpg" alt="" class="gallery-modal__prew">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="properties-filter" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Filter</h4>
+        </div>
+        <div class="modal__body">
+          <form class="modal__form  modal__form--filter" action="">
+            <div class="field-text">
+              <input class="field-text__input" type="text" placeholder="Enter an address" value="Eastern Macedonia and Thrace">
+            </div>
+            <div class="field-drop-checkboxes">
+              <div class="field-drop-checkboxes__pseudoselect" id="type-of-deal" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type of deal</div>
+              <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="type-of-deal">
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox" checked>
+                    <span class="field-checkbox__name-text">Type one</span>
+                  </label>
+                </div>
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox">
+                    <span class="field-checkbox__name-text">Type two</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="field-drop-checkboxes">
+              <div class="field-drop-checkboxes__pseudoselect" id="property-types" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All property types</div>
+              <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="property-types">
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox" checked>
+                    <span class="field-checkbox__name-text">Apartment</span>
+                  </label>
+                </div>
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox">
+                    <span class="field-checkbox__name-text">Townhouse</span>
+                  </label>
+                </div>
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox">
+                    <span class="field-checkbox__name-text">House</span>
+                  </label>
+                </div>
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox">
+                    <span class="field-checkbox__name-text">Villa</span>
+                  </label>
+                </div>
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox">
+                    <span class="field-checkbox__name-text">Office</span>
+                  </label>
+                </div>
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox">
+                    <span class="field-checkbox__name-text">Storage space</span>
+                  </label>
+                </div>
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox">
+                    <span class="field-checkbox__name-text">Parking space</span>
+                  </label>
+                </div>
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox">
+                    <span class="field-checkbox__name-text">Industrial building</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="field-drop-checkboxes">
+              <div class="field-drop-checkboxes__pseudoselect" id="bedrooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bed's</div>
+              <div class="field-drop-checkboxes__drop  field-checkbox" aria-labelledby="bedrooms">
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox" checked>
+                    <span class="field-checkbox__name-text">Studio</span>
+                  </label>
+                </div>
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox">
+                    <span class="field-checkbox__name-text">1 bed</span>
+                  </label>
+                </div>
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox">
+                    <span class="field-checkbox__name-text">2 bed’s</span>
+                  </label>
+                </div>
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox">
+                    <span class="field-checkbox__name-text">3 bed’s</span>
+                  </label>
+                </div>
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox">
+                    <span class="field-checkbox__name-text">4 bed’s</span>
+                  </label>
+                </div>
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox">
+                    <span class="field-checkbox__name-text">5+</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="field-actions">
+              <button class="btn  btn--wide">Search</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

@@ -280,6 +280,15 @@ $z-index-modal:               100 !default;
     &--mt0 {
       margin-top: 0;
     }
+
+    &--filter {
+      margin-top: 0;
+
+      .field-drop-checkboxes + .field-drop-checkboxes,
+      .field-text + .field-drop-checkboxes {
+        margin-top: 10px;
+      }
+    }
   }
 
   &__form-descr {
