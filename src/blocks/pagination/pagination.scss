@@ -27,7 +27,13 @@ $border-color:                hsl(0, 0%, 60%) !default;
 
     li {
       margin-bottom: 10px;
-      margin-right: 10px;
+
+      &:not(:last-child) {
+
+        #{$block-name}__item {
+          margin-right: 10px;
+        }
+      }
     }
   }
 
@@ -78,12 +84,15 @@ $border-color:                hsl(0, 0%, 60%) !default;
     }
 
     &--active {
-      background-color: $gray-lightest;
-      color: $text-color;
 
-      &:hover,
-      &:focus {
+      @media (min-width: $screen-lg) {
+        background-color: $gray-lightest;
         color: $text-color;
+
+        &:hover,
+        &:focus {
+          color: $text-color;
+        }
       }
     }
   }
@@ -128,6 +137,31 @@ $border-color:                hsl(0, 0%, 60%) !default;
     #{$block-name}__text {
       margin-bottom: 0;
       margin-right: auto;
+    }
+  }
+
+  &--mobile-compact {
+
+    @media (max-width: ($screen-lg - 1)) {
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+
+      #{$block-name}__text {
+        margin-bottom: 0;
+        margin-right: auto;
+      }
+
+      #{$block-name}__item {
+        display: none;
+      }
+
+      #{$block-name}__item--active,
+      li:first-child #{$block-name}__item,
+      li:last-child #{$block-name}__item {
+        display: flex;
+      }
     }
   }
 }
