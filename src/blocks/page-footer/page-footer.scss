@@ -227,6 +227,25 @@
     }
   }
 
+  &__bank {
+    display: none;
+    max-width: 1530px;
+    margin: auto;
+    text-align: center;
+
+    img {
+      display: block;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+
+    @media (min-width: $screen-osx) {
+      text-align: left;
+    }
+  }
+
 
 
   &--simple {
