@@ -234,11 +234,21 @@
     text-align: center;
 
     img {
-      display: block;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 5px 5px;
     }
 
     @media (min-width: $screen-lg) {
+    }
+
+    @media (min-width: $screen-lg) {
+      max-width: 750px;
       display: block;
+    }
+
+    @media (min-width: $screen-xxl) {
+      max-width: 1530px;
     }
 
     @media (min-width: $screen-osx) {
