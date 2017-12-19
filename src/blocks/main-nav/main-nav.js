@@ -5,6 +5,7 @@
   // Клик на переключалке видимости гл. меню (бургер и бекдроп на мобильных)
   $('#main-nav-toggler, #main-nav-backdrop').on('click', function(e){
     e.preventDefault();
+    $('body').toggleClass('no-scroll');
     $('#main-nav').toggleClass('main-nav--open');
     $('#main-nav-toggler').toggleClass('burger--close');
     hideAllSubmenu();
