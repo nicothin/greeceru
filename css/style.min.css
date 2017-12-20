@@ -1603,7 +1603,8 @@ a:active .pagination__icon-left {
     text-overflow: ellipsis;
     transition: all 0.3s; }
 .login__sign-in:hover, .login__sign-in:focus {
-      background-color: #346af4; }
+      background-color: #346af4;
+      color: #fff; }
 .login__user-info {
     display: -ms-flexbox;
     display: flex;
@@ -2017,8 +2018,8 @@ a:active .pagination__icon-left {
   position: relative;
   width: 290px;
   transition: box-shadow 0.3s; }
-.card:hover {
-    box-shadow: 0 4px 25px rgba(71, 122, 251, 0.05), 0 1px 25px rgba(115, 124, 148, 0.12); }
+.card:hover, .card--active {
+    box-shadow: 0 4px 25px rgba(71, 122, 251, 0.3), 0 1px 25px rgba(115, 124, 148, 0.3); }
 .card__name {
     -ms-flex-order: 3;
         order: 3;
