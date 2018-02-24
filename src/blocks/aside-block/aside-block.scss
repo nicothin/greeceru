@@ -33,10 +33,18 @@
     background-color: #fff;
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
+    position: relative;
+    overflow: hidden;
+    max-height: 1000px;
+    transition: max-height 0.3s;
 
     &--pv25 {
       padding-top: 25px;
       padding-bottom: 25px;
+    }
+
+    &--ovv {
+      overflow: hidden;
     }
   }
 
@@ -94,6 +102,16 @@
     }
   }
 
+  &__content1 {
+    position: relative;
+    max-height: 1000px;
+    padding: 30px 30px 25px;
+    background-color: #fff;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    transition: max-height 0.3s;
+  }
+
 
 
   &--collapsable {
@@ -112,6 +130,10 @@
 
     #{$block-name}__content-wrapper {
       max-height: 0;
+    }
+
+    #{$block-name}__content {
+        max-height: 0;
     }
   }
 
