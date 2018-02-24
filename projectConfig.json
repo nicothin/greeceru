@@ -126,7 +126,9 @@
     "gallery-photo": [],
     "logos": [],
     "date-picker": [],
-    "loading": []
+    "loading": [],
+    "steps-add": [],
+    "add-form": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

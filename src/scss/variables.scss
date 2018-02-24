@@ -9,7 +9,7 @@ $gray:                        #8891a6;
 $gray-light:                  hsl(0, 0%, 60%);
 $gray-lighten:                #c5cad9;
 $gray-lighter:                hsl(0, 0%, 80%);
-$gray-lightest:               #e9edf2;
+$gray-lightest:               darken(#e9edf2, 5%);
 $gray-ultra-lightest:         #f3f5f9;
 $white:                       hsl(0, 0%, 100%);
 
@@ -18,6 +18,7 @@ $color-main--accent:          #346af4;
 $color-main--light:           #99b6ff;
 $color-main--ultralight:      #eef2ff;
 $color-success:               #38a53d;
+$color-success-2:             #00d092;
 $color-success--light:        #ecf8ee;
 $color-danger:                #d94168;
 $color-danger--light:         #faedf1;

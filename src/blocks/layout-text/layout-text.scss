@@ -181,14 +181,18 @@
     flex-grow: 1;
     flex-basis: 50%;
     font-size: ($font-size + 2);
+    font-family: $font-family;
     font-weight: 500;
     text-decoration: none;
+    border: none;
+    background-color: #fff;
     padding: 20px 10px;
     color: $color-main;
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    cursor: pointer;
 
     &:not(:first-child) {
       border-left: 1px solid $gray-lightest;
@@ -198,6 +202,12 @@
       color: $text-color;
     }
 
+    &--invert {
+      background-color: $color-main;
+      color: #fff;
+    }
+
+    &[disabled],
     &--disabled {
       opacity: 0.6;
       cursor: default;
@@ -222,5 +232,13 @@
     svg {
       fill: $gray;
     }
+  }
+
+
+
+
+
+  &--bg-gray {
+    background: $gray-ultra-lightest;
   }
 }

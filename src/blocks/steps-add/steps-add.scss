@@ -1,0 +1,89 @@
+// В этом файле должны быть стили для БЭМ-блока steps-add, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.steps-add {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 42px;
+  padding: 0 0 30px;
+  max-width: 512px;
+  list-style: none;
+  border-bottom: 1px solid $gray-lightest;
+  font-size: $font-size--small;
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 27px;
+    left: 10px;
+    right: 10px;
+    height: 1px;
+    // background-color: #000;
+    background-image: linear-gradient(to right, $gray-lightest, $gray-lightest 5px, transparent 5px, transparent 9px);
+    background-size: 9px 1px;
+  }
+
+  &__item {
+    display: block;
+    text-align: center;
+    color: $gray;
+    text-decoration: none;
+    pointer-events: none;
+
+    &--done {
+      pointer-events: auto;
+    }
+
+    &--done,
+    &:hover,
+    &:focus {
+
+      #{$block-name}__num {
+        border-color: $color-success-2;
+        background-color: $color-success-2;
+        color: #fff;
+      }
+
+      #{$block-name}__text {
+        color: $gray-darkest;
+      }
+    }
+
+    &--acive {
+
+      #{$block-name}__num {
+        border-color: $color-main !important;
+        background-color: $color-main !important;
+        color: #fff;
+      }
+
+      #{$block-name}__text {
+        color: $gray-darkest;
+      }
+    }
+  }
+
+  &__num {
+    display: block;
+    width: 54px;
+    height: 54px;
+    line-height: 54px;
+    border-radius: 50%;
+    border: 1px solid $gray-lighten;
+    background: $gray-ultra-lightest;
+    font-size: $font-size + 2;
+    color: $gray;
+    transition: all 0.3s;
+  }
+
+  &__text {
+    transition: all 0.3s;
+  }
+}
