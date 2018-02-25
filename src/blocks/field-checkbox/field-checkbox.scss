@@ -23,6 +23,13 @@ $line-height:                 1.375em !default;
     & + & {
       padding-top: ($line-height / 2.1);
     }
+
+    &--white-check {
+
+      #{$block-name}__name-text:before {
+        background-color: #fff;
+      }
+    }
   }
 
   &__name {
@@ -135,6 +142,27 @@ $line-height:                 1.375em !default;
 
        @at-root #{$block-name}--sm input:checked ~ #{$block-name}__name-text:after {
         top: 6px;
+      }
+    }
+  }
+
+  &--lg {
+
+    #{$block-name}__name {
+      padding-left: 2.3em;
+    }
+
+    #{$block-name}__name-text {
+
+      &:before {
+        top: -1px;
+        width: 20px;
+        height: 20px;
+      }
+
+      &:after {
+        top: 5px !important;
+        left: 6px !important;
       }
     }
   }

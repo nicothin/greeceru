@@ -22,7 +22,8 @@ $field-padding-horizontal:    0.7em !default;
     display: block;
     margin-bottom: 13px;
     line-height: 1;
-    font-weight: 500;
+    font-weight: 400;
+    color: $gray;
 
     &--sm {
       font-size: $font-size--small;
