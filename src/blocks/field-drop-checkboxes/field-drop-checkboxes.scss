@@ -163,6 +163,30 @@
       left: auto;
       right: 0;
     }
+
+    // &--closely {
+    //   display: flex;
+    //   flex-wrap: wrap;
+
+    //   .field-checkbox__input-wrap {
+    //     width: 100%;
+    //     margin-bottom: 10px;
+    //     min-height: 32px;
+
+    //     @media (min-width: $screen-sm) {
+    //       width: 25%;
+    //       padding-right: 4px;
+    //     }
+    //   }
+
+    //   .field-checkbox__input-wrap + .field-checkbox__input-wrap {
+    //     padding: 0;
+    //   }
+
+    //   .form {
+    //     width: 100%;
+    //   }
+    // }
   }
 
   &.open {
@@ -244,6 +268,29 @@
       &:focus {
         color: $color-main;
       }
+    }
+  }
+
+  &--simple {
+      border-top: 1px solid $gray-lightest;
+
+    & > #{$block-name}__pseudoselect {
+      margin-top: 20px;
+      background-color: transparent;
+      border: none;
+      font-size: $font-size + 4;
+      font-weight: 700;
+      color: $gray !important;
+      padding-left: 0 !important;
+    }
+
+    & > #{$block-name}__drop {
+      position: static;
+      padding: 20px 0 0 !important;
+      margin: 0;
+      box-shadow: none;
+      border: none;
+      background-color: transparent;
     }
   }
 }

@@ -153,9 +153,10 @@ $line-height:                 1.375em !default;
     }
 
     #{$block-name}__name-text {
+      color: $gray;
 
       &:before {
-        top: -1px;
+        top: -2px;
         width: 20px;
         height: 20px;
       }
@@ -191,6 +192,15 @@ $line-height:                 1.375em !default;
       &:after {
         display: none;
       }
+    }
+  }
+
+  &--text-sm {
+    font-size: $font-size--small;
+    color: $gray !important;
+
+    input:checked ~ .field-checkbox__name-text {
+      color: $text-color !important;
     }
   }
 }
