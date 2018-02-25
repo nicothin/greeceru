@@ -107,6 +107,28 @@ $field-padding-horizontal:    0.7em !default;
         padding-right: 40px;
       }
     }
+
+    &--required {
+
+      #{$block-name}__input {
+        padding-right: 25px;
+      }
+
+      &:before {
+        content: '*';
+        position: absolute;
+        top: 18px;
+        right: 10px;
+        font-size: $font-size + 4;
+        line-height: 1;
+        font-weight: 700;
+        color: $gray;
+
+        @media (min-width: $screen-md) {
+          top: 15px;
+        }
+      }
+    }
   }
 
   &__input {

@@ -1,9 +1,16 @@
-// В этом файле должны быть стили для БЭМ-блока add-form, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока add-form, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .add-form {
 
   $block-name:                &; // #{$block-name}__element {}
+
+  &__header {
+
+    .page__h1 {
+      margin-bottom: 40px;
+    }
+  }
 
 }
