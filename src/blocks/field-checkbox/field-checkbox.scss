@@ -150,4 +150,19 @@ $line-height:                 1.375em !default;
   &--mt10 {
     margin-top: 10px;
   }
+
+  &--no-check {
+
+    #{$block-name}__name {
+      padding-left: 0;
+    }
+
+    #{$block-name}__name-text {
+
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+  }
 }
