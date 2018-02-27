@@ -49,9 +49,13 @@
       padding-right: 130px;
     }
 
-    // &--has-filter {
-    //   padding-top: 78px;
-    // }
+    &--pt0 {
+      padding-top: 0;
+
+      @media (min-width: $screen-xl) {
+        padding-top: 0;
+      }
+    }
   }
 
   &__aside {
