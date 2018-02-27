@@ -33,6 +33,20 @@ $field-padding-horizontal:    0.7em !default;
     &--one-line {
       white-space: nowrap;
     }
+
+    &--has-dsecr {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+
+      #{$block-name}__name-main  {
+        margin-right: auto;
+      }
+
+      small {
+        font-size: $font-size--small;
+      }
+    }
   }
 
   &__input-wrap {
@@ -106,6 +120,24 @@ $field-padding-horizontal:    0.7em !default;
 
       #{$block-name}__input {
         padding-right: 40px;
+      }
+    }
+
+    &--money {
+
+      #{$block-name}__input {
+        padding-right: 25px;
+      }
+
+      &:before {
+        content: attr(data-money);
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: $font-size + 4;
+        line-height: 1;
+        font-weight: 700;
+        color: $gray;
       }
     }
 
@@ -370,5 +402,22 @@ $field-padding-horizontal:    0.7em !default;
 
   &--datapicker-active {
     z-index: 2;
+  }
+
+  &--lg {
+
+    #{$block-name}__input {
+      padding: 18px 60px 18px 18px;
+      font-size: $font-size + 4;
+      font-weight: 700;
+
+      @media (min-width: $screen-lg) {
+        padding-left: 24px;
+      }
+    }
+
+    textarea#{$block-name}__input {
+      min-height: 198px;
+    }
   }
 }
