@@ -102,7 +102,7 @@
                     </div>
                   </div>
 
-                  <div class="form">
+                  <div class="form  form--bdb  form--pb15">
                     <div class="form__row  form__row--max490">
                       <div class="form__col">
                         <label class="field-text">
@@ -234,9 +234,9 @@
                   </div>
 
                   <div class="accordeon">
-                    <div class="accordeon__title" id="advanced-settings" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Advanced settings</div>
-                    <div class="accordeon__drop" aria-labelledby="advanced-settings">
-                      <div class="field-checkbox  field-checkbox--lg  field-checkbox--text-sm">
+                    <button class="accordeon__btn" type="button">Advanced settings</button>
+                    <div class="accordeon__drop">
+                      <div class="field-checkbox  field-checkbox--lg  field-checkbox--text-sm  field-checkbox--grid-4">
                         <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--white-check">
                           <label class="field-checkbox__name">
                             <input class="field-checkbox__input" type="checkbox" checked>
@@ -388,6 +388,7 @@
 
   </div>
 
+  <script src="js/moment-with-locales.js"></script>
   @@include('_include/page_bottom.html')
 
 </body>

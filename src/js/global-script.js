@@ -1,5 +1,11 @@
 $( document ).ready(function() {
 
+  // Работа аккордеона
+  $('.accordeon__btn').on('click', function(e){
+    e.stopPropagation();
+    $(this).closest('.accordeon').toggleClass('open').find('.accordeon__drop').slideToggle();
+  });
+
   // узнаем ширину скролла
   var div = document.createElement('div');
   div.style.overflowY = 'scroll';

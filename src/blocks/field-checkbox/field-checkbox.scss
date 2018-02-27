@@ -203,4 +203,25 @@ $line-height:                 1.375em !default;
       color: $text-color !important;
     }
   }
+
+  &--grid-4 {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 490px;
+
+    #{$block-name}__input-wrap {
+      width: 100%;
+      margin-bottom: 10px;
+      min-height: 32px;
+
+      @media (min-width: $screen-sm) {
+        width: 25%;
+        padding-right: 4px;
+      }
+    }
+
+    #{$block-name}__input-wrap + #{$block-name}__input-wrap {
+      padding: 0;
+    }
+  }
 }

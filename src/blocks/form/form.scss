@@ -188,4 +188,12 @@ $line-height:                 1.375em !default;
   &--mb0 {
     margin-bottom: 0 !important;
   }
+
+  &--pb15 {
+    padding-bottom: 15px;
+  }
+
+  &--bdb {
+    border-bottom: 1px solid $gray-lightest;
+  }
 }

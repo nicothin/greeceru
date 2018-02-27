@@ -163,30 +163,6 @@
       left: auto;
       right: 0;
     }
-
-    // &--closely {
-    //   display: flex;
-    //   flex-wrap: wrap;
-
-    //   .field-checkbox__input-wrap {
-    //     width: 100%;
-    //     margin-bottom: 10px;
-    //     min-height: 32px;
-
-    //     @media (min-width: $screen-sm) {
-    //       width: 25%;
-    //       padding-right: 4px;
-    //     }
-    //   }
-
-    //   .field-checkbox__input-wrap + .field-checkbox__input-wrap {
-    //     padding: 0;
-    //   }
-
-    //   .form {
-    //     width: 100%;
-    //   }
-    // }
   }
 
   &.open {
@@ -195,7 +171,7 @@
       color: $color-main;
 
       &:after {
-          border-color: $color-main;
+        border-color: $color-main;
         transform: translateY(-30%) rotate(225deg);
       }
     }

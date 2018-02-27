@@ -128,7 +128,8 @@
     "date-picker": [],
     "loading": [],
     "steps-add": [],
-    "add-form": []
+    "add-form": [],
+    "accordeon": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
