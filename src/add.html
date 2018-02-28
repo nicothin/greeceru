@@ -26,25 +26,26 @@
             <div class="steps-add">
               <ul class="steps-add__list">
                 <li class="steps-add__item-wrap">
-                  <a href="" class="steps-add__item  steps-add__item--done">
+                  <!-- Убирать steps-add__item--done для блокированного состояния -->
+                  <a href="#add-form-part-1" class="steps-add__item  steps-add__item--done  steps-add__item--active" data-no-scroll>
                     <b class="steps-add__num">1</b>
                     <span class="steps-add__text">Fields</span>
                   </a>
                 </li>
                 <li class="steps-add__item-wrap">
-                  <a href="" class="steps-add__item  steps-add__item--acive">
+                  <a href="#add-form-part-2" class="steps-add__item  steps-add__item--done" data-no-scroll>
                     <b class="steps-add__num">2</b>
                     <span class="steps-add__text">Photos</span>
                   </a>
                 </li>
                 <li class="steps-add__item-wrap">
-                  <a href="" class="steps-add__item">
+                  <a href="#add-form-part-3" class="steps-add__item  steps-add__item--done" data-no-scroll>
                     <b class="steps-add__num">3</b>
                     <span class="steps-add__text">Map</span>
                   </a>
                 </li>
                 <li class="steps-add__item-wrap">
-                  <a href="" class="steps-add__item">
+                  <a href="#add-form-part-4" class="steps-add__item  steps-add__item--done" data-no-scroll>
                     <b class="steps-add__num">4</b>
                     <span class="steps-add__text">Preview</span>
                   </a>
@@ -56,7 +57,7 @@
 
               <article class="add-form">
 
-                <section class="add-form__part  add-form__part--hide" id="add-form-part-1">
+                <section class="add-form__part" id="add-form-part-1">
 
                   <header class="add-form__header">
                     <h1 class="page__h1">Tell more details about your property</h1>
@@ -444,6 +445,7 @@
                           <div class="upload-photo__msg  upload-photo__msg--desktop">Drag & drop photos here<br>or just click here to upload </div>
                         </div>
                         <div class="upload-photo__list-wrap">
+                          <!-- Добавить класс upload-photo__list--empty, чтобы показать фоновую картинку -->
                           <ul class="upload-photo__list" id="sortable-phohos">
                             <li class="upload-photo__list-item">
                               <div class="mini-photo">
@@ -541,7 +543,7 @@
 
                 </section>
 
-                <section class="add-form__part" id="add-form-part-3">
+                <section class="add-form__part  add-form__part--hide" id="add-form-part-3">
 
                   <header class="add-form__header">
                     <h2 class="page__h1">Type property address</h2>

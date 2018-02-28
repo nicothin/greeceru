@@ -6,6 +6,17 @@ $( document ).ready(function() {
     $(this).closest('.accordeon').toggleClass('open').find('.accordeon__drop').slideToggle();
   });
 
+  // Переключение вкладок в форме добавления локации
+  $(document).on('click', '.steps-add__item.steps-add__item--done', function (e) {
+    e.preventDefault();
+    if($(this.hash).is('.add-form__part--hide')) {
+      $('.add-form__part').addClass('add-form__part--hide');
+      $(this.hash).removeClass('add-form__part--hide');
+      $('.steps-add__item').removeClass('steps-add__item--active');
+      $(this).addClass('steps-add__item--active');
+    }
+  });
+
   // узнаем ширину скролла
   var div = document.createElement('div');
   div.style.overflowY = 'scroll';
@@ -158,7 +169,7 @@ $( document ).ready(function() {
   });
 
   // плавный скролл для якорных ссылок
-  $('a[href^="#"]:not([data-toggle])').on('click',function(e){
+  $('a[href^="#"]:not([data-toggle]):not([data-no-scroll])').on('click',function(e){
     var target_position = $(this.hash).offset().top - 56; // 56 — высота хедера, прибитого к верху вьюпорта
     $('body,html').animate({'scrollTop':target_position},350);
   });
