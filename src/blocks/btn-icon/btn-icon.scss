@@ -146,11 +146,19 @@
       text-align: center;
       font-weight: 500;
       font-size: $font-size--small;
+      white-space: nowrap;
       border-left: 1px solid $gray-lightest;
 
       @media (min-width: $screen-xl) {
         display: block;
       }
+    }
+  }
+
+  &--show-add-text {
+
+    #{$block-name}__text {
+      display: block;
     }
   }
 }

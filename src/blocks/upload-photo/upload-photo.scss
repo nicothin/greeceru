@@ -1,0 +1,72 @@
+// В этом файле должны быть стили для БЭМ-блока upload-photo, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.upload-photo {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  padding: 1px 0;
+  background-image: linear-gradient(to right, $gray-lightest, $gray-lightest 5px, transparent 5px, transparent 9px);
+  background-size: 9px 1px;
+
+  &__header {
+    padding: 15px 0;
+    display: inline-block;
+    background: $gray-ultra-lightest;
+    transform: translateX(-1px);
+  }
+
+  &__inner {
+    padding: 0 1px;
+    background-image: linear-gradient(to bottom, $gray-lightest, $gray-lightest 5px, $gray-ultra-lightest 5px, $gray-ultra-lightest 9px);
+    background-size: 1px 9px;
+  }
+
+  &__inner-2 {
+    min-height: 390px;
+    padding: 35px 0 20px;
+    background: $gray-ultra-lightest;
+  }
+
+  &__descr {
+    font-size: $font-size--small;
+    color: $gray;
+  }
+
+  &__msg {
+    font-size: $font-size + 4;
+    line-height: $font-size + 11;
+    color: $gray;
+    font-weight: 700;
+
+    @media (min-width: $screen-xl) {
+      display: none;
+    }
+
+    &--desktop {
+      display: none;
+
+      @media (min-width: $screen-xl) {
+        display: block;
+      }
+    }
+  }
+
+  &__list-wrap {
+    padding: 0 10px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 18px -10px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__list-item {
+    padding: 0 10px;
+    margin-bottom: 15px;
+  }
+}

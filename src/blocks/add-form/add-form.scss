@@ -99,4 +99,86 @@
     }
   }
 
+  &__address {
+    position: relative;
+    margin-bottom: 30px;
+
+    .field-text__input {
+
+      @media (min-width: $screen-lg) {
+        padding-right: 190px !important;
+      }
+    }
+
+    .field-checkbox {
+      margin-top: 30px;
+
+      @media (min-width: $screen-lg) {
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        right: 0;
+        width: 180px;
+        height: 58px;
+        padding: 0 10px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .field-checkbox__input-wrap {
+      width: 100%;
+    }
+
+    .field-checkbox__name {
+      display: block;
+    }
+
+    .field-checkbox__name-text {
+      display: block;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__map-wrap {
+    position: relative;
+  }
+
+  &__map {
+    height: 280px;
+    margin-bottom: 35px;
+    background: darken($gray-ultra-lightest, 5%);
+
+    @media (min-width: $screen-xl) {
+      height: 450px !important;
+    }
+  }
+
+  &__main-pict {
+    background: #fff;
+
+    .list-property__main-pict-descr {
+      padding: 0 15px;
+
+      @media (min-width: $screen-md) {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+  }
+
+  &__main-pict-data {
+    padding: 0 15px 15px;
+    background: #fff;
+
+    @media (min-width: $screen-md) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
 }

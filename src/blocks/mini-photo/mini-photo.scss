@@ -1,0 +1,101 @@
+// В этом файле должны быть стили для БЭМ-блока mini-photo, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.mini-photo {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  position: relative;
+  padding: 4px;
+  width: 88px;
+  height: 68px;
+  margin-bottom: 14px;
+  background-color: #fff;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+
+    #{$block-name}__close,
+    #{$block-name}__favorite {
+      opacity: 1;
+    }
+  }
+
+  &__img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+  }
+
+  &__close {
+    position: absolute;
+    top: -10px;
+    right: -8px;
+    transition: all 0.3s;
+
+    @media (min-width: $screen-xl) {
+      opacity: 0;
+    }
+  }
+
+  &__favorite {
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: all 0.3s;
+
+    @media (min-width: $screen-xl) {
+      bottom: -14px;
+      opacity: 0;
+    }
+
+    &:not(&--active):hover,
+    &:not(&--active):focus {
+
+      svg {
+        fill: $color-main;
+      }
+    }
+
+    svg {
+      fill: $gray-lighten;
+      transition: all 0.3s;
+
+      @media (min-width: $screen-xl) {
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    &--active {
+      opacity: 1 !important;
+
+      svg {
+        fill: $text-color;
+      }
+    }
+  }
+
+  &__favorite-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #fff;
+
+    @media (min-width: $screen-xl) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+}

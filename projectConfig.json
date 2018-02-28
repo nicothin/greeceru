@@ -129,7 +129,9 @@
     "loading": [],
     "steps-add": [],
     "add-form": [],
-    "accordeon": []
+    "accordeon": [],
+    "upload-photo": [],
+    "mini-photo": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

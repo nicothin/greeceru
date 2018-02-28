@@ -162,6 +162,16 @@ $field-padding-horizontal:    0.7em !default;
         }
       }
     }
+
+    &--wtf-pen {
+
+      #{$block-name}__input {
+        padding-right: 30px;
+        background-repeat: no-repeat;
+        background-position: center right 14px;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAMCAYAAACwXJejAAAAwklEQVQYlW3PIUsEQRQH8N+eB57FIAbBYrMItrOJwWAwicH5EgNaJl/cJGy6bzCCFj+BUcFi9CtcMFvEtczC3rovvZn58d5/qrZtjVXd5Bvc4rEaQ3WTZ/juzpMRsIkTXOMH+R/CEi/4wjni2rq6yWcFdLWXYlhNeqDCcw/cpRhWw0xP2C79R4rhfi143eQLXJW7X1z2Q25s7RweYYa38hhSDK99NMUCp2XSPMXwPvzuFMfYxUOKYX8IukyfSDgYA/AHn9Ex69rSMO8AAAAASUVORK5CYII=);
+      }
+    }
   }
 
   &__input {
@@ -366,14 +376,10 @@ $field-padding-horizontal:    0.7em !default;
   &--error {
 
     #{$block-name}__input {
-      padding-right: 40px;
       border-color: $color-danger;
-      background-image: svg-load('../blocks/field-text/img_to_bg/error.svg');
-      background-repeat: no-repeat;
-      background-size: 18px;
-      background-position: top 50% right 14px;
     }
 
+    #{$block-name}__name,
     #{$block-name}__help-text {
       color: $color-danger;
     }
@@ -382,14 +388,10 @@ $field-padding-horizontal:    0.7em !default;
   &--success {
 
     #{$block-name}__input {
-      padding-right: 40px;
       border-color: $color-success;
-      background-image: svg-load('../blocks/field-text/img_to_bg/ok.svg');
-      background-repeat: no-repeat;
-      background-size: 18px;
-      background-position: top 50% right 14px;
     }
 
+    #{$block-name}__name,
     #{$block-name}__help-text {
       color: $color-success;
     }
