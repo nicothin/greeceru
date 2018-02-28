@@ -172,6 +172,15 @@ $field-padding-horizontal:    0.7em !default;
         background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAMCAYAAACwXJejAAAAwklEQVQYlW3PIUsEQRQH8N+eB57FIAbBYrMItrOJwWAwicH5EgNaJl/cJGy6bzCCFj+BUcFi9CtcMFvEtczC3rovvZn58d5/qrZtjVXd5Bvc4rEaQ3WTZ/juzpMRsIkTXOMH+R/CEi/4wjni2rq6yWcFdLWXYlhNeqDCcw/cpRhWw0xP2C79R4rhfi143eQLXJW7X1z2Q25s7RweYYa38hhSDK99NMUCp2XSPMXwPvzuFMfYxUOKYX8IukyfSDgYA/AHn9Ex69rSMO8AAAAASUVORK5CYII=);
       }
     }
+
+    &--has-btn {
+      display: flex;
+      justify-content: space-between;
+
+      .field-text__input {
+        width: 100px;
+      }
+    }
   }
 
   &__input {
