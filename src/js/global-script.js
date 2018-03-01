@@ -17,6 +17,11 @@ $( document ).ready(function() {
     }
   });
 
+  // Сортировка фото
+  $( "#sortable-phohos" ).sortable().disableSelection();
+
+
+
   // узнаем ширину скролла
   var div = document.createElement('div');
   div.style.overflowY = 'scroll';
