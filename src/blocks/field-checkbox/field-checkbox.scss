@@ -224,4 +224,9 @@ $line-height:                 1.375em !default;
       padding: 0;
     }
   }
+
+  &--bdb:not(:last-child) {
+    margin-bottom: $line-height;
+    border-bottom: 1px solid $gray-lightest;
+  }
 }

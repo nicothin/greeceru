@@ -428,7 +428,14 @@ $field-padding-horizontal:    0.7em !default;
     }
 
     textarea#{$block-name}__input {
+      font-size: $font-size;
+      font-weight: 400;
       min-height: 198px;
+
+      @media (min-width: $screen-lg) {
+        font-size: $font-size + 4;
+        font-weight: 700;
+      }
     }
   }
 }
