@@ -1,0 +1,85 @@
+// В этом файле должны быть стили для БЭМ-блока success, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.success {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  text-align: center;
+  padding: 15px;
+
+  .bubbles {
+    margin: 0 auto;
+    transform: scale(0.6);
+
+    @media (min-width: $screen-md) {
+      transform: scale(1);
+      margin-top: 2em;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-top: 4em;
+    }
+  }
+
+  .share-btns {
+    margin-bottom: 8em;
+  }
+
+  &__title {
+    font-weight: 400;
+    margin: 1em 0;
+    font-size: $font-size;
+    margin-top: -1em;
+
+    @media (min-width: $screen-md) {
+      margin-top: 2.2em;
+      margin-bottom: 1.8em;
+      font-size: $font-size + 10;
+      font-weight: 700;
+    }
+  }
+
+  &__descr {
+    font-weight: 700;
+    margin: 1em 0;
+    font-size: $font-size + 6;
+    line-height: 1.2;
+
+    @media (min-width: $screen-md) {
+      margin-top: 0;
+      margin-bottom: 0.7em;
+      font-size: $font-size + 34;
+    }
+  }
+
+  &__msg {
+    font-weight: 400;
+    margin: 1em 0;
+    font-size: $font-size;
+    color: $gray;
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size + 4;
+      margin-bottom: 3em;
+    }
+  }
+
+  &__link-wrap {
+    color: $gray;
+
+    a {
+      color: $text-color;
+      word-break: break-all !important;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size + 4;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 3em;
+    }
+  }
+}

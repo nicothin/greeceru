@@ -1,0 +1,54 @@
+// В этом файле должны быть стили для БЭМ-блока share-btns, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.share-btns {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    height: 40px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: $font-size + 4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 396px;
+    min-width: 290px;
+    background: #23599b;
+    border-radius: $border-radius;
+
+    svg {
+      margin-right: 22px;
+      fill: #fff;
+    }
+
+    @media (min-width: $screen-md) {
+      height: 60px;
+    }
+
+    &--tw {
+      background: #55adee;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}

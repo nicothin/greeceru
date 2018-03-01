@@ -131,7 +131,10 @@
     "add-form": [],
     "accordeon": [],
     "upload-photo": [],
-    "mini-photo": []
+    "mini-photo": [],
+    "success": [],
+    "share-btns": [],
+    "bubbles": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
