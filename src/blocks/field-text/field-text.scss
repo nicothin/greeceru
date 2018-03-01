@@ -175,10 +175,15 @@ $field-padding-horizontal:    0.7em !default;
 
     &--has-btn {
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-between;
 
       .field-text__input {
-        width: 100px;
+        min-width: 100px;
+      }
+
+      .btn {
+        margin-left: 9px;
+        flex-shrink: 0;
       }
     }
   }

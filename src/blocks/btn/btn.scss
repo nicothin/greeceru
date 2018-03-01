@@ -38,6 +38,13 @@ $border-radius:               3px !default;
   box-shadow: 0 1px 3px rgba(#737c94, 0.4);
   transition: background-color $transition-time;
 
+  svg {
+    display: inline-block;
+    margin-right: 0.5em;
+    vertical-align: -0.2em;
+    fill: #fff;
+  }
+
   &:hover,
   &:focus {
     text-decoration: none;

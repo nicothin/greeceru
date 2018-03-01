@@ -53,6 +53,13 @@ $line-height:                 1.375em !default;
       max-width: 690px;
     }
 
+    &--lx-max266 {
+
+      @media (min-width: $screen-xl) {
+        max-width: 266px;
+      }
+    }
+
     &--pt14 {
       padding-top: 14px;
     }
@@ -138,6 +145,14 @@ $line-height:                 1.375em !default;
       @media (min-width: $screen-xl) {
         flex-basis: 50%;
         max-width: 50%;
+      }
+    }
+
+    &--xl-1-1 {
+
+      @media (min-width: $screen-xl) {
+        flex-basis: 100%;
+        max-width: 100%;
       }
     }
 
