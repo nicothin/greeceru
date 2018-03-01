@@ -442,53 +442,908 @@
 
         <form class="layout-text  layout-text--bg-gray" action="">
 
-          <div class="layout-text__main">
-            <div class="layout-text__main-inner">
+          <div class="layout-text__main-only">
 
-              <ul class="steps-add">
+            <div class="steps-add">
+              <ul class="steps-add__list">
                 <li class="steps-add__item-wrap">
-                  <a href="" class="steps-add__item  steps-add__item--done">
+                  <!-- Убирать steps-add__item--done для блокированного состояния -->
+                  <a href="#add-form-part-1" class="steps-add__item  steps-add__item--done  steps-add__item--active" data-no-scroll>
                     <b class="steps-add__num">1</b>
                     <span class="steps-add__text">Fields</span>
                   </a>
                 </li>
                 <li class="steps-add__item-wrap">
-                  <a href="" class="steps-add__item  steps-add__item--acive">
+                  <a href="#add-form-part-2" class="steps-add__item  steps-add__item--done" data-no-scroll>
                     <b class="steps-add__num">2</b>
                     <span class="steps-add__text">Photos</span>
                   </a>
                 </li>
                 <li class="steps-add__item-wrap">
-                  <a href="" class="steps-add__item">
+                  <a href="#add-form-part-3" class="steps-add__item  steps-add__item--done" data-no-scroll>
                     <b class="steps-add__num">3</b>
                     <span class="steps-add__text">Map</span>
                   </a>
                 </li>
                 <li class="steps-add__item-wrap">
-                  <a href="" class="steps-add__item">
+                  <a href="#add-form-part-4" class="steps-add__item  steps-add__item--done" data-no-scroll>
                     <b class="steps-add__num">4</b>
                     <span class="steps-add__text">Preview</span>
                   </a>
                 </li>
               </ul>
+            </div>
+
+            <div class="layout-text__main-inner  layout-text__main-inner--pt0">
 
               <article class="add-form">
 
-                <header class="add-form__header">
-                  <h1 class="page__h1">Tell more details about your property</h1>
-                </header>
+                <section class="add-form__part" id="add-form-part-1">
 
-                111
+                  <header class="add-form__header">
+                    <h1 class="page__h1">Tell more details about your property</h1>
+                  </header>
+
+                  <div class="add-form__type-select">
+
+                    <div class="field-drop-checkboxes  field-drop-checkboxes--lg">
+                      <div class="field-drop-checkboxes__text-name">Listing type</div>
+                      <!-- Убирать класс field-drop-checkboxes__pseudoselect--unselected, если что-то было выбрано -->
+                      <div class="field-drop-checkboxes__pseudoselect  field-drop-checkboxes__pseudoselect--unselected" id="some-name-01" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Select</div>
+                      <div class="field-drop-checkboxes__drop  field-checkbox  field-checkbox--no-check" aria-labelledby="some-name-01">
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="radio" name="radio-main">
+                            <span class="field-checkbox__name-text">Some item</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="radio" name="radio-main">
+                            <span class="field-checkbox__name-text">Some item</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="add-form__type-2  field-drop-checkboxes  field-drop-checkboxes--lg">
+                      <div class="field-drop-checkboxes__text-name">Property type</div>
+                      <!-- Убирать класс field-drop-checkboxes__pseudoselect--unselected, если что-то было выбрано -->
+                      <div class="field-drop-checkboxes__pseudoselect  field-drop-checkboxes__pseudoselect--unselected" id="some-name-02" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Select</div>
+                      <div class="field-drop-checkboxes__drop  field-checkbox  field-checkbox--no-check" aria-labelledby="some-name-02">
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="radio" name="radio-11" checked>
+                            <span class="field-checkbox__name-text">Some item</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="radio" name="radio-12">
+                            <span class="field-checkbox__name-text">Some item</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- Этот div нужно скрывать/показывать при выборе пункта во втором дропе -->
+                  <div class="add-form__item-type-data">
+
+                    <div class="add-form__item-type-form-wrapper">
+
+                      <div class="form  form--bdb  form--pb15">
+                        <div class="form__row  form__row--max490">
+                          <div class="form__col  form__col--md-1-4">
+                            <label class="field-text  field-text--error">
+                              <span class="field-text__name  field-text__name--sm  field-text__name--one-line">Some item</span>
+                              <span class="field-text__input-wrap  field-text__input-wrap--required">
+                                <input class="field-text__input" type="text" placeholder="" value="error text" required>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="form__col  form__col--md-1-4">
+                            <label class="field-text">
+                              <span class="field-text__name  field-text__name--sm  field-text__name--one-line">Some item</span>
+                              <span class="field-text__input-wrap  field-text__input-wrap--required">
+                                <input class="field-text__input" type="text" placeholder="" required>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="form__col  form__col--md-1-4">
+                            <label class="field-text">
+                              <span class="field-text__name  field-text__name--sm  field-text__name--one-line">Some item</span>
+                              <span class="field-text__input-wrap  field-text__input-wrap--required">
+                                <input class="field-text__input" type="text" placeholder="" required>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="form__col  form__col--md-1-4">
+                            <label class="field-text">
+                              <span class="field-text__name  field-text__name--sm  field-text__name--one-line">Some item</span>
+                              <span class="field-text__input-wrap  field-text__input-wrap--required">
+                                <input class="field-text__input" type="text" placeholder="" required>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="form__col  form__col--md-1-4">
+                            <label class="field-text">
+                              <span class="field-text__name  field-text__name--sm  field-text__name--one-line">Some item</span>
+                              <span class="field-text__input-wrap  field-text__input-wrap--required">
+                                <input class="field-text__input" type="text" placeholder="" required>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="form__col  form__col--md-1-4">
+                            <label class="field-text">
+                              <span class="field-text__name  field-text__name--sm  field-text__name--one-line">Some item</span>
+                              <span class="field-text__input-wrap  field-text__input-wrap--required">
+                                <input class="field-text__input" type="text" placeholder="" required>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="form__col  form__col--md-1-4">
+                            <label class="field-text">
+                              <span class="field-text__name  field-text__name--sm  field-text__name--one-line">Some item</span>
+                              <span class="field-text__input-wrap  field-text__input-wrap--required">
+                                <input class="field-text__input" type="text" placeholder="" required>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="form__col  form__col--md-1-4">
+                            <label class="field-text">
+                              <span class="field-text__name  field-text__name--sm  field-text__name--one-line">No of houses in complex</span>
+                              <span class="field-text__input-wrap  field-text__input-wrap--required">
+                                <input class="field-text__input" type="text" placeholder="" required>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="form__col  form__col--sm-4-4">
+                            <div class="field-checkbox  field-checkbox--lg  field-checkbox--text-sm">
+                              <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--white-check">
+                                <label class="field-checkbox__name">
+                                  <input class="field-checkbox__input" type="checkbox">
+                                  <span class="field-checkbox__name-text">Some item</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form__col">
+                            <div class="field-drop-checkboxes">
+                              <div class="field-drop-checkboxes__text-name  field-drop-checkboxes__text-name--sm">Some item</div>
+                              <!-- Убирать класс field-drop-checkboxes__pseudoselect--unselected, если что-то было выбрано -->
+                              <div class="field-drop-checkboxes__pseudoselect  field-drop-checkboxes__pseudoselect--unselected" id="some-name-04" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Select</div>
+                              <div class="field-drop-checkboxes__drop  field-checkbox  field-checkbox--no-check" aria-labelledby="some-name-04">
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="radio" name="radio31" checked>
+                                    <span class="field-checkbox__name-text">Some item</span>
+                                  </label>
+                                </div>
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="radio" name="radio32">
+                                    <span class="field-checkbox__name-text">Some item</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form__col">
+                            <div class="field-drop-checkboxes">
+                              <div class="field-drop-checkboxes__text-name  field-drop-checkboxes__text-name--sm">Some item</div>
+                              <!-- Убирать класс field-drop-checkboxes__pseudoselect--unselected, если что-то было выбрано -->
+                              <div class="field-drop-checkboxes__pseudoselect  field-drop-checkboxes__pseudoselect--unselected" id="some-name-05" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Select</div>
+                              <div class="field-drop-checkboxes__drop  field-checkbox  field-checkbox--no-check" aria-labelledby="some-name-05">
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="radio" name="radio31" checked>
+                                    <span class="field-checkbox__name-text">Some item</span>
+                                  </label>
+                                </div>
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="radio" name="radio32">
+                                    <span class="field-checkbox__name-text">Some item</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form__col">
+                            <div class="field-drop-checkboxes">
+                              <div class="field-drop-checkboxes__text-name  field-drop-checkboxes__text-name--sm">Some item</div>
+                              <!-- Убирать класс field-drop-checkboxes__pseudoselect--unselected, если что-то было выбрано -->
+                              <div class="field-drop-checkboxes__pseudoselect  field-drop-checkboxes__pseudoselect--unselected" id="some-name-06" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Select</div>
+                              <div class="field-drop-checkboxes__drop  field-checkbox  field-checkbox--no-check" aria-labelledby="some-name-06">
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="radio" name="radio31" checked>
+                                    <span class="field-checkbox__name-text">Some item</span>
+                                  </label>
+                                </div>
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="radio" name="radio32">
+                                    <span class="field-checkbox__name-text">Some item</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form__col">
+                            <div class="field-drop-checkboxes">
+                              <div class="field-drop-checkboxes__text-name  field-drop-checkboxes__text-name--sm">Some item</div>
+                              <!-- Убирать класс field-drop-checkboxes__pseudoselect--unselected, если что-то было выбрано -->
+                              <div class="field-drop-checkboxes__pseudoselect  field-drop-checkboxes__pseudoselect--unselected" id="some-name-06" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Select</div>
+                              <div class="field-drop-checkboxes__drop  field-checkbox  field-checkbox--no-check" aria-labelledby="some-name-06">
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="radio" name="radio31" checked>
+                                    <span class="field-checkbox__name-text">Some item</span>
+                                  </label>
+                                </div>
+                                <div class="field-checkbox__input-wrap">
+                                  <label class="field-checkbox__name">
+                                    <input class="field-checkbox__input" type="radio" name="radio32">
+                                    <span class="field-checkbox__name-text">Some item</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="field-checkbox  field-checkbox--lg  field-checkbox--text-sm  field-checkbox--grid-4  field-checkbox--bdb">
+                        <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--white-check">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" checked>
+                            <span class="field-checkbox__name-text">Some item</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--white-check">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Some item</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--white-check">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Some item</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--white-check">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" checked>
+                            <span class="field-checkbox__name-text">Some item</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--white-check">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Some item</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--white-check">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox">
+                            <span class="field-checkbox__name-text">Some item</span>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="accordeon">
+                        <button class="accordeon__btn" type="button">Advanced settings</button>
+                        <div class="accordeon__drop">
+                          <div class="field-checkbox  field-checkbox--lg  field-checkbox--text-sm  field-checkbox--grid-4">
+                            <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--white-check">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox" checked>
+                                <span class="field-checkbox__name-text">Some item</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--white-check">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox">
+                                <span class="field-checkbox__name-text">Some item</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--white-check">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox">
+                                <span class="field-checkbox__name-text">Some item</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--white-check">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox" checked>
+                                <span class="field-checkbox__name-text">Some item</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--white-check">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox">
+                                <span class="field-checkbox__name-text">Some item</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--white-check">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox">
+                                <span class="field-checkbox__name-text">Some item</span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form">
+                            <div class="form__row  form__row--max490">
+                              <div class="form__col">
+                                <div class="field-drop-checkboxes">
+                                  <div class="field-drop-checkboxes__text-name  field-drop-checkboxes__text-name--sm">Some item</div>
+                                  <!-- Убирать класс field-drop-checkboxes__pseudoselect--unselected, если что-то было выбрано -->
+                                  <div class="field-drop-checkboxes__pseudoselect  field-drop-checkboxes__pseudoselect--unselected" id="some-name-04" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Select</div>
+                                  <div class="field-drop-checkboxes__drop  field-checkbox  field-checkbox--no-check" aria-labelledby="some-name-04">
+                                    <div class="field-checkbox__input-wrap">
+                                      <label class="field-checkbox__name">
+                                        <input class="field-checkbox__input" type="radio" name="radio31" checked>
+                                        <span class="field-checkbox__name-text">Some item</span>
+                                      </label>
+                                    </div>
+                                    <div class="field-checkbox__input-wrap">
+                                      <label class="field-checkbox__name">
+                                        <input class="field-checkbox__input" type="radio" name="radio32">
+                                        <span class="field-checkbox__name-text">Some item</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form__col">
+                                <div class="field-drop-checkboxes">
+                                  <div class="field-drop-checkboxes__text-name  field-drop-checkboxes__text-name--sm">Some item</div>
+                                  <!-- Убирать класс field-drop-checkboxes__pseudoselect--unselected, если что-то было выбрано -->
+                                  <div class="field-drop-checkboxes__pseudoselect  field-drop-checkboxes__pseudoselect--unselected" id="some-name-05" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Select</div>
+                                  <div class="field-drop-checkboxes__drop  field-checkbox  field-checkbox--no-check" aria-labelledby="some-name-05">
+                                    <div class="field-checkbox__input-wrap">
+                                      <label class="field-checkbox__name">
+                                        <input class="field-checkbox__input" type="radio" name="radio31" checked>
+                                        <span class="field-checkbox__name-text">Some item</span>
+                                      </label>
+                                    </div>
+                                    <div class="field-checkbox__input-wrap">
+                                      <label class="field-checkbox__name">
+                                        <input class="field-checkbox__input" type="radio" name="radio32">
+                                        <span class="field-checkbox__name-text">Some item</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form__col">
+                                <div class="field-drop-checkboxes">
+                                  <div class="field-drop-checkboxes__text-name  field-drop-checkboxes__text-name--sm">Some item</div>
+                                  <!-- Убирать класс field-drop-checkboxes__pseudoselect--unselected, если что-то было выбрано -->
+                                  <div class="field-drop-checkboxes__pseudoselect  field-drop-checkboxes__pseudoselect--unselected" id="some-name-06" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Select</div>
+                                  <div class="field-drop-checkboxes__drop  field-checkbox  field-checkbox--no-check" aria-labelledby="some-name-06">
+                                    <div class="field-checkbox__input-wrap">
+                                      <label class="field-checkbox__name">
+                                        <input class="field-checkbox__input" type="radio" name="radio31" checked>
+                                        <span class="field-checkbox__name-text">Some item</span>
+                                      </label>
+                                    </div>
+                                    <div class="field-checkbox__input-wrap">
+                                      <label class="field-checkbox__name">
+                                        <input class="field-checkbox__input" type="radio" name="radio32">
+                                        <span class="field-checkbox__name-text">Some item</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form__col">
+                                <div class="field-drop-checkboxes">
+                                  <div class="field-drop-checkboxes__text-name  field-drop-checkboxes__text-name--sm">Some item</div>
+                                  <!-- Убирать класс field-drop-checkboxes__pseudoselect--unselected, если что-то было выбрано -->
+                                  <div class="field-drop-checkboxes__pseudoselect  field-drop-checkboxes__pseudoselect--unselected" id="some-name-06" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Select</div>
+                                  <div class="field-drop-checkboxes__drop  field-checkbox  field-checkbox--no-check" aria-labelledby="some-name-06">
+                                    <div class="field-checkbox__input-wrap">
+                                      <label class="field-checkbox__name">
+                                        <input class="field-checkbox__input" type="radio" name="radio31" checked>
+                                        <span class="field-checkbox__name-text">Some item</span>
+                                      </label>
+                                    </div>
+                                    <div class="field-checkbox__input-wrap">
+                                      <label class="field-checkbox__name">
+                                        <input class="field-checkbox__input" type="radio" name="radio32">
+                                        <span class="field-checkbox__name-text">Some item</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <label class="add-form__price  field-text  field-text--lg">
+                      <span class="field-text__name">Asking price</span>
+                      <span class="field-text__input-wrap  field-text__input-wrap--money" data-money="€">
+                        <input class="field-text__input" type="number" placeholder="" required>
+                      </span>
+                    </label>
+
+                    <label class="field-text  field-text--lg">
+                      <span class="field-text__name  field-text__name--has-dsecr">
+                        <span class="field-text__name-main">Description</span>
+                        <small>Links are not allowed in the description</small>
+                      </span>
+                      <span class="field-text__input-wrap">
+                        <textarea class="field-text__input" placeholder="Type here something important details about property"></textarea>
+                      </span>
+                    </label>
+
+                  </div>
+
+                </section>
+
+                <section class="add-form__part  add-form__part--hide" id="add-form-part-2">
+
+                  <header class="add-form__header">
+                    <h2 class="page__h1">Upload property photos</h2>
+                  </header>
+
+                  <div class="upload-photo">
+                    <div class="upload-photo__inner">
+                      <div class="upload-photo__inner-2">
+                        <div class="upload-photo__header">
+                          <div class="upload-photo__descr">Up to 18</div>
+                          <div class="upload-photo__msg">Click here <br>to upload </div>
+                          <div class="upload-photo__msg  upload-photo__msg--desktop">Drag & drop photos here<br>or just click here to upload </div>
+                        </div>
+                        <div class="upload-photo__list-wrap">
+                          <!-- Добавить класс upload-photo__list--empty, чтобы показать фоновую картинку -->
+                          <ul class="upload-photo__list" id="sortable-phohos">
+                            <li class="upload-photo__list-item">
+                              <div class="mini-photo">
+                                <img src="img/harly.jpg" alt="" class="mini-photo__img">
+                                <button class="mini-photo__close  close-circle" type="button"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                                <button class="mini-photo__favorite  mini-photo__favorite--active" type="button">
+                                  <span class="mini-photo__favorite-icon">
+                                    <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star-2"></use></svg>
+                                  </span>
+                                </button>
+                              </div>
+                            </li>
+                            <li class="upload-photo__list-item">
+                              <div class="mini-photo">
+                                <img src="img/joker.jpg" alt="" class="mini-photo__img">
+                                <button class="mini-photo__close  close-circle" type="button"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                                <button class="mini-photo__favorite" type="button">
+                                  <span class="mini-photo__favorite-icon">
+                                    <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star-2"></use></svg>
+                                  </span>
+                                </button>
+                              </div>
+                            </li>
+                            <li class="upload-photo__list-item">
+                              <div class="mini-photo">
+                                <img src="img/harly.jpg" alt="" class="mini-photo__img">
+                                <button class="mini-photo__close  close-circle" type="button"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                                <button class="mini-photo__favorite" type="button">
+                                  <span class="mini-photo__favorite-icon">
+                                    <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star-2"></use></svg>
+                                  </span>
+                                </button>
+                              </div>
+                            </li>
+                            <li class="upload-photo__list-item">
+                              <div class="mini-photo">
+                                <img src="img/joker.jpg" alt="" class="mini-photo__img">
+                                <button class="mini-photo__close  close-circle" type="button"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                                <button class="mini-photo__favorite" type="button">
+                                  <span class="mini-photo__favorite-icon">
+                                    <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star-2"></use></svg>
+                                  </span>
+                                </button>
+                              </div>
+                            </li>
+                            <li class="upload-photo__list-item">
+                              <div class="mini-photo">
+                                <img src="img/harly.jpg" alt="" class="mini-photo__img">
+                                <button class="mini-photo__close  close-circle" type="button"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                                <button class="mini-photo__favorite" type="button">
+                                  <span class="mini-photo__favorite-icon">
+                                    <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star-2"></use></svg>
+                                  </span>
+                                </button>
+                              </div>
+                            </li>
+                            <li class="upload-photo__list-item">
+                              <div class="mini-photo">
+                                <img src="img/joker.jpg" alt="" class="mini-photo__img">
+                                <button class="mini-photo__close  close-circle" type="button"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                                <button class="mini-photo__favorite" type="button">
+                                  <span class="mini-photo__favorite-icon">
+                                    <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star-2"></use></svg>
+                                  </span>
+                                </button>
+                              </div>
+                            </li>
+                            <li class="upload-photo__list-item">
+                              <div class="mini-photo">
+                                <img src="img/harly.jpg" alt="" class="mini-photo__img">
+                                <button class="mini-photo__close  close-circle" type="button"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                                <button class="mini-photo__favorite" type="button">
+                                  <span class="mini-photo__favorite-icon">
+                                    <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star-2"></use></svg>
+                                  </span>
+                                </button>
+                              </div>
+                            </li>
+                            <li class="upload-photo__list-item">
+                              <div class="mini-photo">
+                                <img src="img/joker.jpg" alt="" class="mini-photo__img">
+                                <button class="mini-photo__close  close-circle" type="button"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                                <button class="mini-photo__favorite" type="button">
+                                  <span class="mini-photo__favorite-icon">
+                                    <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#star-2"></use></svg>
+                                  </span>
+                                </button>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </section>
+
+                <section class="add-form__part  add-form__part--hide" id="add-form-part-3">
+
+                  <header class="add-form__header">
+                    <h2 class="page__h1">Type property address</h2>
+                  </header>
+
+                  <div class="add-form__address">
+                    <label class="field-text  field-text--lg">
+                      <span class="field-text__name">Full address</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="Example: Dionysiou Areopagitou 15">
+                      </span>
+                    </label>
+                    <div class="field-checkbox  field-checkbox--lg  field-checkbox--text-sm">
+                      <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--white-check">
+                        <label class="field-checkbox__name">
+                          <input class="field-checkbox__input" type="checkbox" id="map-help-toggler">
+                          <span class="field-checkbox__name-text">Show tips on the map</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="add-form__map-wrap">
+                    <div class="add-form__map" id="map" style="height: 280px"></div>
+                    <div class="add-form__map-help-wrap" id="map-help">
+                      <div class="add-form__map-help-01">
+                        <span class="add-form__map-help-text">Change a view, maybe it will<br>help you to find right location</span>
+                      </div>
+                      <div class="add-form__map-help-02">
+                        <span class="add-form__map-help-text">Also we have view<br>from town streets</span>
+                      </div>
+                      <div class="add-form__map-help-03">
+                        <span class="add-form__map-help-text">Use zoom in/out for<br>the most easily search </span>
+                      </div>
+                    </div>
+                  </div>
+                  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjGAiz42P2243i_aoNCu4Pf0vU_xDWcZk&signed_in=true&callback=initMap"></script>
+                  <script>
+                    var mapPoints = [
+                      [
+                        'Map point',
+                        59.95016094,
+                        30.31612718
+                      ]
+                    ];
+                    var mapStyle = [];
+                    function initMap() {
+                      var mapDiv = document.getElementById('map');
+                      var center = {lat: 59.95016094, lng: 30.31612718};
+                      var map = new google.maps.Map(mapDiv, {
+                        zoom: 13,
+                        center: center,
+                        // disableDefaultUI: true,
+                        styles: mapStyle
+                      });
+                      setMapMarkers(map);
+                      map.addListener('resize', function() {
+                        map.panTo(center);
+                      });
+                      google.maps.event.addDomListener(window, 'resize', function(){
+                        google.maps.event.trigger(map, 'resize');
+                      });
+                    }
+                    function setMapMarkers(map) {
+                      var image = {
+                        url: 'img/contacts-map-marker.png',
+                        size: new google.maps.Size(70, 80),
+                        anchor: new google.maps.Point(35, 63)
+                      };
+                      for (var i = 0; i < mapPoints.length; i++) {
+                        var point = mapPoints[i];
+                        var marker = new google.maps.Marker({
+                          position: {lat: point[1], lng: point[2]},
+                          map: map,
+                          icon: image,
+                          title: point[0]
+                        });
+                      }
+                    }
+                  </script>
+
+                  <div class="form">
+                    <div class="form__row  form__row--max490  form__row--lx-max266">
+                      <div class="form__col  form__col--md-1-2  form__col--xl-1-1">
+                        <label class="field-text  field-text--error">
+                          <span class="field-text__name  field-text__name--sm  field-text__name--one-line">Street number</span>
+                          <span class="field-text__input-wrap  field-text__input-wrap--wtf-pen">
+                            <input class="field-text__input" type="text" placeholder="" value="error text">
+                          </span>
+                        </label>
+                      </div>
+                      <div class="form__col  form__col--md-1-2  form__col--xl-1-1">
+                        <label class="field-text">
+                          <span class="field-text__name  field-text__name--sm  field-text__name--one-line">Route</span>
+                          <span class="field-text__input-wrap  field-text__input-wrap--wtf-pen">
+                            <input class="field-text__input" type="text" placeholder="">
+                          </span>
+                        </label>
+                      </div>
+                      <div class="form__col  form__col--md-1-2  form__col--xl-1-1">
+                        <label class="field-text">
+                          <span class="field-text__name  field-text__name--sm  field-text__name--one-line">State/region</span>
+                          <span class="field-text__input-wrap  field-text__input-wrap--wtf-pen">
+                            <input class="field-text__input" type="text" placeholder="">
+                          </span>
+                        </label>
+                      </div>
+                      <div class="form__col  form__col--md-1-2  form__col--xl-1-1">
+                        <label class="field-text">
+                          <span class="field-text__name  field-text__name--sm  field-text__name--one-line">City</span>
+                          <span class="field-text__input-wrap  field-text__input-wrap--wtf-pen">
+                            <input class="field-text__input" type="text" placeholder="">
+                          </span>
+                        </label>
+                      </div>
+                      <div class="form__col  form__col--md-1-2  form__col--xl-1-1">
+                        <label class="field-text">
+                          <span class="field-text__name  field-text__name--sm  field-text__name--one-line">Country</span>
+                          <span class="field-text__input-wrap  field-text__input-wrap--wtf-pen">
+                            <input class="field-text__input" type="text" placeholder="">
+                          </span>
+                        </label>
+                      </div>
+                      <div class="form__col  form__col--md-1-2  form__col--xl-1-1">
+                        <label class="field-text">
+                          <span class="field-text__name  field-text__name--sm  field-text__name--one-line">Postal code</span>
+                          <span class="field-text__input-wrap  field-text__input-wrap--wtf-pen  field-text__input-wrap--has-btn">
+                            <input class="field-text__input" type="text" placeholder="">
+                            <button class="btn  btn--sm" type="button">
+                              <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#refresh"></use></svg>
+                              Refresh
+                            </button>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                </section>
+
+                <section class="add-form__part  add-form__part--hide  list-property" id="add-form-part-4">
+
+                  <header class="add-form__header">
+                    <h2 class="page__h1">Please check how your property will looks like</h2>
+                  </header>
+
+                  <div class="add-form__main-pict">
+
+                    <div class="main-pict  main-pict--hide-sm">
+                      <img src="img/joker.jpg" alt="" class="main-pict__img">
+                      <a href="#gallery-photo" class="main-pict__other" data-toggle="modal">
+                        <img src="img/joker.jpg" alt="" class="main-pict__other-img">
+                        <span class="main-pict__other-text">Photos (12)</span>
+                      </a>
+                      <div class="main-pict__btns">
+                        <div class="main-pict__btns-group">
+                          <a href="" class="btn-icon  btn-icon--real-btn" title="Add property to compare list">
+                            <svg width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#compare"></use></svg>
+                          </a>
+                          <a href="" class="btn-icon  btn-icon--real-btn" title="Add property to wishlist">
+                            <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
+                          </a>
+                          <a href="#notice" class="btn-icon  btn-icon--real-btn" title="Notice about price drop" data-toggle="modal">
+                            <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#notice"></use></svg>
+                          </a>
+                          <a href="" class="btn-icon  btn-icon--real-btn" title="Schedule an appointment">
+                            <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#schedule"></use></svg>
+                          </a>
+                          <a href="#share" class="btn-icon  btn-icon--real-btn" title="Schedule an appointment" data-toggle="modal">
+                            <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#share"></use></svg>
+                          </a>
+                        </div>
+                        <div class="main-pict__btns-group">
+                          <a href="#property-on-map" class="btn-icon  btn-icon--real-btn  btn-icon--add-text  btn-icon--show-add-text">
+                            <svg width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#location"></use></svg>
+                            <span class="btn-icon__text">View on map</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="main-pict  main-pict--show-sm">
+                      <div class="main-pict__carousel  owl-carousel">
+                        <div class="main-pict__slider-item">
+                          <img src="img/joker.jpg" alt="" class="main-pict__img">
+                        </div>
+                        <div class="main-pict__slider-item">
+                          <img src="img/harly.jpg" alt="" class="main-pict__img">
+                        </div>
+                      </div>
+                      <div class="main-pict__sup-carousel-btns">
+                        <div class="drop-btn">
+                          <button class="drop-btn__btn" title="Show menu" id="main-pict-id-001-controls" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="drop-btn__btn-inner">
+                              <span class="btn-icon  btn-icon--kebab">
+                                <span class="btn-icon__text">Show menu</span>
+                              </span>
+                            </span>
+                          </button>
+                          <ul class="drop-menu  drop-btn__drop" aria-labelledby="main-pict-id-001-controls">
+                            <li class="drop-menu__item">
+                              <a href="" class="drop-menu__link">
+                                <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
+                                <span class="drop-menu__item-text">Add to wishlist</span>
+                              </a>
+                            </li>
+                            <li class="drop-menu__item">
+                              <a href="#notice" class="drop-menu__link" data-toggle="modal">
+                                <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#notice"></use></svg>
+                                <span class="drop-menu__item-text">Notice about price drop</span>
+                              </a>
+                            </li>
+                            <li class="drop-menu__item">
+                              <a href="" class="drop-menu__link">
+                                <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#schedule"></use></svg>
+                                <span class="drop-menu__item-text">Send a request</span>
+                              </a>
+                            </li>
+                            <li class="drop-menu__item  drop-menu__item--divider">
+                              <span class="drop-menu__pseudoheader-text">View</span>
+                            </li>
+                            <li class="drop-menu__item">
+                              <a href="#gallery-modal" class="drop-menu__link" data-toggle="modal">
+                                <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#doc"></use></svg>
+                                <span class="drop-menu__item-text">Floorplan</span>
+                              </a>
+                            </li>
+                            <li class="drop-menu__item">
+                              <a href="#video" class="drop-menu__link">
+                                <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#play"></use></svg>
+                                <span class="drop-menu__item-text">Video</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="drop-btn">
+                          <button class="drop-btn__btn" title="Show menu" id="main-pict-id-001-share" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="drop-btn__btn-inner">
+                              <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#share"></use></svg>
+                            </span>
+                          </button>
+                          <ul class="drop-menu  drop-btn__drop" aria-labelledby="main-pict-id-001-share">
+                            <li class="drop-menu__item  drop-menu__item--divider">
+                              <span class="drop-menu__pseudoheader-text">Share via</span>
+                            </li>
+                            <li class="drop-menu__item">
+                              <a href="" class="drop-menu__link">
+                                <span class="social-link"><svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook"></use></svg></span>
+                                <span class="drop-menu__item-text">Facebook</span>
+                              </a>
+                            </li>
+                            <li class="drop-menu__item">
+                              <a href="" class="drop-menu__link">
+                                <span class="social-link"><svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#flash"></use></svg></span>
+                                <span class="drop-menu__item-text">Messenger</span>
+                              </a>
+                            </li>
+                            <li class="drop-menu__item">
+                              <a href="" class="drop-menu__link">
+                                <span class="social-link"><svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#vk"></use></svg></span>
+                                <span class="drop-menu__item-text">Vkontakte</span>
+                              </a>
+                            </li>
+                            <li class="drop-menu__item">
+                              <a href="" class="drop-menu__link">
+                                <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#mail"></use></svg>
+                                <span class="drop-menu__item-text">Mail</span>
+                              </a>
+                            </li>
+                            <li class="drop-menu__item">
+                              <a href="" class="drop-menu__link">
+                                <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#docs"></use></svg>
+                                <span class="drop-menu__item-text">Copy link</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="list-property__main-pict-descr">
+                      <span class="list-property__id">ID: 1456409</span>
+                      Added: 06.11.2017 at 03:40 am
+                    </div>
+
+                  </div>
+
+                  <div class="add-form__main-pict-data">
+
+                    <div class="list-property__section">
+
+                      <h3 class="list-property__location-name  list-property__location-name--has-breadcrumbs  page__h1">House for Sale «Joker's hospital»</h3>
+
+                      <div class="breadcrumbs">
+                        <a href="" class="breadcrumbs__item">For Sale</a>
+                        <a href="" class="breadcrumbs__item">Ionian Iselands</a>
+                        <a href="" class="breadcrumbs__item">House</a>
+                        <span class="breadcrumbs__item">House name</span>
+                      </div>
+
+                    </div>
+
+                    <div class="list-property__section  list-property__section--pt35-xs  list-property__section--md-columns">
+                      <div class="list-property__subtitle-wrap">
+                        <div class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">Price</div>
+                      </div>
+                      <div class="list-property__content-col">
+                        <div class="price  price--lg"><span class="price__currency">€</span> 1 500 000</div>
+                        <div class="list-property__price-info">
+                          <a href="" class="list-property__price-follow  pseudolink">Follow the price change</a>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </section>
 
               </article>
+
+              <div class="layout-text__btns-desktop-simple">
+                <!-- Убрать атрибут disabled для разблокировки -->
+                <button type="button" class="btn  btn--wide  btn--white" disabled>Back</button>
+                <!-- Добавить класс layout-text__btn-right--hide для сокрытия -->
+                <button type="button" class="layout-text__btn-right  btn  btn--wide">Next</button>
+                <!-- Убрать класс layout-text__btn-right--hide для показа кнопки -->
+                <button type="submit" class="layout-text__btn-right  layout-text__btn-right--hide  btn  btn--wide">Sign In & Publish</button>
+              </div>
 
             </div>
 
           </div>
 
           <div class="layout-text__btns-mobile">
+            <!-- Убрать атрибут disabled для разблокировки -->
             <button type="button" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--gray" disabled>Back</button>
+            <!-- Добавить класс layout-text__btns-mobile-item--hide для сокрытия -->
             <button type="button" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--invert">Next</button>
+            <!-- Убрать класс layout-text__btns-mobile-item--hide для показа кнопки -->
+            <button type="submit" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--invert  layout-text__btns-mobile-item--hide">Sign In & Publish</button>
           </div>
 
         </form>
@@ -498,6 +1353,8 @@
     </div>
 
   </div>
+
+  <script src="js/moment-with-locales.js"></script>
   <script src="js/script.min.js"></script>
 
 
