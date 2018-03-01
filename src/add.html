@@ -904,9 +904,12 @@
               </article>
 
               <div class="layout-text__btns-desktop-simple">
-                <button type="button" class="btn  btn--wide  btn--white">Back</button>
+                <!-- Убрать атрибут disabled для разблокировки -->
+                <button type="button" class="btn  btn--wide  btn--white" disabled>Back</button>
+                <!-- Добавить класс layout-text__btn-right--hide для сокрытия -->
                 <button type="button" class="layout-text__btn-right  btn  btn--wide">Next</button>
-                <button type="button" class="layout-text__btn-right  layout-text__btn-finish  btn  btn--wide">Sign In & Publish</button>
+                <!-- Убрать класс layout-text__btn-right--hide для показа кнопки -->
+                <button type="submit" class="layout-text__btn-right  layout-text__btn-right--hide  btn  btn--wide">Sign In & Publish</button>
               </div>
 
             </div>
@@ -914,9 +917,12 @@
           </div>
 
           <div class="layout-text__btns-mobile">
+            <!-- Убрать атрибут disabled для разблокировки -->
             <button type="button" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--gray" disabled>Back</button>
+            <!-- Добавить класс layout-text__btns-mobile-item--hide для сокрытия -->
             <button type="button" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--invert">Next</button>
-            <button type="button" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--finish  layout-text__btns-mobile-item--invert">Sign In & Publish</button>
+            <!-- Убрать класс layout-text__btns-mobile-item--hide для показа кнопки -->
+            <button type="submit" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--invert  layout-text__btns-mobile-item--hide">Sign In & Publish</button>
           </div>
 
         </form>

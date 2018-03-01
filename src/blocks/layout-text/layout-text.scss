@@ -216,6 +216,10 @@
       opacity: 0.6;
       cursor: default;
     }
+
+    &--hide {
+      display: none;
+    }
   }
 
   &__btns-back {
@@ -248,11 +252,10 @@
 
   &__btn-right {
     margin-left: auto;
-  }
 
-  &__btns-mobile-item--finish,
-  &__btn-finish {
-    display: none;
+    &--hide {
+      display: none;
+    }
   }
 
 
