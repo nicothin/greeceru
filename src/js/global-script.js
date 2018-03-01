@@ -20,6 +20,16 @@ $( document ).ready(function() {
   // Сортировка фото
   $( "#sortable-phohos" ).sortable().disableSelection();
 
+  // Показ/сокрытие подсказки на карте
+  $('#map-help-toggler').on('change', function(){
+    if($(this).is(':checked')) {
+      $('#map-help').addClass('add-form__map-help-wrap--shown');
+    }
+    else {
+      $('#map-help').removeClass('add-form__map-help-wrap--shown');
+    }
+  });
+
 
 
   // узнаем ширину скролла

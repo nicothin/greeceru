@@ -598,7 +598,7 @@
                     <div class="field-checkbox  field-checkbox--lg  field-checkbox--text-sm">
                       <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--white-check">
                         <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox">
+                          <input class="field-checkbox__input" type="checkbox" id="map-help-toggler">
                           <span class="field-checkbox__name-text">Show tips on the map</span>
                         </label>
                       </div>
@@ -607,6 +607,17 @@
 
                   <div class="add-form__map-wrap">
                     <div class="add-form__map" id="map" style="height: 280px"></div>
+                    <div class="add-form__map-help-wrap" id="map-help">
+                      <div class="add-form__map-help-01">
+                        <span class="add-form__map-help-text">Change a view, maybe it will<br>help you to find right location</span>
+                      </div>
+                      <div class="add-form__map-help-02">
+                        <span class="add-form__map-help-text">Also we have view<br>from town streets</span>
+                      </div>
+                      <div class="add-form__map-help-03">
+                        <span class="add-form__map-help-text">Use zoom in/out for<br>the most easily search </span>
+                      </div>
+                    </div>
                   </div>
                   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjGAiz42P2243i_aoNCu4Pf0vU_xDWcZk&signed_in=true&callback=initMap"></script>
                   <script>
