@@ -30,6 +30,13 @@ $( document ).ready(function() {
     }
   });
 
+  // плавный скролл для кнопок и вообще чего угодно с соотв. data-атрибутом
+  $('[data-scroll-target]').on('click',function(){
+    var target_position = $($(this).data('scroll-target')).offset().top;
+    if(target_position < 0) target_position = 0;
+    $('body,html').animate({'scrollTop':target_position},350);
+  });
+
 
 
   // узнаем ширину скролла
