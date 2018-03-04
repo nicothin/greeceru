@@ -30,12 +30,23 @@ $( document ).ready(function() {
     }
   });
 
-  // плавный скролл для кнопок и вообще чего угодно с соотв. data-атрибутом
-  $('[data-scroll-target]').on('click',function(){
-    var target_position = $($(this).data('scroll-target')).offset().top;
-    if(target_position < 0) target_position = 0;
-    $('body,html').animate({'scrollTop':target_position},350);
+  // клик на Next
+  $('[data-add-form-next]').on('click',function(){
+    if( $(window).scrollTop() > 60 ) {
+      $('html').animate({'scrollTop':0}, 250, function(){
+        unnecessaryAnimation();
+      });
+    }
+    else {
+      $(window).scrollTop(0);
+      unnecessaryAnimation();
+    }
   });
+  function unnecessaryAnimation(){
+    var thisItemLink = $('.steps-add__item--active')
+    var nextItemLink = thisItemLink.closest('.steps-add__item-wrap').next().find('.steps-add__item');
+    console.log(nextItemLink);
+  }
 
 
 
