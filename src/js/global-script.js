@@ -54,6 +54,7 @@ $( document ).ready(function() {
       nextItemLink.addClass('steps-add__item--active');
       checkVisibleSendBtn();
       checkDisabledBackBtn();
+
       $(this).dequeue();
     });
   }
@@ -95,6 +96,7 @@ $( document ).ready(function() {
     if( !$('.steps-add__item--active').closest('.steps-add__item-wrap').next().length ){
       $('[data-add-form-next]').hide();
       $('[data-add-form-send]').show();
+      $('.steps-add__item--active').addClass('steps-add__item--done');
     }
     else {
       $('[data-add-form-next]').show();
