@@ -15,9 +15,10 @@
 
   &__part {
     margin-bottom: 50px;
+    display: none;
 
-    &--hide {
-      display: none;
+    &--active {
+      display: block;
     }
   }
 

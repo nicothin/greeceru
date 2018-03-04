@@ -70,6 +70,10 @@
 
     &--active {
 
+      // .bubbles__item {
+      //   animation: none !important;
+      // }
+
       #{$block-name}__num {
         border-color: $color-main !important;
         background-color: $color-main !important;
