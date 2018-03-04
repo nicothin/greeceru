@@ -447,27 +447,47 @@
             <div class="steps-add">
               <ul class="steps-add__list">
                 <li class="steps-add__item-wrap">
-                  <!-- Убирать steps-add__item--done для блокированного состояния -->
-                  <a href="#add-form-part-1" class="steps-add__item  steps-add__item--done  steps-add__item--active" data-no-scroll>
-                    <b class="steps-add__num">1</b>
+                  <!-- Добавлять steps-add__item--done для разблокированного состояния -->
+                  <a href="#add-form-part-1" class="steps-add__item  steps-add__item--active" data-no-scroll>
+                    <b class="steps-add__num">
+                      1
+                      <div class="bubbles  bubbles--sm">
+                        <div class="bubbles__inner"><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div></div>
+                      </div>
+                    </b>
                     <span class="steps-add__text">Fields</span>
                   </a>
                 </li>
                 <li class="steps-add__item-wrap">
-                  <a href="#add-form-part-2" class="steps-add__item  steps-add__item--done" data-no-scroll>
-                    <b class="steps-add__num">2</b>
+                  <a href="#add-form-part-2" class="steps-add__item" data-no-scroll>
+                    <b class="steps-add__num">
+                      2
+                      <div class="bubbles  bubbles--sm">
+                        <div class="bubbles__inner"><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div></div>
+                      </div>
+                    </b>
                     <span class="steps-add__text">Photos</span>
                   </a>
                 </li>
                 <li class="steps-add__item-wrap">
-                  <a href="#add-form-part-3" class="steps-add__item  steps-add__item--done" data-no-scroll>
-                    <b class="steps-add__num">3</b>
+                  <a href="#add-form-part-3" class="steps-add__item" data-no-scroll>
+                    <b class="steps-add__num">
+                      3
+                      <div class="bubbles  bubbles--sm">
+                        <div class="bubbles__inner"><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div></div>
+                      </div>
+                    </b>
                     <span class="steps-add__text">Map</span>
                   </a>
                 </li>
                 <li class="steps-add__item-wrap">
-                  <a href="#add-form-part-4" class="steps-add__item  steps-add__item--done" data-no-scroll>
-                    <b class="steps-add__num">4</b>
+                  <a href="#add-form-part-4" class="steps-add__item" data-no-scroll>
+                    <b class="steps-add__num">
+                      4
+                      <div class="bubbles  bubbles--sm">
+                        <div class="bubbles__inner"><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div></div>
+                      </div>
+                    </b>
                     <span class="steps-add__text">Preview</span>
                   </a>
                 </li>
@@ -478,7 +498,7 @@
 
               <article class="add-form">
 
-                <section class="add-form__part" id="add-form-part-1">
+                <section class="add-form__part  add-form__part--active" id="add-form-part-1">
 
                   <header class="add-form__header">
                     <h1 class="page__h1">Tell more details about your property</h1>
@@ -890,7 +910,7 @@
 
                 </section>
 
-                <section class="add-form__part  add-form__part--hide" id="add-form-part-2">
+                <section class="add-form__part" id="add-form-part-2">
 
                   <header class="add-form__header">
                     <h2 class="page__h1">Upload property photos</h2>
@@ -1003,7 +1023,7 @@
 
                 </section>
 
-                <section class="add-form__part  add-form__part--hide" id="add-form-part-3">
+                <section class="add-form__part" id="add-form-part-3">
 
                   <header class="add-form__header">
                     <h2 class="page__h1">Type property address</h2>
@@ -1144,7 +1164,7 @@
 
                 </section>
 
-                <section class="add-form__part  add-form__part--hide  list-property" id="add-form-part-4">
+                <section class="add-form__part  list-property" id="add-form-part-4">
 
                   <header class="add-form__header">
                     <h2 class="page__h1">Please check how your property will looks like</h2>
@@ -1326,11 +1346,11 @@
 
               <div class="layout-text__btns-desktop-simple">
                 <!-- Убрать атрибут disabled для разблокировки -->
-                <button type="button" class="btn  btn--wide  btn--white" disabled>Back</button>
+                <button type="button" class="btn  btn--wide  btn--white" data-add-form-back disabled>Back</button>
                 <!-- Добавить класс layout-text__btn-right--hide для сокрытия -->
-                <button type="button" class="layout-text__btn-right  btn  btn--wide">Next</button>
+                <button type="button" class="layout-text__btn-right  btn  btn--wide" data-add-form-next>Next</button>
                 <!-- Убрать класс layout-text__btn-right--hide для показа кнопки -->
-                <button type="submit" class="layout-text__btn-right  layout-text__btn-right--hide  btn  btn--wide">Sign In & Publish</button>
+                <button type="submit" class="layout-text__btn-right  layout-text__btn-right--hide  btn  btn--wide" data-add-form-send>Sign In & Publish</button>
               </div>
 
             </div>
@@ -1339,11 +1359,11 @@
 
           <div class="layout-text__btns-mobile">
             <!-- Убрать атрибут disabled для разблокировки -->
-            <button type="button" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--gray" disabled>Back</button>
+            <button type="button" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--gray" data-add-form-back disabled>Back</button>
             <!-- Добавить класс layout-text__btns-mobile-item--hide для сокрытия -->
-            <button type="button" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--invert">Next</button>
+            <button type="button" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--invert" data-add-form-next>Next</button>
             <!-- Убрать класс layout-text__btns-mobile-item--hide для показа кнопки -->
-            <button type="submit" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--invert  layout-text__btns-mobile-item--hide">Sign In & Publish</button>
+            <button type="submit" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--invert  layout-text__btns-mobile-item--hide" data-add-form-send>Sign In & Publish</button>
           </div>
 
         </form>
