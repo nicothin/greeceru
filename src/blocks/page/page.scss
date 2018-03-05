@@ -36,6 +36,10 @@
     padding-top: $header-height;
     display: flex;
     flex-direction: column;
+
+    &--has-top-msg {
+      padding-top: $header-height + 50;
+    }
   }
 
   &__main-content {

@@ -322,6 +322,10 @@ $field-padding-horizontal:    0.7em !default;
       text-align: right;
     }
 
+    &--no-wrap {
+      white-space: nowrap;
+    }
+
     &--line {
       margin-top: 3px;
       display: flex;

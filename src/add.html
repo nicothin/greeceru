@@ -13,9 +13,10 @@
 
   <div class="page__inner">
 
-    <div class="page__content">
+    <!-- page__content--has-top-msg — дополнительный модификатор для бОльшего отступа в случае показа ошибки заполнения формы НАД хедером -->
+    <div class="page__content  page__content--has-top-msg">
 
-      @@include('blocks/page-header/page-header.html')
+      @@include('blocks/page-header/page-header--with-msg.html')
 
       <main class="page__main-content" role="main">
 
@@ -63,9 +64,6 @@
                   <a href="#add-form-part-4" class="steps-add__item" data-no-scroll>
                     <b class="steps-add__num">
                       4
-                      <div class="bubbles  bubbles--sm">
-                        <div class="bubbles__inner"><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div><div class="bubbles__item"></div></div>
-                      </div>
                     </b>
                     <span class="steps-add__text">Preview</span>
                   </a>
@@ -140,6 +138,7 @@
                               <span class="field-text__input-wrap  field-text__input-wrap--required">
                                 <input class="field-text__input" type="text" placeholder="" value="error text" required>
                               </span>
+                              <div class="field-text__help-text  field-text__help-text--no-wrap">Please fill this field</div>
                             </label>
                           </div>
                           <div class="form__col  form__col--md-1-4">
@@ -618,7 +617,7 @@
                     <div class="field-checkbox  field-checkbox--lg  field-checkbox--text-sm">
                       <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--white-check">
                         <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" id="map-help-toggler">
+                          <input class="field-checkbox__input" type="checkbox" id="map-help-toggler" checked>
                           <span class="field-checkbox__name-text">Show tips on the map</span>
                         </label>
                       </div>
@@ -627,7 +626,7 @@
 
                   <div class="add-form__map-wrap">
                     <div class="add-form__map" id="map" style="height: 280px"></div>
-                    <div class="add-form__map-help-wrap" id="map-help">
+                    <div class="add-form__map-help-wrap  add-form__map-help-wrap--shown" id="map-help">
                       <div class="add-form__map-help-01">
                         <span class="add-form__map-help-text">Change a view, maybe it will<br>help you to find right location</span>
                       </div>
@@ -929,7 +928,7 @@
                 <!-- Добавить класс layout-text__btn-right--hide для сокрытия -->
                 <button type="button" class="layout-text__btn-right  btn  btn--wide" data-add-form-next>Next</button>
                 <!-- Убрать класс layout-text__btn-right--hide для показа кнопки -->
-                <button type="submit" class="layout-text__btn-right  layout-text__btn-right--hide  btn  btn--wide" data-add-form-send>Sign In & Publish</button>
+                <button type="submit" class="layout-text__btn-right  layout-text__btn-right--hide  btn  btn--wide" data-target="#sign-in" data-toggle="modal" data-add-form-send>Sign In & Publish</button>
               </div>
 
             </div>
@@ -942,7 +941,7 @@
             <!-- Добавить класс layout-text__btns-mobile-item--hide для сокрытия -->
             <button type="button" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--invert" data-add-form-next>Next</button>
             <!-- Убрать класс layout-text__btns-mobile-item--hide для показа кнопки -->
-            <button type="submit" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--invert  layout-text__btns-mobile-item--hide" data-add-form-send>Sign In & Publish</button>
+            <button type="submit" class="layout-text__btns-mobile-item  layout-text__btns-mobile-item--invert  layout-text__btns-mobile-item--hide" data-target="#sign-in" data-toggle="modal" data-add-form-send>Sign In & Publish</button>
           </div>
 
         </form>
@@ -951,6 +950,56 @@
 
     </div>
 
+  </div>
+
+  <div id="sign-in" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Sign In</h4>
+        </div>
+        <div class="modal__body">
+          <form class="modal__form" action="">
+            <div class="field-text  field-text--modest">
+              <span class="field-text__name"></span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="email" placeholder="Email">
+              </span>
+            </div>
+            <div class="field-text  field-text--modest">
+              <span class="field-text__input-wrap">
+                <input class="field-text__input  field-text__input--password" type="password" placeholder="Password">
+                <span class="field-text__help-text  field-text__help-text--line">
+                  <div class="field-checkbox">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox">
+                      <span class="field-checkbox__name-text">Remember me</span>
+                    </label>
+                  </div>
+                  <a href="">Forgot password?</a>
+                </span>
+              </span>
+            </div>
+            <div class="field-actions  field-actions--mt10">
+              <button class="btn  btn--block">Sing In</button>
+            </div>
+          </form>
+          <div class="share-block">
+            <a href="" class="share-block__btn  share-block__btn--fb">Sing in with Facebook</a>
+          </div>
+        </div>
+        <div class="modal__footer  modal__footer--font-normal  modal__footer--no-border">
+          <div class="modal__footer-line">
+            <span>Don’t have an account? </span>
+            <a href="" class="more-link">
+              Sign Up
+              <svg class="more-link__icon" width="11" height="11"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="js/moment-with-locales.js"></script>

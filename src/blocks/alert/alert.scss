@@ -102,6 +102,16 @@
     }
   }
 
+  &--danger-2 {
+    margin: 0;
+    padding: 15px;
+    color: #fff;
+    background-color: $color-danger;
+    border: none;
+    text-align: center;
+    justify-content: center;
+  }
+
   &--success {
     min-height: 76px;
     padding: 20px 20px 20px 60px;
