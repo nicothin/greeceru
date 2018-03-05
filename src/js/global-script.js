@@ -38,14 +38,20 @@ $( document ).ready(function() {
     $(this).removeClass('add-form__map-help-wrap--shown');
   });
 
+  // Определение скроллящегося элемента
+  var pageScrollElement = 'html';
+  if((/edge/i.test(navigator.userAgent) && !(/trident/gi).test(navigator.userAgent))) pageScrollElement = 'body'
+
   // клик на Next
   $('[data-add-form-next]').on('click',function(){
     if( $(window).scrollTop() > 60 ) {
-      $('html').animate({'scrollTop':0}, 250, function(){
+      console.log(1);
+      $(pageScrollElement).animate({'scrollTop':0}, 250, function(){
         unnecessaryAnimation();
       });
     }
     else {
+      console.log(2);
       $(window).scrollTop(0);
       unnecessaryAnimation();
     }
@@ -68,7 +74,7 @@ $( document ).ready(function() {
   // Клик на Back
   $('[data-add-form-back]').on('click',function(){
     if( $(window).scrollTop() > 60 ) {
-      $('html').animate({'scrollTop':0}, 250, function(){
+      $(pageScrollElement).animate({'scrollTop':0}, 250, function(){
         clickOnBackBtn();
       });
     }
