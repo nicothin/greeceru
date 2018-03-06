@@ -38,20 +38,17 @@ $( document ).ready(function() {
     $(this).removeClass('add-form__map-help-wrap--shown');
   });
 
-  // Определение скроллящегося элемента
-  var pageScrollElement = 'html';
-  if((/edge/i.test(navigator.userAgent) && !(/trident/gi).test(navigator.userAgent))) pageScrollElement = 'body'
-
   // клик на Next
   $('[data-add-form-next]').on('click',function(){
     if( $(window).scrollTop() > 60 ) {
-      console.log(1);
-      $(pageScrollElement).animate({'scrollTop':0}, 250, function(){
+      $('body,html').animate({'scrollTop':0}, 250);
+      $('body').delay(250).queue(function () {
         unnecessaryAnimation();
+        console.log(222);
+        $(this).dequeue();
       });
     }
     else {
-      console.log(2);
       $(window).scrollTop(0);
       unnecessaryAnimation();
     }
@@ -63,10 +60,9 @@ $( document ).ready(function() {
     thisItemLink.removeClass('steps-add__item--active').addClass('steps-add__item--done').delay(300).queue(function () {
       $(thisItemLink.attr('href')).hide();
       $(nextItemLink.attr('href')).fadeIn();
-      nextItemLink.addClass('steps-add__item--active');
+      nextItemLink.addClass('steps-add__item--active steps-add__item--done');
       checkVisibleSendBtn();
       checkDisabledBackBtn();
-
       $(this).dequeue();
     });
   }
@@ -74,8 +70,10 @@ $( document ).ready(function() {
   // Клик на Back
   $('[data-add-form-back]').on('click',function(){
     if( $(window).scrollTop() > 60 ) {
-      $(pageScrollElement).animate({'scrollTop':0}, 250, function(){
+      $('body,html').animate({'scrollTop':0}, 250);
+      $('body').delay(250).queue(function () {
         clickOnBackBtn();
+        $(this).dequeue();
       });
     }
     else {
@@ -115,6 +113,11 @@ $( document ).ready(function() {
       $('[data-add-form-send]').hide();
     }
   }
+
+  // ВРЕМЕННО: блокировка кнопки отправки формы
+  $('[data-add-form-send]').on('click', function(e){e.preventDefault();});
+
+
 
 
 

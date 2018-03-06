@@ -41,6 +41,20 @@
     }
   }
 
+  &__item-wrap {
+    display: block;
+    width: 54px;
+    margin: auto;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
   &__item {
     position: relative;
     display: block;
@@ -70,9 +84,9 @@
 
     &--active {
 
-      // .bubbles__item {
-      //   animation: none !important;
-      // }
+      .bubbles__item {
+        animation: none !important;
+      }
 
       #{$block-name}__num {
         border-color: $color-main !important;
