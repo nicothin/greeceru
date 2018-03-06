@@ -11,8 +11,10 @@
   <link href="css/style.min.css?1" rel="stylesheet" media="screen">
 
   <script>
-    // Маркер работающего javascript
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    var ua = window.navigator.userAgent.toLowerCase(),
+    isIE = (/trident/gi).test(ua) || (/msie/gi).test(ua);
+    if(isIE) document.documentElement.classList.add('ie');
   </script>
 
   <link href="img/favicon.ico" rel="icon" type="image/x-icon">

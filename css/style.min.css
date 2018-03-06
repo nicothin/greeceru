@@ -7775,6 +7775,14 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
       height: 1px;
       background-image: linear-gradient(to right, #d9e0e9, #d9e0e9 5px, transparent 5px, transparent 9px);
       background-size: 9px 1px; }
+.steps-add__item-wrap {
+    display: block;
+    width: 54px;
+    margin: auto; }
+.steps-add__item-wrap:first-child {
+      margin-left: 0; }
+.steps-add__item-wrap:last-child {
+      margin-right: 0; }
 .steps-add__item {
     position: relative;
     display: block;
@@ -7790,6 +7798,8 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
       color: #fff; }
 .steps-add__item--done .steps-add__text, .steps-add__item:hover .steps-add__text, .steps-add__item:focus .steps-add__text {
       color: #31353f; }
+.steps-add__item--active .bubbles__item {
+      animation: none !important; }
 .steps-add__item--active .steps-add__num {
       border-color: #477afb !important;
       background-color: #477afb !important;
@@ -7825,7 +7835,8 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
   margin-bottom: 40px; }
 .add-form__address {
   position: relative;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  cursor: default; }
 .add-form__address .field-checkbox {
     display: none; }
 .add-form__address .field-checkbox__input-wrap {
@@ -8105,6 +8116,8 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
   height: 220px;
   overflow: hidden; }
 .bubbles__inner {
+    position: relative;
+    z-index: -1;
     margin: 0 auto;
     width: 100%;
     height: 100%; }
@@ -8606,11 +8619,14 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
   .modal--mobile-header .modal__dialog{
     border-top-left-radius: 2px;
     border-top-right-radius: 2px; }
-  .in .modal__dialog{
+  html:not(.ie) .in .modal__dialog{
     opacity: 0;
     transform: translate(-50%, 50px);
     animation: show-modal 0.6s 0.2s 1 forwards; }
   @keyframes show-modal{
+    from{
+      opacity: 0;
+      transform: translate(-50%, 50px); }
     to{
       opacity: 1;
       transform: translate(-50%, 0); } }
