@@ -9,7 +9,7 @@
   position: relative;
   padding: 4px;
   width: 88px;
-  height: 68px;
+  min-height: 88px;
   margin-bottom: 14px;
   background-color: #fff;
   cursor: pointer;
@@ -25,8 +25,9 @@
   }
 
   &__img {
+    display: block;
     width: 80px;
-    height: 60px;
+    height: 80px;
     object-fit: cover;
   }
 

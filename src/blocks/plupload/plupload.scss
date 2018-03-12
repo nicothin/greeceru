@@ -83,11 +83,8 @@
 }
 
 .plupload_filelist_footer {
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 0;
-  right: 0;
   display: table;
+  margin: 15px 0;
   width: 100% !important;
   height: auto !important;
   border: none !important;
@@ -268,7 +265,7 @@
 }
 
 .plupload_started {
-  margin-top: 10px;
+  margin: 15px 0;
 }
 
 .plupload_progress_container {

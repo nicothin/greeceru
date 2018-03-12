@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>greece_ru</title>
   <meta name="description" content="">
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css" type="text/css" />
   @@include('_include/page_head.html')
 
 </head>
@@ -602,6 +603,10 @@
                     </div>
                   </div>
 
+                  <table class="plupload_filelist plupload_filelist_footer ui-widget-header"><tbody><tr><td class="plupload_cell plupload_file_name"><div class="plupload_buttons" id="uploader_buttons" style="position: relative;"><!-- Visible --><a class="plupload_button plupload_add ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" id="uploader_browse" role="button" aria-disabled="false" style="z-index: 1;"><span class="ui-button-icon-primary ui-icon ui-icon-circle-plus"></span><span class="ui-button-text">Add Files</span></a>&nbsp;<a class="plupload_button plupload_start ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-icon-primary" id="uploader_start" role="button" aria-disabled="true"><span class="ui-button-icon-primary ui-icon ui-icon-circle-arrow-e"></span><span class="ui-button-text">Start Upload</span></a>&nbsp;<a class="plupload_button plupload_stop plupload_hidden ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" id="uploader_stop" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-circle-close"></span><span class="ui-button-text">Stop Upload</span></a>&nbsp;<div id="html5_1c8d5f96bo376emfod2g0m5c4_container" class="moxie-shim moxie-shim-html5" style="position: absolute; top: 0px; left: 0px; width: 90px; height: 48px; overflow: hidden; z-index: 0;"><input id="html5_1c8d5f96bo376emfod2g0m5c4" type="file" style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" multiple="" accept=".jpg,.jpeg,.png"></div></div><div class="plupload_started plupload_hidden"><!-- Hidden --><div class="plupload_progress plupload_right"><div class="plupload_progress_container ui-progressbar ui-widget ui-widget-content ui-corner-all" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="ui-progressbar-value ui-widget-header ui-corner-left" style="display: none; width: 0%;"></div></div></div><div class="plupload_cell plupload_upload_status"></div><div class="plupload_clearer">&nbsp;</div></div></td><td class="plupload_file_status"><span class="plupload_total_status">0%</span></td><td class="plupload_file_size"><span class="plupload_total_file_size">0 kb</span></td><td class="plupload_file_action"></td></tr></tbody></table>
+                  <div class="plupload_started"><!-- Hidden --><div class="plupload_progress plupload_right"><div class="plupload_progress_container ui-progressbar ui-widget ui-widget-content ui-corner-all" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="ui-progressbar-value ui-widget-header ui-corner-left" style="width: 26%;"></div></div></div><div class="plupload_cell plupload_upload_status">Uploaded 0/1 files</div><div class="plupload_clearer">&nbsp;</div></div>
+                  <div class="ui-state-default ui-widget-header plupload_header"><div class="plupload_header_content"><div class="plupload_logo"> </div><div class="plupload_header_title">Select files</div><div class="plupload_header_text">Add files to the upload queue and click the start button.</div><div class="plupload_view_switch ui-buttonset"><input type="radio" id="uploader_view_list" name="view_mode_uploader" checked="checked" class="ui-helper-hidden-accessible"><label class="plupload_button ui-button ui-widget ui-state-default ui-button-icon-only ui-corner-left" for="uploader_view_list" data-view="list" role="button" aria-disabled="false" title="List" aria-pressed="false"><span class="ui-button-text">List</span><span class="ui-button-icon-secondary ui-icon ui-icon-grip-dotted-horizontal"></span></label><input type="radio" id="uploader_view_thumbs" name="view_mode_uploader" class="ui-helper-hidden-accessible"><label class="plupload_button ui-button ui-widget ui-state-default ui-button-icon-only ui-corner-right ui-state-active" for="uploader_view_thumbs" data-view="thumbs" role="button" aria-disabled="false" title="Thumbnails" aria-pressed="true"><span class="ui-button-text">Thumbnails</span><span class="ui-button-icon-secondary ui-icon ui-icon-image"></span></label></div></div><div class="plupload_message ui-state-error"><span class="plupload_message_close ui-icon ui-icon-circle-close" title="Close"></span><p><span class="ui-icon ui-icon-alert"></span><strong>HTTP Error.</strong> <br><i>Upload URL might be wrong or doesn't exist.</i></p></div></div>
+
                 </section>
 
                 <section class="add-form__part" id="add-form-part-3">
@@ -1007,6 +1012,88 @@
 
   <script src="js/moment-with-locales.js"></script>
   @@include('_include/page_bottom.html')
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="http://www.nomesitis.gr/static/js/plupload.full.min.js"></script>
+  <script type="text/javascript" src="http://www.nomesitis.gr/static/js/jquery.ui.plupload.js"></script>
+
+  <script type="text/javascript">
+  // Initialize the widget when the DOM is ready
+  $(function() {
+    var myUploader = $("#uploader").plupload({
+      // General settings
+      runtimes : 'html5',
+      url : '/photos_upload/',
+
+      // User can upload no more then 20 files in one go (sets multiple_queues to false)
+      max_file_count: 60,
+
+      //chunk_size: '1mb',
+
+      // Resize images on clientside if we can
+      resize : {
+        width : 1024,
+        height : 768,
+        quality : 100,
+        crop: false // crop to exact dimensions
+      },
+
+      filters : {
+        // Maximum file size
+        max_file_size : '40mb',
+        // Specify what files to browse for
+        mime_types: [
+          {title : "Image files", extensions : "jpg,jpeg,png"}
+        ]
+      },
+
+      // Enable ability to drag'n'drop files onto the widget (currently only HTML5 supports that)
+      dragdrop: true,
+
+      // Views to activate
+      views: {
+        thumbs: true, // Show thumbs
+        active: 'thumbs'
+      },
+
+
+
+
+          init : {
+              UploadComplete: function(up, files) {
+          // Called when all files are either uploaded or failed
+                  alert('[UploadComplete]');
+                  window.location.href = '/fu/';
+        },
+
+              BeforeUpload: function(up, file) {
+                  //alert($("#properties option:selected").val());
+                  up.settings.multipart_params = {"estate_id": $("#properties option:selected").val()};
+              }
+          },
+
+      headers : {'X-Requested-With' : 'XMLHttpRequest', 'X-CSRFToken' : 'FhSoVus7h0EoJlIHUd3g5EUKxVi6ubu2'}
+    });
+
+
+    // Handle the case when form was submitted before uploading has finished
+    $('#form').submit(function(e) {
+      // Files in queue upload them first
+      if ($('#uploader').plupload('getFiles').length > 0) {
+
+        // When all files are uploaded submit form
+        $('#uploader').on('complete', function() {
+          $('#form')[0].submit();
+        });
+
+        $('#uploader').plupload('start');
+      } else {
+        alert("You must have at least one file in the queue.");
+      }
+      return false; // Keep the form from submitting
+    });
+  });
+  </script>
 
 </body>
 </html>
