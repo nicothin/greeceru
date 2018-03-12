@@ -101,7 +101,6 @@
 .plupload_button {
   width: auto !important;
   height: auto !important;
-
   box-sizing: border-box;
   display: inline-block !important;
   margin: 0 10px 0 0;
@@ -125,6 +124,11 @@
   transition: background-color $transition-time;
   color: $color-main !important;
   background: #fff !important;
+
+  .plupload_buttons &:nth-child(2),
+  .plupload_buttons &:nth-child(3) {
+    display: none !important;
+  }
 
   &:hover,
   &:focus {
