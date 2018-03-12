@@ -6794,6 +6794,9 @@ a:hover .feedback__slider-control-arrow,
   transition: background-color 0.3s;
   color: #477afb !important;
   background: #fff !important; }
+.plupload_buttons .plupload_button:nth-child(2),
+  .plupload_buttons .plupload_button:nth-child(3) {
+    display: none !important; }
 .plupload_button:hover, .plupload_button:focus {
     text-decoration: none;
     border-color: transparent !important;
