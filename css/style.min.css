@@ -6756,11 +6756,8 @@ a:hover .feedback__slider-control-arrow,
 .plupload_filelist th {
   vertical-align: top; }
 .plupload_filelist_footer {
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 0;
-  right: 0;
   display: table;
+  margin: 15px 0;
   width: 100% !important;
   height: auto !important;
   border: none !important;
@@ -6891,7 +6888,7 @@ a.btn--disabled {
   font-weight: 500;
   line-height: 48px; }
 .plupload_started {
-  margin-top: 10px; }
+  margin: 15px 0; }
 .plupload_progress_container {
   display: block;
   position: relative;
@@ -7999,7 +7996,7 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
   position: relative;
   padding: 4px;
   width: 88px;
-  height: 68px;
+  min-height: 88px;
   margin-bottom: 14px;
   background-color: #fff;
   cursor: pointer;
@@ -8009,8 +8006,9 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
   .mini-photo:focus .mini-photo__favorite {
     opacity: 1; }
 .mini-photo__img {
+    display: block;
     width: 80px;
-    height: 60px;
+    height: 80px;
     font-family: "object-fit:cover";
     object-fit: cover; }
 .mini-photo__close {
