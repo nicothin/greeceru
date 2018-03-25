@@ -9669,7 +9669,6 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     border-radius: 2px; }
   .add-form__item-type-form-wrapper:before{
     position: absolute;
-    z-index: 1;
     top: -8px;
     left: 509px;
     content: '';
@@ -9680,7 +9679,6 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     border-color: transparent transparent #d9e0e9 transparent; }
   .add-form__item-type-form-wrapper:after{
     position: absolute;
-    z-index: 2;
     top: -6px;
     left: 509px;
     content: '';
