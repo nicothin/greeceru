@@ -310,7 +310,7 @@ $( document ).ready(function() {
     margin: 20,
   });
 
-  // переключение видимости блоков в сайдбаре
+  // переключение видимости блоков в сайдбаре 
   $('.aside-block__header-toggler').on('click', function(){
     $(this).closest('.aside-block--collapsable').toggleClass('aside-block--collapse');
   });
