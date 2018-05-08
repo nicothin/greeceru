@@ -158,6 +158,7 @@ $( document ).ready(function() {
   objectFitImages();
 
   // включение датапикера в модальном окне и блокировка нескольких дат
+  /*  // Alekos: Временно убрал инициализацию календаря - перенёс на нужные страницы. 
   $('#shedule-calendar').dateRangePicker({
     inline: true,
     container: '#shedule-calendar',
@@ -168,6 +169,7 @@ $( document ).ready(function() {
     showTopbar: false,
     startDate: '2017-08-20',
   });
+  */
 
   // карусели в блоках Top Rated
   var $topRatedCarousel = $('.top-rated__list--carousel');
@@ -308,12 +310,14 @@ $( document ).ready(function() {
     margin: 20,
   });
 
-  // переключение видимости блоков в сайдбаре
+  // переключение видимости блоков в сайдбаре 
   $('.aside-block__header-toggler').on('click', function(){
     $(this).closest('.aside-block--collapsable').toggleClass('aside-block--collapse');
   });
 
   // слайдеры для блока mortgage в сайдбаре
+  /* //Alekos: Перенёс инициализацию слайдеров на internal property только для недвижимости на продажу
+     // там же обрабатываются события от слайдеров и пересчитываются параметры кредита.
   var handle1 = $( "#custom-handle-1 .field-range-jquery-ui__num" );
   $( "#slider-1" ).slider({
     create: function() { handle1.text( $( this ).slider( "value" ) + ' %' ); },
@@ -329,6 +333,7 @@ $( document ).ready(function() {
     create: function() { handle3.text( $( this ).slider( "value" ) + ' %' ); },
     slide: function( event, ui ) { handle3.text( ui.value + ' %' ); }
   });
+  */
 
   // выбор дат в блоке сайдбара c jQuery UI calendar
   // var array = ["2017-08-14","2017-08-15","2017-08-16"]
@@ -340,6 +345,7 @@ $( document ).ready(function() {
   // });
 
   // выбор дат в блоке сайдбара c jQuery Date Range Picker
+  /* //Alekos: Перенёс инициализацию календарей на нужные страницы.
   $("#datepicker-1").dateRangePicker({
     container: '#availability-date-start',
     extraClass: 'date-picker-wrapper--aside  date-picker-wrapper--aside-start',
@@ -397,5 +403,7 @@ $( document ).ready(function() {
     showTopbar: false,
     startDate: '2017-08-20',
   });
+  */
+  
 
 });
