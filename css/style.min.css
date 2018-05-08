@@ -9137,6 +9137,9 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     display: flex;
     max-width: 1270px;
     margin: 0 -15px; }
+  .property-owner__list--center{
+    -ms-flex-pack: center;
+    justify-content: center; }
   .property-owner__item{
     margin: 0 15px;
     -ms-flex-preferred-size: 50%;
