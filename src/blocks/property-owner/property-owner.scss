@@ -40,6 +40,10 @@
       display: flex;
       max-width: 1270px;
       margin: 0 -15px;
+
+      &--center {
+        justify-content: center;
+      }
     }
   }
 
