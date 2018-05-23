@@ -56,6 +56,13 @@
         margin-right: 0;
       }
     }
+
+    & > .field-checkbox {
+
+      @media (min-width: $screen-lg) {
+        margin-right: 30px;
+      }
+    }
   }
 
   &__field-text {

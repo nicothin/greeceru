@@ -180,6 +180,10 @@ $line-height:                 1.375em !default;
     margin-top: 10px;
   }
 
+  &--mb0 {
+    margin-bottom: 0;
+  }
+
   &--no-check {
 
     #{$block-name}__name {
