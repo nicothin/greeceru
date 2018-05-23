@@ -1245,6 +1245,8 @@ input:checked ~ .field-checkbox__name-text:after {
     margin-top: 20px; }
 .field-checkbox--mt10 {
     margin-top: 10px; }
+.field-checkbox--mb0 {
+    margin-bottom: 0; }
 .field-checkbox--no-check .field-checkbox__name {
     padding-left: 0; }
 .field-checkbox--no-check .field-checkbox__name-text:before, .field-checkbox--no-check .field-checkbox__name-text:after {
@@ -9367,6 +9369,8 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     margin-right: 30px; }
   .sorter__options-part + .sorter__options-part{
     margin-left: 0; }
+  .sorter__options-part > .field-checkbox{
+    margin-right: 30px; }
   .layout-tabs{
     display: -ms-flexbox;
     display: flex;
