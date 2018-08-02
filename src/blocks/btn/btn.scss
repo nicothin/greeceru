@@ -183,6 +183,15 @@ $border-radius:               3px !default;
     }
   }
 
+  &--lg {
+    font-size: 1.3em;
+    padding: 20px;
+
+    @media (min-width: $screen-md) {
+      padding: 20px;
+    }
+  }
+
   &--no-shadow {
     box-shadow: none !important;
   }

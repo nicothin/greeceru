@@ -34,65 +34,15 @@
     flex-basis: 100%;
   }
 
-  &__list {
-
-    @media (min-width: $screen-lg) {
-      display: flex;
-      max-width: 1270px;
-      margin: 0 -15px;
-
-      &--center {
-        justify-content: center;
-      }
-    }
-  }
-
-  &__item {
-    flex-basis: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    padding: 26px 30px 28px;
-    margin-bottom: 30px;
-    border-radius: 4px;
-    box-shadow: 0 30px 20px -20px rgba($color-main, 0.05),
-                0 30px 20px -20px rgba(72, 72, 72, 0.1);
-
-    @media (min-width: $screen-lg) {
-      margin: 0 15px;
-      flex-basis: 50%;
-      min-width: 440px;
-    }
-
-    @media (min-width: $screen-xl) {
-      padding: 36px 40px 40px;
-      min-width: 546px;
-    }
-  }
-
-  &__item-title {
-    margin: 0;
-    padding: 0;
-    font-size: $font-size--h3;
-    font-weight: 500;
-  }
-
-  &__item-descr {
-    margin: 0 0 16px;
-    flex-grow: 1;
-
-    @media (min-width: $screen-xl) {
-      margin-bottom: 26px;
-    }
-  }
-
-  &__item-btns {
+  &__btn {
+    width: 100%;
+    text-align: center;
   }
 
   &__item-btn {
 
-    @media (min-width: $screen-md) {
-      min-width: 288px;
+    @media (min-width: $screen-sm) {
+      width: 350px;
     }
   }
 }
