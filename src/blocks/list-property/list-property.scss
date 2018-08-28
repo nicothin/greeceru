@@ -82,11 +82,19 @@
     }
   }
 
+  &__form-descr {
+    margin-bottom: 20px;
+  }
+
   &__h3 {
     margin-top: 0;
     padding: 0;
     font-size: $font-size;
     font-weight: 500;
+
+    &--mb10 {
+      margin-bottom: 10px;
+    }
   }
 
   &__descr {
