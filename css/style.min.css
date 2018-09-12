@@ -4079,7 +4079,7 @@ a:hover .feedback__slider-control-arrow,
 .contacts-map__members {
     display: none;
     position: absolute;
-    right: 48px;
+    right: 60px;
     bottom: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
