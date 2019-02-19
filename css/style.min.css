@@ -205,6 +205,8 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
+.page__inner--dark {
+      background: #333333; }
 .page__content {
     z-index: 2;
     -webkit-box-flex: 1;
@@ -1499,6 +1501,8 @@ input:checked ~ .field-radio__name-text:after {
       display: none; }
 .field-actions--left {
     text-align: left; }
+.field-actions--center {
+    text-align: center; }
 .field-actions--jcsb {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4331,6 +4335,17 @@ a:hover .feedback__slider-control-arrow,
     margin-left: auto; }
 .layout-text__btn-right--hide {
       display: none; }
+.layout-text__unsubscribe {
+    margin: auto;
+    padding: 2em;
+    max-width: 560px;
+    text-align: center;
+    background: #fff; }
+.layout-text__unsubscribe-form {
+    margin-top: 30px;
+    text-align: left; }
+.layout-text__unsubscribe-title {
+    margin: 1em 0; }
 .layout-text--bg-gray {
     background: #f3f5f9; }
 .aside-block {
@@ -6582,7 +6597,8 @@ a:hover .feedback__slider-control-arrow,
     display: none;
     color: #fff;
     position: absolute;
-    bottom: 145px;
+    /* bottom: 145px; Alekos */
+    bottom: 160px;
     left: 50%;
     width: 824px;
     -webkit-transform: translateX(-50%);
@@ -9496,6 +9512,8 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
           margin-right: 0; }
       .contacts-map__members-btn {
         display: inline-block; }
+      .layout-text__unsubscribe {
+        padding: 3em; }
   .in-region__controls {
     position: absolute;
     z-index: 1;
