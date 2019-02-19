@@ -258,6 +258,28 @@
     }
   }
 
+  &__unsubscribe {
+    margin: auto;
+    padding: 2em;
+    max-width: 560px;
+    text-align: center;
+    background: #fff;
+
+
+    @media (min-width: $screen-md) {
+      padding: 3em;
+    }
+  }
+
+  &__unsubscribe-form {
+    margin-top: 30px;
+    text-align: left;
+  }
+
+  &__unsubscribe-title {
+    margin: 1em 0;
+  }
+
 
 
 

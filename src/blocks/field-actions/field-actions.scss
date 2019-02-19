@@ -23,6 +23,10 @@ $line-height:                 1.375em !default;
     text-align: left;
   }
 
+  &--center {
+    text-align: center;
+  }
+
   &--jcsb {
     display: flex;
     flex-wrap: wrap;

@@ -28,6 +28,10 @@
         padding-bottom: 61px;
       }
     }
+
+    &--dark {
+      background: $gray-darker;
+    }
   }
 
   &__content {
