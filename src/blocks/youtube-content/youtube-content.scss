@@ -6,7 +6,7 @@
 
   $block-name:                &; // #{$block-name}__element {}
 
-  padding: 15px 0;
+  padding: 15px 0 40px;
 
   @media (min-width: $screen-lg) {
     padding-top: 30px;
@@ -21,7 +21,6 @@
     line-height: ($font-size--h2 + 2);
     font-weight: 400;
     text-align: center;
-    flex-basis: 100%;
   }
 
   &__descr {
@@ -29,7 +28,6 @@
     margin: 0 auto 40px;
     color: $gray;
     text-align: center;
-    flex-basis: 100%;
   }
 
   &__row {

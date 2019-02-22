@@ -135,7 +135,8 @@
     "success": [],
     "share-btns": [],
     "bubbles": [],
-    "youtube-content": []
+    "youtube-content": [],
+    "new-offer-program": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
