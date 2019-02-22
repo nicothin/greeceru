@@ -256,6 +256,31 @@
     }
   }
 
+  &__subscribe {
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      align-items: center;
+    }
+
+    .btn--youtube {
+      flex-shrink: 0;
+    }
+
+    .btn--youtube,
+    .field-text {
+      width: 245px;
+    }
+  }
+
+  &__subscribe-or {
+    flex-shrink: 0;
+    font-size: $font-size;
+    color: #fff;
+    width: 50px;
+    text-align: center;
+  }
+
 
 
   &--simple {
