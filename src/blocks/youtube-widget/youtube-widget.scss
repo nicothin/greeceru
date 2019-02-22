@@ -1,0 +1,40 @@
+// В этом файле должны быть стили для БЭМ-блока youtube-widget, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.youtube-widget {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  padding: 20px 24px 32px;
+  margin-bottom: 24px;
+  background: #fff;
+  border-radius: $border-radius;
+  box-shadow: 0 1px 3px 0 rgba(115, 124, 148, 0.4);
+
+  &__title {
+    margin: 0 0 5px;
+    font-size: $font-size--h2 - 3;
+    color: $text-color;
+  }
+
+  &__descr {
+    margin-top: 0;
+    margin-bottom: 19px;
+    color: $text-color--muted;
+  }
+
+  &__thumb {
+    display: block;
+  }
+
+  &__subtitle {
+    margin: 12px 0 8px;
+    font-size: $font-size--h3;
+  }
+
+  &__btn {
+    margin-top: 14px;
+  }
+
+}
