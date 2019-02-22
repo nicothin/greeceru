@@ -158,7 +158,7 @@ $( document ).ready(function() {
   objectFitImages();
 
   // включение датапикера в модальном окне и блокировка нескольких дат
-  /*  // Alekos: Временно убрал инициализацию календаря - перенёс на нужные страницы. 
+  /*  // Alekos: Временно убрал инициализацию календаря - перенёс на нужные страницы.
   $('#shedule-calendar').dateRangePicker({
     inline: true,
     container: '#shedule-calendar',
@@ -176,6 +176,7 @@ $( document ).ready(function() {
   var topRatedCarouselSettings = {
     margin: 15,
     autoWidth: true,
+    dots: false,
     // loop: true,
   };
   function topRatedCarouselInit(){
@@ -310,7 +311,7 @@ $( document ).ready(function() {
     margin: 20,
   });
 
-  // переключение видимости блоков в сайдбаре 
+  // переключение видимости блоков в сайдбаре
   $('.aside-block__header-toggler').on('click', function(){
     $(this).closest('.aside-block--collapsable').toggleClass('aside-block--collapse');
   });
@@ -404,6 +405,6 @@ $( document ).ready(function() {
     startDate: '2017-08-20',
   });
   */
-  
+
 
 });

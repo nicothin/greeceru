@@ -67,6 +67,10 @@
           height: 100%;
         }
       }
+
+      .card__name {
+        flex-grow: 1;
+      }
     }
 
     @media (min-width: $screen-md) {
