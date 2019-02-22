@@ -1,0 +1,104 @@
+// В этом файле должны быть стили для БЭМ-блока youtube-content, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.youtube-content {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  padding: 15px 0;
+
+  @media (min-width: $screen-lg) {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+
+  &__title {
+    max-width: $screen-xl;
+    margin: 0 auto;
+    padding: 38px 0 5px;
+    font-size: $font-size--h2;
+    line-height: ($font-size--h2 + 2);
+    font-weight: 400;
+    text-align: center;
+    flex-basis: 100%;
+  }
+
+  &__descr {
+    max-width: $screen-xl;
+    margin: 0 auto 40px;
+    color: $gray;
+    text-align: center;
+    flex-basis: 100%;
+  }
+
+  &__row {
+    max-width: 1320px;
+    margin: 0 auto;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      align-items: flex-start;
+      padding: 0 15px;
+    }
+  }
+
+  &__embed {
+
+    @media (min-width: $screen-lg) {
+      width: 60%;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 710px;
+    }
+  }
+
+  &__text-wrap {
+    padding: 0 15px;
+    color: $gray;
+
+    @media (min-width: $screen-xl) {
+      padding-left: 40px;
+    }
+
+    @media (min-width: $screen-osx) {
+      padding-left: 106px;
+    }
+
+    ol {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 18px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__text-inner {
+
+    @media (min-width: $screen-xl) {
+      max-width: 380px;
+    }
+  }
+
+  &__subtitle {
+    font-size: $font-size--h3;
+    color: $text-color;
+
+    @media (min-width: $screen-lg) {
+      margin-top: 0;
+    }
+  }
+
+  &__btn {
+    margin-top: 20px;
+  }
+
+  &__more-link {
+    white-space: nowrap;
+  }
+}

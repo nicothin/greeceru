@@ -134,7 +134,8 @@
     "mini-photo": [],
     "success": [],
     "share-btns": [],
-    "bubbles": []
+    "bubbles": [],
+    "youtube-content": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
