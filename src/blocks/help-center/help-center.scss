@@ -40,6 +40,23 @@
     color: $gray-lightest;
   }
 
+  &__back-btn {
+    display: inline-block;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    border: none;
+    margin-right: 0.2em;
+    background: none;
+    color: currentColor;
+    cursor: pointer;
+    transform: translateY(0.25em);
+
+    svg {
+      fill: currentColor;
+    }
+  }
+
   &__close {
     position: absolute;
     top: 16px;
