@@ -110,6 +110,14 @@ $toggler-part-bg-color:       #000 !default;
     background-color: #fff;
   }
 
+  &--sm-invert {
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+
   &--sm-thin {
     width: 20px;
     height: 20px;

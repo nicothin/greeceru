@@ -15,6 +15,7 @@
   $('[data-main-nav-submenu-toggler]').on('click', function(e){
     e.preventDefault();
     $('.login').removeClass('login--open');
+    $('.main-nav__item--lang').removeClass(subMenuShownClassName);
 
     // если это подменю 3го уровня
     if ($(this).closest('.main-nav__sub-list').length) {
@@ -36,6 +37,15 @@
     e.preventDefault();
     hideAllSubmenu();
     $('.login').toggleClass('login--open');
+    $('.main-nav__item--lang').removeClass(subMenuShownClassName);
+  });
+
+  // Показ/сокрытие меню выбора языка
+  $('[data-lang-toggler]').on('click', function(e){
+    e.preventDefault();
+    // hideAllSubmenu();
+    $('.login').removeClass('login--open');
+    $('.main-nav__item--lang').toggleClass(subMenuShownClassName);
   });
 
   // Только сокрытие подменю (всех)
@@ -46,9 +56,10 @@
 
   // Закрытие подуровней меню, если был клик вне меню
   $(document).on('click', function(e){
-    if (!$(e.target).closest('.main-nav__list').length && !$(e.target).closest('.login').length) {
+    if (!$(e.target).closest('.main-nav__list').length && !$(e.target).closest('.login').length && !$(e.target).is('[data-lang-toggler]')) {
       hideAllSubmenu();
       $('.login').removeClass('login--open');
+      $('.main-nav__item--lang').removeClass(subMenuShownClassName);
     }
   });
 

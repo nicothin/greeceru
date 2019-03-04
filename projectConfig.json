@@ -137,7 +137,10 @@
     "bubbles": [],
     "youtube-content": [],
     "new-offer-program": [],
-    "youtube-widget": []
+    "youtube-widget": [],
+    "help-center": [],
+    "help-list": [],
+    "help-faq": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -71,6 +71,7 @@ $main-menu-mobile-width:      334px !default;
     }
 
     // Блок, показываемый справа, начиная с 970
+    // 2019-03-04 В новой версии шапки (только для добавления объектов?) этот код не используется.
     &--always-drop-down {
       display: none;
 
@@ -177,6 +178,13 @@ $main-menu-mobile-width:      334px !default;
     }
   }
 
+  &__list-right {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
   &__item {
     background-color: #fff;
     border-radius: $border-radius;
@@ -258,6 +266,20 @@ $main-menu-mobile-width:      334px !default;
         display: none;
       }
     }
+
+    &--xl-none {
+
+      @media (min-width: $screen-xl) {
+        display: none;
+      }
+    }
+
+    &--md-none {
+
+      @media (min-width: $screen-md) {
+        display: none;
+      }
+    }
   }
 
   &__link,
@@ -301,6 +323,26 @@ $main-menu-mobile-width:      334px !default;
     }
   }
 
+  &__pseudolink {
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &--language {
+
+      @media (min-width: $screen-xl) {
+        padding-right: 32px;
+      }
+    }
+  }
+
   &__link {
 
     svg {
@@ -316,18 +358,14 @@ $main-menu-mobile-width:      334px !default;
     }
 
     &--help-center {
-
-      @media (min-width: $screen-xl) {
-        color: $color-main;
-        border-left: 1px solid $gray-lightest;
-      }
+      color: $color-main;
+      padding: 18px;
+      border-left: 1px solid $gray-lightest;
 
       svg {
-        display: none;
-
-        @media (min-width: $screen-xl) {
-          display: inline-block;
-        }
+        display: inline-block;
+        vertical-align: -0.3em;
+        margin-right: 0.2em;
       }
     }
   }
@@ -342,6 +380,7 @@ $main-menu-mobile-width:      334px !default;
     }
 
     &--language {
+      border-left: 1px solid $gray-lightest;
 
       @media (max-width: ($menu-desktop-width - 1)) {
         display: none;
@@ -582,6 +621,16 @@ $main-menu-mobile-width:      334px !default;
       }
     }
 
+    &--language-xl {
+      display: none;
+
+      @media (min-width: $screen-xl) {
+        display: block;
+        left: auto;
+        right: 0;
+      }
+    }
+
     &--faq {
 
       @media (min-width: $screen-xl) {
@@ -761,6 +810,14 @@ $main-menu-mobile-width:      334px !default;
     flex-basis: 70%;
     flex-grow: 0;
     flex-shrink: 0;
+  }
+
+  &__help-text {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: inline;
+    }
   }
 
 

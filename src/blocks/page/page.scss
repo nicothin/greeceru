@@ -40,6 +40,7 @@
     padding-top: $header-height;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; // for help center
 
     &--has-top-msg {
       padding-top: $header-height + 50;

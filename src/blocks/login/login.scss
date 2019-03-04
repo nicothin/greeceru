@@ -56,8 +56,11 @@
 
   &__name {
     position: relative;
+    display: inline-block;
     padding-right: 18px;
-    max-width: 140px;
+    min-width: 18px;
+    max-width: 95px;
+    min-height: 20px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -70,10 +73,18 @@
       top: 50%;
       width: 6px;
       height: 6px;
-      border-bottom: 1px solid currentColor;
-      border-right: 1px solid currentColor;
+      border-bottom: 1px solid $text-color;
+      border-right: 1px solid $text-color;
       transform: translateY(-70%) rotate(45deg);
       transition: transform $transition-time, border-color $transition-time;
+    }
+  }
+
+  &__name-text {
+    display: none;
+
+    @media (min-width: $screen-sm) {
+      display: inline;
     }
   }
 
@@ -89,6 +100,10 @@
     margin: 0;
     background-color: #fff;
     transition: opacity $transition-time;
+
+    &--r0 {
+      right: 0;
+    }
   }
 
   &__menu-item {}
