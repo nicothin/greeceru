@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока help-faq, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока help-faq, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
@@ -6,4 +6,66 @@
 
   $block-name:                &; // #{$block-name}__element {}
 
+  &__title {
+    margin: 0 0 16px;
+    font-size: $font-size--h4;
+    color: $gray;
+  }
+
+  &__all-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 8px 15px 8px 56px;
+    margin-right: -15px;
+    margin-left: -15px;
+    min-height: 56px;
+    font-weight: 600;
+    transition: all 0.3s;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 15px;
+      height: 1px;
+      background: $gray-lightest;
+    }
+
+    &:hover,
+    &:focus {
+      background: $gray-ultra-lightest;
+    }
+  }
+
+  &__contact {
+    padding: 18px 15px 16px 40px;
+    border-bottom: 1px solid $gray-lightest;
+    margin-right: -15px;
+    line-height: 1.7;
+
+    a {
+      color: $text-color;
+      transition: all 0.3s;
+
+      &:hover,
+      &:focus {
+        color: $link-color--hover;
+      }
+    }
+  }
+
+  &__contact-page-link {
+    display: block;
+    margin-bottom: 12px;
+    line-height: $line-height;
+    font-weight: 600;
+    color: $link-color !important;
+
+    &:hover,
+    &:focus {
+      color: $link-color--hover;
+    }
+  }
 }

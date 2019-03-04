@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока help-list, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока help-list, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
@@ -6,4 +6,42 @@
 
   $block-name:                &; // #{$block-name}__element {}
 
+  &__title {
+    margin: 0 0 16px;
+    font-size: $font-size--h4;
+    color: $gray;
+  }
+
+  &__list {
+    margin: 0 -15px 72px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 8px 15px 8px 56px;
+    min-height: 56px;
+    color: $text-color;
+    transition: all 0.3s;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 56px;
+      height: 1px;
+      background-color: $gray-lightest;
+    }
+
+    &--active,
+    &:hover,
+    &:focus {
+      color: $text-color;
+      background: $gray-ultra-lightest;
+    }
+  }
 }
