@@ -143,6 +143,10 @@
     font-size: $font-size--small;
     line-height: $line-height;
   }
+
+  &--no-scroll {
+    overflow: hidden;
+  }
 }
 
 *,

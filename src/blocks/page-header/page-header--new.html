@@ -74,7 +74,7 @@
 
       <ul class="main-nav__list-right">
         <li class="main-nav__item">
-          <a href="search.html" class="main-nav__pseudolink  main-nav__link--narrow  main-nav__link--help-center" data-show-help-center>
+          <a href="" class="main-nav__pseudolink  main-nav__link--narrow  main-nav__link--help-center" data-show-help-center>
             <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help-circle"></use></svg>
             <span class="main-nav__help-text">Help Center</span>
           </a>
@@ -152,7 +152,7 @@
           </span>
         </label>
       </form>
-      <btn class="close  close--sm-invert  help-center__close" aria-label="Закрыть"><span></span></btn>
+      <btn class="close  close--sm-invert  help-center__close" aria-label="Закрыть" data-show-help-center><span></span></btn>
     </header>
     <div class="help-center__content-inner">
       <div class="help-list">
@@ -202,5 +202,5 @@
       </article>
     </div>
   </div>
-  <div class="help-center__backdrop"></div>
+  <div class="help-center__backdrop" data-show-help-center></div>
 </section>

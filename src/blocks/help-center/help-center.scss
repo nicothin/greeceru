@@ -8,6 +8,7 @@
 
   position: relative;
   z-index: 15;
+  display: none;
 
   &__content {
     position: fixed;
@@ -20,6 +21,7 @@
     display: flex;
     flex-direction: column;
     background: #fff;
+    animation: show-help-center 0.3s 1;
   }
 
   &__header {
@@ -59,4 +61,17 @@
     left: 0;
     background-color: rgba(49, 53, 63, 0.88);
   }
+
+  &--open {
+    display: block;
+
+    #{$block-name}__content {
+      animation: show-help-center 0.3s 1;
+    }
+  }
+}
+
+@keyframes show-help-center {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
 }
