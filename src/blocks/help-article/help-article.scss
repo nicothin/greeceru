@@ -1,0 +1,65 @@
+// В этом файле должны быть стили для БЭМ-блока help-article, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.help-article {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  p,
+  ol,
+  ul {
+    margin: 16px 0;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+
+    & > li {
+      position: relative;
+      padding-left: 36px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 12px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: $text-color;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: help;
+    list-style: none;
+    padding: 0;
+
+    & > li {
+      position: relative;
+      padding-left: 36px;
+
+      &:before {
+        counter-increment: help;
+        content: counter(help) '. ';
+        position: absolute;
+        top: 0;
+        right: calc(100% - 24px);
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 16px;
+    font-size: $font-size--h2 - 4;
+    font-weight: 700;
+  }
+
+  &__mute {
+    margin: 24px 0;
+    color: $gray;
+  }
+}

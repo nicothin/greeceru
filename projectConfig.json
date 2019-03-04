@@ -140,7 +140,8 @@
     "youtube-widget": [],
     "help-center": [],
     "help-list": [],
-    "help-faq": []
+    "help-faq": [],
+    "help-article": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

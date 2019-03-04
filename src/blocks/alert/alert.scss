@@ -3,6 +3,9 @@
 // Не пишите здесь другие селекторы.
 
 .alert {
+
+  $block-name:                &; // #{$block-name}__element {}
+
   display: flex;
   align-items: center;
   position: relative;
@@ -18,6 +21,10 @@
 
   &__inner {
     flex: 0 0 100%;
+
+    & > *:first-child {
+      margin-top: 0;
+    }
 
     & > *:last-child {
       margin-bottom: 0;
@@ -140,7 +147,24 @@
     }
   }
 
+  &--idea {
+    position: relative;
+    padding: 8px 8px 8px 38px;
+    border: 0;
+    margin: 16px 0;
+    background: $gray-ultra-lightest;
+    font-size: $font-size--small;
+    line-height: 1.33;
 
+    #{$block-name}__icon {
+      position: absolute;
+      top: 10px;
+      left: 7px;
+      width: 24px;
+      height: 24px;
+      fill: $color-warning;
+    }
+  }
 
   &--mb30 {
     margin-bottom: 30px !important;
