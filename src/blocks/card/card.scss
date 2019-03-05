@@ -23,6 +23,39 @@
     width: 360px;
   }
 
+  &__labels-wrap {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: flex;
+    align-items: flex-start;
+
+    .label + .label {
+      margin-left: 8px;
+    }
+  }
+
+  &__checked {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    font-size: $font-size--small;
+    color: $color-success;
+    cursor: default;
+
+    svg {
+      margin-bottom: 4px;
+    }
+  }
+
   &__name {
     order: 3;
     padding: 18px 20px;

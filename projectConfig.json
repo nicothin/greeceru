@@ -141,7 +141,8 @@
     "help-center": [],
     "help-list": [],
     "help-faq": [],
-    "help-article": []
+    "help-article": [],
+    "label": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
