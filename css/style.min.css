@@ -274,6 +274,23 @@
     color: #8891a6;
     font-size: 12px;
     line-height: 1.429em; }
+.page__404 {
+    padding: 50px 15px 30px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    background: #f3f5f9;
+    text-align: center;
+    color: #8891a6; }
+.page__404 p {
+      max-width: 400px;
+      margin: auto; }
+.page__404-img {
+    margin-bottom: 30px;
+    max-width: 300px; }
+.page__404-title {
+    color: #31353f;
+    font-weight: 700; }
 .page--no-scroll {
     overflow: hidden; }
 *,
@@ -9585,6 +9602,16 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
         max-width: 50%;
         float: left;
         margin-right: 30px; }
+      .page__404 {
+        padding-top: 80px;
+        padding-bottom: 80px; }
+        .page__404 p {
+          font-size: 16px; }
+      .page__404-img {
+        margin-bottom: 50px;
+        max-width: 446px; }
+      .page__404-title {
+        font-size: 44px; }
         .page-header__inner--new {
           -webkit-box-pack: start;
               -ms-flex-pack: start;
