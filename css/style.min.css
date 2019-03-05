@@ -5198,6 +5198,11 @@ a:hover .feedback__slider-control-arrow,
     color: #8891a6; }
 .steps__action {
     margin-top: 18px; }
+.list-property__labels-wrap {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 1; }
 .list-property__short-drop {
   max-width: 230px;
   margin-bottom: 30px; }
