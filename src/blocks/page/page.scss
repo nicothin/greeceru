@@ -144,6 +144,47 @@
     line-height: $line-height;
   }
 
+  &__404 {
+    padding: 50px 15px 30px;
+    flex-grow: 1;
+    background: $gray-ultra-lightest;
+    text-align: center;
+    color: $gray;
+
+    @media (min-width: $screen-md) {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    p {
+      max-width: 400px;
+      margin: auto;
+
+      @media (min-width: $screen-md) {
+        font-size: $font-size--h3;
+      }
+    }
+  }
+
+  &__404-img {
+    margin-bottom: 30px;
+    max-width: 300px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 50px;
+      max-width: 446px;
+    }
+  }
+
+  &__404-title {
+    color: $text-color;
+    font-weight: 700;
+
+    @media (min-width: $screen-md) {
+      font-size: 44px;
+    }
+  }
+
   &--no-scroll {
     overflow: hidden;
   }
