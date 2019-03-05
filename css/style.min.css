@@ -2469,11 +2469,15 @@ a:active .pagination__icon-left {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-align: start;
         -ms-flex-align: start;
-            align-items: flex-start; }
-.card__labels-wrap .label + .label {
-      margin-left: 8px; }
+            align-items: flex-start;
+    max-width: 180px; }
+.card__labels-wrap .label {
+      margin-right: 8px;
+      margin-bottom: 8px; }
 .card__checked {
     position: absolute;
     top: 16px;
@@ -10506,6 +10510,8 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
         text-align: center; }
     .card {
       width: 360px; }
+      .card__labels-wrap {
+        max-width: 245px; }
       .card__name {
         padding: 22px 20px; }
       .card__title {
