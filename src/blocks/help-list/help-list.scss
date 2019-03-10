@@ -44,4 +44,12 @@
       background: $gray-ultra-lightest;
     }
   }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    fill: $link-color;
+    transform: translateY(-50%);
+  }
 }

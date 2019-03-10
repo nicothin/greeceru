@@ -60,7 +60,10 @@
 
   &__contact-page-link {
     display: block;
+    position: relative;
     margin-bottom: 12px;
+    margin-left: -38px;
+    padding-left: 38px;
     line-height: $line-height;
     font-weight: 600;
     color: $link-color !important;
@@ -69,5 +72,20 @@
     &:focus {
       color: $link-color--hover;
     }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    fill: $link-color;
+    transform: translateY(-50%);
+  }
+
+  &__contact-icon {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    fill: $link-color;
   }
 }
