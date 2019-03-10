@@ -9346,6 +9346,13 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
 .help-list__link--active, .help-list__link:hover, .help-list__link:focus {
     color: #31353f;
     background: #f3f5f9; }
+.help-list__icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  fill: #477afb;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
 .help-faq {
   margin-bottom: 30px; }
 .help-faq__title {
@@ -9390,12 +9397,27 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
         color: #346af4; }
 .help-faq__contact-page-link {
     display: block;
+    position: relative;
     margin-bottom: 12px;
+    margin-left: -38px;
+    padding-left: 38px;
     line-height: 1.375em;
     font-weight: 600;
     color: #477afb !important; }
 .help-faq__contact-page-link:hover, .help-faq__contact-page-link:focus {
       color: #346af4; }
+.help-faq__icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    fill: #477afb;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+.help-faq__contact-icon {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    fill: #477afb; }
 .help-article p,
 .help-article ol,
 .help-article ul {
