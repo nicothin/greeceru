@@ -1,0 +1,17 @@
+// В этом файле должны быть стили для БЭМ-блока layout-object, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.layout-object {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  &__main {
+    padding: 0 15px;
+  }
+
+  &__aside {
+    display: none;
+  }
+
+}

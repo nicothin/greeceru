@@ -318,6 +318,7 @@
 
   &__location-name {
     display: block;
+    width: 100%;
     padding: 40px 0 15px;
 
     &--has-breadcrumbs {
@@ -397,9 +398,73 @@
     }
   }
 
+  &__breadcrumbs {
+    margin: 20px 0 24px;
+  }
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  &__header-address-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px 0 rgba(115, 124, 148, 0.4);
+  }
+
+  &__header-address {
+    width: 100%;
+    margin-bottom: 4px;
+    color: $gray;
+    font-size: $font-size--small;
+  }
+
+  &__header-date {
+    margin-left: 51px;
+    margin-right: 1em;
+    white-space: nowrap;
+    color: $gray;
+    font-size: $font-size--small;
+  }
+
+  &__header-id {
+    margin-right: 1em;
+    white-space: nowrap;
+    color: $gray;
+    font-size: $font-size--small;
+  }
+
+  &__header-views-counter {
+    margin-left: auto;
+    white-space: nowrap;
+    color: $gray;
+    font-size: $font-size--small;
+
+    svg {
+      vertical-align: middle;
+    }
+  }
+
 
 
   &--internal-property {
     padding-bottom: 65px;
+  }
+
+  &--internal-property-2 {
+    padding-bottom: 65px;
+
+    #{$block-name}__location-name {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 }

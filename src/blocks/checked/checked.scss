@@ -1,0 +1,24 @@
+// В этом файле должны быть стили для БЭМ-блока checked, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.checked {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  position: absolute;
+  z-index: 1;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  background: #fff;
+  border-radius: 50%;
+
+  svg {
+    transform: translateX(2px);
+  }
+}

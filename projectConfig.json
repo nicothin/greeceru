@@ -142,7 +142,9 @@
     "help-list": [],
     "help-faq": [],
     "help-article": [],
-    "label": []
+    "label": [],
+    "layout-object": [],
+    "checked": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
