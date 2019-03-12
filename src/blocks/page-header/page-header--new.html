@@ -20,15 +20,20 @@
         <li class="main-nav__item">
           <a href="search.html" class="main-nav__link">Vacation Rental</a>
         </li>
-        <li class="main-nav__item  main-nav__item--mobile-separator">
-          <a href="search.html" class="main-nav__link">More</a>
+        <li class="main-nav__item  main-nav__item--more">
+          <!-- Этот пункт не видно на мобильных! -->
+          <span class="main-nav__pseudolink  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler>More</span>
+          <div class="main-nav__lvl  main-nav__lvl--more">
+            <ul class="main-nav__sub-list">
+              <li class="main-nav__item  main-nav__item--mobile-separator">
+                <a href="" class="main-nav__link">Blog</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="" class="main-nav__link">About us</a>
+              </li>
+            </ul>
+          </div>
         </li>
-        <!-- <li class="main-nav__item  main-nav__item--to-right  main-nav__item--mobile-separator">
-          <a href="search.html" class="main-nav__link  main-nav__link--narrow  main-nav__link--help-center">
-            <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help-circle"></use></svg>
-            Help Center
-          </a>
-        </li> -->
         <li class="main-nav__item  main-nav__item--xl-none  main-nav__item--mobile-separator">
           <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler>Language: <span data-main-nav-submenu-toggler>English</span></span>
           <span class="main-nav__pseudolink  main-nav__pseudolink--language">En</span>
