@@ -7,43 +7,38 @@
   padding: 0;
   list-style: none;
 
-  @media (min-width: $screen-osx) {
+  @media (min-width: $screen-sm) {
     display: flex;
     flex-wrap: wrap;
   }
 
   &__item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 45px;
+    min-height: 32px;
     margin-bottom: 20px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    line-height: 1;
 
     b {
       white-space: nowrap;
     }
 
     svg {
-      display: inline-block;
-      vertical-align: middle;
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 32px;
       height: 32px;
-      margin-right: 15px;
     }
 
-    @media (min-width: $screen-osx) {
+    @media (min-width: $screen-sm) {
       flex-basis: 50%;
       max-width: 50%;
       padding-right: 10px;
-      margin-bottom: 30px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      &:nth-child(odd) {
-        margin-bottom: 0;
-      }
+      margin-bottom: 20px;
     }
   }
 }
