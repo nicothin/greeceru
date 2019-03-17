@@ -1,0 +1,20 @@
+// В этом файле должны быть стили для БЭМ-блока info-link, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.info-link {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  display: inline-block;
+  vertical-align: baseline;
+  position: relative;
+  padding-left: 24px;
+  color: inherit;
+
+  svg {
+    position: absolute;
+    top: 0.15em;
+    left: 0;
+  }
+}

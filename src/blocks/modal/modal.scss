@@ -520,6 +520,43 @@ $z-index-modal:               100 !default;
       }
     }
   }
+
+  &--mobile-bottom {
+
+    @media (max-width: ($screen-md - 1)) {
+
+      .modal-open &.modal.in {
+        overflow: hidden;
+        background-color: rgba(49, 53, 63, 0.4);
+      }
+
+      .modal__dialog {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: auto;
+        max-height: calc(100% - 60px);
+        overflow-y: auto;
+        background: #fff;
+      }
+
+      .modal__header {
+        padding: 40px 70px 13px 40px;
+        font-size: $font-size--h3;
+        font-weight: 600;
+      }
+
+      .modal__body {
+        padding: 0 40px;
+      }
+
+      .modal__close {
+        top: 33px;
+        right: 38px;
+      }
+    }
+  }
 }
 
 
@@ -558,6 +595,7 @@ $z-index-modal:               100 !default;
 
 
 .modal-backdrop {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -566,6 +604,7 @@ $z-index-modal:               100 !default;
   z-index: ($z-index-modal - 1);
 
   @media (min-width: $screen-md) {
+    display: block;
     background-color: rgba(#1c1d20, 0.85);
     animation: modal-backdrop-show $transition-time 1;
   }

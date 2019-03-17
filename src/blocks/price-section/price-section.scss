@@ -1,0 +1,59 @@
+// В этом файле должны быть стили для БЭМ-блока price-section, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.price-section {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  @media (min-width: $screen-sm) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__part {
+    flex-grow: 1;
+
+    @media (min-width: $screen-sm) {
+      width: 50%;
+    }
+
+    &--right {
+      margin-left: auto;
+    }
+
+    &--price {
+      padding-top: 4px;
+    }
+
+    &--help {
+
+      @media (min-width: $screen-sm) {
+        width: 40%;
+      }
+    }
+
+    &--mb {
+      margin-bottom: 30px;
+    }
+
+    &--tar {
+
+      @media (min-width: $screen-sm) {
+        text-align: right;
+      }
+    }
+
+    &--help {
+      padding-top: 15px;
+      padding-bottom: 10px;
+    }
+
+    &--msg {
+      width: 100%;
+      padding-top: 40px;
+      text-align: center;
+      font-weight: 600;
+    }
+  }
+}

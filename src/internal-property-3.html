@@ -14,7 +14,7 @@
 
     <div class="page__content">
 
-      @@include('blocks/page-header/page-header.html')
+      @@include('blocks/page-header/page-header--new-search.html')
 
       <main class="page__main-content" role="main">
 
@@ -220,6 +220,52 @@
                     </li>
                   </ul>
                 </div>
+              </section>
+
+              <section class="list-property__section  list-property__section--pt35-xs  list-property__section--pb35-xs  list-property__section--md-columns">
+                <div class="list-property__subtitle-wrap">
+                  <h2 class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">For sale</h2>
+                </div>
+                <form class="list-property__content-col">
+                  <div class="price-section">
+                    <div class="price-section__part  price-section__part--price  price-section__part--mb">
+                      <div class="price  price--lg">
+                        <span class="price__inner  price__inner--mb24">
+                          <span class="price__currency">€</span>69,000
+                          <!-- <span class="price__icon  price__icon--up">Last update: up</span> -->
+                          <span class="price__icon  price__icon--down">Last update: down</span>
+                        </span>
+                        <br>
+                        <a href="#price-history" data-toggle="modal" class="price__history-link">Price history</a>
+                      </div>
+                    </div>
+                    <div class="price-section__part  price-section__part--right  price-section__part--mb  price-section__part--tar">
+                      <div class="field-num  field-num">
+                        <span class="field-num__input-and-btns">
+                          <input class="field-num__input" type="number" value="69000" name="price" max="100000" min="50000" step="100">
+                          <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                          <span class="field-num__text-wrap">
+                            <span class="field-num__text-currency">€</span>
+                            <span class="field-num__text-num">69,000</span>
+                          </span>
+                          <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="price-section__part  price-section__part--help">
+                      <a href="" class="info-link">
+                        <svg width="16" height="16"><use xlink:href="img/sprite-svg.svg#info"></use></svg>
+                        Offer your price
+                      </a>
+                    </div>
+                    <div class="price-section__part">
+                      <button class="btn  btn--success  btn--block">Send offer</button>
+                    </div>
+                    <div class="price-section__part  price-section__part--msg">
+                      <a href="">Send Message</a>
+                    </div>
+                  </div>
+                </form>
               </section>
 
               <section class="list-property__section  list-property__section--pt35-xs  list-property__section--pb35-xs  list-property__section--md-columns">
@@ -955,6 +1001,21 @@
               <div class="field-actions__help">You won’t be charged yet </div>
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="price-history" class="modal  modal--mobile-bottom" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <span class="close  close--lg  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+      <div class="modal__content">
+        <div class="modal__header">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, debitis.
+          <!-- <h4 class="modal__title">11111</h4> -->
+        </div>
+        <div class="modal__body">
+          <p>Price history</p>
         </div>
       </div>
     </div>

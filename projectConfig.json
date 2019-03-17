@@ -144,7 +144,10 @@
     "help-article": [],
     "label": [],
     "layout-object": [],
-    "checked": []
+    "checked": [],
+    "field-num": [],
+    "price-section": [],
+    "info-link": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

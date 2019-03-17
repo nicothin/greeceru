@@ -228,4 +228,18 @@ $border-radius:               3px !default;
       transform: translateY(-50%);
     }
   }
+
+  &--success {
+    background: $color-success;
+    box-shadow: 0 1px 3px 0 rgba(115, 124, 148, 0.4);
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: #fff;
+      background-color: darken($color-success, 10%);
+      border-color: transparent;
+      box-shadow: 0 1px 3px 0 rgba(115, 124, 148, 0.4);
+    }
+  }
 }

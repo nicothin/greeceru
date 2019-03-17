@@ -14,10 +14,51 @@
     margin-right: 0.2em;
   }
 
+  &__inner {
+    display: inline-block;
+    position: relative;
+    padding-right: 7px;
+
+    &--mb24 {
+      // margin-bottom: 10px;
+
+      @media (min-width: $screen-sm) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    overflow: hidden;
+    color: transparent;
+
+    &--up {
+      border-width: 0 3px 5px 3px;
+      border-color: transparent transparent $color-danger transparent;
+    }
+
+    &--down {
+      border-width: 5px 3px 0 3px;
+      border-color: $color-success transparent transparent transparent;
+    }
+  }
+
+  &__history-link {
+    font-size: $font-size--small;
+    font-weight: 400;
+  }
+
 
 
   &--lg {
     font-size: 24px;
+    font-weight: 600;
   }
 
   &--sm {

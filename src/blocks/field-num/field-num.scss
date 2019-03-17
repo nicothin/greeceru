@@ -1,0 +1,67 @@
+// В этом файле должны быть стили для БЭМ-блока field-num, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.field-num {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+
+  &__input-and-btns {
+    position: relative;
+    display: inline-flex;
+    min-width: 206px;
+  }
+
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border: 2px solid $color-main--border;
+    padding: 0;
+    border-radius: 50%;
+    font: 0/0 a; // stylelint-disable-line
+    color: transparent;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &--plus {
+      background: $color-main--ultralight svg-load('../blocks/field-num/bg-img/plus.svg') center no-repeat;
+      background-size: 17px 17px;
+    }
+
+    &--minus {
+      background: $color-main--ultralight svg-load('../blocks/field-num/bg-img/minus.svg') center no-repeat;
+      background-size: 17px 17px;
+    }
+  }
+
+  &__text-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 134px;
+    font-size: $font-size--h2 - 4;
+  }
+
+  &__text-currency {
+    margin-right: 0.3em;
+  }
+
+}

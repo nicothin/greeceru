@@ -60,11 +60,11 @@
       min-height: calc(100vh - #{$header-height});
     }
 
-    @media (max-width: ($screen-md - 1)) {
-      .modal-open & {
-        opacity: 0;
-      }
-    }
+    // @media (max-width: ($screen-md - 1)) {
+    //   .modal-open & {
+    //     opacity: 0;
+    //   }
+    // }
   }
 
   &__footer-wrapper {
