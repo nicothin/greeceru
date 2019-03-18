@@ -149,7 +149,8 @@
     "price-section": [],
     "info-link": [],
     "price-history": [],
-    "user-mini": []
+    "user-mini": [],
+    "object-price-data": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -1,0 +1,121 @@
+// В этом файле должны быть стили для БЭМ-блока object-price-data, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.object-price-data {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  &__sell-auction-link {
+    display: inline-block;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    color: $color-success;
+    font-size: $font-size--small;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: darken($color-success, 10%);
+    }
+
+    svg {
+      display: inline-block;
+      vertical-align: -0.3em;
+      margin-right: 0.3em;
+      fill: currentColor;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 24px;
+    border-radius: 2px;
+    margin-bottom: 25px;
+    box-shadow: 0 1px 3px 0 rgba(115, 124, 148, 0.4);
+    font-size: $font-size--small;
+  }
+
+  &__part {
+    padding: 10px 24px;
+    border-bottom: 1px solid $gray-lightest;
+
+    &--price {
+      flex-grow: 1;
+    }
+
+    &--check {
+      flex-shrink: 0;
+    }
+
+    &--mini-price-left {
+      width: 50%;
+      border-right: 1px solid $gray-lightest;
+    }
+
+    &--mini-price-right {
+      width: 50%;
+    }
+
+    &--offers {
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      .info-link {
+        // margin-bottom: 28px;
+      }
+    }
+
+    &--form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      .field-num {
+        margin-bottom: 15px;
+      }
+
+      .btn--sm {
+        width: 146px;
+      }
+    }
+
+    &--user {
+      width: 100%;
+      border-bottom: none;
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
+  }
+
+  &__mini-price {
+    font-weight: 600;
+  }
+
+  &__mini-price-descr {
+    color: $gray;
+  }
+
+  &__send-msg.btn {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  &__bottom-link {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.4em;
+      fill: currentColor;
+    }
+  }
+}

@@ -21,7 +21,7 @@
         <div class="layout-object">
           <div class="layout-object__main">
 
-            <article class="list-property  list-property--internal-property-2">
+            <article class="list-property  list-property--internal-property-3">
 
               <div class="breadcrumbs  list-property__breadcrumbs">
                 <a href="" class="breadcrumbs__item">For Sale</a>
@@ -31,7 +31,13 @@
               </div>
 
               <header class="list-property__header">
-                <h1 class="list-property__location-name  page__h1">House for Sale «Joker's hospital»</h1>
+                <h1 class="list-property__location-name  page__h1">
+                  House for Sale «Joker's hospital»
+                  <div class="list-property__header-vc">
+                    <svg width="22" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#eye"></use></svg>
+                    34 000
+                  </div>
+                </h1>
                 <div class="list-property__header-info">
                   <div class="list-property__header-address">
                     <span class="list-property__header-address-icon">
@@ -222,7 +228,7 @@
                 </div>
               </section>
 
-              <section class="list-property__section  list-property__section--pt35-xs  list-property__section--pb35-xs  list-property__section--md-columns">
+              <section class="list-property__section  list-property__section--pt35-xs  list-property__section--pb35-xs  list-property__section--md-columns  list-property__section--desktop-hide">
                 <div class="list-property__subtitle-wrap">
                   <h2 class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">For sale</h2>
                 </div>
@@ -240,7 +246,7 @@
                       </div>
                     </div>
                     <div class="price-section__part  price-section__part--right  price-section__part--mb  price-section__part--tar">
-                      <div class="field-num  field-num">
+                      <div class="field-num">
                         <span class="field-num__input-and-btns">
                           <input class="field-num__input" type="number" value="69000" name="price" max="100000" min="50000" step="100">
                           <button class="field-num__btn field-num__btn--minus" type="button">-</button>
@@ -907,7 +913,81 @@
             </article>
 
           </div>
-          <div class="layout-object__aside">desktop price block</div>
+          <div class="layout-object__aside">
+            <div class="object-price-data">
+              <a href="" class="object-price-data__sell-auction-link">
+                <svg width="20" height="20" class=""><use xlink:href="img/sprite-svg.svg#law"></use></svg>
+                Sell at auction
+              </a>
+              <div class="object-price-data__inner">
+                <div class="object-price-data__part  object-price-data__part--price">
+                  <div class="price  price--lg">
+                    <span class="price__text">For sale</span>
+                    <span class="price__inner">
+                      <span class="price__currency">€</span>69,000
+                      <!-- <span class="price__icon  price__icon--up">Last update: up</span> -->
+                      <span class="price__icon  price__icon--down">Last update: down</span>
+                    </span>
+                    <br>
+                    <a href="#price-history" data-toggle="modal" class="price__history-link">Price history</a>
+                  </div>
+                </div>
+                <div class="object-price-data__part  object-price-data__part--check">
+                  <svg width="48" height="48"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#checked"></use></svg>
+                </div>
+                <div class="object-price-data__part  object-price-data__part--mini-price-left">
+                  <div class="object-price-data__mini-price-wrap">
+                    <strong class="object-price-data__mini-price">€ 1,987 per/mo</strong>
+                    <div class="object-price-data__mini-price-descr">Mortgage</div>
+                  </div>
+                </div>
+                <div class="object-price-data__part  object-price-data__part--mini-price-right">
+                  <div class="object-price-data__mini-price-wrap">
+                    <strong class="object-price-data__mini-price">€ 3,400</strong>
+                    <div class="object-price-data__mini-price-descr">Annual income</div>
+                  </div>
+                </div>
+                <div class="object-price-data__part  object-price-data__part--offers">
+                  <a href="" class="info-link">
+                    <svg width="16" height="16"><use xlink:href="img/sprite-svg.svg#info"></use></svg>
+                    Offer your price
+                  </a>
+                  <a href="">Offer from others</a>
+                </div>
+                <form class="object-price-data__part  object-price-data__part--form">
+                  <div class="field-num  field-num--sm">
+                    <span class="field-num__input-and-btns">
+                      <input class="field-num__input" type="number" value="69000" name="price" max="100000" min="50000" step="100">
+                      <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                      <span class="field-num__text-wrap">
+                        <span class="field-num__text-currency">€</span>
+                        <span class="field-num__text-num">69,000</span>
+                      </span>
+                      <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                    </span>
+                  </div>
+                  <button class="btn  btn--success  btn--block  btn--sm">Send offer</button>
+                </form>
+                <div class="object-price-data__part  object-price-data__part--user">
+                  <div class="user-mini  user-mini--lg">
+                    <span class="user-mini__inner">
+                      <img src="img/feedback-avatar-01.png" width="56" height="56" alt="Long user name name name">
+                      <span class="user-mini__text-wrapper">
+                        <span class="user-mini__username">Long user name name name</span>
+                        <span class="user-mini__user-type">Manager</span>
+                        <a href="tel:+30 2310 567914" class="user-mini__user-phone">+30 2310 567914</a>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <a href="" class="btn  btn--block  object-price-data__send-msg">Send message</a>
+              </div>
+              <a href="" class="object-price-data__bottom-link">
+                <svg width="24" height="24" class=""><use xlink:href="img/sprite-svg.svg#calendar-2"></use></svg>
+                Make an appointment
+              </a>
+            </div>
+          </div>
         </div>
 
         <section class="top-rated  top-rated--border-top">

@@ -175,6 +175,13 @@
       }
     }
 
+    &--desktop-hide {
+
+      @media (min-width: $screen-lg) {
+        display: none;
+      }
+    }
+
     &--pt35-xs {
       padding-top: 35px;
     }
@@ -439,6 +446,11 @@
     @media (min-width: $screen-sm) {
       padding-right: 70px;
     }
+
+    @media (min-width: $screen-lg) {
+      width: auto;
+      padding-right: 10px;
+    }
   }
 
   &__header-date {
@@ -453,6 +465,10 @@
       right: 0;
       margin: 0;
     }
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
   }
 
   &__header-id {
@@ -460,6 +476,11 @@
     white-space: nowrap;
     color: $gray;
     font-size: $font-size--small;
+
+    @media (min-width: $screen-lg) {
+      margin-right: 0;
+      margin-left: auto;
+    }
   }
 
   &__header-views-counter {
@@ -467,6 +488,29 @@
     white-space: nowrap;
     color: $gray;
     font-size: $font-size--small;
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+
+    svg {
+      vertical-align: middle;
+      margin-right: 0.8em;
+    }
+  }
+
+  &__header-vc {
+    display: none;
+    margin-left: auto;
+    white-space: nowrap;
+    color: $gray;
+    font-size: $font-size--small;
+    font-weight: 400;
+    transform: translateY(-4px);
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
 
     svg {
       vertical-align: middle;
@@ -486,6 +530,21 @@
     #{$block-name}__location-name {
       padding-top: 0;
       padding-bottom: 0;
+    }
+  }
+
+  &--internal-property-3 {
+    padding-bottom: 65px;
+
+    #{$block-name}__location-name {
+      display: flex;
+      align-items: baseline;
+      padding-top: 20px;
+      padding-bottom: 0;
+
+      // @media (min-width: $screen-lg) {
+      //   padding-right: 80px;
+      // }
     }
   }
 }

@@ -28,4 +28,46 @@
     text-overflow: ellipsis;
   }
 
+
+
+  &--lg {
+
+    img {
+      width: 56px;
+      height: 56px;
+      margin-right: 16px;
+    }
+
+    #{$block-name}__text-wrapper {
+      max-width: calc(100% - 72px);
+    }
+
+    #{$block-name}__username {
+      display: block;
+      width: 100%;
+      margin-bottom: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: $font-size;
+      font-weight: 600;
+      line-height: 1.14;
+    }
+
+    #{$block-name}__user-type {
+      display: block;
+      margin-bottom: 6px;
+      font-size: $font-size--small;
+      line-height: 1.33;
+      color: $gray;
+    }
+
+    #{$block-name}__user-phone {
+      font-size: $font-size;
+      font-weight: 600;
+      line-height: 1.14;
+      color: $text-color;
+      text-decoration: none;
+    }
+  }
 }

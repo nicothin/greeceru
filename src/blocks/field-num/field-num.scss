@@ -64,4 +64,24 @@
     margin-right: 0.3em;
   }
 
+
+
+
+  &--sm {
+
+    #{$block-name}__text-wrap {
+      width: 92px;
+      font-size: $font-size;
+    }
+
+    #{$block-name}__btn {
+      width: 26px;
+      height: 26px;
+      background-size: 12px 12px;
+    }
+
+    #{$block-name}__input-and-btns {
+      min-width: 146px;
+    }
+  }
 }

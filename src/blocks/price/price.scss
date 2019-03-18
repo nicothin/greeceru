@@ -54,6 +54,13 @@
     font-weight: 400;
   }
 
+  &__text {
+    display: block;
+    // margin-bottom: 20px;
+    font-size: $font-size;
+    font-weight: 500;
+  }
+
 
 
   &--lg {
