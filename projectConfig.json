@@ -147,7 +147,9 @@
     "checked": [],
     "field-num": [],
     "price-section": [],
-    "info-link": []
+    "info-link": [],
+    "price-history": [],
+    "user-mini": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -413,6 +413,13 @@ $z-index-modal:               100 !default;
     }
   }
 
+  &__bottom-link-wrap {
+    padding: 35px 0 16px;
+    text-align: center;
+    font-size: $font-size + 1;
+    font-weight: 600;
+  }
+
 
 
   &--open {
@@ -526,6 +533,7 @@ $z-index-modal:               100 !default;
     @media (max-width: ($screen-md - 1)) {
 
       .modal-open &.modal.in {
+        top: 0;
         overflow: hidden;
         background-color: rgba(49, 53, 63, 0.4);
       }
@@ -539,6 +547,12 @@ $z-index-modal:               100 !default;
         max-height: calc(100% - 60px);
         overflow-y: auto;
         background: #fff;
+        transition: transform 0.3s;
+        transform: translateY(100%);
+      }
+
+      &.modal.in .modal__dialog {
+        transform: translateY(0);
       }
 
       .modal__header {

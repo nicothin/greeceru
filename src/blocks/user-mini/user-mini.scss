@@ -1,0 +1,31 @@
+// В этом файле должны быть стили для БЭМ-блока user-mini, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.user-mini {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  width: 100%;
+
+  img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 50%;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__username {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+}

@@ -1,0 +1,139 @@
+// В этом файле должны быть стили для БЭМ-блока price-history, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.price-history {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  width: 100%;
+  font-size: $font-size--small;
+  border-collapse: collapse;
+
+  @media (max-width: ($screen-sm - 1)) {
+    display: block;
+
+    tbody,
+    td {
+      display: block;
+    }
+
+    tr {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      padding: 6px 0;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: $gray-lightest;
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+
+    td {
+      padding: 10px 0;
+      border-bottom: 1px solid $gray-lightest;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+  }
+
+  &__user-wrap {
+
+    .user-mini {
+      max-width: 110px;
+    }
+
+    @media (max-width: ($screen-sm - 1)) {
+      width: 100%;
+
+      .user-mini {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__date-wrap {
+    flex-grow: 1;
+    white-space: nowrap;
+  }
+
+  &__to-down {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    margin-right: 0.3em;
+    border-style: solid;
+    overflow: hidden;
+    color: transparent;
+    border-width: 6px 3px 0 3px;
+    border-color: $color-success transparent transparent transparent;
+    transform: translateY(-0.1em);
+  }
+
+  &__to-up {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    margin-right: 0.3em;
+    border-style: solid;
+    overflow: hidden;
+    color: transparent;
+    border-width: 0 3px 6px 3px;
+    border-color: transparent transparent $color-danger transparent;
+    transform: translateY(-0.1em);
+  }
+
+  &__date {
+    color: $gray;
+  }
+
+  &__price-wrap {
+    flex-shrink: 0;
+    width: 90px;
+    padding-left: 5px;
+    text-align: right;
+  }
+
+  &__price {
+    white-space: nowrap;
+    font-weight: 600;
+  }
+
+  &__percent-wrap {
+    flex-shrink: 0;
+    width: 56px;
+    padding-left: 5px;
+    text-align: right;
+  }
+
+  &__percent {
+    font-weight: 600;
+    color: $color-danger;
+
+    &--green {
+      color: $color-success;
+    }
+  }
+}
+.user-mini {
+
+  &__inner {
+  }
+
+  &__username {
+  }
+
+}
