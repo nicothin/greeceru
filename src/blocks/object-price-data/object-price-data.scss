@@ -6,12 +6,15 @@
 
   $block-name:                &; // #{$block-name}__element {}
 
+  max-width: 400px;
+
   &__sell-auction-link {
     display: inline-block;
     margin-top: 18px;
     margin-bottom: 18px;
     color: $color-success;
     font-size: $font-size--small;
+    transition: color 0.3s;
 
     &:hover,
     &:focus {
@@ -30,7 +33,7 @@
   &__inner {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 24px;
+    padding-top: 12px;
     border-radius: 2px;
     margin-bottom: 25px;
     box-shadow: 0 1px 3px 0 rgba(115, 124, 148, 0.4);
@@ -47,6 +50,7 @@
 
     &--check {
       flex-shrink: 0;
+      padding-top: 18px;
     }
 
     &--mini-price-left {
@@ -63,8 +67,16 @@
       padding-top: 20px;
       padding-bottom: 20px;
 
+      @media (min-width: $screen-xl) {
+        width: 48%;
+
+        .info-link {
+          margin-bottom: 32px;
+        }
+      }
+
       .info-link {
-        // margin-bottom: 28px;
+        font-size: $font-size;
       }
     }
 
@@ -75,6 +87,10 @@
       width: 100%;
       padding-top: 20px;
       padding-bottom: 20px;
+
+      @media (min-width: $screen-xl) {
+        width: 52%;
+      }
 
       .field-num {
         margin-bottom: 15px;

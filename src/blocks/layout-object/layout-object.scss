@@ -10,9 +10,28 @@
     display: flex;
   }
 
+  @media (min-width: $screen-xxl) {
+    width: 1400px;
+    margin: auto;
+  }
+
   &__main {
     flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
     padding: 0 15px;
+
+    @media (min-width: $screen-osx) {
+      padding-right: 30px;
+
+      .list-property {
+        width: 880px;
+      }
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding-right: 50px;
+    }
   }
 
   &__aside {
@@ -23,6 +42,14 @@
       flex-basis: 33%;
       min-width: 33%;
       padding-right: 15px;
+    }
+
+    @media (min-width: $screen-osx) {
+      padding-left: 25px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding-left: 45px;
     }
   }
 
