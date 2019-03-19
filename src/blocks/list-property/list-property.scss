@@ -63,6 +63,10 @@
     @media (min-width: $screen-md) {
       flex-grow: 1;
     }
+
+    &--max433 {
+      max-width: 433px;
+    }
   }
 
   &__subtitle {

@@ -17,11 +17,11 @@
 
   &__main {
     flex-grow: 1;
-    display: flex;
-    justify-content: flex-end;
     padding: 0 15px;
 
     @media (min-width: $screen-osx) {
+      display: flex;
+      justify-content: flex-end;
       padding-right: 30px;
 
       .list-property {
@@ -46,6 +46,10 @@
 
     @media (min-width: $screen-osx) {
       padding-left: 25px;
+
+      .object-price-data {
+        width: 400px;
+      }
     }
 
     @media (min-width: $screen-xxl) {

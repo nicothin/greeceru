@@ -120,6 +120,7 @@
     position: absolute;
     bottom: 20px;
     left: 20px;
+    right: 20px;
     display: flex;
   }
 
@@ -128,6 +129,31 @@
 
     &:not(:last-child) {
       margin-right: 20px;
+    }
+
+    &--right {
+      margin-left: auto;
+    }
+  }
+
+  &__labels-wrap {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    .label {
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__check-sm {
+
+    @media (min-width: $screen-lg) {
+      display: none;
     }
   }
 

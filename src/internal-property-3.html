@@ -57,10 +57,12 @@
               <div class="list-property__main-pict">
                 <div class="main-pict  main-pict--hide-sm">
                   <img src="img/joker.jpg" alt="" class="main-pict__img">
-                  <a href="#gallery-photo" class="main-pict__other" data-toggle="modal">
-                    <img src="img/joker.jpg" alt="" class="main-pict__other-img">
-                    <span class="main-pict__other-text">Photos (12)</span>
-                  </a>
+                  <div class="main-pict__labels-wrap">
+                    <span class="label">Sold</span>
+                  </div>
+                  <div class="checked  main-pict__check-sm" title="Checked">
+                    <svg width="48" height="48"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#checked"></use></svg>
+                  </div>
                   <div class="main-pict__btns">
                     <div class="main-pict__btns-group">
                       <a href="" class="btn-icon  btn-icon--real-btn" title="Add property to compare list">
@@ -69,26 +71,19 @@
                       <a href="" class="btn-icon  btn-icon--real-btn" title="Add property to wishlist">
                         <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
                       </a>
-                      <a href="#notice" class="btn-icon  btn-icon--real-btn" title="Notice about price drop" data-toggle="modal">
-                        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#notice"></use></svg>
-                      </a>
-                      <a href="" class="btn-icon  btn-icon--real-btn" title="Schedule an appointment">
-                        <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#schedule"></use></svg>
-                      </a>
                       <a href="#share" class="btn-icon  btn-icon--real-btn" title="Schedule an appointment" data-toggle="modal">
                         <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#share"></use></svg>
                       </a>
                     </div>
                     <div class="main-pict__btns-group">
-                      <a href="#property-on-map" class="btn-icon  btn-icon--real-btn  btn-icon--add-text" title="View on map">
-                        <svg width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#location"></use></svg>
-                        <span class="btn-icon__text">View on map</span>
+                      <a href="#gallery-modal" class="btn-icon  btn-icon--real-btn  btn-icon--add-text" title="Floorplans" data-toggle="modal">
+                        <svg width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plan"></use></svg>
+                        <span class="btn-icon__text">Floorplans</span>
                       </a>
                     </div>
-                    <div class="main-pict__btns-group">
-                      <a href="#gallery-modal" class="btn-icon  btn-icon--real-btn  btn-icon--add-text" title="Floorplans" data-toggle="modal">
-                        <svg width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#doc"></use></svg>
-                        <span class="btn-icon__text">Floorplans</span>
+                    <div class="main-pict__btns-group  main-pict__btns-group--right">
+                      <a href="#gallery-modal" class="btn-icon  btn-icon--real-btn  btn-icon--text">
+                        <span class="btn-icon__text">Show all 12 photos</span>
                       </a>
                     </div>
                   </div>
@@ -232,7 +227,7 @@
                 <div class="list-property__subtitle-wrap">
                   <h2 class="list-property__subtitle  list-property__subtitle--show-xs  list-property__subtitle--mb20">For sale</h2>
                 </div>
-                <form class="list-property__content-col">
+                <form class="list-property__content-col  list-property__content-col--max433">
                   <div class="price-section">
                     <div class="price-section__part  price-section__part--price  price-section__part--mb">
                       <div class="price  price--lg">
