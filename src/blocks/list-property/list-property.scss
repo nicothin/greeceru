@@ -543,12 +543,8 @@
     #{$block-name}__location-name {
       display: flex;
       align-items: baseline;
-      padding-top: 20px;
+      padding-top: 0;
       padding-bottom: 0;
-
-      // @media (min-width: $screen-lg) {
-      //   padding-right: 80px;
-      // }
     }
   }
 }
