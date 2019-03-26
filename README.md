@@ -1,4 +1,4 @@
-# Проект с gulp [![devDependencies Status](https://david-dm.org/nicothin/NTH-start-project/dev-status.svg)](https://david-dm.org/nicothin/NTH-start-project?type=dev) [![dependencies Status](https://david-dm.org/nicothin/NTH-start-project/status.svg)](https://david-dm.org/nicothin/NTH-start-project)
+# Проект с gulp [![devDependencies Status](https://david-dm.org/nicothin/greeceru/dev-status.svg)](https://david-dm.org/nicothin/greeceru?type=dev) [![dependencies Status](https://david-dm.org/nicothin/greeceru/status.svg)](https://david-dm.org/nicothin/greeceru)
 
 <table>
   <thead>
