@@ -25,6 +25,7 @@
 
   &__labels-wrap {
     position: absolute;
+    z-index: 10;
     top: 16px;
     left: 16px;
     display: flex;
@@ -36,14 +37,15 @@
       max-width: 245px;
     }
 
-    .label {
-      margin-right: 8px;
-      margin-bottom: 8px;
-    }
+    // .label {
+    //   margin-right: 8px;
+    //   margin-bottom: 8px;
+    // }
   }
 
   &__checked {
     position: absolute;
+    z-index: 10;
     top: 16px;
     right: 16px;
     width: 80px;
