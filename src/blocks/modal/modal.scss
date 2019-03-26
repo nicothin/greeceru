@@ -571,6 +571,38 @@ $z-index-modal:               100 !default;
       }
     }
   }
+
+  &--mobile-bottom-drop {
+
+    @media (max-width: ($screen-md - 1)) {
+
+      .modal__body {
+        padding: 0;
+      }
+
+      .drop-menu {
+        margin-top: 22px;
+        margin-bottom: 10px;
+      }
+
+      .drop-menu__item {
+        position: relative;
+
+        &:not(:last-child):before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 40px;
+          right: 90px;
+          border-bottom: 1px solid $border-color;
+        }
+      }
+
+      .drop-menu__link {
+        padding: 16px 90px 16px 40px;
+      }
+    }
+  }
 }
 
 

@@ -103,96 +103,20 @@
                   </div>
                   <div class="main-pict__sup-carousel-btns">
                     <div class="drop-btn  drop-btn--bottom">
-                      <button class="drop-btn__btn" title="Show menu" id="main-pict-id-001-controls" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <button class="drop-btn__btn" title="Show menu" type="button" data-toggle="modal" data-target="#mobile-kebab">
                         <span class="drop-btn__btn-inner">
                           <span class="btn-icon  btn-icon--kebab">
                             <span class="btn-icon__text">Show menu</span>
                           </span>
                         </span>
                       </button>
-                      <div class="drop-btn__drop">
-                        <ul class="drop-menu" aria-labelledby="main-pict-id-001-controls">
-                          <li class="drop-menu__item">
-                            <a href="" class="drop-menu__link">
-                              <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
-                              <span class="drop-menu__item-text">Add to wishlist</span>
-                            </a>
-                          </li>
-                          <li class="drop-menu__item">
-                            <a href="#notice" class="drop-menu__link" data-toggle="modal">
-                              <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#notice"></use></svg>
-                              <span class="drop-menu__item-text">Notice about price drop</span>
-                            </a>
-                          </li>
-                          <li class="drop-menu__item">
-                            <a href="" class="drop-menu__link">
-                              <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#schedule"></use></svg>
-                              <span class="drop-menu__item-text">Send a request</span>
-                            </a>
-                          </li>
-                          <li class="drop-menu__item">
-                            <a href="#gallery-modal" class="drop-menu__link" data-toggle="modal">
-                              <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#doc"></use></svg>
-                              <span class="drop-menu__item-text">Floorplan</span>
-                            </a>
-                          </li>
-                          <li class="drop-menu__item">
-                            <a href="#video" class="drop-menu__link">
-                              <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#play"></use></svg>
-                              <span class="drop-menu__item-text">Video</span>
-                            </a>
-                          </li>
-                        </ul>
-                        <div class="drop-btn__drop-close">
-                          <span class="close" aria-label="Закрыть"><span></span></span>
-                        </div>
-                      </div>
-                      <div class="drop-btn__backdrop"></div>
                     </div>
                     <div class="drop-btn  drop-btn--bottom">
-                      <button class="drop-btn__btn" title="Show menu" id="main-pict-id-001-share" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <button class="drop-btn__btn" title="Show menu"  type="button" data-toggle="modal" data-target="#mobile-share">
                         <span class="drop-btn__btn-inner">
                           <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#share"></use></svg>
                         </span>
                       </button>
-                      <div class="drop-btn__drop">
-                        <ul class="drop-menu" aria-labelledby="main-pict-id-001-share">
-                          <li class="drop-menu__item">
-                            <a href="" class="drop-menu__link">
-                              <span class="social-link"><svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook"></use></svg></span>
-                              <span class="drop-menu__item-text">Facebook</span>
-                            </a>
-                          </li>
-                          <li class="drop-menu__item">
-                            <a href="" class="drop-menu__link">
-                              <span class="social-link"><svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#flash"></use></svg></span>
-                              <span class="drop-menu__item-text">Messenger</span>
-                            </a>
-                          </li>
-                          <li class="drop-menu__item">
-                            <a href="" class="drop-menu__link">
-                              <span class="social-link"><svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#vk"></use></svg></span>
-                              <span class="drop-menu__item-text">Vkontakte</span>
-                            </a>
-                          </li>
-                          <li class="drop-menu__item">
-                            <a href="" class="drop-menu__link">
-                              <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#mail"></use></svg>
-                              <span class="drop-menu__item-text">Mail</span>
-                            </a>
-                          </li>
-                          <li class="drop-menu__item">
-                            <a href="" class="drop-menu__link">
-                              <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#docs"></use></svg>
-                              <span class="drop-menu__item-text">Copy link</span>
-                            </a>
-                          </li>
-                        </ul>
-                        <div class="drop-btn__drop-close">
-                          <span class="close" aria-label="Закрыть"><span></span></span>
-                        </div>
-                      </div>
-                      <div class="drop-btn__backdrop"></div>
                     </div>
                   </div>
                   <div class="checked" title="Checked">
@@ -1181,6 +1105,90 @@
           <div class="modal__bottom-link-wrap">
             <a href="">Follow Price Changes</a>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="mobile-kebab" class="modal  modal--mobile-bottom  modal--mobile-bottom-drop" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <span class="close  close--lg  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+      <div class="modal__content">
+        <div class="modal__body">
+          <ul class="drop-menu">
+            <li class="drop-menu__item">
+              <a href="" class="drop-menu__link">
+                <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wish"></use></svg>
+                <span class="drop-menu__item-text">Add to wishlist</span>
+              </a>
+            </li>
+            <li class="drop-menu__item">
+              <a href="#notice" class="drop-menu__link" data-toggle="modal">
+                <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#notice"></use></svg>
+                <span class="drop-menu__item-text">Notice about price drop</span>
+              </a>
+            </li>
+            <li class="drop-menu__item">
+              <a href="" class="drop-menu__link">
+                <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#schedule"></use></svg>
+                <span class="drop-menu__item-text">Send a request</span>
+              </a>
+            </li>
+            <li class="drop-menu__item">
+              <a href="#gallery-modal" class="drop-menu__link" data-toggle="modal">
+                <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#plan"></use></svg>
+                <span class="drop-menu__item-text">Floorplan</span>
+              </a>
+            </li>
+            <li class="drop-menu__item">
+              <a href="#video" class="drop-menu__link">
+                <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#play"></use></svg>
+                <span class="drop-menu__item-text">Video</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="mobile-share" class="modal  modal--mobile-bottom  modal--mobile-bottom-drop" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <span class="close  close--lg  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+      <div class="modal__content">
+        <div class="modal__body">
+          <ul class="drop-menu">
+            <li class="drop-menu__item">
+              <a href="" class="drop-menu__link">
+                <span class="social-link"><svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook"></use></svg></span>
+                <span class="drop-menu__item-text">Facebook</span>
+              </a>
+            </li>
+            <li class="drop-menu__item">
+              <a href="" class="drop-menu__link">
+                <span class="social-link"><svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#flash"></use></svg></span>
+                <span class="drop-menu__item-text">Messenger</span>
+              </a>
+            </li>
+            <li class="drop-menu__item">
+              <a href="" class="drop-menu__link">
+                <span class="social-link"><svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#vk"></use></svg></span>
+                <span class="drop-menu__item-text">Vkontakte</span>
+              </a>
+            </li>
+            <li class="drop-menu__item">
+              <a href="" class="drop-menu__link">
+                <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#mail"></use></svg>
+                <span class="drop-menu__item-text">Mail</span>
+              </a>
+            </li>
+            <li class="drop-menu__item">
+              <a href="" class="drop-menu__link">
+                <svg class="drop-menu__icon" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#docs"></use></svg>
+                <span class="drop-menu__item-text">Copy link</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
