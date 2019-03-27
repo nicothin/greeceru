@@ -9,6 +9,7 @@
   width: 100%;
   font-size: $font-size--small;
   border-collapse: collapse;
+  margin-bottom: 20px;
 
   @media (max-width: ($screen-sm - 1)) {
     display: block;
