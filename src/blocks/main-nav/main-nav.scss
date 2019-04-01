@@ -280,6 +280,10 @@ $main-menu-mobile-width:      334px !default;
         display: none;
       }
     }
+
+    &--hide {
+      display: none !important;
+    }
   }
 
   &__link,
@@ -304,7 +308,7 @@ $main-menu-mobile-width:      334px !default;
       font-weight: 500;
       white-space: nowrap;
 
-      #{$block-name}__item--more & {
+      #{$block-name}__item--more #{$block-name}__sub-list & {
 
         &:before {
           content: '';
@@ -314,10 +318,13 @@ $main-menu-mobile-width:      334px !default;
           left: 30px;
           height: 1px;
           background-color: $gray-lightest;
+        }
+      }
 
-          #{$block-name}__sub-list #{$block-name}__item:last-child & {
-            display: none;
-          }
+      #{$block-name}__item--more #{$block-name}__sub-list #{$block-name}__item:last-child & {
+
+        &:before {
+          display: none;
         }
       }
     }
@@ -366,6 +373,15 @@ $main-menu-mobile-width:      334px !default;
         display: inline-block;
         vertical-align: -0.3em;
         margin-right: 0.2em;
+      }
+    }
+
+    &--sign-in {
+      padding: 18px;
+      border-left: 1px solid $gray-lightest;
+
+      @media (min-width: $screen-xl) {
+        font-weight: 400;
       }
     }
   }
