@@ -1,4 +1,4 @@
-<header class="page-header" role="banner">
+<header class="page-header  page-header--search" role="banner">
 
   <div class="page-header__inner  page-header__inner--new">
 
@@ -8,12 +8,19 @@
 
     <div id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></div>
 
-    <nav id="main-nav" class="main-nav" role="navigation">
+    <div class="search-form-2">
+      <button class="search-form-2__btn" type="button" id="search-form-2-trigger">
+        <span class="search-form-2__btn-inner">
+          <svg width="16" height="16"><use xlink:href="img/sprite-svg.svg#search"></use></svg>
+        </span>
+      </button>
+      <!-- ВНИМАНИЕ: это лишь триггер вьюпортов 969px и уже, он требует добавления самой формы в контентной области -->
+    </div>
+    <form action="" class="search-form-2__lg-form">
+      <input type="search" class="search-form-2__header-input" placeholder="Find property in Greece" />
+    </form>
 
-      <form class="search-form  search-form--new  page-header__search-new">
-        <input class="search-form__input" type="search" placeholder="Find property in Greece">
-        <button class="search-form__btn">Search</button>
-      </form>
+    <nav id="main-nav" class="main-nav" role="navigation">
 
       <ul class="main-nav__list">
         <li class="main-nav__item">
@@ -117,7 +124,7 @@
     <div class="page-header__new-right">
 
       <ul class="main-nav__list-right">
-        <li class="main-nav__item  main-nav__item--hide">
+        <li class="main-nav__item">
           <a href="" class="main-nav__link  main-nav__link--narrow  main-nav__link--help-center" data-show-help-center>
             <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help-circle"></use></svg>
             <span class="main-nav__help-text">Help Center</span>

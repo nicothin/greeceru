@@ -1,4 +1,4 @@
-<header class="page-header" role="banner">
+<header class="page-header  page-header--help-center" role="banner">
 
   <div class="page-header__inner  page-header__inner--new">
 
@@ -7,6 +7,18 @@
     </a>
 
     <div id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></div>
+
+    <div class="search-form-2">
+      <button class="search-form-2__btn" type="button" id="search-form-2-trigger">
+        <span class="search-form-2__btn-inner">
+          <svg width="16" height="16"><use xlink:href="img/sprite-svg.svg#search"></use></svg>
+        </span>
+      </button>
+      <!-- ВНИМАНИЕ: это лишь триггер вьюпортов 969px и уже, он требует добавления самой формы в контентной области -->
+    </div>
+    <form action="" class="search-form-2__lg-form">
+      <input type="search" class="search-form-2__header-input" placeholder="Find property in Greece" />
+    </form>
 
     <nav id="main-nav" class="main-nav" role="navigation">
 

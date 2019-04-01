@@ -1,0 +1,140 @@
+// В этом файле должны быть стили для БЭМ-блока search-form-2, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.search-form-2 {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  position: relative;
+  z-index: 12;
+  order: -1;
+  height: 100%;
+  width: 56px;
+
+  @media (min-width: $screen-lg) {
+    display: none !important;
+  }
+
+  &__btn {
+    padding: 0;
+    border: none;
+    border-right: 1px solid $gray-lightest;
+    background: none;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__btn-inner {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      fill: $gray;
+      transform: translateY(2px);
+    }
+  }
+
+  &__form {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s;
+
+    @media (min-width: $screen-lg) {
+      display: none !important;
+    }
+
+    &--shown {
+      height: 85px;
+    }
+  }
+
+  &__form-inner {
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 16px;
+  }
+
+  &__input {
+    flex-grow: 1;
+    height: 44px;
+    border: 1px solid $gray-lightest;
+    font-size: $font-size;
+    line-height: 1;
+    padding: 14px;
+
+    &[type='search']::-webkit-search-cancel-button,
+    &[type='search']::-webkit-search-decoration {
+      -webkit-appearance: none; /* stylelint-disable-line  property-no-vendor-prefix */
+    }
+  }
+
+  &__header-input {
+    min-width: 260px;
+    height: 40px;
+    padding: 12px 12px 12px 44px;
+    border: 1px solid $gray-lightest;
+    font-size: $font-size--small;
+    line-height: 1.33;
+    background-image: svg-load('../blocks/search-form/background-img/search.svg');
+    background-repeat: no-repeat;
+    background-position: 14px 50%;
+    box-shadow: 0 1px 2px 0 rgba(115, 124, 148, 0.08);
+
+    &::placeholder {
+      color: rgba($gray, .8);
+      opacity: 1;
+    }
+
+    &[type='search']::-webkit-search-cancel-button,
+    &[type='search']::-webkit-search-decoration {
+      -webkit-appearance: none; /* stylelint-disable-line  property-no-vendor-prefix */
+    }
+  }
+
+  &__start-btn {
+    flex-shrink: 0;
+    padding: 0;
+    background: $color-main;
+    border: none;
+    color: #fff;
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+    }
+
+    svg {
+      fill: #fff;
+    }
+  }
+
+  &__lg-form {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      position: relative;
+      z-index: 12;
+      display: block;
+      order: -1;
+      margin-left: 9px;
+    }
+
+    @media (min-width: $screen-xl) {
+      order: 0;
+    }
+
+    @media (min-width: $screen-osx) {
+      margin-left: 32px;
+    }
+  }
+}

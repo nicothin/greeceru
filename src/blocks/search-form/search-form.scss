@@ -3,6 +3,9 @@
 // Не пишите здесь другие селекторы.
 
 .search-form {
+
+  $block-name:                &;
+
   margin: 0;
   padding: 0;
   height: $header-height;
@@ -32,8 +35,4 @@
   &__btn {
     display: none;
   }
-
-
-
-  &--new {}
 }

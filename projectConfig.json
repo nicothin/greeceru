@@ -150,7 +150,8 @@
     "info-link": [],
     "price-history": [],
     "user-mini": [],
-    "object-price-data": []
+    "object-price-data": [],
+    "search-form-2": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -225,4 +225,19 @@
       }
     }
   }
+
+  &--search {
+
+    .main-nav__link--help-center {
+      display: none !important;
+    }
+  }
+
+  &--help-center {
+
+    .search-form-2,
+    .search-form-2__lg-form {
+      display: none !important;
+    }
+  }
 }

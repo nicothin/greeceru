@@ -1,5 +1,10 @@
 $( document ).ready(function() {
 
+  // Клик на кнопке показа формы поиска (мобилка)
+  $('#search-form-2-trigger').on('click', function(){
+    $('#search-form-2-form').toggleClass('search-form-2__form--shown');
+  });
+
   // Поля формы с выбором кол-ва
   var fieldsNum = document.querySelectorAll( '.field-num' );
   if(fieldsNum.length) {
