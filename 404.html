@@ -29,7 +29,7 @@
 
     <div class="page__content">
 
-      <header class="page-header" role="banner">
+      <header class="page-header  page-header--help-center" role="banner">
 
         <div class="page-header__inner  page-header__inner--new">
 
@@ -39,20 +39,27 @@
 
           <div id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></div>
 
+          <div class="search-form-2">
+            <button class="search-form-2__btn" type="button" id="search-form-2-trigger">
+              <span class="search-form-2__btn-inner">
+                <svg width="16" height="16"><use xlink:href="img/sprite-svg.svg#search"></use></svg>
+              </span>
+            </button>
+            <!-- ВНИМАНИЕ: это лишь триггер вьюпортов 969px и уже, он требует добавления самой формы в контентной области -->
+          </div>
+          <form action="" class="search-form-2__lg-form">
+            <input type="search" class="search-form-2__header-input" placeholder="Find property in Greece" />
+          </form>
+
           <nav id="main-nav" class="main-nav" role="navigation">
 
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a href="search.html" class="main-nav__link">Sale</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="search.html" class="main-nav__link">Long Term Rental</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="search.html" class="main-nav__link">Vacation Rental</a>
+                <!-- Базовый пункт -->
+                <a href="" class="main-nav__link">Some Item</a>
               </li>
               <li class="main-nav__item  main-nav__item--more">
-                <!-- Этот пункт не видно на мобильных! -->
+                <!-- Этот пункт не видно на 1169 и более узких! -->
                 <span class="main-nav__pseudolink  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler>More</span>
                 <div class="main-nav__lvl  main-nav__lvl--more">
                   <ul class="main-nav__sub-list">
@@ -65,7 +72,50 @@
                   </ul>
                 </div>
               </li>
+              <li class="main-nav__item  main-nav__item--contacts-new  main-nav__item--mobile-separator">
+                <!-- Базовый неприкосновенный пункт -->
+                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler="">Contacts</span>
+                <span class="main-nav__pseudolink  main-nav__pseudolink--phone  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler="">Contact Us</span>
+                <div class="main-nav__lvl  main-nav__lvl--contacts">
+                  <div class="main-nav__breadcrumbs" style="display:none;">
+                    <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-hide="">Back</span>
+                    <span class="main-nav__breadcrumbs-item">&nbsp;&nbsp;&gt;&nbsp; Contacts</span>
+                  </div>
+                  <ul class="contacts-list">
+                    <li class="contacts-list__item">
+                      <b class="contacts-list__item-name">Phone Numbers</b>
+                      <ul class="contacts-list__phones">
+                        <li class="contacts-list__phone-item">
+                          <span class="contacts-list__phone">Central Office</span>
+                          <a href="tel:+30 2310-567-433" class="contacts-list__phone-num" tabindex="-1">+30 2310-567-433</a>
+                        </li>
+                        <li class="contacts-list__phone-item">
+                          <span class="contacts-list__phone">Contact Manager</span>
+                          <a href="tel:+30 2310-557-151" class="contacts-list__phone-num" tabindex="-1">+30 2310-557-151</a>
+                        </li>
+                        <li class="contacts-list__phone-item">
+                          <span class="contacts-list__phone">Fax</span>
+                          <a href="tel:+30 2310-557-151" class="contacts-list__phone-num" tabindex="-1">+30 2310-557-151</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="contacts-list__item">
+                      <b class="contacts-list__item-name">Address</b>
+                      <span class="contacts-list__item-text">Nikis Avenue 1,  56424 Thessaloniki, Greece</span>
+                    </li>
+                    <li class="contacts-list__item">
+                      <b class="contacts-list__item-name">Skype</b>
+                      <a href="skype:Greece.ru?chat" class="contacts-list__item-text" tabindex="-1">Greece.ru</a>
+                    </li>
+                    <li class="contacts-list__item">
+                      <b class="contacts-list__item-name">Email address</b>
+                      <a href="email:support@greece.ru" class="contacts-list__item-text" tabindex="-1">support@greece.ru</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
               <li class="main-nav__item  main-nav__item--xl-none  main-nav__item--mobile-separator">
+                <!-- Этот пункт не видно на 1170 и более широких! (выбор языка дублирован ниже) -->
                 <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler>Language: <span data-main-nav-submenu-toggler>English</span></span>
                 <span class="main-nav__pseudolink  main-nav__pseudolink--language">En</span>
                 <div class="main-nav__lvl  main-nav__lvl--language">
@@ -93,6 +143,7 @@
                 </div>
               </li>
               <li class="main-nav__item  main-nav__item--md-none  main-nav__item--mobile-separator">
+                <!-- Этот пункт не видно на 767 и более узких! (кнопка дублирована ниже) -->
                 <a href="" class="main-nav__link">Καταχώρηση ακινήτου</a>
               </li>
             </ul>
@@ -103,19 +154,14 @@
 
           <div class="page-header__new-right">
 
-            <!-- <form class="search-form  page-header__search">
-              <input class="search-form__input" type="search" placeholder="Type object id to search...">
-              <button class="search-form__btn">Search</button>
-            </form> -->
-
             <ul class="main-nav__list-right">
               <li class="main-nav__item">
-                <a href="" class="main-nav__pseudolink  main-nav__link--narrow  main-nav__link--help-center" data-show-help-center>
+                <a href="" class="main-nav__link  main-nav__link--narrow  main-nav__link--help-center" data-show-help-center>
                   <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help-circle"></use></svg>
                   <span class="main-nav__help-text">Help Center</span>
                 </a>
               </li>
-              <!-- <li class="main-nav__item"><a href="#sign-in" data-toggle="modal" class="main-nav__pseudolink">Sign In</a></li> -->
+              <!-- <li class="main-nav__item"><a href="#sign-in" data-toggle="modal" class="main-nav__link  main-nav__link--sign-in">Sign In</a></li> -->
               <li class="login  login--user">
                 <span class="login__user-info" data-usermenu-toggler>
                   <img src="img/feedback-avatar-01.png" alt="Eugeny" class="login__avatar">
