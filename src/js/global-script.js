@@ -1,10 +1,11 @@
 $( document ).ready(function() {
 
+  // фиксация сайдбара на странице объекта
   var Sticky = new hcSticky('.object-price-data', {
     stickTo: '.layout-object__aside',
     top: 56,
     responsive: {
-      970: {
+      969: {
         disable: true
       }
     }
