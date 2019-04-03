@@ -5461,6 +5461,8 @@ a:hover .feedback__slider-control-arrow,
   white-space: nowrap;
   color: #8891a6;
   font-size: 12px; }
+.list-property__header-date-word {
+  display: none; }
 .list-property__header-id {
   margin-right: 1em;
   white-space: nowrap;
@@ -9983,7 +9985,8 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
     color: #31353f;
     text-decoration: none; }
 .object-price-data {
-  max-width: 400px; }
+  max-width: 400px;
+  padding-bottom: 30px; }
 .object-price-data__sell-auction-link {
     display: inline-block;
     margin-top: 18px;
@@ -10956,6 +10959,8 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
       width: 260px;
       padding: 0 15px;
       margin-bottom: 30px; }
+    .list-property__header-date-word {
+      display: inline; }
       .field-multifile__plus {
         fill: #31353f; }
       .field-multifile__text-mini {
@@ -11640,7 +11645,7 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
       width: auto;
       padding-right: 10px; }
     .list-property__header-date {
-      display: none; }
+      top: -17px; }
     .list-property__header-id {
       margin-right: 0;
       margin-left: auto; }
