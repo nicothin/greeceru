@@ -471,12 +471,16 @@
     }
 
     @media (min-width: $screen-lg) {
-      display: none;
+      top: -17px;
     }
   }
 
   &__header-date-word {
     display: none;
+
+    @media (min-width: $screen-md) {
+      display: inline;
+    }
   }
 
   &__header-id {
