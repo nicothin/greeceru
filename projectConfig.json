@@ -180,7 +180,8 @@
     "./node_modules/bootstrap/js/modal.js",
     "./node_modules/bootstrap/js/tab.js",
     "./node_modules/object-fit-images/dist/ofi.js",
-    "./node_modules/owl.carousel/dist/owl.carousel.js"
+    "./node_modules/owl.carousel/dist/owl.carousel.js",
+    "./src/js/hc-sticky.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"
