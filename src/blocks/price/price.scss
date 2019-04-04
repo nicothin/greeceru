@@ -3,6 +3,9 @@
 // Не пишите здесь другие селекторы.
 
 .price {
+
+  $block-name:                &; // #{$block-name}__
+
   font-size: 21px; // нет переменной
   line-height: 1em;
 
@@ -71,5 +74,21 @@
   &--sm {
     font-size: 16px;
     font-weight: 500;
+  }
+
+  &--sidebar {
+    position: relative;
+
+    #{$block-name}__text {
+      line-height: 1;
+    }
+
+    #{$block-name}__inner {
+      line-height: 1.33;
+    }
+
+    #{$block-name}__history-link {
+      line-height: 1;
+    }
   }
 }

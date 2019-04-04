@@ -1,0 +1,232 @@
+// В этом файле должны быть стили для БЭМ-блока popover, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+$arr-bd-1:                    8px;
+
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+  max-width: 330px;
+  padding: 16px 24px;
+  font-size: $font-size--small;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 2px 40px 0 rgba(72, 72, 72, 0.35);
+  transition: opacity 0.15s linear;
+
+  &.fade {
+    opacity: 0;
+  }
+
+  &.fade.in {
+    opacity: 1;
+  }
+
+  @media (min-width: $screen-xl) {
+    max-width: 380px;
+  }
+
+  &.top {
+    margin-top: -10px;
+  }
+
+  &.right {
+    margin-left: 10px;
+  }
+
+  &.bottom {
+    margin-top: 2px;
+
+    .object-price-data__part--mini-price-left + & {
+      // transform: translateX(40px);
+
+      @media (min-width: $screen-xl) {
+        // transform: translateX(165px);
+      }
+    }
+  }
+
+  &.left {
+    margin-left: -10px;
+  }
+
+  &__title-gray {
+    color: $gray;
+    font-weight: 400;
+  }
+
+  &__tables-wrap {
+    margin-top: 18px;
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      width: 332px;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    margin-bottom: 8px;
+    border-collapse: collapse;
+    color: $gray;
+    line-height: 1.33;
+
+    @media (min-width: $screen-xl) {
+
+      &:nth-child(1) {
+        margin-right: 8px;
+      }
+
+      &:nth-child(2) {
+        margin-left: 8px;
+      }
+    }
+
+    tr:not(:last-child) {
+
+      td {
+        border-bottom: 1px solid $border-color;
+      }
+    }
+
+    td {
+      padding: 8px 0;
+      white-space: nowrap;
+
+      &:nth-child(2) {
+        padding-left: 8px;
+        text-align: right;
+      }
+    }
+  }
+
+  &__auction {
+    position: relative;
+    width: 266px;
+    padding-left: 46px;
+    font-size: $font-size--small;
+    line-height: 1.33em;
+    color: $gray;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      fill: $color-success;
+    }
+  }
+
+  &__from-check-icon {
+    width: 210px;
+    font-size: $font-size--small;
+    line-height: 1.33em;
+    color: $gray;
+  }
+}
+
+// ППЦ, сраный BS.
+
+.popover-title {
+  margin: 0 0 10px;
+  font-size: $font-size--h3;
+  line-height: 1.5;
+  font-weight: 600;
+
+  small {
+    display: block;
+    margin-top: 4px;
+    font-size: $font-size--small;
+    line-height: 1;
+  }
+}
+
+.popover-content {}
+
+.popover > .arrow {
+
+  &,
+  &:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+  }
+}
+
+.popover > .arrow {
+  border-width: $arr-bd-1;
+}
+
+.popover > .arrow:after {
+  border-width: $arr-bd-1;
+  content: "";
+}
+
+.popover {
+
+  &.top > .arrow {
+    left: 50%;
+    margin-left: -$arr-bd-1;
+    border-bottom-width: 0;
+    bottom: -$arr-bd-1;
+
+    &:after {
+      content: " ";
+      bottom: 1px;
+      margin-left: -$arr-bd-1;
+      border-bottom-width: 0;
+      border-top-color: #fff;
+    }
+  }
+
+  &.right > .arrow {
+    top: 50%;
+    left: -$arr-bd-1;
+    margin-top: -$arr-bd-1;
+    border-left-width: 0;
+
+    &:after {
+      content: " ";
+      left: 1px;
+      bottom: -$arr-bd-1;
+      border-left-width: 0;
+      border-right-color: #fff;
+    }
+  }
+
+  &.bottom > .arrow {
+    // left: 60px !important;
+    margin-left: -$arr-bd-1;
+    border-top-width: 0;
+    top: -$arr-bd-1;
+
+    &:after {
+      content: " ";
+      top: 1px;
+      margin-left: -$arr-bd-1;
+      border-top-width: 0;
+      border-bottom-color: #fff;
+    }
+  }
+
+  &.left > .arrow {
+    top: 50%;
+    right: -$arr-bd-1;
+    margin-top: -$arr-bd-1;
+    border-right-width: 0;
+
+    &:after {
+      content: " ";
+      right: 1px;
+      border-right-width: 0;
+      border-left-color: #fff;
+      bottom: -$arr-bd-1;
+    }
+  }
+}

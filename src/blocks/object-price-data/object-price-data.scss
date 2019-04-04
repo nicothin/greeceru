@@ -34,7 +34,7 @@
   &__inner {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 12px;
+    // padding-top: 12px;
     border-radius: 2px;
     margin-bottom: 25px;
     box-shadow: 0 1px 3px 0 rgba(115, 124, 148, 0.4);
@@ -47,37 +47,86 @@
 
     &--price {
       flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 24px;
+      padding-bottom: 24px;
     }
 
     &--check {
       flex-shrink: 0;
-      padding-top: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 24px;
+      padding-bottom: 24px;
     }
 
     &--mini-price-left {
       width: 50%;
       border-right: 1px solid $gray-lightest;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        background: $color-main--ultralight;
+      }
     }
 
     &--mini-price-right {
       width: 50%;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        background: $color-main--ultralight;
+      }
     }
 
     &--offers {
       width: 100%;
       padding-top: 20px;
       padding-bottom: 20px;
+      padding-right: 0;
 
       @media (min-width: $screen-xl) {
         width: 48%;
-
-        .info-link {
-          margin-bottom: 32px;
-        }
       }
 
       .info-link {
         font-size: $font-size;
+      }
+    }
+
+    &--offers-2 {
+      width: 50%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-right: 5px;
+    }
+
+    &--offers-price {
+      width: 50%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      text-align: center;
+
+      .btn {
+        max-width: 100%;
+      }
+
+      #{$block-name}__offer-you {
+        display: block;
+        white-space: nowrap;
+        margin-bottom: 22px;
+      }
+    }
+
+    &--offers-full-line {
+
+      @media (min-width: $screen-xl) {
+        width: 100%;
       }
     }
 
@@ -86,7 +135,7 @@
       flex-direction: column;
       align-items: center;
       width: 100%;
-      padding-top: 20px;
+      padding-top: 16px;
       padding-bottom: 20px;
 
       @media (min-width: $screen-xl) {
@@ -108,6 +157,53 @@
       padding-top: 28px;
       padding-bottom: 28px;
     }
+
+    &--cong {
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__check-icon-wrap {
+    position: relative;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    & + .popover {
+      padding: 16px;
+    }
+  }
+
+  &__offer-you {
+    display: inline-block;
+    font-size: $font-size;
+
+    &--red {
+      color: $color-danger;
+    }
+
+    &--green {
+      color: $color-success;
+    }
+  }
+
+  &__you-last-offer {
+    min-height: 31px;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    font-size: $font-size--small;
+    line-height: 1.33;
+    color: $gray;
+  }
+
+  &__you-last-offer-num {
+    white-space: nowrap;
+    color: $text-color;
   }
 
   &__mini-price {

@@ -151,7 +151,8 @@
     "price-history": [],
     "user-mini": [],
     "object-price-data": [],
-    "search-form-2": []
+    "search-form-2": [],
+    "popover": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -177,6 +178,7 @@
     "./node_modules/bootstrap/js/transition.js",
     "./node_modules/bootstrap/js/dropdown.js",
     "./node_modules/bootstrap/js/tooltip.js",
+    "./node_modules/bootstrap/js/popover.js",
     "./node_modules/bootstrap/js/modal.js",
     "./node_modules/bootstrap/js/tab.js",
     "./node_modules/object-fit-images/dist/ofi.js",

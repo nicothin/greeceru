@@ -69,6 +69,8 @@
 
     @media (min-width: $screen-lg) {
       display: block;
+      position: relative;
+      z-index: 100;
       flex-basis: 33%;
       min-width: 33%;
       padding-right: 15px;
