@@ -394,10 +394,14 @@
                       </div>
                     </div>
                     <div class="price-section__part  price-section__part--help">
-                      <a href="" class="info-link">
+                      <span
+                        class="info-link"
+                        data-toggle="popover"
+                        data-placement="top"
+                        data-content="<div class='popover__auction'><svg width='30' height='30'><use xlink:href='img/sprite-svg.svg#law'></use></svg>You can customize and negotiate the price. If the property is a little overpriced, you might offer less, but if it’s your «dream home»</div>"
+                      >
                         <svg width="16" height="16"><use xlink:href="img/sprite-svg.svg#info"></use></svg>
-                        Offer your price
-                      </a>
+                      </span> Offer your price
                     </div>
                     <div class="price-section__part">
                       <button class="btn  btn--success  btn--block">Send offer</button>
@@ -1053,37 +1057,95 @@
               </a>
               <div class="object-price-data__inner">
                 <div class="object-price-data__part  object-price-data__part--price">
-                  <div class="price  price--lg">
+                  <div class="price  price--lg  price--sidebar">
+                    <span class="price__text">For sale</span>
+                    <span class="price__inner">
+                      <span class="price__currency">€</span>69,000
+                      <span class="price__icon  price__icon--up">Last update: up</span>
+                      <!-- <span class="price__icon  price__icon--down">Last update: down</span> -->
+                    </span>
+                    <br>
+                    <a href="#price-history" data-toggle="modal" class="price__history-link">See price change</a>
+                  </div>
+                </div>
+                <div class="object-price-data__part  object-price-data__part--check">
+                  <div
+                    class="object-price-data__check-icon-wrap"
+                    data-toggle="popover"
+                    data-placement="left"
+                    data-trigger="hover"
+                    data-delay='{ "show": 0, "hide": 2000 }'
+                    data-content="<div class='popover__from-check-icon'>Verified documents means that our agency has checked the documents, the object is ready for sale. <br><a href=''>Read more</a></div>"
+                  >
+                    <svg width="48" height="48"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#checked"></use></svg>
+                  </div>
+                </div>
+                <div class="object-price-data__part  object-price-data__part--price">
+                  <div class="price  price--lg  price--sidebar">
                     <span class="price__text">For sale</span>
                     <span class="price__inner">
                       <span class="price__currency">€</span>69,000
                       <!-- <span class="price__icon  price__icon--up">Last update: up</span> -->
                       <span class="price__icon  price__icon--down">Last update: down</span>
                     </span>
-                    <br>
-                    <a href="#price-history" data-toggle="modal" class="price__history-link">Price history</a>
                   </div>
                 </div>
                 <div class="object-price-data__part  object-price-data__part--check">
-                  <svg width="48" height="48"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#checked"></use></svg>
+                  <div
+                    class="object-price-data__check-icon-wrap"
+                    data-toggle="popover"
+                    data-placement="left"
+                    data-trigger="hover"
+                    data-delay='{ "show": 0, "hide": 2000 }'
+                    data-content="<div class='popover__from-check-icon'>Verified documents means that our agency has checked the documents, the object is ready for sale. <br><a href=''>Read more</a></div>"
+                  >
+                    <svg width="48" height="48"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#checked"></use></svg>
+                  </div>
                 </div>
-                <div class="object-price-data__part  object-price-data__part--mini-price-left">
+                <div
+                  class="object-price-data__part  object-price-data__part--mini-price-left"
+                  data-toggle="popover"
+                  data-placement="bottom"
+                  data-trigger="hover"
+                  data-delay='{ "show": 0, "hide": 2000 }'
+                  title="Mortgage <br><small><span class='popover__title-gray'>Monthly payment</span> € 1,987</small>"
+                  data-content="<div class='popover__tables-wrap'><table class='popover__table'><tr><td>LOAN SIZE</td><td><strong>67%</strong></td></tr><tr><td>LOAN SIZE</td><td><strong>25 years</strong></td></tr></table><table class='popover__table'><tr><td>INTEREST RATE</td><td><strong>67%</strong></td></tr><tr><td>DOWN PAYMENT</td><td><strong>€ 148,000</strong></td></tr></table></div><a href='' class='btn  btn--sm'>Contact with manager</a>"
+                >
                   <div class="object-price-data__mini-price-wrap">
                     <strong class="object-price-data__mini-price">€ 1,987 per/mo</strong>
                     <div class="object-price-data__mini-price-descr">Mortgage</div>
                   </div>
                 </div>
-                <div class="object-price-data__part  object-price-data__part--mini-price-right">
+                <div
+                  class="object-price-data__part  object-price-data__part--mini-price-right"
+                  data-toggle="popover"
+                  data-placement="bottom"
+                  data-trigger="hover"
+                  data-delay='{ "show": 0, "hide": 2000 }'
+                  title="Mortgage <br><small><span class='popover__title-gray'>Monthly payment</span> € 1,987</small>"
+                  data-content="<div class='popover__tables-wrap'><table class='popover__table'><tr><td>LOAN SIZE</td><td><strong>67%</strong></td></tr><tr><td>LOAN SIZE</td><td><strong>25 years</strong></td></tr></table><table class='popover__table'><tr><td>INTEREST RATE</td><td><strong>67%</strong></td></tr><tr><td>DOWN PAYMENT</td><td><strong>€ 148,000</strong></td></tr></table></div><a href='' class='btn  btn--sm'>Contact with manager</a>"
+                >
                   <div class="object-price-data__mini-price-wrap">
                     <strong class="object-price-data__mini-price">€ 3,400</strong>
                     <div class="object-price-data__mini-price-descr">Annual income</div>
                   </div>
                 </div>
                 <div class="object-price-data__part  object-price-data__part--offers">
-                  <a href="" class="info-link">
+                  <span
+                    class="info-link"
+                    data-toggle="popover"
+                    data-placement="top"
+                    data-trigger="hover"
+                    data-content="<div class='popover__auction'><svg width='30' height='30'><use xlink:href='img/sprite-svg.svg#law'></use></svg>You can customize and negotiate the price. If the property is a little overpriced, you might offer less, but if it’s your «dream home»</div>"
+                  >
                     <svg width="16" height="16"><use xlink:href="img/sprite-svg.svg#info"></use></svg>
-                    Offer your price
-                  </a>
+                  </span>
+                  <span class="object-price-data__offer-you">Offer your price</span>
+                  <!-- ВНИМАНИЕ! Дизайн сделан так, что написаный ниже див всегда должен быть в разметке, даже если ничего не содержит :( -->
+                  <div class="object-price-data__you-last-offer">
+                    Your last offer was
+                    <strong class="object-price-data__you-last-offer-num">€ 169,100</strong>
+                  </div>
                   <a href="">Offer from others</a>
                 </div>
                 <form class="object-price-data__part  object-price-data__part--form">
@@ -1100,6 +1162,98 @@
                   </div>
                   <button class="btn  btn--success  btn--block  btn--sm">Send offer</button>
                 </form>
+                <div class="object-price-data__part  object-price-data__part--offers">
+                  <span
+                    class="info-link"
+                    data-toggle="popover"
+                    data-placement="top"
+                    data-trigger="hover"
+                    data-content="<div class='popover__auction'><svg width='30' height='30'><use xlink:href='img/sprite-svg.svg#law'></use></svg>You can customize and negotiate the price. If the property is a little overpriced, you might offer less, but if it’s your «dream home»</div>"
+                  >
+                    <svg width="16" height="16"><use xlink:href="img/sprite-svg.svg#info"></use></svg>
+                  </span>
+                  <span class="object-price-data__offer-you">Offer your price</span>
+                  <!-- ВНИМАНИЕ! Дизайн сделан так, что написаный ниже див всегда должен быть в разметке, даже если ничего не содержит :( -->
+                  <div class="object-price-data__you-last-offer"></div>
+                  <a href="">Offer from others</a>
+                </div>
+                <form class="object-price-data__part  object-price-data__part--form">
+                  <div class="field-num  field-num--sm">
+                    <span class="field-num__input-and-btns">
+                      <input class="field-num__input" type="number" value="69000" name="price" max="100000" min="50000" step="100">
+                      <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                      <span class="field-num__text-wrap">
+                        <span class="field-num__text-currency">€</span>
+                        <span class="field-num__text-num">69,000</span>
+                      </span>
+                      <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                    </span>
+                  </div>
+                  <button class="btn  btn--success  btn--block  btn--sm">Send offer</button>
+                </form>
+                <div class="object-price-data__part  object-price-data__part--offers  object-price-data__part--offers-full-line">
+                  <span class="object-price-data__offer-you">Waiting for response</span>
+                  <!-- ВНИМАНИЕ! Дизайн сделан так, что написаный ниже див всегда должен быть в разметке, даже если ничего не содержит :( -->
+                  <div class="object-price-data__you-last-offer">
+                    Within <strong class="object-price-data__you-last-offer-num">one week</strong>. Your offer is <strong class="object-price-data__you-last-offer-num">€ 68,100</strong>
+                  </div>
+                  <a href="">Offer from others</a>
+                </div>
+                <div class="object-price-data__part  object-price-data__part--offers-2">
+                  <span class="object-price-data__offer-you  object-price-data__offer-you--red">Offer your price</span>
+                  <!-- ВНИМАНИЕ! Дизайн сделан так, что написаный ниже див всегда должен быть в разметке, даже если ничего не содержит :( -->
+                  <div class="object-price-data__you-last-offer">
+                    You can offer a different price
+                  </div>
+                  <a href="">Offer from others</a>
+                </div>
+                <div class="object-price-data__part  object-price-data__part--offers-price">
+                  <span class="object-price-data__offer-you  object-price-data__offer-you--red">€ 169,100</span>
+                  <a href="" class="btn  btn--white  btn--sm">Make new offer</a>
+                </div>
+                <div class="object-price-data__part  object-price-data__part--cong">
+                  <span class="object-price-data__offer-you  object-price-data__offer-you--green">Congratulations!</span>
+                  <div class="object-price-data__you-last-offer">
+                    You can offer with a price of <strong class="object-price-data__you-last-offer-num">€ 3,400</strong> was accepted! <br>
+                    Our manager will contact you in <strong class="object-price-data__you-last-offer-num">24 hours</strong>.
+                  </div>
+                </div>
+                <div class="object-price-data__part  object-price-data__part--offers">
+                  <span
+                    class="info-link"
+                    data-toggle="popover"
+                    data-placement="top"
+                    data-trigger="hover"
+                    data-content="<div class='popover__auction'><svg width='30' height='30'><use xlink:href='img/sprite-svg.svg#law'></use></svg>You can customize and negotiate the price. If the property is a little overpriced, you might offer less, but if it’s your «dream home»</div>"
+                  >
+                    <svg width="16" height="16"><use xlink:href="img/sprite-svg.svg#info"></use></svg>
+                  </span>
+                  <span class="object-price-data__offer-you  object-price-data__offer-you--green">Auction just start</span>
+                  <div class="object-price-data__you-last-offer">
+                    Be first, make your price offer
+                  </div>
+                </div>
+                <form class="object-price-data__part  object-price-data__part--form">
+                  <div class="field-num  field-num--sm">
+                    <span class="field-num__input-and-btns">
+                      <input class="field-num__input" type="number" value="69000" name="price" max="100000" min="50000" step="100">
+                      <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                      <span class="field-num__text-wrap">
+                        <span class="field-num__text-currency">€</span>
+                        <span class="field-num__text-num">69,000</span>
+                      </span>
+                      <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                    </span>
+                  </div>
+                  <button class="btn  btn--success  btn--block  btn--sm">Send offer</button>
+                </form>
+                <div class="object-price-data__part  object-price-data__part--cong">
+                  <span class="object-price-data__offer-you  object-price-data__offer-you--red">Auction is closed</span>
+                  <div class="object-price-data__you-last-offer">
+                    Sorry, auction was close, your offer <strong class="object-price-data__you-last-offer-num">€ 3,400</strong> was rejected. <br>
+                    Won the price in <strong class="object-price-data__you-last-offer-num">€ 73,400</strong>.
+                  </div>
+                </div>
                 <div class="object-price-data__part  object-price-data__part--user">
                   <div class="user-mini  user-mini--lg">
                     <span class="user-mini__inner">
