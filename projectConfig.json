@@ -152,7 +152,8 @@
     "user-mini": [],
     "object-price-data": [],
     "search-form-2": [],
-    "popover": []
+    "popover": [],
+    "card-2": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
