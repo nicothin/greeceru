@@ -57,8 +57,9 @@
   &__user-menu-link {
     display: block;
     position: relative;
-    padding: 15px 0 15px 36px;
+    padding: 13px 0 13px 36px;
     color: $text-color;
+    line-height: 24px;
     transition: color $transition-time;
 
     &:hover,
@@ -70,9 +71,13 @@
       }
     }
 
+    .label {
+      margin-left: 0.3em;
+    }
+
     svg {
       position: absolute;
-      top: 15px;
+      top: 16px;
       left: 0;
       transition: fill $transition-time;
     }

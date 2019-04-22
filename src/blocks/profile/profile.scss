@@ -17,6 +17,24 @@
     }
   }
 
+  &__header-group {
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 25px;
+
+      #{$block-name}__properties-text {
+        margin-right: auto;
+        margin-bottom: 0;
+      }
+
+      #{$block-name}__properties-btns {
+        flex-shrink: 0;
+      }
+    }
+  }
+
   &__descr {
     margin-top: -10px;
   }
@@ -30,10 +48,11 @@
   }
 
   &__info {
+    position: relative;
     border: 1px solid $gray-lightest;
     padding: 40px 30px 30px;
     margin: 0 auto 30px;
-    max-width: 450px;
+    // max-width: 450px;
 
     @media (min-width: $screen-lg) {
       width: 270px;
