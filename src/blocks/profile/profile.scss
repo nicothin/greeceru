@@ -52,7 +52,7 @@
     border: 1px solid $gray-lightest;
     padding: 40px 30px 30px;
     margin: 0 auto 30px;
-    // max-width: 450px;
+    max-width: 450px;
 
     @media (min-width: $screen-lg) {
       width: 270px;
@@ -95,6 +95,13 @@
         max-width: 750px;
       }
     }
+
+    &--wmaxw {
+
+      @media (min-width: $screen-lg) {
+        max-width: calc(100% - 285px);
+      }
+    }
   }
 
   &__content-item {
@@ -120,6 +127,11 @@
   &__properties-list {
 
     .card {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .card-2 {
       margin-left: auto;
       margin-right: auto;
     }

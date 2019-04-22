@@ -3,9 +3,18 @@
 // Не пишите здесь другие селекторы.
 
 .close-circle {
+
+  $block-name:                &; // #{$block-name}__element {}
+
   background: transparent;
   padding: 0;
   border: 0;
+
+  .close {
+    display: inline-flex;
+    width: 8px;
+    height: 8px;
+  }
 
   &__inner {
     display: inline-flex;
@@ -20,9 +29,16 @@
     border: 2px solid $gray-lightest;
   }
 
-  .close {
-    display: inline-flex;
-    width: 8px;
-    height: 8px;
+  &--lg {
+
+    #{$block-name}__inner {
+      width: 34px;
+      height: 34px;
+    }
+
+    .close {
+      width: 14px;
+      height: 14px;
+    }
   }
 }
