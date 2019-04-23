@@ -10,7 +10,7 @@
 
 <body>
 
-  <div class="page__inner  page__inner--has-bottom-btns">
+  <div class="page__inner"> <!-- page__inner--has-bottom-btns если хочется прибитых кнопок в мобилке -->
 
     <div class="page__content">
 
@@ -106,7 +106,7 @@
 
                 <div class="profile__properties-sale">
 
-                  <header class="profile__header-group">
+                  <header class="profile__header-group  profile__header-group--mobile-btns">
                     <h2 class="profile__properties-text  profile__properties-text--sub-btns">Properties for sale</h2>
                     <div class="profile__properties-btns">
                       <a href="" class="btn  btn--white">Marketing tools</a>
@@ -115,7 +115,6 @@
                   </header>
 
                   <div class="profile__properties-list">
-                    @@include('blocks/card-2/card-2.html', {})
                     @@include('blocks/card-2/card-2.html', {})
                   </div>
 
@@ -127,10 +126,12 @@
 
           </article>
 
+          <!-- Собственно, нижние кнопки
           <div class="layout-full__btns-mobile">
             <a href="" class="layout-full__btns-mobile-item">Marketing tools</a>
             <a href="" class="layout-full__btns-mobile-item">Advertise proprety</a>
           </div>
+          -->
 
         </div>
 

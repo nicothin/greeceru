@@ -33,6 +33,44 @@
         flex-shrink: 0;
       }
     }
+
+    &--mobile-btns {
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media (max-width: ($screen-lg - 1)) {
+        display: flex;
+        flex-direction: column;
+        margin-top: -16px;
+      }
+
+      @media (min-width: $screen-lg) {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      #{$block-name}__properties-btns {
+
+        @media (max-width: ($screen-lg - 1)) {
+          display: flex;
+          order: -1;
+
+          .btn {
+            flex-grow: 1;
+            margin: 0 10px;
+
+            &:first-child {
+              margin-left: 0;
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
   }
 
   &__descr {
@@ -73,6 +111,34 @@
       }
     }
   }
+
+  // &__subinfo-btns {
+  //   display: flex;
+  //   margin: -16px 0 0;
+
+  //   @media (min-width: $screen-sm) {
+  //     max-width: 450px;
+  //     margin-left: auto;
+  //     margin-right: auto;
+  //   }
+
+  //   @media (min-width: $screen-lg) {
+  //     display: none;
+  //   }
+
+  //   .btn {
+  //     flex-grow: 1;
+  //     margin: 0 10px;
+
+  //     &:first-child {
+  //       margin-left: 0;
+  //     }
+
+  //     &:last-child {
+  //       margin-right: 0;
+  //     }
+  //   }
+  // }
 
   &__content {
     flex-grow: 1;
@@ -120,7 +186,7 @@
     }
 
     .btn {
-      margin-left: 2em;
+      margin-left: 1em;
     }
   }
 
@@ -131,7 +197,7 @@
       margin-right: auto;
     }
 
-    .card-2 {
+    .card-2__container {
       margin-left: auto;
       margin-right: auto;
     }
