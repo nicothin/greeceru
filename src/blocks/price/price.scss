@@ -50,6 +50,16 @@
       border-width: 5px 3px 0 3px;
       border-color: $color-success transparent transparent transparent;
     }
+
+    &--up-alt {
+      border-width: 0 3px 5px 3px;
+      border-color: transparent transparent $color-success transparent;
+    }
+
+    &--down-alt {
+      border-width: 5px 3px 0 3px;
+      border-color: $color-danger transparent transparent transparent;
+    }
   }
 
   &__history-link {
@@ -64,6 +74,19 @@
     font-weight: 500;
   }
 
+  &__correct {
+    font-size: $font-size--small;
+    font-weight: 400;
+
+    &--red {
+      color: $color-danger-2;
+    }
+
+    &--green {
+      color: $color-success;
+    }
+  }
+
 
 
   &--lg {
@@ -73,6 +96,11 @@
 
   &--sm {
     font-size: 16px;
+    font-weight: 500;
+  }
+
+  &--xs {
+    font-size: 14px;
     font-weight: 500;
   }
 

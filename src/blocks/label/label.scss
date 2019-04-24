@@ -34,4 +34,22 @@
     background: $color-success--light-2;
     cursor: inherit;
   }
+
+  &--new {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: baseline;
+    min-width: 24px;
+    max-width: auto;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 12px;
+    border-radius: 8px;
+    font-size: $font-size--small;
+    font-weight: 500;
+    color: $color-success;
+    background: $color-success--light-2;
+    cursor: inherit;
+  }
 }

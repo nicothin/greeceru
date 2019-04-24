@@ -4,7 +4,7 @@
     e.preventDefault();
     $(this).toggleClass('btn-icon--active');
     var target = $(this).data('card-2-slide-toggle');
-    $('.'+target).slideToggle();
+    $(this).closest('.card-2').find('.'+target).slideToggle();
   });
 
 }());

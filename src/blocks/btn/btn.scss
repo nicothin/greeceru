@@ -127,6 +127,15 @@ $border-radius:               3px !default;
     }
   }
 
+  &--red-text {
+    color: $color-danger-2;
+
+    &:hover,
+    &:focus {
+      color: $color-danger-2;
+    }
+  }
+
   &--sm {
     font-size: $font-size--small;
   }
@@ -193,6 +202,17 @@ $border-radius:               3px !default;
 
     @media (min-width: $screen-md) {
       padding: 20px;
+    }
+  }
+
+  &--xs {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    font-size:  $font-size--small;
+
+    @media (min-width: $screen-lg) {
+      padding-top: 5px;
+      padding-bottom: 5px;
     }
   }
 

@@ -285,4 +285,145 @@
       display: none;
     }
   }
+
+  &__offers-wrap {
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__offers-item-time {
+    font-weight: 500;
+  }
+
+  &__offers {
+    border-top: 1px solid $border-color;
+    padding: 10px;
+  }
+
+  &__offers-header {
+    padding: 10px 10px 24px;
+  }
+
+  &__offers-title {
+    margin: 0;
+    font-size: $font-size--h3;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  &__offers-header-add-1 {
+    display: none;
+  }
+
+  &__offers-header-add-2 {
+    display: none;
+  }
+
+  &__offers-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__offers-item {
+    margin-bottom: 17px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__offers-item-user {
+    width: 100%;
+    margin-bottom: 10px;
+
+    .user-mini__text-wrapper {
+      min-width: 0;
+    }
+
+    .user-mini__username {
+      display: flex;
+      align-items: baseline;
+      white-space: normal;
+    }
+
+    .user-mini__username-inner {
+      min-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .label {
+      margin-left: 10px;
+
+      @media (min-width: $screen-sm) {
+        margin-left: 30px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__offers-item-nums {
+    margin-bottom: 10px;
+    padding-left: 55px;
+
+    @media (min-width: $screen-sm) {
+      width: 50%;
+      margin-bottom: 12px;
+      padding-right: 5px;
+
+      .price {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+      }
+
+      .price__inner {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__offers-item-time {
+    margin-bottom: 12px;
+    padding-left: 55px;
+
+    @media (min-width: $screen-sm) {
+      width: 50%;
+      padding-left: 0;
+    }
+  }
+
+  &__time-gray {
+    color: $gray;
+    font-weight: 400;
+  }
+
+  &__offers-item-btns {
+    display: flex;
+    width: 100%;
+    margin-bottom: 13px;
+
+    .btn {
+      flex-grow: 1;
+      margin: 0 5px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }

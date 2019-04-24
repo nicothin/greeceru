@@ -26,9 +26,25 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: $text-color;
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
 
+
+  &--md {
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin-right: 16px;
+    }
+  }
 
   &--lg {
 
