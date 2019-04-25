@@ -9,6 +9,11 @@
   position: relative;
   margin-bottom: 15px;
 
+  .simplebar-track .simplebar-scrollbar.simplebar-visible:before {
+    opacity: 1;
+    background-color: $gray-lightest;
+  }
+
   &__container {
     position: relative;
     max-width: 450px;
@@ -287,6 +292,7 @@
   }
 
   &__offers-wrap {
+    width: 100%;
 
     &--hidden {
       display: none;
@@ -303,7 +309,9 @@
   }
 
   &__offers-header {
-    padding: 10px 10px 24px;
+    padding: 10px 10px 14px;
+    display: flex;
+    align-items: center;
   }
 
   &__offers-title {
@@ -311,23 +319,77 @@
     font-size: $font-size--h3;
     font-weight: 600;
     line-height: 1.5;
+
+    @media (min-width: $screen-lg) {
+      width: 37%;
+      padding-right: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @media (min-width: $screen-osx) {
+      width: 313px;
+    }
   }
 
   &__offers-header-add-1 {
     display: none;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+      width: 33%;
+      padding-left: 15px;
+      font-size: $font-size--small;
+      color: $gray;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @media (min-width: $screen-osx) {
+      width: 165px;
+    }
   }
 
   &__offers-header-add-2 {
     display: none;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+      width: 30%;
+      font-size: $font-size--small;
+      color: $gray;
+    }
+
+    @media (min-width: $screen-osx) {
+      width: 190px;
+      padding-left: 30px;
+    }
+  }
+
+  &__offers-list-wrap {
+    padding-top: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+
+    @media (min-width: $screen-lg) {
+      max-height: 210px;
+    }
+
+    @media (min-width: $screen-osx) {
+      max-height: 170px;
+    }
   }
 
   &__offers-list {
     margin: 0;
-    padding: 0;
+    padding: 0 10px;
     list-style: none;
   }
 
   &__offers-item {
+    position: relative;
     margin-bottom: 17px;
 
     &:last-child {
@@ -339,11 +401,47 @@
       align-items: baseline;
       flex-wrap: wrap;
     }
+
+    @media (max-width: ($screen-lg - 1)) {
+      // отключить кастомный скролл
+    }
+
+    @media (min-width: $screen-lg) {
+      align-items: flex-start;
+      padding-right: 10px;
+    }
+
+    &--accent {
+
+      @media (min-width: $screen-lg) {
+
+        &:before {
+          content: '';
+          position: absolute;
+          z-index: -1;
+          top: -10px;
+          right: -10px;
+          bottom: 0;
+          left: -10px;
+          background: $gray-ultra-lightest-2;
+        }
+      }
+    }
   }
 
   &__offers-item-user {
     width: 100%;
     margin-bottom: 10px;
+
+    @media (min-width: $screen-lg) {
+      width: 37%;
+      margin-bottom: 0;
+      padding-left: 10px;
+    }
+
+    @media (min-width: $screen-osx) {
+      width: 308px;
+    }
 
     .user-mini__text-wrapper {
       min-width: 0;
@@ -363,11 +461,17 @@
     }
 
     .label {
+      flex-shrink: 0;
       margin-left: 10px;
 
       @media (min-width: $screen-sm) {
         margin-left: 30px;
         margin-right: 10px;
+      }
+
+      @media (min-width: $screen-lg) {
+        margin-left: 10px;
+        margin-right: 0;
       }
     }
   }
@@ -391,15 +495,43 @@
         margin-right: 5px;
       }
     }
+
+    @media (min-width: $screen-lg) {
+      width: 33%;
+      padding-top: 13px;
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-osx) {
+      width: 180px;
+      padding-left: 30px;
+      padding-right: 0;
+    }
   }
 
   &__offers-item-time {
     margin-bottom: 12px;
     padding-left: 55px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     @media (min-width: $screen-sm) {
       width: 50%;
       padding-left: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 30%;
+      padding-top: 10px;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-osx) {
+      width: 190px;
+      padding-left: 30px;
     }
   }
 
@@ -413,6 +545,16 @@
     width: 100%;
     margin-bottom: 13px;
 
+    @media (min-width: $screen-lg) {
+      justify-content: flex-end;
+      padding-left: calc(37% + 20px);
+    }
+
+    @media (min-width: $screen-osx) {
+      width: 260px;
+      padding-left: 40px;
+    }
+
     .btn {
       flex-grow: 1;
       margin: 0 5px;
@@ -423,6 +565,22 @@
 
       &:last-child {
         margin-right: 0;
+      }
+    }
+  }
+
+  &__offers-more-wrap {
+    padding: 40px 0 20px;
+
+    @media (min-width: $screen-lg) {
+      padding: 24px 0 14px;
+      text-align: center;
+
+      .btn {
+        display: inline-block;
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
       }
     }
   }

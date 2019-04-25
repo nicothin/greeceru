@@ -11,6 +11,7 @@ $( document ).ready(function() {
     }
   });
 
+  Array.prototype.forEach.call(document.querySelectorAll('.card-2__offers-list-wrap'), el => new SimpleBar);
 
   // Клик на кнопке показа формы поиска (мобилка)
   $('#search-form-2-trigger').on('click', function(){
