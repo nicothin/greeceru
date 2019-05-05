@@ -7,7 +7,7 @@
   $block-name:                &; // #{$block-name}__element {}
 
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 
   .simplebar-track .simplebar-scrollbar.simplebar-visible:before {
     opacity: 1;
@@ -413,7 +413,7 @@
 
     &--accent {
 
-      @media (min-width: $screen-lg) {
+      // @media (min-width: $screen-lg) {
 
         &:before {
           content: '';
@@ -424,6 +424,49 @@
           bottom: 0;
           left: -10px;
           background: $gray-ultra-lightest-2;
+          // background: $gray-light;
+        }
+      // }
+    }
+
+    &--disable {
+
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: -10px;
+        right: -10px;
+        bottom: 0;
+        left: -10px;
+        background: $gray-ultra-lightest-2;
+        // background: $gray-light;
+      }
+
+      #{$block-name}__offers-item-nums {
+        opacity: 0.3;
+      }
+
+      #{$block-name}__offers-item-user {
+        opacity: 0.3;
+
+        @media (max-width: ($screen-lg - 1)) {
+          padding-right: 40px;
+        }
+      }
+
+      #{$block-name}__offers-item-time {
+        opacity: 0.3;
+
+        @media (min-width: $screen-lg) and (max-width: ($screen-osx - 1)) {
+          padding-right: 30px;
+        }
+      }
+
+      #{$block-name}__offers-item-expired {
+
+        @media (min-width: $screen-osx) {
+          padding-right: 20px;
         }
       }
     }
@@ -547,11 +590,14 @@
 
     @media (min-width: $screen-lg) {
       justify-content: flex-end;
+      align-items: center;
+      min-height: 32px;
       padding-left: calc(37% + 20px);
     }
 
     @media (min-width: $screen-osx) {
       width: 260px;
+      margin-top: 5px;
       padding-left: 40px;
     }
 
@@ -582,6 +628,36 @@
         padding-left: 20px;
         padding-right: 20px;
       }
+    }
+  }
+
+  &__expired-del {
+    position: absolute;
+    top: 8px;
+    right: 0;
+
+    @media (min-width: $screen-lg) {
+      right: 15px;
+    }
+  }
+
+  &__offers-item-expired {
+    width: 100%;
+    padding-left: 55px;
+    margin-bottom: 12px;
+    color: $color-danger-2;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 5px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 0;
+      padding-left: 0;
+    }
+
+    @media (min-width: $screen-osx) {
+      text-align: center;
     }
   }
 }

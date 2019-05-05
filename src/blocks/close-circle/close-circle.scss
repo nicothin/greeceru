@@ -29,6 +29,19 @@
     border: 2px solid $gray-lightest;
   }
 
+  &--md {
+
+    #{$block-name}__inner {
+      width: 24px;
+      height: 24px;
+    }
+
+    .close {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
   &--lg {
 
     #{$block-name}__inner {
