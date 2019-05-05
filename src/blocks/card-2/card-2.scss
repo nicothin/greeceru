@@ -7,7 +7,7 @@
   $block-name:                &; // #{$block-name}__element {}
 
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 
   .simplebar-track .simplebar-scrollbar.simplebar-visible:before {
     opacity: 1;
@@ -285,6 +285,11 @@
   }
 
   &__property-stats {
+    transform: translate3d(0,0,0);
+
+    .property-stats {
+      margin-bottom: 0;
+    }
 
     &--hidden {
       display: none;
@@ -658,6 +663,64 @@
 
     @media (min-width: $screen-osx) {
       text-align: center;
+    }
+  }
+
+  &__congratulations {
+    padding: 40px 10px 32px;
+    border-top: 1px solid $gray-lightest;
+    background: $gray-ultra-lightest-2;
+    color: $gray;
+    text-align: center;
+
+    @media (min-width: $screen-lg) {
+      padding: 48px 20px 40px;
+    }
+  }
+
+  &__congratulations-title {
+    margin: 0 0 16px;
+    font-size: $font-size--h3;
+    line-height: 1.5;
+    font-weight: 600;
+    color: $color-success;
+  }
+
+  &__congratulations-content {
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 32px;
+    }
+
+    strong {
+      color: $text-color;
+    }
+  }
+
+  &__congratulations-btns {
+    display: flex;
+
+    @media (min-width: $screen-lg) {
+      justify-content: center;
+    }
+
+    .btn {
+      flex-grow: 1;
+      min-width: 100px;
+      margin: 0 5px;
+
+      @media (min-width: $screen-lg) {
+        flex-grow: 0;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
