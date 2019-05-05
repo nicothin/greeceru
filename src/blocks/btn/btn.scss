@@ -92,6 +92,7 @@ $border-radius:               3px !default;
 
 
   &--link {
+    vertical-align: baseline;
     color: $link-color;
     padding: 0 !important;
     border: none !important;

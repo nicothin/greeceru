@@ -9,27 +9,39 @@
   });
 
   // Фиксируем высоту для всех элементов с кастомным скроллом внутри карточки (для плавности слайд-эффекта)
-  $('.card-2__offers-list-wrap').each(function(){
-    optionHeight = getSize($(this));
-    console.log(optionHeight);
-    $(this).height(optionHeight.height);
+  function offerListWrapHeightFix() {
+    console.log(window.innerWidth);
+    if(window.innerWidth >= 970) {
+      $('.card-2__offers-list-wrap').each(function(){
+        optionHeight = getSize($(this));
+        $(this).height(optionHeight.height);
 
-    function getSize(target) {
-      var $wrap = $("<div />").appendTo($("body"));
-      $wrap.css({
-        "position":   "absolute !important",
-        "visibility": "hidden !important",
-        "display":    "block !important"
+        function getSize(target) {
+          var $wrap = $("<div />").appendTo($("body"));
+          $wrap.css({
+            "position":   "absolute !important",
+            "visibility": "hidden !important",
+            "display":    "block !important"
+          });
+          $clone = $(target).clone().appendTo($wrap);
+          sizes = {
+            "width": $clone.width(),
+            "height": $clone.height()
+          };
+          $wrap.remove();
+          return sizes;
+        }
       });
-      $clone = $(target).clone().appendTo($wrap);
-      sizes = {
-        "width": $clone.width(),
-        "height": $clone.height()
-      };
-      $wrap.remove();
-      return sizes;
     }
-  });
+    else {
+      $('.card-2__offers-list-wrap').each(function(){
+        $(this).height('auto');
+      });
+    }
+
+  }
+
+  offerListWrapHeightFix();
 
 }());
 
