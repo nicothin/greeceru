@@ -186,7 +186,7 @@
     "./node_modules/object-fit-images/dist/ofi.js",
     "./node_modules/owl.carousel/dist/owl.carousel.js",
     "./src/js/hc-sticky.js",
-    "./node_modules/simplebar/dist/simplebar.min.js"
+    "./node_modules/simplebar/dist/simplebar.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"
