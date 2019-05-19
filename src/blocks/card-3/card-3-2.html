@@ -1,0 +1,77 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/card-3/card-3.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+-->
+
+<article class="card-3">
+  <div class="card-3__container">
+    <a class="card-3__img-wrap" href="">
+      <img src="img/demo-card-pict-01.jpg" width="290" height="216" alt="" class="card-3__img">
+    </a>
+    <div class="card-3__text-wrap">
+      <div class="card-3__text-inner">
+        <svg class="card-3__text-icon" width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#checked"></use></svg>
+        <div class="card-3__name-wrap">
+          <h3 class="card-3__name"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing, consectetur adipisicing, consectetur adipisicing</a></h3>
+          <p class="card-3__name-descr">Ожидание после предложения оферты</p>
+        </div>
+        <div class="card-3__price-main-wrap">
+          <p class="card-3__price-main">€ 999 999</p>
+          <p class="card-3__price-main-descr">Asking Price</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-3__btns">
+      <span class="info-link  card-3__info-btn" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="<div class='popover__content'>You can customize and negotiate the price. If the property is a little overpriced, you might offer less, but if it’s your «dream home»</div>" data-original-title="" title="">
+        <svg width="16" height="16"><use xlink:href="img/sprite-svg.svg#info"></use></svg>
+      </span>
+      <div class="drop-btn">
+        <span class="btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <svg width="18" height="4"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#dots"></use></svg>
+        </span>
+        <ul class="drop-menu  drop-menu--bordered-items  drop-btn__drop  drop-btn__drop--bottom-right">
+          <li class="drop-menu__item">
+            <a href="" class="drop-menu__link">
+              <span class="drop-menu__item-text">Share property</span>
+            </a>
+          </li>
+          <li class="drop-menu__item">
+            <a href="" class="drop-menu__link">
+              <span class="drop-menu__item-text">Copy link</span>
+            </a>
+          </li>
+          <li class="drop-menu__item">
+            <a href="" class="drop-menu__link  drop-menu__link--danger">
+              <span class="drop-menu__item-text">Delete</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-3__status-wrap"> <!-- card-3__status-wrap--hidden -->
+      <div class="card-3__status  card-3__status--mobile  card-3__status--tar">
+        <p class="card-3__status-title">€  426 200 <span class="card-3__status-title-danger">- €  1,000</span></p>
+        <p class="card-3__status-descr">Auction is running and will expire on <strong>Oct 23</strong></p>
+      </div>
+      <div class="card-3__status  card-3__status--desktop">
+        <div class="card-3__status-inner">
+          <div class="card-3__status-left">
+            <p class="card-3__status-title">€  426 200 <span class="card-3__status-title-danger">- €  1,000</span></p>
+            <p class="card-3__status-descr">Auction is running</p>
+          </div>
+          <div class="card-3__status-right  card-3__status-right--date">
+            <p class="card-3__status-title">Oct 23</p>
+            <p class="card-3__status-descr">Expired</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="card-3__del  close-circle  close-circle--lg"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+  </div>
+</article>

@@ -120,6 +120,13 @@ $arr-bd-1:                    8px;
     }
   }
 
+  &__content {
+    width: 266px;
+    font-size: $font-size--small;
+    line-height: 1.33em;
+    color: $gray;
+  }
+
   &__from-check-icon {
     width: 210px;
     font-size: $font-size--small;

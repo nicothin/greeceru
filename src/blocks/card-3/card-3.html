@@ -38,6 +38,9 @@
           <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chart"></use></svg>
         </span>
       </button> -->
+      <span class="info-link  card-3__info-btn" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="<div class='popover__content'>You can customize and negotiate the price. If the property is a little overpriced, you might offer less, but if it’s your «dream home»</div>" data-original-title="" title="">
+        <svg width="16" height="16"><use xlink:href="img/sprite-svg.svg#info"></use></svg>
+      </span>
       <div class="drop-btn">
         <span class="btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <svg width="18" height="4"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#dots"></use></svg>
@@ -62,9 +65,20 @@
       </div>
     </div>
     <div class="card-3__status-wrap"> <!-- card-3__status-wrap--hidden -->
-      <div class="card-3__offer-up  card-3__offer-up--mobile">
+      <div class="card-3__status  card-3__status--mobile">
         <button class="btn  btn--white  btn--block">Offer your price</button>
-        <p class="card-3__offer-up-descr">Auction is running, offer your price</p>
+        <p class="card-3__status-descr">Auction is running, offer your price</p>
+      </div>
+      <div class="card-3__status  card-3__status--desktop">
+        <div class="card-3__status-inner">
+          <div class="card-3__status-left">
+            <p class="card-3__status-title">Offer your price</p>
+            <p class="card-3__status-descr">Auction is running</p>
+          </div>
+          <div class="card-3__status-right">
+            <button class="btn  btn--white  btn--block">Let’s go</button>
+          </div>
+        </div>
       </div>
     </div>
     <button class="card-3__del  close-circle  close-circle--lg"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
