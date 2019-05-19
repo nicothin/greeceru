@@ -1,0 +1,289 @@
+// В этом файле должны быть стили для БЭМ-блока card-3, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.card-3 {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  position: relative;
+  margin-bottom: 15px;
+
+  &__container {
+    position: relative;
+    max-width: 450px;
+    margin-bottom: 10px;
+    border: 1px solid $gray-lightest;
+    border-radius: $border-radius;
+
+    @media (min-width: $screen-lg) {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__img-wrap {
+
+    @media (min-width: $screen-lg) {
+      width: 137px;
+      min-height: 102px;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+
+    @media (min-width: $screen-lg) {
+      height: 102px;
+    }
+  }
+
+  &__btns {
+    position: absolute;
+    top: 199px;
+    right: 15px;
+    display: flex;
+
+    @media (min-width: $screen-lg) {
+      top: 57px;
+      left: 9px;
+      right: auto;
+    }
+
+    @media (min-width: $screen-xl) {
+      position: static;
+      display: flex;
+      align-items: center;
+      padding-right: 20px;
+    }
+
+    @media (min-width: $screen-osx) {
+      padding-right: 28px;
+    }
+
+    .btn-icon {
+      display: block;
+      width: 36px;
+      height: 36px;
+      margin-left: 15px;
+      border: 1px solid $gray-lightest;
+      border-radius: $border-radius;
+      padding: 0;
+      background: #fff;
+      cursor: pointer;
+
+      @media (min-width: $screen-lg) {
+        margin-left: 5px;
+        transition: all 0.3s;
+
+        &:hover,
+        &:focus {
+          background: $gray-lightest;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-left: 15px;
+      }
+
+      svg {
+        fill: $gray;
+      }
+    }
+
+    .btn-icon--active {
+      background: $gray-lightest;
+    }
+
+    .drop-btn .btn-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn-icon__inner {
+      width: 100%;
+      height: 100%;
+    }
+
+    .open .btn-icon {
+
+      @media (min-width: $screen-lg) {
+        background: $gray-lightest;
+      }
+    }
+
+    .drop-btn .btn-icon {
+
+      @media (min-width: $screen-lg) {
+        margin-left: 5px;
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  &__text-wrap {
+    font-size: $font-size--small;
+    line-height: 1.33;
+    padding: 20px;
+    color: $gray;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      max-width: calc(100% - 137px);
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 24px;
+      padding-right: 24px;
+      max-width: calc(100% - 295px);
+    }
+
+    @media (min-width: $screen-osx) {
+      padding-right: 48px;
+      max-width: calc(100% - 303px);
+    }
+  }
+
+  &__text-inner {
+    min-width: 0;
+    width: 100%;
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+    }
+  }
+
+  &__text-icon {
+    flex-shrink: 0;
+    margin-top: 5px;
+    margin-right: 20px;
+  }
+
+  &__name-wrap {
+    padding-bottom: 20px;
+    flex-grow: 1;
+    min-width: 0;
+
+    @media (min-width: $screen-sm) {
+      padding-bottom: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+
+      _:-ms-fullscreen, :root & {
+        max-width: 50%;
+        margin-right: auto;
+      }
+    }
+  }
+
+  &__name {
+    margin: 0 0 5px;
+    font-size: $font-size;
+    font-weight: 600;
+    color: $text-color;
+    line-height: 1.43;
+
+    @media (min-width: $screen-sm) {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    a {
+      color: $text-color;
+      transition: color 0.3s;
+
+      &:hover,
+      &:focus {
+        color: $link-color--hover;
+      }
+    }
+  }
+
+  &__name-descr {
+    margin: 0;
+  }
+
+  &__price-main-wrap {
+    flex-shrink: 0;
+
+    @media (min-width: $screen-sm) {
+      margin-left: 20px;
+    }
+  }
+
+  &__price-main {
+    margin: 0 0 5px;
+    font-size: $font-size;
+    font-weight: 600;
+    color: $text-color;
+    line-height: 1.43;
+    white-space: nowrap;
+  }
+
+  &__price-main-descr {
+    margin: 0;
+  }
+
+  &__status-wrap {
+    width: 100%;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__del {
+    position: absolute;
+    z-index: 1;
+    top: -9px;
+    right: -9px;
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  // Статистика (убрал, ибо нелогично)
+  // &__property-stats {
+  //   transform: translate3d(0,0,0);
+
+  //   .property-stats {
+  //     margin-bottom: 0;
+  //   }
+
+  //   &--hidden {
+  //     display: none;
+  //   }
+  // }
+
+  &__offer-up {
+    padding: 0 20px;
+  }
+
+  &__offer-up-descr {
+    margin: 10px 0 20px;
+    font-size: $font-size--small;
+    line-height: 1.33;
+    color: $gray;
+    text-align: center;
+  }
+
+}
