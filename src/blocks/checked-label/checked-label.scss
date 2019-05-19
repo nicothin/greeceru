@@ -1,8 +1,8 @@
-// В этом файле должны быть стили для БЭМ-блока checked, его элементов,
+// В этом файле должны быть стили для БЭМ-блока checked-label, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.checked {
+.checked-label {
 
   $block-name:                &; // #{$block-name}__element {}
 
