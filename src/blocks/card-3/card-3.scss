@@ -47,10 +47,6 @@
       border: 0;
       border-radius: 0;
     }
-
-    @media (min-width: $screen-osx) {
-      position: relative;
-    }
   }
 
   &__img-wrap {
@@ -97,7 +93,7 @@
 
     @media (min-width: $screen-osx) {
       position: absolute;
-      top: 2px;
+      top: 9px;
       right: -20px;
       left: auto;
       padding-right: 0;
@@ -173,10 +169,11 @@
   }
 
   &__text-wrap {
+    padding: 20px;
     font-size: $font-size--small;
     line-height: 1.33;
-    padding: 20px;
     color: $gray;
+    text-align: right;
 
     @media (min-width: $screen-lg) {
       display: flex;
@@ -193,6 +190,7 @@
     }
 
     @media (min-width: $screen-osx) {
+      padding-top: 31px;
       padding-right: 48px;
       max-width: calc(100% - 536px);
     }
@@ -201,6 +199,7 @@
   &__text-inner {
     min-width: 0;
     width: 100%;
+    text-align: left;
 
     @media (min-width: $screen-sm) {
       display: flex;
@@ -340,7 +339,7 @@
       flex-shrink: 0;
       width: 305px;
       margin-top: 0;
-      padding-top: 24px;
+      padding-top: 31px;
     }
 
     &--hidden {
@@ -364,6 +363,10 @@
       .btn {
         margin-bottom: 10px;
       }
+
+      .card-3__status-left {
+        padding-right: 0;
+      }
     }
 
     &--desktop {
@@ -371,17 +374,25 @@
 
       @media (min-width: $screen-lg) {
         display: block;
-        width: 509px;
+        width: 535px;
         padding-left: 209px;
       }
 
       @media (min-width: $screen-xl) {
-        padding-left: 214px;
+        padding-left: 213px;
       }
 
       @media (min-width: $screen-osx) {
         width: auto;
         padding-left: 0;
+      }
+
+      .btn {
+
+        @media (min-width: $screen-md) {
+          padding-left: 9px;
+          padding-right: 9px;
+        }
       }
     }
 
@@ -390,6 +401,23 @@
 
       .card-3__status-descr {
         text-align: right;
+      }
+    }
+
+    &--all {
+      text-align: right;
+
+      @media (min-width: $screen-lg) {
+        padding-left: 209px;
+        text-align: left;
+      }
+
+      @media (min-width: $screen-xl) {
+        padding-left: 213px;
+      }
+
+      @media (min-width: $screen-osx) {
+        padding-left: 0;
       }
     }
   }
@@ -446,6 +474,10 @@
     color: $color-danger-2;
   }
 
+  &__status-title-success {
+    color: $color-success;
+  }
+
   &__status-descr {
     margin: 5px 0 20px;
     font-size: $font-size--small;
@@ -455,6 +487,51 @@
     strong {
       color: $text-color;
       font-weight: 700;
+    }
+  }
+
+  &__remove {
+    transform: translate(7px, -7px);
+
+    @media (min-width: $screen-lg) {
+      position: absolute;
+      top: 30px;
+      right: -22px;
+      transform: none;
+    }
+
+    @media (min-width: $screen-osx) {
+      top: 39px;
+      right: -63px;
+    }
+  }
+
+  &__new-offer {
+    margin-bottom: 20px !important;
+  }
+
+
+
+
+
+  &--accent {
+
+    #{$block-name}__container {
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: $gray-ultra-lightest-2;
+
+        @media (min-width: $screen-osx) {
+          right: -40px;
+        }
+      }
     }
   }
 

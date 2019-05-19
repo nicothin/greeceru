@@ -19,7 +19,7 @@
         <svg class="card-3__text-icon" width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#checked"></use></svg>
         <div class="card-3__name-wrap">
           <h3 class="card-3__name"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing, consectetur adipisicing, consectetur adipisicing</a></h3>
-          <p class="card-3__name-descr">Ожидание после предложения оферты</p>
+          <p class="card-3__name-descr">Офферта отклонена</p>
         </div>
         <div class="card-3__price-main-wrap">
           <p class="card-3__price-main">€ 999 999</p>
@@ -56,18 +56,22 @@
     </div>
     <div class="card-3__status-wrap"> <!-- card-3__status-wrap--hidden -->
       <div class="card-3__status  card-3__status--mobile  card-3__status--tar">
-        <p class="card-3__status-title">€  426 200 <span class="card-3__status-title-danger">- €  1,000</span></p>
-        <p class="card-3__status-descr">Auction is running and will expire on <strong class="nowrap">Oct 23</strong></p>
+        <div class="card-3__status-inner">
+          <div class="card-3__status-left">
+            <p class="card-3__status-title"><span class="card-3__status-title-danger">Offer rejected</span></p>
+            <p class="card-3__status-descr">You were asking <strong class="nowrap">€ 426,000</strong></p>
+            <button class="btn  btn--block  card-3__new-offer">Make new offer</button>
+          </div>
+        </div>
       </div>
       <div class="card-3__status  card-3__status--desktop">
         <div class="card-3__status-inner">
           <div class="card-3__status-left">
-            <p class="card-3__status-title">€  426 200 <span class="card-3__status-title-danger">- €  1,000</span></p>
-            <p class="card-3__status-descr">Auction is running</p>
+            <p class="card-3__status-title"><span class="card-3__status-title-danger">Offer rejected</span></p>
+            <p class="card-3__status-descr">You were asking <strong class="nowrap">€ 426,000</strong></p>
           </div>
-          <div class="card-3__status-right  card-3__status-right--date">
-            <p class="card-3__status-title">Oct 23</p>
-            <p class="card-3__status-descr">Expired</p>
+          <div class="card-3__status-right">
+            <button class="btn  btn--white  btn--block">Make new offer</button>
           </div>
         </div>
       </div>
