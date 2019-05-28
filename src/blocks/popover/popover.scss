@@ -133,6 +133,27 @@ $arr-bd-1:                    8px;
     line-height: 1.33em;
     color: $gray;
   }
+
+  &__ratilg-view {
+    display: flex;
+    align-items: flex-start;
+    font-size: $font-size;
+  }
+
+  &__ratilg-view-left {
+    width: 80px;
+    flex-shrink: 0;
+    margin-right: 26px;
+    text-align: center;
+  }
+
+  &__ratilg-view-nums {
+    display: block;
+  }
+
+  &__ratilg-view-left {
+    flex-grow: 1;
+  }
 }
 
 // ППЦ, сраный BS.

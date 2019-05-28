@@ -154,7 +154,9 @@
     "search-form-2": [],
     "popover": [],
     "card-2": [],
-    "card-3": []
+    "card-3": [],
+    "rating-view": [],
+    "rating-add": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

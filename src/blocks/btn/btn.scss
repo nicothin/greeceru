@@ -141,6 +141,16 @@ $border-radius:               3px !default;
     font-size: $font-size--small;
   }
 
+  &--wide-s {
+    padding-left: 24px;
+    padding-right: 24px;
+
+    @media (min-width: $screen-md) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+
   &--wide {
     padding-left: 50px;
     padding-right: 50px;

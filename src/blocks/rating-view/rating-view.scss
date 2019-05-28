@@ -1,0 +1,135 @@
+// В этом файле должны быть стили для БЭМ-блока rating-view, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.rating-view {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  @media (min-width: $screen-sm) {
+    display: flex;
+    align-items: flex-start !important;
+    flex-wrap: wrap;
+
+    .list-property__subtitle-wrap {
+      width: 200px;
+      flex-shrink: 0;
+    }
+
+    .list-property__content-col {
+      flex-grow: 1;
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+
+    .list-property__content-col {
+      width: calc(100% - 260px);
+    }
+  }
+
+  .popover {
+    padding: 24px;
+
+    @media (min-width: $screen-sm) {
+      width: 390px;
+      max-width: 390px;
+    }
+  }
+
+  .list-property__subtitle-wrap {
+    margin-bottom: 24px;
+  }
+
+  &__top-about-link {
+    display: none;
+
+    @media (min-width: $screen-sm) {
+      display: block;
+    }
+  }
+
+  &__bottom-about-link {
+
+    @media (min-width: $screen-sm) {
+      display: none;
+    }
+  }
+
+  &__result {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__result-img {
+    margin-right: 16px;
+  }
+
+  &__result-nums {
+    line-height: 21px;
+
+    strong {
+      font-size: 18px;
+    }
+  }
+
+  &__result-reviews-num {
+    color: $gray;
+  }
+
+  &__write-link {
+    min-width: 166px;
+  }
+
+  &__list {
+    margin: 0 0 28px;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    cursor: default;
+    transition: color 0.3s;
+
+    @media (min-width: $screen-md) {
+      width: 50%;
+      padding-right: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 100%;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 50%;
+    }
+
+    &:hover {
+      color: $link-color;
+    }
+  }
+
+  &__item-img {
+    margin-right: 24px;
+  }
+
+  &__item-text {
+
+    [aria-describedby] & {
+      color: $link-color;
+    }
+  }
+}
