@@ -10,7 +10,7 @@
 
   // Фиксируем высоту для всех элементов с кастомным скроллом внутри карточки (для плавности слайд-эффекта)
   function offerListWrapHeightFix() {
-    console.log(window.innerWidth);
+    // console.log(window.innerWidth);
     if(window.innerWidth >= 970) {
       $('.card-2__offers-list-wrap').each(function(){
         optionHeight = getSize($(this));
