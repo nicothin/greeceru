@@ -1,0 +1,66 @@
+// В этом файле должны быть стили для БЭМ-блока reviews, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.reviews {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 48px;
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-md) {
+      width: 50%;
+      padding-left: 38px;
+      padding-right: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 100%;
+      padding-left: 48px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 50%;
+    }
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__item-icon {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__item-text {
+    margin: 0 0 10px;
+  }
+
+  &__item-date {
+    color: $gray;
+  }
+
+  &__more-wrap {
+     @media (min-width: $screen-md) {
+      text-align: right;
+     }
+  }
+}

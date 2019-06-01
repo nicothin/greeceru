@@ -156,7 +156,8 @@
     "card-2": [],
     "card-3": [],
     "rating-view": [],
-    "rating-add": []
+    "rating-add": [],
+    "reviews": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
