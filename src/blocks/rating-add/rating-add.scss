@@ -6,6 +6,83 @@
 
   $block-name:                &; // #{$block-name}__element {}
 
+  &__title {
+    margin: 20px 0;
+    padding: 0 15px;
+  }
+
+  &__title-descr {
+    display: none;
+  }
+
+  &__list {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    min-height: 363px;
+  }
+
+  &__step {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 363px;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.3s, transform 0.3s;
+
+    &--active {
+      z-index: 0;
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    &--like {
+      // position: relative;
+      // display: none;
+      height: auto;
+
+      &.rating-add__step--active {
+        position: relative;
+        // display: block;
+      }
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    height: 230px;
+    padding: 18px 15px 16px;
+    background: $color-main--dark;
+    color: #fff;
+  }
+
+  &__steps-num {
+    margin: 0 0 16px;
+    color: $color-main--ultralight;
+  }
+
+  &__subtitle {
+    margin: 0 0 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: $font-size--h3 + 2;
+    line-height: $font-size--h3 + 10;
+  }
+
+  &__step-descr {
+    margin: 0;
+    height: 96px;
+    overflow: hidden;
+    line-height: 24px;
+    color: $color-main--ultralight;
+  }
+
   &__rate-emo {
     opacity: 0;
     transition: opacity 0.3s;
@@ -13,5 +90,154 @@
     &--active {
       opacity: 1;
     }
+  }
+
+  &__step-btns {
+    display: flex;
+    margin-top: auto;
+  }
+
+  &__btn-back {
+    padding: 4px 4px 0;
+    border: none;
+    background-color: transparent;
+    font-size: $font-size;
+    color: $color-main--ultralight;
+    outline: none;
+    cursor: pointer;
+
+    svg {
+      display: inline-block;
+      margin-right: 2px;
+      fill: currentColor;
+    }
+  }
+
+  &__btn-next {
+    margin-left: auto;
+    padding: 4px 0 4px 4px;
+    border: none;
+    background-color: transparent;
+    font-size: $font-size;
+    color: $color-main--ultralight;
+    outline: none;
+    cursor: pointer;
+
+    svg {
+      display: inline-block;
+      margin-left: 2px;
+      fill: currentColor;
+    }
+  }
+
+  &__rate-wrap {}
+
+  &__emos {
+    display: none;
+  }
+
+  &__stars {
+    display: flex;
+    justify-content: space-around;
+    padding: 33px 0 27px;
+    background: #fff;
+
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+  }
+
+  &__label {
+    display: block;
+    text-align: center;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+
+    input:checked + & {
+      opacity: 1;
+
+      #{$block-name}__input-descr {
+        color: #000;
+      }
+    }
+  }
+
+  &__input-emo {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 13px;
+  }
+
+  &__input-star {
+    display: none;
+  }
+
+  &__input-descr {
+    margin: 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: $gray;
+  }
+
+  &__like {
+    position: relative;
+    padding: 20px 15px 5px;
+    background: #fff;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 15px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: $color-success--light-3;
+    }
+
+    &--not {
+      padding-top: 15px;
+      padding-bottom: 20px;
+
+      &:before {
+        background: $color-danger--light-2;
+      }
+    }
+  }
+
+  &__like-icon {
+    position: absolute;
+    top: 32px;
+    left: 27px;
+  }
+
+  &__like-header {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    margin: 0 0 20px;
+    padding-left: 56px;
+    font-size: $font-size--h3 + 2;
+    line-height: 24px;
+  }
+
+  &__like-btns {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+
+    .btn {
+      margin: 0 8px;
+    }
+  }
+
+  &__other-regions-title {
+    margin: 39px 15px 16px;
+    font-size: $font-size--h3;
+    line-height: 20px;
+    font-weight: 700;
+    text-align: center;
   }
 }
