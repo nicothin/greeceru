@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока rating-add, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока rating-add, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
@@ -6,4 +6,12 @@
 
   $block-name:                &; // #{$block-name}__element {}
 
+  &__rate-emo {
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &--active {
+      opacity: 1;
+    }
+  }
 }
