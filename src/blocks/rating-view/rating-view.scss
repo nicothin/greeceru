@@ -98,8 +98,10 @@
   }
 
   &__item {
+    position: relative;
     display: flex;
-    align-items: center;
+    // align-items: center;
+    min-height: 40px;
     margin-bottom: 16px;
     cursor: default;
     transition: color 0.3s;
@@ -123,13 +125,28 @@
   }
 
   &__item-img {
-    margin-right: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   &__item-text {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 64px;
+    transition: color 0.3s;
 
     [aria-describedby] & {
       color: $link-color;
+    }
+  }
+
+  &__popover {
+
+    &.top > .arrow {
+      margin-left: 24px;
     }
   }
 }
