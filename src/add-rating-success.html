@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>greece_ru</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="page__main-content" role="main">
+
+        <div class="layout-text  layout-text--bg-gray">
+
+          <div class="layout-text__main-only">
+
+            <section class="rating-add  rating-add--success">
+              <h1 class="page__h1  rating-add__title">Review submit!</h1>
+              <p class="rating-add__title-descr  rating-add__title-descr--success">Rate next region</p>
+
+              <div class="rating-add__success">
+                <div class="rating-add__success-img-wrap">
+                  <img src="img/rating-add-success.jpg" alt="" class="rating-add__success-img">
+                </div>
+                <div class="rating-add__success-text-wrap">
+                  <div class="rating-add__success-rate">
+                    <svg width="40" height="40" class="rating-add__success-emo"><use xlink:href="img/sprite-svg.svg#emoj-3star"></use></svg>
+                    <strong>3.1</strong> from 5
+                  </div>
+                  <div class="rating-add__success-region">Thessaloniki</div>
+                  <a href="" class="btn btn--wide-m">Rate it</a>
+                </div>
+              </div>
+
+              <div class="rating-add__other-regions-wrap">
+                <p class="rating-add__other-regions-title">Rate other region</p>
+                <p>Временно пусто. Жду решения Олега об используемом пакете для тайпохеда.</p>
+              </div>
+
+            </section>
+
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <script src="js/moment-with-locales.js"></script>
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
