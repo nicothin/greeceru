@@ -399,14 +399,6 @@
     }
   }
 
-  &__other-regions-title {
-    margin: 39px 15px 16px;
-    font-size: $font-size--h3;
-    line-height: 20px;
-    font-weight: 700;
-    text-align: center;
-  }
-
   &__success {
     max-width: 400px;
     margin: auto;
@@ -469,6 +461,82 @@
     @media (min-width: $screen-lg) {
       font-size: $font-size--h3 + 10;
       line-height: 32px;
+    }
+  }
+
+  &__other-regions-wrap {
+    max-width: 430px;
+    margin: 0 auto 200px;
+    padding: 0 15px;
+
+    @media (min-width: $screen-lg) {
+      width: 516px;
+      max-width: 516px;
+      padding: 0;
+    }
+  }
+
+  &__other-regions-title {
+    margin: 39px 0 16px;
+    font-size: $font-size--h3;
+    line-height: 20px;
+    font-weight: 700;
+    text-align: center;
+
+    @media (min-width: $screen-lg) {
+      margin-top: 84px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__other-regions-inner {
+
+    @media (min-width: $screen-lg) {
+      position: relative;
+      padding-right: 170px;
+
+      .typeahead {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        width: 170px;
+        transition: width 0.3s;
+
+        &--focus {
+          width: 100%;
+
+          & + .rating-add__other-regions-list {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__other-regions-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin: 0 16px 12px 0;
+    }
+  }
+
+  &__other-regions-tag {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: $color-main--light-3;
+    text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 1px 8px rgba(#737c94, 0.5);
     }
   }
 

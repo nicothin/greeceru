@@ -1,8 +1,8 @@
 (function(){
 
   // кнопки вперед-назад
-  $('.rating-add__btn-next, .rating-add__label').on('click', ratingNextStep);
-  $('.rating-add__btn-back, .rating-add__like-back').on('click', ratingBackStep);
+  $('.rating-add__btn-next, .rating-add__label').on('click touchstart', ratingNextStep);
+  $('.rating-add__btn-back, .rating-add__like-back').on('click touchstart', ratingBackStep);
 
   // звездочки рейтинга
   $('.rating-add__label').on('mouseenter', function(){
@@ -45,6 +45,10 @@
     $(labels).each(function(){
       if ($(this).index() <= nowIndex) $(this).attr('data-js-active', '')
     });
+  });
+
+  $('.js-typeahead').on('focus', function(){
+    $(this).closest('.typeahead').addClass('typeahead--focus');
   });
 
   function ratingNextStep() {

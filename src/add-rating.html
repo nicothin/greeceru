@@ -444,17 +444,27 @@
 
               <div class="rating-add__other-regions-wrap">
                 <p class="rating-add__other-regions-title">Rate other region</p>
-                <div class="typeahead__container">
-                  <div class="typeahead__field">
-                    <div class="typeahead__query">
-                      <input class="js-typeahead" name="q" type="search" autocomplete="off">
-                    </div>
-                    <div class="typeahead__button">
-                      <button type="submit">
-                        <span class="typeahead__search-icon"></span>
-                      </button>
+                <div class="rating-add__other-regions-inner">
+                  <div class="typeahead">
+                    <div class="typeahead__container">
+                      <div class="typeahead__field">
+                        <div class="typeahead__query">
+                          <input class="js-typeahead  field-text__input" name="q" type="search" autocomplete="off" placeholder="Find your region">
+                        </div>
+                      </div>
                     </div>
                   </div>
+                  <ul class="rating-add__other-regions-list">
+                    <li>
+                      <a href="" class="rating-add__other-regions-tag">Tripoli</a>
+                    </li>
+                    <li>
+                      <a href="" class="rating-add__other-regions-tag">Lesbos</a>
+                    </li>
+                    <li>
+                      <a href="" class="rating-add__other-regions-tag">Thessaloniki</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
@@ -510,6 +520,9 @@
       callback: {
         onInit: function (node) {
           console.log('Typeahead Initiated on ' + node.selector);
+        },
+        onCancel: function () {
+          $('.typeahead--focus').removeClass('typeahead--focus');
         }
       }
     });
