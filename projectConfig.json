@@ -157,7 +157,8 @@
     "card-3": [],
     "rating-view": [],
     "rating-add": [],
-    "reviews": []
+    "reviews": [],
+    "typeahead": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -190,7 +191,8 @@
     "./node_modules/object-fit-images/dist/ofi.js",
     "./node_modules/owl.carousel/dist/owl.carousel.js",
     "./src/js/hc-sticky.js",
-    "./node_modules/simplebar/dist/simplebar.js"
+    "./node_modules/simplebar/dist/simplebar.js",
+    "./node_modules/jquery-typeahead/dist/jquery.typeahead.min.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"
