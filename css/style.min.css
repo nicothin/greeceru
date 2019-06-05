@@ -1270,6 +1270,26 @@ a.btn--disabled {
       left: 8px;
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%); }
+.btn--facebook {
+    position: relative;
+    padding-left: 44px;
+    padding-right: 15px;
+    background: #3b5899;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(115, 124, 148, 0.4);
+            box-shadow: 0 1px 3px 0 rgba(115, 124, 148, 0.4); }
+.btn--facebook:hover, .btn--facebook:focus {
+      text-decoration: none;
+      color: #fff;
+      background-color: #2d4374;
+      border-color: transparent;
+      -webkit-box-shadow: 0 1px 3px 0 rgba(115, 124, 148, 0.4);
+              box-shadow: 0 1px 3px 0 rgba(115, 124, 148, 0.4); }
+.btn--facebook svg {
+      position: absolute;
+      top: 50%;
+      left: 11px;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
 .btn--success {
     background: #2fb74f;
     -webkit-box-shadow: 0 1px 3px 0 rgba(115, 124, 148, 0.4);
@@ -11279,6 +11299,10 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
   margin: 20px auto;
   padding: 0 15px;
   max-width: 400px; }
+.rating-add__title--check {
+    position: relative; }
+.rating-add__title--check svg {
+      display: none; }
 .rating-add__title-descr {
   display: none;
   max-width: 400px;
@@ -11544,6 +11568,22 @@ input:checked + .rating-add__label .rating-add__input-descr {
 .rating-add__other-regions-tag:hover, .rating-add__other-regions-tag:focus {
     -webkit-box-shadow: 0 1px 8px rgba(115, 124, 148, 0.5);
             box-shadow: 0 1px 8px rgba(115, 124, 148, 0.5); }
+.rating-add__success-share-short {
+  text-align: center; }
+.rating-add__listing-list {
+  margin-top: 32px; }
+.rating-add__listing-block {
+  max-width: 400px;
+  margin: 0 auto 24px;
+  padding: 24px 15px;
+  background: #fff; }
+.rating-add__listing-title {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 700; }
+.rating-add__listing-subtitle {
+  font-size: 16px;
+  margin-bottom: 24px; }
 .reviews__list {
   margin: 0;
   padding: 0;
@@ -12031,6 +12071,9 @@ input:checked + .rating-add__label .rating-add__input-descr {
       .btn--youtube {
         padding-left: 48px;
         padding-right: 25px; }
+      .btn--facebook {
+        padding-left: 44px;
+        padding-right: 15px; }
         .field-text__input-wrap--required:before {
           top: 15px; }
       .field-text__input {
@@ -13798,6 +13841,27 @@ input:checked + .rating-add__label .rating-add__input-descr {
       margin-top: 72px;
       max-width: 880px;
       text-align: center; }
+      .rating-add__title--check {
+        padding-top: 52px; }
+        .rating-add__title--check:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 50%;
+          width: 40px;
+          height: 40px;
+          background: #00d092;
+          border-radius: 50%;
+          -webkit-transform: translateX(-50%);
+                  transform: translateX(-50%); }
+        .rating-add__title--check svg {
+          display: block;
+          fill: #fff;
+          position: absolute;
+          top: 15px;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+                  transform: translateX(-50%); }
     .rating-add__title-descr {
       display: block;
       max-width: 880px;
@@ -13949,6 +14013,21 @@ input:checked + .rating-add__label .rating-add__input-descr {
         width: 100%; }
         .rating-add__other-regions-inner .typeahead--focus + .rating-add__other-regions-list {
           opacity: 0; }
+    .rating-add__listing-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 792px;
+      margin: 80px auto 0; }
+    .rating-add__listing-block {
+      width: 380px;
+      min-height: 217px;
+      padding: 32px 37px;
+      margin: 0 16px; }
+      .rating-add__listing-block:first-child {
+        margin-left: 0; }
+      .rating-add__listing-block:last-child {
+        margin-right: 0; }
     .reviews__item {
       width: 100%;
       padding-left: 48px; } }
