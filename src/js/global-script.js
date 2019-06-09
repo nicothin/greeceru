@@ -27,7 +27,7 @@ $( document ).ready(function() {
       const valueStep = input.getAttribute('step') ? +input.getAttribute('step') : 1;
       field.addEventListener('click', function(event){
         if(event.target.classList.contains('field-num__btn') && !input.getAttribute('disabled')) {
-          let num = parseInt(input.value);
+          var num = parseInt(input.value);
           if(isNaN(num)) num = 0;
           if(event.target.classList.contains('field-num__btn--plus')) {
             if (num < valueMax) input.value = num + valueStep;
