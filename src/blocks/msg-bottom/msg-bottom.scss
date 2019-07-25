@@ -1,0 +1,88 @@
+// В этом файле должны быть стили для БЭМ-блока msg-bottom, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.msg-bottom {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 24px 0 16px;
+  background: $gray-lightest;
+  box-shadow: 0px 10px 20px rgba(72, 72, 72, 0.1), 0px 10px 20px rgba(71, 122, 251, 0.05);
+
+  @media (min-width: $screen-lg) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &__inner {
+    position: relative;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__descr {
+    font-size: $font-size--small;
+    line-height: $line-height;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__text {
+    max-width: 765px;
+
+    @media (min-width: $screen-lg) {
+      padding-right: 50px;
+    }
+  }
+
+  &__btn-wrap {
+    flex-shrink: 0;
+    margin-top: 10px;
+    margin-left: auto;
+
+    @media (min-width: $screen-lg) {
+      margin-top: 0;
+      padding-right: 70px;
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: -16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 0;
+    background: none;
+
+    @media (min-width: $screen-lg) {
+      top: 0px;
+    }
+
+    & > span:before,
+    & > span:after {
+      background: $gray;
+    }
+  }
+}
