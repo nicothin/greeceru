@@ -11699,6 +11699,54 @@ input:checked + .rating-add__label .rating-add__input-descr {
     background-position: center; }
 .typeahead__container.cancel:not(.loading) .typeahead__cancel-button {
     visibility: visible; }
+.no-results__list {
+  margin: 16px 0;
+  color: #8891a6; }
+.no-results__footer {
+  margin-top: 32px; }
+.msg-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 24px 0 16px;
+  background: #d9e0e9;
+  -webkit-box-shadow: 0px 10px 20px rgba(72, 72, 72, 0.1), 0px 10px 20px rgba(71, 122, 251, 0.05);
+          box-shadow: 0px 10px 20px rgba(72, 72, 72, 0.1), 0px 10px 20px rgba(71, 122, 251, 0.05); }
+.msg-bottom__inner {
+    position: relative;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px; }
+.msg-bottom__title {
+    margin-top: 0;
+    margin-bottom: 0; }
+.msg-bottom__descr {
+    font-size: 12px;
+    line-height: 1.375em; }
+.msg-bottom__descr p {
+      margin: 0; }
+.msg-bottom__text {
+    max-width: 765px; }
+.msg-bottom__btn-wrap {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-top: 10px;
+    margin-left: auto; }
+.msg-bottom__close-btn {
+    position: absolute;
+    top: -16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 0;
+    background: none; }
+.msg-bottom__close-btn > span:before,
+    .msg-bottom__close-btn > span:after {
+      background: #8891a6; }
 @media (min-width: 480px) {
     dd {
       margin-left: 1.8em; }
@@ -14030,7 +14078,24 @@ input:checked + .rating-add__label .rating-add__input-descr {
         margin-right: 0; }
     .reviews__item {
       width: 100%;
-      padding-left: 48px; } }
+      padding-left: 48px; }
+    .msg-bottom {
+      padding-top: 10px;
+      padding-bottom: 10px; }
+      .msg-bottom__inner {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+      .msg-bottom__text {
+        padding-right: 50px; }
+      .msg-bottom__btn-wrap {
+        margin-top: 0;
+        padding-right: 70px; }
+      .msg-bottom__close-btn {
+        top: 0px; } }
 @media (min-width: 970px) and (max-width: 1439px) {
         .card-2__offers-item--disable .card-2__offers-item-time {
           padding-right: 30px; } }
