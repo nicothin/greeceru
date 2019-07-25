@@ -1,0 +1,17 @@
+// В этом файле должны быть стили для БЭМ-блока no-results, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.no-results {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  &__list {
+    margin: 16px 0;
+    color: $gray;
+  }
+
+  &__footer {
+    margin-top: 32px;
+  }
+}

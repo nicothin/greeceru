@@ -158,7 +158,8 @@
     "rating-view": [],
     "rating-add": [],
     "reviews": [],
-    "typeahead": []
+    "typeahead": [],
+    "no-results": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
