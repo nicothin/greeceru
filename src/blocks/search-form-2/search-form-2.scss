@@ -76,9 +76,9 @@
   }
 
   &__header-input {
-    min-width: 260px;
+    width: 160px;
     height: 40px;
-    padding: 12px 12px 12px 44px;
+    padding: 12px 4px 12px 44px;
     border: 1px solid $gray-lightest;
     font-size: $font-size--small;
     line-height: 1.33;
@@ -131,10 +131,11 @@
 
     @media (min-width: $screen-xl) {
       order: 0;
+      padding-right: 10px;
     }
 
     @media (min-width: $screen-osx) {
-      margin-left: 32px;
+      // margin-left: 32px;
     }
   }
 }
