@@ -45,9 +45,10 @@
   <div class="page__inner">
 
     <div class="page__content">
-      <header class="page-header" role="banner">
 
-        <div class="page-header__inner">
+      <header class="page-header  page-header--search" role="banner">
+
+        <div class="page-header__inner  page-header__inner--new">
 
           <a href="index.html" class="logo">
             <img src="img/logo.svg" width="37" height="37" alt="Greece.ru logo">
@@ -55,153 +56,24 @@
 
           <div id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></div>
 
+          <div class="search-form-2">
+            <button class="search-form-2__btn" type="button" id="search-form-2-trigger">
+              <span class="search-form-2__btn-inner">
+                <svg width="16" height="16"><use xlink:href="img/sprite-svg.svg#search"></use></svg>
+              </span>
+            </button>
+            <!-- ВНИМАНИЕ: это лишь триггер вьюпортов 969px и уже, он требует добавления самой формы в контентной области -->
+          </div>
+
           <nav id="main-nav" class="main-nav" role="navigation">
 
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a href="search.html" class="main-nav__link">Sale</a>
+                <!-- Базовый пункт -->
+                <a href="" class="main-nav__link">Some Item</a>
               </li>
-              <li class="main-nav__item">
-                <a href="search.html" class="main-nav__link">Rent</a>
-              </li>
-              <li class="main-nav__item  main-nav__item--mobile-separator">
-                <a href="list-property-0.html" class="main-nav__link">List Property</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="" class="main-nav__link">Collect drachma</a>
-              </li>
-              <li class="main-nav__item  main-nav__item--active">
-                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler>Regions</span>
-                <div class="main-nav__lvl  main-nav__lvl--regions">
-                  <div class="main-nav__breadcrumbs" style="display:none;">
-                    <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-hide>Back</span>
-                    <span class="main-nav__breadcrumbs-item">&nbsp;&nbsp;>&nbsp; Regions</span>
-                  </div>
-                  <ul class="main-nav__regions-list">
-                    <li class="main-nav__region-item  main-nav__region-item--easten-macedonia">
-                      <a href="region.html" class="main-nav__sub-link  main-nav__sub-link--region">
-                        <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#eastern-macedonia"></use></svg>
-                        <span class="main-nav__region-item-name">Eastern Macedonia and Thrace</span>
-                        <span class="main-nav__region-item-num">24</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__region-item  main-nav__region-item--central-macedonia">
-                      <a href="region.html" class="main-nav__sub-link  main-nav__sub-link--region">
-                      <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#central-macedonia"></use></svg>
-                        <span class="main-nav__region-item-name">Central Macedonia</span>
-                        <span class="main-nav__region-item-num">24</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__region-item  main-nav__region-item--attica">
-                      <a href="region.html" class="main-nav__sub-link  main-nav__sub-link--region">
-                        <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#attica"></use></svg>
-                        <span class="main-nav__region-item-name">Attica</span>
-                        <span class="main-nav__region-item-num">1</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__region-item  main-nav__region-item--central-greece">
-                      <a href="region.html" class="main-nav__sub-link  main-nav__sub-link--region">
-                        <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#central-greece"></use></svg>
-                        <span class="main-nav__region-item-name">Central Greece</span>
-                        <span class="main-nav__region-item-num">24652</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__region-item  main-nav__region-item--crete">
-                      <a href="region.html" class="main-nav__sub-link  main-nav__sub-link--region">
-                        <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#crete"></use></svg>
-                        <span class="main-nav__region-item-name">Crete</span>
-                        <span class="main-nav__region-item-num">24</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__region-item  main-nav__region-item--epirus">
-                      <a href="region.html" class="main-nav__sub-link  main-nav__sub-link--region">
-                        <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#epirus"></use></svg>
-                        <span class="main-nav__region-item-name">Epirus</span>
-                        <span class="main-nav__region-item-num">24</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__region-item  main-nav__region-item--ionian-islands">
-                      <a href="region.html" class="main-nav__sub-link  main-nav__sub-link--region">
-                        <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ionian-islands"></use></svg>
-                        <span class="main-nav__region-item-name">Ionian Islands </span>
-                        <span class="main-nav__region-item-num">24</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__region-item  main-nav__region-item--north-aegean">
-                      <a href="region.html" class="main-nav__sub-link  main-nav__sub-link--region">
-                        <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#north-aegean"></use></svg>
-                        <span class="main-nav__region-item-name">North Aegean</span>
-                        <span class="main-nav__region-item-num">24</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__region-item  main-nav__region-item--peloponnese">
-                      <a href="region.html" class="main-nav__sub-link  main-nav__sub-link--region">
-                        <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#peloponnese"></use></svg>
-                        <span class="main-nav__region-item-name">Peloponnese</span>
-                        <span class="main-nav__region-item-num">24</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__region-item  main-nav__region-item--south-aegean">
-                      <a href="region.html" class="main-nav__sub-link  main-nav__sub-link--region">
-                        <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#south-aegean"></use></svg>
-                        <span class="main-nav__region-item-name">South Aegean</span>
-                        <span class="main-nav__region-item-num">24</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__region-item  main-nav__region-item--thessaly">
-                      <a href="region.html" class="main-nav__sub-link  main-nav__sub-link--region">
-                        <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#thessaly"></use></svg>
-                        <span class="main-nav__region-item-name">Thessaly</span>
-                        <span class="main-nav__region-item-num">24</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__region-item  main-nav__region-item--western-greece">
-                      <a href="region.html" class="main-nav__sub-link  main-nav__sub-link--region">
-                        <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#western-greece"></use></svg>
-                        <span class="main-nav__region-item-name">Western Greece</span>
-                        <span class="main-nav__region-item-num">24</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__region-item  main-nav__region-item--western-macedonia">
-                      <a href="region.html" class="main-nav__sub-link  main-nav__sub-link--region">
-                        <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#western-macedonia"></use></svg>
-                        <span class="main-nav__region-item-name">Western Macedonia</span>
-                        <span class="main-nav__region-item-num">24</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="main-nav__item  main-nav__item--mobile-separator">
-                <a href="blog.html" class="main-nav__link">Blog</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="about.html" class="main-nav__link">About us</a>
-              </li>
-              <li class="main-nav__item  main-nav__item--faq">
-                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler>FAQ</span>
-                <div class="main-nav__lvl  main-nav__lvl--faq">
-                  <div class="main-nav__breadcrumbs" style="display:none;">
-                    <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-hide>Back</span>
-                    <span class="main-nav__breadcrumbs-item">&nbsp;&nbsp;>&nbsp; FAQ</span>
-                  </div>
-                  <ul class="main-nav__sub-list">
-                    <li class="main-nav__item  main-nav__item--lvl-2">
-                      <a href="faq.html" class="main-nav__sub-link">
-                        For Sellers
-                      </a>
-                    </li>
-                    <li class="main-nav__item  main-nav__item--lvl-2">
-                      <a href="faq.html" class="main-nav__sub-link">
-                        For Buyers
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-
-              <!-- Блок ссылок More -->
-              <!-- <li class="main-nav__item  main-nav__item--more">
+              <li class="main-nav__item  main-nav__item--more">
+                <!-- Этот пункт не видно на 1169 и более узких! -->
                 <span class="main-nav__pseudolink  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler>More</span>
                 <div class="main-nav__lvl  main-nav__lvl--more">
                   <ul class="main-nav__sub-list">
@@ -211,38 +83,16 @@
                     <li class="main-nav__item">
                       <a href="" class="main-nav__link">About us</a>
                     </li>
-                    <li class="main-nav__item  main-nav__item--faq">
-                      <span class="main-nav__pseudolink  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler>FAQ</span>
-                      <div class="main-nav__lvl  main-nav__lvl--faq">
-                        <div class="main-nav__breadcrumbs" style="display:none;">
-                          <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-hide>Back</span>
-                          <span class="main-nav__breadcrumbs-item">&nbsp;&nbsp;>&nbsp; FAQ</span>
-                        </div>
-                        <ul class="main-nav__sub-list">
-                          <li class="main-nav__item  main-nav__item--lvl-2">
-                            <a href="" class="main-nav__sub-link">
-                              For Sellers
-                            </a>
-                          </li>
-                          <li class="main-nav__item  main-nav__item--lvl-2">
-                            <a href="" class="main-nav__sub-link">
-                              For Buyers
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
                   </ul>
                 </div>
-              </li> -->
-
-              <li class="main-nav__item  main-nav__item--contacts  main-nav__item--mobile-separator">
-                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler>Contacts</span>
-                <span class="main-nav__pseudolink  main-nav__pseudolink--phone  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler>+30 6974-383-585</span>
+              </li>
+              <!-- <li class="main-nav__item  main-nav__item--contacts-new  main-nav__item--mobile-separator">
+                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler="">Contacts</span>
+                <span class="main-nav__pseudolink  main-nav__pseudolink--phone  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler="">Contact Us</span>
                 <div class="main-nav__lvl  main-nav__lvl--contacts">
                   <div class="main-nav__breadcrumbs" style="display:none;">
-                    <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-hide>Back</span>
-                    <span class="main-nav__breadcrumbs-item">&nbsp;&nbsp;>&nbsp; Contacts</span>
+                    <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-hide="">Back</span>
+                    <span class="main-nav__breadcrumbs-item">&nbsp;&nbsp;&gt;&nbsp; Contacts</span>
                   </div>
                   <ul class="contacts-list">
                     <li class="contacts-list__item">
@@ -276,62 +126,46 @@
                     </li>
                   </ul>
                 </div>
-              </li>
-              <li class="main-nav__item  main-nav__item--currency">
-                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler>Currency: <span data-main-nav-submenu-toggler>€</span></span>
-                <span class="main-nav__pseudolink  main-nav__pseudolink--currency">€</span>
-                <div class="main-nav__lvl  main-nav__lvl--currency">
+              </li> -->
+              <li class="main-nav__item  main-nav__item--contacts-new  main-nav__item--mobile-separator">
+                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler="">Contacts</span>
+                <span class="main-nav__pseudolink  main-nav__pseudolink--phone  main-nav__pseudolink--arrow" data-main-nav-submenu-toggler="">+30 2310-567-433</span>
+                <div class="main-nav__lvl  main-nav__lvl--contacts">
                   <div class="main-nav__breadcrumbs" style="display:none;">
-                    <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-hide>Back</span>
-                    <span class="main-nav__breadcrumbs-item">&nbsp;&nbsp;>&nbsp; Currency</span>
+                    <span class="main-nav__breadcrumbs-item  main-nav__breadcrumbs-item--back" data-main-nav-submenu-hide="">Back</span>
+                    <span class="main-nav__breadcrumbs-item">&nbsp;&nbsp;&gt;&nbsp; Contacts</span>
                   </div>
-                  <ul class="main-nav__sub-list">
-                    <li class="main-nav__item  main-nav__item--lvl-2">
-                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
-                        <span class="main-nav__currency-abbr">USD $</span>
-                        <span class="main-nav__currency-name">U.S. Dollar</span>
-                      </a>
+                  <ul class="contacts-list">
+                    <li class="contacts-list__item">
+                      <b class="contacts-list__item-name">Phone Numbers</b>
+                      <ul class="contacts-list__phones">
+                        <li class="contacts-list__phone-item">
+                          <span class="contacts-list__phone">Central Office</span>
+                          <a href="tel:+30 2310-567-433" class="contacts-list__phone-num" tabindex="-1">+30 2310-567-433</a>
+                        </li>
+                        <li class="contacts-list__phone-item">
+                          <span class="contacts-list__phone">Fax</span>
+                          <a href="tel:+30 2310-557-151" class="contacts-list__phone-num" tabindex="-1">+30 2310-557-151</a>
+                        </li>
+                      </ul>
                     </li>
-                    <li class="main-nav__item  main-nav__item--lvl-2  main-nav__item--active">
-                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
-                        <span class="main-nav__currency-abbr">€</span>
-                        <span class="main-nav__currency-name">Euro</span>
-                      </a>
+                    <li class="contacts-list__item">
+                      <b class="contacts-list__item-name">Address</b>
+                      <span class="contacts-list__item-text">Nikis Avenue 1,  56424 Thessaloniki, Greece</span>
                     </li>
-                    <li class="main-nav__item  main-nav__item--lvl-2">
-                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
-                        <span class="main-nav__currency-abbr">RUB ₽</span>
-                        <span class="main-nav__currency-name">Russian Ruble</span>
-                      </a>
+                    <li class="contacts-list__item">
+                      <b class="contacts-list__item-name">Skype</b>
+                      <a href="skype:Greece.ru?chat" class="contacts-list__item-text" tabindex="-1">Greece.ru</a>
                     </li>
-                    <li class="main-nav__item  main-nav__item--lvl-2">
-                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
-                        <span class="main-nav__currency-abbr">CAD</span>
-                        <span class="main-nav__currency-name">Canadian Dollar</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__item  main-nav__item--lvl-2">
-                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
-                        <span class="main-nav__currency-abbr">AUD</span>
-                        <span class="main-nav__currency-name">Australian Dollar</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__item  main-nav__item--lvl-2">
-                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
-                        <span class="main-nav__currency-abbr">TL</span>
-                        <span class="main-nav__currency-name">Turkish Lira</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__item  main-nav__item--lvl-2">
-                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
-                        <span class="main-nav__currency-abbr">UAH</span>
-                        <span class="main-nav__currency-name">Ukrainian Hryvnia</span>
-                      </a>
+                    <li class="contacts-list__item">
+                      <b class="contacts-list__item-name">Email address</b>
+                      <a href="email:info@greece.ru" class="contacts-list__item-text" tabindex="-1">info@greece.ru</a>
                     </li>
                   </ul>
                 </div>
               </li>
-              <li class="main-nav__item  main-nav__item--language  main-nav__item--mobile-separator">
+              <li class="main-nav__item  main-nav__item--xl-none  main-nav__item--mobile-separator">
+                <!-- Этот пункт не видно на 1170 и более широких! (выбор языка дублирован ниже) -->
                 <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler>Language: <span data-main-nav-submenu-toggler>English</span></span>
                 <span class="main-nav__pseudolink  main-nav__pseudolink--language">En</span>
                 <div class="main-nav__lvl  main-nav__lvl--language">
@@ -358,74 +192,56 @@
                   </ul>
                 </div>
               </li>
+              <li class="main-nav__item  main-nav__item--md-none  main-nav__item--mobile-separator">
+                <!-- Этот пункт не видно на 767 и более узких! (кнопка дублирована ниже) -->
+                <a href="" class="main-nav__link">Καταχώρηση ακινήτου</a>
+              </li>
             </ul>
 
             <div id="main-nav-backdrop" class="main-nav__backdrop"></div>
 
           </nav>
 
-          <div class="page-header__right">
+          <form action="" class="search-form-2__lg-form">
+            <input type="search" class="search-form-2__header-input" placeholder="Find property in Greece" />
+          </form>
 
-            <form class="search-form  page-header__search">
-              <input class="search-form__input" type="search" placeholder="Type object id to search...">
-              <button class="search-form__btn">Search</button>
-            </form>
+          <div class="page-header__new-right">
 
-            <ul class="main-nav__list  main-nav__list--always-drop-down">
+            <ul class="main-nav__list-right">
               <li class="main-nav__item">
-                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler>Currency: <span data-main-nav-submenu-toggler>€</span></span>
-                <span class="main-nav__pseudolink  main-nav__pseudolink--currency  main-nav__pseudolink--arrow-desktop" data-main-nav-submenu-toggler>€</span>
-                <div class="main-nav__lvl  main-nav__lvl--currency">
-                  <ul class="main-nav__sub-list">
-                    <li class="main-nav__item  main-nav__item--lvl-2">
-                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
-                        <span class="main-nav__currency-abbr">USD $</span>
-                        <span class="main-nav__currency-name">U.S. Dollar</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__item  main-nav__item--lvl-2  main-nav__item--active">
-                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
-                        <span class="main-nav__currency-abbr">€</span>
-                        <span class="main-nav__currency-name">Euro</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__item  main-nav__item--lvl-2">
-                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
-                        <span class="main-nav__currency-abbr">RUB ₽</span>
-                        <span class="main-nav__currency-name">Russian Ruble</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__item  main-nav__item--lvl-2">
-                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
-                        <span class="main-nav__currency-abbr">CAD</span>
-                        <span class="main-nav__currency-name">Canadian Dollar</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__item  main-nav__item--lvl-2">
-                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
-                        <span class="main-nav__currency-abbr">AUD</span>
-                        <span class="main-nav__currency-name">Australian Dollar</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__item  main-nav__item--lvl-2">
-                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
-                        <span class="main-nav__currency-abbr">TL</span>
-                        <span class="main-nav__currency-name">Turkish Lira</span>
-                      </a>
-                    </li>
-                    <li class="main-nav__item  main-nav__item--lvl-2">
-                      <a href="" class="main-nav__sub-link  main-nav__sub-link--currency">
-                        <span class="main-nav__currency-abbr">UAH</span>
-                        <span class="main-nav__currency-name">Ukrainian Hryvnia</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                <a href="" class="main-nav__link  main-nav__link--narrow  main-nav__link--help-center" data-show-help-center>
+                  <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#help-circle"></use></svg>
+                  <span class="main-nav__help-text">Help Center</span>
+                </a>
               </li>
-              <li class="main-nav__item">
-                <span class="main-nav__pseudolink  main-nav__pseudolink--arrow  main-nav__pseudolink--descktop-hide" data-main-nav-submenu-toggler>Language: <span data-main-nav-submenu-toggler>English</span></span>
-                <span class="main-nav__pseudolink  main-nav__pseudolink--language  main-nav__pseudolink--arrow-desktop" data-main-nav-submenu-toggler>En</span>
-                <div class="main-nav__lvl  main-nav__lvl--language">
+              <!-- <li class="main-nav__item"><a href="#sign-in" data-toggle="modal" class="main-nav__link  main-nav__link--sign-in">Sign In</a></li> -->
+              <li class="login  login--user">
+                <span class="login__user-info" data-usermenu-toggler>
+                  <img src="img/feedback-avatar-01.png" alt="Eugeny" class="login__avatar">
+                  <span class="login__name"><span class="login__name-text">EugenySomeLongName</span></span>
+                </span>
+                <ul class="login__menu  login__menu--r0">
+                  <li class="login__menu-item">
+                    <a href="" class="login__menu-link">Profile</a>
+                  </li>
+                  <li class="login__menu-item">
+                    <a href="" class="login__menu-link">Wishlist</a>
+                  </li>
+                  <li class="login__menu-item">
+                    <a href="" class="login__menu-link">Savings</a>
+                  </li>
+                  <li class="login__menu-item">
+                    <a href="" class="login__menu-link">Payments</a>
+                  </li>
+                  <li class="login__menu-item">
+                    <a href="" class="login__menu-link">Share property</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="main-nav__item  main-nav__item--lang">
+                <span class="main-nav__pseudolink  main-nav__pseudolink--language  main-nav__pseudolink--arrow-desktop" data-lang-toggler>En</span>
+                <div class="main-nav__lvl  main-nav__lvl--language-xl">
                   <ul class="main-nav__sub-list">
                     <li class="main-nav__item  main-nav__item--lvl-2  main-nav__item--active">
                       <a href="" class="main-nav__sub-link">English</a>
@@ -447,9 +263,10 @@
               </li>
             </ul>
 
-            <div class="login">
-              <a href="" class="login__sign-in">Sign In</a>
+            <div class="page-header__btn-wrap">
+              <a href="" class="page-header__btn">Καταχώρηση ακινήτου</a>
             </div>
+
 
           </div>
 
