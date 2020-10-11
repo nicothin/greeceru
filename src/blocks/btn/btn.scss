@@ -138,7 +138,12 @@ $border-radius:               3px !default;
   }
 
   &--sm {
+    padding: $field-padding-vertical;
     font-size: $font-size--small;
+
+    @media (min-width: $screen-md) {
+      padding: $field-padding-vertical ($field-padding-vertical - 2);
+    }
   }
 
   &--wide-s {
