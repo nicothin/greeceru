@@ -1218,6 +1218,7 @@ a.btn--disabled {
 .btn--red-text:hover, .btn--red-text:focus {
       color: #ee1a1a; }
 .btn--sm {
+    padding: 9px;
     font-size: 12px; }
 .btn--wide-s {
     padding-left: 24px;
@@ -12124,6 +12125,8 @@ input:checked + .rating-add__label .rating-add__input-descr {
         display: none; }
     .btn {
       padding: 9px 14px; }
+      .btn--sm {
+        padding: 9px 7px; }
       .btn--wide-s {
         padding-left: 24px;
         padding-right: 24px; }
