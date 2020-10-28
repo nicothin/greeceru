@@ -11663,9 +11663,7 @@ input:checked + .rating-add__label .rating-add__input-descr {
         background-image: none; }
 .typeahead__field input:active, .typeahead__field input:focus {
         -webkit-box-shadow: none;
-                box-shadow: none;
-        border-color: #99b6ff;
-        background-color: #eef2ff; }
+                box-shadow: none; }
 .typeahead__list {
     display: none;
     position: absolute;
@@ -11674,10 +11672,11 @@ input:checked + .rating-add__label .rating-add__input-descr {
     width: 100%;
     min-width: 160px;
     max-height: 200px;
-    overflow-y: scroll;
-    margin: 8px 0 0;
+    overflow-y: auto;
+    margin: -1px 0 0;
     padding: 4px 0;
     border: 1px solid #d9e0e9;
+    border-top: 0;
     border-radius: 2px;
     list-style: none;
     text-align: left;
@@ -11685,9 +11684,22 @@ input:checked + .rating-add__label .rating-add__input-descr {
     background-clip: padding-box; }
 .result .typeahead__list {
       display: block; }
+.typeahead__list::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 10px;
+      height: 10px; }
+.typeahead__list::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 0; }
+.typeahead__list::-webkit-scrollbar-thumb {
+      cursor: pointer;
+      border-radius: 5px;
+      background: rgba(0, 0, 0, 0.25);
+      -webkit-transition: color .2s ease;
+      transition: color .2s ease; }
 .typeahead__item a {
     display: block;
-    padding: 8px 16px;
+    padding: 8px 14px;
     font-size: 14px;
     color: #31353f;
     text-decoration: none; }
@@ -11697,6 +11709,8 @@ input:checked + .rating-add__label .rating-add__input-descr {
 .typeahead__item a strong {
       font-weight: 400;
       color: #477afb; }
+.typeahead__item.active a {
+    background-color: #eef2ff; }
 .typeahead__empty {
     padding: 32px;
     text-align: center; }
