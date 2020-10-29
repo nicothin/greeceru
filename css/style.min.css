@@ -10366,7 +10366,7 @@ input:checked ~ .add-type__item svg, .add-type__item:hover svg, .add-type__item:
       color: #258e3d; }
 .object-price-data__sell-auction-link svg {
       display: inline-block;
-      vertical-align: -0.3em;
+      vertical-align: -0.6em;
       margin-right: 0.3em;
       fill: currentColor; }
 .object-price-data__inner {
