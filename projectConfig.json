@@ -161,7 +161,8 @@
     "typeahead": [],
     "no-results": [],
     "msg-bottom": [],
-    "scroll": []
+    "scroll": [],
+    "field-selectric": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -195,7 +196,8 @@
     "./node_modules/owl.carousel/dist/owl.carousel.js",
     "./src/js/hc-sticky.js",
     "./node_modules/simplebar/dist/simplebar.js",
-    "./node_modules/jquery-typeahead/dist/jquery.typeahead.min.js"
+    "./node_modules/jquery-typeahead/dist/jquery.typeahead.min.js",
+    "./node_modules/selectric/public/jquery.selectric.min.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"

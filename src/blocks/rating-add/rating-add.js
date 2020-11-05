@@ -46,6 +46,7 @@
     });
   });
 
+  // старая версия с typeahead
   $('.js-typeahead').on('focus', function(){
     $(this).closest('.typeahead').addClass('typeahead--focus');
   });

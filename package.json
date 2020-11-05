@@ -63,6 +63,7 @@
     "jquery-ui": "^1.12.1",
     "object-fit-images": "^3.2.3",
     "owl.carousel": "^2.2.0",
+    "selectric": "^1.13.0",
     "simplebar": "^5.1.0",
     "svg4everybody": "^2.1.7"
   }
