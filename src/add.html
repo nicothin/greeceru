@@ -85,6 +85,54 @@
                     <h1 class="page__h1">Tell more details about your property</h1>
                   </header>
 
+                  <div id="nomos-div">
+                    <p>Prefecture. Insert in the field below the Prefecture where your property is located. USE ENGLISH CHARACTERS. <i>For example Chania, Chalkidiki etc</i></p>
+
+                    <select class="field-selectric">
+                      <option>Выберите</option>
+                      <option>Значение 1 длинное, много слов, очень много слов</option>
+                      <option>Значение 2</option>
+                      <option>Значение 3</option>
+                      <option>Значение 10</option>
+                      <option>Значение 10</option>
+                      <option>Значение 10</option>
+                      <option>Значение 10</option>
+                      <option>Значение 10</option>
+                      <option>Значение 10</option>
+                      <option>Значение 10</option>
+                      <option>Значение 10</option>
+                      <option>Значение 10</option>
+                      <option>Значение 10</option>
+                      <option>Значение 10</option>
+                      <option>Значение 10</option>
+                      <option>Значение 10</option>
+                      <option>Значение 10</option>
+                      <option>Значение 10</option>
+                      <option>Значение 10</option>
+                      <option>Значение 10</option>
+                      <option>Значение 10</option>
+                      <option>Значение 10</option>
+                      <option>Значение 10</option>
+                    </select>
+
+                    <!-- <div class="typeahead typeahead--focus">
+                      <div class="typeahead__container">
+                        <div class="typeahead__field">
+                          <div class="typeahead__query">
+                            <span class="typeahead__cancel-button">×</span><input value="" id="alx-nomos"
+                              class="js-typeahead  field-text__input" name="q" type="search" autocomplete="off"
+                              placeholder="My property Prefecture is...">
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+
+                  </div>
+
+                  <hr>
+
+                  <p>Старая версия содержимого:</p>
+
                   <div class="add-form__type-select">
 
                     <div class="field-drop-checkboxes  field-drop-checkboxes--lg">
@@ -1093,6 +1141,15 @@
       return false; // Keep the form from submitting
     });
   });
+  </script>
+
+  <script>
+    $(function () {
+      $('.field-selectric').selectric({
+        disableOnMobile: false,
+        maxHeight: 220,
+      });
+    });
   </script>
 
 </body>
