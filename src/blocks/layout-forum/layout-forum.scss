@@ -1,0 +1,40 @@
+// В этом файле должны быть стили для БЭМ-блока layout-forum, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.layout-forum {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  flex-grow: 1;
+  background-color: $gray-ultra-lightest;
+
+  &__inner {
+    max-width: 1204px;
+    margin: auto;
+    padding: 0 12px;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+    }
+  }
+
+  &__header {
+    padding: 32px 0 24px;
+  }
+
+  &__main-title {
+    margin: 0 0 8px;
+    font-size: $font-size--h2;
+    line-height: 1.333;
+    color: $text-color;
+  }
+
+  &__main-descr {
+    color: $text-color--muted;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

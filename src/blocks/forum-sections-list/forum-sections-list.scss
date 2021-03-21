@@ -1,0 +1,26 @@
+// В этом файле должны быть стили для БЭМ-блока forum-sections-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.forum-sections-list {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  &__header {
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: $font-size--h3;
+    line-height: 1.5;
+    font-weight: 900;
+    color: $text-color;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}

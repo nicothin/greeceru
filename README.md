@@ -1,4 +1,4 @@
-# Проект с gulp [![devDependencies Status](https://david-dm.org/nicothin/greeceru/dev-status.svg)](https://david-dm.org/nicothin/greeceru?type=dev) [![dependencies Status](https://david-dm.org/nicothin/greeceru/status.svg)](https://david-dm.org/nicothin/greeceru)
+# Greece.ru
 
 **ВНИМАНИЕ** Проект делался относительно давно. Для запуска нужен nodeJS 10-й или 11-й версии, ибо версии 12+ не поддерживают то, что нужно gulp 3, с которым сделана автоматизация. Рекомендовано использовать nvm.
 

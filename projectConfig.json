@@ -162,7 +162,10 @@
     "no-results": [],
     "msg-bottom": [],
     "scroll": [],
-    "field-selectric": []
+    "field-selectric": [],
+    "layout-forum": [],
+    "forum-sections-list": [],
+    "forum-section": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
