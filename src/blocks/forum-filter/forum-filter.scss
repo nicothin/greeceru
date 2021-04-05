@@ -1,0 +1,44 @@
+// В этом файле должны быть стили для БЭМ-блока forum-filter, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.forum-filter {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    margin-right: 16px;
+  }
+
+  &__btn {
+    padding: 6px 0;
+    border: none;
+    font-size: $font-size--h4;
+    line-height: 1.4286;
+    background: none;
+    cursor: pointer;
+
+    &--active {
+      padding: 6px 24px;
+      border-radius: 20px;
+      background: $white;
+      box-shadow: 0px 1px 3px rgba(115, 124, 148, 0.4);
+    }
+  }
+
+  &__btn-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 3px;
+
+    &--active {
+      transform: rotate(-180deg);
+    }
+  }
+}

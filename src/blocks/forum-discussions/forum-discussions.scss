@@ -1,0 +1,43 @@
+// В этом файле должны быть стили для БЭМ-блока forum-discussions, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.forum-discussions {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  &__header {
+    margin-bottom: 36px;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    margin: 0 0 16px;
+    font-size: $font-size--h3;
+    line-height: 1.5;
+    font-weight: 900;
+    color: $text-color;
+  }
+
+  &__add-question {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    @media (min-width: $screen-lg) {
+      position: static;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      margin-left: auto;
+    }
+  }
+}

@@ -6,6 +6,22 @@
 
   $block-name:                &; // #{$block-name}__element {}
 
+  margin-bottom: 32px;
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 52px;
+  }
+
+  .owl-item {
+    margin-right: 0 !important;
+    margin-left: 15px;
+  }
+
+  .owl-nav.disabled,
+  .owl-dots.disabled {
+    display: none;
+  }
+
   &__header {
     margin-bottom: 16px;
   }
@@ -19,8 +35,32 @@
   }
 
   &__list {
-    margin: 0;
+    width: auto;
+    margin: 0 -15px;
     padding: 0;
     list-style: none;
+
+    @media (min-width: $screen-lg) {
+      margin: 0;
+    }
+
+    .owl-stage {
+      display: flex;
+    }
+
+    .owl-item {
+      display: flex;
+    }
+  }
+
+  &__item {
+    display: flex;
+
+    @media (min-width: $screen-lg) {
+
+      &:not(:first-child) .forum-section {
+        border-top: 0;
+      }
+    }
   }
 }

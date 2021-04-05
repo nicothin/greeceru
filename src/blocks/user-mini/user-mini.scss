@@ -27,6 +27,17 @@
     overflow: hidden;
     text-overflow: ellipsis;
     color: $text-color;
+
+    &--semibold {
+      font-weight: 600;
+    }
+  }
+
+  &__user-type {
+
+    &--mute {
+      color: $gray;
+    }
   }
 
   &__text-wrapper {
@@ -85,5 +96,10 @@
       color: $text-color;
       text-decoration: none;
     }
+  }
+
+  &--inline {
+    display: inline-block;
+    width: auto;
   }
 }

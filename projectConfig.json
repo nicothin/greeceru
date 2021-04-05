@@ -165,7 +165,12 @@
     "field-selectric": [],
     "layout-forum": [],
     "forum-sections-list": [],
-    "forum-section": []
+    "forum-section": [],
+    "forum-discussions": [],
+    "forum-filter": [],
+    "forum-topic-mini": [],
+    "forum-info-icon": [],
+    "forum-label": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

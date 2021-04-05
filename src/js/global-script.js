@@ -262,6 +262,31 @@ $( document ).ready(function() {
     $('#feedback-slider').trigger('prev.owl.carousel');
   });
 
+  // карусель на главной стр. форума
+  var $topRatedCarousel = $('#forum-sections');
+  var topRatedCarouselSettings = {
+    items: 1,
+    margin: 15,
+    autoWidth: true,
+    dots: false,
+    // loop: true,
+  };
+  function forumMainCarouselInit() {
+    var containerWidth = $(window).width() + scrollWidth;
+    if (containerWidth < 970) {
+      $topRatedCarousel.owlCarousel(topRatedCarouselSettings);
+    } else {
+      $topRatedCarousel.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+      $topRatedCarousel.find('.owl-stage-outer').children().unwrap();
+    }
+  }
+  var topRatedTimeoutId;
+  $(window).resize(function () {
+    clearTimeout(topRatedTimeoutId);
+    topRatedTimeoutId = setTimeout(forumMainCarouselInit, 200);
+  });
+  forumMainCarouselInit();
+
   // дроп фильтра товаров
   $('[data-filter-drop-toggler]').on('click', function(e){
     e.preventDefault();

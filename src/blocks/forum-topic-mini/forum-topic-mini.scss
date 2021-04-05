@@ -1,0 +1,87 @@
+// В этом файле должны быть стили для БЭМ-блока forum-topic-mini, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.forum-topic-mini {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  padding: 16px;
+  border: 1px solid $gray-lightest;
+  background: $white;
+
+  &__header-info {
+    margin: 0 0 16px;
+    font-size: $font-size--small;
+    color: $text-color--muted;
+  }
+
+  &__theme {
+    position: relative;
+    display: inline-block;
+    padding-right: 20px;
+
+    &:not(:last-child) {
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 7px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: $gray;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 8px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  &__label {
+    display: none;
+  }
+
+  &__content-wrap {}
+
+  &__reply-counter {
+    display: none;
+  }
+
+  &__google-translate {
+    font-size: $font-size--small;
+  }
+
+  &__footer {
+    position: relative;
+    margin-top: 32px;
+    padding-top: 8px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -16px;
+      right: -16px;
+      border-top: 1px solid $gray-lightest;
+    }
+  }
+
+  &__footer-item {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
