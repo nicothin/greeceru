@@ -1,9 +1,26 @@
-// В этом файле должны быть стили для БЭМ-блока forum-label, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока forum-label, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .forum-label {
 
   $block-name:                &; // #{$block-name}__element {}
+
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: $font-size--small;
+  line-height: 1.3334;
+  color: $white;
+  background: $color-warning-light;
+
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    fill: $white;
+  }
+
+  &__icon {
+    margin-right: 4px;
+  }
 
 }

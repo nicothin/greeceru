@@ -6,8 +6,18 @@
 
   $block-name:                &; // #{$block-name}__element {}
 
+  margin-bottom: 22px;
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 60px;
+  }
+
   &__header {
     margin-bottom: 36px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 16px;
+    }
 
     @media (min-width: $screen-lg) {
       display: flex;
@@ -39,5 +49,9 @@
       bottom: auto;
       margin-left: auto;
     }
+  }
+
+  &__item {
+    margin-bottom: 24px;
   }
 }

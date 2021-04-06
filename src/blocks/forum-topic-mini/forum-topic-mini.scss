@@ -6,14 +6,23 @@
 
   $block-name:                &; // #{$block-name}__element {}
 
+  position: relative;
   padding: 16px;
   border: 1px solid $gray-lightest;
   background: $white;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 0;
+  }
 
   &__header-info {
     margin: 0 0 16px;
     font-size: $font-size--small;
     color: $text-color--muted;
+
+    @media (min-width: $screen-md) {
+      padding-right: 180px;
+    }
   }
 
   &__theme {
@@ -50,12 +59,51 @@
 
   &__label {
     display: none;
+
+    @media (min-width: $screen-md) {
+      position: absolute;
+      top: 8px;
+      right: 16px;
+      display: block;
+    }
   }
 
-  &__content-wrap {}
+  &__content-wrap {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  &__reply-counter-wrap {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      margin-left: 32px;
+      transform: translateY(-8px);
+    }
+  }
 
   &__reply-counter {
-    display: none;
+
+    @media (min-width: $screen-md) {
+      color: $gray;
+      text-align: center;
+
+      strong {
+        font-size: $font-size--h1;
+        color: $text-color;
+      }
+
+      &--no-reply {
+
+        strong {
+          color: inherit;
+        }
+      }
+    }
   }
 
   &__google-translate {
@@ -66,6 +114,12 @@
     position: relative;
     margin-top: 32px;
     padding-top: 8px;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      // align-items: flex-start;
+      padding-top: 0;
+    }
 
     &:before {
       content: '';
@@ -78,7 +132,33 @@
   }
 
   &__footer-item {
+    flex-shrink: 0;
     margin-bottom: 8px;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      align-items: center;
+      min-width: 0;
+      margin-bottom: 0;
+      padding: 8px 16px;
+      border-left: 1px solid $gray-lightest;
+
+      .user-mini {
+        display: block;
+        max-width: 100%;
+      }
+
+      &:last-child {
+        margin-right: -10px;
+      }
+
+      &--author {
+        flex-shrink: 1;
+        margin-right: auto;
+        padding-left: 0;
+        border-left: 0;
+      }
+    }
 
     &:last-child {
       margin-bottom: 0;

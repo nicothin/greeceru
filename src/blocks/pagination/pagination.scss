@@ -164,4 +164,11 @@ $border-color:                hsl(0, 0%, 60%) !default;
       }
     }
   }
+
+  &--bg-white {
+
+    #{$block-name}__item:not(#{$block-name}__item--active) {
+      background: $white;
+    }
+  }
 }
