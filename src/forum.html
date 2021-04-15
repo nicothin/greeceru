@@ -423,12 +423,12 @@
 
             <aside class="layout-forum__aside">
 
-              <section class="forum-personal">
+              <section class="layout-forum__aside-personal  forum-personal">
                 <h2 class="forum-personal__title">Личный раздел</h2>
                 <ul class="forum-personal__list">
                   <li class="forum-personal__item">
                     <!-- нужна ссылка — написать тег a -->
-                    <span class="forum-personal__link">
+                    <span class="forum-personal__link  forum-personal__link--active">
                       <svg class="forum-personal__icon" width="24" height="24">
                         <use xlink:href="img/sprite-svg.svg#forum-icon-themes"></use>
                       </svg>
@@ -454,17 +454,20 @@
                 </ul>
               </section>
 
-              <form class="forum-search-block" action="">
+              <form class="layout-forum__aside-search  forum-search-block" action="">
                 <h2 class="forum-search-block__title">Поиск по форуму</h2>
                 <div class="forum-search-block__inner">
-                  <input type="text" class="forum-search-block__input">
+                  <input type="text" class="forum-search-block__input" placeholder="Введите вопрос для поиска...">
                   <button class="forum-search-block__btn">
+                    <svg width="24" height="24" class="forum-search-block__btn-icon">
+                      <use xlink:href="img/sprite-svg.svg#search"></use>
+                    </svg>
                     <span class="forum-search-block__btn-text">Найти</span>
                   </button>
                 </div>
               </form>
 
-              <section class="forum-most-interesting">
+              <section class="layout-forum__aside-most-interesting  forum-most-interesting">
                 <h2 class="forum-most-interesting__title">Самое интересное за 24 часа</h2>
                 <ul class="forum-most-interesting__list">
                   <li class="forum-most-interesting__item">
@@ -550,6 +553,52 @@
                       <li>42 подписчика</li>
                       <li>63 ответа</li>
                     </ul>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="layout-forum__top-5  forum-top-users">
+                <h2 class="forum-top-users__title">ТОП-5 лучших пользователей</h2>
+                <ul class="forum-top-users__list">
+                  <li class="forum-top-users__item">
+                    <a href="" class="forum-top-users__item-user  user-mini  user-mini--md">
+                      <span class="user-mini__inner">
+                        <img src="img/feedback-avatar-01.png" width="56" height="56" alt="Long user name name name">
+                        <span class="user-mini__text-wrapper">
+                          <span class="user-mini__username  user-mini__username--semibold">Long user name name nameLong user name name
+                            name</span>
+                          <span class="user-mini__user-type  user-mini__user-type--list">
+                            <span class="user-mini__user-type-text">32 вопроса</span>
+                            <span class="user-mini__user-type-text">104 ответ</span>
+                          </span>
+                        </span>
+                      </span>
+                    </a>
+                    <btn class="forum-top-users__user-btn  btn  btn--icon-2">
+                      <svg width="24" height="24">
+                        <use xlink:href="img/sprite-svg.svg#forum-icon-user"></use>
+                      </svg>
+                    </btn>
+                  </li>
+                  <li class="forum-top-users__item">
+                    <a href="" class="forum-top-users__item-user  user-mini  user-mini--md">
+                      <span class="user-mini__inner">
+                        <img src="img/feedback-avatar-01.png" width="56" height="56" alt="Long user name name name">
+                        <span class="user-mini__text-wrapper">
+                          <span class="user-mini__username  user-mini__username--semibold">Long user name name nameLong user name name
+                            name</span>
+                          <span class="user-mini__user-type  user-mini__user-type--list">
+                            <span class="user-mini__user-type-text">32 вопроса</span>
+                            <span class="user-mini__user-type-text">104 ответ</span>
+                          </span>
+                        </span>
+                      </span>
+                    </a>
+                    <btn class="forum-top-users__user-btn  btn  btn--icon-2">
+                      <svg width="24" height="24">
+                        <use xlink:href="img/sprite-svg.svg#forum-icon-check"></use>
+                      </svg>
+                    </btn>
                   </li>
                 </ul>
               </section>

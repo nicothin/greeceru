@@ -1,0 +1,79 @@
+// В этом файле должны быть стили для БЭМ-блока forum-most-interesting, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.forum-most-interesting {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  &__title {
+    margin: 0 0 16px;
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__item-theme {
+    margin: 0 0 4px;
+    font-size: $font-size--small;
+
+    a {
+      display: block;
+      color: $text-color;
+
+      &:hover,
+      &:focus {
+        color: $link-color--hover;
+      }
+    }
+  }
+
+  &__item-name {
+    margin: 0 0 8px;
+
+    a {
+      display: block;
+    }
+  }
+
+  &__item-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: $font-size--small;
+    color: $gray;
+
+    li {
+
+      &:not(:last-child) {
+        position: relative;
+        padding-right: 20px;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: calc(50% - 2px);
+          right: 8px;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background: $gray;
+        }
+      }
+    }
+  }
+}

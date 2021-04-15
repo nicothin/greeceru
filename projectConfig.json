@@ -170,7 +170,11 @@
     "forum-filter": [],
     "forum-topic-mini": [],
     "forum-info-icon": [],
-    "forum-label": []
+    "forum-label": [],
+    "forum-personal": [],
+    "forum-search-block": [],
+    "forum-most-interesting": [],
+    "forum-top-users": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

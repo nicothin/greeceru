@@ -38,6 +38,32 @@
     &--mute {
       color: $gray;
     }
+
+    &--list {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: $font-size--small;
+      color: $gray;
+    }
+  }
+
+  &__user-type-text {
+
+    &:not(:last-child) {
+      position: relative;
+      padding-right: 20px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: calc(50% - 2px);
+        right: 8px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: $gray;
+      }
+    }
   }
 
   &__text-wrapper {
@@ -102,5 +128,6 @@
   &--inline {
     display: inline-block;
     width: auto;
+    max-width: 100%;
   }
 }

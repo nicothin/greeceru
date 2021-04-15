@@ -214,6 +214,33 @@ $border-radius:               3px !default;
     }
   }
 
+  &--icon-2 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    padding: 0 !important;
+    color: $gray;
+    background-color: #fff;
+    border: 1px solid $border-color;
+    box-shadow: 0px 1px 3px rgba(115, 124, 148, 0.4);
+
+    &:hover,
+    &:focus {
+      color: $color-main;
+      background-color: #fff;
+      box-shadow: none;
+      border: 1px solid $border-color;
+    }
+
+    svg {
+      margin: 0;
+      fill: currentColor;
+      transition: fill $transition-time;
+    }
+  }
+
   &--lg-shown {
     display: none;
 

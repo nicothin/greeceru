@@ -1,0 +1,55 @@
+// В этом файле должны быть стили для БЭМ-блока forum-search-block, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.forum-search-block {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  &__title {
+    margin: 0 0 16px;
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  &__inner {
+    display: flex;
+    border: 1px solid $gray-lighter;
+    background: #fff;
+  }
+
+  &__input {
+    flex-grow: 1;
+    border: 0;
+    border-radius: 0;
+    padding: 14px 16px;
+    line-height: 20px;
+    outline: none;
+
+    &::placeholder {
+      color: $gray;
+      opacity: 1;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 48px;
+    border: 0;
+    border-left: 1px solid $gray-lighter;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &__btn-text {
+    font-size: 0;
+    opacity: 0;
+  }
+
+  &__btn-icon {
+    fill: $color-main;
+  }
+}
