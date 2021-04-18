@@ -1,5 +1,20 @@
 $( document ).ready(function() {
 
+  function getBlockInViewportFlag(blockSelector) {
+    var blockPosition = $(blockSelector).offset().top,
+        windowScrollPosition = $(window).scrollTop() + $(window).height();
+    return blockPosition < windowScrollPosition;
+  }
+
+  $(window).on('scroll', function() {
+    if( getBlockInViewportFlag('.page-footer') ) {
+      $('.layout-forum__has-question').addClass('layout-forum__has-question--bottom');
+    }
+    else {
+      $('.layout-forum__has-question').removeClass('layout-forum__has-question--bottom');
+    }
+  });
+
   // фиксация сайдбара на странице объекта
   var Sticky = new hcSticky('.object-price-data', {
     stickTo: '.layout-object__aside',
@@ -383,6 +398,7 @@ $( document ).ready(function() {
   $('.aside-block__header-toggler').on('click', function(){
     $(this).closest('.aside-block--collapsable').toggleClass('aside-block--collapse');
   });
+
 
   // слайдеры для блока mortgage в сайдбаре
   /* //Alekos: Перенёс инициализацию слайдеров на internal property только для недвижимости на продажу

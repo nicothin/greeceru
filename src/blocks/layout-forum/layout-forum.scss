@@ -22,12 +22,9 @@
   &__main {
 
     @media (min-width: $screen-lg) {
-      width: 72%;
+      flex-grow: 1;
+      min-width: 0;
       padding-right: 20px;
-    }
-
-    @media (min-width: $screen-xl) {
-      width: 76.5%;
     }
   }
 
@@ -35,12 +32,13 @@
     position: relative;
 
     @media (min-width: $screen-lg) {
-      width: 28%;
+      width: 260px;
       padding-top: 40px;
+      padding-bottom: 116px;
     }
 
     @media (min-width: $screen-xl) {
-      width: 23.5%;
+      width: 280px;
       padding-top: 50px;
     }
   }
@@ -94,28 +92,56 @@
     display: none;
 
     @media (min-width: $screen-lg) {
-      display: block;
-      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: fixed;
+      z-index: 1;
       bottom: 0;
-      right: 0;
-      left: 0;
+      // width: 260px;
+      height: 100px;
       padding: 16px 16px 16px 48px;
       border-radius: 16px 16px 0 0;
       color: $white !important;
       text-decoration: none;
       background: $color-main;
+
+      &--bottom {
+        position: absolute;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 280px;
     }
 
     small {
       display: block;
       margin-top: 8px;
     }
+  }
 
-    svg {
-      display: inline-block;
-      vertical-align: middle;
-      margin-left: 8px;
-      fill: currentColor;
-    }
+  &__has-question-icon-wrap {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  &__has-question-icon {
+    fill: $color-main;
+  }
+
+  &__has-question-arr {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+    fill: currentColor;
   }
 }
