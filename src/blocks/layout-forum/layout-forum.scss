@@ -19,15 +19,45 @@
     }
   }
 
+  &__main {
+
+    @media (min-width: $screen-lg) {
+      width: 72%;
+      padding-right: 20px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 76.5%;
+    }
+  }
+
+  &__aside {
+    position: relative;
+
+    @media (min-width: $screen-lg) {
+      width: 28%;
+      padding-top: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 23.5%;
+      padding-top: 50px;
+    }
+  }
+
   &__header {
-    padding: 32px 0 24px;
+    padding: 8px 0 24px;
   }
 
   &__main-title {
-    margin: 0 0 8px;
+    margin: 24px 0 8px;
     font-size: $font-size--h2;
     line-height: 1.333;
     color: $text-color;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 40px;
+    }
   }
 
   &__main-descr {
@@ -58,5 +88,34 @@
 
   &__aside-most-interesting {
     margin-bottom: 48px;
+  }
+
+  &__has-question {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      padding: 16px 16px 16px 48px;
+      border-radius: 16px 16px 0 0;
+      color: $white !important;
+      text-decoration: none;
+      background: $color-main;
+    }
+
+    small {
+      display: block;
+      margin-top: 8px;
+    }
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 8px;
+      fill: currentColor;
+    }
   }
 }
