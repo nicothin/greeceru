@@ -47,6 +47,12 @@
     padding: 8px 0 24px;
   }
 
+  &__breadcrumbs {
+    margin-top: 24px;
+    margin-bottom: 32px;
+    color: $gray-light;
+  }
+
   &__main-title {
     margin: 24px 0 8px;
     font-size: $font-size--h2;
@@ -55,6 +61,11 @@
 
     @media (min-width: $screen-xl) {
       margin-top: 40px;
+
+      &--lg {
+        font-size: $font-size--h1;
+        line-height: 1.25;
+      }
     }
   }
 
@@ -63,6 +74,59 @@
 
     p:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  &__header-line {
+    margin-top: 24px;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      border-bottom: 1px solid $gray-lightest;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__theme-data {
+    flex-shrink: 0;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+  }
+
+  &__theme-data-item {
+    margin-bottom: 8px;
+
+    @media (min-width: $screen-lg) {
+      margin-right: 24px;
+    }
+
+    svg {
+      fill: $gray-light;
+    }
+  }
+
+  &__add-question {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-shrink: 0;
+
+    @media (min-width: $screen-lg) {
+      position: static;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      margin-left: auto;
+      margin-bottom: 16px;
     }
   }
 
@@ -88,6 +152,17 @@
     margin-bottom: 48px;
   }
 
+  &__top-5 {
+
+    &--md-hidden {
+      display: none;
+
+      @media (min-width: $screen-lg) {
+        display: block;
+      }
+    }
+  }
+
   &__has-question {
     display: none;
 
@@ -98,7 +173,7 @@
       position: fixed;
       z-index: 1;
       bottom: 0;
-      // width: 260px;
+      width: 260px;
       height: 100px;
       padding: 16px 16px 16px 48px;
       border-radius: 16px 16px 0 0;
