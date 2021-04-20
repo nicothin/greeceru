@@ -90,6 +90,58 @@
     }
   }
 
+  &__topic-line {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__topic-date {
+    font-size: $font-size--small;
+    color: $gray;
+    text-align: right;
+  }
+
+  &__topic-author-wrap {
+    margin-bottom: 16px;
+    padding: 8px 16px 16px;
+    border: 1px solid $gray-lightest;
+    background-color: $white;
+  }
+
+  &__topic-author {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  &__topic-author-data {
+    display: flex;
+    flex-direction: column;
+
+    & > p {
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__topic-btn {
+    position: relative;
+    display: block !important;
+    width: 100%;
+    padding-left: 44px !important;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    svg {
+      position: absolute;
+      top: 8px;
+      left: 12px;
+    }
+  }
+
   &__theme-data {
     flex-shrink: 0;
 
