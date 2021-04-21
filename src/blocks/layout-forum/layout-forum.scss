@@ -90,32 +90,84 @@
     }
   }
 
+  &__topic-content {
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+  }
+
   &__topic-line {
     display: flex;
     flex-direction: column;
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 16px;
+    }
   }
 
   &__topic-date {
     font-size: $font-size--small;
     color: $gray;
     text-align: right;
+
+     @media (min-width: $screen-md) {
+       order: 1;
+       padding-left: 16px;
+       margin-left: auto;
+     }
+  }
+
+  &__topic-info {
+
+    @media (min-width: $screen-lg) {
+      padding: 16px 0;
+      border-top: 1px solid $gray-lightest;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      align-items: flex-start;
+    }
   }
 
   &__topic-author-wrap {
     margin-bottom: 16px;
     padding: 8px 16px 16px;
     border: 1px solid $gray-lightest;
+    min-width: 0;
     background-color: $white;
+
+    @media (min-width: $screen-lg) {
+      padding: 0;
+      border: 0;
+      background: transparent;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-right: 8px;
+      margin-bottom: 0;
+    }
   }
 
   &__topic-author {
     display: block;
     margin-bottom: 16px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
   }
 
   &__topic-author-data {
     display: flex;
     flex-direction: column;
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
 
     & > p {
 
@@ -125,14 +177,47 @@
     }
   }
 
+  &__topic-btns {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin: 0 -8px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-right: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-wrap: nowrap;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
   &__topic-btn {
     position: relative;
     display: block !important;
     width: 100%;
     padding-left: 44px !important;
 
+    @media (min-width: $screen-md) {
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: auto;
+    }
+
     &:not(:last-child) {
       margin-bottom: 16px;
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 0;
+      }
     }
 
     svg {
@@ -145,15 +230,19 @@
   &__theme-data {
     flex-shrink: 0;
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-md) {
       display: flex;
       flex-wrap: wrap;
-      margin-top: 16px;
     }
   }
 
   &__theme-data-item {
     margin-bottom: 8px;
+
+    @media (min-width: $screen-md) {
+      margin-right: 24px;
+      margin-bottom: 0;
+    }
 
     @media (min-width: $screen-lg) {
       margin-right: 24px;
@@ -179,6 +268,15 @@
       bottom: auto;
       margin-left: auto;
       margin-bottom: 16px;
+
+    }
+
+    &--topic {
+
+      @media (min-width: $screen-xl) {
+        margin-left: 8px;
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -202,6 +300,14 @@
 
   &__aside-most-interesting {
     margin-bottom: 48px;
+
+    &--mobile-hide {
+      display: none;
+
+      @media (min-width: $screen-lg) {
+        display: block;
+      }
+    }
   }
 
   &__top-5 {
@@ -270,5 +376,26 @@
     vertical-align: middle;
     margin-left: 8px;
     fill: currentColor;
+  }
+
+  &__topic-comments-wrap {
+    margin-bottom: 22px;
+  }
+
+  &__topic-comments {
+    margin: 0 -12px 20px;
+    padding: 12px 12px 0;
+    border: 1px solid $gray-lightest;
+    background: $white;
+
+    @media (min-width: $screen-lg) {
+      margin-left: 0;
+      margin-right: 0;
+      padding: 32px 32px 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 48px 48px 0;
+    }
   }
 }

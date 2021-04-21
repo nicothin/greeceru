@@ -78,6 +78,14 @@
     }
   }
 
+  &__form-inner {
+    display: flex;
+  }
+
+  &__field-wrapper {
+    flex-grow: 1;
+  }
+
 
 
   &--form {
@@ -91,11 +99,101 @@
     }
   }
 
-  #{$block-name}__form-inner {
-    display: flex;
-  }
+  &--forum {
 
-  #{$block-name}__field-wrapper {
-    flex-grow: 1;
+    & > &,
+    & > & > & {
+      padding-left: 16px;
+      border-left: 1px dashed $gray-light;
+
+      @media (min-width: $screen-md) {
+        padding-left: 30px;
+      }
+    }
+
+    & > & > & > & > & > & {
+      padding-left: 0;
+      border-left: 0;
+
+      @media (min-width: $screen-md) {
+        padding-left: 30px;
+        border-left: 1px dashed $gray-light;
+      }
+    }
+
+    & > & > & > & > & > & > & > & {
+      padding-left: 0;
+      border-left: 0;
+    }
+
+    #{$block-name}__header {
+      margin-bottom: 8px;
+    }
+
+    #{$block-name}__user-info {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: baseline;
+      min-width: 0;
+      margin-top: 6px;
+    }
+
+    #{$block-name}__username {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    #{$block-name}__date {
+      position: relative;
+      font-size: inherit;
+      flex-shrink: 0;
+      padding-left: 22px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 9px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $gray;
+      }
+    }
+
+    #{$block-name}__body {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    #{$block-name}__content {
+
+      & > *:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    #{$block-name}__avatar-wrap {
+      width: 32px;
+      min-width: 32px;
+      height: 32px;
+      margin-right: 8px;
+    }
+
+    #{$block-name}__reply-link {
+      margin-top: 4px;
+      border: 0;
+      padding: 0;
+      font-size: inherit;
+      color: $gray;
+      background: none;
+      cursor: pointer;
+    }
   }
 }
