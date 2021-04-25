@@ -204,12 +204,14 @@
     padding-left: 44px !important;
 
     @media (min-width: $screen-md) {
+      flex-grow: 1;
+      width: auto;
       margin-left: 8px;
       margin-right: 8px;
     }
 
     @media (min-width: $screen-lg) {
-      width: auto;
+      flex-grow: 0;
     }
 
     &:not(:last-child) {
@@ -397,5 +399,67 @@
     @media (min-width: $screen-xl) {
       padding: 48px 48px 0;
     }
+  }
+
+  &__topic-comments-title {
+    margin: 0 0 24px;
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  &__add-comment-uploads {
+    padding: 0;
+    background-image: none;
+
+    .mini-photo {
+      margin-bottom: 0;
+    }
+
+    .upload-photo__inner {
+      background-image: none;
+    }
+
+    .upload-photo__inner-2 {
+      min-height: 0;
+      padding: 0;
+    }
+
+    .upload-photo__list-wrap {
+      padding: 0;
+    }
+
+    .upload-photo__list {
+      margin: 0;
+    }
+
+    .upload-photo__list-item {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+
+  &__add-comment-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__add-comment-upload-wrap {
+
+    input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      overflow: hidden;
+    }
+  }
+
+  &__add-comment-txtarea {
+    width: 100%;
+    height: auto;
+    border: 0;
+    padding: 0;
+    font-family: inherit;
+    outline: 0;
   }
 }
