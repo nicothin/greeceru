@@ -206,12 +206,14 @@
     padding-left: 44px !important;
 
     @media (min-width: $screen-md) {
+      flex-grow: 1;
+      width: auto;
       margin-left: 8px;
       margin-right: 8px;
     }
 
     @media (min-width: $screen-lg) {
-      width: auto;
+      flex-grow: 0;
     }
 
     &:not(:last-child) {
