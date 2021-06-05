@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="no-js  page  page--has-bottom-btn" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>greece_ru</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="page__main-content" role="main">
+
+        <div class="layout-forum">
+          <div class="layout-forum__inner">
+
+            <div class="layout-forum__main">
+
+              <div class="layout-forum__header">
+
+                <div class="breadcrumbs  layout-forum__breadcrumbs">
+                  <a href="" class="breadcrumbs__item">Главная</a>
+                  <span class="breadcrumbs__item">Создание темы для сообщества</span>
+                </div>
+
+                <form class="layout-forum__create-topic">
+                  <textarea class="layout-forum__create-topic-textarea  layout-forum__create-topic-textarea--title" cols="30" rows="1" placeholder="Введите ваш заголовок..." data-autoresize></textarea>
+
+                  <textarea class="layout-forum__create-topic-textarea" cols="30" rows="1" placeholder="Добавьте текст для вопроса..." data-autoresize></textarea>
+
+                  <label class="layout-forum__create-topic-select">
+                    <span class="layout-forum__create-topic-select-name">К какой теме относится ваш вопрос?</span>
+                    <select class="field-selectric" disabled>
+                      <option>Выберите</option>
+                      <option>Значение 1 длинное, много слов, очень много слов</option>
+                      <option>Значение 2</option>
+                      <option>Значение 3</option>
+                    </select>
+                  </label>
+
+                  <div class="layout-forum__topic-info">
+                    <div class="layout-forum__topic-author-wrap">
+                      <a href="" class="layout-forum__topic-author  user-mini  user-mini--md">
+                        <span class="user-mini__inner">
+                          <img src="img/avatar-no-user.png" width="56" height="56" alt="Неизвестный пользователь">
+                          <span class="user-mini__text-wrapper">
+                            <span class="user-mini__username  user-mini__username--semibold">Неизвестный пользователь</span>
+                            <span class="user-mini__user-type  user-mini__user-type--mute">Войдите или зарегистрируйтесь, чтобы добавить тему</span>
+                          </span>
+                        </span>
+                      </a>
+                    </div>
+                    <div class="layout-forum__topic-btns">
+                      <a href="" class="btn  btn--block">
+                        Вход или регистрация
+                      </a>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+
+            </div>
+
+            <aside class="layout-forum__aside">
+
+              <section class="layout-forum__aside-most-interesting  forum-most-interesting">
+                <h2 class="forum-most-interesting__title">Самое интересное за 24 часа</h2>
+                <ul class="forum-most-interesting__list">
+                  <li class="forum-most-interesting__item">
+                    <p class="forum-most-interesting__item-theme">
+                      <a href="">Строительство и ремонт</a>
+                    </p>
+                    <p class="forum-most-interesting__item-name">
+                      <a href="">Cобрания собственников жилья разрешили проводить через интернет</a>
+                    </p>
+                    <ul class="forum-most-interesting__item-info">
+                      <li>42 подписчика</li>
+                      <li>63 ответа</li>
+                    </ul>
+                  </li>
+                  <li class="forum-most-interesting__item">
+                    <p class="forum-most-interesting__item-theme">
+                      <a href="">Строительство и ремонт</a>
+                    </p>
+                    <p class="forum-most-interesting__item-name">
+                      <a href="">Cобрания собственников жилья разрешили проводить через интернет</a>
+                    </p>
+                    <ul class="forum-most-interesting__item-info">
+                      <li>42 подписчика</li>
+                      <li>63 ответа</li>
+                    </ul>
+                  </li>
+                  <li class="forum-most-interesting__item">
+                    <p class="forum-most-interesting__item-theme">
+                      <a href="">Строительство и ремонт</a>
+                    </p>
+                    <p class="forum-most-interesting__item-name">
+                      <a href="">Cобрания собственников жилья разрешили проводить через интернет</a>
+                    </p>
+                    <ul class="forum-most-interesting__item-info">
+                      <li>42 подписчика</li>
+                      <li>63 ответа</li>
+                    </ul>
+                  </li>
+                  <li class="forum-most-interesting__item">
+                    <p class="forum-most-interesting__item-theme">
+                      <a href="">Строительство и ремонт</a>
+                    </p>
+                    <p class="forum-most-interesting__item-name">
+                      <a href="">Cобрания собственников жилья разрешили проводить через интернет</a>
+                    </p>
+                    <ul class="forum-most-interesting__item-info">
+                      <li>42 подписчика</li>
+                      <li>63 ответа</li>
+                    </ul>
+                  </li>
+                </ul>
+              </section>
+
+            </aside>
+
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  <div id="video" class="modal  modal--lg  modal--video" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="close  close--bold  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+          <h4 class="modal__title">Ask a Question</h4>
+        </div>
+        <div class="modal__body">
+          <div class="embed-responsive  embed-responsive--16-9">
+            <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+  <script>
+    $(function () {
+      $('.field-selectric').selectric({
+        disableOnMobile: false,
+        maxHeight: 220,
+        onBeforeOpen: function () {
+          $(this).closest('.rating-add__selectric-wrap').addClass('rating-add__selectric-wrap--focus');
+        },
+        onBeforeClose: function () {
+          $(this).closest('.rating-add__selectric-wrap').removeClass('rating-add__selectric-wrap--focus');
+        },
+      });
+    });
+  </script>
+</body>
+</html>

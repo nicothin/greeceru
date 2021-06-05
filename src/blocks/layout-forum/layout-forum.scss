@@ -178,6 +178,7 @@
   }
 
   &__topic-btns {
+    margin-left: auto !important;
 
     @media (min-width: $screen-md) {
       display: flex;
@@ -430,6 +431,11 @@
     background: transparent;
     outline: 0;
     resize: none;
+
+    &::placeholder {
+      color: $gray;
+      opacity: 1;
+    }
   }
 
   &__add-comment-actions {
@@ -473,5 +479,103 @@
 
   &__add-comment-submit {
     margin-left: auto;
+  }
+
+  &__create-topic {
+    padding: 24px 0 0;
+    margin: 0 -12px;
+    border: 1px solid $gray-lightest;
+    background: $white;
+
+    @media (min-width: $screen-lg) {
+      margin-left: 0;
+      margin-right: 0;
+      padding-top: 16px;
+    }
+
+    #{$block-name}__topic-info {
+      border-top: 1px solid $gray-lightest;
+
+      @media (min-width: $screen-lg) {
+        display: flex;
+      }
+    }
+
+    #{$block-name}__topic-author-wrap {
+      padding: 16px 12px 0;
+      border: 0;
+
+      @media (min-width: $screen-lg) {
+        padding: 0 16px;
+        margin: 0;
+      }
+    }
+
+    #{$block-name}__topic-btns {
+      margin: 0 12px 24px !important;
+
+      @media (min-width: $screen-lg) {
+        margin: 0 16px 0 auto !important;
+      }
+    }
+
+    #{$block-name}__topic-author {
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__create-topic-textarea {
+    display: block;
+    width: 100%;
+    min-height: 120px;
+    padding: 8px 12px;
+    border: 0;
+    font-family: inherit;
+    font-size: $font-size--h4;
+    background: transparent;
+    outline: 0;
+    resize: none;
+
+    @media (min-width: $screen-lg) {
+      min-height: 160px;
+    }
+
+    &::placeholder {
+      color: $gray;
+      opacity: 1;
+    }
+
+    &--title {
+      min-height: 0;
+      font-size: $font-size--h2;
+      font-weight: 500;
+
+      @media (min-width: $screen-lg) {
+        min-height: 0;
+        font-size: $font-size--h1;
+      }
+    }
+  }
+
+  &__create-topic-select {
+    display: block;
+    margin: 24px 12px 32px;
+
+    @media (min-width: $screen-lg) {
+      margin: 24px 16px 48px;
+    }
+
+    .selectric-wrapper {
+      max-width: 280px;
+    }
+  }
+
+  &__create-topic-select-name {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
   }
 }
