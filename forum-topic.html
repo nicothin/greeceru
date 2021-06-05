@@ -446,7 +446,7 @@
 
             <div class="layout-forum__main">
 
-              <header class="layout-forum__header">
+              <div class="layout-forum__header">
                 <div class="breadcrumbs  layout-forum__breadcrumbs">
                   <a href="" class="breadcrumbs__item">Главная</a>
                   <a href="" class="breadcrumbs__item">Юридические вопросы</a>
@@ -527,18 +527,12 @@
                       <svg width="24" height="24">
                         <use xlink:href="img/sprite-svg.svg#forum-icon-user-2"></use>
                       </svg>
-                      <!-- <svg width="24" height="24">
-                                          <use xlink:href="img/sprite-svg.svg#forum-icon-check"></use>
-                                        </svg> -->
                       Подписаться на автора
                     </button>
                     <button class="layout-forum__topic-btn  btn  btn--white-2">
                       <svg width="24" height="24">
                         <use xlink:href="img/sprite-svg.svg#forum-bell"></use>
                       </svg>
-                      <!-- <svg width="24" height="24">
-                                          <use xlink:href="img/sprite-svg.svg#forum-icon-check"></use>
-                                        </svg> -->
                       Подписаться на тему
                     </button>
                     <a href="" class="layout-forum__add-question  layout-forum__add-question--topic  btn">
@@ -547,11 +541,54 @@
                   </div>
                 </div>
 
-              </header>
+              </div>
 
               <div class="layout-forum__topic-comments-wrap">
 
                 <div class="layout-forum__topic-comments">
+
+                  <h2 class="layout-forum__topic-comments-title">Ответы сообщества: 8</h2>
+
+                  <form action="" class="layout-forum__add-comment">
+
+                    <textarea class="layout-forum__add-comment-text" id="" cols="30" rows="1" placeholder="Написать свой ответ..." data-autoresize></textarea>
+
+                    <div class="layout-forum__add-comment-actions">
+
+                      <div class="layout-forum__add-comment-files  upload-photo  upload-photo--forum">
+                        <div class="upload-photo__list-wrap">
+                          <ul class="upload-photo__list">
+                            <li class="upload-photo__list-item" >
+                              <div class="mini-photo">
+                                <img src="img/harly.jpg" alt="" class="mini-photo__img">
+                                <button class="mini-photo__close  close-circle" type="button"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                              </div>
+                            </li>
+                            <li class="upload-photo__list-item">
+                              <div class="mini-photo">
+                                <img src="img/joker.jpg" alt="" class="mini-photo__img">
+                                <button class="mini-photo__close  close-circle" type="button"><span class="close-circle__inner"><span class="close  close--thin"><span></span></span></span></button>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <footer class="layout-forum__add-comment-footer">
+                        <label class="layout-forum__add-comment-upload">
+                          <input type="file">
+                          <span class="layout-forum__add-comment-upload-icon">
+                            <svg width="21" height="26" viewBox="0 0 21 26">
+                              <path fill-rule="evenodd" d="M13 0H2.6C1.157 0 0 1.157 0 2.6V23.4C0 24.83 1.157 26 2.6 26H18.2C19.6359 26 20.8 24.8359 20.8 23.4V7.8L13 0ZM18.85 9.1H11.7V1.95L18.85 9.1ZM2.6 23.4H14.3H18.2V13L13 18.2L10.4 15.6L2.6 23.4ZM2.6 11.7C2.6 10.2641 3.76406 9.1 5.2 9.1C6.63594 9.1 7.8 10.2641 7.8 11.7C7.8 13.1359 6.63594 14.3 5.2 14.3C3.76406 14.3 2.6 13.1359 2.6 11.7Z" fill="#167C2E" />
+                            </svg>
+                          </span>
+                        </label>
+                        <button class="layout-forum__add-comment-submit  btn  btn--wide" type="submit">Ответить</button>
+                      </footer>
+
+                    </div>
+
+                  </form>
 
                   <article class="comment  comment--forum">
                     <header class="comment__header">
