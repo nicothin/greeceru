@@ -77,4 +77,23 @@
     padding: 0 10px;
     margin-bottom: 15px;
   }
+
+
+
+  &--forum {
+    background: none;
+
+    .mini-photo__close {
+      opacity: 1 !important;
+    }
+
+    #{$block-name}__list {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    #{$block-name}__list-item {
+      margin-bottom: 0;
+    }
+  }
 }

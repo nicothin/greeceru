@@ -188,6 +188,7 @@
 
     @media (min-width: $screen-md) {
       margin-right: 0;
+      flex-wrap: nowrap;
     }
 
     @media (min-width: $screen-xl) {
@@ -382,6 +383,16 @@
     margin-bottom: 22px;
   }
 
+  &__topic-comments-title {
+    margin: 20px 0 24px;
+    font-size: $font-size--h3;
+    font-weight: 600;
+
+    @media (min-width: $screen-lg) {
+      margin-top: 16px;
+    }
+  }
+
   &__topic-comments {
     margin: 0 -12px 20px;
     padding: 12px 12px 0;
@@ -397,5 +408,70 @@
     @media (min-width: $screen-xl) {
       padding: 48px 48px 0;
     }
+  }
+
+  &__add-comment {
+    margin-bottom: 24px;
+    border: 1px solid $gray-lightest;
+    background: rgba(136, 145, 166, 0.16);
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__add-comment-text {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border: 0;
+    font-family: inherit;
+    font-size: $font-size--h4;
+    background: transparent;
+    outline: 0;
+    resize: none;
+  }
+
+  &__add-comment-actions {
+    display: none;
+  }
+
+  &__add-comment-footer {
+    display: flex;
+    padding: 0 16px 16px;
+  }
+
+  &__add-comment-files {
+    padding: 4px 6px 0;
+  }
+
+  &__add-comment-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 24px;
+    background: $gray-ultra-lightest;
+    border: 1px solid $gray-lightest;
+    border-radius: 2px;
+    cursor: pointer;
+
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+  }
+
+  &__add-comment-upload-icon {
+
+    svg {
+      display: block;
+    }
+  }
+
+  &__add-comment-submit {
+    margin-left: auto;
   }
 }
