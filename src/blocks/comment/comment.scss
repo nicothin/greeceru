@@ -86,6 +86,12 @@
     flex-grow: 1;
   }
 
+  &__title-link {
+    margin: 0 0 16px;
+    font-size: $font-size--h3;
+    font-weight: 500;
+  }
+
 
 
   &--form {
@@ -194,6 +200,17 @@
       color: $gray;
       background: none;
       cursor: pointer;
+    }
+  }
+
+  &--single {
+    position: relative;
+    padding: 16px;
+    border: 1px solid $gray-lightest;
+    background: $white;
+
+    #{$block-name}__body {
+      margin-bottom: 0;
     }
   }
 }

@@ -33,4 +33,28 @@
     margin-left: 8px;
     flex-shrink: 0;
   }
+
+
+
+  &--subscribes {
+
+    #{$block-name}__list {
+
+      @media (min-width: $screen-md) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -6px;
+        margin-right: -6px;
+      }
+    }
+
+    #{$block-name}__item {
+      width: 50%;
+      padding: 0 6px;
+    }
+
+    #{$block-name}__item-user {
+      max-width: 264px;
+    }
+  }
 }

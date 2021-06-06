@@ -36,6 +36,34 @@
     color: $text-color;
   }
 
+  &__content {
+
+    &--tiled {
+
+      @media (min-width: $screen-md) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -6px;
+        margin-right: -6px;
+
+        #{$block-name}__item {
+          width: 50%;
+          padding: 0 6px;
+        }
+      }
+
+      @media (min-width: $screen-lg) {
+        margin-left: -10px;
+        margin-right: -10px;
+
+        #{$block-name}__item {
+          width: 50%;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+
   &__add-question {
     position: fixed;
     z-index: 1;
@@ -53,6 +81,18 @@
   }
 
   &__item {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &--subscribes {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 32px;
+    }
   }
 }

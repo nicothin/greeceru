@@ -174,7 +174,8 @@
     "forum-personal": [],
     "forum-search-block": [],
     "forum-most-interesting": [],
-    "forum-top-users": []
+    "forum-top-users": [],
+    "field-selectric-wrap": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

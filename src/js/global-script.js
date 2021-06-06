@@ -53,6 +53,18 @@ $( document ).ready(function() {
     $('.layout-forum__add-comment-actions').slideDown(200);
   });
 
+  // форум: включение кастомного селекта
+  $('.layout-forum .field-selectric').selectric({
+    disableOnMobile: false,
+    maxHeight: 220,
+    onBeforeOpen: function () {
+      $(this).closest('.rating-add__selectric-wrap').addClass('rating-add__selectric-wrap--focus');
+    },
+    onBeforeClose: function () {
+      $(this).closest('.rating-add__selectric-wrap').removeClass('rating-add__selectric-wrap--focus');
+    },
+  });
+
   // Поля формы с выбором кол-ва
   var fieldsNum = document.querySelectorAll( '.field-num' );
   if(fieldsNum.length) {
@@ -215,6 +227,12 @@ $( document ).ready(function() {
   $(document).on('click', '.field-drop-checkboxes__drop', function (e) {
     e.stopPropagation();
   });
+
+  // открытие дропа со странными ческбоксами должно закрывать дроп кастомного селекта
+  $('.field-drop-checkboxes').on('show.bs.dropdown', function () {
+    var Selectric = $('select.field-selectric').data('selectric');
+    Selectric && Selectric.close();
+  })
 
   // бутстраповские тултипы
   // $('[data-toggle="tooltip"]').tooltip();

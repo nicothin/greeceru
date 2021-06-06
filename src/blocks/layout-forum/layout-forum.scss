@@ -67,6 +67,10 @@
         line-height: 1.25;
       }
     }
+
+    &--my-view {
+      margin-bottom: 16px;
+    }
   }
 
   &__main-descr {
@@ -272,7 +276,6 @@
       bottom: auto;
       margin-left: auto;
       margin-bottom: 16px;
-
     }
 
     &--topic {
@@ -280,6 +283,13 @@
       @media (min-width: $screen-xl) {
         margin-left: 8px;
         margin-bottom: 0;
+      }
+    }
+
+    &--single {
+
+      @media (min-width: $screen-lg) {
+        display: none;
       }
     }
   }
