@@ -724,19 +724,5 @@
   <script src="js/script.min.js?1"></script>
 
 
-  <script>
-    $(function () {
-      $('.field-selectric').selectric({
-        disableOnMobile: false,
-        maxHeight: 220,
-        onBeforeOpen: function () {
-          $(this).closest('.rating-add__selectric-wrap').addClass('rating-add__selectric-wrap--focus');
-        },
-        onBeforeClose: function () {
-          $(this).closest('.rating-add__selectric-wrap').removeClass('rating-add__selectric-wrap--focus');
-        },
-      });
-    });
-  </script>
 </body>
 </html>
