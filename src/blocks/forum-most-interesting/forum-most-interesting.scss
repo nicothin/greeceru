@@ -16,6 +16,19 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
+    &--md-3 {
+
+      @media (min-width: $screen-md) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 16px;
+      }
+
+      @media (min-width: $screen-xl) {
+        grid-gap: 24px;
+      }
+    }
   }
 
   &__item {

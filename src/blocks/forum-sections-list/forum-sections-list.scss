@@ -63,4 +63,12 @@
       }
     }
   }
+
+  &--mb32 {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 32px;
+    }
+  }
 }

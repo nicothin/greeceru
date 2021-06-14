@@ -51,6 +51,14 @@
         margin-right: auto;
       }
     }
+
+    &--forum {
+      margin-bottom: 16px;
+
+      #{$block-name}__subtitle {
+        display: block !important;
+      }
+    }
   }
 
   &__subtitle-wrap {
