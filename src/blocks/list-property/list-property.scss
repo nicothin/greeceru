@@ -39,6 +39,17 @@
     }
   }
 
+  &__seo-header-wrapper {
+    display: flex;
+    align-items: flex-start;
+
+    #{$block-name}__header-vc {
+      margin-left: auto;
+      padding-top: 11px;
+      white-space: nowrap;
+    }
+  }
+
   &__header-2 {
     width: 100%;
     margin-bottom: 33px;
