@@ -16,6 +16,10 @@
     max-width: 1000px;
   }
 
+  &__search-tags {
+    margin-top: 24px;
+  }
+
   .pagination {
 
     @media (min-width: $screen-lg) {

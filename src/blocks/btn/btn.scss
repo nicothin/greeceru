@@ -109,6 +109,25 @@ $border-radius:               3px !default;
     }
   }
 
+  &--dashed-link {
+    vertical-align: baseline;
+    color: $link-color;
+    padding: 0 !important;
+    border: none;
+    border-bottom: 1px dashed currentColor;
+    background: transparent !important;
+    box-shadow: none !important;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $link-color--hover !important;
+    }
+  }
+
   &--white {
     color: $color-main;
     background-color: #fff;
@@ -126,6 +145,10 @@ $border-radius:               3px !default;
       color: $color-main;
       background-color: #fff;
     }
+  }
+
+  &--multiline {
+    white-space: normal;
   }
 
   &--red-text {
@@ -173,6 +196,15 @@ $border-radius:               3px !default;
     @media (min-width: $screen-md) {
       padding-left: 50px;
       padding-right: 50px;
+    }
+  }
+
+  &--narrow-vertical {
+    padding: 4px;
+    line-height: 1;
+
+    @media (min-width: $screen-md) {
+      padding: 4px 8px;
     }
   }
 

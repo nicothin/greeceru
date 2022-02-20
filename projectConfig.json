@@ -162,7 +162,8 @@
     "no-results": [],
     "msg-bottom": [],
     "scroll": [],
-    "field-selectric": []
+    "field-selectric": [],
+    "search-tags": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

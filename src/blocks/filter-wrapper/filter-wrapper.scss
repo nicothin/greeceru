@@ -3,6 +3,9 @@
 // Не пишите здесь другие селекторы.
 
 .filter-wrapper {
+
+  $block-name:                &; // #{$block-name}__element {}
+
   position: relative;
   z-index: 2;
   display: flex;
@@ -14,7 +17,48 @@
     max-width: 1060px;
   }
 
+  &__header {
+    padding: 15px 15px 0;
+
+    @media (min-width: $screen-xl) {
+      padding: 30px 30px 0;
+    }
+  }
+
+  &__breadcrumbs {
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__search-tags {
+    display: none;
+
+    @media (min-width: $screen-xl) {
+      display: block;
+    }
+  }
+
+
+
   &--bg-white {
     background-color: #fff;
+  }
+
+  &--has-header {
+    display: block;
+
+    h1 {
+      margin: 0 0 8px;
+      line-height: 1.1;
+    }
+
+    #{$block-name}__inner {
+
+      .filter {
+        padding-top: 10px;
+      }
+    }
   }
 }
