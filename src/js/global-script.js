@@ -1,5 +1,79 @@
 $( document ).ready(function() {
 
+  // Поиск: поведение шапки-формы
+  (function () {
+
+    // Клик на "Показать все" в тегах для быстрого поиска
+    const allSearchTags = document.querySelectorAll('.search-tags');
+
+    allSearchTags.forEach(searchTags => {
+      const showAllBtn = searchTags.querySelector('.search-tags__show-all');
+      const allTags = searchTags.querySelectorAll('.search-tags__item');
+      const counter = searchTags.dataset.showCounter;
+
+      showAllBtn.addEventListener('click', () => {
+        let showAllState = !searchTags.querySelectorAll('.search-tags__item--hidden').length;
+        const showText = showAllBtn.dataset.showText;
+        const hideText = showAllBtn.dataset.hideText;
+
+        if (showAllState) {
+          showAllBtn.innerHTML = showText;
+
+          allTags.forEach((hiddenTag, i) => {
+            if (i >= counter) {
+              hiddenTag.classList.add('search-tags__item--hidden');
+            }
+          });
+        }
+        else {
+          showAllBtn.innerHTML = hideText;
+
+          allTags.forEach((hiddenTag) => {
+            hiddenTag.classList.remove('search-tags__item--hidden');
+          });
+        }
+
+        setSearchGeometry();
+        setPadding();
+      })
+    });
+    // END Клик на "Показать все" в тегах для быстрого поиска
+
+    // Подсчеты и изменения при скролле
+    var formHeight = 0;
+    var formFilterHeight = 0;
+
+    var setPadding = function() {
+      $('#locations-list').css({
+        paddingTop: formHeight + 'px',
+      });
+    };
+
+    var setSearchGeometry = function(){
+      var block = $('#filter-wrapper');
+      formHeight = Math.ceil($(block).height());
+      formFilterHeight = Math.ceil($(block).find('.filter-wrapper__inner').height());
+    };
+
+    setSearchGeometry();
+    setPadding();
+
+    $(window).on('resize', function() {
+      setSearchGeometry();
+      setPadding();
+    });
+
+    $(window).on('scroll', function() {
+      var scroll = window.pageYOffset;
+      var maxTranslateY = formHeight - formFilterHeight;
+      var translateY = scroll > maxTranslateY ? maxTranslateY : scroll;
+
+      $('#filter-wrapper').css({
+        transform: 'translateY(' + translateY * -1 +'px)',
+      });
+    });
+  })();
+
   // фиксация сайдбара на странице объекта
   var Sticky = new hcSticky('.object-price-data', {
     stickTo: '.layout-object__aside',

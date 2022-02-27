@@ -53,12 +53,5 @@
       margin: 0 0 8px;
       line-height: 1.1;
     }
-
-    #{$block-name}__inner {
-
-      .filter {
-        padding-top: 10px;
-      }
-    }
   }
 }
