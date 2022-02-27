@@ -12012,6 +12012,7 @@ input:checked + .rating-add__label .rating-add__input-descr {
       flex-wrap: wrap; }
 .search-tags__item {
   width: calc(20% - 4px);
+  height: 66px;
   margin: 0 4px 4px 0; }
 .search-tags__item--hidden {
     display: none; }
