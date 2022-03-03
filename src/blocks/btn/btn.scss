@@ -147,8 +147,25 @@ $border-radius:               3px !default;
     }
   }
 
-  &--multiline {
-    white-space: normal;
+  &--white-2 {
+    color: $black;
+    border: 1px solid #D9E0E9;
+    border-radius: 6px;
+    padding: 6px 8px !important;
+    font-size: $font-size--small;
+    line-height: ($font-size--small + 4);
+    font-weight: 400;
+    background-color: #fff;
+    box-shadow: none;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      color: $color-main;
+      border-color: $color-main;
+      background-color: #fff;
+      box-shadow: none;
+    }
   }
 
   &--red-text {
@@ -196,15 +213,6 @@ $border-radius:               3px !default;
     @media (min-width: $screen-md) {
       padding-left: 50px;
       padding-right: 50px;
-    }
-  }
-
-  &--narrow-vertical {
-    padding: 4px;
-    line-height: 1;
-
-    @media (min-width: $screen-md) {
-      padding: 4px 8px;
     }
   }
 

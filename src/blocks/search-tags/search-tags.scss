@@ -7,14 +7,21 @@
   $block-name:                &; // #{$block-name}__element {}
 
   &__inner {
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
+    font-size: $font-size--h3;
+  }
+
+  &__text {
+    display: inline-block;
+    vertical-align: baseline;
+    margin: 0 4px 4px 0;
   }
 
   &__item {
-    width: calc(20% - 4px);
-    height: 66px;
+    height: 30px;
     margin: 0 4px 4px 0;
+    vertical-align: baseline;
 
     &--hidden {
       display: none;
