@@ -51,7 +51,9 @@
 
     h1 {
       margin: 0 0 8px;
+      font-size: $font-size--h2 - 4;
       line-height: 1.1;
+      font-weight: 400;
     }
   }
 }
