@@ -3998,7 +3998,9 @@ a:hover .feedback__slider-control-arrow,
     display: block; }
 .filter-wrapper--has-header h1 {
       margin: 0 0 8px;
-      line-height: 1.1; }
+      font-size: 20px;
+      line-height: 1.1;
+      font-weight: 400; }
 .filter {
   position: relative;
   padding: 15px; }
