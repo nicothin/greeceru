@@ -12025,11 +12025,14 @@ input:checked + .rating-add__label .rating-add__input-descr {
 .search-tags__text {
   display: inline-block;
   vertical-align: baseline;
-  margin: 0 4px 4px 0; }
+  margin: 0 4px 4px 0;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px); }
 .search-tags__item {
+  display: inline-block;
   height: 30px;
   margin: 0 4px 4px 0;
-  vertical-align: baseline; }
+  vertical-align: middle; }
 .search-tags__item--hidden {
     display: none; }
 .search-tags__show-all-wrap {
