@@ -16,12 +16,14 @@
     display: inline-block;
     vertical-align: baseline;
     margin: 0 4px 4px 0;
+    transform: translateY(-3px);
   }
 
   &__item {
+    display: inline-block;
     height: 30px;
     margin: 0 4px 4px 0;
-    vertical-align: baseline;
+    vertical-align: middle;
 
     &--hidden {
       display: none;
