@@ -166,27 +166,6 @@ $border-radius:               3px !default;
     }
   }
 
-  &--white-2-forum {
-    color: $black;
-    border: 1px solid #D9E0E9;
-    border-radius: 6px;
-    padding: 6px 8px !important;
-    font-size: $font-size--small;
-    line-height: ($font-size--small + 4);
-    font-weight: 400;
-    background-color: #fff;
-    box-shadow: none;
-    transition: all 0.3s;
-
-    &:hover,
-    &:focus {
-      color: $color-main;
-      border-color: $color-main;
-      background-color: #fff;
-      box-shadow: none;
-    }
-  }
-
   &--red-text {
     color: $color-danger-2;
 
