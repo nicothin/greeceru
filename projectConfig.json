@@ -163,7 +163,20 @@
     "msg-bottom": [],
     "scroll": [],
     "field-selectric": [],
-    "search-tags": []
+    "search-tags": [],
+    "layout-forum": [],
+    "forum-sections-list": [],
+    "forum-section": [],
+    "forum-discussions": [],
+    "forum-filter": [],
+    "forum-topic-mini": [],
+    "forum-info-icon": [],
+    "forum-label": [],
+    "forum-personal": [],
+    "forum-search-block": [],
+    "forum-most-interesting": [],
+    "forum-top-users": [],
+    "field-selectric-wrap": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

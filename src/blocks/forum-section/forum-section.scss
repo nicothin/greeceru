@@ -1,0 +1,140 @@
+// В этом файле должны быть стили для БЭМ-блока forum-section, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.forum-section {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 248px;
+  padding: 16px;
+  border: 1px solid $gray-lightest;
+  background: $white;
+
+  @media (min-width: $screen-lg) {
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    padding-bottom: 8px;
+  }
+
+  &__icon-wrap {
+    flex-shrink: 0;
+    margin-bottom: 8px;
+
+    @media (min-width: $screen-lg) {
+      margin-right: 16px;
+    }
+  }
+
+  &__text-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    @media (min-width: $screen-lg) {
+      margin-right: 24px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 8px;
+    font-size: $font-size--h3;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  &__descr {
+    margin-bottom: 8px;
+    font-size: $font-size--h4;
+    line-height: 1.43;
+    color: $text-color--muted;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 16px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__info-list {
+    margin: auto 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: $font-size--small;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__info-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: $text-color;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 0;
+      margin-right: 20px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -12px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: $gray;
+        transform: translateY(-50%);
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+
+      &:after {
+        display: none !important;
+      }
+    }
+  }
+
+  &__info-icon {
+    flex-shrink: 0;
+    margin-right: 8px;
+    fill: $gray-light;
+  }
+
+  &__btn-wrap {
+    display: none;
+    flex-shrink: 0;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+      align-self: center;
+    }
+  }
+
+  &__to-theme-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 56px;
+    border: 1px solid $gray-lightest;
+    border-radius: 2px;
+    box-shadow: 0px 1px 3px rgba(115, 124, 148, 0.4);
+
+    svg {
+      fill: $color-main;
+    }
+  }
+}

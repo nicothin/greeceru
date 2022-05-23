@@ -1,0 +1,47 @@
+// В этом файле должны быть стили для БЭМ-блока field-selectric-wrap, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.field-selectric-wrap {
+
+  $block-name:                &;
+
+  display: block;
+
+  &__name {
+    display: block;
+    margin-bottom: 13px;
+    line-height: 1;
+    font-weight: 400;
+    color: $gray;
+
+    &--sm {
+      font-size: $font-size--small;
+      font-weight: 400;
+    }
+  }
+
+  &__select-wrap {
+    display: block;
+    position: relative;
+  }
+
+  &__select {
+    display: block;
+    height: 48px;
+    max-width: 100%;
+    margin: 0 38px 0 14px;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 48px;
+    color: #31353F;
+    border: 0;
+    background: none;
+
+    @media (min-width: $screen-md) {
+      height: 38px;
+      line-height: 38px;
+    }
+  }
+}

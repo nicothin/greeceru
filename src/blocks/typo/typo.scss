@@ -31,28 +31,22 @@ $border-radius:               3px !default;
 
 @font-face {
   font-family: 'San Francisco';
-  src: url('../fonts/SF-UI-Display-Regular.woff2') format('woff2'),
-       url('../fonts/SF-UI-Display-Regular.woff') format('woff'),
-       url('../fonts/SF-UI-Display-Regular.ttf')  format('truetype');
+  src: url('../fonts/SF-UI-Display-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'San Francisco';
-  src: url('../fonts/SF-UI-Display-Semibold.woff2') format('woff2'),
-       url('../fonts/SF-UI-Display-Semibold.woff') format('woff'),
-       url('../fonts/SF-UI-Display-Semibold.ttf')  format('truetype');
+  src: url('../fonts/SF-UI-Display-Semibold.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'San Francisco';
-  src: url('../fonts/SF-UI-Display-Bold.woff2') format('woff2'),
-       url('../fonts/SF-UI-Display-Bold.woff') format('woff'),
-       url('../fonts/SF-UI-Display-Bold.ttf')  format('truetype');
-  font-weight: 700;
+  src: url('../fonts/SF-UI-Display-Heavy.woff2') format('woff2');
+  font-weight: 900;
   font-style: normal;
 }
 

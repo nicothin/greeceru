@@ -1,0 +1,593 @@
+// В этом файле должны быть стили для БЭМ-блока layout-forum, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.layout-forum {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  flex-grow: 1;
+  background-color: $gray-ultra-lightest;
+
+  &__inner {
+    max-width: 1204px;
+    margin: auto;
+    padding: 0 12px;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+    }
+  }
+
+  &__main {
+
+    @media (min-width: $screen-lg) {
+      flex-grow: 1;
+      min-width: 0;
+      padding-right: 20px;
+    }
+  }
+
+  &__aside {
+    position: relative;
+
+    @media (min-width: $screen-lg) {
+      width: 260px;
+      padding-top: 40px;
+      padding-bottom: 116px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 280px;
+      padding-top: 50px;
+    }
+  }
+
+  &__header {
+    padding: 8px 0 24px;
+  }
+
+  &__breadcrumbs {
+    margin-top: 24px;
+    margin-bottom: 32px;
+    color: $gray-light;
+  }
+
+  &__main-title {
+    margin: 24px 0 8px;
+    font-size: $font-size--h2;
+    line-height: 1.333;
+    color: $text-color;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 40px;
+
+      &--lg {
+        font-size: $font-size--h1;
+        line-height: 1.25;
+      }
+    }
+
+    &--my-view {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__main-descr {
+    color: $text-color--muted;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__header-line {
+    margin-top: 24px;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      border-bottom: 1px solid $gray-lightest;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__topic-content {
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__topic-line {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__topic-date {
+    font-size: $font-size--small;
+    color: $gray;
+    text-align: right;
+
+     @media (min-width: $screen-md) {
+       order: 1;
+       padding-left: 16px;
+       margin-left: auto;
+     }
+  }
+
+  &__topic-info {
+
+    @media (min-width: $screen-lg) {
+      padding: 16px 0;
+      border-top: 1px solid $gray-lightest;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  &__topic-author-wrap {
+    margin-bottom: 16px;
+    padding: 8px 16px 16px;
+    border: 1px solid $gray-lightest;
+    min-width: 0;
+    background-color: $white;
+
+    @media (min-width: $screen-lg) {
+      padding: 0;
+      border: 0;
+      background: transparent;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-right: 8px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__topic-author {
+    display: block;
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__topic-author-data {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+
+    & > p {
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__topic-btns {
+    margin-left: auto !important;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin: 0 -8px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-right: 0;
+      flex-wrap: nowrap;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-wrap: nowrap;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__topic-btn {
+    position: relative;
+    display: block !important;
+    width: 100%;
+    padding-left: 44px !important;
+
+    @media (min-width: $screen-md) {
+      flex-grow: 1;
+      width: auto;
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+
+    @media (min-width: $screen-lg) {
+      flex-grow: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 0;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 8px;
+      left: 12px;
+    }
+  }
+
+  &__theme-data {
+    flex-shrink: 0;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__theme-data-item {
+    margin-bottom: 8px;
+
+    @media (min-width: $screen-md) {
+      margin-right: 24px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-right: 24px;
+    }
+
+    svg {
+      fill: $gray-light;
+    }
+  }
+
+  &__add-question {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-shrink: 0;
+
+    @media (min-width: $screen-lg) {
+      position: static;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      margin-left: auto;
+      margin-bottom: 16px;
+    }
+
+    &--topic {
+
+      @media (min-width: $screen-xl) {
+        margin-left: 8px;
+        margin-bottom: 0;
+      }
+    }
+
+    &--single {
+
+      @media (min-width: $screen-lg) {
+        display: none;
+      }
+    }
+  }
+
+  &__aside-personal {
+    display: none;
+    margin-bottom: 36px;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+  }
+
+  &__aside-search {
+    display: none;
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+  }
+
+  &__aside-most-interesting {
+    margin-bottom: 48px;
+
+    &--mobile-hide {
+      display: none;
+
+      @media (min-width: $screen-lg) {
+        display: block;
+      }
+    }
+  }
+
+  &__top-5 {
+
+    &--md-hidden {
+      display: none;
+
+      @media (min-width: $screen-lg) {
+        display: block;
+      }
+    }
+  }
+
+  &__has-question {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: fixed;
+      z-index: 1;
+      bottom: 0;
+      width: 260px;
+      height: 100px;
+      padding: 16px 16px 16px 48px;
+      border-radius: 16px 16px 0 0;
+      color: $white !important;
+      text-decoration: none;
+      background: $color-main;
+
+      &--bottom {
+        position: absolute;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 280px;
+    }
+
+    small {
+      display: block;
+      margin-top: 8px;
+    }
+  }
+
+  &__has-question-icon-wrap {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  &__has-question-icon {
+    fill: $color-main;
+  }
+
+  &__has-question-arr {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+    fill: currentColor;
+  }
+
+  &__topic-comments-wrap {
+    margin-bottom: 22px;
+  }
+
+  &__topic-comments-title {
+    margin: 20px 0 24px;
+    font-size: $font-size--h3;
+    font-weight: 600;
+
+    @media (min-width: $screen-lg) {
+      margin-top: 16px;
+    }
+  }
+
+  &__topic-comments {
+    margin: 0 -12px 20px;
+    padding: 12px 12px 0;
+    border: 1px solid $gray-lightest;
+    background: $white;
+
+    @media (min-width: $screen-lg) {
+      margin-left: 0;
+      margin-right: 0;
+      padding: 32px 32px 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 48px 48px 0;
+    }
+  }
+
+  &__add-comment {
+    margin-bottom: 24px;
+    border: 1px solid $gray-lightest;
+    background: rgba(136, 145, 166, 0.16);
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__add-comment-text {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border: 0;
+    font-family: inherit;
+    font-size: $font-size--h4;
+    background: transparent;
+    outline: 0;
+    resize: none;
+
+    &::placeholder {
+      color: $gray;
+      opacity: 1;
+    }
+  }
+
+  &__add-comment-actions {
+    display: none;
+  }
+
+  &__add-comment-footer {
+    display: flex;
+    padding: 0 16px 16px;
+  }
+
+  &__add-comment-files {
+    padding: 4px 6px 0;
+  }
+
+  &__add-comment-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 24px;
+    background: $gray-ultra-lightest;
+    border: 1px solid $gray-lightest;
+    border-radius: 2px;
+    cursor: pointer;
+
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+  }
+
+  &__add-comment-upload-icon {
+
+    svg {
+      display: block;
+    }
+  }
+
+  &__add-comment-submit {
+    margin-left: auto;
+  }
+
+  &__create-topic {
+    padding: 24px 0 0;
+    margin: 0 -12px;
+    border: 1px solid $gray-lightest;
+    background: $white;
+
+    @media (min-width: $screen-lg) {
+      margin-left: 0;
+      margin-right: 0;
+      padding-top: 16px;
+    }
+
+    #{$block-name}__topic-info {
+      border-top: 1px solid $gray-lightest;
+
+      @media (min-width: $screen-lg) {
+        display: flex;
+      }
+    }
+
+    #{$block-name}__topic-author-wrap {
+      padding: 16px 12px 0;
+      border: 0;
+
+      @media (min-width: $screen-lg) {
+        padding: 0 16px;
+        margin: 0;
+      }
+    }
+
+    #{$block-name}__topic-btns {
+      margin: 0 12px 24px !important;
+
+      @media (min-width: $screen-lg) {
+        margin: 0 16px 0 auto !important;
+      }
+    }
+
+    #{$block-name}__topic-author {
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__create-topic-textarea {
+    display: block;
+    width: 100%;
+    min-height: 120px;
+    padding: 8px 12px;
+    border: 0;
+    font-family: inherit;
+    font-size: $font-size--h4;
+    background: transparent;
+    outline: 0;
+    resize: none;
+
+    @media (min-width: $screen-lg) {
+      min-height: 160px;
+    }
+
+    &::placeholder {
+      color: $gray;
+      opacity: 1;
+    }
+
+    &--title {
+      min-height: 0;
+      font-size: $font-size--h2;
+      font-weight: 500;
+
+      @media (min-width: $screen-lg) {
+        min-height: 0;
+        font-size: $font-size--h1;
+      }
+    }
+  }
+
+  &__create-topic-select {
+    display: block;
+    margin: 24px 12px 32px;
+
+    @media (min-width: $screen-lg) {
+      margin: 24px 16px 48px;
+    }
+
+    .selectric-wrapper {
+      max-width: 280px;
+    }
+  }
+
+  &__create-topic-select-name {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+}

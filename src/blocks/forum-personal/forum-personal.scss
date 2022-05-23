@@ -1,0 +1,42 @@
+// В этом файле должны быть стили для БЭМ-блока forum-personal, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.forum-personal {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  &__title {
+    margin: 0 0 20px;
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+
+    &--active {
+      cursor: default;
+    }
+  }
+
+  &__icon {
+    margin-right: 16px;
+    fill: $gray-light;
+  }
+}

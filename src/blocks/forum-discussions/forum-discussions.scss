@@ -1,0 +1,98 @@
+// В этом файле должны быть стили для БЭМ-блока forum-discussions, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.forum-discussions {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  margin-bottom: 22px;
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 60px;
+  }
+
+  &__header {
+    margin-bottom: 36px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    margin: 0 0 16px;
+    font-size: $font-size--h3;
+    line-height: 1.5;
+    font-weight: 900;
+    color: $text-color;
+  }
+
+  &__content {
+
+    &--tiled {
+
+      @media (min-width: $screen-md) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -6px;
+        margin-right: -6px;
+
+        #{$block-name}__item {
+          width: 50%;
+          padding: 0 6px;
+        }
+      }
+
+      @media (min-width: $screen-lg) {
+        margin-left: -10px;
+        margin-right: -10px;
+
+        #{$block-name}__item {
+          width: 50%;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+
+  &__add-question {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    @media (min-width: $screen-lg) {
+      position: static;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      margin-left: auto;
+    }
+  }
+
+  &__item {
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &--subscribes {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 32px;
+    }
+  }
+}

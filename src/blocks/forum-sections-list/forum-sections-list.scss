@@ -1,0 +1,74 @@
+// В этом файле должны быть стили для БЭМ-блока forum-sections-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.forum-sections-list {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  margin-bottom: 32px;
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 52px;
+  }
+
+  .owl-item {
+    margin-right: 0 !important;
+    margin-left: 15px;
+  }
+
+  .owl-nav.disabled,
+  .owl-dots.disabled {
+    display: none;
+  }
+
+  &__header {
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: $font-size--h3;
+    line-height: 1.5;
+    font-weight: 900;
+    color: $text-color;
+  }
+
+  &__list {
+    width: auto;
+    margin: 0 -15px;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: $screen-lg) {
+      margin: 0;
+    }
+
+    .owl-stage {
+      display: flex;
+    }
+
+    .owl-item {
+      display: flex;
+    }
+  }
+
+  &__item {
+    display: flex;
+
+    @media (min-width: $screen-lg) {
+
+      &:not(:first-child) .forum-section {
+        border-top: 0;
+      }
+    }
+  }
+
+  &--mb32 {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 32px;
+    }
+  }
+}
